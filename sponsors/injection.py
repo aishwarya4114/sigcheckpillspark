@@ -48,7 +48,10 @@ def scan(text: str) -> list[InjectionFinding]:
 
 
 def quarantine(text: str, findings: list[InjectionFinding]) -> str:
-    """Text safe to show a model: suspected instructions are wrapped, never silently deleted."""
+    """Annotate evidence for display. Wrapping does NOT make instructions safe for a model.
+
+    Callers must stop extraction when findings exist, keeping the original for review.
+    """
     if not findings:
         return text
     parts, last = [], 0

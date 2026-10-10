@@ -39,13 +39,27 @@ def tiny_rx_image() -> bytes:
     return buf.getvalue()
 
 
-def main() -> None:
+def exit_code(checks: list[tuple[str, str, str]]) -> int:
+    """0 = all checks passed, 1 = failure, 2 = incomplete (skipped checks)."""
+    if any(status == "FAIL" for status, _, _ in checks):
+        return 1
+    return 2 if not checks or any(status == "SKIP" for status, _, _ in checks) else 0
+
+
+def main() -> int:
+    results.clear()
     doc_id = f"smoke-{uuid.uuid4().hex[:8]}"
+    run = None
 
     # ---- Nicrron
     if not settings.nicrron_enabled:
         record("nicrron: text call", None, "NICRRON_API_KEY not set")
     else:
+        if run is not None:
+            trace = prism.trace_reader_run(doc_id, run)
+            record("prism: extraction trace", trace.accepted, trace.detail)
+        else:
+            record("prism: extraction trace", None, "no live Nicrron run available")
         reader = NicrronReader()
         ok, detail = reader.ping()
         record(f"nicrron: text call ({settings.reader_model})", ok, detail)
@@ -68,22 +82,30 @@ def main() -> None:
         record("prism: guardrail passes clinical text", not clean.blocked and clean.prism.accepted, clean.prism.detail)
 
         if "--upload-kb" in sys.argv:
-            record("prism: KB upload", True, str(prism.kb_bootstrap(ROOT / "reference")))
+            uploaded = prism.kb_bootstrap(ROOT / "reference")
+            ok = bool(uploaded) and all(s == "already present" or s.startswith("uploaded (")
+                                       for s in uploaded.values())
+            record("prism: KB upload", ok, str(uploaded))
         kb = prism.kb_verify_catalog("metformin", "500 mg", "tablet")
         record("prism: KB exact catalogue row", kb.supported, f"{kb.citation or kb.claim} ({kb.prism.detail})")
         miss = prism.kb_verify_catalog("metformin", "5000 mg", "tablet")
-        record("prism: KB rejects non-existent strength", not miss.supported, miss.claim)
+        record("prism: KB no exact row in retrieved passages", miss.prism.accepted and miss.status == "no_match", miss.claim)
 
         ev = prism.request_evaluation(doc_id, classification="blocked",
                                       facts={"guardrail": {"blocked": True}, "fields": {}, "checks": {}})
         record("prism: evaluator trajectory submitted", ev.prism.accepted, f"trajectory_id={ev.trajectory_id}")
+        record("prism: classification trace submitted", ev.classification_trace.accepted,
+               ev.classification_trace.detail)
+        record("prism: dashboard rule verdicts", None,
+               "Inspect input guardrail and output evaluator verdicts in PRISM; submission is not a rule pass")
         prism.flush()
 
     width = max(len(n) for _, n, _ in results)
     for status, name, detail in results:
         print(f"{status:4}  {name.ljust(width)}  {detail}")
     print(f"\nsession / doc id for finding these traces in PRISM: {doc_id}")
+    return exit_code(results)
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

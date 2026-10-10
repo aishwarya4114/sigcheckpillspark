@@ -20,6 +20,7 @@ from typing import Any, Optional
 import httpx
 
 from .config import Settings, settings as default_settings
+from .injection import scan
 
 FIELDS = [
     "patient_name", "patient_dob", "drug_name", "strength", "dosage_form", "directions",
@@ -82,15 +83,28 @@ def _parse_json(text: str) -> dict:
 
 def _normalise(payload: dict) -> tuple[dict[str, dict], Optional[int], list[str]]:
     """Validate shape. Missing fields become explicit nulls; nothing is invented."""
-    raw = payload.get("fields") or {}
+    if not isinstance(payload, dict) or not isinstance(payload.get("fields"), dict) or not payload["fields"]:
+        raise ValueError("extraction must contain a nonempty fields object")
+    raw = payload["fields"]
+    if set(raw) - set(FIELDS):
+        raise ValueError("extraction contains unknown fields")
     out: dict[str, dict] = {}
     for name in FIELDS:
-        f = raw.get(name) if isinstance(raw.get(name), dict) else {}
+        f = raw.get(name, {})
+        if not isinstance(f, dict):
+            raise ValueError(f"{name} must be an object")
         val = f.get("value")
         if val is not None and not isinstance(val, str):
-            val = str(val)
+            raise ValueError(f"{name}.value must be a string or null")
+        if not isinstance(f.get("conflict", False), bool):
+            raise ValueError(f"{name}.conflict must be boolean")
+        for key in ("source_text", "note"):
+            if not isinstance(f.get(key, ""), str):
+                raise ValueError(f"{name}.{key} must be a string")
         if isinstance(val, str) and not val.strip():
             val = None
+        if val is not None and not f.get("source_text", "").strip():
+            raise ValueError(f"{name} has a value without source evidence")
         out[name] = {
             "value": val,
             "source_text": str(f.get("source_text") or ""),
@@ -98,8 +112,12 @@ def _normalise(payload: dict) -> tuple[dict[str, dict], Optional[int], list[str]
             "note": str(f.get("note") or ""),
         }
     count = payload.get("prescription_count")
-    count = int(count) if isinstance(count, (int, float, str)) and str(count).isdigit() else None
-    sus = [str(s) for s in (payload.get("suspicious_text") or []) if str(s).strip()]
+    if type(count) is not int or count < 0:
+        raise ValueError("prescription_count must be a nonnegative integer")
+    sus = payload.get("suspicious_text", [])
+    if not isinstance(sus, list) or any(not isinstance(s, str) for s in sus):
+        raise ValueError("suspicious_text must be a list of strings")
+    sus = [s for s in sus if s.strip()]
     return out, count, sus
 
 
@@ -125,6 +143,9 @@ class NicrronReader:
                 model: Optional[str] = None) -> ReaderRun:
         model = model or self.cfg.reader_model
         run = ReaderRun(run_id=str(uuid.uuid4()), model=model, prompt_version=PROMPT_VERSION, ok=False)
+        if scan(ocr_text):
+            run.error = "Input blocked: suspected instructions to software in OCR text"
+            return run
         hint = ("Machine OCR of the same page, for reference only (may contain errors; the image is the source of truth):\n"
                 f"<<<OCR\n{ocr_text[:6000]}\nOCR>>>") if ocr_text else ""
         messages = [
@@ -142,16 +163,18 @@ class NicrronReader:
             run.tokens_out += int(usage.get("completion_tokens") or 0)
             try:
                 payload = _parse_json(text)
+                normalised = _normalise(payload)
             except (json.JSONDecodeError, ValueError):
                 # one bounded repair attempt; never fill facts to satisfy the schema
                 repair = messages + [{"role": "assistant", "content": text},
-                                     {"role": "user", "content": "That was not valid JSON. Return the same content as one valid JSON object only. Do not add or change any values."}]
+                                     {"role": "user", "content": "That did not match the JSON schema. Return one valid object in the requested schema. Do not invent evidence or change values. Unsupported values must be null."}]
                 text, usage, _ = self._chat(model, repair)
                 run.raw_output, run.repaired = text, True
                 run.tokens_in += int(usage.get("prompt_tokens") or 0)
                 run.tokens_out += int(usage.get("completion_tokens") or 0)
                 payload = _parse_json(text)
-            run.fields, run.prescription_count, run.suspicious_text = _normalise(payload)
+                normalised = _normalise(payload)
+            run.fields, run.prescription_count, run.suspicious_text = normalised
             run.ok = True
         except Exception as e:  # network, auth, model without vision, bad JSON twice
             run.error = f"{type(e).__name__}: {e}"[:500]
@@ -171,5 +194,8 @@ def compare_readers(a: ReaderRun, b: ReaderRun) -> dict[str, bool]:
     """Field-by-field agreement between two independent readers (exact text, case/space-insensitive).
     Agreement alone is NOT proof; it only counts together with a passed reference check."""
     norm = lambda v: re.sub(r"\s+", " ", v.strip().lower()) if isinstance(v, str) else None
-    return {f: (norm(a.fields.get(f, {}).get("value")) == norm(b.fields.get(f, {}).get("value"))
+    return {f: (a.ok and b.ok and a.prescription_count == b.prescription_count == 1
+                and not a.suspicious_text and not b.suspicious_text
+                and not a.fields.get(f, {}).get("conflict") and not b.fields.get(f, {}).get("conflict")
+                and norm(a.fields.get(f, {}).get("value")) == norm(b.fields.get(f, {}).get("value"))
                 and a.fields.get(f, {}).get("value") is not None) for f in FIELDS}

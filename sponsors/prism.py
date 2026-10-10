@@ -40,7 +40,7 @@ class Delivery:
 class GuardrailResult:
     blocked: bool                                  # decided by the LOCAL check
     findings: list[injection.InjectionFinding]
-    safe_text: str                                 # OCR text with suspected instructions quarantined
+    safe_text: str                                 # display-only when blocked; do not send to a model
     prism: Delivery = field(default_factory=lambda: Delivery(False, False, "not sent"))
     note: str = "Local check blocks; PRISM guardrail rules flag the recorded trace."
 
@@ -54,6 +54,7 @@ class KBResult:
     score: Optional[float] = None
     source: str = "PRISM knowledge base"
     prism: Delivery = field(default_factory=lambda: Delivery(False, False, "not sent"))
+    status: str = "unavailable"       # supported | retrieved | no_match | unavailable
 
 
 @dataclass
@@ -61,6 +62,7 @@ class EvaluationRequest:
     trajectory_id: Optional[str]
     prism: Delivery
     classification: str
+    classification_trace: Delivery = field(default_factory=lambda: Delivery(False, False, "not sent"))
 
 
 def _norm(s: str) -> str:
@@ -77,7 +79,10 @@ class Prism:
         elif PRISMtrace is None:
             self.init_error = "prismtrace-sdk not installed"
         else:
-            self.pt = PRISMtrace(api_key=cfg.prism_api_key, host=cfg.prism_host, project_id=cfg.prism_project_id)
+            try:
+                self.pt = PRISMtrace(api_key=cfg.prism_api_key, host=cfg.prism_host, project_id=cfg.prism_project_id)
+            except Exception as exc:
+                self.init_error = f"PRISM initialization failed ({type(exc).__name__})"
 
     @property
     def enabled(self) -> bool:
@@ -95,7 +100,10 @@ class Prism:
             "session_id": session_id, "metadata": metadata or {},
         }
         # Same payload and endpoint as PRISMtrace.trace_llm, but synchronous so we learn whether it landed.
-        resp = self.pt._post_sync("/api/traces", payload)
+        try:
+            resp = self.pt._post_sync("/api/traces", payload)
+        except Exception as exc:
+            return Delivery(True, False, f"PRISM acknowledgement unavailable ({type(exc).__name__})")
         return Delivery(True, resp is not None, "accepted" if resp is not None else "PRISM did not acknowledge")
 
     def trace_reader_run(self, doc_id: str, run: Any) -> Delivery:
@@ -129,11 +137,23 @@ class Prism:
     # --------------------------------------------------------------- evaluator
     def request_evaluation(self, doc_id: str, *, classification: str, facts: dict, model: str = "",
                            stage_ms: Optional[dict] = None) -> EvaluationRequest:
-        """Submit the run as a trajectory; PRISM's evaluator scores whether the final
-        classification ("complete_for_review" | "needs_clarification" | "extraction_failed" | "blocked")
-        is consistent with the recorded facts. Evaluator disagreement routes to review; it never approves."""
+        """Submit a classification trace and trajectory for configured PRISM rules.
+
+        Configure and verify the output rubric in the dashboard. These acknowledgements
+        do not establish that an evaluator ran or passed; evaluation never approves a draft.
+        """
         if not self.enabled:
             return EvaluationRequest(None, Delivery(False, False, self.init_error), classification)
+        if classification not in {"complete_for_review", "needs_clarification", "extraction_failed", "blocked"}:
+            raise ValueError("unknown review classification")
+        # Dashboard output evaluators attach to traces; a trajectory submission alone
+        # does not prove that the classification-specific evaluator ran.
+        classification_trace = self._trace(
+            agent=self.cfg.agent_reviewer, session_id=doc_id, model=model or "review-classifier",
+            input_messages=[{"role": "user", "content": json.dumps(facts)}],
+            output=json.dumps({"classification": classification}), latency_ms=0,
+            metadata={"doc_id": doc_id, "stage": "output_classification"},
+        )
         ms = stage_ms or {}
         steps = [
             {"step_type": "tool_call", "label": "ocr", "tool_name": "ocr",
@@ -155,9 +175,9 @@ class Prism:
         resp = self.pt.submit_trajectory(steps, agent_name=self.cfg.agent_reviewer, agent_id=self.cfg.agent_reviewer,
                                          conversation_id=doc_id, model=model or None,
                                          final_status="success" if classification != "extraction_failed" else "error")
-        tid = (resp or {}).get("id")
+        tid = resp.get("id") if isinstance(resp, dict) else None
         return EvaluationRequest(tid, Delivery(True, tid is not None, "accepted" if tid else "PRISM did not acknowledge"),
-                                 classification)
+                                 classification, classification_trace)
 
     def evaluation_result(self, trajectory_id: str) -> Optional[dict]:
         """None means pending/unavailable: show 'evaluation pending', never a pass."""
@@ -170,6 +190,8 @@ class Prism:
         """Upload reference/*.md once (skips names already present). Returns name -> status."""
         if not self.enabled:
             return {"error": self.init_error}
+        if not folder.is_dir() or not list(folder.glob("*.md")):
+            return {"error": "reference folder missing or contains no Markdown documents"}
         existing = {d.get("name") or d.get("filename") for d in (self.pt.kb_list_documents() or [])}
         status = {}
         for p in sorted(folder.glob("*.md")):
@@ -181,35 +203,60 @@ class Prism:
             status[p.name] = f"uploaded ({doc.get('chunk_count')} chunks)" if doc else "upload failed"
         return status
 
+    def _kb_search(self, query: str, limit: int) -> tuple[list[dict], Delivery]:
+        """Use the pinned SDK's transport to distinguish an empty search from an outage.
+
+        SDK kb_search collapses both cases to [], losing acknowledgement information.
+        """
+        if not self.enabled:
+            return [], Delivery(False, False, self.init_error)
+        try:
+            response = self.pt._post_sync("/api/knowledge-base/search", {
+                "query": query, "project_id": self.cfg.prism_project_id, "limit": limit,
+            })
+        except Exception as exc:
+            return [], Delivery(True, False, f"KB unavailable ({type(exc).__name__})")
+        if not isinstance(response, dict) or not isinstance(response.get("results"), list):
+            return [], Delivery(True, False, "KB did not return valid search results")
+        chunks = response["results"]
+        if any(not isinstance(c, dict) or not isinstance(c.get("content", ""), str) for c in chunks):
+            return [], Delivery(True, False, "KB returned malformed chunks")
+        return chunks, Delivery(True, True, f"{len(chunks)} chunks retrieved")
+
     def kb_verify_catalog(self, drug: str, strength: str, form: str) -> KBResult:
         """Retrieve from the PRISM KB, then verify the EXACT row ourselves. A fuzzy hit is not support."""
         row = f"{_norm(drug)} | {_norm(strength)} | {_norm(form)}"
         claim_yes = f"{drug} {strength} {form} appears in the reference catalogue"
-        claim_no = f"{drug} {strength} {form} was not found in the reference catalogue (this is a coverage result, not a safety judgement)"
-        if not self.enabled:
-            return KBResult(False, claim_no, source="PRISM KB unavailable", prism=Delivery(False, False, self.init_error))
-        chunks = self.pt.kb_search(f"{drug} {strength} {form}", limit=5) or []
+        claim_no = f"No exact match for {drug} {strength} {form} in the retrieved catalogue passages; catalogue absence and medication safety are not established"
+        chunks, delivery = self._kb_search(f"{drug} {strength} {form}", limit=5)
+        if not delivery.accepted:
+            return KBResult(False, "Catalogue verification unavailable", source="PRISM KB unavailable", prism=delivery)
         for c in chunks:
+            # Other team KB documents must not be allowed to impersonate reference data.
+            if (c.get("document_name") or c.get("filename")) != "catalog.md":
+                continue
             content = c.get("content") or ""
             for line in content.splitlines():
                 cells = [_norm(x) for x in line.strip().strip("|").split("|")]
                 if len(cells) >= 3 and " | ".join(cells[:3]) == row:
                     return KBResult(True, claim_yes, citation=line.strip(), document=str(c.get("document_name") or c.get("filename") or ""),
-                                    score=c.get("score"), prism=Delivery(True, True, f"{len(chunks)} chunks retrieved"))
-        return KBResult(False, claim_no, prism=Delivery(True, bool(chunks), f"{len(chunks)} chunks retrieved, no exact row"))
+                                    score=c.get("score"), prism=delivery, status="supported")
+        return KBResult(False, claim_no, prism=delivery, status="no_match")
 
     def kb_policy(self, question: str) -> KBResult:
         """Fetch the intake-policy passage relevant to a missing/unclear field, shown with its source."""
-        if not self.enabled:
-            return KBResult(False, question, source="PRISM KB unavailable", prism=Delivery(False, False, self.init_error))
-        chunks = self.pt.kb_search(question, limit=3) or []
-        policy = [c for c in chunks if "policy" in str(c.get("document_name") or c.get("filename") or "").lower()] or chunks
+        chunks, delivery = self._kb_search(question, limit=3)
+        if not delivery.accepted:
+            return KBResult(False, "Policy retrieval unavailable", source="PRISM KB unavailable", prism=delivery)
+        policy = [c for c in chunks if (c.get("document_name") or c.get("filename")) == "intake_policy.md"
+                  and c.get("content", "").strip()]
         if not policy:
-            return KBResult(False, question, prism=Delivery(True, False, "no chunks"))
+            return KBResult(False, "No intake-policy passage retrieved", prism=delivery, status="no_match")
         top = policy[0]
-        return KBResult(True, question, citation=(top.get("content") or "")[:600],
+        # Retrieval supplies evidence for review, not an entailment verdict on an arbitrary question.
+        return KBResult(False, "Retrieved intake-policy passage; relevance requires review", citation=top["content"],
                         document=str(top.get("document_name") or top.get("filename") or ""),
-                        score=top.get("score"), prism=Delivery(True, True, f"{len(chunks)} chunks retrieved"))
+                        score=top.get("score"), prism=delivery, status="retrieved")
 
     def flush(self) -> None:
         if self.pt is not None:
