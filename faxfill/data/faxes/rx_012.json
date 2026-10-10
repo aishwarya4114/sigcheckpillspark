@@ -1,0 +1,150 @@
+{
+ "id": "rx_012",
+ "image": "rx_012.png",
+ "synthetic": true,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": -0.38,
+  "blur": 0.5,
+  "noise": 10,
+  "fax_mode": "fine",
+  "level": "light"
+ },
+ "is_clean": false,
+ "trap": "unknown_prescriber",
+ "fields": {
+  "patient_name": "Marcus Bell",
+  "patient_dob": "1958-03-14",
+  "patient_address": "431 Claremont Ave, Apt 7A, New York, NY 10026",
+  "drug_name": "gabapentin",
+  "strength": "300 mg",
+  "strength_value": 300,
+  "strength_unit": "mg",
+  "dosage_form": "capsule",
+  "directions": "Take 1 capsule by mouth three times daily for 30 days",
+  "quantity": 90,
+  "quantity_text": "#90 (ninety) capsules",
+  "days_supply_stated": 30,
+  "refills": 1,
+  "prescriber_name": "Julian Pryce, MD",
+  "prescriber_npi": "1663923328",
+  "prescriber_dea": "BP4688199",
+  "date_written": "2026-10-08",
+  "substitution": "dispense_as_written",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   67,
+   21,
+   1447,
+   50
+  ],
+  "clinic": [
+   126,
+   114,
+   755,
+   160
+  ],
+  "prescriber_name": [
+   126,
+   177,
+   431,
+   214
+  ],
+  "prescriber_npi": [
+   210,
+   322,
+   420,
+   350
+  ],
+  "prescriber_dea": [
+   720,
+   325,
+   917,
+   353
+  ],
+  "patient_name": [
+   364,
+   433,
+   562,
+   461
+  ],
+  "patient_dob": [
+   1184,
+   438,
+   1374,
+   466
+  ],
+  "patient_address": [
+   364,
+   509,
+   999,
+   540
+  ],
+  "date_written": [
+   363,
+   581,
+   553,
+   609
+  ],
+  "drug_name": [
+   362,
+   701,
+   572,
+   737
+  ],
+  "strength": [
+   599,
+   702,
+   731,
+   738
+  ],
+  "dosage_form": [
+   758,
+   703,
+   900,
+   739
+  ],
+  "directions": [
+   362,
+   831,
+   1275,
+   872
+  ],
+  "quantity": [
+   361,
+   921,
+   722,
+   958
+  ],
+  "refills": [
+   360,
+   1011,
+   382,
+   1038
+  ],
+  "substitution": [
+   700,
+   1105,
+   730,
+   1135
+  ]
+ },
+ "expected_flags": [
+  {
+   "field": "prescriber_name",
+   "code": "prescriber_not_in_directory",
+   "why": "Julian Pryce, MD is not in the prescriber directory. NPI format is valid, so it needs verification, not rejection."
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": [],
+ "meta": {
+  "fax_from": "(212) 555-0171",
+  "sent": "2026-10-08 09:29",
+  "patient_id": "PT001",
+  "prescriber_id": "P170",
+  "prescriber_in_directory": false
+ }
+}

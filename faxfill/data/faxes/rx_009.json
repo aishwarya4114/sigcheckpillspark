@@ -1,0 +1,150 @@
+{
+ "id": "rx_009",
+ "image": "rx_009.png",
+ "synthetic": true,
+ "style": "handwritten",
+ "degradation": {
+  "skew_deg": 1.46,
+  "blur": 0.9,
+  "noise": 22,
+  "fax_mode": "standard",
+  "level": "medium"
+ },
+ "is_clean": false,
+ "trap": "lasa",
+ "fields": {
+  "patient_name": "Ingrid Solberg",
+  "patient_dob": "1983-03-09",
+  "patient_address": "268 St Nicholas Ave, Apt 3D, New York, NY 10031",
+  "drug_name": "clonidine",
+  "strength": "0.1 mg",
+  "strength_value": 0.1,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth twice daily for 30 days",
+  "quantity": 60,
+  "quantity_text": "#60 (sixty) tablets",
+  "days_supply_stated": 30,
+  "refills": 1,
+  "prescriber_name": "Robert Ashby, DO",
+  "prescriber_npi": "1236282996",
+  "prescriber_dea": "BA0007864",
+  "date_written": "2026-10-08",
+  "substitution": "permitted",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   33,
+   11,
+   1413,
+   66
+  ],
+  "clinic": [
+   95,
+   124,
+   614,
+   180
+  ],
+  "prescriber_name": [
+   97,
+   193,
+   425,
+   236
+  ],
+  "prescriber_npi": [
+   185,
+   337,
+   396,
+   370
+  ],
+  "prescriber_dea": [
+   695,
+   325,
+   893,
+   357
+  ],
+  "patient_name": [
+   343,
+   436,
+   695,
+   504
+  ],
+  "patient_dob": [
+   1163,
+   427,
+   1451,
+   483
+  ],
+  "patient_address": [
+   345,
+   508,
+   996,
+   552
+  ],
+  "date_written": [
+   347,
+   592,
+   642,
+   634
+  ],
+  "drug_name": [
+   350,
+   710,
+   585,
+   758
+  ],
+  "strength": [
+   612,
+   717,
+   782,
+   767
+  ],
+  "dosage_form": [
+   809,
+   701,
+   908,
+   743
+  ],
+  "directions": [
+   353,
+   813,
+   1495,
+   909
+  ],
+  "quantity": [
+   356,
+   926,
+   813,
+   999
+  ],
+  "refills": [
+   358,
+   1038,
+   387,
+   1065
+  ],
+  "substitution": [
+   120,
+   1124,
+   151,
+   1155
+  ]
+ },
+ "expected_flags": [
+  {
+   "field": "drug_name",
+   "code": "lasa_confirm",
+   "why": "Handwritten 'clonidine' is a look-alike of 'clonazepam' (ISMP confused-names list). Confirm the drug before filling."
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": [],
+ "meta": {
+  "fax_from": "(212) 555-0119",
+  "sent": "2026-10-08 14:54",
+  "patient_id": "PT014",
+  "prescriber_id": "P109",
+  "prescriber_in_directory": true
+ }
+}

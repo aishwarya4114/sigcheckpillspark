@@ -1,0 +1,144 @@
+{
+ "id": "rx_014",
+ "image": "rx_014.png",
+ "synthetic": true,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": 0.02,
+  "blur": 0.5,
+  "noise": 10,
+  "fax_mode": "fine",
+  "level": "light"
+ },
+ "is_clean": false,
+ "trap": "allergy",
+ "fields": {
+  "patient_name": "Sofia Alvarez",
+  "patient_dob": "1972-11-02",
+  "patient_address": "648 W 121st St, Apt 6A, New York, NY 10027",
+  "drug_name": "amoxicillin",
+  "strength": "500 mg",
+  "strength_value": 500,
+  "strength_unit": "mg",
+  "dosage_form": "capsule",
+  "directions": "Take 1 capsule by mouth three times daily for 10 days",
+  "quantity": 30,
+  "quantity_text": "#30 (thirty) capsules",
+  "days_supply_stated": 10,
+  "refills": 0,
+  "prescriber_name": "Grace Whitfield, NP",
+  "prescriber_npi": "1683866150",
+  "prescriber_dea": null,
+  "date_written": "2026-10-09",
+  "substitution": "permitted",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   60,
+   26,
+   1440,
+   46
+  ],
+  "clinic": [
+   120,
+   118,
+   638,
+   161
+  ],
+  "prescriber_name": [
+   120,
+   182,
+   475,
+   215
+  ],
+  "prescriber_npi": [
+   205,
+   326,
+   415,
+   353
+  ],
+  "patient_name": [
+   360,
+   436,
+   583,
+   463
+  ],
+  "patient_dob": [
+   1180,
+   436,
+   1370,
+   463
+  ],
+  "patient_address": [
+   360,
+   512,
+   945,
+   539
+  ],
+  "date_written": [
+   360,
+   584,
+   550,
+   611
+  ],
+  "drug_name": [
+   360,
+   704,
+   564,
+   731
+  ],
+  "strength": [
+   592,
+   704,
+   723,
+   739
+  ],
+  "dosage_form": [
+   751,
+   704,
+   892,
+   739
+  ],
+  "directions": [
+   360,
+   834,
+   1273,
+   869
+  ],
+  "quantity": [
+   360,
+   924,
+   703,
+   959
+  ],
+  "refills": [
+   360,
+   1014,
+   381,
+   1041
+  ],
+  "substitution": [
+   120,
+   1106,
+   150,
+   1136
+  ]
+ },
+ "expected_flags": [
+  {
+   "field": "drug_name",
+   "code": "allergy_conflict",
+   "why": "Patient profile lists a penicillin allergy; amoxicillin is a penicillin."
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": [],
+ "meta": {
+  "fax_from": "(212) 555-0109",
+  "sent": "2026-10-09 08:24",
+  "patient_id": "PT002",
+  "prescriber_id": "P104",
+  "prescriber_in_directory": true
+ }
+}

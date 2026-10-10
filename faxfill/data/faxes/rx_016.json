@@ -1,0 +1,150 @@
+{
+ "id": "rx_016",
+ "image": "rx_016.png",
+ "synthetic": true,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": -0.04,
+  "blur": 0.5,
+  "noise": 10,
+  "fax_mode": "fine",
+  "level": "light"
+ },
+ "is_clean": false,
+ "trap": "qty_vs_duration",
+ "fields": {
+  "patient_name": "Dev Malhotra",
+  "patient_dob": "1979-12-05",
+  "patient_address": "247 Hamilton Pl, Apt 2C, New York, NY 10027",
+  "drug_name": "metformin",
+  "strength": "1000 mg",
+  "strength_value": 1000,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth twice daily for 30 days",
+  "quantity": 30,
+  "quantity_text": "#30 (thirty) tablets",
+  "days_supply_stated": 30,
+  "refills": 1,
+  "prescriber_name": "Priya Raman, DO",
+  "prescriber_npi": "1564076267",
+  "prescriber_dea": null,
+  "date_written": "2026-10-06",
+  "substitution": "permitted",
+  "notes": "New start."
+ },
+ "field_boxes": {
+  "fax_header": [
+   61,
+   25,
+   1441,
+   46
+  ],
+  "clinic": [
+   121,
+   118,
+   721,
+   152
+  ],
+  "prescriber_name": [
+   121,
+   181,
+   430,
+   217
+  ],
+  "prescriber_npi": [
+   206,
+   326,
+   416,
+   353
+  ],
+  "patient_name": [
+   360,
+   436,
+   586,
+   463
+  ],
+  "patient_dob": [
+   1180,
+   436,
+   1370,
+   463
+  ],
+  "patient_address": [
+   360,
+   512,
+   952,
+   539
+  ],
+  "date_written": [
+   360,
+   584,
+   550,
+   611
+  ],
+  "drug_name": [
+   360,
+   704,
+   545,
+   731
+  ],
+  "strength": [
+   573,
+   704,
+   725,
+   739
+  ],
+  "dosage_form": [
+   753,
+   704,
+   855,
+   731
+  ],
+  "directions": [
+   360,
+   834,
+   1133,
+   869
+  ],
+  "quantity": [
+   360,
+   924,
+   666,
+   959
+  ],
+  "refills": [
+   360,
+   1014,
+   381,
+   1041
+  ],
+  "substitution": [
+   120,
+   1105,
+   150,
+   1136
+  ],
+  "notes": [
+   260,
+   1204,
+   391,
+   1225
+  ]
+ },
+ "expected_flags": [
+  {
+   "field": "quantity",
+   "code": "quantity_vs_duration",
+   "why": "Directions say 1 tablet twice daily for 30 days = 60 tablets, but Disp is #30."
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": [],
+ "meta": {
+  "fax_from": "(212) 555-0105",
+  "sent": "2026-10-06 14:26",
+  "patient_id": "PT007",
+  "prescriber_id": "P102",
+  "prescriber_in_directory": true
+ }
+}

@@ -1,0 +1,150 @@
+{
+ "id": "rx_025",
+ "image": "rx_025.png",
+ "synthetic": true,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": -1.12,
+  "blur": 0.9,
+  "noise": 22,
+  "fax_mode": "standard",
+  "level": "medium"
+ },
+ "is_clean": false,
+ "trap": "over_max",
+ "fields": {
+  "patient_name": "Jamal Pierce",
+  "patient_dob": "1975-06-30",
+  "patient_address": "140 W 121st St, Apt 6C, New York, NY 10030",
+  "drug_name": "sertraline",
+  "strength": "100 mg",
+  "strength_value": 100,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 3 tablets by mouth twice daily for 30 days",
+  "quantity": 180,
+  "quantity_text": "#180 (one hundred eighty) tablets",
+  "days_supply_stated": 30,
+  "refills": 1,
+  "prescriber_name": "Kwame Mensah, MD",
+  "prescriber_npi": "1390456717",
+  "prescriber_dea": "BM3688566",
+  "date_written": "2026-10-09",
+  "substitution": "permitted",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   81,
+   11,
+   1461,
+   58
+  ],
+  "clinic": [
+   139,
+   105,
+   815,
+   151
+  ],
+  "prescriber_name": [
+   137,
+   168,
+   504,
+   208
+  ],
+  "prescriber_npi": [
+   220,
+   314,
+   430,
+   345
+  ],
+  "prescriber_dea": [
+   730,
+   324,
+   934,
+   354
+  ],
+  "patient_name": [
+   373,
+   427,
+   592,
+   458
+  ],
+  "patient_dob": [
+   1192,
+   443,
+   1383,
+   473
+  ],
+  "patient_address": [
+   371,
+   503,
+   958,
+   541
+  ],
+  "date_written": [
+   370,
+   575,
+   560,
+   605
+  ],
+  "drug_name": [
+   367,
+   694,
+   544,
+   725
+  ],
+  "strength": [
+   571,
+   698,
+   703,
+   736
+  ],
+  "dosage_form": [
+   730,
+   702,
+   833,
+   731
+  ],
+  "directions": [
+   365,
+   824,
+   1157,
+   875
+  ],
+  "quantity": [
+   363,
+   914,
+   932,
+   961
+  ],
+  "refills": [
+   361,
+   1004,
+   383,
+   1032
+  ],
+  "substitution": [
+   119,
+   1092,
+   150,
+   1122
+  ]
+ },
+ "expected_flags": [
+  {
+   "field": "directions",
+   "code": "exceeds_max_daily",
+   "why": "3 x 100 mg twice daily = 600 mg/day; usual maximum is 200 mg/day."
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": [],
+ "meta": {
+  "fax_from": "(212) 555-0127",
+  "sent": "2026-10-09 14:50",
+  "patient_id": "PT015",
+  "prescriber_id": "P113",
+  "prescriber_in_directory": true
+ }
+}

@@ -1,0 +1,138 @@
+{
+ "id": "rx_002",
+ "image": "rx_002.png",
+ "synthetic": true,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": -1.22,
+  "blur": 0.9,
+  "noise": 22,
+  "fax_mode": "fine",
+  "level": "medium"
+ },
+ "is_clean": true,
+ "trap": null,
+ "fields": {
+  "patient_name": "Amara Nwosu",
+  "patient_dob": "1990-01-30",
+  "patient_address": "346 W 121st St, Apt 7A, New York, NY 10026",
+  "drug_name": "lisinopril",
+  "strength": "10 mg",
+  "strength_value": 10,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth once daily for 30 days",
+  "quantity": 30,
+  "quantity_text": "#30 (thirty) tablets",
+  "days_supply_stated": 30,
+  "refills": 1,
+  "prescriber_name": "Priya Raman, DO",
+  "prescriber_npi": "1564076267",
+  "prescriber_dea": null,
+  "date_written": "2026-10-07",
+  "substitution": "permitted",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   83,
+   9,
+   1463,
+   59
+  ],
+  "clinic": [
+   140,
+   104,
+   741,
+   149
+  ],
+  "prescriber_name": [
+   139,
+   167,
+   449,
+   208
+  ],
+  "prescriber_npi": [
+   221,
+   312,
+   432,
+   344
+  ],
+  "patient_name": [
+   373,
+   426,
+   612,
+   458
+  ],
+  "patient_dob": [
+   1193,
+   443,
+   1384,
+   474
+  ],
+  "patient_address": [
+   372,
+   502,
+   957,
+   541
+  ],
+  "date_written": [
+   371,
+   574,
+   561,
+   605
+  ],
+  "drug_name": [
+   368,
+   694,
+   541,
+   732
+  ],
+  "strength": [
+   568,
+   698,
+   678,
+   735
+  ],
+  "dosage_form": [
+   706,
+   701,
+   808,
+   730
+  ],
+  "directions": [
+   365,
+   824,
+   1135,
+   875
+  ],
+  "quantity": [
+   363,
+   914,
+   670,
+   955
+  ],
+  "refills": [
+   361,
+   1004,
+   383,
+   1031
+  ],
+  "substitution": [
+   119,
+   1090,
+   150,
+   1121
+  ]
+ },
+ "expected_flags": [],
+ "expected_order_status": "ready_for_review",
+ "expect_abstain": [],
+ "meta": {
+  "fax_from": "(212) 555-0105",
+  "sent": "2026-10-07 15:15",
+  "patient_id": "PT004",
+  "prescriber_id": "P102",
+  "prescriber_in_directory": true
+ }
+}

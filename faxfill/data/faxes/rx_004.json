@@ -1,0 +1,138 @@
+{
+ "id": "rx_004",
+ "image": "rx_004.png",
+ "synthetic": true,
+ "style": "handwritten",
+ "degradation": {
+  "skew_deg": -0.61,
+  "blur": 0.5,
+  "noise": 10,
+  "fax_mode": "fine",
+  "level": "light"
+ },
+ "is_clean": true,
+ "trap": null,
+ "fields": {
+  "patient_name": "Winston Achebe",
+  "patient_dob": "1968-05-03",
+  "patient_address": "470 W 135th St, Apt 4B, New York, NY 10027",
+  "drug_name": "losartan",
+  "strength": "50 mg",
+  "strength_value": 50,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth once daily for 90 days",
+  "quantity": 90,
+  "quantity_text": "#90 (ninety) tablets",
+  "days_supply_stated": 90,
+  "refills": 3,
+  "prescriber_name": "Hannah Lindqvist, MD",
+  "prescriber_npi": "1483926451",
+  "prescriber_dea": null,
+  "date_written": "2026-10-05",
+  "substitution": "dispense_as_written",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   71,
+   18,
+   1451,
+   52
+  ],
+  "clinic": [
+   130,
+   110,
+   750,
+   160
+  ],
+  "prescriber_name": [
+   129,
+   174,
+   529,
+   214
+  ],
+  "prescriber_npi": [
+   213,
+   319,
+   423,
+   348
+  ],
+  "patient_name": [
+   367,
+   433,
+   752,
+   479
+  ],
+  "patient_dob": [
+   1186,
+   444,
+   1479,
+   495
+  ],
+  "patient_address": [
+   366,
+   507,
+   952,
+   540
+  ],
+  "date_written": [
+   365,
+   587,
+   661,
+   624
+  ],
+  "drug_name": [
+   364,
+   703,
+   579,
+   737
+  ],
+  "strength": [
+   607,
+   709,
+   767,
+   753
+  ],
+  "dosage_form": [
+   795,
+   700,
+   893,
+   740
+  ],
+  "directions": [
+   362,
+   827,
+   1484,
+   906
+  ],
+  "quantity": [
+   361,
+   917,
+   854,
+   983
+  ],
+  "refills": [
+   361,
+   1018,
+   394,
+   1043
+  ],
+  "substitution": [
+   700,
+   1104,
+   730,
+   1135
+  ]
+ },
+ "expected_flags": [],
+ "expected_order_status": "ready_for_review",
+ "expect_abstain": [],
+ "meta": {
+  "fax_from": "(212) 555-0113",
+  "sent": "2026-10-05 08:31",
+  "patient_id": "PT011",
+  "prescriber_id": "P106",
+  "prescriber_in_directory": true
+ }
+}

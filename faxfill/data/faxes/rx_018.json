@@ -1,0 +1,146 @@
+{
+ "id": "rx_018",
+ "image": "rx_018.png",
+ "synthetic": true,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": 0.78,
+  "blur": 0.5,
+  "noise": 10,
+  "fax_mode": "fine",
+  "level": "light"
+ },
+ "is_clean": false,
+ "trap": "smudge",
+ "fields": {
+  "patient_name": "Winston Achebe",
+  "patient_dob": "1968-05-03",
+  "patient_address": "470 W 135th St, Apt 4B, New York, NY 10027",
+  "drug_name": "lisinopril",
+  "strength": "20 mg",
+  "strength_value": 20,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth once daily for 30 days",
+  "quantity": 30,
+  "quantity_text": "#30 (thirty) tablets",
+  "days_supply_stated": 30,
+  "refills": 1,
+  "prescriber_name": "Hannah Lindqvist, MD",
+  "prescriber_npi": "1483926451",
+  "prescriber_dea": null,
+  "date_written": "2026-10-08",
+  "substitution": "permitted",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   45,
+   18,
+   1426,
+   57
+  ],
+  "clinic": [
+   107,
+   120,
+   727,
+   171
+  ],
+  "prescriber_name": [
+   108,
+   187,
+   507,
+   227
+  ],
+  "prescriber_npi": [
+   195,
+   332,
+   405,
+   362
+  ],
+  "patient_name": [
+   351,
+   439,
+   627,
+   470
+  ],
+  "patient_dob": [
+   1171,
+   429,
+   1361,
+   459
+  ],
+  "patient_address": [
+   352,
+   511,
+   938,
+   546
+  ],
+  "date_written": [
+   353,
+   588,
+   543,
+   618
+  ],
+  "drug_name": [
+   355,
+   708,
+   527,
+   746
+  ],
+  "strength": [
+   555,
+   706,
+   665,
+   743
+  ],
+  "dosage_form": [
+   693,
+   705,
+   795,
+   733
+  ],
+  "directions": [
+   356,
+   830,
+   1126,
+   876
+  ],
+  "quantity": [
+   358,
+   927,
+   664,
+   966
+  ],
+  "refills": [
+   359,
+   1020,
+   380,
+   1048
+  ],
+  "substitution": [
+   120,
+   1116,
+   151,
+   1146
+  ]
+ },
+ "expected_flags": [
+  {
+   "field": "strength",
+   "code": "unreadable",
+   "why": "Strength is covered by a smudge. Leave empty and ask; do not infer it from the usual strengths."
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": [
+  "strength"
+ ],
+ "meta": {
+  "fax_from": "(212) 555-0113",
+  "sent": "2026-10-08 14:47",
+  "patient_id": "PT011",
+  "prescriber_id": "P106",
+  "prescriber_in_directory": true
+ }
+}

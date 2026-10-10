@@ -1,0 +1,144 @@
+{
+ "id": "rx_005",
+ "image": "rx_005.png",
+ "synthetic": true,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": 0.75,
+  "blur": 1.25,
+  "noise": 32,
+  "fax_mode": "standard",
+  "level": "heavy"
+ },
+ "is_clean": true,
+ "trap": null,
+ "fields": {
+  "patient_name": "Jamal Pierce",
+  "patient_dob": "1975-06-30",
+  "patient_address": "140 W 121st St, Apt 6C, New York, NY 10030",
+  "drug_name": "metformin",
+  "strength": "500 mg",
+  "strength_value": 500,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth twice daily for 30 days",
+  "quantity": 60,
+  "quantity_text": "#60 (sixty) tablets",
+  "days_supply_stated": 30,
+  "refills": 5,
+  "prescriber_name": "Lucia Ferraro, MD",
+  "prescriber_npi": "1512883764",
+  "prescriber_dea": null,
+  "date_written": "2026-10-06",
+  "substitution": "permitted",
+  "notes": "New start."
+ },
+ "field_boxes": {
+  "fax_header": [
+   46,
+   18,
+   1426,
+   56
+  ],
+  "clinic": [
+   107,
+   121,
+   708,
+   162
+  ],
+  "prescriber_name": [
+   108,
+   187,
+   432,
+   225
+  ],
+  "prescriber_npi": [
+   195,
+   332,
+   405,
+   362
+  ],
+  "patient_name": [
+   351,
+   440,
+   571,
+   469
+  ],
+  "patient_dob": [
+   1171,
+   429,
+   1362,
+   459
+  ],
+  "patient_address": [
+   352,
+   511,
+   940,
+   545
+  ],
+  "date_written": [
+   353,
+   588,
+   544,
+   617
+  ],
+  "drug_name": [
+   355,
+   708,
+   540,
+   737
+  ],
+  "strength": [
+   568,
+   706,
+   699,
+   743
+  ],
+  "dosage_form": [
+   727,
+   704,
+   829,
+   733
+  ],
+  "directions": [
+   357,
+   830,
+   1130,
+   875
+  ],
+  "quantity": [
+   358,
+   927,
+   657,
+   965
+  ],
+  "refills": [
+   359,
+   1020,
+   380,
+   1047
+  ],
+  "substitution": [
+   120,
+   1115,
+   151,
+   1146
+  ],
+  "notes": [
+   261,
+   1210,
+   393,
+   1233
+  ]
+ },
+ "expected_flags": [],
+ "expected_order_status": "ready_for_review",
+ "expect_abstain": [],
+ "meta": {
+  "fax_from": "(212) 555-0125",
+  "sent": "2026-10-06 09:04",
+  "patient_id": "PT015",
+  "prescriber_id": "P112",
+  "prescriber_in_directory": true
+ }
+}
