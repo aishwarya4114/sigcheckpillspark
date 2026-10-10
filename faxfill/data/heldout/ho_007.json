@@ -1,0 +1,299 @@
+{
+ "id": "ho_007",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "ho_007_p1.png"
+ ],
+ "pages_declared": 1,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": -1.54,
+  "blur": 0.9,
+  "noise": 22,
+  "fax_mode": "fine",
+  "level": "medium"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": -1.54,
+   "blur": 0.9,
+   "noise": 22,
+   "fax_mode": "fine",
+   "level": "medium"
+  }
+ ],
+ "is_clean": false,
+ "trap": "conflicting_directions",
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "ho_007_p1.png",
+   "fields": {
+    "patient_name": "Sofia Alvarez",
+    "patient_dob": "1972-11-02",
+    "patient_address": "648 W 121st St, Apt 6A, New York, NY 10027",
+    "drug_name": "hydralazine",
+    "strength": "10 mg",
+    "strength_value": 10,
+    "strength_unit": "mg",
+    "dosage_form": "tablet",
+    "directions": "1 tab PO BID",
+    "quantity": 60,
+    "quantity_text": "#60 (sixty) tablets",
+    "days_supply_stated": null,
+    "refills": 5,
+    "prescriber_name": "Mei Tanaka, MD",
+    "prescriber_npi": "1299818082",
+    "prescriber_dea": null,
+    "date_written": "2026-10-09",
+    "substitution": "permitted",
+    "notes": "Take 1 tab PO TID after 7 days."
+   },
+   "field_boxes": {
+    "fax_header": [
+     89,
+     5,
+     1454,
+     62
+    ],
+    "clinic": [
+     146,
+     100,
+     822,
+     151
+    ],
+    "prescriber_name": [
+     144,
+     163,
+     431,
+     203
+    ],
+    "prescriber_npi": [
+     225,
+     309,
+     436,
+     342
+    ],
+    "patient_name": [
+     377,
+     423,
+     601,
+     456
+    ],
+    "patient_dob": [
+     1197,
+     445,
+     1388,
+     477
+    ],
+    "patient_address": [
+     375,
+     499,
+     961,
+     542
+    ],
+    "date_written": [
+     373,
+     571,
+     564,
+     603
+    ],
+    "drug_name": [
+     370,
+     691,
+     584,
+     732
+    ],
+    "strength": [
+     611,
+     697,
+     722,
+     735
+    ],
+    "dosage_form": [
+     749,
+     701,
+     852,
+     731
+    ],
+    "directions": [
+     367,
+     821,
+     592,
+     854
+    ],
+    "quantity": [
+     364,
+     911,
+     664,
+     954
+    ],
+    "refills": [
+     362,
+     1001,
+     383,
+     1028
+    ],
+    "substitution": [
+     119,
+     1086,
+     150,
+     1117
+    ],
+    "notes": [
+     257,
+     1188,
+     667,
+     1226
+    ]
+   },
+   "meta": {
+    "rxcui": "905199",
+    "fax_from": "(212) 555-0117",
+    "sent": "2026-10-09 13:02",
+    "patient_id": "PT002",
+    "prescriber_id": "P108",
+    "prescriber_in_directory": true
+   }
+  }
+ ],
+ "image": "ho_007_p1.png",
+ "fields": {
+  "patient_name": "Sofia Alvarez",
+  "patient_dob": "1972-11-02",
+  "patient_address": "648 W 121st St, Apt 6A, New York, NY 10027",
+  "drug_name": "hydralazine",
+  "strength": "10 mg",
+  "strength_value": 10,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "1 tab PO BID",
+  "quantity": 60,
+  "quantity_text": "#60 (sixty) tablets",
+  "days_supply_stated": null,
+  "refills": 5,
+  "prescriber_name": "Mei Tanaka, MD",
+  "prescriber_npi": "1299818082",
+  "prescriber_dea": null,
+  "date_written": "2026-10-09",
+  "substitution": "permitted",
+  "notes": "Take 1 tab PO TID after 7 days."
+ },
+ "field_boxes": {
+  "fax_header": [
+   89,
+   5,
+   1454,
+   62
+  ],
+  "clinic": [
+   146,
+   100,
+   822,
+   151
+  ],
+  "prescriber_name": [
+   144,
+   163,
+   431,
+   203
+  ],
+  "prescriber_npi": [
+   225,
+   309,
+   436,
+   342
+  ],
+  "patient_name": [
+   377,
+   423,
+   601,
+   456
+  ],
+  "patient_dob": [
+   1197,
+   445,
+   1388,
+   477
+  ],
+  "patient_address": [
+   375,
+   499,
+   961,
+   542
+  ],
+  "date_written": [
+   373,
+   571,
+   564,
+   603
+  ],
+  "drug_name": [
+   370,
+   691,
+   584,
+   732
+  ],
+  "strength": [
+   611,
+   697,
+   722,
+   735
+  ],
+  "dosage_form": [
+   749,
+   701,
+   852,
+   731
+  ],
+  "directions": [
+   367,
+   821,
+   592,
+   854
+  ],
+  "quantity": [
+   364,
+   911,
+   664,
+   954
+  ],
+  "refills": [
+   362,
+   1001,
+   383,
+   1028
+  ],
+  "substitution": [
+   119,
+   1086,
+   150,
+   1117
+  ],
+  "notes": [
+   257,
+   1188,
+   667,
+   1226
+  ]
+ },
+ "meta": {
+  "rxcui": "905199",
+  "fax_from": "(212) 555-0117",
+  "sent": "2026-10-09 13:02",
+  "patient_id": "PT002",
+  "prescriber_id": "P108",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [
+  {
+   "field": "directions",
+   "code": "conflicting_directions",
+   "why": "Sig BID vs Notes TID.",
+   "page": 1
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": []
+}

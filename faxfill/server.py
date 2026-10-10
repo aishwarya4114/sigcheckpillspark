@@ -260,8 +260,11 @@ def scorecard():
     ev = DATA / "eval"
     if not (ev / "dev_report.txt").exists():
         return JSONResponse({"dev": None})
+    heldout = None
+    if (ev / "heldout.json").exists():
+        heldout = {"text": (ev / "heldout.txt").read_text(), "data": json.load(open(ev / "heldout.json"))}
     return {"dev": {"text": (ev / "dev_report.txt").read_text(), "data": json.load(open(ev / "dev_report.json"))},
-            "heldout": None}
+            "heldout": heldout}
 
 
 if __name__ == "__main__":

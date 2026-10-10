@@ -1,0 +1,280 @@
+{
+ "id": "ho_020",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "ho_020_p1.png"
+ ],
+ "pages_declared": 1,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": 0.61,
+  "blur": 0.9,
+  "noise": 22,
+  "fax_mode": "fine",
+  "level": "medium"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": 0.61,
+   "blur": 0.9,
+   "noise": 22,
+   "fax_mode": "fine",
+   "level": "medium"
+  }
+ ],
+ "is_clean": true,
+ "trap": null,
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "ho_020_p1.png",
+   "fields": {
+    "patient_name": "Isabel Moreau",
+    "patient_dob": "1963-04-17",
+    "patient_address": "326 W 118th St, Apt 3C, New York, NY 10031",
+    "drug_name": "glyburide",
+    "strength": "4.5 mg",
+    "strength_value": 4.5,
+    "strength_unit": "mg",
+    "dosage_form": "tablet",
+    "directions": "Take 2 tablets by mouth once daily",
+    "quantity": 60,
+    "quantity_text": "#60 (sixty) tablets",
+    "days_supply_stated": null,
+    "refills": 0,
+    "prescriber_name": "Fatima Haddad, MD",
+    "prescriber_npi": "1810225023",
+    "prescriber_dea": null,
+    "date_written": "2026-10-07",
+    "substitution": "permitted",
+    "notes": null
+   },
+   "field_boxes": {
+    "fax_header": [
+     49,
+     20,
+     1414,
+     54
+    ],
+    "clinic": [
+     110,
+     120,
+     738,
+     169
+    ],
+    "prescriber_name": [
+     110,
+     186,
+     464,
+     223
+    ],
+    "prescriber_npi": [
+     197,
+     331,
+     407,
+     360
+    ],
+    "patient_name": [
+     353,
+     439,
+     594,
+     468
+    ],
+    "patient_dob": [
+     1173,
+     431,
+     1363,
+     460
+    ],
+    "patient_address": [
+     354,
+     511,
+     942,
+     544
+    ],
+    "date_written": [
+     355,
+     587,
+     545,
+     616
+    ],
+    "drug_name": [
+     356,
+     707,
+     534,
+     744
+    ],
+    "strength": [
+     562,
+     706,
+     683,
+     742
+    ],
+    "dosage_form": [
+     711,
+     704,
+     813,
+     732
+    ],
+    "directions": [
+     357,
+     833,
+     946,
+     874
+    ],
+    "quantity": [
+     358,
+     926,
+     658,
+     964
+    ],
+    "refills": [
+     359,
+     1019,
+     380,
+     1046
+    ],
+    "substitution": [
+     120,
+     1113,
+     150,
+     1144
+    ]
+   },
+   "meta": {
+    "rxcui": "252960",
+    "fax_from": "(212) 555-0121",
+    "sent": "2026-10-07 12:25",
+    "patient_id": "PT006",
+    "prescriber_id": "P110",
+    "prescriber_in_directory": true
+   }
+  }
+ ],
+ "image": "ho_020_p1.png",
+ "fields": {
+  "patient_name": "Isabel Moreau",
+  "patient_dob": "1963-04-17",
+  "patient_address": "326 W 118th St, Apt 3C, New York, NY 10031",
+  "drug_name": "glyburide",
+  "strength": "4.5 mg",
+  "strength_value": 4.5,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 2 tablets by mouth once daily",
+  "quantity": 60,
+  "quantity_text": "#60 (sixty) tablets",
+  "days_supply_stated": null,
+  "refills": 0,
+  "prescriber_name": "Fatima Haddad, MD",
+  "prescriber_npi": "1810225023",
+  "prescriber_dea": null,
+  "date_written": "2026-10-07",
+  "substitution": "permitted",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   49,
+   20,
+   1414,
+   54
+  ],
+  "clinic": [
+   110,
+   120,
+   738,
+   169
+  ],
+  "prescriber_name": [
+   110,
+   186,
+   464,
+   223
+  ],
+  "prescriber_npi": [
+   197,
+   331,
+   407,
+   360
+  ],
+  "patient_name": [
+   353,
+   439,
+   594,
+   468
+  ],
+  "patient_dob": [
+   1173,
+   431,
+   1363,
+   460
+  ],
+  "patient_address": [
+   354,
+   511,
+   942,
+   544
+  ],
+  "date_written": [
+   355,
+   587,
+   545,
+   616
+  ],
+  "drug_name": [
+   356,
+   707,
+   534,
+   744
+  ],
+  "strength": [
+   562,
+   706,
+   683,
+   742
+  ],
+  "dosage_form": [
+   711,
+   704,
+   813,
+   732
+  ],
+  "directions": [
+   357,
+   833,
+   946,
+   874
+  ],
+  "quantity": [
+   358,
+   926,
+   658,
+   964
+  ],
+  "refills": [
+   359,
+   1019,
+   380,
+   1046
+  ],
+  "substitution": [
+   120,
+   1113,
+   150,
+   1144
+  ]
+ },
+ "meta": {
+  "rxcui": "252960",
+  "fax_from": "(212) 555-0121",
+  "sent": "2026-10-07 12:25",
+  "patient_id": "PT006",
+  "prescriber_id": "P110",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [],
+ "expected_order_status": "ready_for_review",
+ "expect_abstain": []
+}

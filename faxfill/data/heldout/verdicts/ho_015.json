@@ -1,0 +1,518 @@
+{
+ "fax_id": "ho_015",
+ "verifier": "verifier-v1",
+ "readers": {
+  "A": "openai/gpt-5.5",
+  "B": "mistral/mistral-large-3",
+  "C": "regex over tesseract"
+ },
+ "lookup": "local files (faxfill/ref)",
+ "pages_received": 1,
+ "pages_declared_in_header": 1,
+ "order_status": "NEEDS_PHARMACIST",
+ "order_flags": [],
+ "danger_score": 5,
+ "danger_breakdown": {
+  "other_flag": 5
+ },
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "ho_015_p1.png",
+   "status": "NEEDS_PHARMACIST",
+   "flagged_fields": [
+    "quantity"
+   ],
+   "fields": {
+    "patient_name": {
+     "value": "Rafael Duarte",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      353,
+      439,
+      585,
+      471
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "patient_in_profiles",
+       "evidence": "patient profiles (patients.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Rafael Duarte",
+      "B": "Rafael Duarte",
+      "C": "Rafael Duarte"
+     }
+    },
+    "patient_dob": {
+     "value": "12/24/1950",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      1174,
+      428,
+      1361,
+      459
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "dob_matches_profile",
+       "evidence": "patient profiles (patients.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "12/24/1950",
+      "B": "12/24/1950",
+      "C": "12/24/1950"
+     }
+    },
+    "drug_name": {
+     "value": "Amiloride",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      354,
+      707,
+      531,
+      739
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "drug_in_rxnorm",
+       "evidence": "rxnorm (drugs.json)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [
+      "Look-alike partner(s): amlodipine. No sign of confusion on this fax."
+     ],
+     "reads": {
+      "A": "Amiloride",
+      "B": "Amiloride",
+      "C": "Amiloride"
+     }
+    },
+    "strength": {
+     "value": "5 mg",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      561,
+      707,
+      647,
+      744
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "strength_in_rxnorm",
+       "evidence": "rxnorm"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "5 mg",
+      "B": "5 mg",
+      "C": "5 mg"
+     }
+    },
+    "dosage_form": {
+     "value": "tablet",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      676,
+      704,
+      778,
+      735
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "form_in_rxnorm",
+       "evidence": "rxnorm"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "tablet",
+      "B": "tablet",
+      "C": "tablet"
+     }
+    },
+    "directions": {
+     "value": "Take 1 tablet by mouth three times daily for 10 days",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      356,
+      829,
+      1232,
+      873
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "directions_parsed",
+       "evidence": null
+      },
+      {
+       "check": "within_usual_max (manual, unverified)",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Take 1 tablet by mouth three times daily for 10 days",
+      "B": "Take 1 tablet by mouth three times daily for 10 days",
+      "C": "Take 1 tablet by mouth three times daily for 10 days"
+     }
+    },
+    "quantity": {
+     "value": "#15 (fifteen) tablets",
+     "status": "needs_pharmacist",
+     "codes": [
+      "QTY_DURATION_MISMATCH"
+     ],
+     "reasons": [
+      "Directions give 1 x 3/day x 10 days = 30, but quantity is 15."
+     ],
+     "alternatives": [],
+     "evidence_box": [
+      357,
+      926,
+      685,
+      965
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "numeral_matches_words",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [
+      {
+       "check": "QTY_DURATION_MISMATCH",
+       "evidence": null
+      }
+     ],
+     "notes": [],
+     "reads": {
+      "A": "#15 (fifteen) tablets",
+      "B": "#15 (fifteen) tablets",
+      "C": "#15 (fifteen) tablets"
+     }
+    },
+    "refills": {
+     "value": "5",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      360,
+      1019,
+      380,
+      1047
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "refills_whole_number",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "5",
+      "B": "5",
+      "C": "5"
+     }
+    },
+    "prescriber_name": {
+     "value": "Fatima Haddad, MD",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      110,
+      185,
+      461,
+      223
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "prescriber_matches_npi",
+       "evidence": "prescriber directory (prescribers.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Fatima Haddad, MD",
+      "B": "Fatima Haddad, MD",
+      "C": "Fatima Haddad, MD"
+     }
+    },
+    "prescriber_npi": {
+     "value": "1810225023",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      198,
+      331,
+      404,
+      362
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "npi_luhn",
+       "evidence": null
+      },
+      {
+       "check": "npi_in_directory",
+       "evidence": "prescriber directory (prescribers.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "1810225023",
+      "B": "1810225023",
+      "C": "1810225023"
+     }
+    },
+    "prescriber_dea": {
+     "value": null,
+     "status": "not_present",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": null,
+     "evidence_note": "location not found",
+     "checks_passed": [],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": null,
+      "B": null,
+      "C": null
+     }
+    },
+    "date_written": {
+     "value": "10/06/2026",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      356,
+      587,
+      543,
+      618
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "date_valid_not_future",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "10/06/2026",
+      "B": "10/06/2026",
+      "C": "10/06/2026"
+     }
+    },
+    "substitution": {
+     "value": "permitted",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      324,
+      1114,
+      443,
+      1145
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "substitution_known_value",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "permitted",
+      "B": "permitted",
+      "C": null
+     }
+    },
+    "notes": {
+     "value": "Please call with questions.",
+     "status": "info",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      263,
+      1207,
+      598,
+      1237
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Please call with questions.",
+      "B": "Please call with questions.",
+      "C": "Please call with questions."
+     }
+    }
+   },
+   "page_flags": [],
+   "c_only_fields": [],
+   "drug_ref": "amiloride"
+  }
+ ],
+ "clarification_questions": [
+  {
+   "page": 1,
+   "field": "quantity",
+   "code": "QTY_DURATION_MISMATCH",
+   "question": "Please confirm the quantity for amiloride: it does not match the directions and duration."
+  }
+ ],
+ "thresholds": {
+  "speck_max_area": 4,
+  "region_pad": 30,
+  "baseline_text_pad": 10,
+  "noise_ratio": 3.0,
+  "noise_min_density": 0.01,
+  "streak_row_ink": 0.8,
+  "edge_margin": 5,
+  "prescriber_block_top": 0.2,
+  "header_votes": 2,
+  "lasa_min_ocr_conf": 60
+ },
+ "lookup_sources": {
+  "drug": "local files (faxfill/ref)",
+  "prescriber": "local files (faxfill/ref)",
+  "patient": "local files (faxfill/ref)",
+  "prism_kb": "not queried: PRISM documents no Knowledge Base query API, so lookups use local files"
+ },
+ "prism": {
+  "traces_sent": 4,
+  "traces_failed": [],
+  "intake_trace_ids": [
+   "sigcheck-intake-ho_015-p1-79884889af0d"
+  ],
+  "reader_trace_ids": [
+   "sigcheck-read-ho_015_p1-openai-gpt-5.5-reader-v2-v2",
+   "sigcheck-read-ho_015_p1-mistral-mistral-large-3-reader-v2-v2"
+  ],
+  "verifier_trace_id": "sigcheck-verify-ho_015-139162a37711",
+  "guardrail": {
+   "local_injection_check": false,
+   "prism": false,
+   "prism_injection_flags": [],
+   "prism_other_flags": [
+    {
+     "rule_name": "PII/PHI Detection",
+     "action": "flag",
+     "page": 1
+    }
+   ],
+   "fired_by": [],
+   "blocks_if": "either fires",
+   "prism_status": "read from guardrail_flags in the POST /api/traces response for the intake trace (present in every response, not listed in the docs)"
+  },
+  "knowledge_base": "not queried: PRISM documents no Knowledge Base query API, so lookups use local files"
+ }
+}

@@ -1,0 +1,299 @@
+{
+ "id": "ho_014",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "ho_014_p1.png"
+ ],
+ "pages_declared": 1,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": 0.24,
+  "blur": 0.5,
+  "noise": 10,
+  "fax_mode": "fine",
+  "level": "light"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": 0.24,
+   "blur": 0.5,
+   "noise": 10,
+   "fax_mode": "fine",
+   "level": "light"
+  }
+ ],
+ "is_clean": false,
+ "trap": "trailing_zero",
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "ho_014_p1.png",
+   "fields": {
+    "patient_name": "Dev Malhotra",
+    "patient_dob": "1979-12-05",
+    "patient_address": "247 Hamilton Pl, Apt 2C, New York, NY 10027",
+    "drug_name": "atorvastatin",
+    "strength": "40.0 mg",
+    "strength_value": 40,
+    "strength_unit": "mg",
+    "dosage_form": "tablet",
+    "directions": "Take 1 tablet by mouth once daily",
+    "quantity": 30,
+    "quantity_text": "#30 (thirty) tablets",
+    "days_supply_stated": null,
+    "refills": 2,
+    "prescriber_name": "Priya Raman, DO",
+    "prescriber_npi": "1564076267",
+    "prescriber_dea": null,
+    "date_written": "2026-10-05",
+    "substitution": "permitted",
+    "notes": "New start."
+   },
+   "field_boxes": {
+    "fax_header": [
+     56,
+     24,
+     1421,
+     49
+    ],
+    "clinic": [
+     116,
+     120,
+     716,
+     155
+    ],
+    "prescriber_name": [
+     116,
+     184,
+     425,
+     220
+    ],
+    "prescriber_npi": [
+     202,
+     328,
+     412,
+     356
+    ],
+    "patient_name": [
+     357,
+     437,
+     583,
+     465
+    ],
+    "patient_dob": [
+     1177,
+     434,
+     1367,
+     462
+    ],
+    "patient_address": [
+     358,
+     512,
+     950,
+     541
+    ],
+    "date_written": [
+     358,
+     585,
+     548,
+     613
+    ],
+    "drug_name": [
+     358,
+     705,
+     580,
+     733
+    ],
+    "strength": [
+     608,
+     704,
+     750,
+     740
+    ],
+    "dosage_form": [
+     778,
+     704,
+     880,
+     731
+    ],
+    "directions": [
+     359,
+     834,
+     928,
+     871
+    ],
+    "quantity": [
+     359,
+     925,
+     665,
+     961
+    ],
+    "refills": [
+     360,
+     1016,
+     381,
+     1043
+    ],
+    "substitution": [
+     120,
+     1109,
+     150,
+     1139
+    ],
+    "notes": [
+     260,
+     1206,
+     392,
+     1227
+    ]
+   },
+   "meta": {
+    "rxcui": "617311",
+    "fax_from": "(212) 555-0105",
+    "sent": "2026-10-05 11:51",
+    "patient_id": "PT007",
+    "prescriber_id": "P102",
+    "prescriber_in_directory": true
+   }
+  }
+ ],
+ "image": "ho_014_p1.png",
+ "fields": {
+  "patient_name": "Dev Malhotra",
+  "patient_dob": "1979-12-05",
+  "patient_address": "247 Hamilton Pl, Apt 2C, New York, NY 10027",
+  "drug_name": "atorvastatin",
+  "strength": "40.0 mg",
+  "strength_value": 40,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth once daily",
+  "quantity": 30,
+  "quantity_text": "#30 (thirty) tablets",
+  "days_supply_stated": null,
+  "refills": 2,
+  "prescriber_name": "Priya Raman, DO",
+  "prescriber_npi": "1564076267",
+  "prescriber_dea": null,
+  "date_written": "2026-10-05",
+  "substitution": "permitted",
+  "notes": "New start."
+ },
+ "field_boxes": {
+  "fax_header": [
+   56,
+   24,
+   1421,
+   49
+  ],
+  "clinic": [
+   116,
+   120,
+   716,
+   155
+  ],
+  "prescriber_name": [
+   116,
+   184,
+   425,
+   220
+  ],
+  "prescriber_npi": [
+   202,
+   328,
+   412,
+   356
+  ],
+  "patient_name": [
+   357,
+   437,
+   583,
+   465
+  ],
+  "patient_dob": [
+   1177,
+   434,
+   1367,
+   462
+  ],
+  "patient_address": [
+   358,
+   512,
+   950,
+   541
+  ],
+  "date_written": [
+   358,
+   585,
+   548,
+   613
+  ],
+  "drug_name": [
+   358,
+   705,
+   580,
+   733
+  ],
+  "strength": [
+   608,
+   704,
+   750,
+   740
+  ],
+  "dosage_form": [
+   778,
+   704,
+   880,
+   731
+  ],
+  "directions": [
+   359,
+   834,
+   928,
+   871
+  ],
+  "quantity": [
+   359,
+   925,
+   665,
+   961
+  ],
+  "refills": [
+   360,
+   1016,
+   381,
+   1043
+  ],
+  "substitution": [
+   120,
+   1109,
+   150,
+   1139
+  ],
+  "notes": [
+   260,
+   1206,
+   392,
+   1227
+  ]
+ },
+ "meta": {
+  "rxcui": "617311",
+  "fax_from": "(212) 555-0105",
+  "sent": "2026-10-05 11:51",
+  "patient_id": "PT007",
+  "prescriber_id": "P102",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [
+  {
+   "field": "strength",
+   "code": "trailing_zero",
+   "why": "Printed '40.0 mg': trailing zero can be misread as 10x.",
+   "page": 1
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": []
+}

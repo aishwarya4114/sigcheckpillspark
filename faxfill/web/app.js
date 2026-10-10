@@ -406,22 +406,46 @@ function prismPanel(v) {
 // ================================================================ SCORECARD
 async function showScorecard() {
   const s = await api("/api/scorecard");
-  if (!s.dev) { $("#app").innerHTML = "<h1>Scorecard</h1><p>No evaluation report yet.</p>"; return; }
-  const d = s.dev.data, a = d.accuracy;
-  const caught = d.traps.filter((t) => t.outcome.startsWith("caught")).length;
-  const right = d.traps.filter((t) => t.outcome === "caught (right reason)").length;
-  const cAll = d.c_only_flags.clean.concat(d.c_only_flags.trap), cRight = cAll.filter((x) => x.includes("regex was RIGHT")).length;
-  const tile = (v, k) => `<div class="tile"><div class="v">${v}</div><div class="k">${k}</div></div>`;
-  $("#app").innerHTML = `<h1>Scorecard</h1>
-    <div class="card"><span class="label-dev">Development set (rules tuned on these faxes)</span>
+  const tile = (v, k, cls = "") => `<div class="tile ${cls}"><div class="v">${v}</div><div class="k">${k}</div></div>`;
+  const tiles = (d) => {
+    const a = d.accuracy;
+    const caught = d.traps.filter((t) => t.outcome.startsWith("caught")).length;
+    const right = d.traps.filter((t) => t.outcome === "caught (right reason)").length;
+    const cleanFaxes = new Set(d.clean_flags.map((x) => x.split(" ")[0])).size;
+    return `<div class="tiles">
+      ${tile(`${a.verified_right}/${a.verified}`, "when we said a field passed, it was right")}
+      ${tile(`${caught}/${d.traps.length}`, `planted traps caught (${right} for the right reason)`)}
+      ${tile(`${d.verified_wrong.length}`, "wrong values passed")}
+      ${tile(`${d.clean_flags.length}`, `false alarms, on ${cleanFaxes} clean fax${cleanFaxes === 1 ? "" : "es"}`)}
+      ${tile(`${a.correct || 0}/${(a.correct || 0) + (a.wrong || 0)}`, `field values correct (${a.abstained || 0} left empty, not guessed)`)}</div>`;
+  };
+  const trapTable = (d) => `<table class="kv"><tr><th>Trap</th><td><b>Caught by</b></td></tr>${d.traps.map((t) =>
+    `<tr><th>${esc(t.fax)} · ${esc(t.code.replaceAll("_", " "))}</th><td>${t.outcome.startsWith("caught (right") ? "✓" : t.outcome.startsWith("caught") ? "~" : "✕"} ${esc((t.caught_by || []).join(", ") || "missed")}</td></tr>`).join("")}</table>`;
+  let html = "<h1>Scorecard</h1>";
+  if (s.heldout) {
+    const h = s.heldout.data, f = h.failure_case;
+    html += `<div class="card heldout"><span class="label-held">Held-out set (rules frozen before these faxes were generated)</span>
+      <p class="muted">${h.faxes} synthetic faxes (${h.clean} clean, ${h.n_traps} with one trap each), seed ${h.seed}, rules frozen at <code>${esc(h.rules_frozen_at)}</code>. No rule or threshold changed before scoring.</p>
+      ${tiles(h)}
+      <h2>One real failure</h2>
+      <div class="failure"><p><b>${esc(f.fax)}.</b> ${esc(f.what_happened)}</p>
+        <p><b>Why:</b> ${esc(f.why)}</p><p><b>What would fix it:</b> ${esc(f.what_would_fix_it)}</p>
+        <p class="muted">${esc(f.cost)}</p>
+        ${(h.other_false_alarms || []).map((x) => `<p class="muted">Also: ${esc(x)}</p>`).join("")}</div>
+      <details><summary>Which check caught each trap</summary>${trapTable(h)}</details>
+      <details><summary>Notes on this set</summary><ul class="reason">${h.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul></details>
+      <details><summary>Full held-out report</summary><pre class="report">${esc(s.heldout.text)}</pre></details></div>`;
+  } else {
+    html += `<div class="card"><h2>Held-out set</h2><p class="muted">Not run yet.</p></div>`;
+  }
+  if (s.dev) {
+    html += `<div class="card"><span class="label-dev">Development set (rules tuned on these)</span>
       <p class="muted">31 synthetic faxes. Thresholds were chosen while looking at these, so these numbers are optimistic.</p>
-      <div class="tiles">${tile(`${a.verified_right}/${a.verified}`, "marked passing and actually right")}
-        ${tile(`${caught}/${d.traps.length}`, `planted traps caught (${right} for the right reason)`)}
-        ${tile(`${d.clean_flags.length}`, "flags on the 5 clean faxes")}
-        ${tile(`${a.correct}/${a.correct + a.wrong}`, "field values correct")}
-        ${tile(`${cAll.length}`, `flags from the regex reader alone (right in ${cRight}, wrong in ${cAll.length - cRight})`)}</div>
-      <details><summary>Full report</summary><pre class="report">${esc(s.dev.text)}</pre></details></div>
-    <div class="card"><h2>Held-out set</h2><p class="muted">Not run yet. It will be generated later with a new seed, after the rules are frozen.</p></div>`;
+      ${tiles(s.dev.data)}
+      <details><summary>Which check caught each trap</summary>${trapTable(s.dev.data)}</details>
+      <details><summary>Full development report</summary><pre class="report">${esc(s.dev.text)}</pre></details></div>`;
+  }
+  $("#app").innerHTML = html;
 }
 
 // ================================================================ ROUTER

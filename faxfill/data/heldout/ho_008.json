@@ -1,0 +1,299 @@
+{
+ "id": "ho_008",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "ho_008_p1.png"
+ ],
+ "pages_declared": 1,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": -0.43,
+  "blur": 0.5,
+  "noise": 10,
+  "fax_mode": "fine",
+  "level": "light"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": -0.43,
+   "blur": 0.5,
+   "noise": 10,
+   "fax_mode": "fine",
+   "level": "light"
+  }
+ ],
+ "is_clean": false,
+ "trap": "allergy",
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "ho_008_p1.png",
+   "fields": {
+    "patient_name": "Yara Haddad",
+    "patient_dob": "1988-10-19",
+    "patient_address": "644 Convent Ave, Apt 6D, New York, NY 10031",
+    "drug_name": "celecoxib",
+    "strength": "50 mg",
+    "strength_value": 50,
+    "strength_unit": "mg",
+    "dosage_form": "capsule",
+    "directions": "Take 2 capsules by mouth once daily for 30 days",
+    "quantity": 60,
+    "quantity_text": "#60 (sixty) capsules",
+    "days_supply_stated": 30,
+    "refills": 0,
+    "prescriber_name": "Victor Osei, MD",
+    "prescriber_npi": "1845792351",
+    "prescriber_dea": "FO4110146",
+    "date_written": "2026-10-08",
+    "substitution": "permitted",
+    "notes": null
+   },
+   "field_boxes": {
+    "fax_header": [
+     68,
+     20,
+     1433,
+     50
+    ],
+    "clinic": [
+     127,
+     113,
+     747,
+     160
+    ],
+    "prescriber_name": [
+     126,
+     177,
+     410,
+     212
+    ],
+    "prescriber_npi": [
+     211,
+     321,
+     421,
+     350
+    ],
+    "prescriber_dea": [
+     721,
+     325,
+     921,
+     354
+    ],
+    "patient_name": [
+     365,
+     432,
+     588,
+     461
+    ],
+    "patient_dob": [
+     1185,
+     438,
+     1375,
+     467
+    ],
+    "patient_address": [
+     364,
+     508,
+     976,
+     540
+    ],
+    "date_written": [
+     364,
+     580,
+     554,
+     609
+    ],
+    "drug_name": [
+     363,
+     700,
+     542,
+     729
+    ],
+    "strength": [
+     570,
+     702,
+     680,
+     738
+    ],
+    "dosage_form": [
+     708,
+     703,
+     849,
+     739
+    ],
+    "directions": [
+     362,
+     830,
+     1187,
+     872
+    ],
+    "quantity": [
+     361,
+     920,
+     697,
+     958
+    ],
+    "refills": [
+     360,
+     1010,
+     382,
+     1037
+    ],
+    "substitution": [
+     120,
+     1101,
+     150,
+     1131
+    ]
+   },
+   "meta": {
+    "rxcui": "686379",
+    "fax_from": "(212) 555-0103",
+    "sent": "2026-10-08 15:05",
+    "patient_id": "PT010",
+    "prescriber_id": "P101",
+    "prescriber_in_directory": true
+   }
+  }
+ ],
+ "image": "ho_008_p1.png",
+ "fields": {
+  "patient_name": "Yara Haddad",
+  "patient_dob": "1988-10-19",
+  "patient_address": "644 Convent Ave, Apt 6D, New York, NY 10031",
+  "drug_name": "celecoxib",
+  "strength": "50 mg",
+  "strength_value": 50,
+  "strength_unit": "mg",
+  "dosage_form": "capsule",
+  "directions": "Take 2 capsules by mouth once daily for 30 days",
+  "quantity": 60,
+  "quantity_text": "#60 (sixty) capsules",
+  "days_supply_stated": 30,
+  "refills": 0,
+  "prescriber_name": "Victor Osei, MD",
+  "prescriber_npi": "1845792351",
+  "prescriber_dea": "FO4110146",
+  "date_written": "2026-10-08",
+  "substitution": "permitted",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   68,
+   20,
+   1433,
+   50
+  ],
+  "clinic": [
+   127,
+   113,
+   747,
+   160
+  ],
+  "prescriber_name": [
+   126,
+   177,
+   410,
+   212
+  ],
+  "prescriber_npi": [
+   211,
+   321,
+   421,
+   350
+  ],
+  "prescriber_dea": [
+   721,
+   325,
+   921,
+   354
+  ],
+  "patient_name": [
+   365,
+   432,
+   588,
+   461
+  ],
+  "patient_dob": [
+   1185,
+   438,
+   1375,
+   467
+  ],
+  "patient_address": [
+   364,
+   508,
+   976,
+   540
+  ],
+  "date_written": [
+   364,
+   580,
+   554,
+   609
+  ],
+  "drug_name": [
+   363,
+   700,
+   542,
+   729
+  ],
+  "strength": [
+   570,
+   702,
+   680,
+   738
+  ],
+  "dosage_form": [
+   708,
+   703,
+   849,
+   739
+  ],
+  "directions": [
+   362,
+   830,
+   1187,
+   872
+  ],
+  "quantity": [
+   361,
+   920,
+   697,
+   958
+  ],
+  "refills": [
+   360,
+   1010,
+   382,
+   1037
+  ],
+  "substitution": [
+   120,
+   1101,
+   150,
+   1131
+  ]
+ },
+ "meta": {
+  "rxcui": "686379",
+  "fax_from": "(212) 555-0103",
+  "sent": "2026-10-08 15:05",
+  "patient_id": "PT010",
+  "prescriber_id": "P101",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [
+  {
+   "field": "drug_name",
+   "code": "allergy_conflict",
+   "why": "Patient allergy (nsaid) conflicts with celecoxib.",
+   "page": 1
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": []
+}

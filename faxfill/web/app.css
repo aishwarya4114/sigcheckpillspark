@@ -161,3 +161,7 @@ a.button.primary { background: var(--accent); color: #fff; font-weight: 600; }
 table.queue { table-layout: fixed; }
 .queue th:nth-child(1) { width: 34%; } .queue th:nth-child(2) { width: 15%; } .queue th:nth-child(3) { width: 17%; }
 .queue th:nth-child(4) { width: 26%; } .queue th:nth-child(5) { width: 8%; }
+.label-held { display: inline-block; background: var(--ok-bg); color: var(--ok); font-weight: 700; border-radius: 8px; padding: 5px 12px; font-size: 14px; }
+.card.heldout { border: 2px solid #bfe0cc; }
+.failure { background: #fffaf2; border: 1px solid #f2d6b0; border-radius: 10px; padding: 10px 14px; margin: 8px 0 12px; }
+.failure p { margin: 6px 0; }

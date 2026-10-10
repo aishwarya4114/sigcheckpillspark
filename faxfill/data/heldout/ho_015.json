@@ -1,0 +1,299 @@
+{
+ "id": "ho_015",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "ho_015_p1.png"
+ ],
+ "pages_declared": 1,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": 0.75,
+  "blur": 0.5,
+  "noise": 10,
+  "fax_mode": "fine",
+  "level": "light"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": 0.75,
+   "blur": 0.5,
+   "noise": 10,
+   "fax_mode": "fine",
+   "level": "light"
+  }
+ ],
+ "is_clean": false,
+ "trap": "qty_vs_duration",
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "ho_015_p1.png",
+   "fields": {
+    "patient_name": "Rafael Duarte",
+    "patient_dob": "1950-12-24",
+    "patient_address": "559 W 135th St, Apt 2A, New York, NY 10031",
+    "drug_name": "amiloride",
+    "strength": "5 mg",
+    "strength_value": 5,
+    "strength_unit": "mg",
+    "dosage_form": "tablet",
+    "directions": "Take 1 tablet by mouth three times daily for 10 days",
+    "quantity": 15,
+    "quantity_text": "#15 (fifteen) tablets",
+    "days_supply_stated": 10,
+    "refills": 5,
+    "prescriber_name": "Fatima Haddad, MD",
+    "prescriber_npi": "1810225023",
+    "prescriber_dea": null,
+    "date_written": "2026-10-06",
+    "substitution": "permitted",
+    "notes": "Please call with questions."
+   },
+   "field_boxes": {
+    "fax_header": [
+     46,
+     19,
+     1411,
+     56
+    ],
+    "clinic": [
+     107,
+     120,
+     736,
+     171
+    ],
+    "prescriber_name": [
+     108,
+     187,
+     461,
+     225
+    ],
+    "prescriber_npi": [
+     195,
+     332,
+     405,
+     362
+    ],
+    "patient_name": [
+     351,
+     439,
+     586,
+     469
+    ],
+    "patient_dob": [
+     1171,
+     429,
+     1362,
+     459
+    ],
+    "patient_address": [
+     352,
+     511,
+     939,
+     545
+    ],
+    "date_written": [
+     353,
+     588,
+     544,
+     617
+    ],
+    "drug_name": [
+     355,
+     708,
+     531,
+     737
+    ],
+    "strength": [
+     559,
+     707,
+     648,
+     743
+    ],
+    "dosage_form": [
+     676,
+     705,
+     778,
+     733
+    ],
+    "directions": [
+     357,
+     829,
+     1233,
+     875
+    ],
+    "quantity": [
+     358,
+     926,
+     685,
+     965
+    ],
+    "refills": [
+     359,
+     1020,
+     380,
+     1047
+    ],
+    "substitution": [
+     120,
+     1115,
+     151,
+     1146
+    ],
+    "notes": [
+     261,
+     1207,
+     600,
+     1239
+    ]
+   },
+   "meta": {
+    "rxcui": "977880",
+    "fax_from": "(212) 555-0121",
+    "sent": "2026-10-06 13:55",
+    "patient_id": "PT013",
+    "prescriber_id": "P110",
+    "prescriber_in_directory": true
+   }
+  }
+ ],
+ "image": "ho_015_p1.png",
+ "fields": {
+  "patient_name": "Rafael Duarte",
+  "patient_dob": "1950-12-24",
+  "patient_address": "559 W 135th St, Apt 2A, New York, NY 10031",
+  "drug_name": "amiloride",
+  "strength": "5 mg",
+  "strength_value": 5,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth three times daily for 10 days",
+  "quantity": 15,
+  "quantity_text": "#15 (fifteen) tablets",
+  "days_supply_stated": 10,
+  "refills": 5,
+  "prescriber_name": "Fatima Haddad, MD",
+  "prescriber_npi": "1810225023",
+  "prescriber_dea": null,
+  "date_written": "2026-10-06",
+  "substitution": "permitted",
+  "notes": "Please call with questions."
+ },
+ "field_boxes": {
+  "fax_header": [
+   46,
+   19,
+   1411,
+   56
+  ],
+  "clinic": [
+   107,
+   120,
+   736,
+   171
+  ],
+  "prescriber_name": [
+   108,
+   187,
+   461,
+   225
+  ],
+  "prescriber_npi": [
+   195,
+   332,
+   405,
+   362
+  ],
+  "patient_name": [
+   351,
+   439,
+   586,
+   469
+  ],
+  "patient_dob": [
+   1171,
+   429,
+   1362,
+   459
+  ],
+  "patient_address": [
+   352,
+   511,
+   939,
+   545
+  ],
+  "date_written": [
+   353,
+   588,
+   544,
+   617
+  ],
+  "drug_name": [
+   355,
+   708,
+   531,
+   737
+  ],
+  "strength": [
+   559,
+   707,
+   648,
+   743
+  ],
+  "dosage_form": [
+   676,
+   705,
+   778,
+   733
+  ],
+  "directions": [
+   357,
+   829,
+   1233,
+   875
+  ],
+  "quantity": [
+   358,
+   926,
+   685,
+   965
+  ],
+  "refills": [
+   359,
+   1020,
+   380,
+   1047
+  ],
+  "substitution": [
+   120,
+   1115,
+   151,
+   1146
+  ],
+  "notes": [
+   261,
+   1207,
+   600,
+   1239
+  ]
+ },
+ "meta": {
+  "rxcui": "977880",
+  "fax_from": "(212) 555-0121",
+  "sent": "2026-10-06 13:55",
+  "patient_id": "PT013",
+  "prescriber_id": "P110",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [
+  {
+   "field": "quantity",
+   "code": "quantity_vs_duration",
+   "why": "Quantity does not match directions x duration.",
+   "page": 1
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": []
+}

@@ -1,0 +1,292 @@
+{
+ "id": "ho_003",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "ho_003_p1.png"
+ ],
+ "pages_declared": 1,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": 1.29,
+  "blur": 0.9,
+  "noise": 22,
+  "fax_mode": "standard",
+  "level": "medium"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": 1.29,
+   "blur": 0.9,
+   "noise": 22,
+   "fax_mode": "standard",
+   "level": "medium"
+  }
+ ],
+ "is_clean": true,
+ "trap": null,
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "ho_003_p1.png",
+   "fields": {
+    "patient_name": "Marcus Bell",
+    "patient_dob": "1958-03-14",
+    "patient_address": "431 Claremont Ave, Apt 7A, New York, NY 10026",
+    "drug_name": "metoprolol tartrate",
+    "strength": "12.5 mg",
+    "strength_value": 12.5,
+    "strength_unit": "mg",
+    "dosage_form": "tablet",
+    "directions": "Take 1 tablet by mouth twice daily for 30 days",
+    "quantity": 60,
+    "quantity_text": "#60 (sixty) tablets",
+    "days_supply_stated": 30,
+    "refills": 1,
+    "prescriber_name": "Owen Brennan, NP",
+    "prescriber_npi": "1969099971",
+    "prescriber_dea": "MB9376787",
+    "date_written": "2026-10-05",
+    "substitution": "permitted",
+    "notes": null
+   },
+   "field_boxes": {
+    "fax_header": [
+     36,
+     13,
+     1401,
+     64
+    ],
+    "clinic": [
+     98,
+     121,
+     719,
+     178
+    ],
+    "prescriber_name": [
+     100,
+     191,
+     442,
+     232
+    ],
+    "prescriber_npi": [
+     188,
+     336,
+     398,
+     368
+    ],
+    "prescriber_dea": [
+     698,
+     325,
+     902,
+     356
+    ],
+    "patient_name": [
+     345,
+     443,
+     544,
+     474
+    ],
+    "patient_dob": [
+     1165,
+     424,
+     1356,
+     456
+    ],
+    "patient_address": [
+     347,
+     509,
+     982,
+     550
+    ],
+    "date_written": [
+     349,
+     591,
+     539,
+     622
+    ],
+    "drug_name": [
+     351,
+     708,
+     690,
+     750
+    ],
+    "strength": [
+     717,
+     704,
+     860,
+     742
+    ],
+    "dosage_form": [
+     887,
+     701,
+     990,
+     730
+    ],
+    "directions": [
+     354,
+     828,
+     1128,
+     880
+    ],
+    "quantity": [
+     356,
+     928,
+     656,
+     970
+    ],
+    "refills": [
+     358,
+     1025,
+     380,
+     1052
+    ],
+    "substitution": [
+     120,
+     1122,
+     151,
+     1152
+    ]
+   },
+   "meta": {
+    "rxcui": "2723025",
+    "fax_from": "(212) 555-0123",
+    "sent": "2026-10-05 08:01",
+    "patient_id": "PT001",
+    "prescriber_id": "P111",
+    "prescriber_in_directory": true
+   }
+  }
+ ],
+ "image": "ho_003_p1.png",
+ "fields": {
+  "patient_name": "Marcus Bell",
+  "patient_dob": "1958-03-14",
+  "patient_address": "431 Claremont Ave, Apt 7A, New York, NY 10026",
+  "drug_name": "metoprolol tartrate",
+  "strength": "12.5 mg",
+  "strength_value": 12.5,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth twice daily for 30 days",
+  "quantity": 60,
+  "quantity_text": "#60 (sixty) tablets",
+  "days_supply_stated": 30,
+  "refills": 1,
+  "prescriber_name": "Owen Brennan, NP",
+  "prescriber_npi": "1969099971",
+  "prescriber_dea": "MB9376787",
+  "date_written": "2026-10-05",
+  "substitution": "permitted",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   36,
+   13,
+   1401,
+   64
+  ],
+  "clinic": [
+   98,
+   121,
+   719,
+   178
+  ],
+  "prescriber_name": [
+   100,
+   191,
+   442,
+   232
+  ],
+  "prescriber_npi": [
+   188,
+   336,
+   398,
+   368
+  ],
+  "prescriber_dea": [
+   698,
+   325,
+   902,
+   356
+  ],
+  "patient_name": [
+   345,
+   443,
+   544,
+   474
+  ],
+  "patient_dob": [
+   1165,
+   424,
+   1356,
+   456
+  ],
+  "patient_address": [
+   347,
+   509,
+   982,
+   550
+  ],
+  "date_written": [
+   349,
+   591,
+   539,
+   622
+  ],
+  "drug_name": [
+   351,
+   708,
+   690,
+   750
+  ],
+  "strength": [
+   717,
+   704,
+   860,
+   742
+  ],
+  "dosage_form": [
+   887,
+   701,
+   990,
+   730
+  ],
+  "directions": [
+   354,
+   828,
+   1128,
+   880
+  ],
+  "quantity": [
+   356,
+   928,
+   656,
+   970
+  ],
+  "refills": [
+   358,
+   1025,
+   380,
+   1052
+  ],
+  "substitution": [
+   120,
+   1122,
+   151,
+   1152
+  ]
+ },
+ "meta": {
+  "rxcui": "2723025",
+  "fax_from": "(212) 555-0123",
+  "sent": "2026-10-05 08:01",
+  "patient_id": "PT001",
+  "prescriber_id": "P111",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [],
+ "expected_order_status": "ready_for_review",
+ "expect_abstain": []
+}
