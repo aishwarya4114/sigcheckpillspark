@@ -12,13 +12,13 @@ from dataclasses import dataclass
 
 # Each pattern targets instructions to an AI/automation, not clinical wording.
 _PATTERNS: list[tuple[str, str]] = [
-    (r"\b(note|message|instruction)s?\s+(to|for)\s+(the\s+)?(ai|assistant|model|system|bot|llm|software|ocr)\b", "addresses the AI directly"),
-    (r"\b(ai|assistant|model|system|bot|llm|chatgpt|claude|gpt)\s*[:,]\s*(please\s+)?(mark|set|approve|ignore|skip|treat|override|return|output)\b", "addresses the AI directly"),
+    (r"\b(note|message|instruction)s?\s+(to|for)\s+(the\s+)?(a[il1|]|assistant|model|system|bot|llm|software|ocr)\b", "addresses the AI directly"),
+    (r"\b(a[il1|]|assistant|model|system|bot|llm|chatgpt|claude|gpt)\s*[:,]\s*(please\s+)?(mark|set|approve|ignore|skip|treat|override|return|output)\b", "addresses the AI directly"),
     (r"\bignore\s+(all\s+|any\s+)?(previous|prior|above|earlier|the\s+)?\s*(instructions|rules|checks|warnings|flags|validation|missing\s+fields?)\b", "asks to ignore instructions or checks"),
     (r"\bdisregard\s+(all\s+|any\s+)?(previous|prior|above)?\s*(instructions|rules|checks|warnings|flags)\b", "asks to ignore instructions or checks"),
     (r"\b(mark|set|flag|treat)\s+(all|every|each|this|these|the)?\s*(fields?|items?|order|prescriptions?|values?)?\s*(as\s+)?(verified|approved|valid|correct|complete|green|pass(ed)?)\b", "asks to mark fields verified/approved"),
     (r"\b(auto[- ]?approve|approve\s+(automatically|without\s+review)|skip\s+(pharmacist\s+)?review|bypass\s+(the\s+)?(review|checks?|validation))\b", "asks to skip review"),
-    (r"\b(system\s+prompt|developer\s+message|you\s+are\s+(now\s+)?(an?|the)\s+(ai|assistant|model))\b", "prompt-injection phrasing"),
+    (r"\b(system\s+prompt|developer\s+message|you\s+are\s+(now\s+)?(an?|the)\s+(a[il1|]|assistant|model))\b", "prompt-injection phrasing"),
     (r"\b(respond|reply|output|return)\s+(only\s+)?(with\s+)?(json|\{)", "tries to control the output format"),
 ]
 _COMPILED = [(re.compile(p, re.IGNORECASE), why) for p, why in _PATTERNS]

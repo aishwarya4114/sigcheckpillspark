@@ -1,0 +1,22 @@
+{
+  "fax": "fax_01_clean.png",
+  "trap": "Clean prescription",
+  "synthetic": true,
+  "fields": {
+    "patient_name": "Maria Lopez",
+    "patient_dob": "03/14/1961",
+    "drug_name": "Metformin",
+    "strength": "500 mg",
+    "dosage_form": "tablet",
+    "directions": "1 tab PO BID",
+    "quantity": "60",
+    "refills": "2",
+    "prescriber_name": "Dr. Jane Patel",
+    "prescriber_npi": "1234567893",
+    "prescriber_dea": null,
+    "date_written": "10/01/2026"
+  },
+  "expected": {
+    "blocked": false
+  }
+}

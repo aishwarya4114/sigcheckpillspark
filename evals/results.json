@@ -1,0 +1,502 @@
+{
+  "run_at": "2026-10-10T17:38:10+00:00",
+  "reader": "DEMO label reader (no Nicrron key)",
+  "scope": "synthetic test set only (fictional people); not a real-world accuracy claim",
+  "faxes": 6,
+  "field_accuracy": {
+    "exact": 49,
+    "of": 64
+  },
+  "verified_precision": {
+    "right": 46,
+    "of": 46,
+    "meaning": "when a field passed all checks, how often the value matched the truth"
+  },
+  "invented_values_on_absent_fields": 0,
+  "traps_caught": {
+    "caught": 5,
+    "of": 5
+  },
+  "rows": [
+    {
+      "fax": "fax_01_clean.png",
+      "trap": "Clean prescription",
+      "status": "needs_review",
+      "flagged": true,
+      "fields": {
+        "patient_name": {
+          "truth": "Maria Lopez",
+          "read": "Maria Lopez",
+          "status": "checks_passed",
+          "match": true
+        },
+        "patient_dob": {
+          "truth": "03/14/1961",
+          "read": "03/14/1961",
+          "status": "checks_passed",
+          "match": true
+        },
+        "drug_name": {
+          "truth": "Metformin",
+          "read": "Metformin",
+          "status": "checks_passed",
+          "match": true
+        },
+        "strength": {
+          "truth": "500 mg",
+          "read": "500 mg",
+          "status": "checks_passed",
+          "match": true
+        },
+        "dosage_form": {
+          "truth": "tablet",
+          "read": "tablet",
+          "status": "checks_passed",
+          "match": true
+        },
+        "directions": {
+          "truth": "1 tab PO BID",
+          "read": "I tab PO BID",
+          "status": "needs_review",
+          "match": false
+        },
+        "quantity": {
+          "truth": "60",
+          "read": "60",
+          "status": "checks_passed",
+          "match": true
+        },
+        "refills": {
+          "truth": "2",
+          "read": "2",
+          "status": "checks_passed",
+          "match": true
+        },
+        "prescriber_name": {
+          "truth": "Dr. Jane Patel",
+          "read": "Dr. Jane Patel",
+          "status": "checks_passed",
+          "match": true
+        },
+        "prescriber_npi": {
+          "truth": "1234567893",
+          "read": "1234567893",
+          "status": "checks_passed",
+          "match": true
+        },
+        "prescriber_dea": {
+          "truth": null,
+          "read": null,
+          "status": "not_applicable",
+          "match": true
+        },
+        "date_written": {
+          "truth": "10/01/2026",
+          "read": "10/01/2026",
+          "status": "checks_passed",
+          "match": true
+        }
+      }
+    },
+    {
+      "fax": "fax_02_trailing_zero.png",
+      "trap": "Trailing zero: 5.0 mg could be read as 50 mg",
+      "status": "needs_review",
+      "flagged": true,
+      "fields": {
+        "patient_name": {
+          "truth": "Maria Lopez",
+          "read": "Maria Lopez",
+          "status": "checks_passed",
+          "match": true
+        },
+        "patient_dob": {
+          "truth": "03/14/1961",
+          "read": "03/14/1961",
+          "status": "checks_passed",
+          "match": true
+        },
+        "drug_name": {
+          "truth": "Warfarin",
+          "read": "warfarin",
+          "status": "checks_passed",
+          "match": true
+        },
+        "strength": {
+          "truth": "5.0 mg",
+          "read": "5.0 mg",
+          "status": "needs_review",
+          "match": true
+        },
+        "dosage_form": {
+          "truth": "tablet",
+          "read": "tablet",
+          "status": "checks_passed",
+          "match": true
+        },
+        "directions": {
+          "truth": "1 tab PO daily",
+          "read": "I tab PO daily",
+          "status": "needs_review",
+          "match": false
+        },
+        "quantity": {
+          "truth": "30",
+          "read": "30",
+          "status": "checks_passed",
+          "match": true
+        },
+        "refills": {
+          "truth": "2",
+          "read": "2",
+          "status": "checks_passed",
+          "match": true
+        },
+        "prescriber_name": {
+          "truth": "Dr. Jane Patel",
+          "read": "Dr. Jane Patel",
+          "status": "checks_passed",
+          "match": true
+        },
+        "prescriber_npi": {
+          "truth": "1234567893",
+          "read": "1234567893",
+          "status": "checks_passed",
+          "match": true
+        },
+        "prescriber_dea": {
+          "truth": null,
+          "read": null,
+          "status": "not_applicable",
+          "match": true
+        },
+        "date_written": {
+          "truth": "10/01/2026",
+          "read": "10/01/2026",
+          "status": "checks_passed",
+          "match": true
+        }
+      }
+    },
+    {
+      "fax": "fax_03_lookalike.png",
+      "trap": "Look-alike drug: hydroxyzine vs hydralazine",
+      "status": "needs_review",
+      "flagged": true,
+      "fields": {
+        "patient_name": {
+          "truth": "Maria Lopez",
+          "read": "Maria Lopez",
+          "status": "checks_passed",
+          "match": true
+        },
+        "patient_dob": {
+          "truth": "03/14/1961",
+          "read": "03/14/1961",
+          "status": "checks_passed",
+          "match": true
+        },
+        "drug_name": {
+          "truth": "Hydroxyzine",
+          "read": "Hydroxyzine",
+          "status": "needs_review",
+          "match": true
+        },
+        "strength": {
+          "truth": "25 mg",
+          "read": "25 mg",
+          "status": "checks_passed",
+          "match": true
+        },
+        "dosage_form": {
+          "truth": "tablet",
+          "read": "tablet",
+          "status": "checks_passed",
+          "match": true
+        },
+        "directions": {
+          "truth": "1 tab PO TID PRN anxiety",
+          "read": "1 tab PO TID PRN anxiety",
+          "status": "checks_passed",
+          "match": true
+        },
+        "quantity": {
+          "truth": "90",
+          "read": "90",
+          "status": "checks_passed",
+          "match": true
+        },
+        "refills": {
+          "truth": "2",
+          "read": "2",
+          "status": "checks_passed",
+          "match": true
+        },
+        "prescriber_name": {
+          "truth": "Dr. Jane Patel",
+          "read": "Dr. Jane Patel",
+          "status": "checks_passed",
+          "match": true
+        },
+        "prescriber_npi": {
+          "truth": "1234567893",
+          "read": "1234567893",
+          "status": "checks_passed",
+          "match": true
+        },
+        "prescriber_dea": {
+          "truth": null,
+          "read": null,
+          "status": "not_applicable",
+          "match": true
+        },
+        "date_written": {
+          "truth": "10/01/2026",
+          "read": "10/01/2026",
+          "status": "checks_passed",
+          "match": true
+        }
+      }
+    },
+    {
+      "fax": "fax_04_injection.png",
+      "trap": "Hidden instruction aimed at the software",
+      "status": "blocked",
+      "flagged": true,
+      "fields": {
+        "patient_name": {
+          "truth": "Maria Lopez",
+          "read": null,
+          "status": "blocked",
+          "match": false
+        },
+        "patient_dob": {
+          "truth": "03/14/1961",
+          "read": null,
+          "status": "blocked",
+          "match": false
+        },
+        "drug_name": {
+          "truth": "Metformin",
+          "read": null,
+          "status": "blocked",
+          "match": false
+        },
+        "strength": {
+          "truth": "500 mg",
+          "read": null,
+          "status": "blocked",
+          "match": false
+        },
+        "dosage_form": {
+          "truth": "tablet",
+          "read": null,
+          "status": "blocked",
+          "match": false
+        },
+        "directions": {
+          "truth": "1 tab PO BID",
+          "read": null,
+          "status": "blocked",
+          "match": false
+        },
+        "quantity": {
+          "truth": "60",
+          "read": null,
+          "status": "blocked",
+          "match": false
+        },
+        "refills": {
+          "truth": "2",
+          "read": null,
+          "status": "blocked",
+          "match": false
+        },
+        "prescriber_name": {
+          "truth": "Dr. Jane Patel",
+          "read": null,
+          "status": "blocked",
+          "match": false
+        },
+        "prescriber_npi": {
+          "truth": "1234567893",
+          "read": null,
+          "status": "blocked",
+          "match": false
+        },
+        "prescriber_dea": {
+          "truth": null,
+          "read": null,
+          "status": "blocked",
+          "match": true
+        },
+        "date_written": {
+          "truth": "10/01/2026",
+          "read": null,
+          "status": "blocked",
+          "match": false
+        }
+      }
+    },
+    {
+      "fax": "fax_05_bad_npi.png",
+      "trap": "NPI fails its check digit (one digit wrong)",
+      "status": "needs_review",
+      "flagged": true,
+      "fields": {
+        "patient_name": {
+          "truth": "Maria Lopez",
+          "read": "Maria Lopez",
+          "status": "checks_passed",
+          "match": true
+        },
+        "patient_dob": {
+          "truth": "03/14/1961",
+          "read": "03/14/1961",
+          "status": "checks_passed",
+          "match": true
+        },
+        "drug_name": {
+          "truth": "Metformin",
+          "read": "Metformin",
+          "status": "checks_passed",
+          "match": true
+        },
+        "strength": {
+          "truth": "500 mg",
+          "read": "500 mg",
+          "status": "checks_passed",
+          "match": true
+        },
+        "dosage_form": {
+          "truth": "tablet",
+          "read": "tablet",
+          "status": "checks_passed",
+          "match": true
+        },
+        "directions": {
+          "truth": "1 tab PO BID",
+          "read": "I tab PO BID",
+          "status": "needs_review",
+          "match": false
+        },
+        "quantity": {
+          "truth": "60",
+          "read": "60",
+          "status": "checks_passed",
+          "match": true
+        },
+        "refills": {
+          "truth": "2",
+          "read": "2",
+          "status": "checks_passed",
+          "match": true
+        },
+        "prescriber_name": {
+          "truth": "Dr. Jane Patel",
+          "read": "Dr. Jane Patel",
+          "status": "checks_passed",
+          "match": true
+        },
+        "prescriber_npi": {
+          "truth": "1234567894",
+          "read": "1234567894",
+          "status": "needs_review",
+          "match": true
+        },
+        "prescriber_dea": {
+          "truth": null,
+          "read": null,
+          "status": "not_applicable",
+          "match": true
+        },
+        "date_written": {
+          "truth": "10/01/2026",
+          "read": "10/01/2026",
+          "status": "checks_passed",
+          "match": true
+        }
+      }
+    },
+    {
+      "fax": "fax_06_missing_strength.png",
+      "trap": "Strength missing; refills blank",
+      "status": "needs_review",
+      "flagged": true,
+      "fields": {
+        "patient_name": {
+          "truth": "Maria Lopez",
+          "read": "Maria Lopez",
+          "status": "checks_passed",
+          "match": true
+        },
+        "patient_dob": {
+          "truth": "03/14/1961",
+          "read": "03/14/1961",
+          "status": "checks_passed",
+          "match": true
+        },
+        "drug_name": {
+          "truth": "Lisinopril",
+          "read": "Lisinopril",
+          "status": "checks_passed",
+          "match": true
+        },
+        "strength": {
+          "truth": null,
+          "read": null,
+          "status": "missing",
+          "match": true
+        },
+        "dosage_form": {
+          "truth": "tablet",
+          "read": "tablet",
+          "status": "checks_passed",
+          "match": true
+        },
+        "directions": {
+          "truth": "1 tab PO daily",
+          "read": "I tab PO daily",
+          "status": "needs_review",
+          "match": false
+        },
+        "quantity": {
+          "truth": "30",
+          "read": "30",
+          "status": "checks_passed",
+          "match": true
+        },
+        "refills": {
+          "truth": null,
+          "read": null,
+          "status": "missing",
+          "match": true
+        },
+        "prescriber_name": {
+          "truth": "Dr. Jane Patel",
+          "read": "Dr. Jane Patel",
+          "status": "checks_passed",
+          "match": true
+        },
+        "prescriber_npi": {
+          "truth": "1234567893",
+          "read": "1234567893",
+          "status": "checks_passed",
+          "match": true
+        },
+        "prescriber_dea": {
+          "truth": null,
+          "read": null,
+          "status": "not_applicable",
+          "match": true
+        },
+        "date_written": {
+          "truth": "10/01/2026",
+          "read": "10/01/2026",
+          "status": "checks_passed",
+          "match": true
+        }
+      }
+    }
+  ]
+}

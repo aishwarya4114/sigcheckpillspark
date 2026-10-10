@@ -4,9 +4,9 @@ Coverage note: a small hand-built list of common oral drugs and their marketed U
 
 One row per drug, strength and dosage form. Format: drug | strength | form | controlled schedule | look-alike names
 
-| metformin | 500 mg | tablet | none | metronidazole |
-| metformin | 850 mg | tablet | none | metronidazole |
-| metformin | 1000 mg | tablet | none | metronidazole |
+| metformin | 500 mg | tablet | none | |
+| metformin | 850 mg | tablet | none | |
+| metformin | 1000 mg | tablet | none | |
 | lisinopril | 2.5 mg | tablet | none | |
 | lisinopril | 5 mg | tablet | none | |
 | lisinopril | 10 mg | tablet | none | |
