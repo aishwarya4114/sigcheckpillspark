@@ -286,13 +286,8 @@
      "alternatives": [
       "4"
      ],
-     "evidence_box": [
-      458,
-      832,
-      471,
-      861
-     ],
-     "evidence_note": null,
+     "evidence_box": null,
+     "evidence_note": "location not found",
      "checks_passed": [
       {
        "check": "refills_whole_number",

@@ -264,13 +264,8 @@
      "codes": [],
      "reasons": [],
      "alternatives": [],
-     "evidence_box": [
-      485,
-      853,
-      514,
-      883
-     ],
-     "evidence_note": null,
+     "evidence_box": null,
+     "evidence_note": "location not found",
      "checks_passed": [
       {
        "check": "refills_whole_number",

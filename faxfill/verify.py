@@ -164,16 +164,43 @@ def _box_norm(s):
     return re.sub(r"[^a-z0-9./#]+", " ", str(s).lower()).strip()
 
 
-def find_box(value, ocr_page, min_score=85):
-    """Box of the OCR words that best match `value` (consecutive words on one line). None if no match."""
+LABELS = {"refills": r"refi", "quantity": r"disp", "directions": r"sig", "patient_name": r"patient",
+          "patient_dob": r"dob", "date_written": r"^\W*date", "prescriber_npi": r"np[i1le]", "prescriber_dea": r"dea",
+          "strength": r"^\W*r\s?x\b", "dosage_form": r"^\W*r\s?x\b", "notes": r"notes"}
+
+
+STRICT_LABEL_FIELDS = {"refills"}   # a lone digit only counts on its own labelled line
+
+
+def find_box(value, ocr_page, min_score=85, field=None):
+    """Box of the OCR words that best match `value` (consecutive words on one line). None if no match.
+
+    If the field has a printed label ("Refills:", "Disp:", ...), lines carrying that label are searched first,
+    and a short refills value (e.g. "1") may ONLY match on its labelled line: otherwise the "1" in
+    "Take 1 tablet" would be reported as the refills location."""
     if value is None or ocr_page is None:
         return None
     target = _box_norm(value)
     if not target:
         return None
-    by_line = {}
+    lines_by_key = {}
     for w in ocr_page["words"]:
-        by_line.setdefault(w["line_key"], []).append(w)
+        lines_by_key.setdefault(w["line_key"], []).append(w)
+    label = LABELS.get(field)
+    if label:
+        labelled = {k: ws for k, ws in lines_by_key.items()
+                    if re.search(label, " ".join(w["text"] for w in sorted(ws, key=lambda w: w["box_deskewed"][0])), re.I)}
+        strict = field in STRICT_LABEL_FIELDS and len(target) <= 4
+        if labelled:
+            hit = _best_window(target, labelled, min_score)
+            if hit or strict:
+                return hit
+        elif strict:
+            return None
+    return _best_window(target, lines_by_key, min_score)
+
+
+def _best_window(target, by_line, min_score):
     best, best_score = None, 0
     n_target = len(target.split())
     for ws in by_line.values():
@@ -274,7 +301,7 @@ def verify_page(reads, ocr_page, page_image, lookup, page_no=1, today=None):
     # evidence boxes: match values (or, if unresolved, the first alternative) to Tesseract words
     for f in F.values():
         f.evidence_box = find_box(f.value if f.value is not None else (f.alternatives[0] if f.alternatives else None),
-                                  ocr_page)
+                                  ocr_page, field=f.name)
 
     raw = lambda name: [v for v in (A.get(name), B.get(name), C.get(name)) if v]
 

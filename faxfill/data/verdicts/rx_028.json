@@ -251,13 +251,8 @@
      "codes": [],
      "reasons": [],
      "alternatives": [],
-     "evidence_box": [
-      0,
-      191,
-      10,
-      211
-     ],
-     "evidence_note": null,
+     "evidence_box": null,
+     "evidence_note": "location not found",
      "checks_passed": [
       {
        "check": "refills_whole_number",
