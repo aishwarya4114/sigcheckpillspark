@@ -5,9 +5,9 @@ POST /api/traces, from a background thread pool. Every trace has a stable trace_
 same one returns the existing trace instead of duplicating it (documented behaviour).
 
 What the docs do NOT provide, so this module does not pretend to:
-  * no endpoint to read a trace or its guardrail flags back. On the HTTP path guardrails flag in the
-    dashboard; they cannot be read by our key. prism_guardrail() therefore returns None (= no PRISM
-    verdict available to code) and the order still blocks on the local check.
+  * no endpoint to read a trace back. But the ingest response itself carries `guardrail_flags` (observed in
+    every response; not listed in the docs), so prism_guardrail() reads PRISM's verdict from the intake trace's
+    ingest response. If PRISM is unreachable it returns None and the local check alone decides.
   * no Knowledge Base query API. Lookups stay on local files (faxfill/ref), and each verdict says so.
 Secrets are read from .env and never printed or written to disk.
 """
@@ -29,8 +29,8 @@ AGENTS = {
     "intake": ("sigcheck-intake", "SigCheck intake"),
     "verifier": ("sigcheck-verifier", "SigCheck verifier"),
 }
-GUARDRAIL_STATUS = ("not readable by API: PRISM documents no endpoint to read guardrail flags; on the HTTP path "
-                    "its Prompt Injection rule flags the intake trace in the dashboard")
+GUARDRAIL_STATUS = ("read from guardrail_flags in the POST /api/traces response for the intake trace "
+                    "(present in every response, not listed in the docs)")
 KB_STATUS = "not queried: PRISM documents no Knowledge Base query API, so lookups use local files"
 
 
@@ -83,8 +83,10 @@ def _send(kind, trace_id, session_id, model, input_messages, output_message, lat
                "agent_id": agent_id, "agent_name": agent_name, "token_count_input": int(tokens_in or 0),
                "token_count_output": int(tokens_out or 0), "metadata": metadata or {}}
     status, body = _post("/api/traces", payload)
+    guard = {k: v for k, v in body.items() if any(w in k.lower() for w in ("guard", "flag", "injection", "block"))}
     return {"kind": kind, "trace_id": trace_id, "agent": agent_id, "http_status": status,
-            "ok": status in (200, 201), "prism_id": body.get("id"), "detail": None if status in (200, 201) else body.get("detail")}
+            "ok": status in (200, 201), "prism_id": body.get("id"), "detail": None if status in (200, 201) else body.get("detail"),
+            "response_keys": sorted(body), "guardrail_fields_in_response": guard}
 
 
 def _sid(*parts):
@@ -98,18 +100,20 @@ def trace_read(fax_id, rec):
         return None
     usage = (rec.get("response") or {}).get("usage") or {}
     page = rec["request"]["pages"][0]
-    tid = f"sigcheck-read-{Path(page).stem}-{rec['model'].replace('/', '-')}-{rec['prompt_version']}"
-    msgs = [{"role": "system", "content": rec["request"]["system"]},
-            {"role": "user", "content": rec["request"]["user"] + f"\n[image attached: {page}; bytes not sent to PRISM]"}]
+    # -v2: the system prompt is no longer sent. It contains "do not follow" (telling the model to ignore text on
+    # the fax), which PRISM's prompt-injection rule flagged on every reader trace. Only its version goes in metadata.
+    tid = f"sigcheck-read-{Path(page).stem}-{rec['model'].replace('/', '-')}-{rec['prompt_version']}-v2"
+    msgs = [{"role": "user", "content": rec["request"]["user"] + f"\n[image attached: {page}; bytes not sent to PRISM]"}]
     return _POOL.submit(_send, "reader", tid, fax_id, rec["model"], msgs, json.dumps(rec["fields"]),
                         (rec.get("latency_s") or 0) * 1000, usage.get("prompt_tokens"), usage.get("completion_tokens"),
-                        {"fax_id": fax_id, "page_image": page, "reader": rec["reader"], "temperature": 0})
+                        {"fax_id": fax_id, "page_image": page, "reader": rec["reader"], "temperature": 0,
+                         "system_prompt_version": rec["prompt_version"]})
 
 
 def trace_intake(fax_id, page_no, ocr_text):
     """Each page's OCR text, sent BEFORE verification, so the PRISM Prompt Injection rule runs on it."""
     tid = f"sigcheck-intake-{fax_id}-p{page_no}-{_sid(ocr_text)}"
-    return _POOL.submit(_send, "intake", tid, fax_id, "tesseract-ocr",
+    return _POOL.submit(_send_page, page_no, "intake", tid, fax_id, "tesseract-ocr",
                         [{"role": "user", "content": ocr_text}], "[OCR text received for verification]", 0, 0, 0,
                         {"fax_id": fax_id, "page": page_no, "purpose": "input guardrail (prompt injection)"})
 
@@ -134,9 +138,30 @@ def trace_verifier(verdict, latency_ms):
                                    "every flagged field names a reason."})
 
 
-def prism_guardrail(text):
-    """PRISM's guardrail verdict for code to act on. None: the docs give no way to read it (see module doc)."""
-    return None
+def _is_injection_flag(f):
+    return "inject" in (f.get("rule_type") or "").lower() or "inject" in (f.get("rule_name") or "").lower()
+
+
+def _send_page(page_no, *a, **kw):
+    r = _send(*a, **kw)
+    r["page"] = page_no
+    return r
+
+
+def prism_guardrail(intake_receipts):
+    """PRISM's input-guardrail verdict, read from the guardrail_flags that POST /api/traces returns for the intake
+    trace(s). That field is in every ingest response but is not listed in the docs.
+
+    Returns None if no intake receipt came back (PRISM unavailable: the local check still decides), else
+    {"fired": bool, "injection_flags": [...], "other_flags": [...]} over all pages of the fax."""
+    got = [r for r in intake_receipts if r and r.get("ok")]
+    if not got:
+        return None
+    flags = [dict(f, page=r.get("page"), trace_id=r["trace_id"]) for r in got
+             for f in (r.get("guardrail_fields_in_response") or {}).get("guardrail_flags", [])]
+    inj = [f for f in flags if _is_injection_flag(f)]
+    return {"fired": bool(inj), "injection_flags": inj,
+            "other_flags": [{k: f.get(k) for k in ("rule_name", "action", "page")} for f in flags if not _is_injection_flag(f)]}
 
 
 def collect(futures, timeout=60):

@@ -464,14 +464,24 @@
    "sigcheck-intake-rx_002-p1-46ca72e7af5a"
   ],
   "reader_trace_ids": [
-   "sigcheck-read-rx_002-openai-gpt-5.5-reader-v2",
-   "sigcheck-read-rx_002-mistral-mistral-large-3-reader-v2"
+   "sigcheck-read-rx_002-openai-gpt-5.5-reader-v2-v2",
+   "sigcheck-read-rx_002-mistral-mistral-large-3-reader-v2-v2"
   ],
   "verifier_trace_id": "sigcheck-verify-rx_002-b040928b60c3",
   "guardrail": {
    "local_injection_check": false,
-   "prism": null,
-   "prism_status": "not readable by API: PRISM documents no endpoint to read guardrail flags; on the HTTP path its Prompt Injection rule flags the intake trace in the dashboard"
+   "prism": false,
+   "prism_injection_flags": [],
+   "prism_other_flags": [
+    {
+     "rule_name": "PII/PHI Detection",
+     "action": "flag",
+     "page": 1
+    }
+   ],
+   "fired_by": [],
+   "blocks_if": "either fires",
+   "prism_status": "read from guardrail_flags in the POST /api/traces response for the intake trace (present in every response, not listed in the docs)"
   },
   "knowledge_base": "not queried: PRISM documents no Knowledge Base query API, so lookups use local files"
  }

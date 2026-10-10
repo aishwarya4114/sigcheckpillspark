@@ -269,3 +269,15 @@ def test_danger_ordering():
     lasa = danger("NEEDS_PHARMACIST", [rx("LOOKALIKE_RISK")], LK)[0]
     other = danger("NEEDS_PHARMACIST", [{"drug": None, "fields": {f"f{i}": {"codes": ["X"]} for i in range(20)}}], LK)[0]
     assert blocked > allergy > controlled > high_alert > lasa > other > 0
+
+
+def test_prism_guardrail_reads_flags_from_ingest_response():
+    from faxfill.prism import prism_guardrail
+    inj = {"ok": True, "trace_id": "t1", "page": 1, "guardrail_fields_in_response": {"guardrail_flags": [
+        {"rule_name": "Prompt Injection", "rule_type": "prompt_injection", "action": "block", "matched_text": "ignore previous"},
+        {"rule_name": "PII/PHI Detection", "rule_type": "pii_phi", "action": "flag"}]}}
+    pii_only = {"ok": True, "trace_id": "t2", "page": 1, "guardrail_fields_in_response": {"guardrail_flags": [
+        {"rule_name": "PII/PHI Detection", "rule_type": "pii_phi", "action": "flag"}]}}
+    assert prism_guardrail([inj])["fired"] is True
+    assert prism_guardrail([pii_only])["fired"] is False          # PII flags never block the order
+    assert prism_guardrail([{"ok": False}]) is None                 # PRISM unreachable: local check decides

@@ -6,25 +6,122 @@
   "http_status": 200,
   "ok": true,
   "prism_id": "a69db514-40df-4934-af1c-5e7b5ea72c34",
-  "detail": null
+  "detail": null,
+  "response_keys": [
+   "cost_usd",
+   "created_at",
+   "evaluation",
+   "guardrail_flags",
+   "id",
+   "input_messages",
+   "latency_ms",
+   "metadata",
+   "model",
+   "output_message",
+   "pii_redacted",
+   "project_id",
+   "session_id",
+   "spans",
+   "token_count_input",
+   "token_count_output",
+   "trace_id",
+   "user_identifier"
+  ],
+  "guardrail_fields_in_response": {
+   "guardrail_flags": [
+    {
+     "action": "flag",
+     "rule_id": "b0ead208-769d-4751-b9d8-1229c75a7985",
+     "severity": "high",
+     "rule_name": "PII/PHI Detection",
+     "rule_type": "pii_phi",
+     "matched_text": "Date of birth: 07/26/2001"
+    }
+   ]
+  },
+  "page": 1
  },
  {
   "kind": "reader",
-  "trace_id": "sigcheck-read-rx_013-openai-gpt-5.5-reader-v2",
+  "trace_id": "sigcheck-read-rx_013-openai-gpt-5.5-reader-v2-v2",
   "agent": "sigcheck-reader",
   "http_status": 200,
   "ok": true,
-  "prism_id": "8d789fdc-1821-4c56-80df-09d71159cff7",
-  "detail": null
+  "prism_id": "8e97c8cd-35ac-4457-ac89-151881f35d41",
+  "detail": null,
+  "response_keys": [
+   "cost_usd",
+   "created_at",
+   "evaluation",
+   "guardrail_flags",
+   "id",
+   "input_messages",
+   "latency_ms",
+   "metadata",
+   "model",
+   "output_message",
+   "pii_redacted",
+   "project_id",
+   "session_id",
+   "spans",
+   "token_count_input",
+   "token_count_output",
+   "trace_id",
+   "user_identifier"
+  ],
+  "guardrail_fields_in_response": {
+   "guardrail_flags": [
+    {
+     "action": "flag",
+     "rule_id": "b0ead208-769d-4751-b9d8-1229c75a7985",
+     "severity": "high",
+     "rule_name": "PII/PHI Detection",
+     "rule_type": "pii_phi",
+     "matched_text": "Date of birth: 07/26/2001"
+    }
+   ]
+  }
  },
  {
   "kind": "reader",
-  "trace_id": "sigcheck-read-rx_013-mistral-mistral-large-3-reader-v2",
+  "trace_id": "sigcheck-read-rx_013-mistral-mistral-large-3-reader-v2-v2",
   "agent": "sigcheck-reader",
   "http_status": 200,
   "ok": true,
-  "prism_id": "49f2ddd8-f2c9-49af-ab23-694639c33c7a",
-  "detail": null
+  "prism_id": "d1ca3669-8d03-4872-883f-855420eabf96",
+  "detail": null,
+  "response_keys": [
+   "cost_usd",
+   "created_at",
+   "evaluation",
+   "guardrail_flags",
+   "id",
+   "input_messages",
+   "latency_ms",
+   "metadata",
+   "model",
+   "output_message",
+   "pii_redacted",
+   "project_id",
+   "session_id",
+   "spans",
+   "token_count_input",
+   "token_count_output",
+   "trace_id",
+   "user_identifier"
+  ],
+  "guardrail_fields_in_response": {
+   "guardrail_flags": [
+    {
+     "action": "flag",
+     "rule_id": "b0ead208-769d-4751-b9d8-1229c75a7985",
+     "severity": "high",
+     "rule_name": "PII/PHI Detection",
+     "rule_type": "pii_phi",
+     "matched_text": "Date of birth: 07/26/2001"
+    }
+   ]
+  }
  },
  {
   "kind": "verifier",
@@ -33,6 +130,29 @@
   "http_status": 200,
   "ok": true,
   "prism_id": "310257e7-3cec-4e2f-9d69-0ac99511f15e",
-  "detail": null
+  "detail": null,
+  "response_keys": [
+   "cost_usd",
+   "created_at",
+   "evaluation",
+   "guardrail_flags",
+   "id",
+   "input_messages",
+   "latency_ms",
+   "metadata",
+   "model",
+   "output_message",
+   "pii_redacted",
+   "project_id",
+   "session_id",
+   "spans",
+   "token_count_input",
+   "token_count_output",
+   "trace_id",
+   "user_identifier"
+  ],
+  "guardrail_fields_in_response": {
+   "guardrail_flags": null
+  }
  }
 ]

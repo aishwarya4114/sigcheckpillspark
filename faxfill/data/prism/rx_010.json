@@ -6,25 +6,122 @@
   "http_status": 200,
   "ok": true,
   "prism_id": "fad8eaf0-3d36-45a9-874c-637b67ceef25",
-  "detail": null
+  "detail": null,
+  "response_keys": [
+   "cost_usd",
+   "created_at",
+   "evaluation",
+   "guardrail_flags",
+   "id",
+   "input_messages",
+   "latency_ms",
+   "metadata",
+   "model",
+   "output_message",
+   "pii_redacted",
+   "project_id",
+   "session_id",
+   "spans",
+   "token_count_input",
+   "token_count_output",
+   "trace_id",
+   "user_identifier"
+  ],
+  "guardrail_fields_in_response": {
+   "guardrail_flags": [
+    {
+     "action": "flag",
+     "rule_id": "b0ead208-769d-4751-b9d8-1229c75a7985",
+     "severity": "high",
+     "rule_name": "PII/PHI Detection",
+     "rule_type": "pii_phi",
+     "matched_text": "Medical License: BK8549997"
+    }
+   ]
+  },
+  "page": 1
  },
  {
   "kind": "reader",
-  "trace_id": "sigcheck-read-rx_010-openai-gpt-5.5-reader-v2",
+  "trace_id": "sigcheck-read-rx_010-openai-gpt-5.5-reader-v2-v2",
   "agent": "sigcheck-reader",
   "http_status": 200,
   "ok": true,
-  "prism_id": "0c5c6325-b98d-4455-9547-85345869f143",
-  "detail": null
+  "prism_id": "e0bc90a0-bf62-47bd-bcae-2207beb39bd9",
+  "detail": null,
+  "response_keys": [
+   "cost_usd",
+   "created_at",
+   "evaluation",
+   "guardrail_flags",
+   "id",
+   "input_messages",
+   "latency_ms",
+   "metadata",
+   "model",
+   "output_message",
+   "pii_redacted",
+   "project_id",
+   "session_id",
+   "spans",
+   "token_count_input",
+   "token_count_output",
+   "trace_id",
+   "user_identifier"
+  ],
+  "guardrail_fields_in_response": {
+   "guardrail_flags": [
+    {
+     "action": "flag",
+     "rule_id": "b0ead208-769d-4751-b9d8-1229c75a7985",
+     "severity": "high",
+     "rule_name": "PII/PHI Detection",
+     "rule_type": "pii_phi",
+     "matched_text": "Medical License: BK8549997"
+    }
+   ]
+  }
  },
  {
   "kind": "reader",
-  "trace_id": "sigcheck-read-rx_010-mistral-mistral-large-3-reader-v2",
+  "trace_id": "sigcheck-read-rx_010-mistral-mistral-large-3-reader-v2-v2",
   "agent": "sigcheck-reader",
   "http_status": 200,
   "ok": true,
-  "prism_id": "a377fec2-9cbd-45f6-b5d5-be95bb62e3af",
-  "detail": null
+  "prism_id": "a419368f-0667-4a21-956c-69387885f6c9",
+  "detail": null,
+  "response_keys": [
+   "cost_usd",
+   "created_at",
+   "evaluation",
+   "guardrail_flags",
+   "id",
+   "input_messages",
+   "latency_ms",
+   "metadata",
+   "model",
+   "output_message",
+   "pii_redacted",
+   "project_id",
+   "session_id",
+   "spans",
+   "token_count_input",
+   "token_count_output",
+   "trace_id",
+   "user_identifier"
+  ],
+  "guardrail_fields_in_response": {
+   "guardrail_flags": [
+    {
+     "action": "flag",
+     "rule_id": "b0ead208-769d-4751-b9d8-1229c75a7985",
+     "severity": "high",
+     "rule_name": "PII/PHI Detection",
+     "rule_type": "pii_phi",
+     "matched_text": "Medical License: BK8549997"
+    }
+   ]
+  }
  },
  {
   "kind": "verifier",
@@ -33,6 +130,29 @@
   "http_status": 200,
   "ok": true,
   "prism_id": "75a3d3d1-ef87-44fa-b0ff-b81137a9957c",
-  "detail": null
+  "detail": null,
+  "response_keys": [
+   "cost_usd",
+   "created_at",
+   "evaluation",
+   "guardrail_flags",
+   "id",
+   "input_messages",
+   "latency_ms",
+   "metadata",
+   "model",
+   "output_message",
+   "pii_redacted",
+   "project_id",
+   "session_id",
+   "spans",
+   "token_count_input",
+   "token_count_output",
+   "trace_id",
+   "user_identifier"
+  ],
+  "guardrail_fields_in_response": {
+   "guardrail_flags": null
+  }
  }
 ]

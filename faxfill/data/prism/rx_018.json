@@ -6,25 +6,122 @@
   "http_status": 200,
   "ok": true,
   "prism_id": "3eb86c2a-e2ec-4e13-9ed7-6bfe9b637f58",
-  "detail": null
+  "detail": null,
+  "response_keys": [
+   "cost_usd",
+   "created_at",
+   "evaluation",
+   "guardrail_flags",
+   "id",
+   "input_messages",
+   "latency_ms",
+   "metadata",
+   "model",
+   "output_message",
+   "pii_redacted",
+   "project_id",
+   "session_id",
+   "spans",
+   "token_count_input",
+   "token_count_output",
+   "trace_id",
+   "user_identifier"
+  ],
+  "guardrail_fields_in_response": {
+   "guardrail_flags": [
+    {
+     "action": "flag",
+     "rule_id": "b0ead208-769d-4751-b9d8-1229c75a7985",
+     "severity": "high",
+     "rule_name": "PII/PHI Detection",
+     "rule_type": "pii_phi",
+     "matched_text": "Date of birth: 05/03/1968"
+    }
+   ]
+  },
+  "page": 1
  },
  {
   "kind": "reader",
-  "trace_id": "sigcheck-read-rx_018-openai-gpt-5.5-reader-v2",
+  "trace_id": "sigcheck-read-rx_018-openai-gpt-5.5-reader-v2-v2",
   "agent": "sigcheck-reader",
   "http_status": 200,
   "ok": true,
-  "prism_id": "2ece6e38-1396-4b6d-a3c5-732d56ec0221",
-  "detail": null
+  "prism_id": "dc625d0b-ef72-4998-b6a2-d5daedaa5d13",
+  "detail": null,
+  "response_keys": [
+   "cost_usd",
+   "created_at",
+   "evaluation",
+   "guardrail_flags",
+   "id",
+   "input_messages",
+   "latency_ms",
+   "metadata",
+   "model",
+   "output_message",
+   "pii_redacted",
+   "project_id",
+   "session_id",
+   "spans",
+   "token_count_input",
+   "token_count_output",
+   "trace_id",
+   "user_identifier"
+  ],
+  "guardrail_fields_in_response": {
+   "guardrail_flags": [
+    {
+     "action": "flag",
+     "rule_id": "b0ead208-769d-4751-b9d8-1229c75a7985",
+     "severity": "high",
+     "rule_name": "PII/PHI Detection",
+     "rule_type": "pii_phi",
+     "matched_text": "Date of birth: 05/03/1968"
+    }
+   ]
+  }
  },
  {
   "kind": "reader",
-  "trace_id": "sigcheck-read-rx_018-mistral-mistral-large-3-reader-v2",
+  "trace_id": "sigcheck-read-rx_018-mistral-mistral-large-3-reader-v2-v2",
   "agent": "sigcheck-reader",
   "http_status": 200,
   "ok": true,
-  "prism_id": "bfc4aa4e-6f6a-414b-81d1-15edf14f31a3",
-  "detail": null
+  "prism_id": "b6127fd3-02d5-48d0-9e49-fa9cfce9764e",
+  "detail": null,
+  "response_keys": [
+   "cost_usd",
+   "created_at",
+   "evaluation",
+   "guardrail_flags",
+   "id",
+   "input_messages",
+   "latency_ms",
+   "metadata",
+   "model",
+   "output_message",
+   "pii_redacted",
+   "project_id",
+   "session_id",
+   "spans",
+   "token_count_input",
+   "token_count_output",
+   "trace_id",
+   "user_identifier"
+  ],
+  "guardrail_fields_in_response": {
+   "guardrail_flags": [
+    {
+     "action": "flag",
+     "rule_id": "b0ead208-769d-4751-b9d8-1229c75a7985",
+     "severity": "high",
+     "rule_name": "PII/PHI Detection",
+     "rule_type": "pii_phi",
+     "matched_text": "Date of birth: 05/03/1968"
+    }
+   ]
+  }
  },
  {
   "kind": "verifier",
@@ -33,6 +130,29 @@
   "http_status": 200,
   "ok": true,
   "prism_id": "182b1db2-2fe4-4a1f-a032-0e2452573421",
-  "detail": null
+  "detail": null,
+  "response_keys": [
+   "cost_usd",
+   "created_at",
+   "evaluation",
+   "guardrail_flags",
+   "id",
+   "input_messages",
+   "latency_ms",
+   "metadata",
+   "model",
+   "output_message",
+   "pii_redacted",
+   "project_id",
+   "session_id",
+   "spans",
+   "token_count_input",
+   "token_count_output",
+   "trace_id",
+   "user_identifier"
+  ],
+  "guardrail_fields_in_response": {
+   "guardrail_flags": null
+  }
  }
 ]

@@ -388,10 +388,15 @@ function prismPanel(v) {
   const g = p.guardrail || {}, ls = v.lookup_sources || {};
   const code = (x) => `<code>${esc(x)}</code>`;
   return `<details class="card prism"><summary><b>PRISM (Block Convey)</b> <span class="muted small">· ${p.traces_sent} traces sent
-      · local guardrail ${g.local_injection_check ? "⛔ injection found" : "✓ clean"} · PRISM guardrail: dashboard only</span></summary>
+      · local guardrail ${g.local_injection_check ? "⛔ injection found" : "✓ clean"}
+      · PRISM guardrail ${g.prism === null || g.prism === undefined ? "unavailable" : g.prism ? "⛔ injection flagged" : "✓ no injection flag"}</span></summary>
     <table class="kv">
-      <tr><th>Input guardrail</th><td>Local check: <b>${g.local_injection_check ? "injection found → blocked" : "no injected instructions"}</b>.<br>
-        PRISM: OCR text sent as ${(p.intake_trace_ids || []).map(code).join(", ")}. ${esc(g.prism_status || "")}</td></tr>
+      <tr><th>Input guardrail</th><td>Blocks the order if <b>either</b> fires.
+        ${g.fired_by && g.fired_by.length ? `Fired: <b>${g.fired_by.map(esc).join(" and ")}</b>.` : "Neither fired."}<br>
+        Local check: ${g.local_injection_check ? "injection found" : "no injected instructions"}.<br>
+        PRISM (intake trace ${(p.intake_trace_ids || []).map(code).join(", ")}): ${g.prism === null || g.prism === undefined ? "unavailable" : g.prism ? "prompt-injection flag" : "no prompt-injection flag"}
+        ${(g.prism_other_flags || []).length ? `<span class="muted">(other PRISM flags: ${[...new Set(g.prism_other_flags.map((f) => f.rule_name))].map(esc).join(", ")})</span>` : ""}
+        <br><span class="muted small">${esc(g.prism_status || "")}</span></td></tr>
       <tr><th>Reader traces</th><td>${(p.reader_trace_ids || []).map(code).join("<br>")}</td></tr>
       <tr><th>Verifier trace</th><td>${code(p.verifier_trace_id || "—")} <span class="muted">(scored by the Evaluators Hub rubric)</span></td></tr>
       <tr><th>Knowledge Base</th><td>${esc(p.knowledge_base || "")}<br><span class="muted">Lookups answered by: ${esc(ls.drug || "?")}</span></td></tr>

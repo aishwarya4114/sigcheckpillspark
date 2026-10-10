@@ -794,12 +794,13 @@ def verify_fax(fax_id, lookup=None, today=None, refresh_reads=False):
     pages = read_pages(fax_id, refresh_reads)                     # pages actually received
     images = ocr.pages(fax_id)
     use_prism = prism.enabled()
-    futures = []
+    futures, intake_receipts = [], []
     if use_prism:
-        # input guardrail: every page's OCR text goes to PRISM (agent sigcheck-intake) BEFORE verification
-        futures += [prism.trace_intake(fax_id, p["page"], p["ocr"]["text"]) for p in pages]
-        # one trace per model read
+        # one trace per model read (background)
         futures += [prism.trace_read(fax_id, p[k]) for p in pages for k in "AB"]
+        # input guardrail: every page's OCR text goes to PRISM (agent sigcheck-intake) BEFORE verification, and we
+        # wait for those responses because PRISM's guardrail verdict can block the order
+        intake_receipts = prism.collect([prism.trace_intake(fax_id, p["page"], p["ocr"]["text"]) for p in pages])
     prescriptions, order_flags = [], []
 
     # page count from the headers vs the files received (never from an answer key)
@@ -811,13 +812,19 @@ def verify_fax(fax_id, lookup=None, today=None, refresh_reads=False):
     lines += [(p[k]["fields"].get("notes") or "", None, p["page"]) for p in pages for k in "ABC"
               if p[k].get("fields")]
     local_hits = fc.injection_hits(lines)
-    prism_flag = prism.prism_guardrail("\n".join(t for t, _, _ in lines))
-    if local_hits or prism_flag:
-        order_flags.append({"code": "INJECTION", "status": "blocked", "page": local_hits[0]["page"] if local_hits else None,
-                            "reason": "The fax contains text addressed to an AI or reviewer "
-                                      f"({'; '.join(repr(h['text']) for h in local_hits[:2])}). Instructions on a fax are "
-                                      "never followed; the order is blocked for a person to review.",
-                            "evidence": local_hits, "guardrails": {"local": bool(local_hits), "prism": prism_flag}})
+    prism_gr = prism.prism_guardrail(intake_receipts) if use_prism else None
+    prism_fired = bool(prism_gr and prism_gr["fired"])
+    fired_by = [n for n, hit in (("local check", bool(local_hits)), ("PRISM guardrail", prism_fired)) if hit]
+    if fired_by:
+        quoted = [h["text"] for h in local_hits[:2]] or [f.get("matched_text") or f.get("rule_name") for f in prism_gr["injection_flags"][:2]]
+        order_flags.append({"code": "INJECTION", "status": "blocked",
+                            "page": local_hits[0]["page"] if local_hits else prism_gr["injection_flags"][0].get("page"),
+                            "reason": f"The fax contains text addressed to an AI or reviewer ({'; '.join(repr(q) for q in quoted)}). "
+                                      f"Detected by: {' and '.join(fired_by)}. Instructions on a fax are never followed; "
+                                      "the order is blocked for a person to review.",
+                            "evidence": local_hits, "fired_by": fired_by,
+                            "guardrails": {"local": bool(local_hits), "prism": prism_fired if prism_gr else None,
+                                           "prism_flags": (prism_gr or {}).get("injection_flags", [])}})
 
     for p, img_path in zip(pages, images):
         reads = {k: (p[k].get("fields") if k != "C" else p[k]["fields"]) for k in "ABC"}
@@ -850,7 +857,7 @@ def verify_fax(fax_id, lookup=None, today=None, refresh_reads=False):
     }
     if use_prism:
         futures.append(prism.trace_verifier(verdict, (time.time() - t0) * 1000))
-        receipts = prism.collect(futures)
+        receipts = intake_receipts + prism.collect(futures)
         prism.save_receipts(fax_id, receipts)
         verdict["prism"] = {
             "traces_sent": sum(1 for r in receipts if r.get("ok")),
@@ -858,8 +865,12 @@ def verify_fax(fax_id, lookup=None, today=None, refresh_reads=False):
             "intake_trace_ids": [r["trace_id"] for r in receipts if r.get("kind") == "intake" and r.get("ok")],
             "reader_trace_ids": [r["trace_id"] for r in receipts if r.get("kind") == "reader" and r.get("ok")],
             "verifier_trace_id": next((r["trace_id"] for r in receipts if r.get("kind") == "verifier" and r.get("ok")), None),
-            "guardrail": {"local_injection_check": bool(local_hits), "prism": prism_flag,
-                          "prism_status": prism.GUARDRAIL_STATUS},
+            "guardrail": {"local_injection_check": bool(local_hits),
+                          "prism": None if prism_gr is None else prism_fired,
+                          "prism_injection_flags": (prism_gr or {}).get("injection_flags", []),
+                          "prism_other_flags": (prism_gr or {}).get("other_flags", []),
+                          "fired_by": fired_by, "blocks_if": "either fires",
+                          "prism_status": prism.GUARDRAIL_STATUS if prism_gr is not None else "PRISM unavailable; local check decided"},
             "knowledge_base": prism.KB_STATUS,
         }
     else:
