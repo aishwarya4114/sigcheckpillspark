@@ -1,0 +1,38 @@
+[
+ {
+  "kind": "intake",
+  "trace_id": "sigcheck-intake-rx_015-p1-ccd55465318e",
+  "agent": "sigcheck-intake",
+  "http_status": 200,
+  "ok": true,
+  "prism_id": "fa468a1d-7198-4cda-8d0e-5f1492ecd875",
+  "detail": null
+ },
+ {
+  "kind": "reader",
+  "trace_id": "sigcheck-read-rx_015-openai-gpt-5.5-reader-v2",
+  "agent": "sigcheck-reader",
+  "http_status": 200,
+  "ok": true,
+  "prism_id": "78826db6-6384-44aa-bc8e-4a17adf4e170",
+  "detail": null
+ },
+ {
+  "kind": "reader",
+  "trace_id": "sigcheck-read-rx_015-mistral-mistral-large-3-reader-v2",
+  "agent": "sigcheck-reader",
+  "http_status": 200,
+  "ok": true,
+  "prism_id": "cbe127ce-a2e4-4e1b-ae1a-50bf2b7d8022",
+  "detail": null
+ },
+ {
+  "kind": "verifier",
+  "trace_id": "sigcheck-verify-rx_015-1b0d21ca6706",
+  "agent": "sigcheck-verifier",
+  "http_status": 200,
+  "ok": true,
+  "prism_id": "dce53ade-d690-4a29-bd4e-e91e623b9471",
+  "detail": null
+ }
+]

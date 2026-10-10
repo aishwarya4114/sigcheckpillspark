@@ -1,0 +1,65 @@
+[
+ {
+  "kind": "intake",
+  "trace_id": "sigcheck-intake-rx_030-p1-7f5cecca0a00",
+  "agent": "sigcheck-intake",
+  "http_status": 200,
+  "ok": true,
+  "prism_id": "1e233bf8-47b0-4624-aa01-2b3f7af3d36f",
+  "detail": null
+ },
+ {
+  "kind": "intake",
+  "trace_id": "sigcheck-intake-rx_030-p2-aa8271926463",
+  "agent": "sigcheck-intake",
+  "http_status": 200,
+  "ok": true,
+  "prism_id": "307594ca-5c38-4252-abf8-1ca5658d7343",
+  "detail": null
+ },
+ {
+  "kind": "reader",
+  "trace_id": "sigcheck-read-rx_030_p1-openai-gpt-5.5-reader-v2",
+  "agent": "sigcheck-reader",
+  "http_status": 200,
+  "ok": true,
+  "prism_id": "b37e7b29-85e4-40a9-b1e9-f4ba039348c7",
+  "detail": null
+ },
+ {
+  "kind": "reader",
+  "trace_id": "sigcheck-read-rx_030_p1-mistral-mistral-large-3-reader-v2",
+  "agent": "sigcheck-reader",
+  "http_status": 200,
+  "ok": true,
+  "prism_id": "4817d4fe-a2b9-4bb9-aeb6-5a76950a1a6c",
+  "detail": null
+ },
+ {
+  "kind": "reader",
+  "trace_id": "sigcheck-read-rx_030_p2-openai-gpt-5.5-reader-v2",
+  "agent": "sigcheck-reader",
+  "http_status": 200,
+  "ok": true,
+  "prism_id": "d3311318-7186-464c-91bb-8a08a4af189e",
+  "detail": null
+ },
+ {
+  "kind": "reader",
+  "trace_id": "sigcheck-read-rx_030_p2-mistral-mistral-large-3-reader-v2",
+  "agent": "sigcheck-reader",
+  "http_status": 200,
+  "ok": true,
+  "prism_id": "04c74aba-5023-4547-94f8-fb94922534cc",
+  "detail": null
+ },
+ {
+  "kind": "verifier",
+  "trace_id": "sigcheck-verify-rx_030-bb6368b8eaf3",
+  "agent": "sigcheck-verifier",
+  "http_status": 200,
+  "ok": true,
+  "prism_id": "09120201-5df9-40e5-bc7b-4ded50592384",
+  "detail": null
+ }
+]

@@ -105,3 +105,9 @@ pre.report { white-space: pre-wrap; font: 12.5px/1.55 ui-monospace, Menlo, monos
 .modal textarea { width: 100%; border: 1px solid var(--line); border-radius: 8px; padding: 10px; font: 13.5px/1.5 ui-monospace, Menlo, monospace; }
 .modal-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; }
 .evbox.region { border: 3px dashed #2f6db5; background: rgba(47, 109, 181, .06); box-shadow: none; }
+.card.prism { padding: 12px 16px; }
+.card.prism summary { cursor: pointer; }
+table.kv { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13.5px; }
+table.kv th { text-align: left; vertical-align: top; width: 150px; color: var(--muted); font-weight: 600; padding: 6px 10px 6px 0; }
+table.kv td { padding: 6px 0; border-top: 1px solid var(--line); }
+table.kv code { font-size: 12px; background: var(--soft); padding: 1px 5px; border-radius: 4px; }

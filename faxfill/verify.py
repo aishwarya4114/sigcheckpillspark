@@ -13,8 +13,11 @@ from pathlib import Path
 
 from rapidfuzz import fuzz
 
+import time
+
 from faxfill import faxchecks as fc
 from faxfill import ocr
+from faxfill import prism
 from faxfill.ids import dea_valid, npi_valid
 from faxfill.lookup import LocalLookup
 from faxfill.readers import FIELDS, MODELS, read_pages
@@ -665,11 +668,6 @@ CONTROLLED_CODES = set(WEIGHTS["controlled_substance_issue"]["codes"])
 LASA_CODES = set(WEIGHTS["lookalike_risk"]["codes"])
 
 
-def prism_guardrail(text):
-    """Hook for the PRISM prompt-injection guardrail. Returns True/False when wired up, None until then."""
-    return None
-
-
 def danger(order_status, prescriptions, lookup):
     parts = {}
     codes = [c for rx in prescriptions for f in rx["fields"].values() for c in f["codes"]]
@@ -792,8 +790,16 @@ def page_count_flags(headers, n_received):
 
 def verify_fax(fax_id, lookup=None, today=None, refresh_reads=False):
     lookup = lookup or LocalLookup()
+    t0 = time.time()
     pages = read_pages(fax_id, refresh_reads)                     # pages actually received
     images = ocr.pages(fax_id)
+    use_prism = prism.enabled()
+    futures = []
+    if use_prism:
+        # input guardrail: every page's OCR text goes to PRISM (agent sigcheck-intake) BEFORE verification
+        futures += [prism.trace_intake(fax_id, p["page"], p["ocr"]["text"]) for p in pages]
+        # one trace per model read
+        futures += [prism.trace_read(fax_id, p[k]) for p in pages for k in "AB"]
     prescriptions, order_flags = [], []
 
     # page count from the headers vs the files received (never from an answer key)
@@ -805,7 +811,7 @@ def verify_fax(fax_id, lookup=None, today=None, refresh_reads=False):
     lines += [(p[k]["fields"].get("notes") or "", None, p["page"]) for p in pages for k in "ABC"
               if p[k].get("fields")]
     local_hits = fc.injection_hits(lines)
-    prism_flag = prism_guardrail("\n".join(t for t, _, _ in lines))
+    prism_flag = prism.prism_guardrail("\n".join(t for t, _, _ in lines))
     if local_hits or prism_flag:
         order_flags.append({"code": "INJECTION", "status": "blocked", "page": local_hits[0]["page"] if local_hits else None,
                             "reason": "The fax contains text addressed to an AI or reviewer "
@@ -839,7 +845,25 @@ def verify_fax(fax_id, lookup=None, today=None, refresh_reads=False):
                           for rx in prescriptions],
         "clarification_questions": questions(prescriptions, order_flags),
         "thresholds": fc.THRESHOLDS | {"lasa_min_ocr_conf": LASA_MIN_OCR_CONF},
+        "lookup_sources": {"drug": lookup.name, "prescriber": lookup.name, "patient": lookup.name,
+                           "prism_kb": prism.KB_STATUS},
     }
+    if use_prism:
+        futures.append(prism.trace_verifier(verdict, (time.time() - t0) * 1000))
+        receipts = prism.collect(futures)
+        prism.save_receipts(fax_id, receipts)
+        verdict["prism"] = {
+            "traces_sent": sum(1 for r in receipts if r.get("ok")),
+            "traces_failed": [r for r in receipts if not r.get("ok")],
+            "intake_trace_ids": [r["trace_id"] for r in receipts if r.get("kind") == "intake" and r.get("ok")],
+            "reader_trace_ids": [r["trace_id"] for r in receipts if r.get("kind") == "reader" and r.get("ok")],
+            "verifier_trace_id": next((r["trace_id"] for r in receipts if r.get("kind") == "verifier" and r.get("ok")), None),
+            "guardrail": {"local_injection_check": bool(local_hits), "prism": prism_flag,
+                          "prism_status": prism.GUARDRAIL_STATUS},
+            "knowledge_base": prism.KB_STATUS,
+        }
+    else:
+        verdict["prism"] = {"traces_sent": 0, "note": "PRISM not configured (.env)"}
     VERDICTS.mkdir(parents=True, exist_ok=True)
     json.dump(verdict, open(VERDICTS / f"{fax_id}.json", "w"), indent=1, default=str)
     return verdict

@@ -100,6 +100,7 @@ function renderFax() {
     </div>
     ${blockBanner(v)}
     ${orderWarn.map((f) => orderFlagCard(f, blocked)).join("")}
+    ${prismPanel(v)}
     <div id="submit-msg"></div>
     <div class="split">
       <section class="faxpane" aria-label="Fax image">
@@ -122,6 +123,24 @@ function renderFax() {
   $("#clar").addEventListener("click", openClarification);
   $("#submit").addEventListener("click", submitOrder);
   if (S.selected) drawBox(S.selected);
+}
+
+function prismPanel(v) {
+  const p = v.prism || {};
+  if (!p.traces_sent) return `<details class="card prism"><summary><b>PRISM</b> <span class="muted">not configured</span></summary></details>`;
+  const g = p.guardrail || {};
+  const ls = v.lookup_sources || {};
+  const row = (k, val) => `<tr><th>${k}</th><td>${val}</td></tr>`;
+  const code = (x) => `<code>${esc(x)}</code>`;
+  return `<details class="card prism"><summary><b>PRISM (Block Convey)</b>
+      <span class="muted">· ${p.traces_sent} traces sent for this fax${p.traces_failed && p.traces_failed.length ? `, ${p.traces_failed.length} failed` : ", 0 failed"}
+      · guardrail: local ${g.local_injection_check ? "⛔ injection found" : "✓ clean"}, PRISM ${g.prism === null || g.prism === undefined ? "flag in dashboard only" : g.prism ? "⛔ flagged" : "✓ clean"}</span></summary>
+    <table class="kv">
+      ${row("Input guardrail", `Local check: <b>${g.local_injection_check ? "injection found → order blocked" : "no injected instructions"}</b>.<br>PRISM: OCR text sent as ${(p.intake_trace_ids || []).map(code).join(", ")} (agent <code>sigcheck-intake</code>). ${esc(g.prism_status || "")}`)}
+      ${row("Reader traces", (p.reader_trace_ids || []).map(code).join("<br>") + ` <span class="muted">(agent sigcheck-reader)</span>`)}
+      ${row("Verifier trace", `${code(p.verifier_trace_id || "—")} <span class="muted">(agent sigcheck-verifier; scored by the Evaluators Hub rubric)</span>`)}
+      ${row("Knowledge Base", `${esc(p.knowledge_base || "")}<br><span class="muted">Drug, prescriber and patient lookups answered by: ${esc(ls.drug || "?")}</span>`)}
+    </table></details>`;
 }
 
 function orderFlagCard(f, blocked) {
