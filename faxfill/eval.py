@@ -100,7 +100,7 @@ def main():
                     should_abstain.append(f"{fid} {name}: should have been left empty, verifier value '{f['value']}' "
                                           f"(status {f['status']})")
                 if f["codes"]:
-                    if f["codes"] == ["OCR_DISAGREEMENT"]:
+                    if f["codes"] == ["OCR_DISAGREEMENT"]:   # (no longer produced since the Reader C decision)
                         c_right = norm(name, f["reads"].get("C")) == nt
                         c_only["clean" if gt["is_clean"] else "trap"].append(
                             f"{fid} p{page} {name}: models '{f['value']}', regex '{f['reads'].get('C')}', truth '{t}' "

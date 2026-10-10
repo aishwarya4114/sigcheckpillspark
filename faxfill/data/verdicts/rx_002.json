@@ -41,7 +41,7 @@
      ],
      "checks_failed": [],
      "notes": [
-      "OCR text reads 'Amara Nwosu |' (models agree on 'Amara Nwosu'); not a critical field."
+      "OCR text reads 'Amara Nwosu |' (both models read 'Amara Nwosu'). Shown for information; not a flag on its own."
      ],
      "reads": {
       "A": "Amara Nwosu",
@@ -434,7 +434,9 @@
     }
    },
    "page_flags": [],
-   "c_only_fields": [],
+   "c_only_fields": [
+    "patient_name"
+   ],
    "drug_ref": "lisinopril"
   }
  ],

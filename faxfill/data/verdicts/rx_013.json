@@ -45,7 +45,7 @@
      ],
      "checks_failed": [],
      "notes": [
-      "OCR text reads 'Hazel Quinn : poB: 07/26/2001' (models agree on 'Hazel Quinn'); not a critical field."
+      "OCR text reads 'Hazel Quinn : poB: 07/26/2001' (both models read 'Hazel Quinn'). Shown for information; not a flag on its own."
      ],
      "reads": {
       "A": "Hazel Quinn",
@@ -375,7 +375,7 @@
      ],
      "checks_failed": [],
      "notes": [
-      "OCR text reads '40/06/2026' (models agree on '10/06/2026'); not a critical field."
+      "OCR text reads '40/06/2026' (both models read '10/06/2026'). Shown for information; not a flag on its own."
      ],
      "reads": {
       "A": "10/06/2026",
@@ -439,7 +439,10 @@
     }
    },
    "page_flags": [],
-   "c_only_fields": [],
+   "c_only_fields": [
+    "patient_name",
+    "date_written"
+   ],
    "drug_ref": "escitalopram"
   }
  ],

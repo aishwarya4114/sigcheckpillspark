@@ -393,7 +393,7 @@
      ],
      "checks_failed": [],
      "notes": [
-      "OCR text reads '40/09/2026' (models agree on '10/09/2026'); not a critical field."
+      "OCR text reads '40/09/2026' (both models read '10/09/2026'). Shown for information; not a flag on its own."
      ],
      "reads": {
       "A": "10/09/2026",
@@ -447,7 +447,9 @@
     }
    },
    "page_flags": [],
-   "c_only_fields": [],
+   "c_only_fields": [
+    "date_written"
+   ],
    "drug_ref": "amoxicillin"
   }
  ],

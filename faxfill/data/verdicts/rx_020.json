@@ -39,19 +39,16 @@
    }
   }
  ],
- "danger_score": 10005,
+ "danger_score": 10000,
  "danger_breakdown": {
-  "blocked": 10000,
-  "other_flag": 5
+  "blocked": 10000
  },
  "prescriptions": [
   {
    "page": 1,
    "image": "rx_020.png",
-   "status": "NEEDS_PHARMACIST",
-   "flagged_fields": [
-    "refills"
-   ],
+   "status": "READY",
+   "flagged_fields": [],
    "fields": {
     "patient_name": {
      "value": "Clara Jensen",
@@ -280,16 +277,10 @@
     },
     "refills": {
      "value": "1",
-     "status": "needs_pharmacist",
-     "codes": [
-      "OCR_DISAGREEMENT"
-     ],
-     "reasons": [
-      "Both models read '1' but the OCR text reads '4'."
-     ],
-     "alternatives": [
-      "4"
-     ],
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
      "evidence_box": null,
      "evidence_note": "location not found",
      "checks_passed": [
@@ -298,13 +289,10 @@
        "evidence": null
       }
      ],
-     "checks_failed": [
-      {
-       "check": "OCR_DISAGREEMENT",
-       "evidence": null
-      }
+     "checks_failed": [],
+     "notes": [
+      "OCR text reads '4' (both models read '1'). Shown for information; not a flag on its own."
      ],
-     "notes": [],
      "reads": {
       "A": "1",
       "B": "1",
@@ -491,14 +479,7 @@
    "drug_ref": "montelukast"
   }
  ],
- "clarification_questions": [
-  {
-   "page": 1,
-   "field": "refills",
-   "code": "OCR_DISAGREEMENT",
-   "question": "Please confirm the refills for montelukast: the faxed text is unclear (4)."
-  }
- ],
+ "clarification_questions": [],
  "thresholds": {
   "speck_max_area": 4,
   "region_pad": 30,
@@ -527,7 +508,7 @@
    "sigcheck-read-rx_020-openai-gpt-5.5-reader-v2-v2",
    "sigcheck-read-rx_020-mistral-mistral-large-3-reader-v2-v2"
   ],
-  "verifier_trace_id": "sigcheck-verify-rx_020-ac0ff34774c0",
+  "verifier_trace_id": "sigcheck-verify-rx_020-0edb5ef0e631",
   "guardrail": {
    "local_injection_check": true,
    "prism": false,

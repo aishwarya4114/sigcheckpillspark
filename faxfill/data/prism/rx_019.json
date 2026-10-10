@@ -125,11 +125,11 @@
  },
  {
   "kind": "verifier",
-  "trace_id": "sigcheck-verify-rx_019-57df69a20f1a",
+  "trace_id": "sigcheck-verify-rx_019-e3c3dc373deb",
   "agent": "sigcheck-verifier",
   "http_status": 200,
   "ok": true,
-  "prism_id": "146df2bd-71db-4851-b2a6-182d76e68f15",
+  "prism_id": "6f6364d2-2ab5-483c-83a5-3ba7518a0f46",
   "detail": null,
   "response_keys": [
    "cost_usd",
@@ -154,11 +154,11 @@
   "guardrail_fields_in_response": {
    "guardrail_flags": [
     {
-     "action": "flag",
      "rule_id": "b0ead208-769d-4751-b9d8-1229c75a7985",
-     "severity": "high",
      "rule_name": "PII/PHI Detection",
      "rule_type": "pii_phi",
+     "severity": "high",
+     "action": "flag",
      "matched_text": "Us Driver License: p1"
     }
    ]

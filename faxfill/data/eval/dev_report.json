@@ -1,8 +1,8 @@
 {
  "accuracy": {
   "correct": 387,
-  "verified": 358,
-  "verified_right": 358,
+  "verified": 369,
+  "verified_right": 369,
   "both_empty": 20,
   "abstained": 7,
   "wrong": 2
@@ -482,40 +482,16 @@
   }
  ],
  "clean_flags": [
-  "rx_004 p1 directions: ['OCR_DISAGREEMENT'] (value 'Take 1 tablet by mouth once daily for 90 days', truth 'Take 1 tablet by mouth once daily for 90 days', value right)",
   "rx_005 order: PAGE_COUNT_UNKNOWN"
  ],
  "unexplained_flags": [
-  "rx_008 p1 directions: ['OCR_DISAGREEMENT'] (value right)",
-  "rx_008 p1 refills: ['OCR_DISAGREEMENT'] (value right)",
-  "rx_009 p1 quantity: ['OCR_DISAGREEMENT'] (value right)",
-  "rx_010 p1 refills: ['OCR_DISAGREEMENT'] (value right)",
-  "rx_011 p1 drug_name: ['OCR_DISAGREEMENT'] (value right)",
-  "rx_011 p1 refills: ['OCR_DISAGREEMENT'] (value right)",
-  "rx_017 p1 directions: ['OCR_DISAGREEMENT'] (value right)",
-  "rx_019 p1 drug_name: ['OCR_DISAGREEMENT'] (value right)",
   "rx_019 p1 substitution: ['READER_DISAGREEMENT'] (value wrong -> justified)",
-  "rx_020 p1 refills: ['OCR_DISAGREEMENT'] (value right)",
   "rx_026 p1 substitution: ['READER_DISAGREEMENT'] (value wrong -> justified)",
-  "rx_027 p1 refills: ['OCR_DISAGREEMENT'] (value right)",
   "rx_029 p1 prescriber_npi: ['READER_DISAGREEMENT'] (value wrong -> justified)"
  ],
  "c_only_flags": {
-  "clean": [
-   "rx_004 p1 directions: models 'Take 1 tablet by mouth once daily for 90 days', regex 'Take 2 tablet by mouth once daily for 90 days', truth 'Take 1 tablet by mouth once daily for 90 days' -> regex was wrong"
-  ],
-  "trap": [
-   "rx_008 p1 directions: models 'Take 1 tablet by mouth three times daily for 10 days', regex 'Take 1 tablet by mouth three tlmes aaily for 10 da ys', truth 'Take 1 tablet by mouth three times daily for 10 days' -> regex was wrong",
-   "rx_008 p1 refills: models '0', regex 'O', truth '0' -> regex was wrong",
-   "rx_009 p1 quantity: models '#60 (sixty) tablets', regex '#0 (sixty) tablets .', truth '#60 (sixty) tablets' -> regex was wrong",
-   "rx_010 p1 refills: models '1', regex '4', truth '1' -> regex was wrong",
-   "rx_011 p1 drug_name: models 'Amlodipine', regex 'Amiodipine', truth 'amlodipine' -> regex was wrong",
-   "rx_011 p1 refills: models '1', regex '4', truth '1' -> regex was wrong",
-   "rx_017 p1 directions: models '1 cap PO TID x 10 days', regex '4 cap PO TID x 10 days', truth '1 cap PO TID x 10 days' -> regex was wrong",
-   "rx_019 p1 drug_name: models 'Glipizide', regex 'Glipizide Pg', truth 'glipizide' -> regex was wrong",
-   "rx_020 p1 refills: models '1', regex '4', truth '1' -> regex was wrong",
-   "rx_027 p1 refills: models '1', regex '4', truth '1' -> regex was wrong"
-  ]
+  "clean": [],
+  "trap": []
  },
  "status": [
   [
@@ -536,7 +512,7 @@
   [
    "rx_004",
    "READY",
-   "NEEDS_PHARMACIST"
+   "READY"
   ],
   [
    "rx_005",
@@ -556,12 +532,12 @@
   [
    "rx_008",
    "NEEDS_PHARMACIST",
-   "NEEDS_PHARMACIST"
+   "READY"
   ],
   [
    "rx_009",
    "NEEDS_PHARMACIST",
-   "NEEDS_PHARMACIST"
+   "READY"
   ],
   [
    "rx_010",

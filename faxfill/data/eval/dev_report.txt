@@ -17,7 +17,7 @@ DEV-SET EVALUATION  (31 faxes, 32 prescriptions; synthetic; thresholds tuned on 
      substitution     correct 30  wrong  0  abstained  2
 
 2. VERIFIED PRECISION (when we said Verified, how often the value was right)
-   358/358 = 100.0%
+   369/369 = 100.0%
    Verified but wrong: none
    Should have abstained (value under a smudge): none
 
@@ -56,40 +56,19 @@ DEV-SET EVALUATION  (31 faxes, 32 prescriptions; synthetic; thresholds tuned on 
    caught (right reason)  rx_031 p1 directions       conflicting_directions       caught by ['CONFLICTING_DIRECTIONS']
 
 4. ORDER STATUS (expected -> verifier)
-   29/31 match
-     rx_004: expected READY, got NEEDS_PHARMACIST
+   28/31 match
      rx_005: expected READY, got NEEDS_PHARMACIST
+     rx_008: expected NEEDS_PHARMACIST, got READY
+     rx_009: expected NEEDS_PHARMACIST, got READY
 
-5. FALSE ALARMS ON CLEAN FAXES (5 clean faxes): 2 flag(s)
-     - rx_004 p1 directions: ['OCR_DISAGREEMENT'] (value 'Take 1 tablet by mouth once daily for 90 days', truth 'Take 1 tablet by mouth once daily for 90 days', value right)
+5. FALSE ALARMS ON CLEAN FAXES (5 clean faxes): 1 flag(s)
      - rx_005 order: PAGE_COUNT_UNKNOWN
-   Flags on trap faxes outside the planted trap: 13
-     - rx_008 p1 directions: ['OCR_DISAGREEMENT'] (value right)
-     - rx_008 p1 refills: ['OCR_DISAGREEMENT'] (value right)
-     - rx_009 p1 quantity: ['OCR_DISAGREEMENT'] (value right)
-     - rx_010 p1 refills: ['OCR_DISAGREEMENT'] (value right)
-     - rx_011 p1 drug_name: ['OCR_DISAGREEMENT'] (value right)
-     - rx_011 p1 refills: ['OCR_DISAGREEMENT'] (value right)
-     - rx_017 p1 directions: ['OCR_DISAGREEMENT'] (value right)
-     - rx_019 p1 drug_name: ['OCR_DISAGREEMENT'] (value right)
+   Flags on trap faxes outside the planted trap: 3
      - rx_019 p1 substitution: ['READER_DISAGREEMENT'] (value wrong -> justified)
-     - rx_020 p1 refills: ['OCR_DISAGREEMENT'] (value right)
      - rx_026 p1 substitution: ['READER_DISAGREEMENT'] (value wrong -> justified)
-     - rx_027 p1 refills: ['OCR_DISAGREEMENT'] (value right)
      - rx_029 p1 prescriber_npi: ['READER_DISAGREEMENT'] (value wrong -> justified)
 
-6. NEEDS-PHARMACIST FLAGS FROM READER C (REGEX) ALONE: 11 (1 on clean faxes, 10 on trap faxes; regex was right in 0, wrong in 11)
-     - rx_004 p1 directions: models 'Take 1 tablet by mouth once daily for 90 days', regex 'Take 2 tablet by mouth once daily for 90 days', truth 'Take 1 tablet by mouth once daily for 90 days' -> regex was wrong
-     - rx_008 p1 directions: models 'Take 1 tablet by mouth three times daily for 10 days', regex 'Take 1 tablet by mouth three tlmes aaily for 10 da ys', truth 'Take 1 tablet by mouth three times daily for 10 days' -> regex was wrong
-     - rx_008 p1 refills: models '0', regex 'O', truth '0' -> regex was wrong
-     - rx_009 p1 quantity: models '#60 (sixty) tablets', regex '#0 (sixty) tablets .', truth '#60 (sixty) tablets' -> regex was wrong
-     - rx_010 p1 refills: models '1', regex '4', truth '1' -> regex was wrong
-     - rx_011 p1 drug_name: models 'Amlodipine', regex 'Amiodipine', truth 'amlodipine' -> regex was wrong
-     - rx_011 p1 refills: models '1', regex '4', truth '1' -> regex was wrong
-     - rx_017 p1 directions: models '1 cap PO TID x 10 days', regex '4 cap PO TID x 10 days', truth '1 cap PO TID x 10 days' -> regex was wrong
-     - rx_019 p1 drug_name: models 'Glipizide', regex 'Glipizide Pg', truth 'glipizide' -> regex was wrong
-     - rx_020 p1 refills: models '1', regex '4', truth '1' -> regex was wrong
-     - rx_027 p1 refills: models '1', regex '4', truth '1' -> regex was wrong
+6. NEEDS-PHARMACIST FLAGS FROM READER C (REGEX) ALONE: 0 (0 on clean faxes, 0 on trap faxes; regex was right in 0, wrong in 0)
 
 7. QUEUE ORDER (danger score, highest first)
-   rx_020(10005), rx_029(10005), rx_021(10000), rx_014(1000), rx_015(1000), rx_024(420), rx_027(135), rx_006(125), rx_022(125), rx_011(15), rx_019(15), rx_026(15), ...
+   rx_029(10005), rx_020(10000), rx_021(10000), rx_014(1000), rx_015(1000), rx_024(420), rx_027(130), rx_006(125), rx_022(125), rx_026(15), rx_028(15), rx_019(10), ...

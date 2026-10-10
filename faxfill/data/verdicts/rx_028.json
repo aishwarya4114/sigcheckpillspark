@@ -303,7 +303,7 @@
       }
      ],
      "notes": [
-      "OCR text reads '1 Lindqvist, MD' (models agree on 'H. Lindqvist, MD'); not a critical field."
+      "OCR text reads '1 Lindqvist, MD' (both models read 'H. Lindqvist, MD'). Shown for information; not a flag on its own."
      ],
      "reads": {
       "A": "H. Lindqvist, MD",
@@ -456,7 +456,9 @@
      "reason": "Prescriber block (name with credential + 10-digit NPI) not found in the top of page 1: it may be cut off."
     }
    ],
-   "c_only_fields": [],
+   "c_only_fields": [
+    "prescriber_name"
+   ],
    "drug_ref": "citalopram"
   }
  ],

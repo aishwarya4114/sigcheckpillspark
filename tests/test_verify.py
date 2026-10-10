@@ -57,9 +57,11 @@ def test_reader_disagreement_keeps_both():
     assert {"5 mg", "6 mg"} <= set(f["strength"]["alternatives"])
 
 
-def test_regex_disagreement_critical_flags_noncritical_notes():
+def test_regex_disagreement_alone_is_a_note_not_a_flag():
+    """Reader C disagreeing alone never creates NEEDS PHARMACIST, even on a critical field (team decision)."""
     f = run(c={"refills": "4", "patient_name": "Marcus Beil"})
-    assert codes(f, "refills") == ["OCR_DISAGREEMENT"]
+    assert codes(f, "refills") == [] and f["refills"]["status"] == "verified"
+    assert any("OCR text reads '4'" in n for n in f["refills"]["notes"])
     assert f["patient_name"]["status"] == "verified" and f["patient_name"]["notes"]
 
 

@@ -125,11 +125,11 @@
  },
  {
   "kind": "verifier",
-  "trace_id": "sigcheck-verify-rx_017-80e3a9fe9f27",
+  "trace_id": "sigcheck-verify-rx_017-2015c1c08c0b",
   "agent": "sigcheck-verifier",
   "http_status": 200,
   "ok": true,
-  "prism_id": "6abe50e9-7c16-4c16-9dd7-fd9284037bba",
+  "prism_id": "9107ae75-fba2-4ded-9ad2-5d576b6b029d",
   "detail": null,
   "response_keys": [
    "cost_usd",

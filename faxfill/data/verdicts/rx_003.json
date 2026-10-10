@@ -41,7 +41,7 @@
      ],
      "checks_failed": [],
      "notes": [
-      "OCR text reads 'Dev Malhotra poe: 12/05/1979' (models agree on 'Dev Malhotra'); not a critical field."
+      "OCR text reads 'Dev Malhotra poe: 12/05/1979' (both models read 'Dev Malhotra'). Shown for information; not a flag on its own."
      ],
      "reads": {
       "A": "Dev Malhotra",
@@ -432,7 +432,9 @@
     }
    },
    "page_flags": [],
-   "c_only_fields": [],
+   "c_only_fields": [
+    "patient_name"
+   ],
    "drug_ref": "omeprazole"
   }
  ],

@@ -11,10 +11,10 @@
  "pages_declared_in_header": 1,
  "order_status": "NEEDS_PHARMACIST",
  "order_flags": [],
- "danger_score": 135,
+ "danger_score": 130,
  "danger_breakdown": {
   "high_alert_drug": 120,
-  "other_flag": 15
+  "other_flag": 10
  },
  "prescriptions": [
   {
@@ -23,8 +23,7 @@
    "status": "NEEDS_PHARMACIST",
    "flagged_fields": [
     "drug_name",
-    "strength",
-    "refills"
+    "strength"
    ],
    "fields": {
     "patient_name": {
@@ -294,16 +293,10 @@
     },
     "refills": {
      "value": "1",
-     "status": "needs_pharmacist",
-     "codes": [
-      "OCR_DISAGREEMENT"
-     ],
-     "reasons": [
-      "Both models read '1' but the OCR text reads '4'."
-     ],
-     "alternatives": [
-      "4"
-     ],
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
      "evidence_box": null,
      "evidence_note": "location not found",
      "checks_passed": [
@@ -312,13 +305,10 @@
        "evidence": null
       }
      ],
-     "checks_failed": [
-      {
-       "check": "OCR_DISAGREEMENT",
-       "evidence": null
-      }
+     "checks_failed": [],
+     "notes": [
+      "OCR text reads '4' (both models read '1'). Shown for information; not a flag on its own."
      ],
-     "notes": [],
      "reads": {
       "A": "1",
       "B": "1",
@@ -482,7 +472,7 @@
      "checks_passed": [],
      "checks_failed": [],
      "notes": [
-      "OCR text reads 'Piease call with questions.' (models agree on 'Please call with questions.'); not a critical field."
+      "OCR text reads 'Piease call with questions.' (both models read 'Please call with questions.'). Shown for information; not a flag on its own."
      ],
      "reads": {
       "A": "Please call with questions.",
@@ -493,7 +483,8 @@
    },
    "page_flags": [],
    "c_only_fields": [
-    "refills"
+    "refills",
+    "notes"
    ],
    "drug_ref": "warfarin"
   }
@@ -510,12 +501,6 @@
    "field": "strength",
    "code": "READER_DISAGREEMENT",
    "question": "Please confirm the strength for warfarin: we read it two ways (6 mg or 5 mg)."
-  },
-  {
-   "page": 1,
-   "field": "refills",
-   "code": "OCR_DISAGREEMENT",
-   "question": "Please confirm the refills for warfarin: the faxed text is unclear (4)."
   }
  ],
  "thresholds": {
@@ -546,7 +531,7 @@
    "sigcheck-read-rx_027_p1-openai-gpt-5.5-reader-v2-v2",
    "sigcheck-read-rx_027_p1-mistral-mistral-large-3-reader-v2-v2"
   ],
-  "verifier_trace_id": "sigcheck-verify-rx_027-e757808642eb",
+  "verifier_trace_id": "sigcheck-verify-rx_027-7f17a6407a95",
   "guardrail": {
    "local_injection_check": false,
    "prism": false,

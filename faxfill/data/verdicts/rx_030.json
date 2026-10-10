@@ -336,7 +336,7 @@
      ],
      "checks_failed": [],
      "notes": [
-      "OCR text reads '4530456551' (models agree on '1530456551'); not a critical field."
+      "OCR text reads '4530456551' (both models read '1530456551'). Shown for information; not a flag on its own."
      ],
      "reads": {
       "A": "1530456551",
@@ -452,7 +452,9 @@
     }
    },
    "page_flags": [],
-   "c_only_fields": [],
+   "c_only_fields": [
+    "prescriber_npi"
+   ],
    "drug_ref": "amlodipine"
   },
   {

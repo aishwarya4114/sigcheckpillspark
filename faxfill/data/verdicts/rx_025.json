@@ -53,7 +53,7 @@
      ],
      "checks_failed": [],
      "notes": [
-      "OCR text reads 'Jamal Pierce ; boB: 06/30/1975' (models agree on 'Jamal Pierce'); not a critical field."
+      "OCR text reads 'Jamal Pierce ; boB: 06/30/1975' (both models read 'Jamal Pierce'). Shown for information; not a flag on its own."
      ],
      "reads": {
       "A": "Jamal Pierce",
@@ -401,7 +401,7 @@
      ],
      "checks_failed": [],
      "notes": [
-      "OCR text reads '40/09/2026' (models agree on '10/09/2026'); not a critical field."
+      "OCR text reads '40/09/2026' (both models read '10/09/2026'). Shown for information; not a flag on its own."
      ],
      "reads": {
       "A": "10/09/2026",
@@ -455,7 +455,10 @@
     }
    },
    "page_flags": [],
-   "c_only_fields": [],
+   "c_only_fields": [
+    "patient_name",
+    "date_written"
+   ],
    "drug_ref": "sertraline"
   }
  ],

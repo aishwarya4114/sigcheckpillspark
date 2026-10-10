@@ -9,20 +9,16 @@
  "lookup": "local files (faxfill/ref)",
  "pages_received": 1,
  "pages_declared_in_header": 1,
- "order_status": "NEEDS_PHARMACIST",
+ "order_status": "READY",
  "order_flags": [],
- "danger_score": 5,
- "danger_breakdown": {
-  "other_flag": 5
- },
+ "danger_score": 0,
+ "danger_breakdown": {},
  "prescriptions": [
   {
    "page": 1,
    "image": "rx_009.png",
-   "status": "NEEDS_PHARMACIST",
-   "flagged_fields": [
-    "quantity"
-   ],
+   "status": "READY",
+   "flagged_fields": [],
    "fields": {
     "patient_name": {
      "value": "Ingrid Solberg",
@@ -218,16 +214,10 @@
     },
     "quantity": {
      "value": "#60 (sixty) tablets",
-     "status": "needs_pharmacist",
-     "codes": [
-      "OCR_DISAGREEMENT"
-     ],
-     "reasons": [
-      "Both models read '#60 (sixty) tablets' but the OCR text reads '#0 (sixty) tablets .'."
-     ],
-     "alternatives": [
-      "#0 (sixty) tablets ."
-     ],
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
      "evidence_box": [
       355,
       927,
@@ -245,13 +235,10 @@
        "evidence": null
       }
      ],
-     "checks_failed": [
-      {
-       "check": "OCR_DISAGREEMENT",
-       "evidence": null
-      }
+     "checks_failed": [],
+     "notes": [
+      "OCR text reads '#0 (sixty) tablets .' (both models read '#60 (sixty) tablets'). Shown for information; not a flag on its own."
      ],
-     "notes": [],
      "reads": {
       "A": "#60 (sixty) tablets",
       "B": "#60 (sixty) tablets",
@@ -456,14 +443,7 @@
    "drug_ref": "clonidine"
   }
  ],
- "clarification_questions": [
-  {
-   "page": 1,
-   "field": "quantity",
-   "code": "OCR_DISAGREEMENT",
-   "question": "Please confirm the quantity for clonidine: the faxed text is unclear (#0 (sixty) tablets .)."
-  }
- ],
+ "clarification_questions": [],
  "thresholds": {
   "speck_max_area": 4,
   "region_pad": 30,
@@ -492,7 +472,7 @@
    "sigcheck-read-rx_009-openai-gpt-5.5-reader-v2-v2",
    "sigcheck-read-rx_009-mistral-mistral-large-3-reader-v2-v2"
   ],
-  "verifier_trace_id": "sigcheck-verify-rx_009-2dd31188cd67",
+  "verifier_trace_id": "sigcheck-verify-rx_009-ba811937289c",
   "guardrail": {
    "local_injection_check": false,
    "prism": false,

@@ -9,21 +9,16 @@
  "lookup": "local files (faxfill/ref)",
  "pages_received": 1,
  "pages_declared_in_header": 1,
- "order_status": "NEEDS_PHARMACIST",
+ "order_status": "READY",
  "order_flags": [],
- "danger_score": 10,
- "danger_breakdown": {
-  "other_flag": 10
- },
+ "danger_score": 0,
+ "danger_breakdown": {},
  "prescriptions": [
   {
    "page": 1,
    "image": "rx_008.png",
-   "status": "NEEDS_PHARMACIST",
-   "flagged_fields": [
-    "directions",
-    "refills"
-   ],
+   "status": "READY",
+   "flagged_fields": [],
    "fields": {
     "patient_name": {
      "value": "Kenji Watanabe",
@@ -46,7 +41,7 @@
      ],
      "checks_failed": [],
      "notes": [
-      "OCR text reads 'Kenji Wwatana be DOB: ng / 21/1985' (models agree on 'Kenji Watanabe'); not a critical field."
+      "OCR text reads 'Kenji Wwatana be DOB: ng / 21/1985' (both models read 'Kenji Watanabe'). Shown for information; not a flag on its own."
      ],
      "reads": {
       "A": "Kenji Watanabe",
@@ -70,7 +65,7 @@
      ],
      "checks_failed": [],
      "notes": [
-      "OCR text reads 'ng' (models agree on '06/21/1985'); not a critical field."
+      "OCR text reads 'ng' (both models read '06/21/1985'). Shown for information; not a flag on its own."
      ],
      "reads": {
       "A": "06/21/1985",
@@ -175,16 +170,10 @@
     },
     "directions": {
      "value": "Take 1 tablet by mouth three times daily for 10 days",
-     "status": "needs_pharmacist",
-     "codes": [
-      "OCR_DISAGREEMENT"
-     ],
-     "reasons": [
-      "Both models read 'Take 1 tablet by mouth three times daily for 10 days' but the OCR text reads 'Take 1 tablet by mouth three tlmes aaily for 10 da ys'."
-     ],
-     "alternatives": [
-      "Take 1 tablet by mouth three tlmes aaily for 10 da ys"
-     ],
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
      "evidence_box": [
       359,
       826,
@@ -202,13 +191,10 @@
        "evidence": null
       }
      ],
-     "checks_failed": [
-      {
-       "check": "OCR_DISAGREEMENT",
-       "evidence": null
-      }
+     "checks_failed": [],
+     "notes": [
+      "OCR text reads 'Take 1 tablet by mouth three tlmes aaily for 10 da ys' (both models read 'Take 1 tablet by mouth three times daily for 10 days'). Shown for information; not a flag on its own."
      ],
-     "notes": [],
      "reads": {
       "A": "Take 1 tablet by mouth three times daily for 10 days",
       "B": "Take 1 tablet by mouth three times daily for 10 days",
@@ -252,16 +238,10 @@
     },
     "refills": {
      "value": "0",
-     "status": "needs_pharmacist",
-     "codes": [
-      "OCR_DISAGREEMENT"
-     ],
-     "reasons": [
-      "Both models read '0' but the OCR text reads 'O'."
-     ],
-     "alternatives": [
-      "O"
-     ],
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
      "evidence_box": null,
      "evidence_note": "location not found",
      "checks_passed": [
@@ -270,13 +250,10 @@
        "evidence": null
       }
      ],
-     "checks_failed": [
-      {
-       "check": "OCR_DISAGREEMENT",
-       "evidence": null
-      }
+     "checks_failed": [],
+     "notes": [
+      "OCR text reads 'O' (both models read '0'). Shown for information; not a flag on its own."
      ],
-     "notes": [],
      "reads": {
       "A": "0",
       "B": "0",
@@ -454,7 +431,7 @@
      "checks_passed": [],
      "checks_failed": [],
      "notes": [
-      "OCR text reads 'FPiease call with questions.' (models agree on 'Please call with questions.'); not a critical field."
+      "OCR text reads 'FPiease call with questions.' (both models read 'Please call with questions.'). Shown for information; not a flag on its own."
      ],
      "reads": {
       "A": "Please call with questions.",
@@ -465,26 +442,16 @@
    },
    "page_flags": [],
    "c_only_fields": [
+    "patient_name",
+    "patient_dob",
     "directions",
-    "refills"
+    "refills",
+    "notes"
    ],
    "drug_ref": "hydroxyzine"
   }
  ],
- "clarification_questions": [
-  {
-   "page": 1,
-   "field": "directions",
-   "code": "OCR_DISAGREEMENT",
-   "question": "Please confirm the directions for hydroxyzine: the faxed text is unclear (Take 1 tablet by mouth three tlmes aaily for 10 da ys)."
-  },
-  {
-   "page": 1,
-   "field": "refills",
-   "code": "OCR_DISAGREEMENT",
-   "question": "Please confirm the refills for hydroxyzine: the faxed text is unclear (O)."
-  }
- ],
+ "clarification_questions": [],
  "thresholds": {
   "speck_max_area": 4,
   "region_pad": 30,
@@ -513,7 +480,7 @@
    "sigcheck-read-rx_008-openai-gpt-5.5-reader-v2-v2",
    "sigcheck-read-rx_008-mistral-mistral-large-3-reader-v2-v2"
   ],
-  "verifier_trace_id": "sigcheck-verify-rx_008-79a4e639cb4b",
+  "verifier_trace_id": "sigcheck-verify-rx_008-458ceef51ce6",
   "guardrail": {
    "local_injection_check": false,
    "prism": false,

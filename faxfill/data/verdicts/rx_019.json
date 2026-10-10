@@ -19,9 +19,9 @@
    "reason": "Page numbers could not be confirmed from the fax header on every page (two independent reads must agree)."
   }
  ],
- "danger_score": 15,
+ "danger_score": 10,
  "danger_breakdown": {
-  "other_flag": 15
+  "other_flag": 10
  },
  "prescriptions": [
   {
@@ -29,7 +29,6 @@
    "image": "rx_019.png",
    "status": "NEEDS_PHARMACIST",
    "flagged_fields": [
-    "drug_name",
     "strength",
     "substitution"
    ],
@@ -98,16 +97,10 @@
     },
     "drug_name": {
      "value": "Glipizide",
-     "status": "needs_pharmacist",
-     "codes": [
-      "OCR_DISAGREEMENT"
-     ],
-     "reasons": [
-      "Both models read 'Glipizide' but the OCR text reads 'Glipizide Pg'."
-     ],
-     "alternatives": [
-      "Glipizide Pg"
-     ],
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
      "evidence_box": [
       349,
       691,
@@ -121,13 +114,9 @@
        "evidence": "rxnorm (drugs.json)"
       }
      ],
-     "checks_failed": [
-      {
-       "check": "OCR_DISAGREEMENT",
-       "evidence": null
-      }
-     ],
+     "checks_failed": [],
      "notes": [
+      "OCR text reads 'Glipizide Pg' (both models read 'Glipizide'). Shown for information; not a flag on its own.",
       "Look-alike partner(s): glyburide. No sign of confusion on this fax."
      ],
      "reads": {
@@ -390,7 +379,7 @@
      ],
      "checks_failed": [],
      "notes": [
-      "OCR text reads '10/07/2028' (models agree on '10/07/2026'); not a critical field."
+      "OCR text reads '10/07/2028' (both models read '10/07/2026'). Shown for information; not a flag on its own."
      ],
      "reads": {
       "A": "10/07/2026",
@@ -452,18 +441,13 @@
    },
    "page_flags": [],
    "c_only_fields": [
-    "drug_name"
+    "drug_name",
+    "date_written"
    ],
    "drug_ref": "glipizide"
   }
  ],
  "clarification_questions": [
-  {
-   "page": 1,
-   "field": "drug_name",
-   "code": "OCR_DISAGREEMENT",
-   "question": "Please confirm the drug name for glipizide: the faxed text is unclear (Glipizide Pg)."
-  },
   {
    "page": 1,
    "field": "strength",
@@ -505,7 +489,7 @@
    "sigcheck-read-rx_019-openai-gpt-5.5-reader-v2-v2",
    "sigcheck-read-rx_019-mistral-mistral-large-3-reader-v2-v2"
   ],
-  "verifier_trace_id": "sigcheck-verify-rx_019-57df69a20f1a",
+  "verifier_trace_id": "sigcheck-verify-rx_019-e3c3dc373deb",
   "guardrail": {
    "local_injection_check": false,
    "prism": false,

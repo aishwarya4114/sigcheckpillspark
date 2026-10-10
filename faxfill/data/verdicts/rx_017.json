@@ -19,9 +19,9 @@
    "reason": "Page numbers could not be confirmed from the fax header on every page (two independent reads must agree)."
   }
  ],
- "danger_score": 10,
+ "danger_score": 5,
  "danger_breakdown": {
-  "other_flag": 10
+  "other_flag": 5
  },
  "prescriptions": [
   {
@@ -29,7 +29,6 @@
    "image": "rx_017.png",
    "status": "NEEDS_PHARMACIST",
    "flagged_fields": [
-    "directions",
     "quantity"
    ],
    "fields": {
@@ -190,16 +189,10 @@
     },
     "directions": {
      "value": "1 cap PO TID x 10 days",
-     "status": "needs_pharmacist",
-     "codes": [
-      "OCR_DISAGREEMENT"
-     ],
-     "reasons": [
-      "Both models read '1 cap PO TID x 10 days' but the OCR text reads '4 cap PO TID x 10 days'."
-     ],
-     "alternatives": [
-      "4 cap PO TID x 10 days"
-     ],
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
      "evidence_box": [
       366,
       828,
@@ -217,13 +210,10 @@
        "evidence": null
       }
      ],
-     "checks_failed": [
-      {
-       "check": "OCR_DISAGREEMENT",
-       "evidence": null
-      }
+     "checks_failed": [],
+     "notes": [
+      "OCR text reads '4 cap PO TID x 10 days' (both models read '1 cap PO TID x 10 days'). Shown for information; not a flag on its own."
      ],
-     "notes": [],
      "reads": {
       "A": "1 cap PO TID x 10 days",
       "B": "1 cap PO TID x 10 days",
@@ -490,12 +480,6 @@
  "clarification_questions": [
   {
    "page": 1,
-   "field": "directions",
-   "code": "OCR_DISAGREEMENT",
-   "question": "Please confirm the directions for cephalexin: the faxed text is unclear (4 cap PO TID x 10 days)."
-  },
-  {
-   "page": 1,
    "field": "quantity",
    "code": "QTY_DURATION_MISMATCH",
    "question": "Please confirm the quantity for cephalexin: it does not match the directions and duration."
@@ -529,7 +513,7 @@
    "sigcheck-read-rx_017-openai-gpt-5.5-reader-v2-v2",
    "sigcheck-read-rx_017-mistral-mistral-large-3-reader-v2-v2"
   ],
-  "verifier_trace_id": "sigcheck-verify-rx_017-80e3a9fe9f27",
+  "verifier_trace_id": "sigcheck-verify-rx_017-2015c1c08c0b",
   "guardrail": {
    "local_injection_check": false,
    "prism": false,

@@ -282,12 +282,10 @@ def reconcile(name, a, b, c):
         return f
     f.value, f.agreed = a, True
     if nc is not None and nc != na:
-        if name in CRITICAL:
-            f.flag("OCR_DISAGREEMENT", f"Both models read '{a}' but the OCR text reads '{c}'.")
-            f.alt(c)
-            f.c_only = True
-        else:
-            f.notes.append(f"OCR text reads '{c}' (models agree on '{a}'); not a critical field.")
+        # Team decision (dev set: 11 regex-only flags, the regex was wrong in all 11): Reader C disagreeing on its
+        # own never creates NEEDS PHARMACIST. It is kept as a note so the pharmacist can still see it.
+        f.notes.append(f"OCR text reads '{c}' (both models read '{a}'). Shown for information; not a flag on its own.")
+        f.c_only = True
     elif nc is not None:
         f.ok("ocr_text_agrees")
     return f
@@ -608,7 +606,7 @@ def verify_page(reads, ocr_page, page_image, lookup, page_no=1, today=None):
             f_.flag("NO_INDEPENDENT_CHECK", "Readers agree, but no independent check could confirm this field.")
             f_.status = "needs_pharmacist"
     return {"fields": {k: v.out() for k, v in F.items()}, "page_flags": page_flags, "drug": drug,
-            "c_only_fields": [k for k, v in F.items() if v.c_only and v.codes == ["OCR_DISAGREEMENT"]]}
+            "c_only_fields": [k for k, v in F.items() if v.c_only]}
 
 
 LASA_MIN_OCR_CONF = 60   # recorded in CHECKS.md

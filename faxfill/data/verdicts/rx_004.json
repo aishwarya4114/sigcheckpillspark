@@ -9,20 +9,16 @@
  "lookup": "local files (faxfill/ref)",
  "pages_received": 1,
  "pages_declared_in_header": 1,
- "order_status": "NEEDS_PHARMACIST",
+ "order_status": "READY",
  "order_flags": [],
- "danger_score": 5,
- "danger_breakdown": {
-  "other_flag": 5
- },
+ "danger_score": 0,
+ "danger_breakdown": {},
  "prescriptions": [
   {
    "page": 1,
    "image": "rx_004.png",
-   "status": "NEEDS_PHARMACIST",
-   "flagged_fields": [
-    "directions"
-   ],
+   "status": "READY",
+   "flagged_fields": [],
    "fields": {
     "patient_name": {
      "value": "Winston Achebe",
@@ -168,16 +164,10 @@
     },
     "directions": {
      "value": "Take 1 tablet by mouth once daily for 90 days",
-     "status": "needs_pharmacist",
-     "codes": [
-      "OCR_DISAGREEMENT"
-     ],
-     "reasons": [
-      "Both models read 'Take 1 tablet by mouth once daily for 90 days' but the OCR text reads 'Take 2 tablet by mouth once daily for 90 days'."
-     ],
-     "alternatives": [
-      "Take 2 tablet by mouth once daily for 90 days"
-     ],
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
      "evidence_box": [
       362,
       829,
@@ -195,13 +185,10 @@
        "evidence": null
       }
      ],
-     "checks_failed": [
-      {
-       "check": "OCR_DISAGREEMENT",
-       "evidence": null
-      }
+     "checks_failed": [],
+     "notes": [
+      "OCR text reads 'Take 2 tablet by mouth once daily for 90 days' (both models read 'Take 1 tablet by mouth once daily for 90 days'). Shown for information; not a flag on its own."
      ],
-     "notes": [],
      "reads": {
       "A": "Take 1 tablet by mouth once daily for 90 days",
       "B": "Take 1 tablet by mouth once daily for 90 days",
@@ -440,14 +427,7 @@
    "drug_ref": "losartan"
   }
  ],
- "clarification_questions": [
-  {
-   "page": 1,
-   "field": "directions",
-   "code": "OCR_DISAGREEMENT",
-   "question": "Please confirm the directions for losartan: the faxed text is unclear (Take 2 tablet by mouth once daily for 90 days)."
-  }
- ],
+ "clarification_questions": [],
  "thresholds": {
   "speck_max_area": 4,
   "region_pad": 30,
@@ -476,7 +456,7 @@
    "sigcheck-read-rx_004-openai-gpt-5.5-reader-v2-v2",
    "sigcheck-read-rx_004-mistral-mistral-large-3-reader-v2-v2"
   ],
-  "verifier_trace_id": "sigcheck-verify-rx_004-d2059a6d6824",
+  "verifier_trace_id": "sigcheck-verify-rx_004-b040928b60c3",
   "guardrail": {
    "local_injection_check": false,
    "prism": false,
