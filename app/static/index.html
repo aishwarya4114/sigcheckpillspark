@@ -13,6 +13,7 @@
     <script defer src="/static/review.js"></script>
   </head>
   <body>
+    <a class="skip-link" href="#workspace">Skip to the current case</a>
     <div class="app-shell">
       <aside class="sidebar" aria-label="Prescription queue">
         <a class="brand" href="/"
@@ -36,34 +37,17 @@
           <span class="eyebrow">Review queue</span
           ><span id="queue-count" class="queue-count">0</span>
         </div>
-        <div class="segmented ops-filter" aria-label="Filter queue by next step">
+        <div class="segmented ops-filter" aria-label="Filter queue">
           <button class="active" data-filter="all" aria-pressed="true">All</button
-          ><button data-filter="new" aria-pressed="false">New</button
-          ><button data-filter="needs_verification" aria-pressed="false">Verify</button
-          ><button data-filter="needs_clarification" aria-pressed="false">Prescriber</button
-          ><button data-filter="waiting_for_prescriber" aria-pressed="false">Waiting</button
-          ><button data-filter="ready_for_approval" aria-pressed="false">Ready</button
-          ><button data-filter="approved" aria-pressed="false">Approved</button
-          ><button data-filter="blocked" aria-pressed="false">Blocked</button>
+          ><button data-filter="needs_action" aria-pressed="false">Needs action</button
+          ><button data-filter="waiting" aria-pressed="false">Waiting</button
+          ><button data-filter="ready" aria-pressed="false">Ready</button
+          ><button data-filter="completed" aria-pressed="false">Completed</button>
         </div>
         <div id="queue" class="queue">
           <div class="loading"><span class="spinner"></span>Loading queue</div>
         </div>
         <div class="sidebar-bottom">
-          <a class="side-link" href="/scan"
-            ><span data-icon="camera"></span>Scan a paper prescription</a
-          ><div class="tech-only tech-links">
-            <span class="eyebrow tech-heading">Technical</span
-            ><button id="samples-button" class="side-link">
-              <span data-icon="grid"></span>Sample faxes (synthetic)</button
-            ><a class="side-link" href="/scorecard"
-              ><span data-icon="chart"></span>Evaluation scorecard</a
-            ><button class="side-link" id="rules-button">
-              <span data-icon="shield"></span>Policy &amp; system (admin)</button
-            ><button class="side-link" id="system-button">
-              <span data-icon="info"></span>Connection details
-            </button>
-          </div>
           <label class="side-link tech-switch"
             ><input type="checkbox" id="tech-toggle" /> Show technical details</label
           >
@@ -82,7 +66,17 @@
             Workspace <span>/</span> <b>Prescription review</b>
           </div>
           <div class="topbar-right">
-            <a href="/scan">Scan a paper prescription <span data-icon="external"></span></a
+            <nav class="topnav" aria-label="Main">
+              <a href="/scan"><span data-icon="camera"></span>Scan paper Rx</a
+              ><a href="/system-design"><span data-icon="grid"></span>System design</a
+              ><a href="/pitch"><span data-icon="chart"></span>Pitch</a
+              ><span class="tech-only topnav-tech"
+                ><button id="samples-button" class="topnav-btn"><span data-icon="file"></span>Samples</button
+                ><a href="/scorecard"><span data-icon="chart"></span>Scorecard</a
+                ><button class="topnav-btn" id="rules-button"><span data-icon="shield"></span>Policy</button
+                ><button class="topnav-btn" id="system-button"><span data-icon="info"></span>Connections</button
+              ></span>
+            </nav
             ><span class="badge amber tech-only" id="mode">Checking connections</span>
           </div>
         </header>

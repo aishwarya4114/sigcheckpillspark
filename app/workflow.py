@@ -45,6 +45,10 @@ SOURCES = {"ocr": "Apple Vision", "npi": "check-digit formula", "dea": "check-di
            "field": "intake policy", "refills": "intake policy", "date": "intake policy", "rx": "intake policy",
            "dob": "intake policy", "name": "format check", "quantity": "format check"}
 
+# Clarifications a recorded prescriber confirmation may resolve without changing the value.
+NOTE_RESOLVABLE = {"LOOK_ALIKE_DRUG", "DRUG_NOT_IN_CATALOGUE", "STRENGTH_NOT_IN_CATALOGUE", "PRESCRIPTION_TOO_OLD",
+                   "DEA_CHECK_DIGIT_FAILED", "DEA_PRESCRIBER_MISMATCH", "IMPLAUSIBLE_DOB", "DATE_IN_FUTURE", "TOO_MANY_REFILLS"}
+
 STATUS_LABEL = {
     "new": "New",
     "needs_verification": "Needs verification",
@@ -70,12 +74,14 @@ def issues(rec: dict) -> list[dict]:
     review = rec.get("review", {})
     # document blockers
     if rec.get("status") == "blocked":
-        for f in rec.get("findings", []) or [{"reason": "Document blocked."}]:
-            out.append({"key": issue_key(None, "INSTRUCTIONS_TO_SOFTWARE"), "code": "INSTRUCTIONS_TO_SOFTWARE",
-                        "category": "blocked", "resolution": "manual_review_or_new_document", "field": None,
-                        "severity": "blocking", "source": "local guardrail + PRISM trace", "message": f.get("reason", ""),
-                        "next_step": "Quarantine it, review the original manually, or upload a corrected document.",
-                        "state": "quarantined" if rec.get("quarantined") else "open", "box": f.get("box")})
+        finds = rec.get("findings", []) or [{"reason": "Document blocked."}]
+        out.append({"key": issue_key(None, "INSTRUCTIONS_TO_SOFTWARE"), "code": "INSTRUCTIONS_TO_SOFTWARE",
+                    "category": "blocked", "resolution": "manual_review_or_new_document", "field": None,
+                    "severity": "blocking", "source": "local guardrail + PRISM trace",
+                    "message": "This fax contains text that tries to instruct the software. It was stopped before any automated reading.",
+                    "details": [f.get("reason", "") for f in finds],
+                    "next_step": "Quarantine it, review the original manually, or upload a corrected document.",
+                    "state": "quarantined" if rec.get("quarantined") else "open", "box": finds[0].get("box")})
         return out
     if rec.get("status") == "processing_failed":
         return [{"key": issue_key(None, "EXTRACTION_FAILED"), "code": "EXTRACTION_FAILED", "category": "blocked",

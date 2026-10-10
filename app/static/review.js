@@ -49,10 +49,12 @@ const PLAIN_SOURCE = { "Apple Vision": "how clearly the scanner could read this 
   "format check": "a basic format check", "local guardrail + PRISM trace": "the safety screen that runs before any automated reading", "reader": "the automated reading step" };
 const ago = (t) => { const m = Math.max(0, Math.round((Date.now() - new Date(t)) / 60000)); return m < 1 ? "just now" : m < 60 ? m + " min ago" : Math.round(m / 60) + " h ago"; };
 function renderQueue() {
-  const visible = queue.filter((d) => filter === "all" || d.workflow_status === filter);
+  const GROUP = { needs_action: ["new", "needs_verification", "needs_clarification", "blocked"], waiting: ["waiting_for_prescriber"], ready: ["ready_for_approval"], completed: ["approved"] };
+  const inGroup = (d, g) => g === "all" || (GROUP[g] || [g]).includes(d.workflow_status);
+  const visible = queue.filter((d) => inGroup(d, filter));
   $("#queue-count").textContent = queue.length;
   document.querySelectorAll("[data-filter]").forEach((b) => {
-    const n = b.dataset.filter === "all" ? queue.length : queue.filter((d) => d.workflow_status === b.dataset.filter).length;
+    const n = queue.filter((d) => inGroup(d, b.dataset.filter)).length;
     b.dataset.count = n;
   });
   $("#queue").innerHTML = visible.length
@@ -160,7 +162,7 @@ function renderPanel() {
                   "Check the source, then confirm",
                   "Automatic checks are complete. Your review is required before approval.",
                 ];
-  body.innerHTML = `${caseHeaderHTML()}${pipelineHTML()}${workHTML()}
+  body.innerHTML = `${caseHeaderHTML()}${workHTML()}
  ${
    cur.status === "blocked"
      ? ""
@@ -175,9 +177,8 @@ function renderPanel() {
          .join("")
  }
  ${detailsHTML()}`;
-  $("#approval-bar").innerHTML = approved
-    ? `<a class="primary" style="display:flex;align-items:center;justify-content:center;gap:8px;border-radius:8px;padding:11px" href="/api/documents/${encodeURIComponent(cur.id)}/export">${icon("download")}Export approved draft</a><p>JSON export · revision ${cur.revision} · not dispensed</p>`
-    : `<button class="primary" data-action="approve" ${canApprove && !busy ? "" : "disabled"}>${icon("check")}Approve draft</button><p>${esc(canApprove ? "By approving you attest every required field was checked against the source and every issue resolved." : cur.workflow?.next_action || "")}</p>`;
+  $("#approval-bar").innerHTML = footerHTML();
+  updateStepper();
   body.scrollTop = scroll;
   highlight(cur.fields?.[selected]?.box);
 }
@@ -185,14 +186,69 @@ function fieldHTML(k, f, locked) {
   const s = state(k, f),
     review = cur.review?.[k],
     attention = ["missing", "needs_review"].includes(s);
-  return `<article class="field-row ${attention ? "attention" : ""} ${selected === k ? "selected" : ""}"><button class="field-toggle" data-field="${k}" aria-expanded="${selected === k}" aria-controls="editor-${k}"><span class="field-top"><span>${labels[k]}${f.required ? " *" : ""}</span>${badge(s)}</span><div class="field-value ${f.value == null ? "missing" : ""}">${esc(f.value ?? (k === "refills" ? "Not stated" : f.status === "not_applicable" ? "Not required" : "Not found on fax"))}</div>${attention ? `<div class="field-hint">${icon("alert")}${esc(f.reasons?.[0] || "Review against the original document")}</div>` : ""}</button>${selected === k ? `<div class="field-editor" id="editor-${k}"><div class="evidence"><span>What the scanner read on the fax${f.ocr_score != null ? `<span class="tech-only tech-note"> · recognizer score ${esc(f.ocr_score)}</span>` : ""}</span>${f.source_text ? "“" + esc(f.source_text) + "”" : "No readable source text located."}</div>${checksHTML(f)}${review ? `<p class="reviewed-note">${icon("check")} ${esc(review.action === "edit" ? "Corrected" : "Confirmed")} by ${esc(review.by)}${review.reason ? " · " + esc(review.reason) : ""}</p>` : ""}${!locked ? `<div class="editor-actions">${f.value != null ? `<button data-confirm="${k}" ${busy ? "disabled" : ""}>${icon("check")}Confirm against fax</button>` : ""}</div><details><summary class="small muted">Correct this field</summary><form class="edit-form" data-edit="${k}"><label>Corrected value<input class="input" name="value" value="${esc(f.value ?? "")}" ${f.required ? "required" : ""}></label><label>Evidence or reason<input class="input" name="reason" required placeholder="What supports this correction?"></label><button type="submit" ${busy ? "disabled" : ""}>Save correction</button></form></details><div class="request-actions"><button data-clarify="rescan" data-key="${k}">Request clearer image</button><button data-clarify="prescriber" data-key="${k}">Draft prescriber clarification</button></div>` : ""}</div>` : ""}</article>`;
+  return `<article class="field-row ${attention ? "attention" : ""} ${selected === k ? "selected" : ""}"><button class="field-toggle" data-field="${k}" aria-expanded="${selected === k}" aria-controls="editor-${k}"><span class="field-top"><span>${labels[k]}${f.required ? " *" : ""}</span><span class="chips">${machineChip(f)}${humanChip(k, f)}</span></span><div class="field-value ${f.value == null ? "missing" : ""}">${esc(f.value ?? (k === "refills" ? "Not stated" : f.status === "not_applicable" ? "Not required" : "Not found on fax"))}</div>${attention ? `<div class="field-hint">${icon("alert")}${esc(f.reasons?.[0] || "Review against the original document")}</div>` : ""}</button>${selected === k ? `<div class="field-editor" id="editor-${k}"><div class="evidence"><span>What the scanner read on the fax${f.ocr_score != null ? `<span class="tech-only tech-note"> · recognizer score ${esc(f.ocr_score)}</span>` : ""}</span>${f.source_text ? "“" + esc(f.source_text) + "”" : "No readable source text located."}</div>${checksHTML(f)}${review ? `<p class="reviewed-note">${icon("check")} ${esc(review.action === "edit" ? "Corrected" : "Confirmed")} by ${esc(review.by)}${review.reason ? " · " + esc(review.reason) : ""}</p>` : ""}${!locked ? `<div class="editor-actions">${f.value != null ? `<button data-confirm="${k}" ${busy ? "disabled" : ""}>${icon("check")}Confirm against fax</button>` : ""}</div><details><summary class="small muted">Correct this field</summary><form class="edit-form" data-edit="${k}"><label>Corrected value<input class="input" name="value" value="${esc(f.value ?? "")}" ${f.required ? "required" : ""}></label><label>Evidence or reason<input class="input" name="reason" required placeholder="What supports this correction?"></label><button type="submit" ${busy ? "disabled" : ""}>Save correction</button></form></details><div class="request-actions"><button data-clarify="rescan" data-key="${k}">Request clearer image</button><button data-clarify="prescriber" data-key="${k}">Draft prescriber clarification</button></div>` : ""}</div>` : ""}</article>`;
 }
 const CAT = { verify_transcription: ["Verify transcription", "The software is unsure what the fax says. Check it against the image."],
   prescriber_clarification: ["Clarify with the prescriber", "The fax itself is missing, ambiguous or unsafe. Re-reading it can't resolve this."],
   blocked: ["Blocked document", "This document can't continue through normal intake."] };
+const NOTE_OK = new Set(["LOOK_ALIKE_DRUG", "DRUG_NOT_IN_CATALOGUE", "STRENGTH_NOT_IN_CATALOGUE", "PRESCRIPTION_TOO_OLD", "DEA_CHECK_DIGIT_FAILED", "DEA_PRESCRIBER_MISMATCH", "IMPLAUSIBLE_DOB", "DATE_IN_FUTURE", "TOO_MANY_REFILLS"]);
+function machineChip(f) {
+  const m = { checks_passed: ["No automated issue", "neutral", "info"], needs_review: ["Automated concern", "amber", "alert"], missing: ["Missing on fax", "red", "x"], not_applicable: ["Not required", "neutral", "dash"] }[f.status] || [f.status, "neutral", "info"];
+  return `<span class="chip ${m[1]}">${icon(m[2])}${m[0]}</span>`;
+}
+function humanChip(k, f) {
+  if (f.status === "not_applicable") return "";
+  const viaPrescriber = (cur.workflow?.issues || []).some((i) => i.field === k && i.category === "prescriber_clarification" && i.state === "resolved");
+  const r = cur.review?.[k];
+  if (viaPrescriber) return `<span class="chip green">${icon("phone")}Resolved with prescriber</span>`;
+  if (r) return `<span class="chip green">${icon("check")}${r.action === "edit" ? "Corrected from source" : "Verified by you"}</span>`;
+  return f.required ? `<span class="chip outline">Not reviewed</span>` : "";
+}
+const FIELD_ORDER = ["patient_name", "patient_dob", "drug_name", "strength", "dosage_form", "directions", "quantity", "refills", "prescriber_name", "prescriber_npi", "prescriber_dea", "date_written"];
+function nextField() {
+  const f = cur.fields || {}, open = new Set((cur.workflow?.issues || []).filter((i) => i.state === "open" && i.category === "verify_transcription").map((i) => i.field));
+  const todo = FIELD_ORDER.filter((k) => f[k]?.required && f[k].value != null && !cur.review?.[k]);
+  return todo.find((k) => open.has(k)) || todo[0] || null;
+}
+function footerHTML() {
+  const w = cur.workflow || {}, st = w.status, id = encodeURIComponent(cur.id);
+  if (st === "approved") return `<a class="primary big-action" href="/api/documents/${id}/export">${icon("download")}Export approved draft</a><p>Draft order for pharmacy entry · not dispensed</p>`;
+  if (st === "blocked") return cur.quarantined
+    ? `<button class="primary big-action" data-upload-corrected>${icon("upload")}Upload corrected document</button><p>Quarantined for manual review. Nothing was sent to a model.</p>`
+    : `<button class="primary big-action" data-quarantine>${icon("lock")}Quarantine document</button><p>This document can't continue through normal intake.</p>`;
+  if (st === "needs_clarification") return `<a class="primary big-action" target="_blank" rel="noopener" href="/api/documents/${id}/clarification-sheet">${icon("file")}Prepare clarification</a><p>Then mark the prescriber as contacted.</p>`;
+  if (st === "waiting_for_prescriber") return `<button class="primary big-action" data-focus-response>${icon("phone")}Record prescriber response</button><p>Enter exactly what the prescriber confirmed.</p>`;
+  if (st === "ready_for_approval") return `<button class="primary big-action" data-attest>${icon("check")}Review and approve</button><p>${w.counts?.reviewed} of ${w.counts?.required} required fields reviewed · 0 open issues</p>`;
+  const k = selected && cur.fields?.[selected]?.required && cur.fields[selected].value != null && !cur.review?.[selected] ? selected : nextField();
+  if (k) return `<button class="primary big-action" data-confirm-next="${k}" ${busy ? "disabled" : ""}>${icon("check")}Confirm ${esc(labels[k])} and continue</button><p>Check the highlighted part of the fax first. To change it, use "Correct this field".</p>`;
+  return `<p>${esc(w.next_action || "")}</p>`;
+}
+function attest() {
+  let d = $("#attest-dialog");
+  if (!d) { d = document.createElement("dialog"); d.id = "attest-dialog"; d.setAttribute("aria-labelledby", "attest-title"); document.body.appendChild(d); }
+  const c = cur.workflow?.counts || {};
+  d.innerHTML = `<div class="dialog-head"><h2 id="attest-title">Approve draft order</h2><button class="quiet" data-close="attest-dialog" aria-label="Close">${icon("close")}</button></div>
+    <p><b>${esc(cur.fields?.patient_name?.value || "")}</b> · ${esc(cur.fields?.drug_name?.value || "")} ${esc(cur.fields?.strength?.value || "")}</p>
+    ${orderTableHTML()}
+    <ul class="attest-list"><li>${icon("check")}${c.reviewed} of ${c.required} required fields reviewed against the source</li><li>${icon("check")}No open transcription issues</li><li>${icon("check")}No open prescriber clarifications</li></ul>
+    <label class="attest-check"><input type="checkbox" id="attest-ok"> I reviewed every required field against the source and resolved all open issues.</label>
+    <button class="primary big-action" data-action="approve" id="attest-approve" disabled>${icon("check")}Approve draft order</button>
+    <p class="small muted">This approves a draft for pharmacy entry. It is not dispensing.</p>`;
+  d.querySelector("#attest-ok").addEventListener("change", (e) => (d.querySelector("#attest-approve").disabled = !e.target.checked));
+  d.showModal();
+}
+function updateStepper() {
+  const st = cur?.workflow?.status, steps = document.querySelectorAll(".steps span");
+  if (steps.length !== 3) return;
+  const stage = st === "approved" ? 3 : st === "ready_for_approval" ? 2.5 : 2;
+  steps.forEach((el, i) => {
+    el.classList.toggle("done", i + 1 < Math.floor(stage) || (st === "approved" && i < 3));
+    el.classList.toggle("current", st === "approved" ? false : (stage === 2.5 ? i === 2 : i === 1));
+  });
+}
 function caseHeaderHTML() {
   const w = cur.workflow || {}, [lab, tone] = OPS[w.status] || [w.label, ""];
-  return `<div class="case-head"><div class="case-meta"><span class="queue-op ${tone}">${esc(lab)}</span><span class="muted small">${esc(cur.fields?.drug_name?.value || "")} · received ${esc(ago(cur.received_at))}<span class="tech-only"> · revision ${esc(cur.revision)}</span></span></div><p class="next-action"><span class="eyebrow">Next action</span>${esc(w.next_action || "")}</p></div>`;
+  return `<div class="case-head"><div class="case-meta"><span class="muted small">${esc(cur.fields?.drug_name?.value || "")} · received ${esc(ago(cur.received_at))}<span class="tech-only"> · revision ${esc(cur.revision)}</span></span></div><p class="next-action"><span class="eyebrow">Next action</span>${esc(w.next_action || "")}</p></div>`;
 }
 function workHTML() {
   const w = cur.workflow || {}, iss = (w.issues || []);
@@ -219,11 +275,11 @@ function issueHTML(i) {
     acts = `<button data-field="${esc(i.field)}">${icon("search")}Check against fax</button><button data-clarify="rescan" data-key="${esc(i.field)}">Request clearer scan</button>`;
   else if (i.category === "prescriber_clarification")
     acts = i.state === "waiting"
-      ? `<form class="resolve-form" data-resolve="${esc(i.key)}"><label>Prescriber's answer (who, how, what)<input class="input" name="note" required placeholder="Dr Patel by phone 2:31 PM: 5 mg"></label>${i.field ? `<label>Value to record (optional)<input class="input" name="value" value="${esc(val ?? "")}"></label>` : ""}<button type="submit">${icon("check")}Record prescriber answer</button></form>`
+      ? `<form class="resolve-form" data-resolve="${esc(i.key)}"><label>Prescriber's answer (who, how, what)<input class="input" name="note" required placeholder="Dr Patel by phone 2:31 PM: 5 mg"></label>${i.field ? `<label>${NOTE_OK.has(i.code) ? "Value to record (only if the prescriber changed it)" : "Unambiguous value the prescriber gave (required)"}<input class="input" name="value" value="" ${NOTE_OK.has(i.code) ? "" : "required"} placeholder="${esc(i.code === "AMBIGUOUS_TRAILING_ZERO" ? "e.g. 5 mg" : "")}"></label>` : ""}<button type="submit">${icon("check")}Record prescriber answer</button></form>`
       : `<a class="button-link" target="_blank" rel="noopener" href="/api/documents/${encodeURIComponent(cur.id)}/clarification-sheet">${icon("file")}Draft clarification fax</a><button data-contacted="${esc(i.key)}">${icon("phone")}Mark prescriber contacted</button>`;
   else
-    acts = `${cur.quarantined ? '<span class="small muted">Quarantined for manual review.</span>' : '<button data-quarantine>' + icon("lock") + 'Quarantine document</button>'}<button data-upload-corrected>${icon("upload")}Upload corrected document</button>`;
-  return `<article class="issue ${i.state}"><div class="issue-top"><strong>${esc(fl)}${val ? ` · <span class="mono">${esc(val)}</span>` : ""}</strong>${i.state === "waiting" ? `<span class="queue-op blue">${icon("clock")}Waiting</span>` : ""}</div><p>${esc(i.message)}</p>${i.next_step ? `<p class="small"><b>Next:</b> ${esc(i.next_step)}</p>` : ""}<details class="why"><summary>Why was this flagged?</summary><p class="small">Based on ${esc(PLAIN_SOURCE[i.source] || i.source)}.${i.category === "prescriber_clarification" ? " Confirming that the fax says this doesn't resolve it: only the prescriber can." : ""}<span class="tech-only tech-note"> Rule ${esc(i.code)} · ${esc(i.source)} · policy ${esc(cur.policy?.version || "")}</span></p></details><div class="issue-actions">${acts}</div></article>`;
+    acts = cur.quarantined ? '<span class="small muted">Quarantined for manual review.</span>' : "";
+  return `<article class="issue ${i.state}"><div class="issue-top"><strong>${esc(fl)}${val ? ` · <span class="mono">${esc(val)}</span>` : ""}</strong>${i.state === "waiting" ? `<span class="queue-op blue">${icon("clock")}Waiting</span>` : ""}</div><p>${esc(i.message)}</p>${Array.isArray(i.details) && i.details.length ? `<ul class="block-details">${i.details.map((d) => `<li>${esc(d)}</li>`).join("")}</ul>` : ""}${i.next_step ? `<p class="small"><b>Next:</b> ${esc(i.next_step)}</p>` : ""}<details class="why"><summary>Why was this flagged?</summary><p class="small">Based on ${esc(PLAIN_SOURCE[i.source] || i.source)}.${i.category === "prescriber_clarification" ? " Confirming that the fax says this doesn't resolve it: only the prescriber can." : ""}<span class="tech-only tech-note"> Rule ${esc(i.code)} · ${esc(i.source)} · policy ${esc(cur.policy?.version || "")}</span></p></details><div class="issue-actions">${acts}</div></article>`;
 }
 function orderTableHTML() {
   const f = cur.fields || {};
@@ -315,7 +371,7 @@ function detailsHTML() {
     g = s.guardrail || {},
     r = s.reader || {},
     e = s.evaluator || {};
-  return `${howChecksHTML()}<details class="detail-section"><summary>Catalogue check</summary><div class="detail-content"><p>${esc(kb.status === "supported" ? `${cur.fields?.drug_name?.value || "This drug"} ${cur.fields?.strength?.value || ""} ${cur.fields?.dosage_form?.value || ""} is in the pharmacy's drug catalogue.` : kb.status === "no_match" ? "This drug and strength weren't found in the pharmacy's drug catalogue. That's a coverage result, not a safety judgement." : "The catalogue check didn't run for this fax.")}</p>${kb.citation ? `<p class="tech-only tech-note">${esc(kb.document)} · ${esc(kb.citation)} · ${esc(kb.source || "")}</p>` : ""}</div></details><details class="detail-section"><summary>Review history · ${(cur.events || []).length}</summary><div class="detail-content">${(
+  return `<details class="detail-section"><summary>Processing evidence</summary><div class="detail-content">${pipelineHTML()}</div></details>${howChecksHTML()}<details class="detail-section"><summary>Catalogue check</summary><div class="detail-content"><p>${esc(kb.status === "supported" ? `${cur.fields?.drug_name?.value || "This drug"} ${cur.fields?.strength?.value || ""} ${cur.fields?.dosage_form?.value || ""} is in the pharmacy's drug catalogue.` : kb.status === "no_match" ? "This drug and strength weren't found in the pharmacy's drug catalogue. That's a coverage result, not a safety judgement." : "The catalogue check didn't run for this fax.")}</p>${kb.citation ? `<p class="tech-only tech-note">${esc(kb.document)} · ${esc(kb.citation)} · ${esc(kb.source || "")}</p>` : ""}</div></details><details class="detail-section"><summary>Review history · ${(cur.events || []).length}</summary><div class="detail-content">${(
     cur.events || []
   )
     .slice()
@@ -374,6 +430,24 @@ document.addEventListener("click", async (e) => {
     await openDoc(cur.id);
     return;
   }
+  if (b.dataset.confirmNext) {
+    const k = b.dataset.confirmNext;
+    await mutate(async () => {
+      const doc = await api(`/api/documents/${cur.id}/fields/${k}`, jsonPost({ action: "confirm", revision: cur.revision, reviewer: "pharmacist", reason: "Verified against the original fax" }));
+      toast(labels[k] + " verified");
+      return doc;
+    });
+    selected = nextField();
+    renderPanel();
+    if (selected) document.querySelector(`[data-field="${selected}"]`)?.focus();
+    return;
+  }
+  if (b.hasAttribute("data-focus-response")) {
+    const inp = document.querySelector(".resolve-form input");
+    inp?.scrollIntoView({ block: "center" }); inp?.focus();
+    return;
+  }
+  if (b.hasAttribute("data-attest")) { attest(); return; }
   if (b.dataset.contacted) {
     const key = b.dataset.contacted;
     await mutate(async () => {

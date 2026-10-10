@@ -113,6 +113,16 @@ def scan_page():
     return FileResponse(STATIC / "scan.html")
 
 
+@app.get("/system-design")
+def system_design_page():
+    return FileResponse(STATIC / "system-design.html")
+
+
+@app.get("/pitch")
+def pitch_page():
+    return FileResponse(STATIC / "pitch.html")
+
+
 @app.get("/scorecard")
 def scorecard_page():
     return FileResponse(STATIC / "scorecard.html")
@@ -527,12 +537,20 @@ def resolve_clarification(doc_id: str, key: str, body: Note):
         if not body.note.strip():
             raise HTTPException(400, "Record what the prescriber said, who, and how (for example: 'Dr Patel by phone 2:31 PM: 5 mg').")
         field = i["field"]
+        needs_value = i["code"] not in workflow.NOTE_RESOLVABLE
+        if needs_value and field and not (body.value or "").strip():
+            raise HTTPException(400, f"Record the unambiguous value the prescriber gave (for example \"5 mg\"). "
+                                     f"A note alone can't resolve {i['code'].replace('_', ' ').lower()}.")
         if body.value is not None and field:
             before = rec["fields"][field]["value"]
             rec["fields"][field]["value"] = body.value.strip() or None
             recheck(rec)
             rec.setdefault("review", {})[field] = {"action": "edit", "by": body.reviewer, "at": now(), "reason": body.note}
             event(rec, body.reviewer, "edited", field=field, before=before, after=body.value, reason=f"Prescriber: {body.note}")
+        if needs_value and field:
+            still = [c for c in rec["fields"][field].get("checks", []) if not c["passed"] and workflow.RULES.get(c["rule"], (None, None))[1] == i["code"]]
+            if still:
+                raise HTTPException(400, f"\"{rec['fields'][field]['value']}\" is still ambiguous ({still[0]['detail']}) Record an unambiguous value.")
         rec.setdefault("resolutions", {})[key] = {"state": "resolved", "by": body.reviewer, "at": now(), "note": body.note}
         # an answer can resolve the same field's other clarification issues only if they no longer fail
         event(rec, body.reviewer, "prescriber clarification recorded", field=field, reason=f"{i['code']}: {body.note}")

@@ -36,6 +36,10 @@ function setup(page, script, fetcher) {
   w.fetch = fetcher;
   w.setInterval = () => 0;
   w.HTMLElement.prototype.scrollIntoView = () => {};
+  if (!w.HTMLDialogElement.prototype.showModal) {
+    w.HTMLDialogElement.prototype.showModal = function () { this.open = true; };
+    w.HTMLDialogElement.prototype.close = function () { this.open = false; };
+  }
   w.eval(fs.readFileSync("app/static/ui.js", "utf8"));
   w.eval(fs.readFileSync("app/static/" + script, "utf8"));
   return dom;
@@ -77,7 +81,9 @@ test("review fields preserve typing, escape extracted values and unlock only aft
   await tick();
   w.document.querySelector("[data-doc]").click();
   await tick();
-  assert(w.document.querySelector("[data-action=approve]").disabled);
+  // no approve button is offered before the case is ready (state-specific footer)
+  assert.equal(w.document.querySelector("[data-action=approve]"), null);
+  assert(w.document.querySelector("[data-confirm-next]"));
   w.document.querySelector("[data-field]").click();
   assert.equal(w.document.querySelectorAll(".field-row img").length, 0);
   const input = w.document.querySelector("[name=reason]");
@@ -90,11 +96,16 @@ test("review fields preserve typing, escape extracted values and unlock only aft
   assert.equal(input.value, "Read from original");
   w.document.querySelector("[data-confirm]").click();
   await tick();
-  assert.equal(
-    w.document.querySelector("[data-action=approve]").disabled,
-    false,
-  );
-  w.document.querySelector("[data-action=approve]").click();
+  // ready: the footer opens an attestation step; approval needs the explicit attestation
+  w.document.querySelector("[data-attest]").click();
+  await tick();
+  const approve = w.document.querySelector("#attest-approve");
+  assert.equal(approve.disabled, true);
+  const ok = w.document.querySelector("#attest-ok");
+  ok.checked = true;
+  ok.dispatchEvent(new w.Event("change", { bubbles: true }));
+  assert.equal(approve.disabled, false);
+  approve.click();
   await tick();
   assert(w.document.querySelector('a[href$="/export"]'));
   dom.window.close();

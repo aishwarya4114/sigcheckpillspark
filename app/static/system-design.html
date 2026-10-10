@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
+<title>SigCheck · System design</title>
+<style>
+:root{--ink:#1f2b27;--muted:#56605b;--line:#dfe5e1;--accent:#216b55;--soft:#edf4ef;--bg:#f6f7f5;--amber:#7a4f00;--amberbg:#fff4df;--blue:#1d4ed8;--bluebg:#e8efff;--red:#9b2c22;--redbg:#fde8e6}
+*{box-sizing:border-box}body{margin:0;font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+header{display:flex;align-items:center;gap:12px;padding:14px 24px;background:#fff;border-bottom:1px solid var(--line)}header img{width:30px;height:30px}
+header b{font-size:18px}header nav{margin-left:auto;display:flex;gap:14px}header a{color:var(--accent);font-weight:600;text-decoration:none;font-size:14px}
+main{max-width:1180px;margin:0 auto;padding:24px}
+h1{font-size:28px;margin:0 0 4px}h2{font-size:19px;margin:30px 0 10px}.lede{color:var(--muted);font-size:16px;margin:0 0 18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}
+svg{width:100%;height:auto;display:block}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:860px){.grid2{grid-template-columns:1fr}}
+.decision{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}.decision b{display:block;margin-bottom:4px}
+.decision p{margin:0;color:#34403b;font-size:14px}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:14px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#f1f4f2}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:1px 8px;border-radius:999px;background:var(--soft);color:var(--accent);margin-right:4px}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:10px}.legend span{display:inline-flex;align-items:center;gap:6px}.legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
+</style>
+</head>
+<body>
+<header><img src="/static/logo.svg" alt="" /><b>SigCheck</b><span style="color:var(--muted)">System design</span>
+<nav><a href="/">Review queue</a><a href="/pitch">Pitch</a><a href="/scorecard">Scorecard</a></nav></header>
+<main>
+<h1>How SigCheck works</h1>
+<p class="lede">SigCheck turns pharmacy faxes into reviewable draft orders, and every field must pass checks the AI cannot override.</p>
+
+<div class="card">
+<svg viewBox="0 0 1120 560" role="img" aria-labelledby="dtitle">
+<title id="dtitle">SigCheck architecture: capture, screen, read, check, route, review, export; with a greyed production lane</title>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#56605b"/></marker></defs>
+<text x="20" y="28" font-size="14" font-weight="700" fill="#216b55" letter-spacing="1.5">BUILT TODAY</text>
+<!-- row 1 -->
+<g font-size="13" fill="#1f2b27">
+<rect x="20" y="44" width="160" height="78" rx="12" fill="#e8efff" stroke="#1d4ed8"/><text x="34" y="68" font-weight="700">1 · Capture</text><text x="34" y="88">Fax upload (web)</text><text x="34" y="106">Phone /scan page</text>
+<rect x="210" y="44" width="170" height="78" rx="12" fill="#edf4ef" stroke="#216b55"/><text x="224" y="68" font-weight="700">2 · Read the page</text><text x="224" y="88">Apple Vision OCR</text><text x="224" y="106">on-device · line boxes</text>
+<rect x="410" y="44" width="180" height="78" rx="12" fill="#fde8e6" stroke="#9b2c22"/><text x="424" y="68" font-weight="700">3 · Safety screen</text><text x="424" y="88">Injection guardrail</text><text x="424" y="106">blocks before any model</text>
+<rect x="620" y="44" width="200" height="78" rx="12" fill="#edf4ef" stroke="#216b55"/><text x="634" y="68" font-weight="700">4 · Structured read</text><text x="634" y="88">Nicrron → Claude Sonnet 5</text><text x="634" y="106">verbatim · null if unsure</text>
+<rect x="850" y="44" width="250" height="78" rx="12" fill="#fff4df" stroke="#7a4f00"/><text x="864" y="68" font-weight="700">5 · Deterministic checks</text><text x="864" y="88">NPI/DEA digits · zeros · LASA</text><text x="864" y="106">catalogue via PRISM KB</text>
+<line x1="180" y1="83" x2="208" y2="83" stroke="#56605b" stroke-width="2" marker-end="url(#a)"/><line x1="380" y1="83" x2="408" y2="83" stroke="#56605b" stroke-width="2" marker-end="url(#a)"/>
+<line x1="590" y1="83" x2="618" y2="83" stroke="#56605b" stroke-width="2" marker-end="url(#a)"/><line x1="820" y1="83" x2="848" y2="83" stroke="#56605b" stroke-width="2" marker-end="url(#a)"/>
+<!-- blocked branch -->
+<path d="M500 122 V160 H300" fill="none" stroke="#9b2c22" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#a)"/>
+<rect x="110" y="140" width="190" height="44" rx="10" fill="#fff" stroke="#9b2c22"/><text x="124" y="167" fill="#9b2c22" font-weight="700">Blocked · quarantine</text>
+<!-- row 2 -->
+<path d="M975 122 V210 H880" fill="none" stroke="#56605b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="610" y="196" width="270" height="96" rx="12" fill="#fff" stroke="#216b55" stroke-width="2"/><text x="624" y="220" font-weight="700">6 · Workflow engine</text><text x="624" y="240">Verify transcription</text><text x="624" y="258">Clarify with prescriber</text><text x="624" y="276">Blocked document</text>
+<line x1="610" y1="244" x2="572" y2="244" stroke="#56605b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="330" y="196" width="240" height="96" rx="12" fill="#e8efff" stroke="#1d4ed8"/><text x="344" y="220" font-weight="700">7 · Pharmacist review</text><text x="344" y="240">Source highlight per field</text><text x="344" y="258">Confirm · correct · clarify</text><text x="344" y="276">Attested approval</text>
+<line x1="330" y1="244" x2="292" y2="244" stroke="#56605b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="20" y="196" width="270" height="96" rx="12" fill="#edf4ef" stroke="#216b55"/><text x="34" y="220" font-weight="700">8 · Traceable draft order</text><text x="34" y="240">Versioned JSON export</text><text x="34" y="258">Append-only audit trail</text><text x="34" y="276">Not dispensed</text>
+<!-- PRISM side -->
+<rect x="610" y="318" width="490" height="62" rx="12" fill="#f6f2ff" stroke="#6d28d9"/><text x="624" y="342" font-weight="700" fill="#4c1d95">PRISM (Block Convey) · runs alongside, never decides</text><text x="624" y="362">Traces · guardrail flags · evaluator · KB grounding · no identifiers</text>
+<path d="M745 292 V316" fill="none" stroke="#6d28d9" stroke-width="2" stroke-dasharray="4 4"/>
+<rect x="20" y="318" width="560" height="62" rx="12" fill="#fff" stroke="#dfe5e1"/><text x="34" y="342" font-weight="700">Policy (admin)</text><text x="34" y="362">Versioned rules as data · safe deterministic re-run · safety rules locked on</text>
+</g>
+<!-- production lane -->
+<rect x="20" y="410" width="1080" height="130" rx="14" fill="#f1f3f2" stroke="#b8c0bb" stroke-dasharray="6 5"/>
+<text x="40" y="438" font-size="14" font-weight="700" fill="#6b746f" letter-spacing="1.5">PRODUCTION · NOT BUILT TODAY</text>
+<g font-size="13" fill="#56605b">
+<rect x="40" y="456" width="150" height="56" rx="10" fill="#fff" stroke="#c4cbc7"/><text x="54" y="480">Fax server /</text><text x="54" y="498">e-fax intake</text>
+<rect x="220" y="456" width="160" height="56" rx="10" fill="#fff" stroke="#c4cbc7"/><text x="234" y="480">Encrypted storage</text><text x="234" y="498">KMS · retention</text>
+<rect x="410" y="456" width="150" height="56" rx="10" fill="#fff" stroke="#c4cbc7"/><text x="424" y="480">Queue + workers</text><text x="424" y="498">retries · scale-out</text>
+<rect x="590" y="456" width="200" height="56" rx="10" fill="#fff" stroke="#c4cbc7"/><text x="604" y="480">Pharmacy system</text><text x="604" y="498">NCPDP / PMS integration</text>
+<rect x="820" y="456" width="260" height="56" rx="10" fill="#fff" stroke="#c4cbc7"/><text x="834" y="480">SSO + RBAC · TLS · BAA model</text><text x="834" y="498">monitoring · tamper-evident audit</text>
+<line x1="190" y1="484" x2="218" y2="484" stroke="#9aa39e" stroke-width="2" marker-end="url(#a)"/><line x1="380" y1="484" x2="408" y2="484" stroke="#9aa39e" stroke-width="2" marker-end="url(#a)"/><line x1="560" y1="484" x2="588" y2="484" stroke="#9aa39e" stroke-width="2" marker-end="url(#a)"/><line x1="790" y1="484" x2="818" y2="484" stroke="#9aa39e" stroke-width="2" marker-end="url(#a)"/>
+</g>
+</svg>
+<div class="legend"><span><i style="background:#e8efff;border:1px solid #1d4ed8"></i>People</span><span><i style="background:#edf4ef;border:1px solid #216b55"></i>Reading and records</span><span><i style="background:#fde8e6;border:1px solid #9b2c22"></i>Safety stop</span><span><i style="background:#fff4df;border:1px solid #7a4f00"></i>Rules the AI can't override</span><span><i style="background:#f6f2ff;border:1px solid #6d28d9"></i>Observability</span></div>
+</div>
+
+<h2>Design decisions</h2>
+<div class="grid2">
+<div class="decision"><b>The model reads; it never decides</b><p>Nicrron returns verbatim text and leaves anything unsure empty. Every field must then pass deterministic checks it can't influence.</p></div>
+<div class="decision"><b>Never guess, never auto-fix</b><p>"5.0 mg" is flagged, not corrected. A missing value stays blank. A drug-name typo gets suggestions, never a substitution.</p></div>
+<div class="decision"><b>Safety screen before any model</b><p>Text that tries to instruct the software blocks the whole document before extraction. PRISM records it; our local check enforces it.</p></div>
+<div class="decision"><b>Three kinds of issue, three resolutions</b><p>Transcription doubts are confirmed or corrected against the fax. Prescriber clarifications need the prescriber's unambiguous answer. Blocked documents are quarantined.</p></div>
+<div class="decision"><b>Rules as versioned data, safety locked on</b><p>An administrator can tighten review policy and re-run checks deterministically. Injection blocking, required fields, NPI checks and human approval can't be switched off.</p></div>
+<div class="decision"><b>Minimum-necessary telemetry</b><p>OCR runs on the device. PRISM receives statuses and issue codes with identifiers masked. The model call is the one disclosure, and production needs a BAA or a self-hosted model.</p></div>
+</div>
+
+<h2>Patterns</h2>
+<p><span class="tag">Source of truth</span>the server owns workflow state; clients only display it <span class="tag">Revisioned records</span>every change bumps the revision; stale approvals are refused <span class="tag">Append-only audit</span>who did what, when, and why <span class="tag">Idempotent uploads</span>a retried upload never creates a duplicate <span class="tag">Evidence per field</span>value, source text and box from real OCR <span class="tag">Fail visibly</span>an unreachable service shows "Unavailable", never a pass</p>
+
+<h2>What's real and what's modelled</h2>
+<table>
+<tr><th>Real in the prototype</th><th>Modelled or limited</th></tr>
+<tr><td>Apple Vision OCR with source boxes</td><td>Synthetic prescriptions (plus one public sample photo, kept local)</td></tr>
+<tr><td>Live Nicrron extraction (Claude Sonnet 5)</td><td>Curated demonstration catalogue (~40 rows)</td></tr>
+<tr><td>Guardrail before extraction; deterministic safety checks</td><td>PRISM guardrail and evaluator rules flag; they don't block</td></tr>
+<tr><td>PRISM traces, KB grounding, evaluator submissions (redacted)</td><td>Demo reviewer identity, not production authentication</td></tr>
+<tr><td>Revisioned workflow, attested approval, JSON export, audit trail</td><td>Idempotency stored in the running server only</td></tr>
+<tr><td>53 automated tests incl. "no identifiers reach PRISM"</td><td>Not a dispensing or clinical decision system</td></tr>
+</table>
+</main>
+</body>
+</html>

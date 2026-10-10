@@ -85,6 +85,7 @@ window.toast = (text, error = false) => {
   const t = document.querySelector("#toast");
   t.textContent = text;
   t.classList.toggle("error", error);
+  t.setAttribute("role", error ? "alert" : "status");
   clearTimeout(t._timer);
   t._timer = setTimeout(() => (t.textContent = ""), 6500);
 };

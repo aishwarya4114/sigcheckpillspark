@@ -1,7 +1,7 @@
 :root {
   --bg: #f6f7f5;
   --ink: #24332f;
-  --muted: #75807b;
+  --muted: #56605b;
   --line: #e3e8e3;
   --accent: #216b55;
   --soft: #edf4ef;
@@ -1371,3 +1371,27 @@ html:not(.tech) .tech-only{display:none!important}
 .tech-switch input{accent-color:#216b55;width:16px;height:16px}
 .tech-note{font-size:11.5px;color:#6b7280;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 .pipeline .tech-note{font-size:10.5px;line-height:1.3;word-break:normal}
+/* --- human-factors pass: separate machine/human states, state footer, attestation, WCAG --- */
+.chips{display:inline-flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+.chip{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:650;padding:2px 8px;border-radius:999px;line-height:1.5}
+.chip .icon{width:12px;height:12px;stroke-width:2.6}
+.chip.neutral{background:#eef0ef;color:#3f4944}.chip.amber{background:#fff1d6;color:#7a4f00}.chip.red{background:#fde8e6;color:#9b2c22}
+.chip.green{background:#e3f3ea;color:#145f36}.chip.outline{border:1px solid #9aa39e;color:#3f4944;background:#fff}
+.big-action{min-height:46px;width:100%;display:flex!important;align-items:center;justify-content:center;gap:8px;font-size:15px;font-weight:650;border-radius:10px;text-decoration:none}
+#approval-bar p{font-size:13px;color:#3f4944;margin:6px 0 0;text-align:center}
+.block-details{margin:6px 0 4px 18px;padding:0;font-size:13.5px;color:#7a1f15}
+#attest-dialog{max-width:560px;width:calc(100vw - 32px)}.attest-list{list-style:none;padding:0;margin:10px 0;display:flex;flex-direction:column;gap:5px;font-size:14px}
+.attest-list li{display:flex;gap:6px;align-items:center}.attest-list .icon{width:15px;height:15px;color:#17703f}
+.attest-check{display:flex;gap:8px;align-items:flex-start;font-size:14px;font-weight:600;margin:10px 0}.attest-check input{width:18px;height:18px;accent-color:#216b55;margin-top:2px}
+.skip-link{position:absolute;left:-9999px;top:8px;z-index:100;background:#216b55;color:#fff;padding:10px 14px;border-radius:8px}.skip-link:focus{left:8px}
+:focus-visible{outline:3px solid #2563eb!important;outline-offset:2px}
+.steps span.done{color:#17703f}.steps span.done i{background:#216b55;color:#fff}
+body{font-size:15px}.small{font-size:13px}.muted{color:var(--muted)}
+.field-toggle,.queue-item,.ops-filter button,.issue-actions button,.button-link,.side-link{min-height:40px}
+@media (max-width:640px){.review-grid,.app-shell{overflow-x:hidden}.chips{justify-content:flex-start}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+/* --- top navigation (keeps the sidebar for the queue) --- */
+.topnav{display:flex;align-items:center;gap:4px;flex-wrap:wrap}.topnav-tech{display:inline-flex;gap:4px;padding-left:6px;margin-left:4px;border-left:1px solid var(--line)}
+.topnav a,.topnav-btn{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:6px 10px;border-radius:8px;font-size:13.5px;color:var(--ink);text-decoration:none;background:none;border:0;cursor:pointer}
+.topnav a:hover,.topnav-btn:hover{background:var(--soft)}.topnav .icon{width:15px;height:15px}
+@media (max-width:900px){.topnav{gap:2px}.topnav a,.topnav-btn{padding:6px 7px;font-size:12.5px}}
