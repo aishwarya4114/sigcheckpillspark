@@ -212,7 +212,7 @@ function nextField() {
 }
 function footerHTML() {
   const w = cur.workflow || {}, st = w.status, id = encodeURIComponent(cur.id);
-  if (st === "approved") return `<a class="primary big-action" href="/api/documents/${id}/export">${icon("download")}Export approved draft</a><p>Draft order for pharmacy entry · not dispensed</p>`;
+  if (st === "approved") return `<div class="footer-pair"><a class="primary big-action" target="_blank" rel="noopener" href="/api/documents/${id}/order-sheet">${icon("file")}Print or save PDF</a><a class="secondary big-action" href="/api/documents/${id}/export">${icon("download")}Export JSON</a></div><p>Draft order for pharmacy entry · not dispensed</p>`;
   if (st === "blocked") return cur.quarantined
     ? `<button class="primary big-action" data-upload-corrected>${icon("upload")}Upload corrected document</button><p>Quarantined for manual review. Nothing was sent to a model.</p>`
     : `<button class="primary big-action" data-quarantine>${icon("lock")}Quarantine document</button><p>This document can't continue through normal intake.</p>`;
