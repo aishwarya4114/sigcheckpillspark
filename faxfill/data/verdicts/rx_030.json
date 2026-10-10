@@ -473,16 +473,9 @@
      "reasons": [
       "No patient name on page 2. It is not carried over from any other page."
      ],
-     "alternatives": [
-      "DOB:"
-     ],
-     "evidence_box": [
-      1089,
-      441,
-      1168,
-      468
-     ],
-     "evidence_note": null,
+     "alternatives": [],
+     "evidence_box": null,
+     "evidence_note": "location not found",
      "checks_passed": [],
      "checks_failed": [
       {
@@ -494,7 +487,7 @@
      "reads": {
       "A": null,
       "B": null,
-      "C": "DOB:"
+      "C": null
      }
     },
     "patient_dob": {
@@ -506,16 +499,9 @@
      "reasons": [
       "No patient date of birth on page 2. It is not carried over from any other page."
      ],
-     "alternatives": [
-      "Address:"
-     ],
-     "evidence_box": [
-      126,
-      508,
-      265,
-      534
-     ],
-     "evidence_note": null,
+     "alternatives": [],
+     "evidence_box": null,
+     "evidence_note": "location not found",
      "checks_passed": [],
      "checks_failed": [
       {
@@ -527,7 +513,7 @@
      "reads": {
       "A": null,
       "B": null,
-      "C": "Address:"
+      "C": null
      }
     },
     "drug_name": {

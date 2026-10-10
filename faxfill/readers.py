@@ -220,6 +220,11 @@ def regex_read_page(ocr_page, fax_id=None):
     f["notes"] = notes
     # checkbox state is not recoverable from text alone
     f["substitution"] = None
+    # a blank field makes the regex grab the NEXT label ("Patient: DOB:"); a label is never a value
+    label = re.compile(r"^\W*(patient|dob|address|date|sig|disp|refills|notes|npi|dea|signature|rx)\W*$", re.I)
+    for k, v in f.items():
+        if isinstance(v, str) and label.match(v):
+            f[k] = None
     return {"fax_id": fax_id, "reader": "C", "model": "regex over tesseract", "fields": f,
             "pages": [p["image"] for p in pages_]}
 

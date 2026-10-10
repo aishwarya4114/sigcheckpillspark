@@ -3,3 +3,7 @@
 __pycache__/
 *.pyc
 .DS_Store
+.claude/
+faxfill/data/corrections.jsonl
+faxfill/data/submissions.jsonl
+.pytest_cache/
