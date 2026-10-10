@@ -17,6 +17,16 @@ SigCheck has two parts that share one idea (the model reads; checks it can't fak
 
 The workflow app adds three things the engine does not: **live intake of new faxes** (any uploaded or photographed page is processed on the spot), **a clarification loop** (a trailing-zero strength can't be cleared by confirming the fax; only the prescriber's unambiguous answer resolves it, and the case waits for them), and **live PRISM Knowledge Base queries from code** (`kb_search` in `prismtrace-sdk`, with an exact-row check) plus PRISM's automatic trajectory scorecards shown in the app.
 
+## Try it in two minutes
+
+1. Start the workflow app (steps in [How to run](#how-to-run)) and open `http://localhost:8001`.
+2. Click **New prescription** and upload one of the ready-made prescription images in [`fixtures/demo/`](fixtures/demo/):
+   - `rx_upload_clean_amoxicillin.png`: a clean handwritten prescription. Confirm the fields, approve, then print or save the PDF.
+   - `rx_upload_trailing_zero_atorvastatin.png`: "20.0 mg" could be read as 200 mg, so the case waits for the prescriber.
+3. For the planted traps (look-alike drug, bad NPI, missing strength, hidden instruction), upload any fax from [`fixtures/synthetic/`](fixtures/synthetic/).
+
+The images are photos of a paper Rx pad (tinted paper, blue-ink handwriting, a slight tilt). All people on them are fictional. Regenerate them with `python scripts/make_demo_rx.py`.
+
 ## How it works
 
 **1. Read.** Each page is straightened and cleaned, then read three ways:
@@ -88,6 +98,8 @@ Rules were frozen at commit `2abbbb8`, then 20 new faxes were generated with a n
 - **Evaluator on a classified output:** a custom LLM-judge evaluator, "Verdict backed by checks," audits that every passing field lists a passed check and every flagged field names a reason. On 10 verifier traces: 8 consistent, 2 inconsistent (under review).
 - **Knowledge Base:** the reference data is uploaded to the PRISM Knowledge Base (3 documents). The verifier queries the same data from local files: we found no documented API for querying the Knowledge Base from code, assigning documents to an agent didn't work during the event, and the PRISM team advised us not to block the submission on it.
 
+**Workflow app (`app/`, `sponsors/`).** The live app reads through Nicrron with `anthropic/claude-sonnet-5`, sending no temperature at all (which the model accepts), and falls back to a labelled demo reader when no key is set. It queries the PRISM Knowledge Base from code with `kb_search` in `prismtrace-sdk` 0.5.1 and checks the exact catalogue row in the result. Each case is also sent as a trajectory, and PRISM's automatic scorecard (safety, correctness, efficiency, robustness, reasoning) is shown in the technical view. Patient and prescriber identifiers are masked before anything reaches PRISM, and a test enforces this.
+
 ## Data
 
 Real prescription faxes are protected patient data, so none are used.
@@ -95,6 +107,43 @@ Real prescription faxes are protected patient data, so none are used.
 - **Drug data:** real, from NLM's RxNorm (strengths, RxCUI, dose forms) and openFDA (DEA schedules). Raw API responses are saved in `faxfill/ref/raw/` so the reference data can be rebuilt offline.
 - **Hand-entered values** (max daily doses, look-alike partners, allergy classes, high-alert drugs, the methotrexate weekly rule) are kept separate and labeled `manual, unverified`.
 - **People:** all patients and prescribers are fictional. All NPIs pass the Luhn checksum and return no match in the public CMS NPI Registry. DEA numbers are checksum-valid only.
+
+## Implementation checklist
+
+Status at submission, 10 Oct 2026.
+
+**Done and working**
+
+| Area | What | Where |
+|---|---|---|
+| Intake | Web upload with duplicate protection, ready-made demo images | `app/`, `fixtures/demo/` |
+| Reading | Apple Vision OCR with word positions; Nicrron reader (Claude Sonnet 5); demo label reader offline | `app/pipeline.py`, `sponsors/nicrron.py` |
+| Engine reading | Tesseract plus two readers from different vendors (GPT-5.5, Mistral Large 3), cached reads | `faxfill/` |
+| Safety screen | Hidden instructions blocked before any model reads the page, look-alike characters normalized | `sponsors/injection.py`, `faxfill/` |
+| Checks | NPI and DEA check digits, trailing and leading zeros, look-alike drugs, catalogue coverage, prescription age | `app/checks.py` |
+| Engine checks | 38 checks on RxNorm and openFDA data, refill law, allergies, max dose, documented fax failures | `faxfill/CHECKS.md` |
+| Workflow | Next action per case: verify transcription, clarify with prescriber, or blocked; queue tabs All / Needs action / Waiting / Ready / Completed | `app/workflow.py` |
+| Evidence | Click a field to see where it was read on the page | `app/static/review.js` |
+| Clarification loop | Printable request with cropped images, mark contacted, record the prescriber's answer | `app/main.py` |
+| Approval | Blocked until every issue is resolved; pharmacist attestation with name; revisions kept | `app/main.py` |
+| Output | Draft order as a printable PDF and as JSON; append-only audit trail | `app/main.py` |
+| Policy | Adjustable review threshold and prescription age; safety rules locked on | `app/policy.py` |
+| Sponsors | Nicrron gateway; PRISM traces, guardrail traces, Knowledge Base search, trajectory scorecards | `sponsors/` |
+| Privacy | Identifiers masked before telemetry, enforced by a test | `sponsors/redact.py` |
+| Evaluation | Workflow app: 5/5 traps, 48/48 precision on passed fields, 0 invented values. Engine: held-out 244/244, 10/10 traps | `scripts/evaluate.py`, `faxfill/` |
+| Tests | 85 Python tests plus 3 UI tests, all passing | `tests/`, `faxfill/` |
+| Presentation | Pitch deck at `/pitch`, architecture at `/system-design` | `app/static/` |
+
+**Built but not in today's demo**
+
+- Phone capture at `/scan` (works over the local network; left out to keep the demo short)
+- PRISM evaluator set up in the dashboard (the API scorecards above are used instead; assigning tasks in the dashboard did not work during the event)
+
+**Not done yet**
+
+- The engine's two readers, 38 checks and danger score do not feed the workflow app yet. The two parts run side by side and share the same design rules.
+- No testing on real faxes or PillSpark's own export schema
+- No login, encryption at rest or pharmacy-system integration (needed before any real use)
 
 ## Known limitations
 
@@ -140,8 +189,11 @@ Model reads are cached in `faxfill/data/reads/`, so the UI and eval run without 
 pip install -r requirements-app.txt
 python scripts/make_faxes.py
 python scripts/smoke_sponsors.py --upload-kb
-uvicorn app.main:app --host 0.0.0.0 --port 8001   # http://localhost:8001 · phone: /scan · /system-design · /pitch
+python scripts/make_demo_rx.py                     # optional: rebuild the upload demo images
+uvicorn app.main:app --host 0.0.0.0 --port 8001   # http://localhost:8001 · /system-design · /pitch
 ```
+
+The same `.env` keys turn on the live Nicrron reader and PRISM. Without them the app still runs end to end with the demo reader.
 
 Details in [WORKFLOW-APP.md](WORKFLOW-APP.md) and [RUN.md](RUN.md).
 
