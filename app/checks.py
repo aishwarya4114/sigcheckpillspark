@@ -146,3 +146,91 @@ def check_field(name: str, value: str | None, fields: dict, today: date | None =
 def is_controlled(fields: dict) -> bool:
     e = CATALOG.get(((fields.get("drug_name") or {}).get("value") or "").strip().lower())
     return bool(e and e["schedule"] not in ("none", ""))
+
+
+# ---------------------------------------------------------------- "show your work" check log
+def _c(rule: str, label: str, passed: bool, detail: str = "", next_step: str = "") -> dict:
+    return {"rule": rule, "label": label, "passed": bool(passed), "detail": detail, "next_step": "" if passed else next_step}
+
+
+def explain_field(name: str, value: str | None, fields: dict, today: date | None = None) -> list[dict]:
+    """Every check run on a field, passed or failed, each with a plain next step when it fails.
+    The pharmacist sees what was verified, not only what went wrong."""
+    today = today or date.today()
+    v = (str(value).strip() if value is not None else "")
+    drug = ((fields.get("drug_name") or {}).get("value") or "").strip()
+    entry = CATALOG.get(drug.lower())
+    out: list[dict] = []
+    if not v:
+        if name == "refills":
+            return [_c("refills.not_stated", "Refills stated on the fax", False,
+                       "Blank refills are recorded as 'not stated', never as zero.",
+                       "Confirm the refill count with the prescriber, or record it as not stated.")]
+        if name in REQUIRED:
+            return [_c("field.present", "Present and readable on the fax", False,
+                       "Left empty rather than guessed.", "Request a clearer image, or ask the prescriber for this value.")]
+        return []
+    out.append(_c("field.present", "Present and readable on the fax", True))
+    if name == "drug_name":
+        out.append(_c("drug.catalogue", "Found in the reference catalogue", bool(entry),
+                      "Matched a catalogued drug." if entry else f"\"{v}\" isn't in the catalogue (a coverage result, not a safety judgement).",
+                      "Confirm the drug name with the prescriber before entry."))
+        if entry:
+            alikes = ", ".join(sorted(entry["lookalikes"]))
+            out.append(_c("drug.lookalike", "Not on the look-alike / sound-alike list", not alikes,
+                          f"Often confused with {alikes}." if alikes else "",
+                          f"Check the diagnosis fits {drug.lower()} (not {alikes}); if unsure, call the prescriber."))
+    elif name == "strength":
+        out.append(_c("strength.trailing_zero", "No trailing zero (5.0 mg vs 50 mg)", not re.search(r"\d\.0\b", v),
+                      f"\"{v}\" has a trailing zero.", f"Confirm whether the prescriber meant {v.replace('.0', '', 1)} or {v.replace('.0', '0', 1)}."))
+        out.append(_c("strength.leading_zero", "No missing leading zero (.5 mg)", not re.search(r"(^|\s)\.\d", v),
+                      f"\"{v}\" is missing a leading zero.", "Confirm the decimal with the prescriber."))
+        out.append(_c("strength.units_u", "No \"U\" abbreviation (reads as 0)", not re.search(r"\d\s*u\b", v, re.I),
+                      f"\"{v}\" uses U for units.", "Confirm the number of units with the prescriber."))
+        if entry:
+            form = ((fields.get("dosage_form") or {}).get("value") or "").strip().lower()
+            norm = re.sub(r"\s+", " ", v.lower()).replace(".0 ", " ")
+            ok = any(s == norm and (not form or f == form) for s, f in entry["rows"])
+            avail = ", ".join(sorted({s for s, _ in entry["rows"]}, key=lambda x: float(re.findall(r"[\d.]+", x)[0])))
+            out.append(_c("strength.catalogued", f"A catalogued strength of {drug.lower()}", ok,
+                          f"Catalogued: {avail}.", "Confirm the strength with the prescriber."))
+    elif name == "prescriber_npi":
+        out.append(_c("npi.check_digit", "NPI check digit is valid", npi_valid(v),
+                      "Fails the built-in check digit: likely a misread or mistyped digit.",
+                      "Compare each digit with the fax; if it still fails, verify the NPI with the prescriber's office."))
+    elif name == "prescriber_dea":
+        probs = dea_check(v, last_name((fields.get("prescriber_name") or {}).get("value")))
+        out.append(_c("dea.check_digit", "DEA check digit is valid", not any("check digit" in p or "isn't 2 letters" in p for p in probs),
+                      "DEA number fails its formula.", "Verify the DEA number with the prescriber."))
+        out.append(_c("dea.initial", "DEA letter matches the prescriber's last name", not any("second letter" in p for p in probs),
+                      "Second letter doesn't match.", "Verify the prescriber's identity before entry."))
+    elif name in ("patient_dob", "date_written"):
+        d = parse_date(v)
+        out.append(_c("date.valid", "A valid calendar date", d is not None, f"\"{v}\" isn't a valid date.",
+                      "Compare with the fax; OCR may have added or dropped a digit."))
+        if d:
+            out.append(_c("date.not_future", "Not in the future", d <= today, "Date is in the future.", "Confirm the date with the prescriber."))
+            if name == "patient_dob":
+                out.append(_c("dob.plausible", "Plausible age", (today.year - d.year) <= 120, "Implausible age.", "Confirm the patient's date of birth."))
+            else:
+                out.append(_c("rx.not_expired", "Written within the last 12 months", (today - d).days <= 365,
+                              "Older than 12 months.", "Ask the prescriber for a new prescription."))
+    elif name in ("quantity", "refills"):
+        whole = bool(re.fullmatch(r"\d{1,4}", v))
+        out.append(_c(f"{name}.whole_number", "A whole number", whole, f"\"{v}\" isn't a whole number.", "Confirm the number with the prescriber."))
+        if whole and name == "refills":
+            out.append(_c("refills.max", "11 refills or fewer", int(v) <= 11, "More than 11 refills.", "Confirm with the prescriber."))
+    elif name == "directions":
+        s = f" {v.lower()} "
+        out.append(_c("sig.not_as_directed", "Not \"take as directed\"", "as directed" not in s,
+                      "\"As directed\" has no dose or frequency.", "Ask the prescriber for the dose and frequency."))
+        out.append(_c("sig.unambiguous_chars", "No ambiguous characters (I vs 1)", not re.search(r"(^|\s)i\s+tab", s),
+                      "Reads as \"I tab\": probably \"1 tab\".", "Confirm the number of tablets per dose."))
+        has_freq = re.search(r"\b(qd|daily|bid|tid|qid|qhs|q\d+h|prn|once|twice|every|at bedtime|times)\b", s)
+        has_dose = re.search(r"\b(\d+(\.\d+)?|one|two|half|i)\b", s)
+        out.append(_c("sig.dose_and_frequency", "States a dose and a frequency", bool(has_freq and has_dose),
+                      "No clear dose and frequency.", "Ask the prescriber for the dose and frequency."))
+    elif name in ("patient_name", "prescriber_name"):
+        out.append(_c("name.format", "Looks like a person's name", bool(re.fullmatch(r"[A-Za-z][A-Za-z .,'\-]+", v)),
+                      "Unexpected characters.", "Compare the name with the fax."))
+    return out

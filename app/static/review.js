@@ -54,7 +54,7 @@ function renderQueue() {
     ? visible
         .map(
           (d) =>
-            `<button class="queue-item ${cur?.id === d.id ? "active" : ""}" data-doc="${esc(d.id)}" aria-pressed="${cur?.id === d.id}"><span class="queue-person">${esc(d.patient || "Prescription document")}</span><span class="queue-drug">${esc(d.drug || "Awaiting extraction")}</span><span class="queue-meta">${badge(d.status)}<span class="mono muted">${d.unresolved ? esc(d.unresolved) + " flagged" : "r" + esc(d.revision)}</span></span></button>`,
+            `<button class="queue-item ${cur?.id === d.id ? "active" : ""}" data-doc="${esc(d.id)}" aria-pressed="${cur?.id === d.id}"><span class="queue-person">${esc(d.patient || "Prescription document")}</span><span class="queue-drug">${esc(d.headline || d.drug || "Awaiting extraction")}</span><span class="queue-meta">${badge(d.status)}<span class="mono muted">${d.unresolved ? esc(d.unresolved) + " flagged" : "r" + esc(d.revision)}</span></span></button>`,
         )
         .join("")
     : '<div class="queue-empty">' +
@@ -165,7 +165,7 @@ function renderPanel() {
                   "Check the source, then confirm",
                   "Automatic checks are complete. Your review is required before approval.",
                 ];
-  body.innerHTML = `<div class="review-intro"><div class="review-progress"><strong>${done} of ${required.length} required fields reviewed</strong><span class="muted">${required.length ? Math.round((done / required.length) * 100) : 0}%</span></div><div class="progress-track"><span style="width:${required.length ? (done / required.length) * 100 : 0}%"></span></div></div><div class="notice ${message[0]}">${icon(message[0] === "red" ? "shield" : message[0] === "amber" ? "alert" : "info")}<div><strong>${esc(message[1])}</strong>${esc(message[2])}</div></div>
+  body.innerHTML = `${pipelineHTML()}<div class="review-intro"><div class="review-progress"><strong>${done} of ${required.length} required fields reviewed</strong><span class="muted">${required.length ? Math.round((done / required.length) * 100) : 0}%</span></div><div class="progress-track"><span style="width:${required.length ? (done / required.length) * 100 : 0}%"></span></div></div><div class="notice ${message[0]}">${icon(message[0] === "red" ? "shield" : message[0] === "amber" ? "alert" : "info")}<div><strong>${esc(message[1])}</strong>${esc(message[2])}${flagged && cur.status !== "blocked" && !approved ? `<a class="print-link" target="_blank" rel="noopener" href="/api/documents/${encodeURIComponent(cur.id)}/clarification-sheet">${icon("file")}Print clarification fax for the prescriber</a>` : ""}</div></div>
  ${globalFindings.map((f, i) => `<button class="notice red" style="width:100%;text-align:left;margin-top:10px" data-finding="${i}">${icon("alert")}<span>${esc(f.reason)}</span></button>`).join("")}
  ${
    cur.status === "blocked"
@@ -191,7 +191,30 @@ function fieldHTML(k, f, locked) {
   const s = state(k, f),
     review = cur.review?.[k],
     attention = ["missing", "needs_review"].includes(s);
-  return `<article class="field-row ${attention ? "attention" : ""} ${selected === k ? "selected" : ""}"><button class="field-toggle" data-field="${k}" aria-expanded="${selected === k}" aria-controls="editor-${k}"><span class="field-top"><span>${labels[k]}${f.required ? " *" : ""}</span>${badge(s)}</span><div class="field-value ${f.value == null ? "missing" : ""}">${esc(f.value ?? (k === "refills" ? "Not stated" : f.status === "not_applicable" ? "Not required" : "Not found on fax"))}</div>${attention ? `<div class="field-hint">${icon("alert")}${esc(f.reasons?.[0] || "Review against the original document")}</div>` : ""}</button>${selected === k ? `<div class="field-editor" id="editor-${k}"><div class="evidence"><span>Source evidence · machine transcription</span>${f.source_text ? "“" + esc(f.source_text) + "”" : "No readable source text located."}</div>${f.reasons?.length ? `<ul class="reasons">${f.reasons.map((x) => "<li>" + esc(x) + "</li>").join("")}</ul>` : ""}${review ? `<p class="reviewed-note">${icon("check")} ${esc(review.action === "edit" ? "Corrected" : "Confirmed")} by ${esc(review.by)}${review.reason ? " · " + esc(review.reason) : ""}</p>` : ""}${!locked ? `<div class="editor-actions">${f.value != null ? `<button data-confirm="${k}" ${busy ? "disabled" : ""}>${icon("check")}Confirm against fax</button>` : ""}</div><details><summary class="small muted">Correct this field</summary><form class="edit-form" data-edit="${k}"><label>Corrected value<input class="input" name="value" value="${esc(f.value ?? "")}" ${f.required ? "required" : ""}></label><label>Evidence or reason<input class="input" name="reason" required placeholder="What supports this correction?"></label><button type="submit" ${busy ? "disabled" : ""}>Save correction</button></form></details><div class="request-actions"><button data-clarify="rescan" data-key="${k}">Request clearer image</button><button data-clarify="prescriber" data-key="${k}">Draft prescriber clarification</button></div>` : ""}</div>` : ""}</article>`;
+  return `<article class="field-row ${attention ? "attention" : ""} ${selected === k ? "selected" : ""}"><button class="field-toggle" data-field="${k}" aria-expanded="${selected === k}" aria-controls="editor-${k}"><span class="field-top"><span>${labels[k]}${f.required ? " *" : ""}</span>${badge(s)}</span><div class="field-value ${f.value == null ? "missing" : ""}">${esc(f.value ?? (k === "refills" ? "Not stated" : f.status === "not_applicable" ? "Not required" : "Not found on fax"))}</div>${attention ? `<div class="field-hint">${icon("alert")}${esc(f.reasons?.[0] || "Review against the original document")}</div>` : ""}</button>${selected === k ? `<div class="field-editor" id="editor-${k}"><div class="evidence"><span>Source evidence · machine transcription</span>${f.source_text ? "“" + esc(f.source_text) + "”" : "No readable source text located."}</div>${checksHTML(f)}${review ? `<p class="reviewed-note">${icon("check")} ${esc(review.action === "edit" ? "Corrected" : "Confirmed")} by ${esc(review.by)}${review.reason ? " · " + esc(review.reason) : ""}</p>` : ""}${!locked ? `<div class="editor-actions">${f.value != null ? `<button data-confirm="${k}" ${busy ? "disabled" : ""}>${icon("check")}Confirm against fax</button>` : ""}</div><details><summary class="small muted">Correct this field</summary><form class="edit-form" data-edit="${k}"><label>Corrected value<input class="input" name="value" value="${esc(f.value ?? "")}" ${f.required ? "required" : ""}></label><label>Evidence or reason<input class="input" name="reason" required placeholder="What supports this correction?"></label><button type="submit" ${busy ? "disabled" : ""}>Save correction</button></form></details><div class="request-actions"><button data-clarify="rescan" data-key="${k}">Request clearer image</button><button data-clarify="prescriber" data-key="${k}">Draft prescriber clarification</button></div>` : ""}</div>` : ""}</article>`;
+}
+function checksHTML(f) {
+  if (!Array.isArray(f.checks) || !f.checks.length)
+    return f.reasons?.length ? `<ul class="reasons">${f.reasons.map((x) => "<li>" + esc(x) + "</li>").join("")}</ul>` : "";
+  const failed = f.checks.filter((c) => !c.passed);
+  const next = failed.find((c) => c.next_step);
+  return `${next ? `<div class="next-step"><span class="eyebrow">Suggested next step</span>${esc(next.next_step)}</div>` : ""}<div class="checklist" aria-label="Checks run on this field"><span class="eyebrow">Checks run · ${f.checks.length - failed.length} of ${f.checks.length} passed</span>${f.checks
+    .map((c) => `<div class="check ${c.passed ? "ok" : "fail"}"><span class="check-mark" aria-hidden="true">${c.passed ? "✓" : "✕"}</span><span><span class="sr-only">${c.passed ? "Passed: " : "Failed: "}</span>${esc(c.label)}${!c.passed && c.detail ? `<small>${esc(c.detail)}</small>` : ""}</span></div>`)
+    .join("")}</div>`;
+}
+function pipelineHTML() {
+  const t = cur.timings_ms || {}, g = cur.sponsors?.guardrail || {}, r = cur.sponsors?.reader || {}, kb = cur.sponsors?.kb || {};
+  const flagged = Object.values(cur.fields || {}).filter((f) => ["missing", "needs_review"].includes(f.status)).length;
+  const steps = [
+    ["Read", (cur.ocr?.lines || []).length ? "ok" : "fail", `${(cur.ocr?.lines || []).length} lines`, t.ocr],
+    ["Guard", g.blocked ? "fail" : "ok", g.blocked ? "blocked" : "clean", t.guardrail],
+    ["Extract", cur.status === "blocked" ? "skip" : r.ok === false ? "fail" : "ok", cur.status === "blocked" ? "not run" : r.engine?.startsWith("Nicrron") ? "Nicrron" : "demo", t.extract],
+    ["Check", cur.status === "blocked" ? "skip" : flagged ? "warn" : "ok", cur.status === "blocked" ? "not run" : flagged ? `${flagged} flagged` : "all passed", t.checks],
+    ["Reference", cur.status === "blocked" ? "skip" : kb.status === "supported" ? "ok" : "skip", cur.status === "blocked" ? "not run" : kb.status || "n/a", t.kb],
+  ];
+  return `<ol class="pipeline" aria-label="Processing steps">${steps
+    .map(([n, st, d, ms]) => `<li class="${st}"><span class="dot" aria-hidden="true">${st === "ok" ? "✓" : st === "fail" ? "✕" : st === "warn" ? "!" : "–"}</span><b>${n}</b><small>${esc(d)}${Number.isFinite(ms) ? " · " + ms + " ms" : ""}</small></li>`)
+    .join("")}</ol>`;
 }
 function detailsHTML() {
   const s = cur.sponsors || {},
@@ -441,7 +464,11 @@ async function boot() {
       `<p><strong>OCR:</strong> ${esc(h.ocr)}</p><p><strong>Reader:</strong> ${esc(h.nicrron)}</p><p><strong>PRISM:</strong> ${esc(h.prism)}</p><p>Configuration does not establish a successful live call.</p>`;
     await refresh();
     if (location.hash.length > 1)
-      await openDoc(decodeURIComponent(location.hash.slice(1)));
+    {
+      const [docId, field] = decodeURIComponent(location.hash.slice(1)).split("?field=");
+      await openDoc(docId);
+      if (field && cur?.fields?.[field]) { selected = field; renderPanel(); }
+    }
     setInterval(() => refresh().catch(() => {}), 5000);
   } catch (e) {
     $("#queue").innerHTML =

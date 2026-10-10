@@ -137,11 +137,15 @@ def process(image_bytes: bytes, mime: str, *, doc_id: str | None = None, source:
     for name in FIELDS:
         f = fields.get(name) or {"value": None, "source_text": ""}
         box, conf = find_box(lines, f.get("source_text", ""), f.get("value"))
-        problems = checks.check_field(name, f.get("value"), fields)
+        log = checks.explain_field(name, f.get("value"), fields)
         if f.get("conflict"):
-            problems.append("Two incompatible readings on the page: " + (f.get("note") or "see fax"))
-        if conf is not None and conf < OCR_LOW and f.get("value"):
-            problems.append(f"Hard to read here (recogniser score {conf:.2f}).")
+            log.append(checks._c("field.single_reading", "One consistent reading on the page", False,
+                                 "Two incompatible readings: " + (f.get("note") or "see fax"),
+                                 "Ask the prescriber which value is intended."))
+        if conf is not None and f.get("value"):
+            log.append(checks._c("ocr.legible", "Clearly legible (recogniser score)", conf >= OCR_LOW,
+                                 f"Recogniser score {conf:.2f}.", "Compare this value with the fax image; request a clearer scan if unsure."))
+        problems = [c["detail"] for c in log if not c["passed"]]
         if f.get("value") is None and name not in required and name != "refills":
             status = "not_applicable"
         elif f.get("value") is None:
@@ -151,7 +155,7 @@ def process(image_bytes: bytes, mime: str, *, doc_id: str | None = None, source:
         else:
             status = "checks_passed"
         rec["fields"][name] = {"value": f.get("value"), "source_text": f.get("source_text", ""), "box": box,
-                               "ocr_score": conf, "status": status, "reasons": problems,
+                               "ocr_score": conf, "status": status, "reasons": problems, "checks": log,
                                "required": name in required, "note": f.get("note", "")}
     t["checks"] = int((time.monotonic() - s) * 1000)
 
