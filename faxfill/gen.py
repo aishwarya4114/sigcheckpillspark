@@ -519,18 +519,20 @@ def add_noise(img, boxes, kind, rng):
     return Image.fromarray((a * 255).astype(np.uint8)).convert("1"), band
 
 
-def main():
+def main(out=None, case_list=None):
+    """out: folder to write into (default data/faxes); case_list: cases to render (default: the dev set)."""
+    out = out or OUT
     drugs, prescribers, unknown, patients = load_ref()
-    OUT.mkdir(parents=True, exist_ok=True)
+    out.mkdir(parents=True, exist_ok=True)
     manifest = []
-    for cs in cases(drugs, prescribers, unknown, patients):
+    for cs in (case_list if case_list is not None else cases(drugs, prescribers, unknown, patients)):
         if not cs.get("v2"):
             # original single-page answer-key schema; output kept byte-identical
             rng = random.Random(cs["id"])
             pg, truth, meta = render(cs, rng)
             img, deg = degrade(pg.img, cs["level"], rng)
             boxes = {k: rotate_box(b, deg["skew_deg"]) for k, b in pg.boxes.items()}
-            img.save(OUT / f"{cs['id']}.png", dpi=(DPI, DPI), optimize=True)
+            img.save(out / f"{cs['id']}.png", dpi=(DPI, DPI), optimize=True)
             gt = {
                 "id": cs["id"],
                 "image": f"{cs['id']}.png",
@@ -546,7 +548,7 @@ def main():
                 "expect_abstain": cs.get("expect_abstain", []),
                 "meta": meta,
             }
-            json.dump(gt, open(OUT / f"{cs['id']}.json", "w"), indent=1)
+            json.dump(gt, open(out / f"{cs['id']}.json", "w"), indent=1)
             manifest.append({"id": cs["id"], "trap": cs["trap"], "style": cs["style"], "level": cs["level"],
                              "flags": [f["code"] for f in gt["expected_flags"]]})
             continue
@@ -573,7 +575,7 @@ def main():
             if sub.get("noise"):
                 img, noise_box = add_noise(img, boxes, sub["noise"], rng)
             fname = f"{cs['id']}_p{n}.png"
-            img.save(OUT / fname, dpi=(DPI, DPI), optimize=True)
+            img.save(out / fname, dpi=(DPI, DPI), optimize=True)
             page_files.append(fname)
             degs.append(deg)
             if truncated_px is not None:   # every critical field the cut reached is flagged, not just the drug
@@ -610,10 +612,10 @@ def main():
             "expected_order_status": cs.get("expect_order", "needs_review" if flags else "ready_for_review"),
             "expect_abstain": cs.get("expect_abstain", []),
         }
-        json.dump(gt, open(OUT / f"{cs['id']}.json", "w"), indent=1)
+        json.dump(gt, open(out / f"{cs['id']}.json", "w"), indent=1)
         manifest.append({"id": cs["id"], "trap": cs["trap"], "style": cs["style"], "level": cs["level"],
                          "pages": page_files, "pages_declared": declared, "flags": [f["code"] for f in flags]})
-    json.dump(manifest, open(OUT / "manifest.json", "w"), indent=1)
+    json.dump(manifest, open(out / "manifest.json", "w"), indent=1)
     return manifest
 
 

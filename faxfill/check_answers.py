@@ -15,7 +15,7 @@ from faxfill.ids import dea_valid, npi_valid
 from faxfill.ref import load_drugs
 
 REF = Path(__file__).parent / "ref"
-FAXES = Path(__file__).parent / "data" / "faxes"
+FAXES = Path(__file__).parent / "data" / ("heldout" if "--heldout" in sys.argv else "faxes")
 FREQ = {"once daily": 1, "twice daily": 2, "three times daily": 3, "at bedtime": 1, "every morning": 1, "daily": 1,
         "BID": 2, "TID": 3, "QHS": 1, "QAM": 1, "once weekly": 1 / 7}
 # visual / policy traps: not derivable from field values, checked structurally below
@@ -81,7 +81,7 @@ def main():
     directory = {r["npi"] for r in csv.DictReader(open(REF / "prescribers.csv"))}
     problems, n, n_pages = [], 0, 0
     keyed_pages = set()
-    for fn in sorted(glob.glob(str(FAXES / "rx_*.json"))):
+    for fn in sorted(glob.glob(str(FAXES / "*_[0-9][0-9][0-9].json"))):
         gt = json.load(open(fn))
         n += 1
         fid = gt["id"]
@@ -133,7 +133,7 @@ def main():
             if not alt:
                 problems.append(f"{fid}: ambiguous_digit without plausible_misreads")
 
-    stray = {p.name for p in FAXES.glob("rx_*.png")} - keyed_pages
+    stray = {p.name for p in FAXES.glob("*.png")} - keyed_pages
     if stray:
         problems.append(f"page files without an answer key: {sorted(stray)}")
     manifest = json.load(open(FAXES / "manifest.json"))

@@ -7,10 +7,13 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from faxfill.verify import VERDICTS, norm
+from faxfill.verify import HELDOUT_VERDICTS, VERDICTS, norm
 
 ROOT = Path(__file__).parent
-FAXES = ROOT / "data" / "faxes"
+HELDOUT = "--heldout" in sys.argv
+FAXES = ROOT / "data" / ("heldout" if HELDOUT else "faxes")
+VERDICT_DIR = HELDOUT_VERDICTS if HELDOUT else VERDICTS
+REPORT = "heldout" if HELDOUT else "dev_report"
 OUT = ROOT / "data" / "eval"
 
 # answer-key reason code -> verifier codes that catch it "for the right reason"
@@ -54,8 +57,8 @@ def prescriptions(gt):
 
 
 def main():
-    keys = {json.load(open(p))["id"]: json.load(open(p)) for p in sorted(FAXES.glob("rx_*.json"))}
-    verdicts = {fid: json.load(open(VERDICTS / f"{fid}.json")) for fid in keys if (VERDICTS / f"{fid}.json").exists()}
+    keys = {json.load(open(p))["id"]: json.load(open(p)) for p in sorted(FAXES.glob("*_[0-9][0-9][0-9].json"))}
+    verdicts = {fid: json.load(open(VERDICT_DIR / f"{fid}.json")) for fid in keys if (VERDICT_DIR / f"{fid}.json").exists()}
     missing = sorted(set(keys) - set(verdicts))
     acc = Counter()
     per_field = defaultdict(Counter)
@@ -130,8 +133,12 @@ def main():
     n_val = acc["correct"] + acc["wrong"]
     lines = []
     P = lines.append
-    P(f"DEV-SET EVALUATION  ({len(verdicts)} faxes, {sum(len(prescriptions(g)) for g in keys.values())} prescriptions; "
-      f"synthetic; thresholds tuned on this set, so these are NOT the final scorecard numbers)")
+    if HELDOUT:
+        P(f"HELD-OUT EVALUATION  ({len(verdicts)} faxes, {sum(len(prescriptions(g)) for g in keys.values())} prescriptions; "
+          f"synthetic; generated after the rules were frozen; no rule or threshold changed before scoring)")
+    else:
+        P(f"DEV-SET EVALUATION  ({len(verdicts)} faxes, {sum(len(prescriptions(g)) for g in keys.values())} prescriptions; "
+          f"synthetic; thresholds tuned on this set, so these are NOT the final scorecard numbers)")
     if missing:
         P(f"!! no verdict for: {missing}")
     P("")
@@ -188,11 +195,11 @@ def main():
 
     report = "\n".join(lines)
     OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / "dev_report.txt").write_text(report + "\n")
+    (OUT / f"{REPORT}.txt").write_text(report + "\n")
     json.dump({"accuracy": dict(acc), "per_field": {k: dict(v) for k, v in per_field.items()},
                "verified_wrong": verified_wrong, "traps": traps, "clean_flags": clean_flags,
                "unexplained_flags": unexplained, "c_only_flags": c_only, "status": status_pairs},
-              open(OUT / "dev_report.json", "w"), indent=1)
+              open(OUT / f"{REPORT}.json", "w"), indent=1)
     print(report)
     return 0
 

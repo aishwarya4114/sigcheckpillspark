@@ -24,6 +24,11 @@ from faxfill.readers import FIELDS, MODELS, read_pages
 
 ROOT = Path(__file__).parent
 VERDICTS = ROOT / "data" / "verdicts"
+HELDOUT_VERDICTS = ROOT / "data" / "heldout" / "verdicts"
+
+
+def verdict_dir(fax_id):
+    return HELDOUT_VERDICTS if fax_id.startswith("ho_") else VERDICTS
 WEIGHTS = json.load(open(ROOT / "danger_weights.json"))["weights"]
 VERIFIER_VERSION = "verifier-v1"
 
@@ -873,21 +878,26 @@ def verify_fax(fax_id, lookup=None, today=None, refresh_reads=False):
         }
     else:
         verdict["prism"] = {"traces_sent": 0, "note": "PRISM not configured (.env)"}
-    VERDICTS.mkdir(parents=True, exist_ok=True)
-    json.dump(verdict, open(VERDICTS / f"{fax_id}.json", "w"), indent=1, default=str)
+    verdict_dir(fax_id).mkdir(parents=True, exist_ok=True)
+    json.dump(verdict, open(verdict_dir(fax_id) / f"{fax_id}.json", "w"), indent=1, default=str)
     return verdict
 
 
-def all_fax_ids():
+def all_fax_ids(heldout=False):
     ids = set()
-    for p in ocr.FAXES.glob("rx_*.png"):
-        m = re.match(r"(rx_\d+)", p.name)
-        ids.add(m.group(1))
+    folder, prefix = (ocr.HELDOUT, "ho") if heldout else (ocr.FAXES, "rx")
+    for p in folder.glob(f"{prefix}_*.png"):
+        ids.add(re.match(rf"({prefix}_\d+)", p.name).group(1))
     return sorted(ids)
 
 
 if __name__ == "__main__":
-    ids = all_fax_ids() if "--all" in sys.argv else [a for a in sys.argv[1:] if not a.startswith("--")]
+    if "--heldout" in sys.argv:
+        ids = all_fax_ids(heldout=True)
+    elif "--all" in sys.argv:
+        ids = all_fax_ids()
+    else:
+        ids = [a for a in sys.argv[1:] if not a.startswith("--")]
     lk = LocalLookup()
     for fid in ids:
         v = verify_fax(fid, lk)

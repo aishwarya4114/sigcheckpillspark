@@ -20,12 +20,18 @@ import numpy as np
 
 DATA = Path(__file__).parent / "data"
 FAXES = DATA / "faxes"
+HELDOUT = DATA / "heldout"          # held-out faxes (ids "ho_NNN"), generated after the rules were frozen
 OCR_DIR = DATA / "ocr"
 OCR_VERSION = "ocr-v1"
 
 
-def pages(fax_id, folder=FAXES):
+def folder_for(fax_id):
+    return HELDOUT if fax_id.startswith("ho_") else FAXES
+
+
+def pages(fax_id, folder=None):
     """Ordered page images for a fax id."""
+    folder = folder or folder_for(fax_id)
     multi = sorted(folder.glob(f"{fax_id}_p*.png"), key=lambda p: int(re.search(r"_p(\d+)\.png$", p.name).group(1)))
     if multi:
         return multi
@@ -141,7 +147,7 @@ def tesseract_version():
     return _TV
 
 
-def run(fax_id, refresh=False, folder=FAXES):
+def run(fax_id, refresh=False, folder=None):
     """OCR every page of a fax; cached in data/ocr/<id>_p<N>.json."""
     OCR_DIR.mkdir(parents=True, exist_ok=True)
     out = []
