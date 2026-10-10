@@ -11,6 +11,13 @@ REQUIRED = ["patient_name", "patient_dob", "drug_name", "strength", "directions"
             "prescriber_name", "prescriber_npi", "date_written"]
 
 
+
+def norm_form(v) -> str:
+    """'Capsules', 'caps', 'tab' -> catalogue spelling ('capsule', 'tablet'). Only spelling, never a different form."""
+    f = (v or "").strip().lower()
+    f = {"caps": "capsule", "cap": "capsule", "tabs": "tablet", "tab": "tablet"}.get(f, f)
+    return f[:-1] if f in ("capsules", "tablets") else f
+
 def load_catalog() -> dict[str, dict]:
     """drug -> {strengths: {(strength, form)}, schedule, lookalikes}"""
     cat: dict[str, dict] = {}
@@ -125,7 +132,7 @@ def check_field(name: str, value: str | None, fields: dict, today: date | None =
         if re.search(r"\d\s*u\b", v, re.I):
             probs.append(f"\"U\" in \"{v}\" can be misread as 0. Always confirmed by a pharmacist.")
         if entry:
-            form = ((fields.get("dosage_form") or {}).get("value") or "").strip().lower()
+            form = norm_form((fields.get("dosage_form") or {}).get("value"))
             norm = re.sub(r"\s+", " ", v.lower()).replace(".0 ", " ")
             if not any(s == norm and (not form or f == form) for s, f in entry["rows"]):
                 avail = ", ".join(sorted({s for s, _ in entry["rows"]}, key=lambda x: float(re.findall(r'[\d.]+', x)[0])))
@@ -213,7 +220,7 @@ def explain_field(name: str, value: str | None, fields: dict, today: date | None
         out.append(_c("strength.units_u", "No \"U\" abbreviation (reads as 0)", not re.search(r"\d\s*u\b", v, re.I),
                       f"\"{v}\" uses U for units.", "Confirm the number of units with the prescriber."))
         if entry:
-            form = ((fields.get("dosage_form") or {}).get("value") or "").strip().lower()
+            form = norm_form((fields.get("dosage_form") or {}).get("value"))
             norm = re.sub(r"\s+", " ", v.lower()).replace(".0 ", " ")
             ok = any(s == norm and (not form or f == form) for s, f in entry["rows"])
             avail = ", ".join(sorted({s for s, _ in entry["rows"]}, key=lambda x: float(re.findall(r"[\d.]+", x)[0])))

@@ -121,7 +121,7 @@ def process(image_bytes: bytes, mime: str, *, doc_id: str | None = None, source:
         rec["prescription_count"] = run.prescription_count
         if run.suspicious_text:
             rec["findings"].append({"field": None, "severity": "review", "box": None,
-                                    "reason": "Reader reported text aimed at software: " + "; ".join(run.suspicious_text)})
+                                    "reason": "The reader noticed something on the page worth a look: " + "; ".join(run.suspicious_text)})
         if not run.ok:
             rec["status"] = "processing_failed"
     else:
