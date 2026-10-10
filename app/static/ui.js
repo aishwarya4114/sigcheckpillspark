@@ -16,7 +16,22 @@ const paths = {
   refresh:
     "M20 7v5h-5 M4 17v-5h5 M5 8a8 8 0 0 1 13-3l2 3 M4 16l2 3a8 8 0 0 0 13-3",
   grid: "M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z",
+  lock: "M6 11h12v10H6z M8 11V8a4 4 0 0 1 8 0v3 M12 15v2",
+  search: "M11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14z M16 16l5 5",
+  x: "M7 7l10 10 M17 7L7 17",
+  dash: "M7 12h10",
+  bang: "M12 6v8 M12 18h.01",
+  external: "M14 4h6v6 M20 4l-9 9 M18 14v6H4V6h6",
+  clock: "M12 7v5l3 2 M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0",
+  phone: "M5 4h4l2 5-3 2a11 11 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2",
+  ban: "M5.6 5.6l12.8 12.8 M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0",
 };
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".brand-mark").forEach((el) => {
+    el.removeAttribute("data-icon");
+    el.innerHTML = '<img src="/static/logo.svg" alt="" width="34" height="34">';
+  });
+});
 window.icon = (name) =>
   `<svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="${paths[name] || paths.file}"/></svg>`;
 window.esc = (s) =>

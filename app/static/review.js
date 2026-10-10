@@ -216,10 +216,10 @@ function issueHTML(i) {
   else if (i.category === "prescriber_clarification")
     acts = i.state === "waiting"
       ? `<form class="resolve-form" data-resolve="${esc(i.key)}"><label>Prescriber's answer (who, how, what)<input class="input" name="note" required placeholder="Dr Patel by phone 2:31 PM: 5 mg"></label>${i.field ? `<label>Value to record (optional)<input class="input" name="value" value="${esc(val ?? "")}"></label>` : ""}<button type="submit">${icon("check")}Record prescriber answer</button></form>`
-      : `<a class="button-link" target="_blank" rel="noopener" href="/api/documents/${encodeURIComponent(cur.id)}/clarification-sheet">${icon("file")}Draft clarification fax</a><button data-contacted="${esc(i.key)}">Mark prescriber contacted</button>`;
+      : `<a class="button-link" target="_blank" rel="noopener" href="/api/documents/${encodeURIComponent(cur.id)}/clarification-sheet">${icon("file")}Draft clarification fax</a><button data-contacted="${esc(i.key)}">${icon("phone")}Mark prescriber contacted</button>`;
   else
-    acts = `${cur.quarantined ? '<span class="small muted">Quarantined for manual review.</span>' : '<button data-quarantine>Quarantine document</button>'}<button data-upload-corrected>Upload corrected document</button>`;
-  return `<article class="issue ${i.state}"><div class="issue-top"><strong>${esc(fl)}${val ? ` · <span class="mono">${esc(val)}</span>` : ""}</strong>${i.state === "waiting" ? '<span class="queue-op blue">Waiting</span>' : ""}</div><p>${esc(i.message)}</p>${i.next_step ? `<p class="small"><b>Next:</b> ${esc(i.next_step)}</p>` : ""}<details class="why"><summary>Why was this flagged?</summary><p class="small">Rule <span class="mono">${esc(i.code)}</span> · source: ${esc(i.source)} · policy ${esc(cur.policy?.version || "")}${i.category === "prescriber_clarification" ? ". Confirming that the fax says this does not resolve it: the prescriber must answer." : ""}</p></details><div class="issue-actions">${acts}</div></article>`;
+    acts = `${cur.quarantined ? '<span class="small muted">Quarantined for manual review.</span>' : '<button data-quarantine>' + icon("lock") + 'Quarantine document</button>'}<button data-upload-corrected>${icon("upload")}Upload corrected document</button>`;
+  return `<article class="issue ${i.state}"><div class="issue-top"><strong>${esc(fl)}${val ? ` · <span class="mono">${esc(val)}</span>` : ""}</strong>${i.state === "waiting" ? `<span class="queue-op blue">${icon("clock")}Waiting</span>` : ""}</div><p>${esc(i.message)}</p>${i.next_step ? `<p class="small"><b>Next:</b> ${esc(i.next_step)}</p>` : ""}<details class="why"><summary>Why was this flagged?</summary><p class="small">Rule <span class="mono">${esc(i.code)}</span> · source: ${esc(i.source)} · policy ${esc(cur.policy?.version || "")}${i.category === "prescriber_clarification" ? ". Confirming that the fax says this does not resolve it: the prescriber must answer." : ""}</p></details><div class="issue-actions">${acts}</div></article>`;
 }
 function orderTableHTML() {
   const f = cur.fields || {};
@@ -231,7 +231,7 @@ function checksHTML(f) {
   const failed = f.checks.filter((c) => !c.passed);
   const next = failed.find((c) => c.next_step);
   return `${next ? `<div class="next-step"><span class="eyebrow">Suggested next step</span>${esc(next.next_step)}</div>` : ""}<div class="checklist" aria-label="Checks run on this field"><span class="eyebrow">Checks run · ${f.checks.length - failed.length} of ${f.checks.length} passed</span>${f.checks
-    .map((c) => `<div class="check ${c.passed ? "ok" : "fail"}"><span class="check-mark" aria-hidden="true">${c.passed ? "✓" : "✕"}</span><span><span class="sr-only">${c.passed ? "Passed: " : "Failed: "}</span>${esc(c.label)}${!c.passed && c.detail ? `<small>${esc(c.detail)}</small>` : ""}</span></div>`)
+    .map((c) => `<div class="check ${c.passed ? "ok" : "fail"}"><span class="check-mark" aria-hidden="true">${icon(c.passed ? "check" : "x")}</span><span><span class="sr-only">${c.passed ? "Passed: " : "Failed: "}</span>${esc(c.label)}${!c.passed && c.detail ? `<small>${esc(c.detail)}</small>` : ""}</span></div>`)
     .join("")}</div>`;
 }
 function pipelineHTML() {
@@ -245,7 +245,7 @@ function pipelineHTML() {
     ["Reference", cur.status === "blocked" ? "skip" : kb.status === "supported" ? "ok" : "skip", cur.status === "blocked" ? "not run" : kb.status || "n/a", t.kb],
   ];
   return `<ol class="pipeline" aria-label="Processing steps">${steps
-    .map(([n, st, d, ms]) => `<li class="${st}"><span class="dot" aria-hidden="true">${st === "ok" ? "✓" : st === "fail" ? "✕" : st === "warn" ? "!" : "–"}</span><b>${n}</b><small>${esc(d)}${Number.isFinite(ms) ? " · " + ms + " ms" : ""}</small></li>`)
+    .map(([n, st, d, ms]) => `<li class="${st}"><span class="dot" aria-hidden="true">${icon(st === "ok" ? "check" : st === "fail" ? (n === "Guard" ? "ban" : "x") : st === "warn" ? "bang" : "dash")}</span><b>${n}</b><small>${esc(d)}${Number.isFinite(ms) ? " · " + ms + " ms" : ""}</small></li>`)
     .join("")}</ol>`;
 }
 async function openRules() {
@@ -259,7 +259,7 @@ async function openRules() {
   <label class="rules-row">Prescription validity window (days) <output id="age-out">${p.policy.max_rx_age_days}</output>
     <input id="age" type="range" min="${lim.max_rx_age_days[0]}" max="${lim.max_rx_age_days[1]}" step="1" value="${p.policy.max_rx_age_days}" oninput="document.getElementById('age-out').textContent=this.value"></label>
   <h3 class="rules-h">Safety rules (always on, not configurable)</h3>
-  <ul class="locked-rules">${p.locked_rules.map((r) => `<li><span aria-hidden="true">🔒</span>${esc(r)}</li>`).join("")}</ul>
+  <ul class="locked-rules">${p.locked_rules.map((r) => `<li>${icon("lock")}${esc(r)}</li>`).join("")}</ul>
   <h3 class="rules-h">Data sources</h3>
   <ul class="small">${p.data_sources.map((d) => `<li>${esc(d)}</li>`).join("")}</ul>
   <button class="primary" id="rerun-button" ${can ? "" : "disabled"}>${icon("check")}Re-run checks on this extraction</button>

@@ -3,7 +3,7 @@ async function loadScorecard() {
   try {
     const s = await api("/api/scorecard");
     if (s.error) throw Error(s.error);
-    const pct = (a, b) => (b ? Math.round((100 * a) / b) + "%" : "—");
+    const pct = (a, b) => (b ? Math.round((100 * a) / b) + "%" : "n/a");
     const metrics = [
       [
         "Planted errors caught",
