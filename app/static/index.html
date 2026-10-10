@@ -25,7 +25,8 @@
         <div class="workspace-label"><span></span>PHARMACY WORKSPACE</div>
         <nav class="queue-nav" aria-label="Workspace shortcuts">
           <a class="active" href="/">Review queue</a>
-          <a href="/scan">Scan paper Rx</a>
+          <a href="/system-design">System design</a>
+          <a href="/pitch">Pitch</a>
           <a href="/scorecard" class="tech-only">Scorecard</a>
         </nav>
         <div class="side-actions">
@@ -38,8 +39,9 @@
             accept="image/png,image/jpeg"
           />
         </div>
+        <section class="hello" id="hello" aria-label="Today at a glance"></section>
         <div class="queue-heading">
-          <div><span class="eyebrow">Today’s worklist</span><h1>Prescription review</h1><p>Prioritized by the next action required from the pharmacy team.</p></div
+          <div><span class="eyebrow">Today’s worklist</span><h1>Your worklist</h1><p>Prioritized by the next action required from the pharmacy team.</p></div
           ><span id="queue-count" class="queue-count">0</span>
         </div>
         <div class="segmented ops-filter" aria-label="Filter queue">
@@ -58,9 +60,9 @@
             ><input type="checkbox" id="tech-toggle" /> Show technical details</label
           >
           <div class="profile">
-            <span class="avatar">RX</span>
+            <span class="avatar" id="profile-avatar">RX</span>
             <div>
-              <strong class="small">Pharmacist</strong>
+              <strong class="small" id="profile-name">Pharmacist</strong>
               <p class="muted small">Prescription intake</p>
             </div>
           </div>
@@ -73,8 +75,7 @@
           </div>
           <div class="topbar-right">
             <nav class="topnav" aria-label="Main">
-              <a href="/scan"><span data-icon="camera"></span>Scan paper Rx</a
-              ><a href="/system-design"><span data-icon="grid"></span>System design</a
+              <a href="/system-design"><span data-icon="grid"></span>System design</a
               ><a href="/pitch"><span data-icon="chart"></span>Pitch</a
               ><span class="tech-only topnav-tech"
                 ><button id="samples-button" class="topnav-btn"><span data-icon="file"></span>Samples</button

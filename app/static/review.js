@@ -48,6 +48,56 @@ const PLAIN_SOURCE = { "Apple Vision": "how clearly the scanner could read this 
   "demonstration catalogue": "the pharmacy's drug catalogue", "intake policy + catalogue": "the intake policy and the drug catalogue", "intake policy": "the pharmacy's intake policy",
   "format check": "a basic format check", "local guardrail + PRISM trace": "the safety screen that runs before any automated reading", "reader": "the automated reading step" };
 const ago = (t) => { const m = Math.max(0, Math.round((Date.now() - new Date(t)) / 60000)); return m < 1 ? "just now" : m < 60 ? m + " min ago" : Math.round(m / 60) + " h ago"; };
+
+// Personal dashboard: greeting, today's counts and the next case. The name stays in this browser only.
+const NAME_KEY = "sigcheck.pharmacist";
+let editingName = false;
+function myName() { try { return (localStorage.getItem(NAME_KEY) || "").trim(); } catch { return ""; } }
+function me() { return myName() || "pharmacist"; }
+function saveName(v) { try { v ? localStorage.setItem(NAME_KEY, v) : localStorage.removeItem(NAME_KEY); } catch {} }
+function greeting(d = new Date()) { const h = d.getHours(); return h < 5 ? "Working late" : h < 12 ? "Good morning" : h < 17 ? "Good afternoon" : "Good evening"; }
+function renderHello() {
+  const el = $("#hello");
+  if (!el) return;
+  const name = myName(), first = name.split(/\s+/)[0];
+  const initials = name ? name.split(/\s+/).map((w) => w[0]).join("").slice(0, 2).toUpperCase() : "RX";
+  if ($("#profile-avatar")) $("#profile-avatar").textContent = initials;
+  if ($("#profile-name")) $("#profile-name").textContent = name || "Pharmacist";
+  const by = (list) => queue.filter((d) => list.includes(d.workflow_status));
+  const need = by(["new", "needs_verification", "needs_clarification", "blocked"]), wait = by(["waiting_for_prescriber"]), ready = by(["ready_for_approval"]);
+  const done = by(["approved"]);
+  const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
+  let summary;
+  if (!queue.length) summary = "No prescriptions yet today. Add one to get started.";
+  else if (!need.length && !ready.length) summary = wait.length ? `You're caught up. ${plural(wait.length, "case is", "cases are")} waiting on a prescriber.` : "You're all caught up. Nice work.";
+  else summary = [need.length && `${plural(need.length, "prescription needs", "prescriptions need")} your review`, ready.length && `${plural(ready.length, "is", "are")} ready to approve`, wait.length && `${plural(wait.length, "is", "are")} waiting on a prescriber`].filter(Boolean).join(", ").replace(/, ([^,]*)$/, " and $1") + ".";
+  const blocked = need.filter((d) => d.workflow_status === "blocked").length;
+  const next = need.find((d) => d.workflow_status !== "blocked") || ready[0] || need[0];
+  const date = new Date().toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric" });
+  const tile = (f, n, label, hint, tone, ic) => `<button class="hello-tile ${tone}" data-filter="${f}" aria-pressed="${filter === f}"><span class="hello-tile-icon">${icon(ic)}</span><b>${n}</b><span>${label}</span><small>${hint}</small></button>`;
+  el.innerHTML = `<div class="hello-top">
+      <div><span class="eyebrow">${esc(date)}</span>
+        <h1>${greeting()}${first ? ", " + esc(first) : ""}.</h1>
+        <p>${esc(summary)}</p></div>
+      <div class="hello-name">${editingName
+        ? `<form id="name-form"><label for="name-input" class="small muted">Your name</label><input id="name-input" value="${esc(name)}" autocomplete="name" placeholder="e.g. Priya Shah" /><button class="primary">Save</button></form>`
+        : `<button class="quiet small" id="name-edit">${name ? "Not you? Change name" : "Add your name"}</button>`}</div>
+    </div>
+    <div class="hello-tiles">
+      ${tile("needs_action", need.length, "Needs your review", blocked ? `${blocked} blocked for safety` : "Confirm or correct", "amber", "alert")}
+      ${tile("waiting", wait.length, "Waiting on prescriber", "Clarification sent", "blue", "clock")}
+      ${tile("ready", ready.length, "Ready to approve", "All checks resolved", "green", "check")}
+      ${tile("completed", done.length, "Approved drafts", "Ready for entry", "", "file")}
+    </div>
+    ${next ? `<div class="hello-next"><div><span class="eyebrow">Up next</span><strong>${esc(next.patient || "Prescription")} · ${esc(next.drug || "Awaiting reading")}</strong><p>${esc(next.next_action || "Open the case to start review.")}</p></div><button class="primary" data-doc="${esc(next.id)}">Start review ${icon("arrow")}</button></div>`
+      : `<div class="hello-next empty"><div><span class="eyebrow">Up next</span><strong>${queue.length ? "Nothing needs you right now" : "Your queue is empty"}</strong><p>Upload a faxed or photographed prescription and SigCheck will read and check it for you.</p></div><button class="primary" id="hello-upload">${icon("plus")} New prescription</button></div>`}`;
+  const form = $("#name-form");
+  if (form) {
+    const inp = $("#name-input"); inp.focus(); inp.select();
+    form.addEventListener("submit", (e) => { e.preventDefault(); saveName(inp.value.trim()); editingName = false; renderHello(); });
+    inp.addEventListener("keydown", (e) => { if (e.key === "Escape") { editingName = false; renderHello(); } });
+  }
+}
 function renderQueue() {
   const GROUP = { needs_action: ["new", "needs_verification", "needs_clarification", "blocked"], waiting: ["waiting_for_prescriber"], ready: ["ready_for_approval"], completed: ["approved"] };
   const inGroup = (d, g) => g === "all" || (GROUP[g] || [g]).includes(d.workflow_status);
@@ -72,6 +122,7 @@ function renderQueue() {
         </button>`;
       }).join("")
     : '<div class="queue-empty">' + (filter === "all" ? "Your queue is clear. Upload a fax or explore a sample." : "Nothing in this step right now.") + "</div>";
+  renderHello();
 }
 function showQueueView() {
   cur = null;
@@ -463,7 +514,7 @@ document.addEventListener("click", async (e) => {
   if (b.dataset.confirmNext) {
     const k = b.dataset.confirmNext;
     await mutate(async () => {
-      const doc = await api(`/api/documents/${cur.id}/fields/${k}`, jsonPost({ action: "confirm", revision: cur.revision, reviewer: "pharmacist", reason: "Verified against the original fax" }));
+      const doc = await api(`/api/documents/${cur.id}/fields/${k}`, jsonPost({ action: "confirm", revision: cur.revision, reviewer: me(), reason: "Verified against the original fax" }));
       toast(labels[k] + " verified");
       return doc;
     });
@@ -481,7 +532,7 @@ document.addEventListener("click", async (e) => {
   if (b.dataset.contacted) {
     const key = b.dataset.contacted;
     await mutate(async () => {
-      const d = await api(`/api/documents/${cur.id}/issues/${encodeURIComponent(key)}/contacted`, jsonPost({ note: "Prescriber contacted", revision: cur.revision, reviewer: "pharmacist" }));
+      const d = await api(`/api/documents/${cur.id}/issues/${encodeURIComponent(key)}/contacted`, jsonPost({ note: "Prescriber contacted", revision: cur.revision, reviewer: me() }));
       toast("Marked as contacted. The case is waiting for the prescriber.");
       return d;
     });
@@ -510,6 +561,15 @@ document.addEventListener("click", async (e) => {
       });
     };
     inp.click();
+    return;
+  }
+  if (b.id === "name-edit") {
+    editingName = true;
+    renderHello();
+    return;
+  }
+  if (b.id === "hello-upload") {
+    $("#upload").click();
     return;
   }
   if (b.hasAttribute("data-back-queue")) {
@@ -559,7 +619,7 @@ document.addEventListener("click", async (e) => {
         jsonPost({
           action: "confirm",
           revision: cur.revision,
-          reviewer: "pharmacist",
+          reviewer: me(),
           reason: "Reviewed against original fax",
         }),
       );
@@ -586,7 +646,7 @@ document.addEventListener("click", async (e) => {
   }
   if (b.dataset.action === "approve") {
     await mutate(async () => {
-      const o = jsonPost({ revision: cur.revision, reviewer: "pharmacist" });
+      const o = jsonPost({ revision: cur.revision, reviewer: me() });
       o.headers["X-Role"] = "pharmacist";
       const d = await api(`/api/documents/${cur.id}/approve`, o);
       toast("Draft approved. Your export is ready.");
@@ -632,7 +692,7 @@ document.addEventListener("submit", (e) => {
   if (e.target.matches("[data-resolve]")) {
     e.preventDefault();
     const key = e.target.dataset.resolve, fd = new FormData(e.target);
-    const body = { note: String(fd.get("note") || "").trim(), revision: cur.revision, reviewer: "pharmacist" };
+    const body = { note: String(fd.get("note") || "").trim(), revision: cur.revision, reviewer: me() };
     if (fd.has("value")) body.value = String(fd.get("value"));
     mutate(async () => {
       const d = await api(`/api/documents/${cur.id}/issues/${encodeURIComponent(key)}/resolve`, jsonPost(body));
@@ -653,7 +713,7 @@ document.addEventListener("submit", (e) => {
         value: String(fd.get("value")).trim() || null,
         reason: String(fd.get("reason")).trim(),
         revision: cur.revision,
-        reviewer: "pharmacist",
+        reviewer: me(),
       }),
     );
     toast("Correction saved with your reason.");
