@@ -190,8 +190,8 @@ def assess_fields(fields: dict, located: dict, pol: dict) -> dict:
                                  "Two incompatible readings: " + (f.get("note") or "see fax"),
                                  "Ask the prescriber which value is intended."))
         if conf is not None and f.get("value"):
-            log.append(checks._c("ocr.legible", f"Recognizer score at least {threshold:.2f}", conf >= threshold,
-                                 f"Recognizer score {conf:.2f} (policy threshold {threshold:.2f}).",
+            log.append(checks._c("ocr.legible", "Clearly legible on the fax", conf >= threshold,
+                                 "This part of the fax is hard to read.",
                                  "Compare this value with the fax image; request a clearer scan if unsure."))
         problems = [c["detail"] for c in log if not c["passed"]]
         if f.get("value") is None and name not in required and name != "refills":

@@ -26,7 +26,19 @@ const paths = {
   phone: "M5 4h4l2 5-3 2a11 11 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2",
   ban: "M5.6 5.6l12.8 12.8 M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0",
 };
+// Pharmacist view by default; "Show technical details" reveals traces, codes, scores and admin tools.
+window.techMode = () => { try { return localStorage.getItem("sigcheck_tech") === "1"; } catch { return false; } };
+const applyTech = () => document.documentElement.classList.toggle("tech", window.techMode());
+applyTech();
+document.addEventListener("change", (e) => {
+  if (e.target?.id !== "tech-toggle") return;
+  try { localStorage.setItem("sigcheck_tech", e.target.checked ? "1" : "0"); } catch {}
+  applyTech();
+  document.dispatchEvent(new Event("sigcheck:tech"));
+});
 document.addEventListener("DOMContentLoaded", () => {
+  const t = document.getElementById("tech-toggle");
+  if (t) t.checked = window.techMode();
   document.querySelectorAll(".brand-mark").forEach((el) => {
     el.removeAttribute("data-icon");
     el.innerHTML = '<img src="/static/logo.svg" alt="" width="34" height="34">';

@@ -17,8 +17,8 @@
       <aside class="sidebar" aria-label="Prescription queue">
         <a class="brand" href="/"
           ><span class="brand-mark" data-icon="shield"></span>SigCheck<span
-            class="badge"
-            >Beta</span
+            class="badge tech-only"
+            >Prototype</span
           ></a
         >
         <div class="workspace-label"><span></span>PHARMACY WORKSPACE</div>
@@ -50,22 +50,28 @@
           <div class="loading"><span class="spinner"></span>Loading queue</div>
         </div>
         <div class="sidebar-bottom">
-          <button id="samples-button" class="side-link">
-            <span data-icon="grid"></span>Explore sample faxes</button
-          ><a class="side-link" href="/scan"
-            ><span data-icon="camera"></span>Phone capture</a
-          ><a class="side-link" href="/scorecard"
-            ><span data-icon="chart"></span>Evaluation scorecard</a
-          ><button class="side-link" id="rules-button">
-            <span data-icon="shield"></span>Policy &amp; system (admin)</button
-          ><button class="side-link" id="system-button">
-            <span data-icon="info"></span>Connection details
-          </button>
+          <a class="side-link" href="/scan"
+            ><span data-icon="camera"></span>Scan a paper prescription</a
+          ><div class="tech-only tech-links">
+            <span class="eyebrow tech-heading">Technical</span
+            ><button id="samples-button" class="side-link">
+              <span data-icon="grid"></span>Sample faxes (synthetic)</button
+            ><a class="side-link" href="/scorecard"
+              ><span data-icon="chart"></span>Evaluation scorecard</a
+            ><button class="side-link" id="rules-button">
+              <span data-icon="shield"></span>Policy &amp; system (admin)</button
+            ><button class="side-link" id="system-button">
+              <span data-icon="info"></span>Connection details
+            </button>
+          </div>
+          <label class="side-link tech-switch"
+            ><input type="checkbox" id="tech-toggle" /> Show technical details</label
+          >
           <div class="profile">
             <span class="avatar">RX</span>
             <div>
-              <strong class="small">Pharmacist workspace</strong>
-              <p class="muted small">Synthetic demo · review required</p>
+              <strong class="small">Pharmacist</strong>
+              <p class="muted small">Prescription intake</p>
             </div>
           </div>
         </div>
@@ -76,13 +82,12 @@
             Workspace <span>/</span> <b>Prescription review</b>
           </div>
           <div class="topbar-right">
-            <a href="/scan">Open phone capture <span data-icon="external"></span></a
-            ><span class="badge amber" id="mode">Checking connections</span>
+            <a href="/scan">Scan a paper prescription <span data-icon="external"></span></a
+            ><span class="badge amber tech-only" id="mode">Checking connections</span>
           </div>
         </header>
         <div class="work-title">
           <div>
-            <div class="eyebrow">Every detail, accounted for</div>
             <h1 id="document-title">Prescription review</h1>
             <p id="document-subtitle">
               From fax to a draft you can stand behind.

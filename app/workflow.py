@@ -159,6 +159,4 @@ def source_kind(src: str) -> str:
         return "Rescan"
     if "phone" in s:
         return "Phone capture"
-    if "sample" in s:
-        return "Fax (synthetic sample)"
-    return "Fax upload"
+    return "Fax"
