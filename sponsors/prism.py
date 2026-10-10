@@ -19,7 +19,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Optional
 
-from . import injection
+from . import injection, redact
 from .config import Settings, settings as default_settings
 
 try:
@@ -93,11 +93,15 @@ class Prism:
                latency_ms: int, tokens_in: int = 0, tokens_out: int = 0, metadata: Optional[dict] = None) -> Delivery:
         if not self.enabled:
             return Delivery(False, False, self.init_error)
+        # Minimum necessary: every string leaving for PRISM is masked (names, dates, NPI/DEA, phones, emails).
+        input_messages = redact.mask_obj(input_messages)
+        output = redact.mask_text(output)
+        metadata = {**redact.mask_obj(metadata or {}), "telemetry": "redacted"}
         payload = {
             "project_id": self.cfg.prism_project_id, "model": model, "input_messages": input_messages,
             "output_message": output, "latency_ms": int(latency_ms), "token_count_input": tokens_in,
             "token_count_output": tokens_out, "agent_id": agent, "agent_name": agent,
-            "session_id": session_id, "metadata": metadata or {},
+            "session_id": session_id, "metadata": metadata,
         }
         # Same payload and endpoint as PRISMtrace.trace_llm, but synchronous so we learn whether it landed.
         try:
@@ -108,8 +112,9 @@ class Prism:
 
     def trace_reader_run(self, doc_id: str, run: Any) -> Delivery:
         """Record one Nicrron extraction call (sponsors.nicrron.ReaderRun)."""
-        out = json.dumps({"ok": run.ok, "fields": run.fields, "prescription_count": run.prescription_count,
-                          "suspicious_text": run.suspicious_text, "error": run.error})[:20000]
+        out = redact.dumps({"ok": run.ok, "fields": redact.field_summary(run.fields),
+                            "prescription_count": run.prescription_count,
+                            "suspicious_text_count": len(run.suspicious_text or []), "error": run.error})
         return self._trace(
             agent=self.cfg.agent_extractor, session_id=doc_id, model=run.model,
             input_messages=[{"role": "user", "content": f"[fax image {doc_id}] extract fields (prompt {run.prompt_version})"}],
@@ -128,7 +133,7 @@ class Prism:
         verdict = {"blocked": result.blocked, "findings": [{"text": f.text, "reason": f.reason} for f in findings]}
         result.prism = self._trace(
             agent=self.cfg.agent_guardrail, session_id=doc_id, model="local-injection-check",
-            input_messages=[{"role": "user", "content": ocr_text[:20000]}],
+            input_messages=[{"role": "user", "content": redact.mask_text(ocr_text)[:20000]}],
             output=json.dumps(verdict), latency_ms=int((time.monotonic() - t0) * 1000),
             metadata={"doc_id": doc_id, "stage": "input_guardrail"},
         )
@@ -146,6 +151,9 @@ class Prism:
             return EvaluationRequest(None, Delivery(False, False, self.init_error), classification)
         if classification not in {"complete_for_review", "needs_clarification", "extraction_failed", "blocked"}:
             raise ValueError("unknown review classification")
+        facts = {**facts, "fields": redact.field_summary(facts.get("fields", {})),
+                 "checks": {k: len(v) for k, v in (facts.get("checks") or {}).items()}}
+        facts = redact.mask_obj(facts)
         # Dashboard output evaluators attach to traces; a trajectory submission alone
         # does not prove that the classification-specific evaluator ran.
         classification_trace = self._trace(
@@ -172,6 +180,7 @@ class Prism:
                                f"has evidence and no blocking finding; missing values stay null; units match the source.",
              "duration_ms": 0},
         ]
+        steps = redact.mask_obj(steps)
         resp = self.pt.submit_trajectory(steps, agent_name=self.cfg.agent_reviewer, agent_id=self.cfg.agent_reviewer,
                                          conversation_id=doc_id, model=model or None,
                                          final_status="success" if classification != "extraction_failed" else "error")

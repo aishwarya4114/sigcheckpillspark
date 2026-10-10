@@ -164,10 +164,11 @@ def process(image_bytes: bytes, mime: str, *, doc_id: str | None = None, source:
 
 def _evaluate(rec: dict, prism: Prism, timings: dict, ocr_text: str) -> None:
     facts = {"ocr_lines": len(rec["ocr"]["lines"]), "guardrail": rec["sponsors"].get("guardrail"),
-             "fields": {k: {"value": v["value"], "status": v["status"]} for k, v in rec["fields"].items()},
+             "fields": rec["fields"],
              "checks": {k: v["reasons"] for k, v in rec["fields"].items() if v["reasons"]},
              "kb": rec["sponsors"].get("kb")}
     ev = prism.request_evaluation(rec["id"], classification=rec["classification"], facts=facts, stage_ms=timings)
+    rec["sponsors"]["telemetry"] = "redacted: PRISM receives statuses and issue codes; names, dates, NPI/DEA, phones and emails are masked"
     rec["sponsors"]["evaluator"] = {"trajectory_id": ev.trajectory_id, "prism": vars(ev.prism),
                                     "verdict": None, "note": "PRISM scores asynchronously; until a verdict arrives this shows as pending, never as a pass."}
     rec["timings_ms"] = timings
