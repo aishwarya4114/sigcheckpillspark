@@ -1,15 +1,15 @@
 {
-  "run_at": "2026-10-10T17:38:10+00:00",
-  "reader": "DEMO label reader (no Nicrron key)",
+  "run_at": "2026-10-10T18:30:39+00:00",
+  "reader": "Nicrron anthropic/claude-sonnet-5",
   "scope": "synthetic test set only (fictional people); not a real-world accuracy claim",
   "faxes": 6,
   "field_accuracy": {
-    "exact": 49,
+    "exact": 53,
     "of": 64
   },
   "verified_precision": {
-    "right": 46,
-    "of": 46,
+    "right": 48,
+    "of": 48,
     "meaning": "when a field passed all checks, how often the value matched the truth"
   },
   "invented_values_on_absent_fields": 0,
@@ -22,7 +22,7 @@
       "fax": "fax_01_clean.png",
       "trap": "Clean prescription",
       "status": "needs_review",
-      "flagged": true,
+      "flagged": false,
       "fields": {
         "patient_name": {
           "truth": "Maria Lopez",
@@ -56,9 +56,9 @@
         },
         "directions": {
           "truth": "1 tab PO BID",
-          "read": "I tab PO BID",
-          "status": "needs_review",
-          "match": false
+          "read": "1 tab PO BID",
+          "status": "checks_passed",
+          "match": true
         },
         "quantity": {
           "truth": "60",
@@ -118,7 +118,7 @@
         },
         "drug_name": {
           "truth": "Warfarin",
-          "read": "warfarin",
+          "read": "Warfarin",
           "status": "checks_passed",
           "match": true
         },
@@ -136,9 +136,9 @@
         },
         "directions": {
           "truth": "1 tab PO daily",
-          "read": "I tab PO daily",
-          "status": "needs_review",
-          "match": false
+          "read": "1 tab PO daily",
+          "status": "checks_passed",
+          "match": true
         },
         "quantity": {
           "truth": "30",
@@ -376,9 +376,9 @@
         },
         "directions": {
           "truth": "1 tab PO BID",
-          "read": "I tab PO BID",
-          "status": "needs_review",
-          "match": false
+          "read": "1 tab PO BID",
+          "status": "checks_passed",
+          "match": true
         },
         "quantity": {
           "truth": "60",
@@ -456,14 +456,14 @@
         },
         "directions": {
           "truth": "1 tab PO daily",
-          "read": "I tab PO daily",
-          "status": "needs_review",
-          "match": false
+          "read": "1 tab PO daily",
+          "status": "checks_passed",
+          "match": true
         },
         "quantity": {
           "truth": "30",
           "read": "30",
-          "status": "checks_passed",
+          "status": "needs_review",
           "match": true
         },
         "refills": {
@@ -481,7 +481,7 @@
         "prescriber_npi": {
           "truth": "1234567893",
           "read": "1234567893",
-          "status": "checks_passed",
+          "status": "needs_review",
           "match": true
         },
         "prescriber_dea": {

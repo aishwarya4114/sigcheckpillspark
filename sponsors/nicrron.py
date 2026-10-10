@@ -131,7 +131,12 @@ class NicrronReader:
         )
 
     def _chat(self, model: str, messages: list[dict]) -> tuple[str, dict, Optional[str]]:
-        resp = self.client.post("/chat/completions", json={"model": model, "messages": messages, "temperature": 0})
+        # Newer Claude models reject `temperature`; omit it and use Nicrron's exact-match cache for repeatability.
+        body = {"model": model, "messages": messages, "max_tokens": 4000}
+        resp = self.client.post("/chat/completions", json=body, headers={"x-nicrron-cache": "true"})
+        if resp.status_code >= 400 and "temperature" not in resp.text and "max_tokens" in resp.text:
+            body.pop("max_tokens")
+            resp = self.client.post("/chat/completions", json=body, headers={"x-nicrron-cache": "true"})
         resp.raise_for_status()
         data = resp.json()
         text = data["choices"][0]["message"]["content"] or ""

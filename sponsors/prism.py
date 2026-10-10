@@ -232,15 +232,18 @@ class Prism:
         if not delivery.accepted:
             return KBResult(False, "Catalogue verification unavailable", source="PRISM KB unavailable", prism=delivery)
         for c in chunks:
+            name = str(c.get("doc_name") or c.get("document_name") or c.get("filename") or "")
             # Other team KB documents must not be allowed to impersonate reference data.
-            if (c.get("document_name") or c.get("filename")) != "catalog.md":
+            if name != "catalog.md":
                 continue
-            content = c.get("content") or ""
-            for line in content.splitlines():
-                cells = [_norm(x) for x in line.strip().strip("|").split("|")]
-                if len(cells) >= 3 and " | ".join(cells[:3]) == row:
-                    return KBResult(True, claim_yes, citation=line.strip(), document=str(c.get("document_name") or c.get("filename") or ""),
-                                    score=c.get("score"), prism=delivery, status="supported")
+            # PRISM returns each chunk flattened to one line, so match the exact row between pipe boundaries.
+            flat = re.sub(r"\s+", " ", (c.get("content") or "").lower())
+            m = re.search(r"\|\s*" + re.escape(_norm(drug)) + r"\s*\|\s*" + re.escape(_norm(strength)) + r"\s*\|\s*"
+                          + re.escape(_norm(form)) + r"\s*\|([^|]*)\|([^|]*)\|", flat)
+            if m:
+                citation = f"{_norm(drug)} | {_norm(strength)} | {_norm(form)} | {m.group(1).strip()} | {m.group(2).strip()}".rstrip(" |")
+                return KBResult(True, claim_yes, citation=citation, document=name,
+                                score=c.get("relevance_score", c.get("score")), prism=delivery, status="supported")
         return KBResult(False, claim_no, prism=delivery, status="no_match")
 
     def kb_policy(self, question: str) -> KBResult:
@@ -255,7 +258,7 @@ class Prism:
         top = policy[0]
         # Retrieval supplies evidence for review, not an entailment verdict on an arbitrary question.
         return KBResult(False, "Retrieved intake-policy passage; relevance requires review", citation=top["content"],
-                        document=str(top.get("document_name") or top.get("filename") or ""),
+                        document=str(top.get("doc_name") or top.get("document_name") or top.get("filename") or ""),
                         score=top.get("score"), prism=delivery, status="retrieved")
 
     def flush(self) -> None:
