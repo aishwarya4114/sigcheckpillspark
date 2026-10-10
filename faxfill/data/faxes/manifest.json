@@ -213,5 +213,90 @@
   "flags": [
    "exceeds_max_daily"
   ]
+ },
+ {
+  "id": "rx_026",
+  "trap": "noise_readable",
+  "style": "typed",
+  "level": "light",
+  "pages": [
+   "rx_026_p1.png"
+  ],
+  "pages_declared": 1,
+  "flags": [
+   "noise_near_critical",
+   "noise_near_critical"
+  ]
+ },
+ {
+  "id": "rx_027",
+  "trap": "noise_ambiguous",
+  "style": "typed",
+  "level": "light",
+  "pages": [
+   "rx_027_p1.png"
+  ],
+  "pages_declared": 1,
+  "flags": [
+   "ambiguous_digit",
+   "noise_near_critical",
+   "noise_near_critical"
+  ]
+ },
+ {
+  "id": "rx_028",
+  "trap": "truncated",
+  "style": "typed",
+  "level": "light",
+  "pages": [
+   "rx_028_p1.png"
+  ],
+  "pages_declared": 1,
+  "flags": [
+   "truncated_edge",
+   "truncated_edge",
+   "truncated_edge"
+  ]
+ },
+ {
+  "id": "rx_029",
+  "trap": "missing_page",
+  "style": "typed",
+  "level": "light",
+  "pages": [
+   "rx_029_p1.png"
+  ],
+  "pages_declared": 2,
+  "flags": [
+   "page_count_mismatch"
+  ]
+ },
+ {
+  "id": "rx_030",
+  "trap": "wrong_patient_page",
+  "style": "typed",
+  "level": "light",
+  "pages": [
+   "rx_030_p1.png",
+   "rx_030_p2.png"
+  ],
+  "pages_declared": 2,
+  "flags": [
+   "missing_patient_id",
+   "missing_patient_id"
+  ]
+ },
+ {
+  "id": "rx_031",
+  "trap": "conflicting_directions",
+  "style": "typed",
+  "level": "light",
+  "pages": [
+   "rx_031_p1.png"
+  ],
+  "pages_declared": 1,
+  "flags": [
+   "conflicting_directions"
+  ]
  }
 ]

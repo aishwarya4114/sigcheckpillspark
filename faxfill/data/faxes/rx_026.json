@@ -1,0 +1,299 @@
+{
+ "id": "rx_026",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "rx_026_p1.png"
+ ],
+ "pages_declared": 1,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": 0.06,
+  "blur": 0.5,
+  "noise": 10,
+  "fax_mode": "fine",
+  "level": "light"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": 0.06,
+   "blur": 0.5,
+   "noise": 10,
+   "fax_mode": "fine",
+   "level": "light"
+  }
+ ],
+ "is_clean": false,
+ "trap": "noise_readable",
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "rx_026_p1.png",
+   "fields": {
+    "patient_name": "Marcus Bell",
+    "patient_dob": "1958-03-14",
+    "patient_address": "431 Claremont Ave, Apt 7A, New York, NY 10026",
+    "drug_name": "losartan",
+    "strength": "50 mg",
+    "strength_value": 50,
+    "strength_unit": "mg",
+    "dosage_form": "tablet",
+    "directions": "Take 1 tablet by mouth once daily for 30 days",
+    "quantity": 30,
+    "quantity_text": "#30 (thirty) tablets",
+    "days_supply_stated": 30,
+    "refills": 1,
+    "prescriber_name": "Priya Raman, DO",
+    "prescriber_npi": "1564076267",
+    "prescriber_dea": null,
+    "date_written": "2026-10-06",
+    "substitution": "dispense_as_written",
+    "notes": null
+   },
+   "field_boxes": {
+    "fax_header": [
+     59,
+     25,
+     1424,
+     47
+    ],
+    "clinic": [
+     119,
+     119,
+     719,
+     153
+    ],
+    "prescriber_name": [
+     119,
+     182,
+     428,
+     218
+    ],
+    "prescriber_npi": [
+     204,
+     326,
+     414,
+     354
+    ],
+    "patient_name": [
+     359,
+     436,
+     557,
+     464
+    ],
+    "patient_dob": [
+     1179,
+     435,
+     1369,
+     463
+    ],
+    "patient_address": [
+     359,
+     512,
+     994,
+     540
+    ],
+    "date_written": [
+     359,
+     584,
+     549,
+     612
+    ],
+    "drug_name": [
+     360,
+     704,
+     520,
+     732
+    ],
+    "strength": [
+     548,
+     704,
+     658,
+     739
+    ],
+    "dosage_form": [
+     686,
+     704,
+     788,
+     731
+    ],
+    "directions": [
+     360,
+     834,
+     1129,
+     870
+    ],
+    "quantity": [
+     360,
+     924,
+     666,
+     960
+    ],
+    "refills": [
+     360,
+     1014,
+     381,
+     1042
+    ],
+    "substitution": [
+     700,
+     1106,
+     730,
+     1136
+    ]
+   },
+   "meta": {
+    "rxcui": "979492",
+    "fax_from": "(212) 555-0105",
+    "sent": "2026-10-06 16:39",
+    "patient_id": "PT001",
+    "prescriber_id": "P102",
+    "prescriber_in_directory": true
+   },
+   "noise_region": [
+    0,
+    642,
+    1700,
+    800
+   ]
+  }
+ ],
+ "image": "rx_026_p1.png",
+ "fields": {
+  "patient_name": "Marcus Bell",
+  "patient_dob": "1958-03-14",
+  "patient_address": "431 Claremont Ave, Apt 7A, New York, NY 10026",
+  "drug_name": "losartan",
+  "strength": "50 mg",
+  "strength_value": 50,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth once daily for 30 days",
+  "quantity": 30,
+  "quantity_text": "#30 (thirty) tablets",
+  "days_supply_stated": 30,
+  "refills": 1,
+  "prescriber_name": "Priya Raman, DO",
+  "prescriber_npi": "1564076267",
+  "prescriber_dea": null,
+  "date_written": "2026-10-06",
+  "substitution": "dispense_as_written",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   59,
+   25,
+   1424,
+   47
+  ],
+  "clinic": [
+   119,
+   119,
+   719,
+   153
+  ],
+  "prescriber_name": [
+   119,
+   182,
+   428,
+   218
+  ],
+  "prescriber_npi": [
+   204,
+   326,
+   414,
+   354
+  ],
+  "patient_name": [
+   359,
+   436,
+   557,
+   464
+  ],
+  "patient_dob": [
+   1179,
+   435,
+   1369,
+   463
+  ],
+  "patient_address": [
+   359,
+   512,
+   994,
+   540
+  ],
+  "date_written": [
+   359,
+   584,
+   549,
+   612
+  ],
+  "drug_name": [
+   360,
+   704,
+   520,
+   732
+  ],
+  "strength": [
+   548,
+   704,
+   658,
+   739
+  ],
+  "dosage_form": [
+   686,
+   704,
+   788,
+   731
+  ],
+  "directions": [
+   360,
+   834,
+   1129,
+   870
+  ],
+  "quantity": [
+   360,
+   924,
+   666,
+   960
+  ],
+  "refills": [
+   360,
+   1014,
+   381,
+   1042
+  ],
+  "substitution": [
+   700,
+   1106,
+   730,
+   1136
+  ]
+ },
+ "meta": {
+  "rxcui": "979492",
+  "fax_from": "(212) 555-0105",
+  "sent": "2026-10-06 16:39",
+  "patient_id": "PT001",
+  "prescriber_id": "P102",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [
+  {
+   "field": "drug_name",
+   "code": "noise_near_critical",
+   "why": "Heavy speckle and streaks across the drug and dose line. Text is still readable, but fax noise near a dose is a known cause of misreads (ISMP: 0.6 mg read as 0.8 mg).",
+   "page": 1
+  },
+  {
+   "field": "strength",
+   "code": "noise_near_critical",
+   "why": "Fax noise over the dose. Verify against the original even if every reader agrees.",
+   "page": 1
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": []
+}

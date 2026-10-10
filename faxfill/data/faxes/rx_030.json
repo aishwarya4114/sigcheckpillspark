@@ -1,0 +1,426 @@
+{
+ "id": "rx_030",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "rx_030_p1.png",
+  "rx_030_p2.png"
+ ],
+ "pages_declared": 2,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": 0.01,
+  "blur": 0.5,
+  "noise": 10,
+  "fax_mode": "fine",
+  "level": "light"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": 0.01,
+   "blur": 0.5,
+   "noise": 10,
+   "fax_mode": "fine",
+   "level": "light"
+  },
+  {
+   "skew_deg": -0.72,
+   "blur": 0.5,
+   "noise": 10,
+   "fax_mode": "fine",
+   "level": "light"
+  }
+ ],
+ "is_clean": false,
+ "trap": "wrong_patient_page",
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "rx_030_p1.png",
+   "fields": {
+    "patient_name": "Rafael Duarte",
+    "patient_dob": "1950-12-24",
+    "patient_address": "559 W 135th St, Apt 2A, New York, NY 10031",
+    "drug_name": "amlodipine",
+    "strength": "5 mg",
+    "strength_value": 5,
+    "strength_unit": "mg",
+    "dosage_form": "tablet",
+    "directions": "Take 1 tablet by mouth once daily for 30 days",
+    "quantity": 30,
+    "quantity_text": "#30 (thirty) tablets",
+    "days_supply_stated": 30,
+    "refills": 1,
+    "prescriber_name": "Elena Marsh, MD",
+    "prescriber_npi": "1530456551",
+    "prescriber_dea": "FM2267094",
+    "date_written": "2026-10-07",
+    "substitution": "permitted",
+    "notes": null
+   },
+   "field_boxes": {
+    "fax_header": [
+     60,
+     26,
+     1425,
+     46
+    ],
+    "clinic": [
+     120,
+     119,
+     748,
+     161
+    ],
+    "prescriber_name": [
+     120,
+     182,
+     425,
+     215
+    ],
+    "prescriber_npi": [
+     205,
+     326,
+     415,
+     353
+    ],
+    "prescriber_dea": [
+     715,
+     326,
+     917,
+     353
+    ],
+    "patient_name": [
+     360,
+     436,
+     594,
+     463
+    ],
+    "patient_dob": [
+     1180,
+     436,
+     1370,
+     463
+    ],
+    "patient_address": [
+     360,
+     512,
+     946,
+     539
+    ],
+    "date_written": [
+     360,
+     584,
+     550,
+     611
+    ],
+    "drug_name": [
+     360,
+     704,
+     567,
+     739
+    ],
+    "strength": [
+     595,
+     704,
+     684,
+     739
+    ],
+    "dosage_form": [
+     712,
+     704,
+     814,
+     731
+    ],
+    "directions": [
+     360,
+     834,
+     1129,
+     869
+    ],
+    "quantity": [
+     360,
+     924,
+     666,
+     959
+    ],
+    "refills": [
+     360,
+     1014,
+     381,
+     1041
+    ],
+    "substitution": [
+     120,
+     1106,
+     150,
+     1136
+    ]
+   },
+   "meta": {
+    "rxcui": "197361",
+    "fax_from": "(212) 555-0101",
+    "sent": "2026-10-07 10:44",
+    "patient_id": "PT013",
+    "prescriber_id": "P100",
+    "prescriber_in_directory": true
+   }
+  },
+  {
+   "page": 2,
+   "image": "rx_030_p2.png",
+   "fields": {
+    "patient_name": null,
+    "patient_dob": null,
+    "patient_address": null,
+    "drug_name": "atorvastatin",
+    "strength": "20 mg",
+    "strength_value": 20,
+    "strength_unit": "mg",
+    "dosage_form": "tablet",
+    "directions": "Take 1 tablet by mouth at bedtime for 30 days",
+    "quantity": 30,
+    "quantity_text": "#30 (thirty) tablets",
+    "days_supply_stated": 30,
+    "refills": 2,
+    "prescriber_name": "Elena Marsh, MD",
+    "prescriber_npi": "1530456551",
+    "prescriber_dea": "FM2267094",
+    "date_written": "2026-10-07",
+    "substitution": "permitted",
+    "notes": null
+   },
+   "field_boxes": {
+    "fax_header": [
+     73,
+     16,
+     1438,
+     53
+    ],
+    "clinic": [
+     132,
+     110,
+     760,
+     160
+    ],
+    "prescriber_name": [
+     131,
+     173,
+     437,
+     210
+    ],
+    "prescriber_npi": [
+     214,
+     318,
+     425,
+     348
+    ],
+    "prescriber_dea": [
+     724,
+     324,
+     927,
+     354
+    ],
+    "date_written": [
+     366,
+     578,
+     557,
+     607
+    ],
+    "drug_name": [
+     365,
+     698,
+     587,
+     728
+    ],
+    "strength": [
+     615,
+     701,
+     725,
+     737
+    ],
+    "dosage_form": [
+     753,
+     703,
+     855,
+     731
+    ],
+    "directions": [
+     363,
+     828,
+     1140,
+     873
+    ],
+    "quantity": [
+     362,
+     918,
+     668,
+     957
+    ],
+    "refills": [
+     361,
+     1008,
+     382,
+     1035
+    ],
+    "substitution": [
+     120,
+     1097,
+     150,
+     1127
+    ]
+   },
+   "meta": {
+    "rxcui": "617310",
+    "fax_from": "(212) 555-0101",
+    "sent": "2026-10-07 16:18",
+    "patient_id": null,
+    "prescriber_id": "P100",
+    "prescriber_in_directory": true
+   }
+  }
+ ],
+ "image": "rx_030_p1.png",
+ "fields": {
+  "patient_name": "Rafael Duarte",
+  "patient_dob": "1950-12-24",
+  "patient_address": "559 W 135th St, Apt 2A, New York, NY 10031",
+  "drug_name": "amlodipine",
+  "strength": "5 mg",
+  "strength_value": 5,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth once daily for 30 days",
+  "quantity": 30,
+  "quantity_text": "#30 (thirty) tablets",
+  "days_supply_stated": 30,
+  "refills": 1,
+  "prescriber_name": "Elena Marsh, MD",
+  "prescriber_npi": "1530456551",
+  "prescriber_dea": "FM2267094",
+  "date_written": "2026-10-07",
+  "substitution": "permitted",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   60,
+   26,
+   1425,
+   46
+  ],
+  "clinic": [
+   120,
+   119,
+   748,
+   161
+  ],
+  "prescriber_name": [
+   120,
+   182,
+   425,
+   215
+  ],
+  "prescriber_npi": [
+   205,
+   326,
+   415,
+   353
+  ],
+  "prescriber_dea": [
+   715,
+   326,
+   917,
+   353
+  ],
+  "patient_name": [
+   360,
+   436,
+   594,
+   463
+  ],
+  "patient_dob": [
+   1180,
+   436,
+   1370,
+   463
+  ],
+  "patient_address": [
+   360,
+   512,
+   946,
+   539
+  ],
+  "date_written": [
+   360,
+   584,
+   550,
+   611
+  ],
+  "drug_name": [
+   360,
+   704,
+   567,
+   739
+  ],
+  "strength": [
+   595,
+   704,
+   684,
+   739
+  ],
+  "dosage_form": [
+   712,
+   704,
+   814,
+   731
+  ],
+  "directions": [
+   360,
+   834,
+   1129,
+   869
+  ],
+  "quantity": [
+   360,
+   924,
+   666,
+   959
+  ],
+  "refills": [
+   360,
+   1014,
+   381,
+   1041
+  ],
+  "substitution": [
+   120,
+   1106,
+   150,
+   1136
+  ]
+ },
+ "meta": {
+  "rxcui": "197361",
+  "fax_from": "(212) 555-0101",
+  "sent": "2026-10-07 10:44",
+  "patient_id": "PT013",
+  "prescriber_id": "P100",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [
+  {
+   "field": "patient_name",
+   "code": "missing_patient_id",
+   "why": "Page 2 is a separate prescription with no patient name. Do not carry the patient over from page 1.",
+   "page": 2
+  },
+  {
+   "field": "patient_dob",
+   "code": "missing_patient_id",
+   "why": "Page 2 has no date of birth.",
+   "page": 2
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": []
+}

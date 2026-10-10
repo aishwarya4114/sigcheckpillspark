@@ -1,0 +1,299 @@
+{
+ "id": "rx_029",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "rx_029_p1.png"
+ ],
+ "pages_declared": 2,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": -0.79,
+  "blur": 0.5,
+  "noise": 10,
+  "fax_mode": "fine",
+  "level": "light"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": -0.79,
+   "blur": 0.5,
+   "noise": 10,
+   "fax_mode": "fine",
+   "level": "light"
+  }
+ ],
+ "is_clean": false,
+ "trap": "missing_page",
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "rx_029_p1.png",
+   "fields": {
+    "patient_name": "Amara Nwosu",
+    "patient_dob": "1990-01-30",
+    "patient_address": "346 W 121st St, Apt 7A, New York, NY 10026",
+    "drug_name": "sertraline",
+    "strength": "50 mg",
+    "strength_value": 50,
+    "strength_unit": "mg",
+    "dosage_form": "tablet",
+    "directions": "Take 1 tablet by mouth once daily for 30 days",
+    "quantity": 30,
+    "quantity_text": "#30 (thirty) tablets",
+    "days_supply_stated": 30,
+    "refills": 1,
+    "prescriber_name": "Mei Tanaka, MD",
+    "prescriber_npi": "1299818082",
+    "prescriber_dea": null,
+    "date_written": "2026-10-06",
+    "substitution": "permitted",
+    "notes": "Please call with questions."
+   },
+   "field_boxes": {
+    "fax_header": [
+     75,
+     15,
+     1440,
+     54
+    ],
+    "clinic": [
+     133,
+     109,
+     810,
+     151
+    ],
+    "prescriber_name": [
+     132,
+     172,
+     419,
+     209
+    ],
+    "prescriber_npi": [
+     215,
+     317,
+     426,
+     347
+    ],
+    "patient_name": [
+     368,
+     429,
+     607,
+     460
+    ],
+    "patient_dob": [
+     1189,
+     441,
+     1379,
+     470
+    ],
+    "patient_address": [
+     368,
+     505,
+     953,
+     540
+    ],
+    "date_written": [
+     367,
+     577,
+     557,
+     607
+    ],
+    "drug_name": [
+     365,
+     697,
+     541,
+     727
+    ],
+    "strength": [
+     569,
+     700,
+     679,
+     737
+    ],
+    "dosage_form": [
+     707,
+     702,
+     809,
+     730
+    ],
+    "directions": [
+     363,
+     827,
+     1133,
+     873
+    ],
+    "quantity": [
+     362,
+     917,
+     668,
+     956
+    ],
+    "refills": [
+     361,
+     1007,
+     382,
+     1035
+    ],
+    "substitution": [
+     120,
+     1096,
+     150,
+     1126
+    ],
+    "notes": [
+     258,
+     1196,
+     597,
+     1228
+    ]
+   },
+   "meta": {
+    "rxcui": "312941",
+    "fax_from": "(212) 555-0117",
+    "sent": "2026-10-06 16:59",
+    "patient_id": "PT004",
+    "prescriber_id": "P108",
+    "prescriber_in_directory": true
+   }
+  }
+ ],
+ "image": "rx_029_p1.png",
+ "fields": {
+  "patient_name": "Amara Nwosu",
+  "patient_dob": "1990-01-30",
+  "patient_address": "346 W 121st St, Apt 7A, New York, NY 10026",
+  "drug_name": "sertraline",
+  "strength": "50 mg",
+  "strength_value": 50,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth once daily for 30 days",
+  "quantity": 30,
+  "quantity_text": "#30 (thirty) tablets",
+  "days_supply_stated": 30,
+  "refills": 1,
+  "prescriber_name": "Mei Tanaka, MD",
+  "prescriber_npi": "1299818082",
+  "prescriber_dea": null,
+  "date_written": "2026-10-06",
+  "substitution": "permitted",
+  "notes": "Please call with questions."
+ },
+ "field_boxes": {
+  "fax_header": [
+   75,
+   15,
+   1440,
+   54
+  ],
+  "clinic": [
+   133,
+   109,
+   810,
+   151
+  ],
+  "prescriber_name": [
+   132,
+   172,
+   419,
+   209
+  ],
+  "prescriber_npi": [
+   215,
+   317,
+   426,
+   347
+  ],
+  "patient_name": [
+   368,
+   429,
+   607,
+   460
+  ],
+  "patient_dob": [
+   1189,
+   441,
+   1379,
+   470
+  ],
+  "patient_address": [
+   368,
+   505,
+   953,
+   540
+  ],
+  "date_written": [
+   367,
+   577,
+   557,
+   607
+  ],
+  "drug_name": [
+   365,
+   697,
+   541,
+   727
+  ],
+  "strength": [
+   569,
+   700,
+   679,
+   737
+  ],
+  "dosage_form": [
+   707,
+   702,
+   809,
+   730
+  ],
+  "directions": [
+   363,
+   827,
+   1133,
+   873
+  ],
+  "quantity": [
+   362,
+   917,
+   668,
+   956
+  ],
+  "refills": [
+   361,
+   1007,
+   382,
+   1035
+  ],
+  "substitution": [
+   120,
+   1096,
+   150,
+   1126
+  ],
+  "notes": [
+   258,
+   1196,
+   597,
+   1228
+  ]
+ },
+ "meta": {
+  "rxcui": "312941",
+  "fax_from": "(212) 555-0117",
+  "sent": "2026-10-06 16:59",
+  "patient_id": "PT004",
+  "prescriber_id": "P108",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [
+  {
+   "field": "_order",
+   "code": "page_count_mismatch",
+   "why": "Header says PAGE 1/2 but only page 1 was received. Block until the missing page arrives; it may hold another prescription or a change to this one.",
+   "page": 1
+  }
+ ],
+ "expected_order_status": "blocked",
+ "expect_abstain": []
+}
