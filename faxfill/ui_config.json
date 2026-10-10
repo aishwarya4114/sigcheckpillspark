@@ -2,5 +2,11 @@
  "pass_label": "Matches fax, checks passed",
  "pharmacy_name": "PillSpark Pharmacy",
  "pharmacy_phone": "(646) 555-0198",
- "pharmacy_fax": "(646) 555-0199"
+ "pharmacy_fax": "(646) 555-0199",
+ "priority": {
+  "urgent_min_danger": 300,
+  "high_min_danger": 40,
+  "about": "Urgent: blocked, allergy or controlled-substance issue (danger >= 300). High: high-alert drug or look-alike risk (>= 40). Normal: everything else."
+ },
+ "demo_label": "Demo: saved locally"
 }

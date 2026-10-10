@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SigCheck</title>
-<link rel="stylesheet" href="/static/app.css?v=4">
+<link rel="stylesheet" href="/static/app.css?v=6">
 </head>
 <body>
 <header class="top">
@@ -17,13 +17,10 @@
 <main id="app" aria-live="polite"></main>
 <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <div class="modal-card">
-    <div class="modal-head"><h2 id="modal-title">Clarification fax (draft)</h2>
-      <button class="ghost" id="modal-close" aria-label="Close">✕</button></div>
-    <p class="muted">Review before sending. Nothing is sent from this tool.</p>
-    <textarea id="clar-text" rows="16" spellcheck="false"></textarea>
-    <div class="modal-actions"><span id="copy-msg" class="muted"></span><button id="copy-btn" class="primary">Copy text</button></div>
+    <div class="modal-head"><h2 id="modal-title"></h2><button class="ghost" id="modal-close" aria-label="Close">✕</button></div>
+    <div id="modal-body"></div>
   </div>
 </div>
-<script src="/static/app.js?v=4"></script>
+<script src="/static/app.js?v=5"></script>
 </body>
 </html>
