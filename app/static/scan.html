@@ -1,62 +1,84 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SigCheck capture</title>
-<style>
-:root{--ink:#16202c;--muted:#5b6675;--line:#dde2e8;--blue:#1d4ed8;--ok:#1a7f43;--okbg:#e6f4ec;--warn:#9a5b00;--warnbg:#fff4e0;--bad:#b42318;--badbg:#fdecea}
-body{margin:0;font:17px/1.45 -apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);background:#f6f7f9}
-header{background:#0f1b2d;color:#fff;padding:14px 16px;font-weight:650}
-.wrap{padding:16px;max-width:560px;margin:auto}
-.big{display:block;width:100%;padding:18px;font:inherit;font-weight:650;border-radius:14px;border:0;background:var(--blue);color:#fff;text-align:center;margin:8px 0}
-.sec{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;margin:10px 0}
-img{max-width:100%;border-radius:8px}.muted{color:var(--muted);font-size:14px}
-.pill{display:inline-block;font-size:13px;font-weight:650;padding:3px 9px;border-radius:999px}
-.ok{background:var(--okbg);color:var(--ok)}.warn{background:var(--warnbg);color:var(--warn)}.bad{background:var(--badbg);color:var(--bad)}
-.item{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
-button.sm{font:inherit;font-size:15px;padding:8px 12px;border-radius:9px;border:1px solid var(--blue);color:var(--blue);background:#fff}
-</style>
-</head>
-<body>
-<header>SigCheck · capture a paper prescription</header>
-<div class="wrap">
-  <label class="big" for="cam">📷 Scan prescription</label>
-  <input id="cam" type="file" accept="image/*" capture="environment" hidden>
-  <div id="preview" class="sec" hidden>
-    <img id="pimg" alt="Preview of the captured page">
-    <p class="muted">Check the whole page is in frame and readable. Uploading does not approve anything.</p>
-    <button class="big" id="send">Send for review</button>
-    <button class="sm" onclick="retake()">Retake</button>
-  </div>
-  <div id="msg" role="status" aria-live="polite"></div>
-  <div class="sec"><b>My uploads</b><div id="list" class="muted">Loading…</div></div>
-</div>
-<script>
-const $=s=>document.querySelector(s);let file=null,rescanFor=null;
-const LBL={needs_review:["Needs pharmacist","warn"],needs_clarification:["Action needed","warn"],approved:["Approved draft","ok"],blocked:["Blocked","bad"],processing_failed:["Failed","bad"],processing:["Processing","warn"]};
-const mine=()=>JSON.parse(localStorage.getItem("sigcheck_uploads")||"[]");
-$("#cam").onchange=e=>{file=e.target.files[0];if(!file)return;$("#pimg").src=URL.createObjectURL(file);$("#preview").hidden=false;$("#send").textContent=rescanFor?"Attach clearer scan":"Send for review"};
-function retake(){$("#cam").click()}
-$("#send").onclick=async()=>{
-  const key=crypto.randomUUID();const fd=new FormData();fd.append("file",file);fd.append("source",rescanFor?"phone rescan":"phone capture");
-  $("#msg").innerHTML='<p class="pill warn">Uploading…</p>';
-  try{
-    const url=rescanFor?`/api/documents/${rescanFor}/rescan`:"/api/documents";
-    const r=await fetch(url,{method:"POST",body:fd,headers:{"Idempotency-Key":key}});if(!r.ok)throw new Error((await r.json()).detail||r.status);
-    const d=await r.json();if(!rescanFor){const m=mine();m.unshift(d.id);localStorage.setItem("sigcheck_uploads",JSON.stringify(m.slice(0,30)))}
-    $("#msg").innerHTML=`<p class="pill ok">Received · ID ${d.id}</p>`;$("#preview").hidden=true;rescanFor=null;file=null;load();
-  }catch(err){$("#msg").innerHTML=`<p class="pill bad">Not uploaded: retry (${err.message})</p>`}
-};
-async function load(){
-  const ids=mine();if(!ids.length){$("#list").textContent="Nothing uploaded from this phone yet.";return}
-  const all=await (await fetch("/api/documents")).json();const by=Object.fromEntries(all.map(d=>[d.id,d]));
-  $("#list").innerHTML=ids.filter(i=>by[i]).map(i=>{const d=by[i],[t,c]=LBL[d.status]||[d.status,"warn"];
-    const act=d.status==="needs_clarification"&&d.clarification&&d.clarification.kind==="rescan"&&d.clarification.open;
-    return`<div class="item"><div>${d.id}<div class="muted">${d.drug||"reading…"} · r${d.revision}</div>${act?`<div class="muted" style="color:var(--warn)">${d.clarification.message}</div>`:""}</div>
-      <div><span class="pill ${c}">${act?"Action needed":t}</span>${act?`<br><button class="sm" onclick="rescan('${d.id}')">Rescan</button>`:""}</div></div>`}).join("");
-}
-function rescan(id){rescanFor=id;$("#cam").click()}
-load();setInterval(load,4000);
-</script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SigCheck — Capture a prescription</title>
+    <link rel="stylesheet" href="/static/ui.css" />
+    <script defer src="/static/ui.js"></script>
+    <script defer src="/static/scan.js"></script>
+  </head>
+  <body>
+    <header class="page-nav">
+      <a class="brand" href="/"
+        ><span class="brand-mark" data-icon="shield"></span>SigCheck</a
+      >
+      <nav>
+        <a class="navlink" href="/">Review queue</a
+        ><a class="navlink active" href="/scan" aria-current="page">Capture</a>
+      </nav>
+    </header>
+    <main class="capture-wrap">
+      <div class="card capture-hero">
+        <div class="capture-icon" data-icon="camera"></div>
+        <span class="eyebrow">From paper to your workspace</span>
+        <h1 style="margin-top: 9px">Capture a prescription</h1>
+        <p>
+          Photograph the whole page in good light. Your scan goes straight to
+          the review queue.
+        </p>
+        <button class="primary" id="camera-button">
+          <span data-icon="camera"></span>Take a photo</button
+        ><button id="file-button">
+          <span data-icon="upload"></span>Choose an image</button
+        ><input
+          type="file"
+          accept="image/*"
+          capture="environment"
+          id="camera"
+          hidden
+        /><input type="file" accept="image/*" id="file" hidden /><span
+          class="muted small"
+          >Synthetic demo documents only</span
+        >
+      </div>
+      <section class="card capture-preview" id="preview" hidden>
+        <div class="dialog-head">
+          <h2 id="preview-title">Check your scan</h2>
+          <button id="cancel" class="quiet" aria-label="Cancel capture">
+            <span data-icon="close"></span>
+          </button>
+        </div>
+        <img id="preview-image" alt="Your captured prescription" />
+        <p class="muted small" style="margin-top: 12px">
+          Make sure names, numbers, and all four corners are readable.
+        </p>
+        <button class="primary" id="send">Send for review</button
+        ><button class="quiet" id="retake">Retake photo</button>
+      </section>
+      <div
+        id="message"
+        role="status"
+        aria-live="polite"
+        style="margin-top: 15px"
+      ></div>
+      <section class="card upload-list">
+        <div class="dialog-head">
+          <h2>Uploads from this device</h2>
+          <button class="quiet" id="refresh" aria-label="Refresh uploads">
+            <span data-icon="refresh"></span>
+          </button>
+        </div>
+        <div id="uploads">
+          <p class="muted small">
+            Your uploaded prescriptions will appear here.
+          </p>
+        </div>
+      </section>
+      <p class="muted small" style="text-align: center; margin: 20px">
+        Captured here. Reviewed by a pharmacist.
+      </p>
+    </main>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
 </html>

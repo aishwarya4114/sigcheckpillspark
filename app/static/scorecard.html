@@ -1,27 +1,54 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SigCheck scorecard</title>
-<style>
-body{margin:0;font:15px/1.45 -apple-system,BlinkMacSystemFont,sans-serif;background:#f6f7f9;color:#16202c}
-header{background:#0f1b2d;color:#fff;padding:12px 18px;display:flex;gap:16px}header a{color:#cfe0ff;margin-left:auto}
-.wrap{max-width:1000px;margin:20px auto;padding:0 16px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-.card{background:#fff;border:1px solid #dde2e8;border-radius:12px;padding:16px}.num{font-size:34px;font-weight:700}.muted{color:#5b6675;font-size:13px}
-table{width:100%;border-collapse:collapse;background:#fff;margin-top:16px;border:1px solid #dde2e8}td,th{padding:8px 10px;border-bottom:1px solid #eef0f3;text-align:left;font-size:14px}
-</style></head><body>
-<header><b>SigCheck · scorecard</b><a href="/">Back to review</a></header>
-<div class="wrap" id="w">Loading…</div>
-<script>
-fetch("/api/scorecard").then(r=>r.json()).then(s=>{
-  if(s.error){document.querySelector("#w").textContent=s.error;return}
-  const pct=(a,b)=>b?Math.round(100*a/b)+"%":"–";
-  document.querySelector("#w").innerHTML=`<p class="muted">${s.scope}. Reader: ${s.reader}. Run ${s.run_at}.</p>
-  <div class="cards">
-   <div class="card"><div class="num">${s.traps_caught.caught} / ${s.traps_caught.of}</div>Planted errors caught</div>
-   <div class="card"><div class="num">${pct(s.verified_precision.right,s.verified_precision.of)}</div>When a field passed every check, it was right<div class="muted">${s.verified_precision.right} of ${s.verified_precision.of} fields</div></div>
-   <div class="card"><div class="num">${s.invented_values_on_absent_fields}</div>Values invented for fields that weren't on the fax</div>
-   <div class="card"><div class="num">${pct(s.field_accuracy.exact,s.field_accuracy.of)}</div>Field accuracy (exact match)<div class="muted">${s.field_accuracy.exact} of ${s.field_accuracy.of}</div></div>
-  </div>
-  <table><tr><th>Fax</th><th>Planted trap</th><th>Result</th><th>Flagged?</th></tr>
-  ${s.rows.map(r=>`<tr><td>${r.fax}</td><td>${r.trap}</td><td>${r.status}</td><td>${r.flagged?"✓ yes":"✕ no"}</td></tr>`).join("")}</table>`;
-});
-</script></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SigCheck — Evaluation scorecard</title>
+    <link rel="stylesheet" href="/static/ui.css" />
+    <script defer src="/static/ui.js"></script>
+    <script defer src="/static/scorecard.js"></script>
+  </head>
+  <body>
+    <header class="page-nav">
+      <a class="brand" href="/"
+        ><span class="brand-mark" data-icon="shield"></span>SigCheck</a
+      >
+      <nav>
+        <a class="navlink" href="/">Review queue</a
+        ><a class="navlink" href="/scan">Capture</a
+        ><a class="navlink active" href="/scorecard" aria-current="page"
+          >Scorecard</a
+        >
+      </nav>
+    </header>
+    <main class="page-container">
+      <div class="page-heading">
+        <div>
+          <div class="eyebrow" style="margin-bottom: 10px">
+            Measured, not assumed
+          </div>
+          <h1>Evaluation scorecard</h1>
+          <p>
+            A transparent look at the system’s performance on our test
+            prescriptions.
+          </p>
+        </div>
+        <span class="badge amber">Synthetic test set</span>
+      </div>
+      <div class="notice">
+        <span data-icon="info"></span>
+        <div>
+          <strong>A small test set, with clear limits.</strong>These results
+          describe fictional prescriptions and the reader used for this run.
+          They do not establish clinical safety or real-world accuracy.
+        </div>
+      </div>
+      <div id="scorecard">
+        <div class="loading">
+          <span class="spinner"></span>Loading evaluation results
+        </div>
+      </div>
+    </main>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

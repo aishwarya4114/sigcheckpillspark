@@ -8,10 +8,11 @@ import json
 import threading
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Literal
 
 from fastapi import FastAPI, File, Form, Header, HTTPException, UploadFile
 from fastapi.responses import FileResponse, JSONResponse, Response
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from sponsors import Prism, settings
@@ -25,9 +26,11 @@ SAMPLES = ROOT / "fixtures" / "synthetic"
 DATA.mkdir(parents=True, exist_ok=True)
 
 app = FastAPI(title="SigCheck")
+app.mount("/static", StaticFiles(directory=STATIC), name="static")
 prism = Prism()
 lock = threading.Lock()
 idempotency: dict[str, str] = {}
+rescan_idempotency: dict[tuple[str, str], str] = {}
 
 
 def now() -> str:
@@ -193,7 +196,7 @@ def review_field(doc_id: str, field: str, body: FieldReview):
 
 
 class Clarify(BaseModel):
-    kind: str                       # "rescan" | "prescriber"
+    kind: Literal["rescan", "prescriber"]
     fields: list[str] = []
     message: str = ""
     reviewer: str = "pharmacist"
@@ -203,23 +206,34 @@ class Clarify(BaseModel):
 def clarify(doc_id: str, body: Clarify):
     with lock:
         rec = load(doc_id)
+        if rec["status"] in ("blocked", "processing_failed", "processing"):
+            raise HTTPException(409, "Resolve the document issue with a new scan before requesting field clarification.")
+        if any(k not in rec["fields"] for k in body.fields):
+            raise HTTPException(400, "Unknown clarification field")
         names = ", ".join(body.fields) or "the flagged fields"
         draft = body.message or (
             f"Request clearer image of: {names}." if body.kind == "rescan" else
             f"Clarification needed from prescriber for: {names}. Please re-send or call the pharmacy. (Draft only: not sent automatically.)")
         rec["clarification"] = {"kind": body.kind, "fields": body.fields, "message": draft, "requested_at": now(), "open": True}
         rec["status"] = "needs_clarification"
+        rec["approved"] = None
+        rec["revision"] += 1
         event(rec, body.reviewer, f"clarification requested ({body.kind})", fields=body.fields, message=draft)
         save(rec)
         return rec
 
 
 @app.post("/api/documents/{doc_id}/rescan")
-async def rescan(doc_id: str, file: UploadFile = File(...), source: str = Form("phone rescan")):
+async def rescan(doc_id: str, file: UploadFile = File(...), source: str = Form("phone rescan"),
+                 idempotency_key: Optional[str] = Header(None)):
     """A clearer scan is attached to the SAME document as a new revision. Earlier evidence and human
     decisions are kept; reviews on fields whose value changed are cleared and must be redone."""
     data = await file.read()
+    if not data or not (file.content_type or "").startswith("image/"):
+        raise HTTPException(400, "Select a nonempty prescription image.")
     with lock:
+        if idempotency_key and (doc_id, idempotency_key) in rescan_idempotency:
+            return summary(load(doc_id))
         old = load(doc_id)
         new = pipeline.process(data, file.content_type or "image/jpeg", doc_id=doc_id, source=source, prism=prism)
         d = path(doc_id)
@@ -236,6 +250,8 @@ async def rescan(doc_id: str, file: UploadFile = File(...), source: str = Form("
             new["clarification"] = {**old["clarification"], "open": False, "answered_at": now()}
         event(new, source, "clearer scan attached", revision=new["revision"], reviews_kept=list(kept))
         save(new)
+        if idempotency_key:
+            rescan_idempotency[(doc_id, idempotency_key)] = new["id"]
         return summary(new)
 
 
@@ -250,11 +266,13 @@ def approve(doc_id: str, body: Approve, x_role: str = Header("pharmacist")):
         rec = load(doc_id)
         if x_role != "pharmacist":
             raise HTTPException(403, "Only a pharmacist can approve.")
-        if rec["status"] == "blocked":
-            raise HTTPException(409, "Blocked order cannot be approved.")
+        if rec["status"] in ("blocked", "processing_failed", "processing"):
+            raise HTTPException(409, "Blocked, failed or processing orders cannot be approved.")
+        if not rec.get("fields") or any(not f.get("field") for f in rec.get("findings", [])):
+            raise HTTPException(409, "Resolve document-level findings before approval.")
         if body.revision != rec["revision"]:
             raise HTTPException(409, f"Stale approval: document is at revision {rec['revision']}. Review the current version.")
-        missing = [k for k, f in rec["fields"].items() if f["required"] and (f["value"] is None or not rec.get("review", {}).get(k))]
+        missing = [k for k, f in rec["fields"].items() if f["required"] and (not str(f["value"] or "").strip() or not rec.get("review", {}).get(k))]
         if missing:
             raise HTTPException(409, {"error": "Every required field must be reviewed and have a value.", "fields": missing})
         rec["approved"] = {"by": body.reviewer, "at": now(), "revision": rec["revision"]}
@@ -269,7 +287,7 @@ def approve(doc_id: str, body: Approve, x_role: str = Header("pharmacist")):
 @app.get("/api/documents/{doc_id}/export")
 def export(doc_id: str):
     rec = load(doc_id)
-    if not rec.get("approved") or rec["approved"]["revision"] != rec["revision"]:
+    if rec["status"] != "approved" or not rec.get("approved") or rec["approved"]["revision"] != rec["revision"]:
         raise HTTPException(409, "Only an approved current revision can be exported.")
     out = {
         "schema": "sigcheck.draft_order.v1", "document_id": rec["id"], "revision": rec["revision"],

@@ -1,156 +1,155 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SigCheck review</title>
-<style>
-:root{--bg:#f6f7f9;--panel:#fff;--ink:#16202c;--muted:#5b6675;--line:#dde2e8;--ok:#1a7f43;--okbg:#e6f4ec;--warn:#9a5b00;--warnbg:#fff4e0;--bad:#b42318;--badbg:#fdecea;--blue:#1d4ed8;--bluebg:#eaf0ff}
-*{box-sizing:border-box}body{margin:0;font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink)}
-header{display:flex;align-items:center;gap:16px;padding:10px 18px;background:#0f1b2d;color:#fff}
-header h1{font-size:17px;margin:0;font-weight:650;letter-spacing:.2px}header .sub{color:#b8c3d3;font-size:13px}
-header nav{margin-left:auto;display:flex;gap:14px}header a{color:#cfe0ff;font-size:13px}
-.wrap{display:grid;grid-template-columns:270px 1fr 440px;height:calc(100vh - 46px)}
-@media (max-width:1100px){.wrap{grid-template-columns:1fr;height:auto}}
-aside,main,section{overflow:auto;border-right:1px solid var(--line)}
-aside{background:var(--panel);padding:12px}
-h2{font-size:13px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);margin:14px 4px 8px}
-button{font:inherit;border:1px solid var(--line);background:#fff;border-radius:8px;padding:7px 11px;cursor:pointer}
-button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #7aa2ff;outline-offset:1px}
-button.primary{background:var(--blue);color:#fff;border-color:var(--blue)}button[disabled]{opacity:.45;cursor:not-allowed}
-.doc{display:block;width:100%;text-align:left;margin:0 0 6px;padding:9px 10px;border-radius:9px}
-.doc.active{border-color:var(--blue);background:var(--bluebg)}.doc small{color:var(--muted);display:block}
-.pill{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px}
-.s-checks_passed,.s-approved,.s-reviewed{background:var(--okbg);color:var(--ok)}.s-needs_review,.s-needs_clarification{background:var(--warnbg);color:var(--warn)}
-.s-missing,.s-blocked,.s-processing_failed{background:var(--badbg);color:var(--bad)}.s-not_applicable{background:#eef0f3;color:var(--muted)}
-main{padding:16px;display:flex;justify-content:center;background:#e9ecf0}
-.fax{position:relative;display:inline-block;line-height:0}.fax img{max-width:100%;max-height:calc(100vh - 90px);width:auto;display:block;background:#fff;box-shadow:0 2px 10px #0002}
-.box{position:absolute;border:3px solid var(--blue);background:#1d4ed822;border-radius:3px;pointer-events:none;transition:all .15s}
-section{background:var(--panel);padding:14px 16px}
-.banner{padding:10px 12px;border-radius:9px;margin-bottom:10px;font-weight:600}
-.banner.bad{background:var(--badbg);color:var(--bad)}.banner.warn{background:var(--warnbg);color:var(--warn)}.banner.ok{background:var(--okbg);color:var(--ok)}.banner.info{background:var(--bluebg);color:var(--blue)}
-.field{border:1px solid var(--line);border-radius:10px;padding:9px 11px;margin-bottom:8px;cursor:pointer}
-.field.sel{border-color:var(--blue);box-shadow:0 0 0 2px #1d4ed833}
-.field .top{display:flex;justify-content:space-between;gap:8px;align-items:center}.field .lbl{font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.4px}
-.field .val{font-size:17px;font-weight:600;margin:2px 0}.field .val.empty{color:var(--bad);font-style:italic;font-weight:500}
-.field .src{font-size:12px;color:var(--muted)}.field ul{margin:6px 0 0 18px;padding:0;color:var(--warn);font-size:13.5px}
-.field .acts{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}.field input{flex:1;min-width:120px;padding:6px 8px;border:1px solid var(--line);border-radius:7px;font:inherit}
-.footer{position:sticky;bottom:-14px;background:var(--panel);padding:10px 0 14px;border-top:1px solid var(--line);display:flex;gap:8px;flex-wrap:wrap}
-details{margin:10px 0;font-size:13px}details summary{cursor:pointer;color:var(--muted);font-weight:600}
-.kv{display:grid;grid-template-columns:130px 1fr;gap:4px 10px;font-size:13px;margin-top:6px}.kv b{color:var(--muted);font-weight:600}
-.empty-state{color:var(--muted);text-align:center;margin-top:30vh}
-.toast{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:#16202c;color:#fff;padding:10px 16px;border-radius:9px;display:none;max-width:90vw}
-.machine{font-size:11px;color:var(--muted)}
-</style>
-</head>
-<body>
-<header>
-  <h1>SigCheck</h1><span class="sub">Fax to verified draft order · nothing is approved until a pharmacist approves it</span>
-  <nav><a href="/scan">Phone capture</a><a href="/scorecard">Scorecard</a></nav>
-</header>
-<div class="wrap">
-  <aside aria-label="Incoming faxes">
-    <label class="doc" style="text-align:center;cursor:pointer;border:1px dashed var(--blue);color:var(--blue)">Upload fax image
-      <input id="upload" type="file" accept="image/*" hidden></label>
-    <h2>Synthetic test faxes</h2>
-    <div id="samples"></div>
-    <h2>Queue</h2>
-    <div id="queue" role="list"></div>
-    <h2>System</h2><div id="health" class="machine"></div>
-  </aside>
-  <main aria-label="Original fax"><div id="faxwrap" class="empty-state">Choose a fax from the queue, upload one, or load a synthetic test fax.</div></main>
-  <section aria-label="Extracted fields and review" id="panel"></section>
-</div>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script>
-const LABELS={patient_name:"Patient",patient_dob:"Date of birth",drug_name:"Drug",strength:"Strength",dosage_form:"Dosage form",directions:"Directions (sig)",quantity:"Quantity",refills:"Refills",prescriber_name:"Prescriber",prescriber_npi:"Prescriber NPI",prescriber_dea:"DEA number",date_written:"Date written"};
-const STATUS={checks_passed:"✓ Checks passed",needs_review:"⚠ Needs pharmacist",missing:"✕ Missing / unreadable",not_applicable:"– Not required",reviewed:"✓ Reviewed",blocked:"⛔ Blocked",needs_clarification:"⏸ Awaiting clarification",approved:"✓ Approved draft",processing_failed:"✕ Processing failed"};
-let cur=null, sel=null;
-const $=s=>document.querySelector(s);
-const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-function toast(m){const t=$("#toast");t.textContent=m;t.style.display="block";clearTimeout(t._t);t._t=setTimeout(()=>t.style.display="none",4200)}
-async function api(u,o={}){const r=await fetch(u,o);const j=await r.json().catch(()=>({}));if(!r.ok){const d=j.detail;throw new Error(typeof d==="string"?d:(d&&d.error?d.error+" ("+(d.fields||[]).map(f=>LABELS[f]||f).join(", ")+")":JSON.stringify(d)))}return j}
-async function refresh(){
-  const q=await api("/api/documents");
-  $("#queue").innerHTML=q.length?q.map(d=>`<button class="doc ${cur&&cur.id===d.id?'active':''}" role="listitem" onclick="openDoc('${d.id}')">
-     <span class="pill s-${d.status}">${STATUS[d.status]||d.status}</span> ${d.unresolved?`<small>${d.unresolved} item(s) to resolve</small>`:""}
-     <small>${esc(d.drug||"(no drug read)")} · ${esc(d.patient||"")}</small><small>${esc(d.source)} · r${d.revision}</small></button>`).join(""):'<div class="machine">Empty</div>';
-}
-async function boot(){
-  const s=await api("/api/samples");
-  $("#samples").innerHTML=s.map(x=>`<button class="doc" title="${esc(x.trap)}" onclick="loadSample('${x.name}')">${esc(x.name.replace(/^fax_\d+_/,'').replace(/_/g,' '))}<small>${esc(x.trap)}</small></button>`).join("");
-  const h=await api("/api/health");
-  $("#health").innerHTML=`OCR: ${esc(h.ocr)}<br>Reader: ${esc(h.nicrron)}${h.reader_model?" ("+esc(h.reader_model)+")":""}<br>PRISM: ${esc(h.prism)}`;
-  refresh();setInterval(refresh,4000);
-  if(location.hash.length>1){openDoc(location.hash.slice(1)).then(()=>{const p=new URLSearchParams(location.search).get('field');if(p)pick(p)})}
-}
-async function loadSample(n){toast("Reading fax…");const d=await api("/api/samples/"+n,{method:"POST"});await refresh();openDoc(d.id)}
-$("#upload").onchange=async e=>{const f=e.target.files[0];if(!f)return;const fd=new FormData();fd.append("file",f);fd.append("source","web upload");toast("Reading fax…");
-  try{const d=await api("/api/documents",{method:"POST",body:fd,headers:{"Idempotency-Key":crypto.randomUUID()}});await refresh();openDoc(d.id)}catch(err){toast(err.message)}e.target.value=""};
-async function openDoc(id){cur=await api("/api/documents/"+id);sel=null;render();refresh()}
-function fieldState(k,f){const r=(cur.review||{})[k];if(r)return"reviewed";return f.status}
-function render(){
-  const d=cur;
-  $("#faxwrap").className="";$("#faxwrap").innerHTML=`<div class="fax"><img id="faximg" alt="Original fax image, revision ${d.revision}" src="/api/documents/${d.id}/image?r=${d.revision}"><div class="box" id="hl" hidden></div></div>`;
-  const blocked=d.status==="blocked";
-  let banner="";
-  if(blocked)banner=`<div class="banner bad">⛔ Order blocked. Text on this fax tries to instruct the software. Nothing was sent to a model.</div>`;
-  else if(d.status==="approved")banner=`<div class="banner ok">✓ Approved draft (revision ${d.approved.revision}) by ${esc(d.approved.by)}. Ready to export. Not dispensed.</div>`;
-  else if(d.status==="needs_clarification")banner=`<div class="banner warn">⏸ Awaiting clarification: ${esc(d.clarification.message)}</div>`;
-  else if(d.status==="processing_failed")banner=`<div class="banner bad">✕ Extraction failed: ${esc((d.sponsors.reader||{}).error)}. Nothing was guessed.</div>`;
-  else{const n=Object.entries(d.fields).filter(([k,f])=>["needs_review","missing"].includes(fieldState(k,f))).length;
-    banner=n?`<div class="banner warn">⚠ ${n} item(s) need a pharmacist. Every required field must be reviewed before approval.</div>`:`<div class="banner info">All checks passed. Review each required field, then approve.</div>`}
-  const finds=(d.findings||[]).map(f=>`<div class="field" onclick='hl(${JSON.stringify(f.box)})'><div class="lbl">Finding</div><ul style="color:var(--bad)"><li>${esc(f.reason)}</li></ul></div>`).join("");
-  const order=["patient_name","patient_dob","drug_name","strength","dosage_form","directions","quantity","refills","prescriber_name","prescriber_npi","prescriber_dea","date_written"];
-  const fields=blocked?"":order.map(k=>{const f=d.fields[k];if(!f)return"";const st=fieldState(k,f);const r=(d.review||{})[k];
-    if(st==="not_applicable")return`<div class="field" style="opacity:.6"><div class="top"><span class="lbl">${LABELS[k]}</span><span class="pill s-not_applicable">${STATUS.not_applicable}</span></div></div>`;
-    return`<div class="field ${sel===k?'sel':''}" onclick="pick('${k}')" tabindex="0" onkeydown="if(event.key==='Enter')pick('${k}')">
-      <div class="top"><span class="lbl">${LABELS[k]}${f.required?' *':''}</span><span class="pill s-${st}">${STATUS[st]}</span></div>
-      <div class="val ${f.value==null?'empty':''}">${f.value==null?(k==="refills"?"Not stated":"Not found on fax"):esc(f.value)}</div>
-      ${f.source_text?`<div class="src">On the fax: “${esc(f.source_text)}”${f.ocr_score!=null?` <span class="machine">· machine transcription, recogniser score ${f.ocr_score}</span>`:""}</div>`:""}
-      ${f.reasons.length?`<ul>${f.reasons.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}
-      ${r?`<div class="src" style="color:var(--ok)">${r.action==="edit"?"Corrected":"Confirmed"} by ${esc(r.by)}${r.reason?": "+esc(r.reason):""}</div>`:""}
-      ${sel===k&&d.status!=="approved"?`<div class="acts" onclick="event.stopPropagation()">
-        ${f.value!=null?`<button onclick="act('${k}','confirm')">Confirm matches fax</button>`:""}
-        <input id="ev" placeholder="Corrected value" value="${esc(f.value??"")}" aria-label="Corrected value for ${LABELS[k]}">
-        <input id="er" placeholder="Reason (required)" aria-label="Reason for correction">
-        <button onclick="act('${k}','edit')">Save correction</button>
-        <button onclick="clar('rescan',['${k}'])">Request clearer image</button>
-        <button onclick="clar('prescriber',['${k}'])">Ask prescriber</button></div>`:""}
-    </div>`}).join("");
-  const kb=d.sponsors.kb||{},ev=d.sponsors.evaluator||{},gr=d.sponsors.guardrail||{},rd=d.sponsors.reader||{};
-  const canApprove=!blocked&&d.status!=="approved";
-  $("#panel").innerHTML=`${banner}${finds}
-    ${!blocked&&kb.claim?`<div class="field"><div class="lbl">Reference check (${esc(kb.source||"PRISM knowledge base")})</div><div class="src" style="font-size:13.5px;color:var(--ink)">${esc(kb.claim)}</div>${kb.citation?`<div class="src">Source: ${esc(kb.document)} · “${esc(kb.citation)}”</div>`:""}</div>`:""}
-    ${fields}
-    <div class="footer">
-      ${!blocked&&d.status!=="approved"?`<button onclick="confirmPassed()">Confirm all fields that passed checks</button>`:""}
-      <button class="primary" ${canApprove?"":"disabled"} onclick="approve()">Approve draft</button>
-      ${d.status==="approved"?`<a href="/api/documents/${d.id}/export"><button class="primary">Export JSON</button></a>`:""}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SigCheck — Prescription review</title>
+    <link rel="stylesheet" href="/static/ui.css" />
+    <script defer src="/static/ui.js"></script>
+    <script defer src="/static/review.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Prescription queue">
+        <a class="brand" href="/"
+          ><span class="brand-mark" data-icon="shield"></span>SigCheck<span
+            class="badge"
+            >Beta</span
+          ></a
+        >
+        <div class="workspace-label"><span></span>PHARMACY WORKSPACE</div>
+        <div class="side-actions">
+          <button class="primary upload-button" id="upload-button">
+            <span data-icon="plus"></span>New prescription</button
+          ><input
+            hidden
+            id="upload"
+            type="file"
+            accept="image/png,image/jpeg"
+          />
+        </div>
+        <div class="queue-heading">
+          <span class="eyebrow">Review queue</span
+          ><span id="queue-count" class="queue-count">0</span>
+        </div>
+        <div class="segmented" aria-label="Filter queue">
+          <button class="active" data-filter="all" aria-pressed="true">
+            All</button
+          ><button data-filter="review" aria-pressed="false">To review</button
+          ><button data-filter="approved" aria-pressed="false">Approved</button>
+        </div>
+        <div id="queue" class="queue">
+          <div class="loading"><span class="spinner"></span>Loading queue</div>
+        </div>
+        <div class="sidebar-bottom">
+          <button id="samples-button" class="side-link">
+            <span data-icon="grid"></span>Explore sample faxes</button
+          ><a class="side-link" href="/scan"
+            ><span data-icon="camera"></span>Phone capture</a
+          ><a class="side-link" href="/scorecard"
+            ><span data-icon="chart"></span>Evaluation scorecard</a
+          ><button class="side-link" id="system-button">
+            <span data-icon="info"></span>Connection details
+          </button>
+          <div class="profile">
+            <span class="avatar">RX</span>
+            <div>
+              <strong class="small">Pharmacist workspace</strong>
+              <p class="muted small">Synthetic demo · review required</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="work-area">
+        <header class="topbar">
+          <div class="breadcrumbs">
+            Workspace <span>/</span> <b>Prescription review</b>
+          </div>
+          <div class="topbar-right">
+            <a href="/scan">Open phone capture ↗</a
+            ><span class="badge amber" id="mode">Checking connections</span>
+          </div>
+        </header>
+        <div class="work-title">
+          <div>
+            <div class="eyebrow">Every detail, accounted for</div>
+            <h1 id="document-title">Prescription review</h1>
+            <p id="document-subtitle">
+              From fax to a draft you can stand behind.
+            </p>
+          </div>
+          <div class="steps">
+            <span><i>1</i>Capture</span><em></em
+            ><span class="current"><i>2</i>Review</span><em></em
+            ><span><i>3</i>Approve</span>
+          </div>
+        </div>
+        <main class="review-grid" id="workspace">
+          <div class="card welcome-card">
+            <div class="welcome-copy">
+              <span class="badge green">Evidence before approval</span>
+              <h1>A clearer way to review prescriptions.</h1>
+              <p>
+                Keep the original fax in view. Check every extracted detail,
+                resolve uncertainty, and approve a traceable draft.
+              </p>
+              <button class="primary" id="welcome-samples">
+                Try a sample prescription <span data-icon="arrow"></span>
+              </button>
+              <div class="welcome-steps">
+                <span><b>01</b>Capture the page</span
+                ><span><b>02</b>Review the evidence</span
+                ><span><b>03</b>Export the draft</span>
+              </div>
+            </div>
+            <div class="welcome-art" aria-hidden="true">
+              <div class="illustration-page">
+                <span class="eyebrow">Prescription / source document</span>
+                <div class="rx">℞</div>
+                <div class="illustration-line" style="width: 72%"></div>
+                <div class="illustration-line"></div>
+                <div class="illustration-line" style="width: 85%"></div>
+                <div class="illustration-line" style="width: 60%"></div>
+                <div class="illustration-note">
+                  <span data-icon="shield"></span>Every field linked to its
+                  source
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
-    <details><summary>History (${(d.events||[]).length})</summary>${(d.events||[]).slice().reverse().map(e=>`<div class="src">${esc(e.time.slice(11,19))} · ${esc(e.actor)} · ${esc(e.action)} ${e.field?esc(LABELS[e.field]||e.field):""} ${e.before!==undefined?`“${esc(e.before)}” → “${esc(e.after)}”`:""} ${e.reason?"("+esc(e.reason)+")":""}</div>`).join("")}</details>
-    <details><summary>Developer view: sponsors and traces</summary><div class="kv">
-      <b>Document</b><span>${d.id} · r${d.revision} · sha256 ${d.sha256.slice(0,12)}…</span>
-      <b>OCR</b><span>${esc(d.ocr.engine)}, ${d.ocr.lines.length} lines</span>
-      <b>Reader</b><span>${esc(rd.engine)} ${rd.latency_ms?"· "+rd.latency_ms+" ms":""} · PRISM trace: ${rd.trace&&rd.trace.accepted?"accepted":"not recorded"} ${esc(rd.trace&&rd.trace.detail||"")}</span>
-      <b>Input guardrail</b><span>local ${gr.blocked?"BLOCKED":"clean"} · PRISM: ${gr.prism&&gr.prism.accepted?"trace accepted":"not recorded"} ${esc(gr.prism&&gr.prism.detail||"")}</span>
-      <b>Knowledge base</b><span>${esc(kb.status)} · ${esc(kb.prism&&kb.prism.detail||"")}</span>
-      <b>Evaluator</b><span id="evalstate">${ev.trajectory_id?"trajectory "+esc(ev.trajectory_id)+" · checking…":"not submitted ("+esc(ev.prism&&ev.prism.detail||"")+")"}</span>
-      <b>Classification</b><span>${esc(d.classification)}</span>
-      <b>Timings</b><span>${esc(JSON.stringify(d.timings_ms||{}))}</span></div></details>`;
-  if(ev.trajectory_id)api(`/api/documents/${d.id}/evaluation`).then(x=>{const el=$("#evalstate");if(el)el.textContent=`trajectory ${x.trajectory_id} · ${x.verdict?JSON.stringify(x.verdict).slice(0,200):"pending: not shown as a pass"}`}).catch(()=>{});
-  if(sel)hl(d.fields[sel]&&d.fields[sel].box);
-}
-function pick(k){sel=k;render()}
-function hl(b){const h=$("#hl");if(!h)return;if(!b){h.hidden=true;return}
-  const pad=0.006;h.hidden=false;h.style.left=((b[0]-pad)*100)+"%";h.style.top=((b[1]-pad)*100)+"%";h.style.width=((b[2]+2*pad)*100)+"%";h.style.height=((b[3]+2*pad)*100)+"%"}
-async function act(k,a){try{const body={action:a,revision:cur.revision,reviewer:"pharmacist",reason:a==="edit"?$("#er").value:"matches the fax"};if(a==="edit")body.value=$("#ev").value||null;
-  cur=await api(`/api/documents/${cur.id}/fields/${k}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});sel=null;render();refresh()}catch(e){toast(e.message)}}
-async function confirmPassed(){for(const[k,f]of Object.entries(cur.fields)){if(f.status==="checks_passed"&&f.required&&!(cur.review||{})[k]){
-  cur=await api(`/api/documents/${cur.id}/fields/${k}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({action:"confirm",revision:cur.revision,reviewer:"pharmacist",reason:"checks passed; matches fax"})})}}render();refresh()}
-async function clar(kind,fields){try{cur=await api(`/api/documents/${cur.id}/clarify`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({kind,fields})});toast(kind==="rescan"?"Rescan requested: the phone shows 'Action needed'.":"Prescriber clarification drafted (not sent automatically).");render();refresh()}catch(e){toast(e.message)}}
-async function approve(){try{cur=await api(`/api/documents/${cur.id}/approve`,{method:"POST",headers:{"Content-Type":"application/json","X-Role":"pharmacist"},body:JSON.stringify({reviewer:"pharmacist",revision:cur.revision})});toast("Approved. Export is ready.");render();refresh()}catch(e){toast(e.message)}}
-boot();
-</script>
-</body>
+    <dialog id="samples-dialog">
+      <div class="dialog-head">
+        <h2>Explore sample prescriptions</h2>
+        <button
+          class="quiet"
+          data-close="samples-dialog"
+          aria-label="Close samples"
+        >
+          <span data-icon="close"></span>
+        </button>
+      </div>
+      <p class="muted small">
+        Fictional prescriptions with deliberate challenges. Choose one to see
+        how review works.
+      </p>
+      <div class="sample-list" id="samples"></div>
+    </dialog>
+    <dialog id="system-dialog">
+      <div class="dialog-head">
+        <h2>Connection details</h2>
+        <button
+          class="quiet"
+          data-close="system-dialog"
+          aria-label="Close connection details"
+        >
+          <span data-icon="close"></span>
+        </button>
+      </div>
+      <div id="health" class="detail-content"></div>
+    </dialog>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
 </html>

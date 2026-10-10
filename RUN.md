@@ -12,6 +12,20 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000
 - Phone capture (same WiFi): http://<your-mac-ip>:8000/scan  (find the IP with `ipconfig getifaddr en0`)
 - Scorecard: http://localhost:8000/scorecard
 
+## Review interface
+
+The workspace groups fields into patient, prescription and prescriber sections. Select a field to see its source highlight, confirm it, or expand the correction form. Approval remains disabled until every required field has been reviewed and document-level blockers are resolved. The source viewer supports zoom; mobile layouts stack the source and review panels.
+
+The capture page supports camera or image import, preview, retry and device upload history. Retries reuse the same request key. The scorecard reports the saved evaluation run and explicitly labels its synthetic scope.
+
+Verification:
+```bash
+python -m pytest -q
+npm ci
+npm test
+```
+Node is used only for the DOM interaction tests. Running the app itself does not require a JavaScript build step.
+
 Without keys it runs in clearly labelled demo mode (Apple Vision OCR + a simple label reader that only understands our synthetic layout). Add `NICRRON_API_KEY` and the PRISM keys to `.env` and restart: extraction switches to the Nicrron vision reader and every stage is traced in PRISM.
 
 ## API (shared by web, /scan and the iPhone app)
