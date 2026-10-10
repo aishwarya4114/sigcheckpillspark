@@ -153,7 +153,7 @@ def _c(rule: str, label: str, passed: bool, detail: str = "", next_step: str = "
     return {"rule": rule, "label": label, "passed": bool(passed), "detail": detail, "next_step": "" if passed else next_step}
 
 
-def explain_field(name: str, value: str | None, fields: dict, today: date | None = None) -> list[dict]:
+def explain_field(name: str, value: str | None, fields: dict, today: date | None = None, max_rx_age_days: int = 365) -> list[dict]:
     """Every check run on a field, passed or failed, each with a plain next step when it fails.
     The pharmacist sees what was verified, not only what went wrong."""
     today = today or date.today()
@@ -213,8 +213,9 @@ def explain_field(name: str, value: str | None, fields: dict, today: date | None
             if name == "patient_dob":
                 out.append(_c("dob.plausible", "Plausible age", (today.year - d.year) <= 120, "Implausible age.", "Confirm the patient's date of birth."))
             else:
-                out.append(_c("rx.not_expired", "Written within the last 12 months", (today - d).days <= 365,
-                              "Older than 12 months.", "Ask the prescriber for a new prescription."))
+                age = (today - d).days
+                out.append(_c("rx.not_expired", f"Written within the last {max_rx_age_days} days", age <= max_rx_age_days,
+                              f"Written {age} days ago (policy limit {max_rx_age_days}).", "Ask the prescriber to confirm or reissue the prescription."))
     elif name in ("quantity", "refills"):
         whole = bool(re.fullmatch(r"\d{1,4}", v))
         out.append(_c(f"{name}.whole_number", "A whole number", whole, f"\"{v}\" isn't a whole number.", "Confirm the number with the prescriber."))

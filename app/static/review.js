@@ -216,13 +216,70 @@ function pipelineHTML() {
     .map(([n, st, d, ms]) => `<li class="${st}"><span class="dot" aria-hidden="true">${st === "ok" ? "✓" : st === "fail" ? "✕" : st === "warn" ? "!" : "–"}</span><b>${n}</b><small>${esc(d)}${Number.isFinite(ms) ? " · " + ms + " ms" : ""}</small></li>`)
     .join("")}</ol>`;
 }
+async function openRules() {
+  const p = await api("/api/policy"), pol = cur?.policy || p.policy, lim = p.limits;
+  const can = cur && !["blocked", "processing_failed", "processing"].includes(cur.status);
+  $("#rules-body").innerHTML = `<p class="small muted">Policy version <b>${esc(p.policy.version)}</b>${cur ? ` · this document was checked with threshold ${esc(pol.recognizer_threshold)} and a ${esc(pol.max_rx_age_days)}-day validity window` : ""}.</p>
+  <h3 class="rules-h">Adjustable (stricter or looser review, never off)</h3>
+  <label class="rules-row">Recognizer review threshold <output id="thr-out">${Number(p.policy.recognizer_threshold).toFixed(2)}</output>
+    <input id="thr" type="range" min="${lim.recognizer_threshold[0]}" max="${lim.recognizer_threshold[1]}" step="0.05" value="${p.policy.recognizer_threshold}" oninput="document.getElementById('thr-out').textContent=Number(this.value).toFixed(2)"></label>
+  <p class="small muted">Fields read below this score go to a pharmacist. Apple Vision reports coarse scores (often 1.0, 0.5 or 0.3), so this may not change results on clean images.</p>
+  <label class="rules-row">Prescription validity window (days) <output id="age-out">${p.policy.max_rx_age_days}</output>
+    <input id="age" type="range" min="${lim.max_rx_age_days[0]}" max="${lim.max_rx_age_days[1]}" step="1" value="${p.policy.max_rx_age_days}" oninput="document.getElementById('age-out').textContent=this.value"></label>
+  <h3 class="rules-h">Safety rules (always on, not configurable)</h3>
+  <ul class="locked-rules">${p.locked_rules.map((r) => `<li><span aria-hidden="true">🔒</span>${esc(r)}</li>`).join("")}</ul>
+  <h3 class="rules-h">Data sources</h3>
+  <ul class="small">${p.data_sources.map((d) => `<li>${esc(d)}</li>`).join("")}</ul>
+  <button class="primary" id="rerun-button" ${can ? "" : "disabled"}>${icon("check")}Re-run checks on this extraction</button>
+  <p class="small muted">${can ? "Keeps the image and extracted values. Runs only the deterministic checks (no new OCR or model call). Clears confirmations, invalidates any approval, and records the change in the history." : "Open a reviewable document to re-run its checks. Blocked documents can't be re-run."}</p>`;
+  $("#rules-dialog").showModal();
+}
+async function rerunChecks(b) {
+  if (!cur) return;
+  b.disabled = true;
+  try {
+    const r = await api(`/api/documents/${encodeURIComponent(cur.id)}/rerun-checks`, {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ recognizer_threshold: Number($("#thr").value), max_rx_age_days: Number($("#age").value), revision: cur.revision }),
+    });
+    cur = r.document;
+    $("#rules-dialog").close();
+    renderDocument();
+    await refresh();
+    toast(r.message);
+  } catch (err) {
+    toast(err.message, true);
+    b.disabled = false;
+  }
+}
+function howChecksHTML() {
+  const f = cur.fields || {}, s = cur.sponsors || {}, kb = s.kb || {}, g = s.guardrail || {};
+  const has = (k) => f[k] && f[k].value != null && String(f[k].value).trim() !== "";
+  const blocked = cur.status === "blocked";
+  const lab = (x) => `<span class="res res-${x.toLowerCase().replace(/ /g, "-")}">${x}</span>`;
+  const na = "Not applicable", ok = "Checked", un = "Unavailable";
+  const rows = [
+    ["Recognizer score", "Low scores route the field for human review; they do not prove correctness", "Apple Vision", (cur.ocr?.lines || []).length ? ok : un],
+    ["Trailing / leading zero", "5.0 mg could be misread as 50 mg; .5 mg as 5 mg", "Intake policy", blocked ? na : has("strength") ? ok : na],
+    ["Drug / strength coverage", "Whether the combination appears in the demonstration catalogue (coverage, not safety)", "Catalogue + PRISM KB", blocked || !has("drug_name") ? na : ok, blocked || !has("drug_name") ? null : kb.prism?.accepted ? ok : un],
+    ["Look-alike name", "Warns about known confusing drug names", "Catalogue", blocked ? na : has("drug_name") ? ok : na],
+    ["NPI check digit", "Detects likely mistyped or misread identifiers", "Deterministic calculation", blocked ? na : has("prescriber_npi") ? ok : na],
+    ["DEA validation", "Check digit and prescriber initial, for controlled substances", "Deterministic calculation", blocked ? na : f.prescriber_dea?.required ? (has("prescriber_dea") ? ok : ok) : na],
+    ["Never-guess rule", "Missing values remain blank", "Intake policy", blocked ? na : ok],
+    ["Prompt-injection guardrail", "Blocks fax text attempting to instruct the software", "Local guardrail + PRISM trace", ok, g.prism?.accepted ? ok : un],
+    ["Approval gate", "A pharmacist must review required fields before export", "Application workflow", ok],
+  ];
+  return `<details class="detail-section"><summary>How the checks work</summary><div class="detail-content"><table class="how-table"><thead><tr><th>Check</th><th>What it means</th><th>Source</th><th>This fax</th></tr></thead><tbody>${rows
+    .map(([n, m, src, r1, r2]) => `<tr><td><b>${esc(n)}</b></td><td>${esc(m)}</td><td>${esc(src)}</td><td>${lab(r1)}${r2 ? `<br><small>PRISM: </small>${lab(r2)}` : ""}</td></tr>`)
+    .join("")}</tbody></table><p class="small muted">"Checked" means the check ran. "Unavailable" means a service wasn't reachable or configured, and is never shown as a pass.</p></div></details>`;
+}
 function detailsHTML() {
   const s = cur.sponsors || {},
     kb = s.kb || {},
     g = s.guardrail || {},
     r = s.reader || {},
     e = s.evaluator || {};
-  return `<details class="detail-section"><summary>Reference evidence</summary><div class="detail-content"><p>${esc(kb.claim || "No catalogue evidence available.")}</p>${kb.citation ? `<p><strong>${esc(kb.document)}</strong><br>${esc(kb.citation)}</p>` : ""}</div></details><details class="detail-section"><summary>Review history · ${(cur.events || []).length}</summary><div class="detail-content">${(
+  return `${howChecksHTML()}<details class="detail-section"><summary>Reference evidence</summary><div class="detail-content"><p>${esc(kb.claim || "No catalogue evidence available.")}</p>${kb.citation ? `<p><strong>${esc(kb.document)}</strong><br>${esc(kb.citation)}</p>` : ""}</div></details><details class="detail-section"><summary>Review history · ${(cur.events || []).length}</summary><div class="detail-content">${(
     cur.events || []
   )
     .slice()
@@ -386,6 +443,8 @@ document.addEventListener("click", async (e) => {
   if (["samples-button", "welcome-samples"].includes(b.id))
     $("#samples-dialog").showModal();
   if (b.id === "system-button") $("#system-dialog").showModal();
+  if (b.id === "rules-button") openRules();
+  if (b.id === "rerun-button") rerunChecks(b);
   if (b.id === "upload-button") {
     if (failedUpload) await uploadFile(failedUpload);
     else $("#upload").click();

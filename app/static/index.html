@@ -48,6 +48,8 @@
             ><span data-icon="camera"></span>Phone capture</a
           ><a class="side-link" href="/scorecard"
             ><span data-icon="chart"></span>Evaluation scorecard</a
+          ><button class="side-link" id="rules-button">
+            <span data-icon="shield"></span>Rules &amp; policy</button
           ><button class="side-link" id="system-button">
             <span data-icon="info"></span>Connection details
           </button>
@@ -149,6 +151,15 @@
         </button>
       </div>
       <div id="health" class="detail-content"></div>
+    </dialog>
+    <dialog id="rules-dialog" aria-labelledby="rules-title">
+      <div class="dialog-head">
+        <h2 id="rules-title">Rules &amp; policy</h2>
+        <button class="quiet" data-close="rules-dialog" aria-label="Close rules">
+          <span data-icon="close"></span>
+        </button>
+      </div>
+      <div id="rules-body" class="detail-content"></div>
     </dialog>
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
   </body>

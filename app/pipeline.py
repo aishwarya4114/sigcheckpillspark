@@ -13,7 +13,7 @@ from PIL import Image
 
 from sponsors import FIELDS, NicrronReader, Prism, settings
 
-from . import checks
+from . import checks, policy
 
 OCR_LOW = 0.6  # recogniser's own score; low score only ADDS review, it never verifies anything
 
@@ -130,33 +130,14 @@ def process(image_bytes: bytes, mime: str, *, doc_id: str | None = None, source:
                                      "ok": True, "error": None, "trace": {"sent": False, "accepted": False, "detail": "no Nicrron run"}}
     t["extract"] = int((time.monotonic() - s) * 1000)
 
-    # 3. Checks + decide per field
+    # 3. Checks + decide per field (deterministic; re-runnable with a new policy)
     s = time.monotonic()
-    controlled = checks.is_controlled(fields)
-    required = set(checks.REQUIRED) | ({"prescriber_dea"} if controlled else set())
+    located = {}
     for name in FIELDS:
-        f = fields.get(name) or {"value": None, "source_text": ""}
-        box, conf = find_box(lines, f.get("source_text", ""), f.get("value"))
-        log = checks.explain_field(name, f.get("value"), fields)
-        if f.get("conflict"):
-            log.append(checks._c("field.single_reading", "One consistent reading on the page", False,
-                                 "Two incompatible readings: " + (f.get("note") or "see fax"),
-                                 "Ask the prescriber which value is intended."))
-        if conf is not None and f.get("value"):
-            log.append(checks._c("ocr.legible", "Clearly legible (recogniser score)", conf >= OCR_LOW,
-                                 f"Recogniser score {conf:.2f}.", "Compare this value with the fax image; request a clearer scan if unsure."))
-        problems = [c["detail"] for c in log if not c["passed"]]
-        if f.get("value") is None and name not in required and name != "refills":
-            status = "not_applicable"
-        elif f.get("value") is None:
-            status = "missing"
-        elif problems:
-            status = "needs_review"
-        else:
-            status = "checks_passed"
-        rec["fields"][name] = {"value": f.get("value"), "source_text": f.get("source_text", ""), "box": box,
-                               "ocr_score": conf, "status": status, "reasons": problems, "checks": log,
-                               "required": name in required, "note": f.get("note", "")}
+        f = fields.get(name) or {}
+        located[name] = find_box(lines, f.get("source_text", ""), f.get("value"))
+    rec["policy"] = policy.current()
+    rec["fields"] = assess_fields(fields, located, rec["policy"])
     t["checks"] = int((time.monotonic() - s) * 1000)
 
     # 4. Knowledge-base claim for the drug/strength/form, with citation
@@ -190,3 +171,41 @@ def _evaluate(rec: dict, prism: Prism, timings: dict, ocr_text: str) -> None:
     rec["sponsors"]["evaluator"] = {"trajectory_id": ev.trajectory_id, "prism": vars(ev.prism),
                                     "verdict": None, "note": "PRISM scores asynchronously; until a verdict arrives this shows as pending, never as a pass."}
     rec["timings_ms"] = timings
+
+
+def assess_fields(fields: dict, located: dict, pol: dict) -> dict:
+    """Deterministic decision for every field. No OCR, no model: safe to re-run under a new policy."""
+    threshold = float(pol.get("recognizer_threshold", OCR_LOW))
+    max_age = int(pol.get("max_rx_age_days", 365))
+    controlled = checks.is_controlled(fields)
+    required = set(checks.REQUIRED) | ({"prescriber_dea"} if controlled else set())
+    out = {}
+    for name in FIELDS:
+        f = fields.get(name) or {"value": None, "source_text": ""}
+        box, conf = located.get(name, (None, None))
+        log = checks.explain_field(name, f.get("value"), fields, max_rx_age_days=max_age)
+        if f.get("conflict"):
+            log.append(checks._c("field.single_reading", "One consistent reading on the page", False,
+                                 "Two incompatible readings: " + (f.get("note") or "see fax"),
+                                 "Ask the prescriber which value is intended."))
+        if conf is not None and f.get("value"):
+            log.append(checks._c("ocr.legible", f"Recognizer score at least {threshold:.2f}", conf >= threshold,
+                                 f"Recognizer score {conf:.2f} (policy threshold {threshold:.2f}).",
+                                 "Compare this value with the fax image; request a clearer scan if unsure."))
+        problems = [c["detail"] for c in log if not c["passed"]]
+        if f.get("value") is None and name not in required and name != "refills":
+            status = "not_applicable"
+        elif f.get("value") is None:
+            status = "missing"
+        elif problems:
+            status = "needs_review"
+        else:
+            status = "checks_passed"
+        out[name] = {"value": f.get("value"), "source_text": f.get("source_text", ""), "box": box,
+                     "ocr_score": conf, "status": status, "reasons": problems, "checks": log,
+                     "required": name in required, "note": f.get("note", ""), "conflict": bool(f.get("conflict"))}
+    return out
+
+
+def attention_count(fields: dict) -> int:
+    return sum(1 for f in fields.values() if f["status"] in ("missing", "needs_review"))

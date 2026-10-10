@@ -18,7 +18,7 @@ from pydantic import BaseModel
 
 from sponsors import Prism, settings
 
-from . import pipeline
+from . import pipeline, policy as policy_mod
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "docs"
@@ -386,3 +386,58 @@ def crop(doc_id: str, field: str):
     buf = io.BytesIO()
     im.crop(box).save(buf, format="PNG")
     return Response(buf.getvalue(), media_type="image/png")
+
+
+@app.get("/api/policy")
+def get_policy():
+    return {"policy": policy_mod.current(), "limits": policy_mod.LIMITS,
+            "locked_rules": policy_mod.LOCKED_RULES, "data_sources": policy_mod.DATA_SOURCES}
+
+
+class Rerun(BaseModel):
+    recognizer_threshold: Optional[float] = None
+    max_rx_age_days: Optional[int] = None
+    revision: int
+    reviewer: str = "pharmacist"
+
+
+@app.post("/api/documents/{doc_id}/rerun-checks")
+def rerun_checks(doc_id: str, body: Rerun):
+    """Re-apply the deterministic checks under a new policy snapshot. The image and extracted values are
+    unchanged; no OCR or model call is made. Human confirmations are cleared and any approval is invalidated."""
+    with lock:
+        rec = load(doc_id)
+        if rec["status"] in ("blocked", "processing_failed", "processing"):
+            raise HTTPException(409, "Checks can't be re-run on a blocked or failed document. Safety blocks are not configurable.")
+        if body.revision != rec["revision"]:
+            raise HTTPException(409, f"Document changed (now revision {rec['revision']}). Reload first.")
+        try:
+            new_pol = policy_mod.validate({"recognizer_threshold": body.recognizer_threshold,
+                                           "max_rx_age_days": body.max_rx_age_days})
+        except ValueError as e:
+            raise HTTPException(400, str(e))
+        snap = policy_mod.save(new_pol)
+        old_pol = rec.get("policy") or policy_mod.DEFAULTS
+        before = pipeline.attention_count(rec["fields"])
+        raw = {k: {"value": f["value"], "source_text": f.get("source_text", ""), "conflict": f.get("conflict", False),
+                   "note": f.get("note", "")} for k, f in rec["fields"].items()}
+        located = {k: (f.get("box"), f.get("ocr_score")) for k, f in rec["fields"].items()}
+        rec["fields"] = pipeline.assess_fields(raw, located, new_pol)
+        after = pipeline.attention_count(rec["fields"])
+        cleared = list(rec.get("review", {}))
+        rec["review"] = {}
+        had_approval = bool(rec.get("approved"))
+        rec["approved"] = None
+        rec["policy"] = {k: new_pol[k] for k in ("version", "recognizer_threshold", "max_rx_age_days")}
+        rec["revision"] += 1
+        rec["status"] = "needs_clarification" if (rec.get("clarification") or {}).get("open") else "needs_review"
+        missing_required = any(f["status"] == "missing" and f["required"] for f in rec["fields"].values())
+        rec["classification"] = "needs_clarification" if missing_required else "complete_for_review"
+        msg = f"Policy rerun complete · {before} → {after} fields require attention"
+        event(rec, body.reviewer, "policy rerun", reason=msg,
+              before={k: old_pol.get(k) for k in ("recognizer_threshold", "max_rx_age_days")},
+              after={k: new_pol[k] for k in ("recognizer_threshold", "max_rx_age_days")},
+              confirmations_cleared=cleared, approval_invalidated=had_approval, revision=rec["revision"],
+              policy_saved_at=snap["saved_at"])
+        save(rec)
+        return {"message": msg, "before": before, "after": after, "document": rec}
