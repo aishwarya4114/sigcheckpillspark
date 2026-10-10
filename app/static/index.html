@@ -12,20 +12,25 @@
     <script defer src="/static/ui.js"></script>
     <script defer src="/static/review.js"></script>
   </head>
-  <body>
+  <body class="queue-mode">
     <a class="skip-link" href="#workspace">Skip to the current case</a>
     <div class="app-shell">
       <aside class="sidebar" aria-label="Prescription queue">
         <a class="brand" href="/"
-          ><span class="brand-mark" data-icon="shield"></span>SigCheck<span
+          ><span class="brand-mark" data-icon="shield"></span><span class="brand-name">SigCheck</span><span
             class="badge tech-only"
             >Prototype</span
           ></a
         >
         <div class="workspace-label"><span></span>PHARMACY WORKSPACE</div>
+        <nav class="queue-nav" aria-label="Workspace shortcuts">
+          <a class="active" href="/">Review queue</a>
+          <a href="/scan">Scan paper Rx</a>
+          <a href="/scorecard" class="tech-only">Scorecard</a>
+        </nav>
         <div class="side-actions">
           <button class="primary upload-button" id="upload-button">
-            <span data-icon="plus"></span>New prescription</button
+            <span data-icon="plus"></span><span class="upload-label">New prescription</span></button
           ><input
             hidden
             id="upload"
@@ -34,7 +39,7 @@
           />
         </div>
         <div class="queue-heading">
-          <span class="eyebrow">Review queue</span
+          <div><span class="eyebrow">Today’s worklist</span><h1>Prescription review</h1><p>Prioritized by the next action required from the pharmacy team.</p></div
           ><span id="queue-count" class="queue-count">0</span>
         </div>
         <div class="segmented ops-filter" aria-label="Filter queue">
@@ -44,6 +49,7 @@
           ><button data-filter="ready" aria-pressed="false">Ready</button
           ><button data-filter="completed" aria-pressed="false">Completed</button>
         </div>
+        <div class="queue-columns" aria-hidden="true"><span>Patient and medication</span><span>Next action</span><span>Received</span></div>
         <div id="queue" class="queue">
           <div class="loading"><span class="spinner"></span>Loading queue</div>
         </div>
@@ -63,7 +69,7 @@
       <div class="work-area">
         <header class="topbar">
           <div class="breadcrumbs">
-            Workspace <span>/</span> <b>Prescription review</b>
+            <button class="back-queue" data-back-queue><span data-icon="arrow"></span>Queue</button><span>/</span> <b>Prescription review</b>
           </div>
           <div class="topbar-right">
             <nav class="topnav" aria-label="Main">

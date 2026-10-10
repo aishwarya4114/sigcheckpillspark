@@ -55,3 +55,12 @@ def test_all_ui_assets_are_served(workspace):
     client, _ = workspace
     for path in ('/', '/scan', '/scorecard', '/static/ui.css', '/static/ui.js', '/static/review.js', '/static/scan.js', '/static/scorecard.js'):
         assert client.get(path).status_code == 200
+
+
+def test_scorecard_includes_frozen_heldout_evaluation(workspace):
+    client, _ = workspace
+    result = client.get('/api/scorecard').json()
+    assert result['heldout']['set'] == 'held-out'
+    assert result['heldout']['rules_frozen_at'] == '2abbbb8'
+    assert result['heldout']['accuracy']['verified_right'] == 235
+    assert len(result['heldout']['clean_flags']) == 3

@@ -354,7 +354,11 @@ def evaluation(doc_id: str):
 @app.get("/api/scorecard")
 def scorecard():
     p = ROOT / "evals" / "results.json"
-    return JSONResponse(json.loads(p.read_text()) if p.exists() else {"error": "Run: python scripts/evaluate.py"})
+    result = json.loads(p.read_text()) if p.exists() else {"error": "Run: python scripts/evaluate.py"}
+    heldout = ROOT / "faxfill" / "data" / "eval" / "heldout.json"
+    if heldout.exists():
+        result["heldout"] = json.loads(heldout.read_text())
+    return JSONResponse(result)
 
 
 LABELS = {"patient_name": "Patient", "patient_dob": "Date of birth", "drug_name": "Drug", "strength": "Strength",
