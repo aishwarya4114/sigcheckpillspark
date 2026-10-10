@@ -1,0 +1,299 @@
+{
+ "id": "rx_031",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "rx_031_p1.png"
+ ],
+ "pages_declared": 1,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": -0.26,
+  "blur": 0.5,
+  "noise": 10,
+  "fax_mode": "fine",
+  "level": "light"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": -0.26,
+   "blur": 0.5,
+   "noise": 10,
+   "fax_mode": "fine",
+   "level": "light"
+  }
+ ],
+ "is_clean": false,
+ "trap": "conflicting_directions",
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "rx_031_p1.png",
+   "fields": {
+    "patient_name": "Isabel Moreau",
+    "patient_dob": "1963-04-17",
+    "patient_address": "326 W 118th St, Apt 3C, New York, NY 10031",
+    "drug_name": "metoprolol tartrate",
+    "strength": "25 mg",
+    "strength_value": 25,
+    "strength_unit": "mg",
+    "dosage_form": "tablet",
+    "directions": "1 tab PO BID",
+    "quantity": 60,
+    "quantity_text": "#60 (sixty) tablets",
+    "days_supply_stated": null,
+    "refills": 1,
+    "prescriber_name": "Lucia Ferraro, MD",
+    "prescriber_npi": "1512883764",
+    "prescriber_dea": null,
+    "date_written": "2026-10-07",
+    "substitution": "permitted",
+    "notes": "Take 1 tab PO TID after 7 days."
+   },
+   "field_boxes": {
+    "fax_header": [
+     65,
+     22,
+     1430,
+     49
+    ],
+    "clinic": [
+     124,
+     116,
+     724,
+     151
+    ],
+    "prescriber_name": [
+     124,
+     179,
+     448,
+     213
+    ],
+    "prescriber_npi": [
+     208,
+     323,
+     419,
+     351
+    ],
+    "patient_name": [
+     363,
+     434,
+     604,
+     462
+    ],
+    "patient_dob": [
+     1183,
+     438,
+     1373,
+     465
+    ],
+    "patient_address": [
+     363,
+     510,
+     951,
+     539
+    ],
+    "date_written": [
+     362,
+     582,
+     552,
+     610
+    ],
+    "drug_name": [
+     362,
+     702,
+     700,
+     738
+    ],
+    "strength": [
+     728,
+     703,
+     838,
+     739
+    ],
+    "dosage_form": [
+     866,
+     704,
+     968,
+     732
+    ],
+    "directions": [
+     361,
+     832,
+     586,
+     860
+    ],
+    "quantity": [
+     361,
+     922,
+     660,
+     958
+    ],
+    "refills": [
+     360,
+     1012,
+     381,
+     1039
+    ],
+    "substitution": [
+     120,
+     1103,
+     150,
+     1133
+    ],
+    "notes": [
+     259,
+     1201,
+     670,
+     1230
+    ]
+   },
+   "meta": {
+    "rxcui": "866924",
+    "fax_from": "(212) 555-0125",
+    "sent": "2026-10-07 11:23",
+    "patient_id": "PT006",
+    "prescriber_id": "P112",
+    "prescriber_in_directory": true
+   }
+  }
+ ],
+ "image": "rx_031_p1.png",
+ "fields": {
+  "patient_name": "Isabel Moreau",
+  "patient_dob": "1963-04-17",
+  "patient_address": "326 W 118th St, Apt 3C, New York, NY 10031",
+  "drug_name": "metoprolol tartrate",
+  "strength": "25 mg",
+  "strength_value": 25,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "1 tab PO BID",
+  "quantity": 60,
+  "quantity_text": "#60 (sixty) tablets",
+  "days_supply_stated": null,
+  "refills": 1,
+  "prescriber_name": "Lucia Ferraro, MD",
+  "prescriber_npi": "1512883764",
+  "prescriber_dea": null,
+  "date_written": "2026-10-07",
+  "substitution": "permitted",
+  "notes": "Take 1 tab PO TID after 7 days."
+ },
+ "field_boxes": {
+  "fax_header": [
+   65,
+   22,
+   1430,
+   49
+  ],
+  "clinic": [
+   124,
+   116,
+   724,
+   151
+  ],
+  "prescriber_name": [
+   124,
+   179,
+   448,
+   213
+  ],
+  "prescriber_npi": [
+   208,
+   323,
+   419,
+   351
+  ],
+  "patient_name": [
+   363,
+   434,
+   604,
+   462
+  ],
+  "patient_dob": [
+   1183,
+   438,
+   1373,
+   465
+  ],
+  "patient_address": [
+   363,
+   510,
+   951,
+   539
+  ],
+  "date_written": [
+   362,
+   582,
+   552,
+   610
+  ],
+  "drug_name": [
+   362,
+   702,
+   700,
+   738
+  ],
+  "strength": [
+   728,
+   703,
+   838,
+   739
+  ],
+  "dosage_form": [
+   866,
+   704,
+   968,
+   732
+  ],
+  "directions": [
+   361,
+   832,
+   586,
+   860
+  ],
+  "quantity": [
+   361,
+   922,
+   660,
+   958
+  ],
+  "refills": [
+   360,
+   1012,
+   381,
+   1039
+  ],
+  "substitution": [
+   120,
+   1103,
+   150,
+   1133
+  ],
+  "notes": [
+   259,
+   1201,
+   670,
+   1230
+  ]
+ },
+ "meta": {
+  "rxcui": "866924",
+  "fax_from": "(212) 555-0125",
+  "sent": "2026-10-07 11:23",
+  "patient_id": "PT006",
+  "prescriber_id": "P112",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [
+  {
+   "field": "directions",
+   "code": "conflicting_directions",
+   "why": "Sig says 1 tab PO BID but the Notes line says 1 tab PO TID after 7 days: two sets of directions on one prescription.",
+   "page": 1
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": []
+}

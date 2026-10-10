@@ -1,0 +1,316 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=atorvastatin",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:25-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "262095",
+       "name": "atorvastatin 80 MG Oral Tablet [Lipitor]",
+       "synonym": "Lipitor 80 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2631867",
+       "name": "atorvastatin 4 MG/ML Oral Suspension [Atorvaliq]",
+       "synonym": "Atorvaliq 4 MG/ML Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "617314",
+       "name": "atorvastatin 10 MG Oral Tablet [Lipitor]",
+       "synonym": "Lipitor 10 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "617318",
+       "name": "atorvastatin 20 MG Oral Tablet [Lipitor]",
+       "synonym": "Lipitor 20 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "617320",
+       "name": "atorvastatin 40 MG Oral Tablet [Lipitor]",
+       "synonym": "Lipitor 40 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "750199",
+       "name": "amlodipine 10 MG / atorvastatin 10 MG Oral Tablet [Caduet]",
+       "synonym": "Caduet 10/10 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "750203",
+       "name": "amlodipine 10 MG / atorvastatin 20 MG Oral Tablet [Caduet]",
+       "synonym": "Caduet 10/20 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "750207",
+       "name": "amlodipine 10 MG / atorvastatin 40 MG Oral Tablet [Caduet]",
+       "synonym": "Caduet 10/40 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "750211",
+       "name": "amlodipine 10 MG / atorvastatin 80 MG Oral Tablet [Caduet]",
+       "synonym": "Caduet 10/80 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "750227",
+       "name": "amlodipine 5 MG / atorvastatin 10 MG Oral Tablet [Caduet]",
+       "synonym": "Caduet 5/10 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "750231",
+       "name": "amlodipine 5 MG / atorvastatin 20 MG Oral Tablet [Caduet]",
+       "synonym": "Caduet 5/20 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "750235",
+       "name": "amlodipine 5 MG / atorvastatin 40 MG Oral Tablet [Caduet]",
+       "synonym": "Caduet 5/40 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "750239",
+       "name": "amlodipine 5 MG / atorvastatin 80 MG Oral Tablet [Caduet]",
+       "synonym": "Caduet 5/80 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "1422093",
+       "name": "atorvastatin 20 MG / ezetimibe 10 MG Oral Tablet",
+       "synonym": "atorvastatin 20 MG (as atorvastatin calcium 20.68 MG) / ezetimibe 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1422096",
+       "name": "atorvastatin 40 MG / ezetimibe 10 MG Oral Tablet",
+       "synonym": "atorvastatin 40 MG (as atorvastatin calcium 41.37 MG) / ezetimibe 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1422099",
+       "name": "atorvastatin 80 MG / ezetimibe 10 MG Oral Tablet",
+       "synonym": "atorvastatin 80 MG (as atorvastatin calcium 82.73 MG) / ezetimibe 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "259255",
+       "name": "atorvastatin 80 MG Oral Tablet",
+       "synonym": "atorvastatin (as atorvastatin calcium) 80 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2630760",
+       "name": "atorvastatin 4 MG/ML Oral Suspension",
+       "synonym": "atorvastatin (as atorvastatin calcium) 20 MG per 5 ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "404011",
+       "name": "amlodipine 5 MG / atorvastatin 80 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 5 MG / atorvastatin (as atorvastatin calcium) 80 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "404013",
+       "name": "amlodipine 10 MG / atorvastatin 80 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 10 MG / atorvastatin (as atorvastatin calcium) 80 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "597967",
+       "name": "amlodipine 10 MG / atorvastatin 20 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 10 MG / atorvastatin (as atorvastatin calcium) 20 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "597971",
+       "name": "amlodipine 2.5 MG / atorvastatin 10 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 2.5 MG / atorvastatin (as atorvastatin calcium) 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "597974",
+       "name": "amlodipine 2.5 MG / atorvastatin 20 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 2.5 MG / atorvastatin (as atorvastatin calcium) 20 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "597977",
+       "name": "amlodipine 5 MG / atorvastatin 10 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 5 MG / atorvastatin (as atorvastatin calcium) 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "597980",
+       "name": "amlodipine 5 MG / atorvastatin 20 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 5 MG / atorvastatin (as atorvastatin calcium) 20 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "597984",
+       "name": "amlodipine 5 MG / atorvastatin 40 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 5 MG / atorvastatin (as atorvastatin calcium) 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "597987",
+       "name": "amlodipine 10 MG / atorvastatin 10 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 10 MG / atorvastatin (as atorvastatin calcium) 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "597990",
+       "name": "amlodipine 10 MG / atorvastatin 40 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 10 MG / atorvastatin (as atorvastatin calcium) 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "597993",
+       "name": "amlodipine 2.5 MG / atorvastatin 40 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 2.5 MG / atorvastatin (as atorvastatin calcium) 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "617310",
+       "name": "atorvastatin 20 MG Oral Tablet",
+       "synonym": "atorvastatin (as atorvastatin calcium) 20 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "617311",
+       "name": "atorvastatin 40 MG Oral Tablet",
+       "synonym": "atorvastatin (as atorvastatin calcium) 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "617312",
+       "name": "atorvastatin 10 MG Oral Tablet",
+       "synonym": "atorvastatin (as atorvastatin calcium) 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

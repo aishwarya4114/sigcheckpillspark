@@ -1,0 +1,292 @@
+{
+ "id": "ho_001",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "ho_001_p1.png"
+ ],
+ "pages_declared": 1,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": 0.44,
+  "blur": 1.25,
+  "noise": 32,
+  "fax_mode": "standard",
+  "level": "heavy"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": 0.44,
+   "blur": 1.25,
+   "noise": 32,
+   "fax_mode": "standard",
+   "level": "heavy"
+  }
+ ],
+ "is_clean": true,
+ "trap": null,
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "ho_001_p1.png",
+   "fields": {
+    "patient_name": "Ingrid Solberg",
+    "patient_dob": "1983-03-09",
+    "patient_address": "268 St Nicholas Ave, Apt 3D, New York, NY 10031",
+    "drug_name": "risperidone",
+    "strength": "4 mg",
+    "strength_value": 4,
+    "strength_unit": "mg",
+    "dosage_form": "tablet",
+    "directions": "1 tab PO BID x 90 days",
+    "quantity": 180,
+    "quantity_text": "#180 (one hundred eighty) tablets",
+    "days_supply_stated": 90,
+    "refills": 2,
+    "prescriber_name": "Samuel Ortega, PA",
+    "prescriber_npi": "1314440086",
+    "prescriber_dea": "MO2340038",
+    "date_written": "2026-10-06",
+    "substitution": "permitted",
+    "notes": null
+   },
+   "field_boxes": {
+    "fax_header": [
+     52,
+     22,
+     1417,
+     52
+    ],
+    "clinic": [
+     112,
+     120,
+     713,
+     158
+    ],
+    "prescriber_name": [
+     113,
+     185,
+     457,
+     223
+    ],
+    "prescriber_npi": [
+     199,
+     329,
+     409,
+     358
+    ],
+    "prescriber_dea": [
+     709,
+     325,
+     918,
+     354
+    ],
+    "patient_name": [
+     355,
+     438,
+     591,
+     475
+    ],
+    "patient_dob": [
+     1175,
+     432,
+     1365,
+     460
+    ],
+    "patient_address": [
+     355,
+     511,
+     1006,
+     543
+    ],
+    "date_written": [
+     356,
+     586,
+     546,
+     615
+    ],
+    "drug_name": [
+     357,
+     706,
+     576,
+     743
+    ],
+    "strength": [
+     604,
+     705,
+     693,
+     741
+    ],
+    "dosage_form": [
+     721,
+     704,
+     823,
+     732
+    ],
+    "directions": [
+     358,
+     835,
+     757,
+     873
+    ],
+    "quantity": [
+     359,
+     923,
+     928,
+     963
+    ],
+    "refills": [
+     359,
+     1018,
+     381,
+     1045
+    ],
+    "substitution": [
+     120,
+     1111,
+     150,
+     1142
+    ]
+   },
+   "meta": {
+    "rxcui": "314211",
+    "fax_from": "(212) 555-0115",
+    "sent": "2026-10-06 16:32",
+    "patient_id": "PT014",
+    "prescriber_id": "P107",
+    "prescriber_in_directory": true
+   }
+  }
+ ],
+ "image": "ho_001_p1.png",
+ "fields": {
+  "patient_name": "Ingrid Solberg",
+  "patient_dob": "1983-03-09",
+  "patient_address": "268 St Nicholas Ave, Apt 3D, New York, NY 10031",
+  "drug_name": "risperidone",
+  "strength": "4 mg",
+  "strength_value": 4,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "1 tab PO BID x 90 days",
+  "quantity": 180,
+  "quantity_text": "#180 (one hundred eighty) tablets",
+  "days_supply_stated": 90,
+  "refills": 2,
+  "prescriber_name": "Samuel Ortega, PA",
+  "prescriber_npi": "1314440086",
+  "prescriber_dea": "MO2340038",
+  "date_written": "2026-10-06",
+  "substitution": "permitted",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   52,
+   22,
+   1417,
+   52
+  ],
+  "clinic": [
+   112,
+   120,
+   713,
+   158
+  ],
+  "prescriber_name": [
+   113,
+   185,
+   457,
+   223
+  ],
+  "prescriber_npi": [
+   199,
+   329,
+   409,
+   358
+  ],
+  "prescriber_dea": [
+   709,
+   325,
+   918,
+   354
+  ],
+  "patient_name": [
+   355,
+   438,
+   591,
+   475
+  ],
+  "patient_dob": [
+   1175,
+   432,
+   1365,
+   460
+  ],
+  "patient_address": [
+   355,
+   511,
+   1006,
+   543
+  ],
+  "date_written": [
+   356,
+   586,
+   546,
+   615
+  ],
+  "drug_name": [
+   357,
+   706,
+   576,
+   743
+  ],
+  "strength": [
+   604,
+   705,
+   693,
+   741
+  ],
+  "dosage_form": [
+   721,
+   704,
+   823,
+   732
+  ],
+  "directions": [
+   358,
+   835,
+   757,
+   873
+  ],
+  "quantity": [
+   359,
+   923,
+   928,
+   963
+  ],
+  "refills": [
+   359,
+   1018,
+   381,
+   1045
+  ],
+  "substitution": [
+   120,
+   1111,
+   150,
+   1142
+  ]
+ },
+ "meta": {
+  "rxcui": "314211",
+  "fax_from": "(212) 555-0115",
+  "sent": "2026-10-06 16:32",
+  "patient_id": "PT014",
+  "prescriber_id": "P107",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [],
+ "expected_order_status": "ready_for_review",
+ "expect_abstain": []
+}

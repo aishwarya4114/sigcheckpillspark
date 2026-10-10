@@ -1,0 +1,158 @@
+[
+ {
+  "kind": "intake",
+  "trace_id": "sigcheck-intake-ho_011-p1-289f7ddc93f7",
+  "agent": "sigcheck-intake",
+  "http_status": 200,
+  "ok": true,
+  "prism_id": "43ae10bd-a156-4ade-bd6f-bff796399518",
+  "detail": null,
+  "response_keys": [
+   "cost_usd",
+   "created_at",
+   "evaluation",
+   "guardrail_flags",
+   "id",
+   "input_messages",
+   "latency_ms",
+   "metadata",
+   "model",
+   "output_message",
+   "pii_redacted",
+   "project_id",
+   "session_id",
+   "spans",
+   "token_count_input",
+   "token_count_output",
+   "trace_id",
+   "user_identifier"
+  ],
+  "guardrail_fields_in_response": {
+   "guardrail_flags": [
+    {
+     "rule_id": "b0ead208-769d-4751-b9d8-1229c75a7985",
+     "rule_name": "PII/PHI Detection",
+     "rule_type": "pii_phi",
+     "severity": "high",
+     "action": "flag",
+     "matched_text": "Medical License: MB9376787"
+    }
+   ]
+  },
+  "page": 1
+ },
+ {
+  "kind": "reader",
+  "trace_id": "sigcheck-read-ho_011_p1-openai-gpt-5.5-reader-v2-v2",
+  "agent": "sigcheck-reader",
+  "http_status": 200,
+  "ok": true,
+  "prism_id": "ecd23da0-488b-4b7d-936a-fc579246b79b",
+  "detail": null,
+  "response_keys": [
+   "cost_usd",
+   "created_at",
+   "evaluation",
+   "guardrail_flags",
+   "id",
+   "input_messages",
+   "latency_ms",
+   "metadata",
+   "model",
+   "output_message",
+   "pii_redacted",
+   "project_id",
+   "session_id",
+   "spans",
+   "token_count_input",
+   "token_count_output",
+   "trace_id",
+   "user_identifier"
+  ],
+  "guardrail_fields_in_response": {
+   "guardrail_flags": [
+    {
+     "rule_id": "b0ead208-769d-4751-b9d8-1229c75a7985",
+     "rule_name": "PII/PHI Detection",
+     "rule_type": "pii_phi",
+     "severity": "high",
+     "action": "flag",
+     "matched_text": "Medical License: MB9376787"
+    }
+   ]
+  }
+ },
+ {
+  "kind": "reader",
+  "trace_id": "sigcheck-read-ho_011_p1-mistral-mistral-large-3-reader-v2-v2",
+  "agent": "sigcheck-reader",
+  "http_status": 200,
+  "ok": true,
+  "prism_id": "8759906e-70e5-42f4-b753-9fd5d1f686ce",
+  "detail": null,
+  "response_keys": [
+   "cost_usd",
+   "created_at",
+   "evaluation",
+   "guardrail_flags",
+   "id",
+   "input_messages",
+   "latency_ms",
+   "metadata",
+   "model",
+   "output_message",
+   "pii_redacted",
+   "project_id",
+   "session_id",
+   "spans",
+   "token_count_input",
+   "token_count_output",
+   "trace_id",
+   "user_identifier"
+  ],
+  "guardrail_fields_in_response": {
+   "guardrail_flags": [
+    {
+     "rule_id": "b0ead208-769d-4751-b9d8-1229c75a7985",
+     "rule_name": "PII/PHI Detection",
+     "rule_type": "pii_phi",
+     "severity": "high",
+     "action": "flag",
+     "matched_text": "Medical License: MB9376787"
+    }
+   ]
+  }
+ },
+ {
+  "kind": "verifier",
+  "trace_id": "sigcheck-verify-ho_011-710f3bf3ab0d",
+  "agent": "sigcheck-verifier",
+  "http_status": 200,
+  "ok": true,
+  "prism_id": "bde0cf5d-c1a1-4a87-ab4d-4946a3b8fd81",
+  "detail": null,
+  "response_keys": [
+   "cost_usd",
+   "created_at",
+   "evaluation",
+   "guardrail_flags",
+   "id",
+   "input_messages",
+   "latency_ms",
+   "metadata",
+   "model",
+   "output_message",
+   "pii_redacted",
+   "project_id",
+   "session_id",
+   "spans",
+   "token_count_input",
+   "token_count_output",
+   "trace_id",
+   "user_identifier"
+  ],
+  "guardrail_fields_in_response": {
+   "guardrail_flags": null
+  }
+ }
+]

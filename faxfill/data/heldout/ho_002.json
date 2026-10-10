@@ -1,0 +1,280 @@
+{
+ "id": "ho_002",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "ho_002_p1.png"
+ ],
+ "pages_declared": 1,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": 0.8,
+  "blur": 0.9,
+  "noise": 22,
+  "fax_mode": "standard",
+  "level": "medium"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": 0.8,
+   "blur": 0.9,
+   "noise": 22,
+   "fax_mode": "standard",
+   "level": "medium"
+  }
+ ],
+ "is_clean": true,
+ "trap": null,
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "ho_002_p1.png",
+   "fields": {
+    "patient_name": "Jamal Pierce",
+    "patient_dob": "1975-06-30",
+    "patient_address": "140 W 121st St, Apt 6C, New York, NY 10030",
+    "drug_name": "glipizide",
+    "strength": "15 mg",
+    "strength_value": 15,
+    "strength_unit": "mg",
+    "dosage_form": "tablet",
+    "directions": "Take 1 tablet by mouth twice daily for 14 days",
+    "quantity": 28,
+    "quantity_text": "#28 (twenty-eight) tablets",
+    "days_supply_stated": 14,
+    "refills": 2,
+    "prescriber_name": "Hannah Lindqvist, MD",
+    "prescriber_npi": "1483926451",
+    "prescriber_dea": null,
+    "date_written": "2026-10-08",
+    "substitution": "dispense_as_written",
+    "notes": null
+   },
+   "field_boxes": {
+    "fax_header": [
+     45,
+     18,
+     1410,
+     57
+    ],
+    "clinic": [
+     106,
+     120,
+     727,
+     171
+    ],
+    "prescriber_name": [
+     107,
+     187,
+     507,
+     227
+    ],
+    "prescriber_npi": [
+     194,
+     332,
+     405,
+     362
+    ],
+    "patient_name": [
+     351,
+     440,
+     570,
+     470
+    ],
+    "patient_dob": [
+     1171,
+     429,
+     1361,
+     458
+    ],
+    "patient_address": [
+     352,
+     511,
+     939,
+     546
+    ],
+    "date_written": [
+     353,
+     588,
+     543,
+     618
+    ],
+    "drug_name": [
+     355,
+     709,
+     515,
+     746
+    ],
+    "strength": [
+     543,
+     707,
+     653,
+     743
+    ],
+    "dosage_form": [
+     680,
+     705,
+     783,
+     733
+    ],
+    "directions": [
+     356,
+     830,
+     1130,
+     876
+    ],
+    "quantity": [
+     358,
+     925,
+     786,
+     966
+    ],
+    "refills": [
+     359,
+     1021,
+     380,
+     1048
+    ],
+    "substitution": [
+     700,
+     1108,
+     731,
+     1138
+    ]
+   },
+   "meta": {
+    "rxcui": "2737151",
+    "fax_from": "(212) 555-0113",
+    "sent": "2026-10-08 15:52",
+    "patient_id": "PT015",
+    "prescriber_id": "P106",
+    "prescriber_in_directory": true
+   }
+  }
+ ],
+ "image": "ho_002_p1.png",
+ "fields": {
+  "patient_name": "Jamal Pierce",
+  "patient_dob": "1975-06-30",
+  "patient_address": "140 W 121st St, Apt 6C, New York, NY 10030",
+  "drug_name": "glipizide",
+  "strength": "15 mg",
+  "strength_value": 15,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth twice daily for 14 days",
+  "quantity": 28,
+  "quantity_text": "#28 (twenty-eight) tablets",
+  "days_supply_stated": 14,
+  "refills": 2,
+  "prescriber_name": "Hannah Lindqvist, MD",
+  "prescriber_npi": "1483926451",
+  "prescriber_dea": null,
+  "date_written": "2026-10-08",
+  "substitution": "dispense_as_written",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   45,
+   18,
+   1410,
+   57
+  ],
+  "clinic": [
+   106,
+   120,
+   727,
+   171
+  ],
+  "prescriber_name": [
+   107,
+   187,
+   507,
+   227
+  ],
+  "prescriber_npi": [
+   194,
+   332,
+   405,
+   362
+  ],
+  "patient_name": [
+   351,
+   440,
+   570,
+   470
+  ],
+  "patient_dob": [
+   1171,
+   429,
+   1361,
+   458
+  ],
+  "patient_address": [
+   352,
+   511,
+   939,
+   546
+  ],
+  "date_written": [
+   353,
+   588,
+   543,
+   618
+  ],
+  "drug_name": [
+   355,
+   709,
+   515,
+   746
+  ],
+  "strength": [
+   543,
+   707,
+   653,
+   743
+  ],
+  "dosage_form": [
+   680,
+   705,
+   783,
+   733
+  ],
+  "directions": [
+   356,
+   830,
+   1130,
+   876
+  ],
+  "quantity": [
+   358,
+   925,
+   786,
+   966
+  ],
+  "refills": [
+   359,
+   1021,
+   380,
+   1048
+  ],
+  "substitution": [
+   700,
+   1108,
+   731,
+   1138
+  ]
+ },
+ "meta": {
+  "rxcui": "2737151",
+  "fax_from": "(212) 555-0113",
+  "sent": "2026-10-08 15:52",
+  "patient_id": "PT015",
+  "prescriber_id": "P106",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [],
+ "expected_order_status": "ready_for_review",
+ "expect_abstain": []
+}

@@ -1,0 +1,304 @@
+{
+ "id": "ho_005",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "ho_005_p1.png"
+ ],
+ "pages_declared": 1,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": 0.7,
+  "blur": 0.9,
+  "noise": 22,
+  "fax_mode": "standard",
+  "level": "medium"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": 0.7,
+   "blur": 0.9,
+   "noise": 22,
+   "fax_mode": "standard",
+   "level": "medium"
+  }
+ ],
+ "is_clean": true,
+ "trap": null,
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "ho_005_p1.png",
+   "fields": {
+    "patient_name": "Tobias Lindgren",
+    "patient_dob": "1955-02-11",
+    "patient_address": "660 W 121st St, Apt 1B, New York, NY 10031",
+    "drug_name": "clonazepam",
+    "strength": "0.25 mg",
+    "strength_value": 0.25,
+    "strength_unit": "mg",
+    "dosage_form": "tablet",
+    "directions": "Take 2 tablets by mouth at bedtime for 30 days",
+    "quantity": 60,
+    "quantity_text": "#60 (sixty) tablets",
+    "days_supply_stated": 30,
+    "refills": 2,
+    "prescriber_name": "Daniel Okafor, MD",
+    "prescriber_npi": "1077842080",
+    "prescriber_dea": "BO6286795",
+    "date_written": "2026-10-07",
+    "substitution": "permitted",
+    "notes": "Patient counseled."
+   },
+   "field_boxes": {
+    "fax_header": [
+     47,
+     19,
+     1412,
+     56
+    ],
+    "clinic": [
+     108,
+     120,
+     737,
+     170
+    ],
+    "prescriber_name": [
+     109,
+     187,
+     438,
+     224
+    ],
+    "prescriber_npi": [
+     196,
+     331,
+     406,
+     361
+    ],
+    "prescriber_dea": [
+     706,
+     325,
+     908,
+     355
+    ],
+    "patient_name": [
+     352,
+     439,
+     623,
+     477
+    ],
+    "patient_dob": [
+     1172,
+     430,
+     1362,
+     459
+    ],
+    "patient_address": [
+     353,
+     511,
+     938,
+     545
+    ],
+    "date_written": [
+     354,
+     588,
+     544,
+     617
+    ],
+    "drug_name": [
+     355,
+     707,
+     579,
+     745
+    ],
+    "strength": [
+     606,
+     705,
+     749,
+     742
+    ],
+    "dosage_form": [
+     776,
+     704,
+     878,
+     732
+    ],
+    "directions": [
+     357,
+     830,
+     1153,
+     875
+    ],
+    "quantity": [
+     358,
+     926,
+     657,
+     965
+    ],
+    "refills": [
+     359,
+     1020,
+     380,
+     1047
+    ],
+    "substitution": [
+     120,
+     1115,
+     150,
+     1145
+    ],
+    "notes": [
+     261,
+     1208,
+     499,
+     1232
+    ]
+   },
+   "meta": {
+    "rxcui": "204892",
+    "fax_from": "(212) 555-0111",
+    "sent": "2026-10-07 09:16",
+    "patient_id": "PT009",
+    "prescriber_id": "P105",
+    "prescriber_in_directory": true
+   }
+  }
+ ],
+ "image": "ho_005_p1.png",
+ "fields": {
+  "patient_name": "Tobias Lindgren",
+  "patient_dob": "1955-02-11",
+  "patient_address": "660 W 121st St, Apt 1B, New York, NY 10031",
+  "drug_name": "clonazepam",
+  "strength": "0.25 mg",
+  "strength_value": 0.25,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 2 tablets by mouth at bedtime for 30 days",
+  "quantity": 60,
+  "quantity_text": "#60 (sixty) tablets",
+  "days_supply_stated": 30,
+  "refills": 2,
+  "prescriber_name": "Daniel Okafor, MD",
+  "prescriber_npi": "1077842080",
+  "prescriber_dea": "BO6286795",
+  "date_written": "2026-10-07",
+  "substitution": "permitted",
+  "notes": "Patient counseled."
+ },
+ "field_boxes": {
+  "fax_header": [
+   47,
+   19,
+   1412,
+   56
+  ],
+  "clinic": [
+   108,
+   120,
+   737,
+   170
+  ],
+  "prescriber_name": [
+   109,
+   187,
+   438,
+   224
+  ],
+  "prescriber_npi": [
+   196,
+   331,
+   406,
+   361
+  ],
+  "prescriber_dea": [
+   706,
+   325,
+   908,
+   355
+  ],
+  "patient_name": [
+   352,
+   439,
+   623,
+   477
+  ],
+  "patient_dob": [
+   1172,
+   430,
+   1362,
+   459
+  ],
+  "patient_address": [
+   353,
+   511,
+   938,
+   545
+  ],
+  "date_written": [
+   354,
+   588,
+   544,
+   617
+  ],
+  "drug_name": [
+   355,
+   707,
+   579,
+   745
+  ],
+  "strength": [
+   606,
+   705,
+   749,
+   742
+  ],
+  "dosage_form": [
+   776,
+   704,
+   878,
+   732
+  ],
+  "directions": [
+   357,
+   830,
+   1153,
+   875
+  ],
+  "quantity": [
+   358,
+   926,
+   657,
+   965
+  ],
+  "refills": [
+   359,
+   1020,
+   380,
+   1047
+  ],
+  "substitution": [
+   120,
+   1115,
+   150,
+   1145
+  ],
+  "notes": [
+   261,
+   1208,
+   499,
+   1232
+  ]
+ },
+ "meta": {
+  "rxcui": "204892",
+  "fax_from": "(212) 555-0111",
+  "sent": "2026-10-07 09:16",
+  "patient_id": "PT009",
+  "prescriber_id": "P105",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [],
+ "expected_order_status": "ready_for_review",
+ "expect_abstain": []
+}

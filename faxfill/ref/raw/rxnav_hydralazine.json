@@ -1,0 +1,127 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=hydralazine",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:30-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "905379",
+       "name": "hydralazine hydrochloride 37.5 MG / isosorbide dinitrate 20 MG Oral Tablet [Bidil]",
+       "synonym": "BiDil 20/37.5 (isosorbide dinitrate / hydralazine HCl) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "905199",
+       "name": "hydralazine hydrochloride 10 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "905203",
+       "name": "hydralazine hydrochloride 100 MG / hydrochlorothiazide 50 MG Oral Capsule",
+       "synonym": "hydralazine hydrochloride 100 MG / HCTZ 50 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "905211",
+       "name": "hydralazine hydrochloride 25 MG / hydrochlorothiazide 25 MG Oral Capsule",
+       "synonym": "Hydralazine Hydrochloride 25 MG / HCTZ 25 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "905217",
+       "name": "hydralazine hydrochloride 50 MG / hydrochlorothiazide 50 MG Oral Capsule",
+       "synonym": "Hydralazine Hydrochloride 50 MG / HCTZ 50 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "905222",
+       "name": "hydralazine hydrochloride 100 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "905225",
+       "name": "hydralazine hydrochloride 25 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "905353",
+       "name": "hydralazine hydrochloride 25 MG / hydrochlorothiazide 15 MG / reserpine 0.1 MG Oral Tablet",
+       "synonym": "hydralazine hydrochloride 25 MG / HCTZ 15 MG / reserpine 0.1 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "905377",
+       "name": "hydralazine hydrochloride 37.5 MG / isosorbide dinitrate 20 MG Oral Tablet",
+       "synonym": "Hydralazine Hydrochloride 37.5 MG / ISDN 20 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "905395",
+       "name": "hydralazine hydrochloride 50 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966571",
+       "name": "1 ML hydralazine hydrochloride 20 MG/ML Injection",
+       "synonym": "hydralazine HCl 20 MG per 1 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

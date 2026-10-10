@@ -1,0 +1,280 @@
+{
+ "id": "ho_019",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "ho_019_p1.png"
+ ],
+ "pages_declared": 1,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": 0.42,
+  "blur": 0.5,
+  "noise": 10,
+  "fax_mode": "fine",
+  "level": "light"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": 0.42,
+   "blur": 0.5,
+   "noise": 10,
+   "fax_mode": "fine",
+   "level": "light"
+  }
+ ],
+ "is_clean": true,
+ "trap": null,
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "ho_019_p1.png",
+   "fields": {
+    "patient_name": "Ingrid Solberg",
+    "patient_dob": "1983-03-09",
+    "patient_address": "268 St Nicholas Ave, Apt 3D, New York, NY 10031",
+    "drug_name": "gabapentin",
+    "strength": "200 mg",
+    "strength_value": 200,
+    "strength_unit": "mg",
+    "dosage_form": "capsule",
+    "directions": "2 cap PO QAM x 14 days",
+    "quantity": 28,
+    "quantity_text": "#28 (twenty-eight) capsules",
+    "days_supply_stated": 14,
+    "refills": 1,
+    "prescriber_name": "Nora Castellanos, DO",
+    "prescriber_npi": "1502750387",
+    "prescriber_dea": null,
+    "date_written": "2026-10-07",
+    "substitution": "dispense_as_written",
+    "notes": null
+   },
+   "field_boxes": {
+    "fax_header": [
+     52,
+     22,
+     1417,
+     52
+    ],
+    "clinic": [
+     113,
+     120,
+     631,
+     166
+    ],
+    "prescriber_name": [
+     113,
+     185,
+     503,
+     220
+    ],
+    "prescriber_npi": [
+     199,
+     329,
+     410,
+     358
+    ],
+    "patient_name": [
+     355,
+     438,
+     591,
+     475
+    ],
+    "patient_dob": [
+     1175,
+     432,
+     1365,
+     461
+    ],
+    "patient_address": [
+     356,
+     511,
+     1006,
+     543
+    ],
+    "date_written": [
+     356,
+     586,
+     546,
+     615
+    ],
+    "drug_name": [
+     357,
+     706,
+     566,
+     743
+    ],
+    "strength": [
+     594,
+     705,
+     725,
+     741
+    ],
+    "dosage_form": [
+     753,
+     704,
+     894,
+     740
+    ],
+    "directions": [
+     358,
+     834,
+     789,
+     873
+    ],
+    "quantity": [
+     359,
+     924,
+     824,
+     963
+    ],
+    "refills": [
+     359,
+     1017,
+     381,
+     1045
+    ],
+    "substitution": [
+     700,
+     1107,
+     730,
+     1137
+    ]
+   },
+   "meta": {
+    "rxcui": "2739001",
+    "fax_from": "(212) 555-0129",
+    "sent": "2026-10-07 11:33",
+    "patient_id": "PT014",
+    "prescriber_id": "P114",
+    "prescriber_in_directory": true
+   }
+  }
+ ],
+ "image": "ho_019_p1.png",
+ "fields": {
+  "patient_name": "Ingrid Solberg",
+  "patient_dob": "1983-03-09",
+  "patient_address": "268 St Nicholas Ave, Apt 3D, New York, NY 10031",
+  "drug_name": "gabapentin",
+  "strength": "200 mg",
+  "strength_value": 200,
+  "strength_unit": "mg",
+  "dosage_form": "capsule",
+  "directions": "2 cap PO QAM x 14 days",
+  "quantity": 28,
+  "quantity_text": "#28 (twenty-eight) capsules",
+  "days_supply_stated": 14,
+  "refills": 1,
+  "prescriber_name": "Nora Castellanos, DO",
+  "prescriber_npi": "1502750387",
+  "prescriber_dea": null,
+  "date_written": "2026-10-07",
+  "substitution": "dispense_as_written",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   52,
+   22,
+   1417,
+   52
+  ],
+  "clinic": [
+   113,
+   120,
+   631,
+   166
+  ],
+  "prescriber_name": [
+   113,
+   185,
+   503,
+   220
+  ],
+  "prescriber_npi": [
+   199,
+   329,
+   410,
+   358
+  ],
+  "patient_name": [
+   355,
+   438,
+   591,
+   475
+  ],
+  "patient_dob": [
+   1175,
+   432,
+   1365,
+   461
+  ],
+  "patient_address": [
+   356,
+   511,
+   1006,
+   543
+  ],
+  "date_written": [
+   356,
+   586,
+   546,
+   615
+  ],
+  "drug_name": [
+   357,
+   706,
+   566,
+   743
+  ],
+  "strength": [
+   594,
+   705,
+   725,
+   741
+  ],
+  "dosage_form": [
+   753,
+   704,
+   894,
+   740
+  ],
+  "directions": [
+   358,
+   834,
+   789,
+   873
+  ],
+  "quantity": [
+   359,
+   924,
+   824,
+   963
+  ],
+  "refills": [
+   359,
+   1017,
+   381,
+   1045
+  ],
+  "substitution": [
+   700,
+   1107,
+   730,
+   1137
+  ]
+ },
+ "meta": {
+  "rxcui": "2739001",
+  "fax_from": "(212) 555-0129",
+  "sent": "2026-10-07 11:33",
+  "patient_id": "PT014",
+  "prescriber_id": "P114",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [],
+ "expected_order_status": "ready_for_review",
+ "expect_abstain": []
+}

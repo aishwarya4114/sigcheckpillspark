@@ -1,0 +1,75 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22hydroxyzine%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:32-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 312
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "82982-032",
+    "marketing_end_date": "20261130",
+    "generic_name": "hydroxyzine pamoate",
+    "labeler_name": "Pharmasource Meds, LLC",
+    "brand_name": "hydroxyzine pamoate",
+    "active_ingredients": [
+     {
+      "name": "HYDROXYZINE PAMOATE",
+      "strength": "25 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "82982-032-30",
+      "description": "30 CAPSULE in 1 BOTTLE (82982-032-30)",
+      "marketing_start_date": "20230227",
+      "marketing_end_date": "20261130",
+      "sample": false
+     }
+    ],
+    "openfda": {
+     "manufacturer_name": [
+      "Pharmasource Meds, LLC"
+     ],
+     "rxcui": [
+      "995253"
+     ],
+     "spl_set_id": [
+      "f563aa1a-1e21-49d4-e053-2a95a90a3264"
+     ],
+     "upc": [
+      "0382982032300"
+     ],
+     "unii": [
+      "M20215MUFR"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "CAPSULE",
+    "spl_id": "198cad03-a8c3-a327-e063-6394a90add85",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20230227",
+    "product_id": "82982-032_198cad03-a8c3-a327-e063-6394a90add85",
+    "application_number": "ANDA087479",
+    "brand_name_base": "hydroxyzine pamoate",
+    "pharm_class": [
+     "Antihistamine [EPC]",
+     "Histamine Receptor Antagonists [MoA]"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,113 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22cephalexin%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:56-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 191
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "50090-4422",
+    "generic_name": "Cephalexin",
+    "labeler_name": "A-S Medication Solutions",
+    "brand_name": "Cephalexin",
+    "active_ingredients": [
+     {
+      "name": "CEPHALEXIN",
+      "strength": "500 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "50090-4422-0",
+      "description": "20 CAPSULE in 1 BOTTLE (50090-4422-0)",
+      "marketing_start_date": "20190719",
+      "sample": false
+     },
+     {
+      "package_ndc": "50090-4422-1",
+      "description": "28 CAPSULE in 1 BOTTLE (50090-4422-1)",
+      "marketing_start_date": "20240517",
+      "sample": false
+     },
+     {
+      "package_ndc": "50090-4422-2",
+      "description": "40 CAPSULE in 1 BOTTLE (50090-4422-2)",
+      "marketing_start_date": "20190719",
+      "sample": false
+     },
+     {
+      "package_ndc": "50090-4422-3",
+      "description": "14 CAPSULE in 1 BOTTLE (50090-4422-3)",
+      "marketing_start_date": "20190719",
+      "sample": false
+     },
+     {
+      "package_ndc": "50090-4422-5",
+      "description": "10 CAPSULE in 1 BOTTLE (50090-4422-5)",
+      "marketing_start_date": "20240517",
+      "sample": false
+     },
+     {
+      "package_ndc": "50090-4422-6",
+      "description": "30 CAPSULE in 1 BOTTLE (50090-4422-6)",
+      "marketing_start_date": "20190719",
+      "sample": false
+     },
+     {
+      "package_ndc": "50090-4422-7",
+      "description": "100 CAPSULE in 1 BOTTLE (50090-4422-7)",
+      "marketing_start_date": "20240517",
+      "sample": false
+     },
+     {
+      "package_ndc": "50090-4422-8",
+      "description": "4 CAPSULE in 1 BOTTLE (50090-4422-8)",
+      "marketing_start_date": "20240517",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20261231",
+    "openfda": {
+     "manufacturer_name": [
+      "A-S Medication Solutions"
+     ],
+     "rxcui": [
+      "309114"
+     ],
+     "spl_set_id": [
+      "fc426d0d-9774-4189-8d83-89aa85d926bb"
+     ],
+     "unii": [
+      "OBN7UDS42Y"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "CAPSULE",
+    "spl_id": "4c7f0c98-0d84-414e-808a-f2e6f55227d7",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "19900930",
+    "product_id": "50090-4422_4c7f0c98-0d84-414e-808a-f2e6f55227d7",
+    "application_number": "ANDA062702",
+    "brand_name_base": "Cephalexin",
+    "pharm_class": [
+     "Cephalosporin Antibacterial [EPC]",
+     "Cephalosporins [CS]"
+    ]
+   }
+  ]
+ }
+}

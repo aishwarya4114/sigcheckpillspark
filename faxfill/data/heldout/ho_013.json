@@ -1,0 +1,292 @@
+{
+ "id": "ho_013",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "ho_013_p1.png"
+ ],
+ "pages_declared": 1,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": 1.88,
+  "blur": 1.25,
+  "noise": 32,
+  "fax_mode": "standard",
+  "level": "heavy"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": 1.88,
+   "blur": 1.25,
+   "noise": 32,
+   "fax_mode": "standard",
+   "level": "heavy"
+  }
+ ],
+ "is_clean": true,
+ "trap": null,
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "ho_013_p1.png",
+   "fields": {
+    "patient_name": "Ingrid Solberg",
+    "patient_dob": "1983-03-09",
+    "patient_address": "268 St Nicholas Ave, Apt 3D, New York, NY 10031",
+    "drug_name": "hydroxyzine",
+    "strength": "10 mg",
+    "strength_value": 10,
+    "strength_unit": "mg",
+    "dosage_form": "tablet",
+    "directions": "1 tab PO QAM x 10 days",
+    "quantity": 10,
+    "quantity_text": "#10 (ten) tablets",
+    "days_supply_stated": 10,
+    "refills": 3,
+    "prescriber_name": "Priya Raman, DO",
+    "prescriber_npi": "1564076267",
+    "prescriber_dea": null,
+    "date_written": "2026-10-09",
+    "substitution": "permitted",
+    "notes": "Patient counseled."
+   },
+   "field_boxes": {
+    "fax_header": [
+     25,
+     8,
+     1390,
+     72
+    ],
+    "clinic": [
+     88,
+     124,
+     689,
+     176
+    ],
+    "prescriber_name": [
+     90,
+     196,
+     400,
+     241
+    ],
+    "prescriber_npi": [
+     180,
+     341,
+     391,
+     375
+    ],
+    "patient_name": [
+     338,
+     445,
+     576,
+     487
+    ],
+    "patient_dob": [
+     1158,
+     419,
+     1349,
+     453
+    ],
+    "patient_address": [
+     341,
+     507,
+     992,
+     555
+    ],
+    "date_written": [
+     343,
+     594,
+     534,
+     627
+    ],
+    "drug_name": [
+     347,
+     713,
+     573,
+     755
+    ],
+    "strength": [
+     600,
+     708,
+     711,
+     747
+    ],
+    "dosage_form": [
+     738,
+     704,
+     841,
+     734
+    ],
+    "directions": [
+     352,
+     836,
+     775,
+     885
+    ],
+    "quantity": [
+     354,
+     931,
+     631,
+     975
+    ],
+    "refills": [
+     357,
+     1029,
+     379,
+     1057
+    ],
+    "substitution": [
+     121,
+     1129,
+     152,
+     1160
+    ],
+    "notes": [
+     264,
+     1216,
+     501,
+     1244
+    ]
+   },
+   "meta": {
+    "rxcui": "995218",
+    "fax_from": "(212) 555-0105",
+    "sent": "2026-10-09 15:21",
+    "patient_id": "PT014",
+    "prescriber_id": "P102",
+    "prescriber_in_directory": true
+   }
+  }
+ ],
+ "image": "ho_013_p1.png",
+ "fields": {
+  "patient_name": "Ingrid Solberg",
+  "patient_dob": "1983-03-09",
+  "patient_address": "268 St Nicholas Ave, Apt 3D, New York, NY 10031",
+  "drug_name": "hydroxyzine",
+  "strength": "10 mg",
+  "strength_value": 10,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "1 tab PO QAM x 10 days",
+  "quantity": 10,
+  "quantity_text": "#10 (ten) tablets",
+  "days_supply_stated": 10,
+  "refills": 3,
+  "prescriber_name": "Priya Raman, DO",
+  "prescriber_npi": "1564076267",
+  "prescriber_dea": null,
+  "date_written": "2026-10-09",
+  "substitution": "permitted",
+  "notes": "Patient counseled."
+ },
+ "field_boxes": {
+  "fax_header": [
+   25,
+   8,
+   1390,
+   72
+  ],
+  "clinic": [
+   88,
+   124,
+   689,
+   176
+  ],
+  "prescriber_name": [
+   90,
+   196,
+   400,
+   241
+  ],
+  "prescriber_npi": [
+   180,
+   341,
+   391,
+   375
+  ],
+  "patient_name": [
+   338,
+   445,
+   576,
+   487
+  ],
+  "patient_dob": [
+   1158,
+   419,
+   1349,
+   453
+  ],
+  "patient_address": [
+   341,
+   507,
+   992,
+   555
+  ],
+  "date_written": [
+   343,
+   594,
+   534,
+   627
+  ],
+  "drug_name": [
+   347,
+   713,
+   573,
+   755
+  ],
+  "strength": [
+   600,
+   708,
+   711,
+   747
+  ],
+  "dosage_form": [
+   738,
+   704,
+   841,
+   734
+  ],
+  "directions": [
+   352,
+   836,
+   775,
+   885
+  ],
+  "quantity": [
+   354,
+   931,
+   631,
+   975
+  ],
+  "refills": [
+   357,
+   1029,
+   379,
+   1057
+  ],
+  "substitution": [
+   121,
+   1129,
+   152,
+   1160
+  ],
+  "notes": [
+   264,
+   1216,
+   501,
+   1244
+  ]
+ },
+ "meta": {
+  "rxcui": "995218",
+  "fax_from": "(212) 555-0105",
+  "sent": "2026-10-09 15:21",
+  "patient_id": "PT014",
+  "prescriber_id": "P102",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [],
+ "expected_order_status": "ready_for_review",
+ "expect_abstain": []
+}

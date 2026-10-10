@@ -1,0 +1,145 @@
+{
+ "id": "rx_003",
+ "image": "rx_003.png",
+ "synthetic": true,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": 1.6,
+  "blur": 0.9,
+  "noise": 22,
+  "fax_mode": "standard",
+  "level": "medium"
+ },
+ "is_clean": true,
+ "trap": null,
+ "fields": {
+  "patient_name": "Dev Malhotra",
+  "patient_dob": "1979-12-05",
+  "patient_address": "247 Hamilton Pl, Apt 2C, New York, NY 10027",
+  "drug_name": "omeprazole",
+  "strength": "20 mg",
+  "strength_value": 20,
+  "strength_unit": "mg",
+  "dosage_form": "capsule",
+  "directions": "1 cap PO QAM x 30 days",
+  "quantity": 30,
+  "quantity_text": "#30 (thirty) capsules",
+  "days_supply_stated": 30,
+  "refills": 2,
+  "prescriber_name": "Mei Tanaka, MD",
+  "prescriber_npi": "1299818082",
+  "prescriber_dea": null,
+  "date_written": "2026-10-08",
+  "substitution": "dispense_as_written",
+  "notes": "Please call with questions."
+ },
+ "field_boxes": {
+  "fax_header": [
+   30,
+   10,
+   1410,
+   68
+  ],
+  "clinic": [
+   93,
+   121,
+   770,
+   173
+  ],
+  "prescriber_name": [
+   95,
+   195,
+   381,
+   236
+  ],
+  "prescriber_npi": [
+   184,
+   338,
+   394,
+   371
+  ],
+  "patient_name": [
+   342,
+   444,
+   568,
+   477
+  ],
+  "patient_dob": [
+   1161,
+   422,
+   1352,
+   454
+  ],
+  "patient_address": [
+   344,
+   509,
+   936,
+   553
+  ],
+  "date_written": [
+   346,
+   593,
+   536,
+   625
+  ],
+  "drug_name": [
+   349,
+   712,
+   568,
+   753
+  ],
+  "strength": [
+   595,
+   708,
+   706,
+   746
+  ],
+  "dosage_form": [
+   733,
+   703,
+   875,
+   742
+  ],
+  "directions": [
+   353,
+   836,
+   785,
+   883
+  ],
+  "quantity": [
+   355,
+   928,
+   699,
+   973
+  ],
+  "refills": [
+   358,
+   1027,
+   380,
+   1055
+  ],
+  "substitution": [
+   700,
+   1109,
+   731,
+   1140
+  ],
+  "notes": [
+   263,
+   1211,
+   602,
+   1247
+  ]
+ },
+ "expected_flags": [],
+ "expected_order_status": "ready_for_review",
+ "expect_abstain": [],
+ "meta": {
+  "rxcui": "198051",
+  "fax_from": "(212) 555-0117",
+  "sent": "2026-10-08 08:53",
+  "patient_id": "PT007",
+  "prescriber_id": "P108",
+  "prescriber_in_directory": true
+ }
+}

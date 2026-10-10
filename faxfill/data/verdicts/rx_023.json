@@ -1,0 +1,512 @@
+{
+ "fax_id": "rx_023",
+ "verifier": "verifier-v1",
+ "readers": {
+  "A": "openai/gpt-5.5",
+  "B": "mistral/mistral-large-3",
+  "C": "regex over tesseract"
+ },
+ "lookup": "local files (faxfill/ref)",
+ "pages_received": 1,
+ "pages_declared_in_header": 1,
+ "order_status": "NEEDS_PHARMACIST",
+ "order_flags": [],
+ "danger_score": 5,
+ "danger_breakdown": {
+  "other_flag": 5
+ },
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "rx_023.png",
+   "status": "NEEDS_PHARMACIST",
+   "flagged_fields": [
+    "strength"
+   ],
+   "fields": {
+    "patient_name": {
+     "value": "Isabel Moreau",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      360,
+      436,
+      597,
+      465
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "patient_in_profiles",
+       "evidence": "patient profiles (patients.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Isabel Moreau",
+      "B": "Isabel Moreau",
+      "C": "Isabel Moreau"
+     }
+    },
+    "patient_dob": {
+     "value": "04/17/1963",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      1178,
+      434,
+      1367,
+      463
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "dob_matches_profile",
+       "evidence": "patient profiles (patients.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "04/17/1963",
+      "B": "04/17/1963",
+      "C": "04/17/1963"
+     }
+    },
+    "drug_name": {
+     "value": "Levothyroxine",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      361,
+      704,
+      618,
+      740
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "drug_in_rxnorm",
+       "evidence": "rxnorm (drugs.json)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Levothyroxine",
+      "B": "Levothyroxine",
+      "C": "Levothyroxine"
+     }
+    },
+    "strength": {
+     "value": "50 mg",
+     "status": "needs_pharmacist",
+     "codes": [
+      "UNIT_MISMATCH"
+     ],
+     "reasons": [
+      "levothyroxine is dosed in mcg; '50 mg' is in mg (1000x)."
+     ],
+     "alternatives": [],
+     "evidence_box": [
+      648,
+      704,
+      755,
+      741
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [
+      {
+       "check": "UNIT_MISMATCH",
+       "evidence": null
+      }
+     ],
+     "notes": [],
+     "reads": {
+      "A": "50 mg",
+      "B": "50 mg",
+      "C": "50mg"
+     }
+    },
+    "dosage_form": {
+     "value": "tablet",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      753,
+      691,
+      886,
+      746
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "form_in_rxnorm",
+       "evidence": "rxnorm"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "tablet",
+      "B": "tablet",
+      "C": "tablet"
+     }
+    },
+    "directions": {
+     "value": "Take 1 tablet by mouth once daily for 30 days",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      359,
+      832,
+      1127,
+      871
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "directions_parsed",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Take 1 tablet by mouth once daily for 30 days",
+      "B": "Take 1 tablet by mouth once daily for 30 days",
+      "C": "Take 1 tablet by mouth once daily for 30 days"
+     }
+    },
+    "quantity": {
+     "value": "#30 (thirty) tablets",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      359,
+      924,
+      664,
+      960
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "numeral_matches_words",
+       "evidence": null
+      },
+      {
+       "check": "quantity_matches_duration",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "#30 (thirty) tablets",
+      "B": "#30 (thirty) tablets",
+      "C": "#30 (thirty) tablets"
+     }
+    },
+    "refills": {
+     "value": "1",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      363,
+      1014,
+      374,
+      1043
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "refills_whole_number",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "1",
+      "B": "1",
+      "C": "1"
+     }
+    },
+    "prescriber_name": {
+     "value": "Fatima Haddad, MD",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      120,
+      182,
+      470,
+      217
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "prescriber_matches_npi",
+       "evidence": "prescriber directory (prescribers.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Fatima Haddad, MD",
+      "B": "Fatima Haddad, MD",
+      "C": "Fatima Haddad, MD"
+     }
+    },
+    "prescriber_npi": {
+     "value": "1810225023",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      206,
+      326,
+      411,
+      357
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "npi_luhn",
+       "evidence": null
+      },
+      {
+       "check": "npi_in_directory",
+       "evidence": "prescriber directory (prescribers.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "1810225023",
+      "B": "1810225023",
+      "C": "1810225023"
+     }
+    },
+    "prescriber_dea": {
+     "value": null,
+     "status": "not_present",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": null,
+     "evidence_note": "location not found",
+     "checks_passed": [],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": null,
+      "B": null,
+      "C": null
+     }
+    },
+    "date_written": {
+     "value": "10/06/2026",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      362,
+      584,
+      548,
+      613
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "date_valid_not_future",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "10/06/2026",
+      "B": "10/06/2026",
+      "C": "10/06/2026"
+     }
+    },
+    "substitution": {
+     "value": "permitted",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      325,
+      1110,
+      442,
+      1139
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "substitution_known_value",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "permitted",
+      "B": "permitted",
+      "C": null
+     }
+    },
+    "notes": {
+     "value": "New start.",
+     "status": "info",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      262,
+      1205,
+      390,
+      1229
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "New start.",
+      "B": "New start.",
+      "C": "New start."
+     }
+    }
+   },
+   "page_flags": [],
+   "c_only_fields": [],
+   "drug_ref": "levothyroxine"
+  }
+ ],
+ "clarification_questions": [
+  {
+   "page": 1,
+   "field": "strength",
+   "code": "UNIT_MISMATCH",
+   "question": "Please confirm the unit for levothyroxine: written '50 mg'."
+  }
+ ],
+ "thresholds": {
+  "speck_max_area": 4,
+  "region_pad": 30,
+  "baseline_text_pad": 10,
+  "noise_ratio": 3.0,
+  "noise_min_density": 0.01,
+  "streak_row_ink": 0.8,
+  "edge_margin": 5,
+  "prescriber_block_top": 0.2,
+  "header_votes": 2,
+  "lasa_min_ocr_conf": 60
+ },
+ "lookup_sources": {
+  "drug": "local files (faxfill/ref)",
+  "prescriber": "local files (faxfill/ref)",
+  "patient": "local files (faxfill/ref)",
+  "prism_kb": "not queried: PRISM documents no Knowledge Base query API, so lookups use local files"
+ },
+ "prism": {
+  "traces_sent": 4,
+  "traces_failed": [],
+  "intake_trace_ids": [
+   "sigcheck-intake-rx_023-p1-e74bea69fb77"
+  ],
+  "reader_trace_ids": [
+   "sigcheck-read-rx_023-openai-gpt-5.5-reader-v2-v2",
+   "sigcheck-read-rx_023-mistral-mistral-large-3-reader-v2-v2"
+  ],
+  "verifier_trace_id": "sigcheck-verify-rx_023-4b70e252357e",
+  "guardrail": {
+   "local_injection_check": false,
+   "prism": false,
+   "prism_injection_flags": [],
+   "prism_other_flags": [
+    {
+     "rule_name": "PII/PHI Detection",
+     "action": "flag",
+     "page": 1
+    }
+   ],
+   "fired_by": [],
+   "blocks_if": "either fires",
+   "prism_status": "read from guardrail_flags in the POST /api/traces response for the intake trace (present in every response, not listed in the docs)"
+  },
+  "knowledge_base": "not queried: PRISM documents no Knowledge Base query API, so lookups use local files"
+ }
+}

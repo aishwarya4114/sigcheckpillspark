@@ -1,0 +1,287 @@
+{
+ "id": "ho_009",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "ho_009_p1.png"
+ ],
+ "pages_declared": 1,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": -0.33,
+  "blur": 0.9,
+  "noise": 22,
+  "fax_mode": "fine",
+  "level": "medium"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": -0.33,
+   "blur": 0.9,
+   "noise": 22,
+   "fax_mode": "fine",
+   "level": "medium"
+  }
+ ],
+ "is_clean": false,
+ "trap": "invalid_npi",
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "ho_009_p1.png",
+   "fields": {
+    "patient_name": "Jamal Pierce",
+    "patient_dob": "1975-06-30",
+    "patient_address": "140 W 121st St, Apt 6C, New York, NY 10030",
+    "drug_name": "sitagliptin",
+    "strength": "25 mg",
+    "strength_value": 25,
+    "strength_unit": "mg",
+    "dosage_form": "tablet",
+    "directions": "Take 1 tablet by mouth at bedtime for 30 days",
+    "quantity": 30,
+    "quantity_text": "#30 (thirty) tablets",
+    "days_supply_stated": 30,
+    "refills": 1,
+    "prescriber_name": "Nora Castellanos, DO",
+    "prescriber_npi": "1502753387",
+    "prescriber_dea": null,
+    "date_written": "2026-10-07",
+    "substitution": "permitted",
+    "notes": null
+   },
+   "field_boxes": {
+    "fax_header": [
+     66,
+     21,
+     1431,
+     49
+    ],
+    "clinic": [
+     125,
+     114,
+     644,
+     160
+    ],
+    "prescriber_name": [
+     125,
+     178,
+     514,
+     213
+    ],
+    "prescriber_npi": [
+     209,
+     322,
+     419,
+     351
+    ],
+    "patient_name": [
+     364,
+     433,
+     583,
+     461
+    ],
+    "patient_dob": [
+     1184,
+     438,
+     1374,
+     466
+    ],
+    "patient_address": [
+     363,
+     509,
+     950,
+     540
+    ],
+    "date_written": [
+     363,
+     581,
+     553,
+     609
+    ],
+    "drug_name": [
+     362,
+     701,
+     547,
+     737
+    ],
+    "strength": [
+     575,
+     702,
+     685,
+     738
+    ],
+    "dosage_form": [
+     713,
+     703,
+     815,
+     731
+    ],
+    "directions": [
+     361,
+     831,
+     1139,
+     871
+    ],
+    "quantity": [
+     361,
+     921,
+     667,
+     958
+    ],
+    "refills": [
+     360,
+     1011,
+     382,
+     1038
+    ],
+    "substitution": [
+     120,
+     1102,
+     150,
+     1132
+    ]
+   },
+   "meta": {
+    "rxcui": "665038",
+    "fax_from": "(212) 555-0129",
+    "sent": "2026-10-07 15:17",
+    "patient_id": "PT015",
+    "prescriber_id": "P114",
+    "prescriber_in_directory": true
+   }
+  }
+ ],
+ "image": "ho_009_p1.png",
+ "fields": {
+  "patient_name": "Jamal Pierce",
+  "patient_dob": "1975-06-30",
+  "patient_address": "140 W 121st St, Apt 6C, New York, NY 10030",
+  "drug_name": "sitagliptin",
+  "strength": "25 mg",
+  "strength_value": 25,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth at bedtime for 30 days",
+  "quantity": 30,
+  "quantity_text": "#30 (thirty) tablets",
+  "days_supply_stated": 30,
+  "refills": 1,
+  "prescriber_name": "Nora Castellanos, DO",
+  "prescriber_npi": "1502753387",
+  "prescriber_dea": null,
+  "date_written": "2026-10-07",
+  "substitution": "permitted",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   66,
+   21,
+   1431,
+   49
+  ],
+  "clinic": [
+   125,
+   114,
+   644,
+   160
+  ],
+  "prescriber_name": [
+   125,
+   178,
+   514,
+   213
+  ],
+  "prescriber_npi": [
+   209,
+   322,
+   419,
+   351
+  ],
+  "patient_name": [
+   364,
+   433,
+   583,
+   461
+  ],
+  "patient_dob": [
+   1184,
+   438,
+   1374,
+   466
+  ],
+  "patient_address": [
+   363,
+   509,
+   950,
+   540
+  ],
+  "date_written": [
+   363,
+   581,
+   553,
+   609
+  ],
+  "drug_name": [
+   362,
+   701,
+   547,
+   737
+  ],
+  "strength": [
+   575,
+   702,
+   685,
+   738
+  ],
+  "dosage_form": [
+   713,
+   703,
+   815,
+   731
+  ],
+  "directions": [
+   361,
+   831,
+   1139,
+   871
+  ],
+  "quantity": [
+   361,
+   921,
+   667,
+   958
+  ],
+  "refills": [
+   360,
+   1011,
+   382,
+   1038
+  ],
+  "substitution": [
+   120,
+   1102,
+   150,
+   1132
+  ]
+ },
+ "meta": {
+  "rxcui": "665038",
+  "fax_from": "(212) 555-0129",
+  "sent": "2026-10-07 15:17",
+  "patient_id": "PT015",
+  "prescriber_id": "P114",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [
+  {
+   "field": "prescriber_npi",
+   "code": "npi_checksum",
+   "why": "NPI fails the Luhn check digit.",
+   "page": 1
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": []
+}

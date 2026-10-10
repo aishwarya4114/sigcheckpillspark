@@ -1,0 +1,1396 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=hydrochlorothiazide",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:29-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "1000000",
+       "name": "amlodipine 5 MG / hydrochlorothiazide 12.5 MG / olmesartan medoxomil 40 MG Oral Tablet [Tribenzor]",
+       "synonym": "Amlodipine 5 MG / HCTZ 12.5 MG / Olmesartan medoxomil 40 MG Oral Tablet [Tribenzor]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1000005",
+       "name": "amlodipine 5 MG / hydrochlorothiazide 25 MG / olmesartan medoxomil 40 MG Oral Tablet [Tribenzor]",
+       "synonym": "Amlodipine 5 MG / HCTZ 25 MG / Olmesartan medoxomil 40 MG Oral Tablet [Tribenzor]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1011712",
+       "name": "aliskiren 150 MG / hydrochlorothiazide 12.5 MG Oral Tablet [Tekturna HCT]",
+       "synonym": "Tekturna HCT (aliskiren 150 MG / HCTZ 12.5 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1011715",
+       "name": "aliskiren 150 MG / hydrochlorothiazide 25 MG Oral Tablet [Tekturna HCT]",
+       "synonym": "Tekturna HCT (aliskiren 150 MG / HCTZ 25 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1011752",
+       "name": "aliskiren 300 MG / hydrochlorothiazide 12.5 MG Oral Tablet [Tekturna HCT]",
+       "synonym": "Tekturna HCT (aliskiren 300 MG / HCTZ 12.5 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1011755",
+       "name": "aliskiren 300 MG / hydrochlorothiazide 25 MG Oral Tablet [Tekturna HCT]",
+       "synonym": "Tekturna HCT (aliskiren 300 MG / HCTZ 25 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "208124",
+       "name": "hydrochlorothiazide 25 MG / triamterene 37.5 MG Oral Capsule [Dyazide]",
+       "synonym": "Dyazide (HCTZ 25 MG / triamterene 37.5 MG) Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2704018",
+       "name": "hydrochlorothiazide 800 MG Powder for Oral Suspension [Inzirqo]",
+       "synonym": "Inzirqo 800 MG Powder for Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "749833",
+       "name": "hydrochlorothiazide 12.5 MG / telmisartan 40 MG Oral Tablet [Micardis-HCT]",
+       "synonym": "Micardis-HCT 40/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "749837",
+       "name": "hydrochlorothiazide 12.5 MG / telmisartan 80 MG Oral Tablet [Micardis-HCT]",
+       "synonym": "Micardis-HCT 80/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "749841",
+       "name": "hydrochlorothiazide 25 MG / telmisartan 80 MG Oral Tablet [Micardis-HCT]",
+       "synonym": "Micardis-HCT 80/25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "805855",
+       "name": "candesartan cilexetil 32 MG / hydrochlorothiazide 25 MG Oral Tablet [Atacand HCT]",
+       "synonym": "Atacand HCT 32/25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "805859",
+       "name": "candesartan cilexetil 32 MG / hydrochlorothiazide 12.5 MG Oral Tablet [Atacand HCT]",
+       "synonym": "Atacand HCT 32/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "805863",
+       "name": "candesartan cilexetil 16 MG / hydrochlorothiazide 12.5 MG Oral Tablet [Atacand HCT]",
+       "synonym": "Atacand HCT 16/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "809014",
+       "name": "hydrochlorothiazide 12.5 MG / valsartan 80 MG Oral Tablet [Diovan HCT]",
+       "synonym": "Diovan HCT 80/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "809018",
+       "name": "hydrochlorothiazide 12.5 MG / valsartan 160 MG Oral Tablet [Diovan HCT]",
+       "synonym": "Diovan HCT 160/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "809022",
+       "name": "hydrochlorothiazide 25 MG / valsartan 160 MG Oral Tablet [Diovan HCT]",
+       "synonym": "Diovan HCT 160/25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "809026",
+       "name": "hydrochlorothiazide 12.5 MG / valsartan 320 MG Oral Tablet [Diovan HCT]",
+       "synonym": "Diovan HCT 320/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "809030",
+       "name": "hydrochlorothiazide 25 MG / valsartan 320 MG Oral Tablet [Diovan HCT]",
+       "synonym": "Diovan HCT 320/25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "809854",
+       "name": "hydrochlorothiazide 12.5 MG / quinapril 10 MG Oral Tablet [Accuretic]",
+       "synonym": "Accuretic 10/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "809858",
+       "name": "hydrochlorothiazide 12.5 MG / quinapril 20 MG Oral Tablet [Accuretic]",
+       "synonym": "Accuretic 20/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "823934",
+       "name": "hydrochlorothiazide 12.5 MG / irbesartan 150 MG Oral Tablet [Avalide]",
+       "synonym": "Avalide 150/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "823938",
+       "name": "hydrochlorothiazide 12.5 MG / irbesartan 300 MG Oral Tablet [Avalide]",
+       "synonym": "Avalide 300/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "823971",
+       "name": "hydrochlorothiazide 25 MG / lisinopril 20 MG Oral Tablet [Zestoretic]",
+       "synonym": "Zestoretic 20/25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "823982",
+       "name": "hydrochlorothiazide 12.5 MG / lisinopril 20 MG Oral Tablet [Zestoretic]",
+       "synonym": "Zestoretic 20/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "823986",
+       "name": "hydrochlorothiazide 12.5 MG / lisinopril 10 MG Oral Tablet [Zestoretic]",
+       "synonym": "Zestoretic 10/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "847042",
+       "name": "hydrochlorothiazide 25 MG / olmesartan medoxomil 40 MG Oral Tablet [Benicar HCT]",
+       "synonym": "Benicar HCT 40/25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "847055",
+       "name": "hydrochlorothiazide 12.5 MG / olmesartan medoxomil 40 MG Oral Tablet [Benicar HCT]",
+       "synonym": "Benicar HCT 40/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "847060",
+       "name": "hydrochlorothiazide 12.5 MG / olmesartan medoxomil 20 MG Oral Tablet [Benicar HCT]",
+       "synonym": "Benicar HCT 20/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848134",
+       "name": "amlodipine 10 MG / hydrochlorothiazide 12.5 MG / valsartan 160 MG Oral Tablet [Exforge HCT]",
+       "synonym": "Exforge HCT 10/160/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848139",
+       "name": "amlodipine 10 MG / hydrochlorothiazide 25 MG / valsartan 320 MG Oral Tablet [Exforge HCT]",
+       "synonym": "Exforge HCT 10/320/25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848144",
+       "name": "amlodipine 5 MG / hydrochlorothiazide 12.5 MG / valsartan 160 MG Oral Tablet [Exforge HCT]",
+       "synonym": "Exforge HCT 5/160/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848149",
+       "name": "amlodipine 5 MG / hydrochlorothiazide 25 MG / valsartan 160 MG Oral Tablet [Exforge HCT]",
+       "synonym": "Exforge HCT 5/160/25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848155",
+       "name": "amlodipine 10 MG / hydrochlorothiazide 25 MG / valsartan 160 MG Oral Tablet [Exforge HCT]",
+       "synonym": "Exforge HCT 10/160/25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "858830",
+       "name": "enalapril maleate 10 MG / hydrochlorothiazide 25 MG Oral Tablet [Vaseretic]",
+       "synonym": "Vaseretic 10/25 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "866498",
+       "name": "hydrochlorothiazide 25 MG / metoprolol tartrate 100 MG Oral Tablet [Lopressor HCT]",
+       "synonym": "Lopressor HCT 100/25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "866502",
+       "name": "hydrochlorothiazide 25 MG / metoprolol tartrate 50 MG Oral Tablet [Lopressor HCT]",
+       "synonym": "Lopressor HCT 50/25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "882559",
+       "name": "hydrochlorothiazide 25 MG / quinapril 20 MG Oral Tablet [Accuretic]",
+       "synonym": "Accuretic 20/25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "898366",
+       "name": "benazepril hydrochloride 10 MG / hydrochlorothiazide 12.5 MG Oral Tablet [Lotensin HCT]",
+       "synonym": "Lotensin HCT 10/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "898371",
+       "name": "benazepril hydrochloride 20 MG / hydrochlorothiazide 12.5 MG Oral Tablet [Lotensin HCT]",
+       "synonym": "Lotensin HCT 20/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "898376",
+       "name": "benazepril hydrochloride 20 MG / hydrochlorothiazide 25 MG Oral Tablet [Lotensin HCT]",
+       "synonym": "Lotensin HCT 20/25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "93252",
+       "name": "hydrochlorothiazide 50 MG / triamterene 75 MG Oral Tablet [Maxzide]",
+       "synonym": "Maxzide-50 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "93253",
+       "name": "hydrochlorothiazide 25 MG / triamterene 37.5 MG Oral Tablet [Maxzide]",
+       "synonym": "Maxzide-25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "979466",
+       "name": "hydrochlorothiazide 12.5 MG / losartan potassium 100 MG Oral Tablet [Hyzaar]",
+       "synonym": "Hyzaar 100/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "979470",
+       "name": "hydrochlorothiazide 12.5 MG / losartan potassium 50 MG Oral Tablet [Hyzaar]",
+       "synonym": "Hyzaar 50/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "979473",
+       "name": "hydrochlorothiazide 25 MG / losartan potassium 100 MG Oral Tablet [Hyzaar]",
+       "synonym": "Hyzaar 100/25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "999971",
+       "name": "amlodipine 5 MG / hydrochlorothiazide 12.5 MG / olmesartan medoxomil 20 MG Oral Tablet [Tribenzor]",
+       "synonym": "Amlodipine 5 MG / HCTZ 12.5 MG / Olmesartan medoxomil 20 MG Oral Tablet [Tribenzor]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "999990",
+       "name": "amlodipine 10 MG / hydrochlorothiazide 12.5 MG / olmesartan medoxomil 40 MG Oral Tablet [Tribenzor]",
+       "synonym": "Amlodipine 10 MG / HCTZ 12.5 MG / Olmesartan medoxomil 40 MG Oral Tablet [Tribenzor]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "999995",
+       "name": "amlodipine 10 MG / hydrochlorothiazide 25 MG / olmesartan medoxomil 40 MG Oral Tablet [Tribenzor]",
+       "synonym": "Amlodipine 10 MG / HCTZ 25 MG / Olmesartan medoxomil 40 MG Oral Tablet [Tribenzor]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "1000001",
+       "name": "amlodipine 5 MG / hydrochlorothiazide 25 MG / olmesartan medoxomil 40 MG Oral Tablet",
+       "synonym": "Amlodipine 5 MG / HCTZ 25 MG / Olmesartan medoxomil 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1011710",
+       "name": "aliskiren 150 MG / hydrochlorothiazide 12.5 MG Oral Tablet",
+       "synonym": "aliskiren 150 MG / HCTZ 12.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1011713",
+       "name": "aliskiren 150 MG / hydrochlorothiazide 25 MG Oral Tablet",
+       "synonym": "aliskiren 150 MG / HCTZ 25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1011750",
+       "name": "aliskiren 300 MG / hydrochlorothiazide 12.5 MG Oral Tablet",
+       "synonym": "aliskiren 300 MG / HCTZ 12.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1011753",
+       "name": "aliskiren 300 MG / hydrochlorothiazide 25 MG Oral Tablet",
+       "synonym": "aliskiren 300 MG / HCTZ 25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "104370",
+       "name": "captopril 25 MG / hydrochlorothiazide 12.5 MG Oral Tablet",
+       "synonym": "captopril 25 MG / HCTZ 12.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1050798",
+       "name": "aliskiren 150 MG / amlodipine 5 MG / hydrochlorothiazide 12.5 MG Oral Tablet",
+       "synonym": "aliskiren 150 MG / amlodipine 5 MG / HCTZ 12.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1050803",
+       "name": "aliskiren 300 MG / amlodipine 10 MG / hydrochlorothiazide 12.5 MG Oral Tablet",
+       "synonym": "aliskiren 300 MG / amlodipine 10 MG / HCTZ 12.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1050806",
+       "name": "aliskiren 300 MG / amlodipine 10 MG / hydrochlorothiazide 25 MG Oral Tablet",
+       "synonym": "aliskiren 300 MG / amlodipine 10 MG / HCTZ 25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1050809",
+       "name": "aliskiren 300 MG / amlodipine 5 MG / hydrochlorothiazide 12.5 MG Oral Tablet",
+       "synonym": "aliskiren 300 MG / amlodipine 5 MG / HCTZ 12.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1050812",
+       "name": "aliskiren 300 MG / amlodipine 5 MG / hydrochlorothiazide 25 MG Oral Tablet",
+       "synonym": "aliskiren 300 MG / amlodipine 5 MG / HCTZ 25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1111439",
+       "name": "24 HR hydrochlorothiazide 25 MG / metoprolol tartrate 200 MG Extended Release Oral Tablet",
+       "synonym": "24 HR HCTZ 25 MG / Metoprolol Tartrate 200 MG Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1299859",
+       "name": "hydrochlorothiazide 12.5 MG / moexipril hydrochloride 15 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG / moexipril hydrochloride 15 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1299871",
+       "name": "hydrochlorothiazide 12.5 MG / moexipril hydrochloride 7.5 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG / moexipril hydrochloride 7.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1299890",
+       "name": "hydrochlorothiazide 25 MG / moexipril hydrochloride 15 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / moexipril hydrochloride 15 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197436",
+       "name": "captopril 25 MG / hydrochlorothiazide 15 MG Oral Tablet",
+       "synonym": "captopril 25 MG / HCTZ 15 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197437",
+       "name": "captopril 25 MG / hydrochlorothiazide 25 MG Oral Tablet",
+       "synonym": "captopril 25 MG / HCTZ 25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197438",
+       "name": "captopril 50 MG / hydrochlorothiazide 15 MG Oral Tablet",
+       "synonym": "captopril 50 MG / HCTZ 15 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197439",
+       "name": "captopril 50 MG / hydrochlorothiazide 25 MG Oral Tablet",
+       "synonym": "captopril 50 MG / HCTZ 25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197770",
+       "name": "hydrochlorothiazide 50 MG Oral Tablet",
+       "synonym": "HCTZ 50 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197771",
+       "name": "hydrochlorothiazide 50 MG / reserpine 0.125 MG Oral Tablet",
+       "synonym": "HCTZ 50 MG / reserpine 0.125 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197885",
+       "name": "hydrochlorothiazide 12.5 MG / lisinopril 10 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG / lisinopril 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197886",
+       "name": "hydrochlorothiazide 12.5 MG / lisinopril 20 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG / lisinopril 20 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197887",
+       "name": "hydrochlorothiazide 25 MG / lisinopril 20 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / lisinopril 20 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197960",
+       "name": "hydrochlorothiazide 25 MG / methyldopa 250 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / methyldopa 250 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197961",
+       "name": "hydrochlorothiazide 50 MG / methyldopa 500 MG Oral Tablet",
+       "synonym": "HCTZ 50 MG / methyldopa 500 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197962",
+       "name": "hydrochlorothiazide 30 MG / methyldopa 500 MG Oral Tablet",
+       "synonym": "HCTZ 30 MG / methyldopa 500 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197963",
+       "name": "hydrochlorothiazide 15 MG / methyldopa 250 MG Oral Tablet",
+       "synonym": "HCTZ 15 MG / methyldopa 250 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "198224",
+       "name": "hydrochlorothiazide 25 MG / spironolactone 25 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / spironolactone 25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "198225",
+       "name": "hydrochlorothiazide 50 MG / spironolactone 50 MG Oral Tablet",
+       "synonym": "HCTZ 50 MG / spironolactone 50 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "198316",
+       "name": "hydrochlorothiazide 25 MG / triamterene 37.5 MG Oral Capsule",
+       "synonym": "HCTZ 25 MG / triamterene 37.5 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "199903",
+       "name": "hydrochlorothiazide 12.5 MG Oral Capsule",
+       "synonym": "HCTZ 12.5 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "200284",
+       "name": "hydrochlorothiazide 12.5 MG / valsartan 80 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG / valsartan 80 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "200285",
+       "name": "hydrochlorothiazide 12.5 MG / valsartan 160 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG / valsartan 160 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "204501",
+       "name": "hydrochlorothiazide 25 MG / reserpine 0.125 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / reserpine 0.125 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2704012",
+       "name": "hydrochlorothiazide 800 MG Powder for Oral Suspension",
+       "synonym": "HCTZ 800 MG Powder for Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "283316",
+       "name": "hydrochlorothiazide 12.5 MG / telmisartan 40 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG / telmisartan 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "283317",
+       "name": "hydrochlorothiazide 12.5 MG / telmisartan 80 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG / telmisartan 80 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310664",
+       "name": "guanethidine 10 MG / hydrochlorothiazide 25 MG Oral Tablet",
+       "synonym": "guanethidine 10 MG / HCTZ 25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310792",
+       "name": "hydrochlorothiazide 12.5 MG / irbesartan 150 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG / irbesartan 150 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310793",
+       "name": "hydrochlorothiazide 12.5 MG / irbesartan 300 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG / irbesartan 300 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310796",
+       "name": "hydrochlorothiazide 12.5 MG / quinapril 10 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG / quinapril 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310797",
+       "name": "hydrochlorothiazide 12.5 MG / quinapril 20 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG / quinapril 20 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310798",
+       "name": "hydrochlorothiazide 25 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310809",
+       "name": "hydrochlorothiazide 25 MG / quinapril 20 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / quinapril 20 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310811",
+       "name": "hydrochlorothiazide 25 MG / timolol 10 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / timolol 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310812",
+       "name": "hydrochlorothiazide 25 MG / triamterene 37.5 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / triamterene 37.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310818",
+       "name": "hydrochlorothiazide 50 MG / triamterene 75 MG Oral Tablet",
+       "synonym": "HCTZ 50 MG / triamterene 75 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "314029",
+       "name": "hydrochlorothiazide 25 MG / triamterene 50 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / Triamterene 50 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "349353",
+       "name": "hydrochlorothiazide 25 MG / valsartan 160 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / valsartan 160 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "351292",
+       "name": "eprosartan 600 MG / hydrochlorothiazide 12.5 MG Oral Tablet",
+       "synonym": "eprosartan 600 MG / HCTZ 12.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "351293",
+       "name": "eprosartan 600 MG / hydrochlorothiazide 25 MG Oral Tablet",
+       "synonym": "eprosartan 600 MG / HCTZ 25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "403853",
+       "name": "hydrochlorothiazide 12.5 MG / olmesartan medoxomil 20 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG / olmesartan medoxomil 20 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "403854",
+       "name": "hydrochlorothiazide 12.5 MG / olmesartan medoxomil 40 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG / olmesartan medoxomil 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "403855",
+       "name": "hydrochlorothiazide 25 MG / olmesartan medoxomil 40 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / olmesartan medoxomil 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "429503",
+       "name": "hydrochlorothiazide 12.5 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "477130",
+       "name": "hydrochlorothiazide 25 MG / telmisartan 80 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / telmisartan 80 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "485471",
+       "name": "hydrochlorothiazide 25 MG / irbesartan 300 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / irbesartan 300 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "578325",
+       "name": "candesartan cilexetil 16 MG / hydrochlorothiazide 12.5 MG Oral Tablet",
+       "synonym": "candesartan cilexetil 16 MG / HCTZ 12.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "578330",
+       "name": "candesartan cilexetil 32 MG / hydrochlorothiazide 12.5 MG Oral Tablet",
+       "synonym": "candesartan cilexetil 32 MG / HCTZ 12.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "636042",
+       "name": "hydrochlorothiazide 12.5 MG / valsartan 320 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG / valsartan 320 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "636045",
+       "name": "hydrochlorothiazide 25 MG / valsartan 320 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / valsartan 320 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "802749",
+       "name": "candesartan cilexetil 32 MG / hydrochlorothiazide 25 MG Oral Tablet",
+       "synonym": "candesartan cilexetil 32 MG / HCTZ 25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848131",
+       "name": "amlodipine 10 MG / hydrochlorothiazide 12.5 MG / valsartan 160 MG Oral Tablet",
+       "synonym": "amlodipine 10 MG / HCTZ 12.5 MG / valsartan 160 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848135",
+       "name": "amlodipine 10 MG / hydrochlorothiazide 25 MG / valsartan 320 MG Oral Tablet",
+       "synonym": "amlodipine 10 MG / HCTZ 25 MG / valsartan 320 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848140",
+       "name": "amlodipine 5 MG / hydrochlorothiazide 12.5 MG / valsartan 160 MG Oral Tablet",
+       "synonym": "amlodipine 5 MG / HCTZ 12.5 MG / valsartan 160 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848145",
+       "name": "amlodipine 5 MG / hydrochlorothiazide 25 MG / valsartan 160 MG Oral Tablet",
+       "synonym": "amlodipine 5 MG / HCTZ 25 MG / valsartan 160 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848151",
+       "name": "amlodipine 10 MG / hydrochlorothiazide 25 MG / valsartan 160 MG Oral Tablet",
+       "synonym": "amlodipine 10 MG / HCTZ 25 MG / valsartan 160 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "854908",
+       "name": "bisoprolol fumarate 10 MG / hydrochlorothiazide 6.25 MG Oral Tablet",
+       "synonym": "bisoprolol fumarate 10 MG / HCTZ 6.25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "854916",
+       "name": "bisoprolol fumarate 2.5 MG / hydrochlorothiazide 6.25 MG Oral Tablet",
+       "synonym": "bisoprolol fumarate 2.5 MG / HCTZ 6.25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "854919",
+       "name": "bisoprolol fumarate 5 MG / hydrochlorothiazide 6.25 MG Oral Tablet",
+       "synonym": "bisoprolol fumarate 5 MG / HCTZ 6.25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "856422",
+       "name": "hydrochlorothiazide 25 MG / propranolol hydrochloride 40 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / propranolol hydrochloride 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "856429",
+       "name": "hydrochlorothiazide 25 MG / propranolol hydrochloride 80 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / propranolol hydrochloride 80 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "857166",
+       "name": "fosinopril sodium 10 MG / hydrochlorothiazide 12.5 MG Oral Tablet",
+       "synonym": "FNP Sodium 10 MG / HCTZ 12.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "857174",
+       "name": "fosinopril sodium 20 MG / hydrochlorothiazide 12.5 MG Oral Tablet",
+       "synonym": "FNP Sodium 20 MG / HCTZ 12.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "858824",
+       "name": "enalapril maleate 5 MG / hydrochlorothiazide 12.5 MG Oral Tablet",
+       "synonym": "enalapril maleate 5 MG / HCTZ 12.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "858828",
+       "name": "enalapril maleate 10 MG / hydrochlorothiazide 25 MG Oral Tablet",
+       "synonym": "enalapril maleate 10 MG / HCTZ 25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "858921",
+       "name": "enalapril maleate 20 MG / hydrochlorothiazide 12.5 MG Oral Tablet",
+       "synonym": "enalapril maleate 20 MG / HCTZ 12.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "866452",
+       "name": "24 HR hydrochlorothiazide 12.5 MG / metoprolol succinate 100 MG Extended Release Oral Tablet",
+       "synonym": "24 HR HCTZ 12.5 MG / metoprolol succinate 100 MG Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "866479",
+       "name": "hydrochlorothiazide 25 MG / metoprolol tartrate 100 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / metoprolol tartrate 100 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "866482",
+       "name": "hydrochlorothiazide 25 MG / metoprolol tartrate 50 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / metoprolol tartrate 50 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "866491",
+       "name": "hydrochlorothiazide 50 MG / metoprolol tartrate 100 MG Oral Tablet",
+       "synonym": "HCTZ 50 MG / metoprolol tartrate 100 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "896976",
+       "name": "hydrochlorothiazide 25 MG / labetalol hydrochloride 300 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / Labetalol hydrochloride 300 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "898362",
+       "name": "benazepril hydrochloride 10 MG / hydrochlorothiazide 12.5 MG Oral Tablet",
+       "synonym": "BZP hydrochloride 10 MG / HCTZ 12.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "898367",
+       "name": "benazepril hydrochloride 20 MG / hydrochlorothiazide 12.5 MG Oral Tablet",
+       "synonym": "BZP hydrochloride 20 MG / HCTZ 12.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "898372",
+       "name": "benazepril hydrochloride 20 MG / hydrochlorothiazide 25 MG Oral Tablet",
+       "synonym": "BZP hydrochloride 20 MG / HCTZ 25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "898378",
+       "name": "benazepril hydrochloride 5 MG / hydrochlorothiazide 6.25 MG Oral Tablet",
+       "synonym": "BZP hydrochloride 5 MG / HCTZ 6.25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "905203",
+       "name": "hydralazine hydrochloride 100 MG / hydrochlorothiazide 50 MG Oral Capsule",
+       "synonym": "hydralazine hydrochloride 100 MG / HCTZ 50 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "905211",
+       "name": "hydralazine hydrochloride 25 MG / hydrochlorothiazide 25 MG Oral Capsule",
+       "synonym": "Hydralazine Hydrochloride 25 MG / HCTZ 25 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "905217",
+       "name": "hydralazine hydrochloride 50 MG / hydrochlorothiazide 50 MG Oral Capsule",
+       "synonym": "Hydralazine Hydrochloride 50 MG / HCTZ 50 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "905353",
+       "name": "hydralazine hydrochloride 25 MG / hydrochlorothiazide 15 MG / reserpine 0.1 MG Oral Tablet",
+       "synonym": "hydralazine hydrochloride 25 MG / HCTZ 15 MG / reserpine 0.1 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "977883",
+       "name": "amiloride hydrochloride 5 MG / hydrochlorothiazide 50 MG Oral Tablet",
+       "synonym": "amiloride hydrochloride 5 MG / HCTZ 50 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "977920",
+       "name": "amiloride hydrochloride 2.5 MG / atenolol 50 MG / hydrochlorothiazide 25 MG Oral Capsule",
+       "synonym": "amiloride hydrochloride 2.5 MG / atenolol 50 MG / HCTZ 25 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "977949",
+       "name": "amiloride hydrochloride 2.5 MG / hydrochlorothiazide 25 MG / timolol maleate 10 MG Oral Tablet",
+       "synonym": "amiloride hydrochloride 2.5 MG / HCTZ 25 MG / timolol maleate 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "977950",
+       "name": "amiloride hydrochloride 2.5 MG / hydrochlorothiazide 25 MG Oral Tablet",
+       "synonym": "Amiloride Hydrochloride 2.5 MG / HCTZ 25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "979464",
+       "name": "hydrochlorothiazide 12.5 MG / losartan potassium 100 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG / Losartan K+ 100 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "979468",
+       "name": "hydrochlorothiazide 12.5 MG / losartan potassium 50 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG / Losartan K+ 50 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "979471",
+       "name": "hydrochlorothiazide 25 MG / losartan potassium 100 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / Losartan K+ 100 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "998694",
+       "name": "acebutolol 200 MG / hydrochlorothiazide 12.5 MG Oral Tablet",
+       "synonym": "Acebutolol 200 MG / HCTZ 12.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "999967",
+       "name": "amlodipine 5 MG / hydrochlorothiazide 12.5 MG / olmesartan medoxomil 20 MG Oral Tablet",
+       "synonym": "Amlodipine 5 MG / HCTZ 12.5 MG / Olmesartan medoxomil 20 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "999986",
+       "name": "amlodipine 10 MG / hydrochlorothiazide 12.5 MG / olmesartan medoxomil 40 MG Oral Tablet",
+       "synonym": "Amlodipine 10 MG / HCTZ 12.5 MG / Olmesartan medoxomil 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "999991",
+       "name": "amlodipine 10 MG / hydrochlorothiazide 25 MG / olmesartan medoxomil 40 MG Oral Tablet",
+       "synonym": "Amlodipine 10 MG / HCTZ 25 MG / Olmesartan medoxomil 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "999996",
+       "name": "amlodipine 5 MG / hydrochlorothiazide 12.5 MG / olmesartan medoxomil 40 MG Oral Tablet",
+       "synonym": "Amlodipine 5 MG / HCTZ 12.5 MG / Olmesartan medoxomil 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

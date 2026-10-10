@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SigCheck</title>
+<link rel="stylesheet" href="/static/app.css?v=8">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#/queue"><span class="logo" aria-hidden="true">℞</span> SigCheck <span class="sub">fax review</span></a>
+  <nav>
+    <a href="#/queue" data-nav="queue">Queue</a>
+    <a href="#/scorecard" data-nav="scorecard">Scorecard</a>
+  </nav>
+</header>
+<main id="app" aria-live="polite"></main>
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-card">
+    <div class="modal-head"><h2 id="modal-title"></h2><button class="ghost" id="modal-close" aria-label="Close">✕</button></div>
+    <div id="modal-body"></div>
+  </div>
+</div>
+<script src="/static/app.js?v=9"></script>
+</body>
+</html>

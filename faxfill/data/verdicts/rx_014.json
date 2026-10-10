@@ -1,0 +1,503 @@
+{
+ "fax_id": "rx_014",
+ "verifier": "verifier-v1",
+ "readers": {
+  "A": "openai/gpt-5.5",
+  "B": "mistral/mistral-large-3",
+  "C": "regex over tesseract"
+ },
+ "lookup": "local files (faxfill/ref)",
+ "pages_received": 1,
+ "pages_declared_in_header": 1,
+ "order_status": "NEEDS_PHARMACIST",
+ "order_flags": [],
+ "danger_score": 1000,
+ "danger_breakdown": {
+  "allergy_conflict": 1000
+ },
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "rx_014.png",
+   "status": "NEEDS_PHARMACIST",
+   "flagged_fields": [
+    "drug_name"
+   ],
+   "fields": {
+    "patient_name": {
+     "value": "Sofia Alvarez",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      360,
+      435,
+      582,
+      464
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "patient_in_profiles",
+       "evidence": "patient profiles (patients.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Sofia Alvarez",
+      "B": "Sofia Alvarez",
+      "C": "Sofia Alvarez"
+     }
+    },
+    "patient_dob": {
+     "value": "11/02/1972",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      1183,
+      436,
+      1368,
+      464
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "dob_matches_profile",
+       "evidence": "patient profiles (patients.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "11/02/1972",
+      "B": "11/02/1972",
+      "C": "11/02/1972"
+     }
+    },
+    "drug_name": {
+     "value": "Amoxicillin",
+     "status": "needs_pharmacist",
+     "codes": [
+      "ALLERGY_CONFLICT"
+     ],
+     "reasons": [
+      "Patient profile lists a penicillin allergy; amoxicillin is in that class."
+     ],
+     "alternatives": [],
+     "evidence_box": [
+      360,
+      703,
+      563,
+      732
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "drug_in_rxnorm",
+       "evidence": "rxnorm (drugs.json)"
+      }
+     ],
+     "checks_failed": [
+      {
+       "check": "ALLERGY_CONFLICT",
+       "evidence": null
+      }
+     ],
+     "notes": [],
+     "reads": {
+      "A": "Amoxicillin",
+      "B": "Amoxicillin",
+      "C": "Amoxicillin"
+     }
+    },
+    "strength": {
+     "value": "500 mg",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      594,
+      704,
+      722,
+      740
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "strength_in_rxnorm",
+       "evidence": "rxnorm"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "500 mg",
+      "B": "500 mg",
+      "C": "500mg"
+     }
+    },
+    "dosage_form": {
+     "value": "capsule",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      752,
+      703,
+      892,
+      740
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "form_in_rxnorm",
+       "evidence": "rxnorm"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "capsule",
+      "B": "capsule",
+      "C": "capsule"
+     }
+    },
+    "directions": {
+     "value": "Take 1 capsule by mouth three times daily for 10 days",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      360,
+      833,
+      1272,
+      870
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "directions_parsed",
+       "evidence": null
+      },
+      {
+       "check": "within_usual_max (manual, unverified)",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Take 1 capsule by mouth three times daily for 10 days",
+      "B": "Take 1 capsule by mouth three times daily for 10 days",
+      "C": "Take 1 capsule by mouth three times daily for 10 days"
+     }
+    },
+    "quantity": {
+     "value": "#30 (thirty) capsules",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      359,
+      923,
+      702,
+      960
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "numeral_matches_words",
+       "evidence": null
+      },
+      {
+       "check": "quantity_matches_duration",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "#30 (thirty) capsules",
+      "B": "#30 (thirty) capsules",
+      "C": "#30 (thirty) capsules"
+     }
+    },
+    "refills": {
+     "value": "0",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      360,
+      1013,
+      379,
+      1041
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "refills_whole_number",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "0",
+      "B": "0",
+      "C": "0"
+     }
+    },
+    "prescriber_name": {
+     "value": "Grace Whitfield, NP",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      121,
+      181,
+      474,
+      216
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "prescriber_matches_npi",
+       "evidence": "prescriber directory (prescribers.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Grace Whitfield, NP",
+      "B": "Grace Whitfield, NP",
+      "C": "Grace Whitfield, NP"
+     }
+    },
+    "prescriber_npi": {
+     "value": "1683866150",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      208,
+      325,
+      413,
+      354
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "npi_luhn",
+       "evidence": null
+      },
+      {
+       "check": "npi_in_directory",
+       "evidence": "prescriber directory (prescribers.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "1683866150",
+      "B": "1683866150",
+      "C": "1683866150"
+     }
+    },
+    "prescriber_dea": {
+     "value": null,
+     "status": "not_present",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": null,
+     "evidence_note": "location not found",
+     "checks_passed": [],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": null,
+      "B": null,
+      "C": null
+     }
+    },
+    "date_written": {
+     "value": "10/09/2026",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      364,
+      583,
+      549,
+      612
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "date_valid_not_future",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [
+      "OCR text reads '40/09/2026' (both models read '10/09/2026'). Shown for information; not a flag on its own."
+     ],
+     "reads": {
+      "A": "10/09/2026",
+      "B": "10/09/2026",
+      "C": "40/09/2026"
+     }
+    },
+    "substitution": {
+     "value": "permitted",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      325,
+      1109,
+      442,
+      1137
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "substitution_known_value",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "permitted",
+      "B": "permitted",
+      "C": null
+     }
+    },
+    "notes": {
+     "value": null,
+     "status": "not_present",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": null,
+     "evidence_note": "location not found",
+     "checks_passed": [],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": null,
+      "B": null,
+      "C": null
+     }
+    }
+   },
+   "page_flags": [],
+   "c_only_fields": [
+    "date_written"
+   ],
+   "drug_ref": "amoxicillin"
+  }
+ ],
+ "clarification_questions": [],
+ "thresholds": {
+  "speck_max_area": 4,
+  "region_pad": 30,
+  "baseline_text_pad": 10,
+  "noise_ratio": 3.0,
+  "noise_min_density": 0.01,
+  "streak_row_ink": 0.8,
+  "edge_margin": 5,
+  "prescriber_block_top": 0.2,
+  "header_votes": 2,
+  "lasa_min_ocr_conf": 60
+ },
+ "lookup_sources": {
+  "drug": "local files (faxfill/ref)",
+  "prescriber": "local files (faxfill/ref)",
+  "patient": "local files (faxfill/ref)",
+  "prism_kb": "not queried: PRISM documents no Knowledge Base query API, so lookups use local files"
+ },
+ "prism": {
+  "traces_sent": 4,
+  "traces_failed": [],
+  "intake_trace_ids": [
+   "sigcheck-intake-rx_014-p1-856f48201311"
+  ],
+  "reader_trace_ids": [
+   "sigcheck-read-rx_014-openai-gpt-5.5-reader-v2-v2",
+   "sigcheck-read-rx_014-mistral-mistral-large-3-reader-v2-v2"
+  ],
+  "verifier_trace_id": "sigcheck-verify-rx_014-498b71763f46",
+  "guardrail": {
+   "local_injection_check": false,
+   "prism": false,
+   "prism_injection_flags": [],
+   "prism_other_flags": [
+    {
+     "rule_name": "PII/PHI Detection",
+     "action": "flag",
+     "page": 1
+    }
+   ],
+   "fired_by": [],
+   "blocks_if": "either fires",
+   "prism_status": "read from guardrail_flags in the POST /api/traces response for the intake trace (present in every response, not listed in the docs)"
+  },
+  "knowledge_base": "not queried: PRISM documents no Knowledge Base query API, so lookups use local files"
+ }
+}

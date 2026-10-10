@@ -1,0 +1,226 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=alprazolam",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:47-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "141927",
+       "name": "alprazolam 0.25 MG Oral Tablet [Xanax]",
+       "synonym": "Xanax 0.25 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "141928",
+       "name": "alprazolam 0.5 MG Oral Tablet [Xanax]",
+       "synonym": "Xanax 0.5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "214003",
+       "name": "alprazolam 1 MG Oral Tablet [Xanax]",
+       "synonym": "Xanax 1 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "214004",
+       "name": "alprazolam 2 MG Oral Tablet [Xanax]",
+       "synonym": "Xanax 2 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "687022",
+       "name": "24 HR alprazolam 3 MG Extended Release Oral Tablet [Xanax]",
+       "synonym": "24 HR Xanax 3 MG Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "687023",
+       "name": "24 HR alprazolam 2 MG Extended Release Oral Tablet [Xanax]",
+       "synonym": "24 HR Xanax 2 MG Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "687024",
+       "name": "24 HR alprazolam 1 MG Extended Release Oral Tablet [Xanax]",
+       "synonym": "24 HR Xanax 1 MG Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "687025",
+       "name": "24 HR alprazolam 0.5 MG Extended Release Oral Tablet [Xanax]",
+       "synonym": "24 HR Xanax 0.5 MG Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "197321",
+       "name": "alprazolam 1 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197322",
+       "name": "alprazolam 2 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "308047",
+       "name": "alprazolam 0.25 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "308048",
+       "name": "alprazolam 0.5 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "308049",
+       "name": "alprazolam 0.1 MG/ML Oral Solution",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "308050",
+       "name": "alprazolam 1 MG/ML Oral Solution",
+       "synonym": "alprazolam 1 MG per 1 ML Concentrate for Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "433798",
+       "name": "24 HR alprazolam 0.5 MG Extended Release Oral Tablet",
+       "synonym": "alprazolam 0.5 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "433799",
+       "name": "24 HR alprazolam 2 MG Extended Release Oral Tablet",
+       "synonym": "alprazolam 2 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "433800",
+       "name": "24 HR alprazolam 1 MG Extended Release Oral Tablet",
+       "synonym": "alprazolam 1 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "433801",
+       "name": "24 HR alprazolam 3 MG Extended Release Oral Tablet",
+       "synonym": "alprazolam 3 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "485413",
+       "name": "alprazolam 0.25 MG Disintegrating Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "485414",
+       "name": "alprazolam 1 MG Disintegrating Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "485415",
+       "name": "alprazolam 0.5 MG Disintegrating Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "485416",
+       "name": "alprazolam 2 MG Disintegrating Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

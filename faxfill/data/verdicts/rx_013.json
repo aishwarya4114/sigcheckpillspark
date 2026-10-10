@@ -1,0 +1,503 @@
+{
+ "fax_id": "rx_013",
+ "verifier": "verifier-v1",
+ "readers": {
+  "A": "openai/gpt-5.5",
+  "B": "mistral/mistral-large-3",
+  "C": "regex over tesseract"
+ },
+ "lookup": "local files (faxfill/ref)",
+ "pages_received": 1,
+ "pages_declared_in_header": 1,
+ "order_status": "NEEDS_PHARMACIST",
+ "order_flags": [],
+ "danger_score": 5,
+ "danger_breakdown": {
+  "other_flag": 5
+ },
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "rx_013.png",
+   "status": "NEEDS_PHARMACIST",
+   "flagged_fields": [
+    "prescriber_name"
+   ],
+   "fields": {
+    "patient_name": {
+     "value": "Hazel Quinn",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      364,
+      433,
+      570,
+      465
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "patient_in_profiles",
+       "evidence": "patient profiles (patients.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [
+      "OCR text reads 'Hazel Quinn : poB: 07/26/2001' (both models read 'Hazel Quinn'). Shown for information; not a flag on its own."
+     ],
+     "reads": {
+      "A": "Hazel Quinn",
+      "B": "Hazel Quinn",
+      "C": "Hazel Quinn : poB: 07/26/2001"
+     }
+    },
+    "patient_dob": {
+     "value": "07/26/2001",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      1183,
+      435,
+      1368,
+      467
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "dob_matches_profile",
+       "evidence": "patient profiles (patients.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "07/26/2001",
+      "B": "07/26/2001",
+      "C": null
+     }
+    },
+    "drug_name": {
+     "value": "Escitalopram",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      363,
+      701,
+      600,
+      739
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "drug_in_rxnorm",
+       "evidence": "rxnorm (drugs.json)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Escitalopram",
+      "B": "Escitalopram",
+      "C": "Escitalopram"
+     }
+    },
+    "strength": {
+     "value": "10 mg",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      630,
+      701,
+      738,
+      741
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "strength_in_rxnorm",
+       "evidence": "rxnorm"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "10 mg",
+      "B": "10 mg",
+      "C": "10mg"
+     }
+    },
+    "dosage_form": {
+     "value": "tablet",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      766,
+      703,
+      869,
+      733
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "form_in_rxnorm",
+       "evidence": "rxnorm"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "tablet",
+      "B": "tablet",
+      "C": "tablet"
+     }
+    },
+    "directions": {
+     "value": "Take 1 tablet by mouth once daily for 30 days",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      362,
+      831,
+      1130,
+      871
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "directions_parsed",
+       "evidence": null
+      },
+      {
+       "check": "within_usual_max (manual, unverified)",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Take 1 tablet by mouth once daily for 30 days",
+      "B": "Take 1 tablet by mouth once daily for 30 days",
+      "C": "Take 1 tablet by mouth once daily for 30 days"
+     }
+    },
+    "quantity": {
+     "value": "#30 (thirty) tablets",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      360,
+      921,
+      665,
+      960
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "numeral_matches_words",
+       "evidence": null
+      },
+      {
+       "check": "quantity_matches_duration",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "#30 (thirty) tablets",
+      "B": "#30 (thirty) tablets",
+      "C": "#30 (thirty) tablets"
+     }
+    },
+    "refills": {
+     "value": "1",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      365,
+      1011,
+      376,
+      1041
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "refills_whole_number",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "1",
+      "B": "1",
+      "C": null
+     }
+    },
+    "prescriber_name": {
+     "value": "Ava Sterling, NP",
+     "status": "needs_pharmacist",
+     "codes": [
+      "PRESCRIBER_UNKNOWN"
+     ],
+     "reasons": [
+      "'Ava Sterling, NP' is not in the prescriber directory. Verify before filling."
+     ],
+     "alternatives": [],
+     "evidence_box": [
+      122,
+      177,
+      419,
+      217
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [
+      {
+       "check": "PRESCRIBER_UNKNOWN",
+       "evidence": null
+      }
+     ],
+     "notes": [],
+     "reads": {
+      "A": "Ava Sterling, NP",
+      "B": "Ava Sterling, NP",
+      "C": "Ava Sterling, NP"
+     }
+    },
+    "prescriber_npi": {
+     "value": "1736993563",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      211,
+      321,
+      418,
+      353
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "npi_luhn",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "1736993563",
+      "B": "1736993563",
+      "C": "1736993563"
+     }
+    },
+    "prescriber_dea": {
+     "value": null,
+     "status": "not_present",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": null,
+     "evidence_note": "location not found",
+     "checks_passed": [],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": null,
+      "B": null,
+      "C": null
+     }
+    },
+    "date_written": {
+     "value": "10/06/2026",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      365,
+      581,
+      551,
+      612
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "date_valid_not_future",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [
+      "OCR text reads '40/06/2026' (both models read '10/06/2026'). Shown for information; not a flag on its own."
+     ],
+     "reads": {
+      "A": "10/06/2026",
+      "B": "10/06/2026",
+      "C": "40/06/2026"
+     }
+    },
+    "substitution": {
+     "value": "permitted",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      323,
+      1106,
+      442,
+      1137
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "substitution_known_value",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "permitted",
+      "B": "permitted",
+      "C": null
+     }
+    },
+    "notes": {
+     "value": "New start.",
+     "status": "info",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      260,
+      1199,
+      389,
+      1225
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "New start.",
+      "B": "New start.",
+      "C": "New start."
+     }
+    }
+   },
+   "page_flags": [],
+   "c_only_fields": [
+    "patient_name",
+    "date_written"
+   ],
+   "drug_ref": "escitalopram"
+  }
+ ],
+ "clarification_questions": [
+  {
+   "page": 1,
+   "field": "prescriber_name",
+   "code": "PRESCRIBER_UNKNOWN",
+   "question": "Please confirm the prescriber's identity and NPI."
+  }
+ ],
+ "thresholds": {
+  "speck_max_area": 4,
+  "region_pad": 30,
+  "baseline_text_pad": 10,
+  "noise_ratio": 3.0,
+  "noise_min_density": 0.01,
+  "streak_row_ink": 0.8,
+  "edge_margin": 5,
+  "prescriber_block_top": 0.2,
+  "header_votes": 2,
+  "lasa_min_ocr_conf": 60
+ },
+ "lookup_sources": {
+  "drug": "local files (faxfill/ref)",
+  "prescriber": "local files (faxfill/ref)",
+  "patient": "local files (faxfill/ref)",
+  "prism_kb": "not queried: PRISM documents no Knowledge Base query API, so lookups use local files"
+ },
+ "prism": {
+  "traces_sent": 4,
+  "traces_failed": [],
+  "intake_trace_ids": [
+   "sigcheck-intake-rx_013-p1-f0db6f6b2e4f"
+  ],
+  "reader_trace_ids": [
+   "sigcheck-read-rx_013-openai-gpt-5.5-reader-v2-v2",
+   "sigcheck-read-rx_013-mistral-mistral-large-3-reader-v2-v2"
+  ],
+  "verifier_trace_id": "sigcheck-verify-rx_013-82938a2a9084",
+  "guardrail": {
+   "local_injection_check": false,
+   "prism": false,
+   "prism_injection_flags": [],
+   "prism_other_flags": [
+    {
+     "rule_name": "PII/PHI Detection",
+     "action": "flag",
+     "page": 1
+    }
+   ],
+   "fired_by": [],
+   "blocks_if": "either fires",
+   "prism_status": "read from guardrail_flags in the POST /api/traces response for the intake trace (present in every response, not listed in the docs)"
+  },
+  "knowledge_base": "not queried: PRISM documents no Knowledge Base query API, so lookups use local files"
+ }
+}

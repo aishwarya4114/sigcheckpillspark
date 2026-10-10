@@ -1,0 +1,136 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=citalopram",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:40-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "213344",
+       "name": "citalopram 20 MG Oral Tablet [Celexa]",
+       "synonym": "Celexa 20 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "213345",
+       "name": "citalopram 40 MG Oral Tablet [Celexa]",
+       "synonym": "Celexa 40 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "284591",
+       "name": "citalopram 10 MG Oral Tablet [Celexa]",
+       "synonym": "Celexa 10 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "200371",
+       "name": "citalopram 20 MG Oral Tablet",
+       "synonym": "citalopram 20 MG (as citalopram HBr 24.99 MG) Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2591786",
+       "name": "citalopram 30 MG Oral Capsule",
+       "synonym": "citalopram 30 MG (as citalopram HBr 37.5 MG) Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "283672",
+       "name": "citalopram 10 MG Oral Tablet",
+       "synonym": "citalopram 10 MG (as citalopram HBr 12.49 MG) Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "309313",
+       "name": "citalopram 2 MG/ML Oral Solution",
+       "synonym": "citalopram 10 MG per 5 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "309314",
+       "name": "citalopram 40 MG Oral Tablet",
+       "synonym": "citalopram 40 MG (as citalopram HBr 49.98 MG) Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "389202",
+       "name": "citalopram 40 MG/ML Oral Solution",
+       "synonym": "citalopram (as citalopram hydrochloride) 40 MG/ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "645289",
+       "name": "citalopram 10 MG Disintegrating Oral Tablet",
+       "synonym": "citalopram (as citalopram hydrobromide) 10 MG Disintegrating Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "645290",
+       "name": "citalopram 20 MG Disintegrating Oral Tablet",
+       "synonym": "citalopram (as citalopram hydrobromide) 20 MG Disintegrating Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "645291",
+       "name": "citalopram 40 MG Disintegrating Oral Tablet",
+       "synonym": "citalopram (as citalopram hydrobromide) 40 MG Disintegrating Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

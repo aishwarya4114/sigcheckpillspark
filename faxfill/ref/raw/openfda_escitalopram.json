@@ -1,0 +1,81 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22escitalopram%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:42-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 176
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "0456-2005",
+    "generic_name": "ESCITALOPRAM",
+    "labeler_name": "Allergan, Inc.",
+    "brand_name": "Lexapro",
+    "active_ingredients": [
+     {
+      "name": "ESCITALOPRAM OXALATE",
+      "strength": "5 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "0456-2005-01",
+      "description": "100 TABLET, FILM COATED in 1 BOTTLE (0456-2005-01)",
+      "marketing_start_date": "20020814",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20261231",
+    "openfda": {
+     "manufacturer_name": [
+      "Allergan, Inc."
+     ],
+     "rxcui": [
+      "349332",
+      "351249",
+      "351250",
+      "351285",
+      "352272",
+      "352273",
+      "404408",
+      "404420"
+     ],
+     "spl_set_id": [
+      "13bb8267-1cab-43e5-acae-55a4d957630a"
+     ],
+     "is_original_packager": [
+      true
+     ],
+     "unii": [
+      "5U85DBW7LO"
+     ]
+    },
+    "marketing_category": "NDA",
+    "dosage_form": "TABLET, FILM COATED",
+    "spl_id": "9ff46a66-0f97-4a78-9d18-ec576f63bae7",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20020814",
+    "product_id": "0456-2005_9ff46a66-0f97-4a78-9d18-ec576f63bae7",
+    "application_number": "NDA021323",
+    "brand_name_base": "Lexapro",
+    "pharm_class": [
+     "Serotonin Reuptake Inhibitor [EPC]",
+     "Serotonin Uptake Inhibitors [MoA]"
+    ]
+   }
+  ]
+ }
+}

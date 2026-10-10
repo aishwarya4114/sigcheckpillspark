@@ -1,0 +1,303 @@
+{
+ "id": "rx_028",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "rx_028_p1.png"
+ ],
+ "pages_declared": 1,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": 0.14,
+  "blur": 0.5,
+  "noise": 10,
+  "fax_mode": "fine",
+  "level": "light"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": 0.14,
+   "blur": 0.5,
+   "noise": 10,
+   "fax_mode": "fine",
+   "level": "light"
+  }
+ ],
+ "is_clean": false,
+ "trap": "truncated",
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "rx_028_p1.png",
+   "fields": {
+    "patient_name": "Jamal Pierce",
+    "patient_dob": "1975-06-30",
+    "patient_address": "140 W 121st St, Apt 6C, New York, NY 10030",
+    "drug_name": "escitalopram",
+    "strength": "10 mg",
+    "strength_value": 10,
+    "strength_unit": "mg",
+    "dosage_form": "tablet",
+    "directions": "Take 1 tablet by mouth once daily for 30 days",
+    "quantity": 30,
+    "quantity_text": "#30 (thirty) tablets",
+    "days_supply_stated": 30,
+    "refills": 1,
+    "prescriber_name": "Hannah Lindqvist, MD",
+    "prescriber_npi": "1483926451",
+    "prescriber_dea": null,
+    "date_written": "2026-10-08",
+    "substitution": "permitted",
+    "notes": null
+   },
+   "field_boxes": {
+    "fax_header": [
+     -187,
+     25,
+     1178,
+     49
+    ],
+    "clinic": [
+     -126,
+     119,
+     494,
+     163
+    ],
+    "prescriber_name": [
+     -126,
+     183,
+     273,
+     219
+    ],
+    "prescriber_npi": [
+     -41,
+     328,
+     169,
+     355
+    ],
+    "patient_name": [
+     114,
+     437,
+     333,
+     465
+    ],
+    "patient_dob": [
+     934,
+     435,
+     1124,
+     463
+    ],
+    "patient_address": [
+     115,
+     512,
+     702,
+     541
+    ],
+    "date_written": [
+     115,
+     585,
+     305,
+     613
+    ],
+    "drug_name": [
+     -45,
+     706,
+     194,
+     741
+    ],
+    "strength": [
+     222,
+     705,
+     332,
+     741
+    ],
+    "dosage_form": [
+     360,
+     705,
+     462,
+     732
+    ],
+    "directions": [
+     115,
+     834,
+     884,
+     871
+    ],
+    "quantity": [
+     116,
+     925,
+     422,
+     961
+    ],
+    "refills": [
+     116,
+     1016,
+     137,
+     1043
+    ],
+    "substitution": [
+     -124,
+     1108,
+     -94,
+     1138
+    ]
+   },
+   "meta": {
+    "rxcui": "349332",
+    "fax_from": "(212) 555-0113",
+    "sent": "2026-10-08 12:01",
+    "patient_id": "PT015",
+    "prescriber_id": "P106",
+    "prescriber_in_directory": true
+   },
+   "truncated_left_px": 244,
+   "visible_text": {
+    "drug_name": "citalopram"
+   }
+  }
+ ],
+ "image": "rx_028_p1.png",
+ "fields": {
+  "patient_name": "Jamal Pierce",
+  "patient_dob": "1975-06-30",
+  "patient_address": "140 W 121st St, Apt 6C, New York, NY 10030",
+  "drug_name": "escitalopram",
+  "strength": "10 mg",
+  "strength_value": 10,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth once daily for 30 days",
+  "quantity": 30,
+  "quantity_text": "#30 (thirty) tablets",
+  "days_supply_stated": 30,
+  "refills": 1,
+  "prescriber_name": "Hannah Lindqvist, MD",
+  "prescriber_npi": "1483926451",
+  "prescriber_dea": null,
+  "date_written": "2026-10-08",
+  "substitution": "permitted",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   -187,
+   25,
+   1178,
+   49
+  ],
+  "clinic": [
+   -126,
+   119,
+   494,
+   163
+  ],
+  "prescriber_name": [
+   -126,
+   183,
+   273,
+   219
+  ],
+  "prescriber_npi": [
+   -41,
+   328,
+   169,
+   355
+  ],
+  "patient_name": [
+   114,
+   437,
+   333,
+   465
+  ],
+  "patient_dob": [
+   934,
+   435,
+   1124,
+   463
+  ],
+  "patient_address": [
+   115,
+   512,
+   702,
+   541
+  ],
+  "date_written": [
+   115,
+   585,
+   305,
+   613
+  ],
+  "drug_name": [
+   -45,
+   706,
+   194,
+   741
+  ],
+  "strength": [
+   222,
+   705,
+   332,
+   741
+  ],
+  "dosage_form": [
+   360,
+   705,
+   462,
+   732
+  ],
+  "directions": [
+   115,
+   834,
+   884,
+   871
+  ],
+  "quantity": [
+   116,
+   925,
+   422,
+   961
+  ],
+  "refills": [
+   116,
+   1016,
+   137,
+   1043
+  ],
+  "substitution": [
+   -124,
+   1108,
+   -94,
+   1138
+  ]
+ },
+ "meta": {
+  "rxcui": "349332",
+  "fax_from": "(212) 555-0113",
+  "sent": "2026-10-08 12:01",
+  "patient_id": "PT015",
+  "prescriber_id": "P106",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [
+  {
+   "field": "drug_name",
+   "code": "truncated_edge",
+   "why": "The left edge was cut off in transmission: 'Escitalopram' arrives as 'citalopram', a different drug with the same 10 mg strength.",
+   "page": 1
+  },
+  {
+   "field": "prescriber_name",
+   "code": "truncated_edge",
+   "page": 1,
+   "why": "prescriber_name starts at the cut-off left edge; leading characters may be missing."
+  },
+  {
+   "field": "prescriber_npi",
+   "code": "truncated_edge",
+   "page": 1,
+   "why": "prescriber_npi starts at the cut-off left edge; leading characters may be missing."
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": []
+}

@@ -1,0 +1,157 @@
+{
+ "id": "rx_017",
+ "image": "rx_017.png",
+ "synthetic": true,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": -0.74,
+  "blur": 0.9,
+  "noise": 22,
+  "fax_mode": "fine",
+  "level": "medium"
+ },
+ "is_clean": false,
+ "trap": "qty_vs_duration",
+ "fields": {
+  "patient_name": "Amara Nwosu",
+  "patient_dob": "1990-01-30",
+  "patient_address": "346 W 121st St, Apt 7A, New York, NY 10026",
+  "drug_name": "cephalexin",
+  "strength": "500 mg",
+  "strength_value": 500,
+  "strength_unit": "mg",
+  "dosage_form": "capsule",
+  "directions": "1 cap PO TID x 10 days",
+  "quantity": 20,
+  "quantity_text": "#20 (twenty) capsules",
+  "days_supply_stated": 10,
+  "refills": 0,
+  "prescriber_name": "Elena Marsh, MD",
+  "prescriber_npi": "1530456551",
+  "prescriber_dea": "FM2267094",
+  "date_written": "2026-10-08",
+  "substitution": "permitted",
+  "notes": "New start."
+ },
+ "field_boxes": {
+  "fax_header": [
+   74,
+   16,
+   1454,
+   54
+  ],
+  "clinic": [
+   132,
+   110,
+   761,
+   160
+  ],
+  "prescriber_name": [
+   131,
+   173,
+   437,
+   210
+  ],
+  "prescriber_npi": [
+   215,
+   318,
+   425,
+   347
+  ],
+  "prescriber_dea": [
+   725,
+   324,
+   927,
+   354
+  ],
+  "patient_name": [
+   367,
+   430,
+   607,
+   460
+  ],
+  "patient_dob": [
+   1188,
+   440,
+   1379,
+   470
+  ],
+  "patient_address": [
+   367,
+   506,
+   953,
+   540
+  ],
+  "date_written": [
+   366,
+   578,
+   557,
+   607
+  ],
+  "drug_name": [
+   365,
+   698,
+   567,
+   735
+  ],
+  "strength": [
+   595,
+   701,
+   726,
+   737
+  ],
+  "dosage_form": [
+   754,
+   703,
+   895,
+   740
+  ],
+  "directions": [
+   363,
+   828,
+   768,
+   868
+  ],
+  "quantity": [
+   362,
+   918,
+   732,
+   957
+  ],
+  "refills": [
+   361,
+   1008,
+   382,
+   1035
+  ],
+  "substitution": [
+   120,
+   1097,
+   150,
+   1127
+  ],
+  "notes": [
+   258,
+   1196,
+   390,
+   1219
+  ]
+ },
+ "expected_flags": [
+  {
+   "field": "quantity",
+   "code": "quantity_vs_duration",
+   "why": "1 cap TID x 10 days = 30 capsules, but Disp is #20."
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": [],
+ "meta": {
+  "rxcui": "309114",
+  "fax_from": "(212) 555-0101",
+  "sent": "2026-10-08 16:15",
+  "patient_id": "PT004",
+  "prescriber_id": "P100",
+  "prescriber_in_directory": true
+ }
+}

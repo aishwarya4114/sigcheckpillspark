@@ -1,0 +1,134 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=ropinirole",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:51-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD"
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "283858",
+       "name": "ropinirole 3 MG Oral Tablet",
+       "synonym": "ropinirole 3 MG (as ropinirole hydrochloride) Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "312845",
+       "name": "ropinirole 0.25 MG Oral Tablet",
+       "synonym": "ropinirole 0.25 MG (as ropinirole hydrochloride) Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "312846",
+       "name": "ropinirole 0.5 MG Oral Tablet",
+       "synonym": "ropinirole 0.5 MG (as ropinirole hydrochloride) Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "312847",
+       "name": "ropinirole 2 MG Oral Tablet",
+       "synonym": "ropinirole 2 MG (as ropinirole hydrochloride) Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "312849",
+       "name": "ropinirole 5 MG Oral Tablet",
+       "synonym": "ropinirole 5 MG (as ropinirole hydrochloride) Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "314208",
+       "name": "ropinirole 1 MG Oral Tablet",
+       "synonym": "ropinirole 1 MG (as ropinirole hydrochloride) Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "562704",
+       "name": "ropinirole 4 MG Oral Tablet",
+       "synonym": "ropinirole 4 MG (as ropinirole hydrochloride) Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "799054",
+       "name": "24 HR ropinirole 8 MG Extended Release Oral Tablet",
+       "synonym": "ropinirole 8 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "799055",
+       "name": "24 HR ropinirole 2 MG Extended Release Oral Tablet",
+       "synonym": "ropinirole 2 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "799056",
+       "name": "24 HR ropinirole 4 MG Extended Release Oral Tablet",
+       "synonym": "ropinirole 4 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "824959",
+       "name": "24 HR ropinirole 12 MG Extended Release Oral Tablet",
+       "synonym": "ropinirole 12 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848582",
+       "name": "24 HR ropinirole 6 MG Extended Release Oral Tablet",
+       "synonym": "ropinirole 6 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

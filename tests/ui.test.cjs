@@ -79,8 +79,10 @@ test("review fields preserve typing, escape extracted values and unlock only aft
   const dom = setup("index.html", "review.js", fetcher);
   const w = dom.window;
   await tick();
+  assert(w.document.body.classList.contains("queue-mode"));
   w.document.querySelector("[data-doc]").click();
   await tick();
+  assert.equal(w.document.body.classList.contains("queue-mode"), false);
   // no approve button is offered before the case is ready (state-specific footer)
   assert.equal(w.document.querySelector("[data-action=approve]"), null);
   assert(w.document.querySelector("[data-confirm-next]"));

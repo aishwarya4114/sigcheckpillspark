@@ -1,0 +1,76 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22risperidone%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:51-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 218
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "70518-3741",
+    "generic_name": "Risperidone",
+    "labeler_name": "REMEDYREPACK INC.",
+    "brand_name": "Risperidone",
+    "active_ingredients": [
+     {
+      "name": "RISPERIDONE",
+      "strength": "1 mg/mL"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "70518-3741-0",
+      "description": "10 CUP, UNIT-DOSE in 1 BOX (70518-3741-0)  / 2 mL in 1 CUP, UNIT-DOSE (70518-3741-1)",
+      "marketing_start_date": "20230601",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {
+     "manufacturer_name": [
+      "REMEDYREPACK INC."
+     ],
+     "rxcui": [
+      "199387"
+     ],
+     "spl_set_id": [
+      "8a4158fe-37d4-4c97-9c44-1c3489fe2a9f"
+     ],
+     "nui": [
+      "N0000175430"
+     ],
+     "pharm_class_epc": [
+      "Atypical Antipsychotic [EPC]"
+     ],
+     "unii": [
+      "L6UH7ZF8HC"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "SOLUTION",
+    "spl_id": "4f81da24-3508-7699-e063-6394a90a3c19",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20230601",
+    "product_id": "70518-3741_4f81da24-3508-7699-e063-6394a90a3c19",
+    "application_number": "ANDA079059",
+    "brand_name_base": "Risperidone",
+    "pharm_class": [
+     "Atypical Antipsychotic [EPC]"
+    ]
+   }
+  ]
+ }
+}

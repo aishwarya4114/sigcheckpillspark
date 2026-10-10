@@ -1,0 +1,1081 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=amlodipine",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:23-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "1000000",
+       "name": "amlodipine 5 MG / hydrochlorothiazide 12.5 MG / olmesartan medoxomil 40 MG Oral Tablet [Tribenzor]",
+       "synonym": "Amlodipine 5 MG / HCTZ 12.5 MG / Olmesartan medoxomil 40 MG Oral Tablet [Tribenzor]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1000005",
+       "name": "amlodipine 5 MG / hydrochlorothiazide 25 MG / olmesartan medoxomil 40 MG Oral Tablet [Tribenzor]",
+       "synonym": "Amlodipine 5 MG / HCTZ 25 MG / Olmesartan medoxomil 40 MG Oral Tablet [Tribenzor]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1600722",
+       "name": "amlodipine 10 MG / perindopril arginine 14 MG Oral Tablet [Prestalia]",
+       "synonym": "Prestalia 14 MG / 10 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1600726",
+       "name": "amlodipine 2.5 MG / perindopril arginine 3.5 MG Oral Tablet [Prestalia]",
+       "synonym": "Prestalia 3.5 MG / 2.5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1600730",
+       "name": "amlodipine 5 MG / perindopril arginine 7 MG Oral Tablet [Prestalia]",
+       "synonym": "Prestalia 7 MG / 5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2049593",
+       "name": "amlodipine 2.5 MG / celecoxib 200 MG Oral Tablet [Consensi]",
+       "synonym": "Consensi 2.5 MG / 200 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "212542",
+       "name": "amlodipine 2.5 MG Oral Tablet [Norvasc]",
+       "synonym": "Norvasc 2.5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "212549",
+       "name": "amlodipine 5 MG Oral Tablet [Norvasc]",
+       "synonym": "Norvasc 5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "212575",
+       "name": "amlodipine 10 MG Oral Tablet [Norvasc]",
+       "synonym": "Norvasc 10 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2184126",
+       "name": "amlodipine 1 MG/ML Oral Suspension [Katerzia]",
+       "synonym": "Katerzia 1 MG/ML Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2266816",
+       "name": "amlodipine 10 MG / celecoxib 200 MG Oral Tablet [Consensi]",
+       "synonym": "Consensi 10 MG / 200 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2266818",
+       "name": "amlodipine 5 MG / celecoxib 200 MG Oral Tablet [Consensi]",
+       "synonym": "Consensi 5 MG / 200 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2599179",
+       "name": "amlodipine 1 MG/ML Oral Solution [Norliqva]",
+       "synonym": "Norliqva 1 MG (as amlodipine besylate 1.385 MG) per 1 ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2726064",
+       "name": "amlodipine 2.5 MG Powder for Oral Solution [Sdamlo]",
+       "synonym": "Sdamlo 2.5 MG Powder for Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2726067",
+       "name": "amlodipine 5 MG Powder for Oral Solution [Sdamlo]",
+       "synonym": "Sdamlo 5 MG Powder for Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2726070",
+       "name": "amlodipine 10 MG Powder for Oral Solution [Sdamlo]",
+       "synonym": "Sdamlo 10 MG Powder for Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2727458",
+       "name": "amlodipine 1.25 MG / indapamide 0.625 MG / telmisartan 10 MG Oral Tablet [Widaplik]",
+       "synonym": "Widaplik 10 MG / 1.25 MG / 0.625 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2727462",
+       "name": "amlodipine 2.5 MG / indapamide 1.25 MG / telmisartan 20 MG Oral Tablet [Widaplik]",
+       "synonym": "Widaplik 20 MG / 2.5 MG / 1.25 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2727465",
+       "name": "amlodipine 5 MG / indapamide 2.5 MG / telmisartan 40 MG Oral Tablet [Widaplik]",
+       "synonym": "Widaplik 40 MG / 5 MG / 2.5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2748476",
+       "name": "amlodipine 1.25 MG Chewable Tablet [Amodip]",
+       "synonym": "Amodip (as amlodipine besylate) 1.25 MG Chewable Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "724879",
+       "name": "amlodipine 10 MG / valsartan 160 MG Oral Tablet [Exforge]",
+       "synonym": "Exforge 10/160 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "724887",
+       "name": "amlodipine 10 MG / valsartan 320 MG Oral Tablet [Exforge]",
+       "synonym": "Exforge 10/320 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "724891",
+       "name": "amlodipine 5 MG / valsartan 160 MG Oral Tablet [Exforge]",
+       "synonym": "Exforge 5/160 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "724895",
+       "name": "amlodipine 5 MG / valsartan 320 MG Oral Tablet [Exforge]",
+       "synonym": "Exforge 5/320 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "744624",
+       "name": "amlodipine 10 MG / olmesartan medoxomil 20 MG Oral Tablet [Azor]",
+       "synonym": "Azor 10/20 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "744628",
+       "name": "amlodipine 10 MG / olmesartan medoxomil 40 MG Oral Tablet [Azor]",
+       "synonym": "Azor 10/40 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "744632",
+       "name": "amlodipine 5 MG / olmesartan medoxomil 20 MG Oral Tablet [Azor]",
+       "synonym": "Azor 5/20 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "744636",
+       "name": "amlodipine 5 MG / olmesartan medoxomil 40 MG Oral Tablet [Azor]",
+       "synonym": "Azor 5/40 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "750199",
+       "name": "amlodipine 10 MG / atorvastatin 10 MG Oral Tablet [Caduet]",
+       "synonym": "Caduet 10/10 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "750203",
+       "name": "amlodipine 10 MG / atorvastatin 20 MG Oral Tablet [Caduet]",
+       "synonym": "Caduet 10/20 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "750207",
+       "name": "amlodipine 10 MG / atorvastatin 40 MG Oral Tablet [Caduet]",
+       "synonym": "Caduet 10/40 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "750211",
+       "name": "amlodipine 10 MG / atorvastatin 80 MG Oral Tablet [Caduet]",
+       "synonym": "Caduet 10/80 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "750227",
+       "name": "amlodipine 5 MG / atorvastatin 10 MG Oral Tablet [Caduet]",
+       "synonym": "Caduet 5/10 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "750231",
+       "name": "amlodipine 5 MG / atorvastatin 20 MG Oral Tablet [Caduet]",
+       "synonym": "Caduet 5/20 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "750235",
+       "name": "amlodipine 5 MG / atorvastatin 40 MG Oral Tablet [Caduet]",
+       "synonym": "Caduet 5/40 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "750239",
+       "name": "amlodipine 5 MG / atorvastatin 80 MG Oral Tablet [Caduet]",
+       "synonym": "Caduet 5/80 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848134",
+       "name": "amlodipine 10 MG / hydrochlorothiazide 12.5 MG / valsartan 160 MG Oral Tablet [Exforge HCT]",
+       "synonym": "Exforge HCT 10/160/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848139",
+       "name": "amlodipine 10 MG / hydrochlorothiazide 25 MG / valsartan 320 MG Oral Tablet [Exforge HCT]",
+       "synonym": "Exforge HCT 10/320/25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848144",
+       "name": "amlodipine 5 MG / hydrochlorothiazide 12.5 MG / valsartan 160 MG Oral Tablet [Exforge HCT]",
+       "synonym": "Exforge HCT 5/160/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848149",
+       "name": "amlodipine 5 MG / hydrochlorothiazide 25 MG / valsartan 160 MG Oral Tablet [Exforge HCT]",
+       "synonym": "Exforge HCT 5/160/25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848155",
+       "name": "amlodipine 10 MG / hydrochlorothiazide 25 MG / valsartan 160 MG Oral Tablet [Exforge HCT]",
+       "synonym": "Exforge HCT 10/160/25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "876518",
+       "name": "amlodipine 10 MG / telmisartan 40 MG Oral Tablet [Twynsta]",
+       "synonym": "Twynsta 40/10 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "876523",
+       "name": "amlodipine 10 MG / telmisartan 80 MG Oral Tablet [Twynsta]",
+       "synonym": "Twynsta 80/10 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "876528",
+       "name": "amlodipine 5 MG / telmisartan 40 MG Oral Tablet [Twynsta]",
+       "synonym": "Twynsta 40/5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "876533",
+       "name": "amlodipine 5 MG / telmisartan 80 MG Oral Tablet [Twynsta]",
+       "synonym": "Twynsta 80/5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "898344",
+       "name": "amlodipine 10 MG / benazepril hydrochloride 20 MG Oral Capsule [Lotrel]",
+       "synonym": "Lotrel 10/20 Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "898348",
+       "name": "amlodipine 10 MG / benazepril hydrochloride 40 MG Oral Capsule [Lotrel]",
+       "synonym": "Lotrel 10/40 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "898355",
+       "name": "amlodipine 5 MG / benazepril hydrochloride 10 MG Oral Capsule [Lotrel]",
+       "synonym": "Lotrel 5/10 Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "898358",
+       "name": "amlodipine 5 MG / benazepril hydrochloride 20 MG Oral Capsule [Lotrel]",
+       "synonym": "Lotrel 5/20 Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "999971",
+       "name": "amlodipine 5 MG / hydrochlorothiazide 12.5 MG / olmesartan medoxomil 20 MG Oral Tablet [Tribenzor]",
+       "synonym": "Amlodipine 5 MG / HCTZ 12.5 MG / Olmesartan medoxomil 20 MG Oral Tablet [Tribenzor]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "999990",
+       "name": "amlodipine 10 MG / hydrochlorothiazide 12.5 MG / olmesartan medoxomil 40 MG Oral Tablet [Tribenzor]",
+       "synonym": "Amlodipine 10 MG / HCTZ 12.5 MG / Olmesartan medoxomil 40 MG Oral Tablet [Tribenzor]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "999995",
+       "name": "amlodipine 10 MG / hydrochlorothiazide 25 MG / olmesartan medoxomil 40 MG Oral Tablet [Tribenzor]",
+       "synonym": "Amlodipine 10 MG / HCTZ 25 MG / Olmesartan medoxomil 40 MG Oral Tablet [Tribenzor]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "1000001",
+       "name": "amlodipine 5 MG / hydrochlorothiazide 25 MG / olmesartan medoxomil 40 MG Oral Tablet",
+       "synonym": "Amlodipine 5 MG / HCTZ 25 MG / Olmesartan medoxomil 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1050798",
+       "name": "aliskiren 150 MG / amlodipine 5 MG / hydrochlorothiazide 12.5 MG Oral Tablet",
+       "synonym": "aliskiren 150 MG / amlodipine 5 MG / HCTZ 12.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1050803",
+       "name": "aliskiren 300 MG / amlodipine 10 MG / hydrochlorothiazide 12.5 MG Oral Tablet",
+       "synonym": "aliskiren 300 MG / amlodipine 10 MG / HCTZ 12.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1050806",
+       "name": "aliskiren 300 MG / amlodipine 10 MG / hydrochlorothiazide 25 MG Oral Tablet",
+       "synonym": "aliskiren 300 MG / amlodipine 10 MG / HCTZ 25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1050809",
+       "name": "aliskiren 300 MG / amlodipine 5 MG / hydrochlorothiazide 12.5 MG Oral Tablet",
+       "synonym": "aliskiren 300 MG / amlodipine 5 MG / HCTZ 12.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1050812",
+       "name": "aliskiren 300 MG / amlodipine 5 MG / hydrochlorothiazide 25 MG Oral Tablet",
+       "synonym": "aliskiren 300 MG / amlodipine 5 MG / HCTZ 25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1600716",
+       "name": "amlodipine 10 MG / perindopril arginine 14 MG Oral Tablet",
+       "synonym": "amlodipine 10 MG (as amlodipine besylate 13.87 MG) / perindopril arginine 14 MG (perindopril 9.51 MG) Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1600724",
+       "name": "amlodipine 2.5 MG / perindopril arginine 3.5 MG Oral Tablet",
+       "synonym": "amlodipine 2.5 MG (as amlodipine besylate 3.47 MG) / perindopril arginine 3.5 MG (perindopril 2.38 MG) Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1600728",
+       "name": "amlodipine 5 MG / perindopril arginine 7 MG Oral Tablet",
+       "synonym": "amlodipine 5 MG (as amlodipine besylate 6.94 MG) / perindopril arginine 7 MG (perindopril 4.76 MG) Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197361",
+       "name": "amlodipine 5 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2047715",
+       "name": "amlodipine 2.5 MG / celecoxib 200 MG Oral Tablet",
+       "synonym": "amlodipine 2.5 MG (as amlodipine besylate 3.47 MG) / celecoxib 200 mg Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2047716",
+       "name": "amlodipine 5 MG / celecoxib 200 MG Oral Tablet",
+       "synonym": "amlodipine 5 MG (as amlodipine besylate 6.93 MG) / celecoxib 200 mg Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2047717",
+       "name": "amlodipine 10 MG / celecoxib 200 MG Oral Tablet",
+       "synonym": "amlodipine 10 MG (as amlodipine besylate 13.87 MG) / celecoxib 200 mg Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2184120",
+       "name": "amlodipine 1 MG/ML Oral Suspension",
+       "synonym": "amlodipine 1 MG/ML (as amlodipine benzoate 1.3 MG/ML) Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2599173",
+       "name": "amlodipine 1 MG/ML Oral Solution",
+       "synonym": "amlodipine 1 MG (as amlodipine besylate 1.385 MG) per ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2726058",
+       "name": "amlodipine 2.5 MG Powder for Oral Solution",
+       "synonym": "amlodipine 2.5 MG (as amlodipine besylate 3.47 MG) Powder for Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2726065",
+       "name": "amlodipine 5 MG Powder for Oral Solution",
+       "synonym": "amlodipine 5 MG (as amlodipine besylate 6.94 MG) Powder for Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2726068",
+       "name": "amlodipine 10 MG Powder for Oral Solution",
+       "synonym": "amlodipine 10 MG (as amlodipine besylate 13.88 MG) Powder for Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2727452",
+       "name": "amlodipine 1.25 MG / indapamide 0.625 MG / telmisartan 10 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 1.25 MG / indapamide 0.625 MG / telmisartan 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2727460",
+       "name": "amlodipine 2.5 MG / indapamide 1.25 MG / telmisartan 20 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 2.5 MG / indapamide 1.25 MG / telmisartan 20 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2727463",
+       "name": "amlodipine 5 MG / indapamide 2.5 MG / telmisartan 40 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 5 MG / indapamide 2.5 MG / telmisartan 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2748469",
+       "name": "amlodipine 1.25 MG Chewable Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 1.25 MG Chewable Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "308135",
+       "name": "amlodipine 10 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "308136",
+       "name": "amlodipine 2.5 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 2.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "404011",
+       "name": "amlodipine 5 MG / atorvastatin 80 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 5 MG / atorvastatin (as atorvastatin calcium) 80 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "404013",
+       "name": "amlodipine 10 MG / atorvastatin 80 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 10 MG / atorvastatin (as atorvastatin calcium) 80 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "597967",
+       "name": "amlodipine 10 MG / atorvastatin 20 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 10 MG / atorvastatin (as atorvastatin calcium) 20 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "597971",
+       "name": "amlodipine 2.5 MG / atorvastatin 10 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 2.5 MG / atorvastatin (as atorvastatin calcium) 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "597974",
+       "name": "amlodipine 2.5 MG / atorvastatin 20 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 2.5 MG / atorvastatin (as atorvastatin calcium) 20 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "597977",
+       "name": "amlodipine 5 MG / atorvastatin 10 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 5 MG / atorvastatin (as atorvastatin calcium) 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "597980",
+       "name": "amlodipine 5 MG / atorvastatin 20 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 5 MG / atorvastatin (as atorvastatin calcium) 20 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "597984",
+       "name": "amlodipine 5 MG / atorvastatin 40 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 5 MG / atorvastatin (as atorvastatin calcium) 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "597987",
+       "name": "amlodipine 10 MG / atorvastatin 10 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 10 MG / atorvastatin (as atorvastatin calcium) 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "597990",
+       "name": "amlodipine 10 MG / atorvastatin 40 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 10 MG / atorvastatin (as atorvastatin calcium) 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "597993",
+       "name": "amlodipine 2.5 MG / atorvastatin 40 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 2.5 MG / atorvastatin (as atorvastatin calcium) 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "722126",
+       "name": "amlodipine 10 MG / valsartan 160 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 10 MG / valsartan 160 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "722131",
+       "name": "amlodipine 10 MG / valsartan 320 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 10 MG / valsartan 320 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "722134",
+       "name": "amlodipine 5 MG / valsartan 160 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 5 MG / valsartan 160 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "722137",
+       "name": "amlodipine 5 MG / valsartan 320 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 5 MG / valsartan 320 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "730861",
+       "name": "amlodipine 10 MG / olmesartan medoxomil 20 MG Oral Tablet",
+       "synonym": "amlodipine 10 MG (as amlodipine besylate 13.9 MG) / olmesartan medoxomil 20 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "730866",
+       "name": "amlodipine 10 MG / olmesartan medoxomil 40 MG Oral Tablet",
+       "synonym": "amlodipine 10 MG (as amlodipine besylate 13.9 MG) / olmesartan medoxomil 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "730869",
+       "name": "amlodipine 5 MG / olmesartan medoxomil 20 MG Oral Tablet",
+       "synonym": "amlodipine 5 MG (as amlodipine besylate 6.9 MG) / olmesartan medoxomil 20 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "730872",
+       "name": "amlodipine 5 MG / olmesartan medoxomil 40 MG Oral Tablet",
+       "synonym": "amlodipine 5 MG (as amlodipine besylate 6.9 MG) / olmesartan medoxomil 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "757674",
+       "name": "amlodipine 10 MG Disintegrating Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 10 MG Disintegrating Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "757675",
+       "name": "amlodipine 2.5 MG Disintegrating Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 2.5 MG Disintegrating Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "757676",
+       "name": "amlodipine 5 MG Disintegrating Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 5 MG Disintegrating Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848131",
+       "name": "amlodipine 10 MG / hydrochlorothiazide 12.5 MG / valsartan 160 MG Oral Tablet",
+       "synonym": "amlodipine 10 MG / HCTZ 12.5 MG / valsartan 160 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848135",
+       "name": "amlodipine 10 MG / hydrochlorothiazide 25 MG / valsartan 320 MG Oral Tablet",
+       "synonym": "amlodipine 10 MG / HCTZ 25 MG / valsartan 320 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848140",
+       "name": "amlodipine 5 MG / hydrochlorothiazide 12.5 MG / valsartan 160 MG Oral Tablet",
+       "synonym": "amlodipine 5 MG / HCTZ 12.5 MG / valsartan 160 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848145",
+       "name": "amlodipine 5 MG / hydrochlorothiazide 25 MG / valsartan 160 MG Oral Tablet",
+       "synonym": "amlodipine 5 MG / HCTZ 25 MG / valsartan 160 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848151",
+       "name": "amlodipine 10 MG / hydrochlorothiazide 25 MG / valsartan 160 MG Oral Tablet",
+       "synonym": "amlodipine 10 MG / HCTZ 25 MG / valsartan 160 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "876514",
+       "name": "amlodipine 10 MG / telmisartan 40 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 10 MG / telmisartan 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "876519",
+       "name": "amlodipine 10 MG / telmisartan 80 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 10 MG / telmisartan 80 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "876524",
+       "name": "amlodipine 5 MG / telmisartan 40 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 5 MG / telmisartan 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "876529",
+       "name": "amlodipine 5 MG / telmisartan 80 MG Oral Tablet",
+       "synonym": "amlodipine (as amlodipine besylate) 5 MG / telmisartan 80 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "898342",
+       "name": "amlodipine 10 MG / benazepril hydrochloride 20 MG Oral Capsule",
+       "synonym": "Amlodipine 10 MG / BZP hydrochloride 20 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "898346",
+       "name": "amlodipine 10 MG / benazepril hydrochloride 40 MG Oral Capsule",
+       "synonym": "Amlodipine 10 MG / BZP hydrochloride 40 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "898350",
+       "name": "amlodipine 2.5 MG / benazepril hydrochloride 10 MG Oral Capsule",
+       "synonym": "Amlodipine 2.5 MG / BZP hydrochloride 10 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "898353",
+       "name": "amlodipine 5 MG / benazepril hydrochloride 10 MG Oral Capsule",
+       "synonym": "Amlodipine 5 MG / BZP hydrochloride 10 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "898356",
+       "name": "amlodipine 5 MG / benazepril hydrochloride 20 MG Oral Capsule",
+       "synonym": "Amlodipine 5 MG / BZP hydrochloride 20 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "898359",
+       "name": "amlodipine 5 MG / benazepril hydrochloride 40 MG Oral Capsule",
+       "synonym": "Amlodipine 5 MG / BZP hydrochloride 40 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "999967",
+       "name": "amlodipine 5 MG / hydrochlorothiazide 12.5 MG / olmesartan medoxomil 20 MG Oral Tablet",
+       "synonym": "Amlodipine 5 MG / HCTZ 12.5 MG / Olmesartan medoxomil 20 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "999986",
+       "name": "amlodipine 10 MG / hydrochlorothiazide 12.5 MG / olmesartan medoxomil 40 MG Oral Tablet",
+       "synonym": "Amlodipine 10 MG / HCTZ 12.5 MG / Olmesartan medoxomil 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "999991",
+       "name": "amlodipine 10 MG / hydrochlorothiazide 25 MG / olmesartan medoxomil 40 MG Oral Tablet",
+       "synonym": "Amlodipine 10 MG / HCTZ 25 MG / Olmesartan medoxomil 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "999996",
+       "name": "amlodipine 5 MG / hydrochlorothiazide 12.5 MG / olmesartan medoxomil 40 MG Oral Tablet",
+       "synonym": "Amlodipine 5 MG / HCTZ 12.5 MG / Olmesartan medoxomil 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

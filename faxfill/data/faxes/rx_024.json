@@ -1,0 +1,151 @@
+{
+ "id": "rx_024",
+ "image": "rx_024.png",
+ "synthetic": true,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": -0.35,
+  "blur": 0.5,
+  "noise": 10,
+  "fax_mode": "fine",
+  "level": "light"
+ },
+ "is_clean": false,
+ "trap": "invalid_dea",
+ "fields": {
+  "patient_name": "Marcus Bell",
+  "patient_dob": "1958-03-14",
+  "patient_address": "431 Claremont Ave, Apt 7A, New York, NY 10026",
+  "drug_name": "oxycodone",
+  "strength": "5 mg",
+  "strength_value": 5,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth three times daily for 5 days",
+  "quantity": 15,
+  "quantity_text": "#15 (fifteen) tablets",
+  "days_supply_stated": 5,
+  "refills": 0,
+  "prescriber_name": "Thomas Keller, MD",
+  "prescriber_npi": "1880862937",
+  "prescriber_dea": "BK8549991",
+  "date_written": "2026-10-05",
+  "substitution": "permitted",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   66,
+   21,
+   1447,
+   50
+  ],
+  "clinic": [
+   126,
+   115,
+   802,
+   152
+  ],
+  "prescriber_name": [
+   125,
+   178,
+   469,
+   213
+  ],
+  "prescriber_npi": [
+   210,
+   322,
+   420,
+   350
+  ],
+  "prescriber_dea": [
+   720,
+   325,
+   917,
+   353
+  ],
+  "patient_name": [
+   364,
+   433,
+   562,
+   461
+  ],
+  "patient_dob": [
+   1184,
+   438,
+   1374,
+   466
+  ],
+  "patient_address": [
+   363,
+   509,
+   999,
+   540
+  ],
+  "date_written": [
+   363,
+   581,
+   553,
+   609
+  ],
+  "drug_name": [
+   362,
+   701,
+   568,
+   737
+  ],
+  "strength": [
+   596,
+   702,
+   685,
+   738
+  ],
+  "dosage_form": [
+   713,
+   703,
+   815,
+   731
+  ],
+  "directions": [
+   361,
+   831,
+   1217,
+   871
+  ],
+  "quantity": [
+   361,
+   921,
+   688,
+   958
+  ],
+  "refills": [
+   360,
+   1011,
+   382,
+   1038
+  ],
+  "substitution": [
+   120,
+   1102,
+   150,
+   1132
+  ]
+ },
+ "expected_flags": [
+  {
+   "field": "prescriber_dea",
+   "code": "dea_checksum",
+   "why": "DEA number fails its check digit on a Schedule II prescription."
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": [],
+ "meta": {
+  "rxcui": "1049621",
+  "fax_from": "(212) 555-0107",
+  "sent": "2026-10-05 14:25",
+  "patient_id": "PT001",
+  "prescriber_id": "P103",
+  "prescriber_in_directory": true
+ }
+}

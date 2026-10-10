@@ -1,0 +1,82 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22trazodone%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:43-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 188
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "80425-0302",
+    "generic_name": "Trazodone Hydrochloride",
+    "labeler_name": "Advanced Rx Pharmacy of Tennessee, LLC",
+    "brand_name": "Trazodone Hydrochloride",
+    "active_ingredients": [
+     {
+      "name": "TRAZODONE HYDROCHLORIDE",
+      "strength": "150 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "80425-0302-1",
+      "description": "30 TABLET in 1 BOTTLE (80425-0302-1)",
+      "marketing_start_date": "20230410",
+      "sample": false
+     },
+     {
+      "package_ndc": "80425-0302-2",
+      "description": "60 TABLET in 1 BOTTLE (80425-0302-2)",
+      "marketing_start_date": "20230410",
+      "sample": false
+     },
+     {
+      "package_ndc": "80425-0302-3",
+      "description": "90 TABLET in 1 BOTTLE (80425-0302-3)",
+      "marketing_start_date": "20230410",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20261231",
+    "openfda": {
+     "manufacturer_name": [
+      "Advanced Rx Pharmacy of Tennessee, LLC"
+     ],
+     "rxcui": [
+      "856364"
+     ],
+     "spl_set_id": [
+      "f8fc1f03-cd9d-9fa9-e053-6294a90a8665"
+     ],
+     "unii": [
+      "6E8ZO8LRNM"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "TABLET",
+    "spl_id": "2a9bfe6a-6d68-b262-e063-6294a90a1cf3",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20230410",
+    "product_id": "80425-0302_2a9bfe6a-6d68-b262-e063-6294a90a1cf3",
+    "application_number": "ANDA204852",
+    "brand_name_base": "Trazodone Hydrochloride",
+    "pharm_class": [
+     "Serotonin Reuptake Inhibitor [EPC]"
+    ]
+   }
+  ]
+ }
+}

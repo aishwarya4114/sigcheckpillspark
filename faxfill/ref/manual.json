@@ -1,0 +1,615 @@
+{
+ "_meta": {
+  "source": "manual, unverified",
+  "note": "Hand-entered fields kept from the first version of drugs.json: preferred form, display unit, max daily dose, look-alike/sound-alike partners, allergy classes, frequency rules. The strengths below are the ORIGINAL manual strengths, used only to report differences from RxNorm."
+ },
+ "drugs": [
+  {
+   "name": "amlodipine",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    2.5,
+    5,
+    10
+   ],
+   "max_daily": 10,
+   "lasa": [
+    "amiloride"
+   ],
+   "classes": []
+  },
+  {
+   "name": "amiloride",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    5
+   ],
+   "max_daily": 20,
+   "lasa": [
+    "amlodipine"
+   ],
+   "classes": []
+  },
+  {
+   "name": "atorvastatin",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    10,
+    20,
+    40,
+    80
+   ],
+   "max_daily": 80,
+   "lasa": [],
+   "classes": []
+  },
+  {
+   "name": "lisinopril",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    2.5,
+    5,
+    10,
+    20,
+    30,
+    40
+   ],
+   "max_daily": 80,
+   "lasa": [],
+   "classes": []
+  },
+  {
+   "name": "losartan",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    25,
+    50,
+    100
+   ],
+   "max_daily": 100,
+   "lasa": [],
+   "classes": []
+  },
+  {
+   "name": "metoprolol tartrate",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    25,
+    50,
+    100
+   ],
+   "max_daily": 450,
+   "lasa": [],
+   "classes": []
+  },
+  {
+   "name": "hydrochlorothiazide",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    12.5,
+    25,
+    50
+   ],
+   "max_daily": 50,
+   "lasa": [],
+   "classes": []
+  },
+  {
+   "name": "hydralazine",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    10,
+    25,
+    50,
+    100
+   ],
+   "max_daily": 300,
+   "lasa": [
+    "hydroxyzine"
+   ],
+   "classes": []
+  },
+  {
+   "name": "hydroxyzine",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    10,
+    25,
+    50
+   ],
+   "max_daily": 400,
+   "lasa": [
+    "hydralazine"
+   ],
+   "classes": []
+  },
+  {
+   "name": "metformin",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    500,
+    850,
+    1000
+   ],
+   "max_daily": 2550,
+   "lasa": [
+    "metronidazole"
+   ],
+   "classes": []
+  },
+  {
+   "name": "metronidazole",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    250,
+    500
+   ],
+   "max_daily": 4000,
+   "lasa": [
+    "metformin"
+   ],
+   "classes": []
+  },
+  {
+   "name": "glipizide",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    5,
+    10
+   ],
+   "max_daily": 40,
+   "lasa": [
+    "glyburide"
+   ],
+   "classes": []
+  },
+  {
+   "name": "glyburide",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    1.25,
+    2.5,
+    5
+   ],
+   "max_daily": 20,
+   "lasa": [
+    "glipizide"
+   ],
+   "classes": []
+  },
+  {
+   "name": "sitagliptin",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    25,
+    50,
+    100
+   ],
+   "max_daily": 100,
+   "lasa": [
+    "sumatriptan"
+   ],
+   "classes": []
+  },
+  {
+   "name": "sumatriptan",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    25,
+    50,
+    100
+   ],
+   "max_daily": 200,
+   "lasa": [
+    "sitagliptin"
+   ],
+   "classes": []
+  },
+  {
+   "name": "sertraline",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    25,
+    50,
+    100
+   ],
+   "max_daily": 200,
+   "lasa": [],
+   "classes": []
+  },
+  {
+   "name": "citalopram",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    10,
+    20,
+    40
+   ],
+   "max_daily": 40,
+   "lasa": [
+    "celecoxib"
+   ],
+   "classes": [],
+   "lasa_note": "Celexa / Celebrex"
+  },
+  {
+   "name": "celecoxib",
+   "form": "capsule",
+   "unit": "mg",
+   "strengths": [
+    50,
+    100,
+    200,
+    400
+   ],
+   "max_daily": 400,
+   "lasa": [
+    "citalopram"
+   ],
+   "classes": [
+    "nsaid",
+    "sulfonamide"
+   ],
+   "lasa_note": "Celebrex / Celexa"
+  },
+  {
+   "name": "escitalopram",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    5,
+    10,
+    20
+   ],
+   "max_daily": 20,
+   "lasa": [],
+   "classes": []
+  },
+  {
+   "name": "trazodone",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    50,
+    100,
+    150
+   ],
+   "max_daily": 400,
+   "lasa": [
+    "tramadol"
+   ],
+   "classes": []
+  },
+  {
+   "name": "tramadol",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    50
+   ],
+   "max_daily": 400,
+   "lasa": [
+    "trazodone"
+   ],
+   "classes": []
+  },
+  {
+   "name": "clonidine",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    0.1,
+    0.2,
+    0.3
+   ],
+   "max_daily": 2.4,
+   "lasa": [
+    "clonazepam"
+   ],
+   "classes": []
+  },
+  {
+   "name": "clonazepam",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    0.5,
+    1,
+    2
+   ],
+   "max_daily": 20,
+   "lasa": [
+    "clonidine"
+   ],
+   "classes": []
+  },
+  {
+   "name": "alprazolam",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    0.25,
+    0.5,
+    1,
+    2
+   ],
+   "max_daily": 10,
+   "lasa": [],
+   "classes": []
+  },
+  {
+   "name": "lamotrigine",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    25,
+    100,
+    150,
+    200
+   ],
+   "max_daily": 500,
+   "lasa": [
+    "lamivudine"
+   ],
+   "classes": []
+  },
+  {
+   "name": "lamivudine",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    150,
+    300
+   ],
+   "max_daily": 300,
+   "lasa": [
+    "lamotrigine"
+   ],
+   "classes": []
+  },
+  {
+   "name": "risperidone",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    0.5,
+    1,
+    2,
+    3,
+    4
+   ],
+   "max_daily": 16,
+   "lasa": [
+    "ropinirole"
+   ],
+   "classes": []
+  },
+  {
+   "name": "ropinirole",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    0.25,
+    0.5,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "max_daily": 24,
+   "lasa": [
+    "risperidone"
+   ],
+   "classes": []
+  },
+  {
+   "name": "prednisone",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    5,
+    10,
+    20,
+    50
+   ],
+   "max_daily": 80,
+   "lasa": [
+    "prednisolone"
+   ],
+   "classes": []
+  },
+  {
+   "name": "prednisolone",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    5
+   ],
+   "max_daily": 80,
+   "lasa": [
+    "prednisone"
+   ],
+   "classes": []
+  },
+  {
+   "name": "amoxicillin",
+   "form": "capsule",
+   "unit": "mg",
+   "strengths": [
+    250,
+    500
+   ],
+   "max_daily": 3000,
+   "lasa": [],
+   "classes": [
+    "penicillin"
+   ]
+  },
+  {
+   "name": "cephalexin",
+   "form": "capsule",
+   "unit": "mg",
+   "strengths": [
+    250,
+    500
+   ],
+   "max_daily": 4000,
+   "lasa": [],
+   "classes": [
+    "cephalosporin"
+   ]
+  },
+  {
+   "name": "azithromycin",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    250,
+    500
+   ],
+   "max_daily": 500,
+   "lasa": [],
+   "classes": [
+    "macrolide"
+   ]
+  },
+  {
+   "name": "oxycodone",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    5,
+    10,
+    15,
+    30
+   ],
+   "max_daily": 60,
+   "lasa": [],
+   "classes": [
+    "opioid"
+   ]
+  },
+  {
+   "name": "levothyroxine",
+   "form": "tablet",
+   "unit": "mcg",
+   "strengths": [
+    25,
+    50,
+    75,
+    88,
+    100,
+    112,
+    125,
+    150,
+    175,
+    200
+   ],
+   "max_daily": 300,
+   "lasa": [],
+   "classes": []
+  },
+  {
+   "name": "warfarin",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    1,
+    2,
+    2.5,
+    3,
+    4,
+    5,
+    6,
+    7.5,
+    10
+   ],
+   "max_daily": 15,
+   "lasa": [],
+   "classes": []
+  },
+  {
+   "name": "omeprazole",
+   "form": "capsule",
+   "unit": "mg",
+   "strengths": [
+    10,
+    20,
+    40
+   ],
+   "max_daily": 40,
+   "lasa": [],
+   "classes": []
+  },
+  {
+   "name": "montelukast",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    10
+   ],
+   "max_daily": 10,
+   "lasa": [],
+   "classes": []
+  },
+  {
+   "name": "gabapentin",
+   "form": "capsule",
+   "unit": "mg",
+   "strengths": [
+    100,
+    300,
+    400
+   ],
+   "max_daily": 3600,
+   "lasa": [],
+   "classes": []
+  },
+  {
+   "name": "ibuprofen",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    400,
+    600,
+    800
+   ],
+   "max_daily": 3200,
+   "lasa": [],
+   "classes": [
+    "nsaid"
+   ]
+  },
+  {
+   "name": "methotrexate",
+   "form": "tablet",
+   "unit": "mg",
+   "strengths": [
+    2.5
+   ],
+   "max_daily": 25,
+   "lasa": [],
+   "classes": [],
+   "frequency_rule": "weekly",
+   "frequency_note": "max_daily is per WEEK; oral methotrexate for RA/psoriasis is dosed once weekly"
+  }
+ ]
+}

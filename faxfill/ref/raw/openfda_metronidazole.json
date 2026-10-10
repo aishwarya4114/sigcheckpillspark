@@ -1,0 +1,84 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22metronidazole%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:34-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 205
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "72572-540",
+    "generic_name": "Metronidazole",
+    "labeler_name": "Civica, Inc.",
+    "brand_name": "Metronidazole",
+    "active_ingredients": [
+     {
+      "name": "METRONIDAZOLE",
+      "strength": "500 mg/100mL"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "72572-540-24",
+      "description": "24 BAG in 1 CARTON (72572-540-24)  / 100 mL in 1 BAG",
+      "marketing_start_date": "20251113",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {
+     "manufacturer_name": [
+      "Civica, Inc."
+     ],
+     "rxcui": [
+      "311683"
+     ],
+     "spl_set_id": [
+      "902ab25b-d493-495a-884e-96b080e9f72d"
+     ],
+     "is_original_packager": [
+      true
+     ],
+     "nui": [
+      "N0000175435",
+      "M0014907"
+     ],
+     "pharm_class_epc": [
+      "Nitroimidazole Antimicrobial [EPC]"
+     ],
+     "pharm_class_cs": [
+      "Nitroimidazoles [CS]"
+     ],
+     "unii": [
+      "140QMO216E"
+     ]
+    },
+    "marketing_category": "NDA",
+    "dosage_form": "INJECTION, SOLUTION",
+    "spl_id": "0c9f1fec-df03-4487-b189-9a33d8105f0d",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "INTRAVENOUS"
+    ],
+    "marketing_start_date": "19811224",
+    "product_id": "72572-540_0c9f1fec-df03-4487-b189-9a33d8105f0d",
+    "application_number": "NDA018657",
+    "brand_name_base": "Metronidazole",
+    "pharm_class": [
+     "Nitroimidazole Antimicrobial [EPC]",
+     "Nitroimidazoles [CS]"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,80 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22ropinirole%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:52-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 158
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "69452-358",
+    "generic_name": "Ropinirole",
+    "labeler_name": "Bionpharma Inc.",
+    "brand_name": "Ropinirole",
+    "active_ingredients": [
+     {
+      "name": "ROPINIROLE HYDROCHLORIDE",
+      "strength": "1 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "69452-358-20",
+      "description": "100 TABLET, FILM COATED in 1 BOTTLE, PLASTIC (69452-358-20)",
+      "marketing_start_date": "20220915",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {
+     "manufacturer_name": [
+      "Bionpharma Inc."
+     ],
+     "rxcui": [
+      "283858",
+      "312845",
+      "312846",
+      "312847",
+      "312849",
+      "314208",
+      "562704"
+     ],
+     "spl_set_id": [
+      "4e6b070c-50a6-4742-af3c-59b45c45735e"
+     ],
+     "is_original_packager": [
+      true
+     ],
+     "unii": [
+      "D7ZD41RZI9"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "TABLET, FILM COATED",
+    "spl_id": "58af280d-0a15-e09e-e063-6394a90a401a",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20220915",
+    "product_id": "69452-358_58af280d-0a15-e09e-e063-6394a90a401a",
+    "application_number": "ANDA079229",
+    "brand_name_base": "Ropinirole",
+    "pharm_class": [
+     "Dopamine Agonists [MoA]",
+     "Nonergot Dopamine Agonist [EPC]"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,16 @@
+prescriber_id,first_name,last_name,credential,clinic,address,phone,fax,npi,dea
+P100,Elena,Marsh,MD,Morningside Family Practice,"1180 Amsterdam Ave, New York, NY 10027",(212) 555-0100,(212) 555-0101,1530456551,FM2267094
+P101,Victor,Osei,MD,Harlem River Medical Group,"2315 Frederick Douglass Blvd, New York, NY 10027",(212) 555-0102,(212) 555-0103,1845792351,FO4110146
+P102,Priya,Raman,DO,Riverside Internal Medicine,"640 Riverside Dr, New York, NY 10031",(212) 555-0104,(212) 555-0105,1564076267,
+P103,Thomas,Keller,MD,Manhattanville Health Partners,"3260 Broadway, New York, NY 10027",(212) 555-0106,(212) 555-0107,1880862937,BK8549997
+P104,Grace,Whitfield,NP,Hamilton Heights Clinic,"1650 Amsterdam Ave, New York, NY 10031",(212) 555-0108,(212) 555-0109,1683866150,
+P105,Daniel,Okafor,MD,Morningside Family Practice,"1180 Amsterdam Ave, New York, NY 10027",(212) 555-0110,(212) 555-0111,1077842080,BO6286795
+P106,Hannah,Lindqvist,MD,Harlem River Medical Group,"2315 Frederick Douglass Blvd, New York, NY 10027",(212) 555-0112,(212) 555-0113,1483926451,
+P107,Samuel,Ortega,PA,Riverside Internal Medicine,"640 Riverside Dr, New York, NY 10031",(212) 555-0114,(212) 555-0115,1314440086,MO2340038
+P108,Mei,Tanaka,MD,Manhattanville Health Partners,"3260 Broadway, New York, NY 10027",(212) 555-0116,(212) 555-0117,1299818082,
+P109,Robert,Ashby,DO,Hamilton Heights Clinic,"1650 Amsterdam Ave, New York, NY 10031",(212) 555-0118,(212) 555-0119,1236282996,BA0007864
+P110,Fatima,Haddad,MD,Morningside Family Practice,"1180 Amsterdam Ave, New York, NY 10027",(212) 555-0120,(212) 555-0121,1810225023,
+P111,Owen,Brennan,NP,Harlem River Medical Group,"2315 Frederick Douglass Blvd, New York, NY 10027",(212) 555-0122,(212) 555-0123,1969099971,MB9376787
+P112,Lucia,Ferraro,MD,Riverside Internal Medicine,"640 Riverside Dr, New York, NY 10031",(212) 555-0124,(212) 555-0125,1512883764,
+P113,Kwame,Mensah,MD,Manhattanville Health Partners,"3260 Broadway, New York, NY 10027",(212) 555-0126,(212) 555-0127,1390456717,BM3688566
+P114,Nora,Castellanos,DO,Hamilton Heights Clinic,"1650 Amsterdam Ave, New York, NY 10031",(212) 555-0128,(212) 555-0129,1502750387,

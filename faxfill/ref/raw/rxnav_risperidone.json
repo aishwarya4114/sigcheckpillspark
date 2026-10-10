@@ -1,0 +1,487 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=risperidone",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:50-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "104781",
+       "name": "risperidone 1 MG Oral Tablet [Risperdal]",
+       "synonym": "Risperdal 1 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "104782",
+       "name": "risperidone 2 MG Oral Tablet [Risperdal]",
+       "synonym": "Risperdal 2 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "104783",
+       "name": "risperidone 3 MG Oral Tablet [Risperdal]",
+       "synonym": "Risperdal 3 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "104784",
+       "name": "risperidone 4 MG Oral Tablet [Risperdal]",
+       "synonym": "Risperdal 4 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2055672",
+       "name": "0.8 ML risperidone 150 MG/ML Prefilled Syringe [Perseris]",
+       "synonym": "0.8 ML Perseris 150 MG/ML Prefilled Syringe",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2055676",
+       "name": "0.6 ML risperidone 150 MG/ML Prefilled Syringe [Perseris]",
+       "synonym": "0.6 ML Perseris 150 MG/ML Prefilled Syringe",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "211489",
+       "name": "risperidone 1 MG/ML Oral Solution [Risperdal]",
+       "synonym": "Risperdal 1 MG/ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "262077",
+       "name": "risperidone 0.25 MG Oral Tablet [Risperdal]",
+       "synonym": "Risperdal 0.25 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "262222",
+       "name": "risperidone 0.5 MG Oral Tablet [Risperdal]",
+       "synonym": "Risperdal 0.5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2636039",
+       "name": "0.28 ML risperidone 357 MG/ML Prefilled Syringe [Uzedy]",
+       "synonym": "0.28 ML Uzedy 357 MG/ML Prefilled Syringe",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2636042",
+       "name": "0.35 ML risperidone 357 MG/ML Prefilled Syringe [Uzedy]",
+       "synonym": "0.35 ML Uzedy 357 MG/ML Prefilled Syringe",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2636044",
+       "name": "0.42 ML risperidone 357 MG/ML Prefilled Syringe [Uzedy]",
+       "synonym": "0.42 ML Uzedy 357 MG/ML Prefilled Syringe",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2636046",
+       "name": "0.56 ML risperidone 357 MG/ML Prefilled Syringe [Uzedy]",
+       "synonym": "0.56 ML Uzedy 357 MG/ML Prefilled Syringe",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2636048",
+       "name": "0.7 ML risperidone 357 MG/ML Prefilled Syringe [Uzedy]",
+       "synonym": "0.7 ML Uzedy 357 MG/ML Prefilled Syringe",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2636050",
+       "name": "0.14 ML risperidone 357 MG/ML Prefilled Syringe [Uzedy]",
+       "synonym": "0.14 ML Uzedy 357 MG/ML Prefilled Syringe",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2636052",
+       "name": "0.21 ML risperidone 357 MG/ML Prefilled Syringe [Uzedy]",
+       "synonym": "0.21 ML Uzedy 357 MG/ML Prefilled Syringe",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2639732",
+       "name": "risperidone 12.5 MG Injection [Rykindo]",
+       "synonym": "Rykindo 12.5 MG Injection",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2639734",
+       "name": "risperidone 25 MG Injection [Rykindo]",
+       "synonym": "Rykindo 25 MG Injection",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2639736",
+       "name": "risperidone 37.5 MG Injection [Rykindo]",
+       "synonym": "Rykindo 37.5 MG Injection",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2639738",
+       "name": "risperidone 50 MG Injection [Rykindo]",
+       "synonym": "Rykindo 50 MG Injection",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "706825",
+       "name": "risperidone 12.5 MG Injection [Risperdal]",
+       "synonym": "Risperdal 12.5 MG Injection",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "706827",
+       "name": "risperidone 37.5 MG Injection [Risperdal]",
+       "synonym": "Risperdal 37.5 MG Injection",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "706829",
+       "name": "risperidone 50 MG Injection [Risperdal]",
+       "synonym": "Risperdal 50 MG Injection",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "706831",
+       "name": "risperidone 25 MG Injection [Risperdal]",
+       "synonym": "Risperdal 25 MG Injection",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "153791",
+       "name": "risperidone 6 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "199387",
+       "name": "risperidone 1 MG/ML Oral Solution",
+       "synonym": "risperidone 1 MG per 1 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2055667",
+       "name": "0.8 ML risperidone 150 MG/ML Prefilled Syringe",
+       "synonym": "risperidone 120 MG per 0.8 ML Prefilled Syringe",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2055675",
+       "name": "0.6 ML risperidone 150 MG/ML Prefilled Syringe",
+       "synonym": "risperidone 90 MG per 0.6 ML Prefilled Syringe",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2636033",
+       "name": "0.28 ML risperidone 357 MG/ML Prefilled Syringe",
+       "synonym": "risperidone 100 MG per 0.28 ML Prefilled Syringe",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2636041",
+       "name": "0.35 ML risperidone 357 MG/ML Prefilled Syringe",
+       "synonym": "risperidone 125 MG per 0.35 ML Prefilled Syringe",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2636043",
+       "name": "0.42 ML risperidone 357 MG/ML Prefilled Syringe",
+       "synonym": "risperidone 150 MG per 0.42 ML Prefilled Syringe",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2636045",
+       "name": "0.56 ML risperidone 357 MG/ML Prefilled Syringe",
+       "synonym": "risperidone 200 MG per 0.56 ML Prefilled Syringe",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2636047",
+       "name": "0.7 ML risperidone 357 MG/ML Prefilled Syringe",
+       "synonym": "risperidone 250 MG per 0.7 ML Prefilled Syringe",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2636049",
+       "name": "0.14 ML risperidone 357 MG/ML Prefilled Syringe",
+       "synonym": "risperidone 50 MG per 0.14 ML Prefilled Syringe",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2636051",
+       "name": "0.21 ML risperidone 357 MG/ML Prefilled Syringe",
+       "synonym": "risperidone 75 MG per 0.21 ML Prefilled Syringe",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "312828",
+       "name": "risperidone 0.25 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "312829",
+       "name": "risperidone 0.5 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "312830",
+       "name": "risperidone 1 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "312831",
+       "name": "risperidone 2 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "312832",
+       "name": "risperidone 3 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "314211",
+       "name": "risperidone 4 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "401953",
+       "name": "risperidone 1 MG Disintegrating Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "401954",
+       "name": "risperidone 2 MG Disintegrating Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "402010",
+       "name": "risperidone 25 MG Injection",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "402011",
+       "name": "risperidone 37.5 MG Injection",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "402012",
+       "name": "risperidone 50 MG Injection",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "403825",
+       "name": "risperidone 0.5 MG Disintegrating Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "616698",
+       "name": "risperidone 3 MG Disintegrating Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "616705",
+       "name": "risperidone 4 MG Disintegrating Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "645037",
+       "name": "risperidone 0.25 MG Disintegrating Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "706822",
+       "name": "risperidone 12.5 MG Injection",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

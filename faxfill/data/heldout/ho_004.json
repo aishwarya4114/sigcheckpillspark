@@ -1,0 +1,299 @@
+{
+ "id": "ho_004",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "ho_004_p1.png"
+ ],
+ "pages_declared": 2,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": -0.47,
+  "blur": 0.5,
+  "noise": 10,
+  "fax_mode": "fine",
+  "level": "light"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": -0.47,
+   "blur": 0.5,
+   "noise": 10,
+   "fax_mode": "fine",
+   "level": "light"
+  }
+ ],
+ "is_clean": false,
+ "trap": "missing_page",
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "ho_004_p1.png",
+   "fields": {
+    "patient_name": "Sofia Alvarez",
+    "patient_dob": "1972-11-02",
+    "patient_address": "648 W 121st St, Apt 6A, New York, NY 10027",
+    "drug_name": "atorvastatin",
+    "strength": "20 mg",
+    "strength_value": 20,
+    "strength_unit": "mg",
+    "dosage_form": "tablet",
+    "directions": "1 tab PO QHS x 30 days",
+    "quantity": 30,
+    "quantity_text": "#30 (thirty) tablets",
+    "days_supply_stated": 30,
+    "refills": 5,
+    "prescriber_name": "Grace Whitfield, NP",
+    "prescriber_npi": "1683866150",
+    "prescriber_dea": null,
+    "date_written": "2026-10-09",
+    "substitution": "permitted",
+    "notes": "Patient counseled."
+   },
+   "field_boxes": {
+    "fax_header": [
+     69,
+     20,
+     1434,
+     51
+    ],
+    "clinic": [
+     128,
+     112,
+     646,
+     159
+    ],
+    "prescriber_name": [
+     127,
+     176,
+     483,
+     212
+    ],
+    "prescriber_npi": [
+     211,
+     321,
+     421,
+     349
+    ],
+    "patient_name": [
+     365,
+     432,
+     588,
+     461
+    ],
+    "patient_dob": [
+     1185,
+     439,
+     1375,
+     467
+    ],
+    "patient_address": [
+     365,
+     508,
+     950,
+     540
+    ],
+    "date_written": [
+     364,
+     580,
+     554,
+     609
+    ],
+    "drug_name": [
+     363,
+     700,
+     585,
+     729
+    ],
+    "strength": [
+     613,
+     702,
+     723,
+     738
+    ],
+    "dosage_form": [
+     751,
+     703,
+     853,
+     731
+    ],
+    "directions": [
+     362,
+     830,
+     780,
+     868
+    ],
+    "quantity": [
+     361,
+     920,
+     667,
+     957
+    ],
+    "refills": [
+     361,
+     1010,
+     382,
+     1037
+    ],
+    "substitution": [
+     120,
+     1100,
+     150,
+     1130
+    ],
+    "notes": [
+     259,
+     1199,
+     496,
+     1222
+    ]
+   },
+   "meta": {
+    "rxcui": "617310",
+    "fax_from": "(212) 555-0109",
+    "sent": "2026-10-09 12:27",
+    "patient_id": "PT002",
+    "prescriber_id": "P104",
+    "prescriber_in_directory": true
+   }
+  }
+ ],
+ "image": "ho_004_p1.png",
+ "fields": {
+  "patient_name": "Sofia Alvarez",
+  "patient_dob": "1972-11-02",
+  "patient_address": "648 W 121st St, Apt 6A, New York, NY 10027",
+  "drug_name": "atorvastatin",
+  "strength": "20 mg",
+  "strength_value": 20,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "1 tab PO QHS x 30 days",
+  "quantity": 30,
+  "quantity_text": "#30 (thirty) tablets",
+  "days_supply_stated": 30,
+  "refills": 5,
+  "prescriber_name": "Grace Whitfield, NP",
+  "prescriber_npi": "1683866150",
+  "prescriber_dea": null,
+  "date_written": "2026-10-09",
+  "substitution": "permitted",
+  "notes": "Patient counseled."
+ },
+ "field_boxes": {
+  "fax_header": [
+   69,
+   20,
+   1434,
+   51
+  ],
+  "clinic": [
+   128,
+   112,
+   646,
+   159
+  ],
+  "prescriber_name": [
+   127,
+   176,
+   483,
+   212
+  ],
+  "prescriber_npi": [
+   211,
+   321,
+   421,
+   349
+  ],
+  "patient_name": [
+   365,
+   432,
+   588,
+   461
+  ],
+  "patient_dob": [
+   1185,
+   439,
+   1375,
+   467
+  ],
+  "patient_address": [
+   365,
+   508,
+   950,
+   540
+  ],
+  "date_written": [
+   364,
+   580,
+   554,
+   609
+  ],
+  "drug_name": [
+   363,
+   700,
+   585,
+   729
+  ],
+  "strength": [
+   613,
+   702,
+   723,
+   738
+  ],
+  "dosage_form": [
+   751,
+   703,
+   853,
+   731
+  ],
+  "directions": [
+   362,
+   830,
+   780,
+   868
+  ],
+  "quantity": [
+   361,
+   920,
+   667,
+   957
+  ],
+  "refills": [
+   361,
+   1010,
+   382,
+   1037
+  ],
+  "substitution": [
+   120,
+   1100,
+   150,
+   1130
+  ],
+  "notes": [
+   259,
+   1199,
+   496,
+   1222
+  ]
+ },
+ "meta": {
+  "rxcui": "617310",
+  "fax_from": "(212) 555-0109",
+  "sent": "2026-10-09 12:27",
+  "patient_id": "PT002",
+  "prescriber_id": "P104",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [
+  {
+   "field": "_order",
+   "code": "page_count_mismatch",
+   "why": "Header says PAGE 1/2 but only page 1 arrived.",
+   "page": 1
+  }
+ ],
+ "expected_order_status": "blocked",
+ "expect_abstain": []
+}

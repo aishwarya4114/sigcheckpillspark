@@ -1,0 +1,145 @@
+{
+ "id": "rx_001",
+ "image": "rx_001.png",
+ "synthetic": true,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": -0.58,
+  "blur": 0.5,
+  "noise": 10,
+  "fax_mode": "fine",
+  "level": "light"
+ },
+ "is_clean": true,
+ "trap": null,
+ "fields": {
+  "patient_name": "Marcus Bell",
+  "patient_dob": "1958-03-14",
+  "patient_address": "431 Claremont Ave, Apt 7A, New York, NY 10026",
+  "drug_name": "atorvastatin",
+  "strength": "40 mg",
+  "strength_value": 40,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth at bedtime for 30 days",
+  "quantity": 30,
+  "quantity_text": "#30 (thirty) tablets",
+  "days_supply_stated": 30,
+  "refills": 1,
+  "prescriber_name": "Elena Marsh, MD",
+  "prescriber_npi": "1530456551",
+  "prescriber_dea": "FM2267094",
+  "date_written": "2026-10-05",
+  "substitution": "permitted",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   71,
+   18,
+   1451,
+   52
+  ],
+  "clinic": [
+   130,
+   112,
+   758,
+   160
+  ],
+  "prescriber_name": [
+   129,
+   175,
+   434,
+   211
+  ],
+  "prescriber_npi": [
+   213,
+   320,
+   423,
+   349
+  ],
+  "prescriber_dea": [
+   723,
+   325,
+   925,
+   354
+  ],
+  "patient_name": [
+   366,
+   431,
+   565,
+   460
+  ],
+  "patient_dob": [
+   1186,
+   439,
+   1377,
+   468
+  ],
+  "patient_address": [
+   366,
+   507,
+   1001,
+   540
+  ],
+  "date_written": [
+   365,
+   579,
+   555,
+   608
+  ],
+  "drug_name": [
+   364,
+   699,
+   586,
+   728
+  ],
+  "strength": [
+   614,
+   702,
+   724,
+   738
+  ],
+  "dosage_form": [
+   752,
+   703,
+   854,
+   731
+  ],
+  "directions": [
+   362,
+   829,
+   1140,
+   872
+  ],
+  "quantity": [
+   361,
+   919,
+   668,
+   957
+  ],
+  "refills": [
+   361,
+   1009,
+   382,
+   1036
+  ],
+  "substitution": [
+   120,
+   1099,
+   150,
+   1129
+  ]
+ },
+ "expected_flags": [],
+ "expected_order_status": "ready_for_review",
+ "expect_abstain": [],
+ "meta": {
+  "rxcui": "617311",
+  "fax_from": "(212) 555-0101",
+  "sent": "2026-10-05 16:53",
+  "patient_id": "PT001",
+  "prescriber_id": "P100",
+  "prescriber_in_directory": true
+ }
+}

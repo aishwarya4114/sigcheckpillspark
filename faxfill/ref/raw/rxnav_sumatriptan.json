@@ -1,0 +1,280 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=sumatriptan",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:38-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "1738581",
+       "name": "0.5 ML sumatriptan 6 MG/ML Auto-Injector [Zembrace]",
+       "synonym": "Zembrace 3 MG per 0.5 ML Auto-Injector",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1739337",
+       "name": "sumatriptan 11 MG Nasal Powder [Onzetra]",
+       "synonym": "Onzetra 11 MG Nasal Powder",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "208450",
+       "name": "sumatriptan 25 MG Oral Tablet [Imitrex]",
+       "synonym": "Imitrex 25 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "208452",
+       "name": "0.5 ML sumatriptan 12 MG/ML Injection [Imitrex]",
+       "synonym": "0.5 ML Imitrex 12 MG/ML Injection",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "209169",
+       "name": "sumatriptan 50 MG Oral Tablet [Imitrex]",
+       "synonym": "Imitrex 50 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2178073",
+       "name": "sumatriptan 10 MG/ACTUAT Nasal Spray [Tosymra]",
+       "synonym": "Tosymra 10 MG/ACTUAT Nasal Spray",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "284460",
+       "name": "sumatriptan 100 MG Oral Tablet [Imitrex]",
+       "synonym": "Imitrex 100 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "582328",
+       "name": "sumatriptan 20 MG/ACTUAT Nasal Spray [Imitrex]",
+       "synonym": "Imitrex 20 MG/0.1 ML Nasal Spray",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "582330",
+       "name": "sumatriptan 5 MG/ACTUAT Nasal Spray [Imitrex]",
+       "synonym": "Imitrex 5 MG/0.1 ML Nasal Spray",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "758523",
+       "name": "0.5 ML sumatriptan 8 MG/ML Cartridge [Imitrex]",
+       "synonym": "0.5 ML Imitrex 8 MG/ML Cartridge",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "849452",
+       "name": "naproxen sodium 500 MG / sumatriptan 85 MG Oral Tablet [Treximet]",
+       "synonym": "Treximet 85/500 (sumitriptan / naproxen sodium) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "860088",
+       "name": "0.5 ML sumatriptan 12 MG/ML Cartridge [Imitrex]",
+       "synonym": "0.5 ML Imitrex 12 MG/ML Cartridge",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "1657010",
+       "name": "0.5 ML sumatriptan 8 MG/ML Injection",
+       "synonym": "sumatriptan 4 MG per 0.5 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1657151",
+       "name": "0.5 ML sumatriptan 12 MG/ML Auto-Injector",
+       "synonym": "sumatriptan (as sumatriptan succinate) 6 MG per 0.5 ML Auto-Injector",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1657160",
+       "name": "0.5 ML sumatriptan 12 MG/ML Cartridge",
+       "synonym": "sumatriptan 6 MG per 0.5 ML Cartridge",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1657173",
+       "name": "0.5 ML sumatriptan 8 MG/ML Cartridge",
+       "synonym": "sumatriptan 4 MG per 0.5 ML Cartridge",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1738576",
+       "name": "0.5 ML sumatriptan 6 MG/ML Auto-Injector",
+       "synonym": "sumatriptan 3 MG per 0.5 ML Auto-Injector",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1739332",
+       "name": "sumatriptan 11 MG Nasal Powder",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1793916",
+       "name": "0.5 ML sumatriptan 8 MG/ML Auto-Injector",
+       "synonym": "sumatriptan 4 MG per 0.5 ML Auto-Injector",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "313159",
+       "name": "sumatriptan 5 MG/ACTUAT Nasal Spray",
+       "synonym": "sumatriptan 5 MG/0.1 ML Nasal Spray",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "313160",
+       "name": "sumatriptan 100 MG Oral Tablet",
+       "synonym": "sumatriptan 100 MG (as sumatriptan succinate 140 MG) Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "313161",
+       "name": "sumatriptan 50 MG Oral Tablet",
+       "synonym": "sumatriptan 50 MG (as sumatriptan succinate 70 MG) Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "313165",
+       "name": "0.5 ML sumatriptan 12 MG/ML Injection",
+       "synonym": "sumatriptan 6 MG per 0.5 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "314227",
+       "name": "sumatriptan 20 MG/ACTUAT Nasal Spray",
+       "synonym": "sumatriptan 20 MG/0.1 ML Nasal Spray",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "315223",
+       "name": "sumatriptan 25 MG Oral Tablet",
+       "synonym": "sumatriptan 25 MG (as sumatriptan succinate 35 MG) Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "401978",
+       "name": "sumatriptan 10 MG/ACTUAT Nasal Spray",
+       "synonym": "sumatriptan 10 MG/Spray Nasal Spray",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "727339",
+       "name": "0.5 ML sumatriptan 12 MG/ML Prefilled Syringe",
+       "synonym": "sumatriptan 6 MG per 0.5 ML Prefilled Syringe",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "849450",
+       "name": "naproxen sodium 500 MG / sumatriptan 85 MG Oral Tablet",
+       "synonym": "naproxen sodium 500 MG / sumatriptan (as sumatriptan succinate) 85 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

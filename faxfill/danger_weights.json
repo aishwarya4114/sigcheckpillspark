@@ -1,0 +1,32 @@
+{
+ "_about": "Queue ranking. The queue sorts by danger score (highest first), never by arrival time. Weights are chosen so each tier outranks everything below it combined: blocked > allergy conflict > controlled-substance issue > high-alert drug > look-alike risk > other flags.",
+ "weights": {
+  "blocked": {
+   "points": 10000,
+   "why": "Prompt injection or a missing page: nobody may act on this fax until a person has handled it."
+  },
+  "allergy_conflict": {
+   "points": 1000,
+   "why": "A documented allergy to the drug's class can cause immediate patient harm if filled."
+  },
+  "controlled_substance_issue": {
+   "points": 300,
+   "codes": ["DEA_INVALID", "DEA_MISSING", "C2_REFILLS", "C3_5_REFILLS_OVER_LIMIT"],
+   "why": "Invalid or missing DEA registration, or refills the law does not allow (21 CFR 1306.12 / 1306.22): legal risk and possible diversion or forgery."
+  },
+  "high_alert_drug": {
+   "points": 120,
+   "why": "Drug is in an ISMP community high-alert category (faxfill/ref/high_alert.json, manual source); errors with these drugs are more likely to cause serious harm. Applied only when the order has at least one flag."
+  },
+  "lookalike_risk": {
+   "points": 40,
+   "codes": ["LOOKALIKE_RISK"],
+   "why": "The name may actually be its look-alike/sound-alike partner."
+  },
+  "other_flag": {
+   "points_each": 5,
+   "cap": 39,
+   "why": "Every other flagged field adds a little, capped so many minor flags never outrank one look-alike risk."
+  }
+ }
+}

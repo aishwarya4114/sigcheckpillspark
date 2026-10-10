@@ -1,0 +1,118 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22hydrochlorothiazide%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:30-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 963
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "33342-076",
+    "generic_name": "Valsartan and Hydrochlorothiazide",
+    "labeler_name": "Macleods Pharmaceuticals Limited",
+    "brand_name": "Valsartan and Hydrochlorothiazide",
+    "active_ingredients": [
+     {
+      "name": "VALSARTAN",
+      "strength": "160 mg/1"
+     },
+     {
+      "name": "HYDROCHLOROTHIAZIDE",
+      "strength": "25 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "33342-076-10",
+      "description": "90 TABLET in 1 BOTTLE (33342-076-10)",
+      "marketing_start_date": "20130419",
+      "sample": false
+     },
+     {
+      "package_ndc": "33342-076-15",
+      "description": "500 TABLET in 1 BOTTLE (33342-076-15)",
+      "marketing_start_date": "20130419",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20261231",
+    "openfda": {
+     "manufacturer_name": [
+      "Macleods Pharmaceuticals Limited"
+     ],
+     "rxcui": [
+      "200284",
+      "200285",
+      "349353",
+      "636042",
+      "636045"
+     ],
+     "spl_set_id": [
+      "771afba6-8769-4ea8-afec-358dba0aaefe"
+     ],
+     "is_original_packager": [
+      true
+     ],
+     "upc": [
+      "0333342075109",
+      "0333342074102",
+      "0333342076106",
+      "0333342077103"
+     ],
+     "nui": [
+      "N0000175359",
+      "N0000175419",
+      "M0471776",
+      "N0000000070",
+      "N0000175561"
+     ],
+     "pharm_class_pe": [
+      "Increased Diuresis [PE]"
+     ],
+     "pharm_class_epc": [
+      "Thiazide Diuretic [EPC]",
+      "Angiotensin 2 Receptor Blocker [EPC]"
+     ],
+     "pharm_class_cs": [
+      "Thiazides [CS]"
+     ],
+     "pharm_class_moa": [
+      "Angiotensin 2 Receptor Antagonists [MoA]"
+     ],
+     "unii": [
+      "0J48LPH2TH",
+      "80M03YXJ7I"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "TABLET",
+    "spl_id": "a1b947a6-e356-4442-9df7-9e82b299a852",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20130419",
+    "product_id": "33342-076_a1b947a6-e356-4442-9df7-9e82b299a852",
+    "application_number": "ANDA203145",
+    "brand_name_base": "Valsartan and Hydrochlorothiazide",
+    "pharm_class": [
+     "Angiotensin 2 Receptor Antagonists [MoA]",
+     "Angiotensin 2 Receptor Blocker [EPC]",
+     "Increased Diuresis [PE]",
+     "Thiazide Diuretic [EPC]",
+     "Thiazides [CS]"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,280 @@
+{
+ "id": "ho_016",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "ho_016_p1.png"
+ ],
+ "pages_declared": 1,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": -1.54,
+  "blur": 1.25,
+  "noise": 32,
+  "fax_mode": "standard",
+  "level": "heavy"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": -1.54,
+   "blur": 1.25,
+   "noise": 32,
+   "fax_mode": "standard",
+   "level": "heavy"
+  }
+ ],
+ "is_clean": true,
+ "trap": null,
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "ho_016_p1.png",
+   "fields": {
+    "patient_name": "Liam O'Connell",
+    "patient_dob": "1946-09-08",
+    "patient_address": "328 W 141st St, Apt 1D, New York, NY 10026",
+    "drug_name": "citalopram",
+    "strength": "40 mg",
+    "strength_value": 40,
+    "strength_unit": "mg",
+    "dosage_form": "tablet",
+    "directions": "1 tab PO daily",
+    "quantity": 30,
+    "quantity_text": "#30 (thirty) tablets",
+    "days_supply_stated": null,
+    "refills": 3,
+    "prescriber_name": "Grace Whitfield, NP",
+    "prescriber_npi": "1683866150",
+    "prescriber_dea": null,
+    "date_written": "2026-10-05",
+    "substitution": "permitted",
+    "notes": null
+   },
+   "field_boxes": {
+    "fax_header": [
+     89,
+     5,
+     1454,
+     62
+    ],
+    "clinic": [
+     145,
+     99,
+     664,
+     156
+    ],
+    "prescriber_name": [
+     144,
+     163,
+     500,
+     205
+    ],
+    "prescriber_npi": [
+     225,
+     309,
+     436,
+     342
+    ],
+    "patient_name": [
+     377,
+     423,
+     635,
+     457
+    ],
+    "patient_dob": [
+     1197,
+     445,
+     1388,
+     477
+    ],
+    "patient_address": [
+     375,
+     499,
+     963,
+     542
+    ],
+    "date_written": [
+     373,
+     571,
+     564,
+     603
+    ],
+    "drug_name": [
+     370,
+     691,
+     570,
+     731
+    ],
+    "strength": [
+     597,
+     697,
+     708,
+     735
+    ],
+    "dosage_form": [
+     735,
+     701,
+     838,
+     731
+    ],
+    "directions": [
+     366,
+     821,
+     606,
+     862
+    ],
+    "quantity": [
+     364,
+     911,
+     671,
+     954
+    ],
+    "refills": [
+     362,
+     1001,
+     383,
+     1028
+    ],
+    "substitution": [
+     119,
+     1086,
+     150,
+     1117
+    ]
+   },
+   "meta": {
+    "rxcui": "309314",
+    "fax_from": "(212) 555-0109",
+    "sent": "2026-10-05 12:23",
+    "patient_id": "PT005",
+    "prescriber_id": "P104",
+    "prescriber_in_directory": true
+   }
+  }
+ ],
+ "image": "ho_016_p1.png",
+ "fields": {
+  "patient_name": "Liam O'Connell",
+  "patient_dob": "1946-09-08",
+  "patient_address": "328 W 141st St, Apt 1D, New York, NY 10026",
+  "drug_name": "citalopram",
+  "strength": "40 mg",
+  "strength_value": 40,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "1 tab PO daily",
+  "quantity": 30,
+  "quantity_text": "#30 (thirty) tablets",
+  "days_supply_stated": null,
+  "refills": 3,
+  "prescriber_name": "Grace Whitfield, NP",
+  "prescriber_npi": "1683866150",
+  "prescriber_dea": null,
+  "date_written": "2026-10-05",
+  "substitution": "permitted",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   89,
+   5,
+   1454,
+   62
+  ],
+  "clinic": [
+   145,
+   99,
+   664,
+   156
+  ],
+  "prescriber_name": [
+   144,
+   163,
+   500,
+   205
+  ],
+  "prescriber_npi": [
+   225,
+   309,
+   436,
+   342
+  ],
+  "patient_name": [
+   377,
+   423,
+   635,
+   457
+  ],
+  "patient_dob": [
+   1197,
+   445,
+   1388,
+   477
+  ],
+  "patient_address": [
+   375,
+   499,
+   963,
+   542
+  ],
+  "date_written": [
+   373,
+   571,
+   564,
+   603
+  ],
+  "drug_name": [
+   370,
+   691,
+   570,
+   731
+  ],
+  "strength": [
+   597,
+   697,
+   708,
+   735
+  ],
+  "dosage_form": [
+   735,
+   701,
+   838,
+   731
+  ],
+  "directions": [
+   366,
+   821,
+   606,
+   862
+  ],
+  "quantity": [
+   364,
+   911,
+   671,
+   954
+  ],
+  "refills": [
+   362,
+   1001,
+   383,
+   1028
+  ],
+  "substitution": [
+   119,
+   1086,
+   150,
+   1117
+  ]
+ },
+ "meta": {
+  "rxcui": "309314",
+  "fax_from": "(212) 555-0109",
+  "sent": "2026-10-05 12:23",
+  "patient_id": "PT005",
+  "prescriber_id": "P104",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [],
+ "expected_order_status": "ready_for_review",
+ "expect_abstain": []
+}

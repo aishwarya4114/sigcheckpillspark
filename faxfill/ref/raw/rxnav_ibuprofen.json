@@ -1,0 +1,739 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=ibuprofen",
+ "status": 200,
+ "fetched": "2026-10-10T13:34:04-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "1100070",
+       "name": "famotidine 26.6 MG / ibuprofen 800 MG Oral Tablet [Duexis]",
+       "synonym": "Duexis (famotidine 26.6 MG / ibuprofen 800 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1101919",
+       "name": "ibuprofen 200 MG Oral Tablet [Counteract IB]",
+       "synonym": "Counteract IB 200 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1300267",
+       "name": "ibuprofen 200 MG Oral Tablet [Proprinal]",
+       "synonym": "Proprinal 200 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "153008",
+       "name": "ibuprofen 200 MG Oral Tablet [Advil]",
+       "synonym": "Advil 200 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "201126",
+       "name": "ibuprofen 200 MG Oral Tablet [Motrin]",
+       "synonym": "Motrin 200 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "206878",
+       "name": "ibuprofen 20 MG/ML Oral Suspension [Advil]",
+       "synonym": "Advil 20 MG/ML Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "206886",
+       "name": "ibuprofen 200 MG Oral Tablet [Genpril]",
+       "synonym": "Genpril 200 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "206905",
+       "name": "ibuprofen 400 MG Oral Tablet [Ibu]",
+       "synonym": "Ibu 400 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "206913",
+       "name": "ibuprofen 600 MG Oral Tablet [Ibu]",
+       "synonym": "Ibu 600 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "206917",
+       "name": "ibuprofen 800 MG Oral Tablet [Ibu]",
+       "synonym": "Ibu 800 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2178275",
+       "name": "200 ML ibuprofen 4 MG/ML Injection [Caldolor]",
+       "synonym": "200 ML Caldolor 4 MG/ML Injection",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2673691",
+       "name": "ibuprofen 200 MG Oral Capsule [Proprinal]",
+       "synonym": "Proprinal 200 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2673880",
+       "name": "100 ML acetaminophen 10 MG/ML / ibuprofen 3 MG/ML Injection [Combogesic]",
+       "synonym": "100 ML APAP 10 MG/ML / ibuprofen 3 MG/ML Injection [Combogesic]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2675765",
+       "name": "acetaminophen 325 MG / ibuprofen 97.5 MG Oral Tablet [Combogesic]",
+       "synonym": "Combogesic 325 MG / 97.5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "541713",
+       "name": "ibuprofen 800 MG Oral Tablet [Samson 8]",
+       "synonym": "Samson 8 800 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "544393",
+       "name": "ibuprofen 20 MG/ML Oral Suspension [Motrin]",
+       "synonym": "Motrin 20 MG/ML Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "606990",
+       "name": "ibuprofen 200 MG Oral Capsule [Motrin]",
+       "synonym": "Motrin 200 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "637197",
+       "name": "2 ML ibuprofen 10 MG/ML Injection [Neoprofen]",
+       "synonym": "2 ML Neoprofen 10 MG/ML Injection",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "643102",
+       "name": "ibuprofen 200 MG Oral Tablet [Wal-Profen]",
+       "synonym": "Wal-Profen 200 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "644386",
+       "name": "ibuprofen 200 MG Oral Capsule [Wal-Profen]",
+       "synonym": "Wal-Profen 200 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "731531",
+       "name": "ibuprofen 40 MG/ML Oral Suspension [Advil]",
+       "synonym": "Advil 40 MG/ML Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "731533",
+       "name": "ibuprofen 200 MG Oral Capsule [Advil]",
+       "synonym": "Advil 200 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "731535",
+       "name": "ibuprofen 100 MG Oral Tablet [Advil]",
+       "synonym": "Advil 100 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "731536",
+       "name": "ibuprofen 100 MG Chewable Tablet [Advil]",
+       "synonym": "Advil 100 MG Chewable Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "792242",
+       "name": "ibuprofen 100 MG Chewable Tablet [Motrin]",
+       "synonym": "Motrin 100 MG Chewable Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "850424",
+       "name": "ibuprofen 200 MG Oral Tablet [Ibuprohm]",
+       "synonym": "Ibuprohm 200 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "854187",
+       "name": "8 ML ibuprofen 100 MG/ML Injection [Caldolor]",
+       "synonym": "8 ML Caldolor 100 MG/ML Injection",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "854762",
+       "name": "ibuprofen 40 MG/ML Oral Suspension [Motrin]",
+       "synonym": "Motrin 40 MG/ML Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "858772",
+       "name": "hydrocodone bitartrate 2.5 MG / ibuprofen 200 MG Oral Tablet [Reprexain]",
+       "synonym": "Reprexain 2.5/200 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "858838",
+       "name": "hydrocodone bitartrate 7.5 MG / ibuprofen 200 MG Oral Tablet [Vicoprofen]",
+       "synonym": "Vicoprofen (hydrocodone bitartrate 7.5 MG / ibuprofen 200 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "859317",
+       "name": "hydrocodone bitartrate 10 MG / ibuprofen 200 MG Oral Tablet [Ibudone]",
+       "synonym": "Ibudone 10/200 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "895666",
+       "name": "diphenhydramine citrate 38 MG / ibuprofen 200 MG Oral Tablet [Motrin PM]",
+       "synonym": "Motrin PM (diphenhydramine citrate 38 MG / ibuprofen 200 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "900434",
+       "name": "ibuprofen 200 MG Oral Tablet [Addaprin]",
+       "synonym": "Addaprin 200 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "1049589",
+       "name": "ibuprofen 400 MG / oxycodone hydrochloride 5 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1100066",
+       "name": "famotidine 26.6 MG / ibuprofen 800 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1297390",
+       "name": "chlorpheniramine maleate 2 MG / ibuprofen 200 MG / pseudoephedrine hydrochloride 30 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1299018",
+       "name": "ibuprofen 200 MG / pseudoephedrine hydrochloride 30 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1299021",
+       "name": "ibuprofen 200 MG / pseudoephedrine hydrochloride 30 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1310487",
+       "name": "ibuprofen 20 MG/ML / pseudoephedrine hydrochloride 3 MG/ML Oral Suspension",
+       "synonym": "ibuprofen 100 MG / pseudoephedrine hydrochloride 15 MG per 5 ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1310503",
+       "name": "chlorpheniramine maleate 4 MG / ibuprofen 200 MG / phenylephrine hydrochloride 10 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1369775",
+       "name": "ibuprofen 200 MG / phenylephrine hydrochloride 10 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "141997",
+       "name": "ibuprofen 0.05 MG/MG Topical Gel",
+       "synonym": "ibuprofen 5 % Topical Gel",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "141998",
+       "name": "ibuprofen 50 MG/ML Topical Cream",
+       "synonym": "ibuprofen 5 % Topical Cream",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "142102",
+       "name": "ibuprofen 50 MG/ML Topical Spray",
+       "synonym": "ibuprofen 5 % Topical Spray",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1747294",
+       "name": "2 ML ibuprofen 10 MG/ML Injection",
+       "synonym": "ibuprofen 10 MG/ML (as ibuprofen lysine 17.1 MG/ML) per 2 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197803",
+       "name": "ibuprofen 20 MG/ML Oral Suspension",
+       "synonym": "ibuprofen 100 MG per 5 ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197804",
+       "name": "ibuprofen 300 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197805",
+       "name": "ibuprofen 400 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197806",
+       "name": "ibuprofen 600 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197807",
+       "name": "ibuprofen 800 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "198405",
+       "name": "ibuprofen 100 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "204442",
+       "name": "ibuprofen 40 MG/ML Oral Suspension",
+       "synonym": "ibuprofen 50 MG per 1.25 ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2178273",
+       "name": "200 ML ibuprofen 4 MG/ML Injection",
+       "synonym": "ibuprofen 800 MG per 200 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "226617",
+       "name": "ibuprofen 50 MG/ML Topical Foam",
+       "synonym": "ibuprofen 5 % Topical Foam",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "227159",
+       "name": "ibuprofen 200 MG Extended Release Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2387532",
+       "name": "acetaminophen 250 MG / ibuprofen 125 MG Oral Tablet",
+       "synonym": "APAP 250 MG / ibuprofen 125 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "245417",
+       "name": "ibuprofen 400 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "250085",
+       "name": "acetaminophen 25 MG/ML / ibuprofen 20 MG/ML Oral Suspension",
+       "synonym": "APAP 25 MG/ML / Ibuprofen 20 MG/ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "250418",
+       "name": "ibuprofen 800 MG Extended Release Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2673874",
+       "name": "100 ML acetaminophen 10 MG/ML / ibuprofen 3 MG/ML Injection",
+       "synonym": "100 ML APAP 10 MG/ML / ibuprofen 3 MG/ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2675760",
+       "name": "acetaminophen 325 MG / ibuprofen 97.5 MG Oral Tablet",
+       "synonym": "APAP 325 MG / ibuprofen 97.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310963",
+       "name": "ibuprofen 100 MG Chewable Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310964",
+       "name": "ibuprofen 200 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310965",
+       "name": "ibuprofen 200 MG Oral Tablet",
+       "synonym": "ibuprofen 200 MG (as ibuprofen sodium 256 MG) Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "314047",
+       "name": "ibuprofen 50 MG Chewable Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "380813",
+       "name": "ibuprofen 300 MG Extended Release Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "389244",
+       "name": "ibuprofen 0.1 MG/MG Topical Gel",
+       "synonym": "ibuprofen 10 % Topical Gel",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "392668",
+       "name": "ibuprofen 0.05 MG/MG / levomenthol 0.03 MG/MG Topical Gel",
+       "synonym": "ibuprofen 5 % / levomenthol 3 % Topical Gel",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "401976",
+       "name": "ibuprofen 300 MG / pseudoephedrine 45 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "854183",
+       "name": "8 ML ibuprofen 100 MG/ML Injection",
+       "synonym": "ibuprofen 800 MG per 8 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "858770",
+       "name": "hydrocodone bitartrate 2.5 MG / ibuprofen 200 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "858778",
+       "name": "hydrocodone bitartrate 5 MG / ibuprofen 200 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "858798",
+       "name": "hydrocodone bitartrate 7.5 MG / ibuprofen 200 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "859315",
+       "name": "hydrocodone bitartrate 10 MG / ibuprofen 200 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "895664",
+       "name": "diphenhydramine citrate 38 MG / ibuprofen 200 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "901814",
+       "name": "diphenhydramine hydrochloride 25 MG / ibuprofen 200 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "997164",
+       "name": "codeine phosphate 12.5 MG / ibuprofen 200 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "997165",
+       "name": "codeine phosphate 12.8 MG / ibuprofen 200 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "997280",
+       "name": "codeine phosphate 20 MG / ibuprofen 300 MG Extended Release Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

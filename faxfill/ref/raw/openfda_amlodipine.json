@@ -1,0 +1,80 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22amlodipine%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:24-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 606
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "42291-026",
+    "generic_name": "Amlodipine Besylate",
+    "labeler_name": "AvKARE",
+    "brand_name": "Amlodipine Besylate",
+    "active_ingredients": [
+     {
+      "name": "AMLODIPINE BESYLATE",
+      "strength": "5 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "42291-026-10",
+      "description": "1000 TABLET in 1 BOTTLE (42291-026-10)",
+      "marketing_start_date": "20230622",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {
+     "manufacturer_name": [
+      "AvKARE"
+     ],
+     "rxcui": [
+      "197361",
+      "308135",
+      "308136"
+     ],
+     "spl_set_id": [
+      "feb9438a-9cbc-4855-e053-6394a90af15e"
+     ],
+     "upc": [
+      "0342291025103",
+      "0342291026100"
+     ],
+     "unii": [
+      "864V2Q084H"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "TABLET",
+    "spl_id": "48481e73-92af-d506-e063-6394a90a6518",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20230622",
+    "product_id": "42291-026_48481e73-92af-d506-e063-6394a90a6518",
+    "application_number": "ANDA076846",
+    "brand_name_base": "Amlodipine Besylate",
+    "pharm_class": [
+     "Calcium Channel Antagonists [MoA]",
+     "Calcium Channel Blocker [EPC]",
+     "Cytochrome P450 3A Inhibitors [MoA]",
+     "Dihydropyridine Calcium Channel Blocker [EPC]",
+     "Dihydropyridines [CS]"
+    ]
+   }
+  ]
+ }
+}

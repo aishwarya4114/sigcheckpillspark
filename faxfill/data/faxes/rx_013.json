@@ -1,0 +1,151 @@
+{
+ "id": "rx_013",
+ "image": "rx_013.png",
+ "synthetic": true,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": -0.24,
+  "blur": 0.9,
+  "noise": 22,
+  "fax_mode": "standard",
+  "level": "medium"
+ },
+ "is_clean": false,
+ "trap": "unknown_prescriber",
+ "fields": {
+  "patient_name": "Hazel Quinn",
+  "patient_dob": "2001-07-26",
+  "patient_address": "205 W 141st St, Apt 4C, New York, NY 10026",
+  "drug_name": "escitalopram",
+  "strength": "10 mg",
+  "strength_value": 10,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth once daily for 30 days",
+  "quantity": 30,
+  "quantity_text": "#30 (thirty) tablets",
+  "days_supply_stated": 30,
+  "refills": 1,
+  "prescriber_name": "Ava Sterling, NP",
+  "prescriber_npi": "1736993563",
+  "prescriber_dea": null,
+  "date_written": "2026-10-06",
+  "substitution": "permitted",
+  "notes": "New start."
+ },
+ "field_boxes": {
+  "fax_header": [
+   64,
+   23,
+   1444,
+   48
+  ],
+  "clinic": [
+   124,
+   115,
+   744,
+   161
+  ],
+  "prescriber_name": [
+   124,
+   179,
+   420,
+   215
+  ],
+  "prescriber_npi": [
+   208,
+   323,
+   418,
+   351
+  ],
+  "patient_name": [
+   363,
+   434,
+   571,
+   464
+  ],
+  "patient_dob": [
+   1183,
+   437,
+   1373,
+   465
+  ],
+  "patient_address": [
+   362,
+   510,
+   949,
+   539
+  ],
+  "date_written": [
+   362,
+   582,
+   552,
+   610
+  ],
+  "drug_name": [
+   362,
+   702,
+   601,
+   738
+  ],
+  "strength": [
+   629,
+   703,
+   739,
+   739
+  ],
+  "dosage_form": [
+   767,
+   704,
+   869,
+   731
+  ],
+  "directions": [
+   361,
+   832,
+   1130,
+   870
+  ],
+  "quantity": [
+   361,
+   922,
+   667,
+   958
+  ],
+  "refills": [
+   360,
+   1012,
+   381,
+   1039
+  ],
+  "substitution": [
+   120,
+   1103,
+   150,
+   1133
+  ],
+  "notes": [
+   259,
+   1202,
+   391,
+   1223
+  ]
+ },
+ "expected_flags": [
+  {
+   "field": "prescriber_name",
+   "code": "prescriber_not_in_directory",
+   "why": "Ava Sterling, NP is not in the prescriber directory."
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": [],
+ "meta": {
+  "rxcui": "349332",
+  "fax_from": "(212) 555-0173",
+  "sent": "2026-10-06 12:49",
+  "patient_id": "PT008",
+  "prescriber_id": "P171",
+  "prescriber_in_directory": false
+ }
+}

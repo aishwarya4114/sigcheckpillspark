@@ -1,0 +1,89 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22clonidine%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:46-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 193
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "51655-445",
+    "generic_name": "Clonidine hydrochloride",
+    "labeler_name": "Northwind Health Company, LLC",
+    "brand_name": "Clonidine hydrochloride",
+    "active_ingredients": [
+     {
+      "name": "CLONIDINE HYDROCHLORIDE",
+      "strength": ".1 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "51655-445-18",
+      "description": "180 TABLET in 1 BOTTLE, PLASTIC (51655-445-18)",
+      "marketing_start_date": "20220323",
+      "sample": false
+     },
+     {
+      "package_ndc": "51655-445-25",
+      "description": "60 TABLET in 1 BOTTLE, PLASTIC (51655-445-25)",
+      "marketing_start_date": "20220826",
+      "sample": false
+     },
+     {
+      "package_ndc": "51655-445-26",
+      "description": "90 TABLET in 1 BOTTLE, PLASTIC (51655-445-26)",
+      "marketing_start_date": "20240305",
+      "sample": false
+     },
+     {
+      "package_ndc": "51655-445-52",
+      "description": "30 TABLET in 1 BOTTLE, PLASTIC (51655-445-52)",
+      "marketing_start_date": "20201001",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {
+     "manufacturer_name": [
+      "Northwind Health Company, LLC"
+     ],
+     "rxcui": [
+      "884173"
+     ],
+     "spl_set_id": [
+      "df603f27-d341-3957-e053-2995a90a825f"
+     ],
+     "unii": [
+      "W76I6XXF06"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "TABLET",
+    "spl_id": "490edb25-d3c2-8b45-e063-6394a90a9bc2",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20201001",
+    "product_id": "51655-445_490edb25-d3c2-8b45-e063-6394a90a9bc2",
+    "application_number": "ANDA070925",
+    "brand_name_base": "Clonidine hydrochloride",
+    "pharm_class": [
+     "Adrenergic alpha2-Agonists [MoA]",
+     "Central alpha-2 Adrenergic Agonist [EPC]"
+    ]
+   }
+  ]
+ }
+}

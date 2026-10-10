@@ -1,0 +1,48 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22atorvastatin%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:26-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 518
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "65015-282",
+    "generic_name": "ATORVASTATIN CALCIUM",
+    "labeler_name": "MYLAN LABORATORIES LIMITED",
+    "active_ingredients": [
+     {
+      "name": "ATORVASTATIN CALCIUM TRIHYDRATE",
+      "strength": "1 kg/kg"
+     }
+    ],
+    "finished": false,
+    "packaging": [
+     {
+      "package_ndc": "65015-282-99",
+      "description": "25 kg in 1 DRUM (65015-282-99)",
+      "marketing_start_date": "05-MAY-16"
+     }
+    ],
+    "listing_expiration_date": "20261231",
+    "openfda": {},
+    "marketing_category": "DRUG FOR FURTHER PROCESSING",
+    "dosage_form": "GRANULE",
+    "spl_id": "940dd02f-56c7-4ba3-9e28-bc946311ee5c",
+    "product_type": "BULK INGREDIENT",
+    "marketing_start_date": "20160505",
+    "product_id": "65015-282_940dd02f-56c7-4ba3-9e28-bc946311ee5c",
+    "brand_name_base": null
+   }
+  ]
+ }
+}

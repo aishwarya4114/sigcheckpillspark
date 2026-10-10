@@ -1,0 +1,105 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22celecoxib%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:41-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 264
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "51655-437",
+    "generic_name": "Celecoxib",
+    "labeler_name": "Northwind Health Company, LLC",
+    "brand_name": "CELECOXIB",
+    "active_ingredients": [
+     {
+      "name": "CELECOXIB",
+      "strength": "200 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "51655-437-25",
+      "description": "60 CAPSULE in 1 BOTTLE, PLASTIC (51655-437-25)",
+      "marketing_start_date": "20210128",
+      "sample": false
+     },
+     {
+      "package_ndc": "51655-437-26",
+      "description": "90 CAPSULE in 1 BOTTLE, PLASTIC (51655-437-26)",
+      "marketing_start_date": "20210518",
+      "sample": false
+     },
+     {
+      "package_ndc": "51655-437-52",
+      "description": "30 CAPSULE in 1 BOTTLE, PLASTIC (51655-437-52)",
+      "marketing_start_date": "20210521",
+      "sample": false
+     },
+     {
+      "package_ndc": "51655-437-84",
+      "description": "14 CAPSULE in 1 BOTTLE, PLASTIC (51655-437-84)",
+      "marketing_start_date": "20200928",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {
+     "manufacturer_name": [
+      "Northwind Health Company, LLC"
+     ],
+     "rxcui": [
+      "205323"
+     ],
+     "spl_set_id": [
+      "dac05189-4acf-d6bb-e053-2a95a90a46a9"
+     ],
+     "nui": [
+      "N0000000160",
+      "M0001335",
+      "N0000175722"
+     ],
+     "pharm_class_moa": [
+      "Cyclooxygenase Inhibitors [MoA]"
+     ],
+     "pharm_class_cs": [
+      "Anti-Inflammatory Agents, Non-Steroidal [CS]"
+     ],
+     "pharm_class_epc": [
+      "Nonsteroidal Anti-inflammatory Drug [EPC]"
+     ],
+     "unii": [
+      "JCX84Q7J1L"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "CAPSULE",
+    "spl_id": "4b43d8e7-a5d3-238d-e063-6294a90a33dc",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20200928",
+    "product_id": "51655-437_4b43d8e7-a5d3-238d-e063-6294a90a33dc",
+    "application_number": "ANDA204776",
+    "brand_name_base": "CELECOXIB",
+    "pharm_class": [
+     "Anti-Inflammatory Agents",
+     "Non-Steroidal [CS]",
+     "Cyclooxygenase Inhibitors [MoA]",
+     "Nonsteroidal Anti-inflammatory Drug [EPC]"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,221 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=azithromycin",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:57-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK",
+     "conceptProperties": [
+      {
+       "rxcui": "750149",
+       "name": "{6 (azithromycin 250 MG Oral Tablet [Zithromax]) } Pack [Z-PAK]",
+       "synonym": "Z-PAK",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "750157",
+       "name": "{3 (azithromycin 500 MG Oral Tablet [Zithromax]) } Pack [TRI-PAK]",
+       "synonym": "TRI-PAK",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "GPCK",
+     "conceptProperties": [
+      {
+       "rxcui": "749780",
+       "name": "{3 (azithromycin 500 MG Oral Tablet) } Pack",
+       "synonym": "azithromycin 500 MG Oral Tablet 3 Count Pack",
+       "tty": "GPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "749783",
+       "name": "{6 (azithromycin 250 MG Oral Tablet) } Pack",
+       "synonym": "azithromycin 250 MG Oral Tablet 6 Count Pack",
+       "tty": "GPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "105260",
+       "name": "azithromycin 40 MG/ML Oral Suspension [Zithromax]",
+       "synonym": "Zithromax 40 MG/ML Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1668240",
+       "name": "azithromycin 500 MG Injection [Zithromax]",
+       "synonym": "Zithromax 500 MG Injection",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "211307",
+       "name": "azithromycin 20 MG/ML Oral Suspension [Zithromax]",
+       "synonym": "Zithromax 20 MG/ML Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "212446",
+       "name": "azithromycin 250 MG Oral Tablet [Zithromax]",
+       "synonym": "Zithromax 250 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "226827",
+       "name": "azithromycin 500 MG Oral Tablet [Zithromax]",
+       "synonym": "Zithromax 500 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "706872",
+       "name": "azithromycin 10 MG/ML Ophthalmic Solution [AzaSite]",
+       "synonym": "AzaSite 1 % Ophthalmic Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "861417",
+       "name": "azithromycin 1000 MG Powder for Oral Suspension [Zithromax]",
+       "synonym": "Zithromax 1 GM Powder for Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "141962",
+       "name": "azithromycin 250 MG Oral Capsule",
+       "synonym": "azithromycin (as azithromycin dihydrate) 250 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "141963",
+       "name": "azithromycin 40 MG/ML Oral Suspension",
+       "synonym": "azithromycin 200 MG per 5 ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1668238",
+       "name": "azithromycin 500 MG Injection",
+       "synonym": "azithromycin (as azithromycin dihydrate) 500 MG Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "204844",
+       "name": "azithromycin 600 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "248656",
+       "name": "azithromycin 500 MG Oral Tablet",
+       "synonym": "azithromycin 500 MG (as azithromycin monohydrate) Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "308459",
+       "name": "azithromycin 20 MG/ML Oral Suspension",
+       "synonym": "azithromycin 100 MG per 5 ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "308460",
+       "name": "azithromycin 250 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "577162",
+       "name": "azithromycin 33.3 MG/ML Oral Suspension",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "706868",
+       "name": "azithromycin 10 MG/ML Ophthalmic Solution",
+       "synonym": "azithromycin 1 % Ophthalmic Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "861416",
+       "name": "azithromycin 1000 MG Powder for Oral Suspension",
+       "synonym": "azithromycin 1 GM Powder for Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

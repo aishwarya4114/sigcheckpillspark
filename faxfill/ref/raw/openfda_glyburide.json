@@ -1,0 +1,110 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22glyburide%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:36-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 100
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "23155-233",
+    "generic_name": "glyburide-metformin hydrochloride",
+    "labeler_name": "Heritage Pharmaceuticals Inc. d/b/a Avet Pharmaceuticals Inc.",
+    "brand_name": "glyburide-metformin hydrochloride",
+    "active_ingredients": [
+     {
+      "name": "GLYBURIDE",
+      "strength": "1.25 mg/1"
+     },
+     {
+      "name": "METFORMIN HYDROCHLORIDE",
+      "strength": "250 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "23155-233-01",
+      "description": "100 TABLET in 1 BOTTLE (23155-233-01)",
+      "marketing_start_date": "20240501",
+      "sample": false
+     },
+     {
+      "package_ndc": "23155-233-05",
+      "description": "500 TABLET in 1 BOTTLE (23155-233-05)",
+      "marketing_start_date": "20240501",
+      "sample": false
+     },
+     {
+      "package_ndc": "23155-233-10",
+      "description": "1000 TABLET in 1 BOTTLE (23155-233-10)",
+      "marketing_start_date": "20240501",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {
+     "manufacturer_name": [
+      "Heritage Pharmaceuticals Inc. d/b/a Avet Pharmaceuticals Inc."
+     ],
+     "rxcui": [
+      "861743",
+      "861748",
+      "861753"
+     ],
+     "spl_set_id": [
+      "b38213bb-d663-4c95-a1b2-96c23ee5be09"
+     ],
+     "is_original_packager": [
+      true
+     ],
+     "upc": [
+      "0323155234015",
+      "0323155235012",
+      "0323155233018"
+     ],
+     "nui": [
+      "N0000175608",
+      "M0020795"
+     ],
+     "pharm_class_epc": [
+      "Sulfonylurea [EPC]"
+     ],
+     "pharm_class_cs": [
+      "Sulfonylurea Compounds [CS]"
+     ],
+     "unii": [
+      "786Z46389E",
+      "SX6K58TVWC"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "TABLET",
+    "spl_id": "6a256976-cf1a-421b-86cb-452fddc75294",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20240501",
+    "product_id": "23155-233_6a256976-cf1a-421b-86cb-452fddc75294",
+    "application_number": "ANDA079009",
+    "brand_name_base": "glyburide-metformin hydrochloride",
+    "pharm_class": [
+     "Biguanide [EPC]",
+     "Biguanides [CS]",
+     "Sulfonylurea Compounds [CS]",
+     "Sulfonylurea [EPC]"
+    ]
+   }
+  ]
+ }
+}

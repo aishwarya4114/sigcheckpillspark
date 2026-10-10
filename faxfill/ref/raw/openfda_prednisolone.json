@@ -1,0 +1,58 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22prednisolone%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:54-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 105
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "64958-0202",
+    "generic_name": "Prednisolone",
+    "labeler_name": "Henan Lihua Pharmaceutical Co Ltd",
+    "active_ingredients": [
+     {
+      "name": "PREDNISOLONE",
+      "strength": "1 kg/kg"
+     }
+    ],
+    "finished": false,
+    "packaging": [
+     {
+      "package_ndc": "64958-0202-0",
+      "description": "5 kg in 1 DRUM (64958-0202-0)",
+      "marketing_start_date": "20-JUL-26"
+     },
+     {
+      "package_ndc": "64958-0202-1",
+      "description": "10 kg in 1 DRUM (64958-0202-1)",
+      "marketing_start_date": "20-JUL-26"
+     },
+     {
+      "package_ndc": "64958-0202-2",
+      "description": "25 kg in 1 DRUM (64958-0202-2)",
+      "marketing_start_date": "20-JUL-26"
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {},
+    "marketing_category": "BULK INGREDIENT",
+    "dosage_form": "POWDER",
+    "spl_id": "572b645d-63e0-3fa9-e063-6394a90affde",
+    "product_type": "BULK INGREDIENT",
+    "marketing_start_date": "20260720",
+    "product_id": "64958-0202_572b645d-63e0-3fa9-e063-6394a90affde",
+    "brand_name_base": null
+   }
+  ]
+ }
+}

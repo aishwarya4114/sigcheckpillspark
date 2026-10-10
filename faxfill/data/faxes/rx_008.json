@@ -1,0 +1,157 @@
+{
+ "id": "rx_008",
+ "image": "rx_008.png",
+ "synthetic": true,
+ "style": "handwritten",
+ "degradation": {
+  "skew_deg": 0.01,
+  "blur": 0.9,
+  "noise": 22,
+  "fax_mode": "fine",
+  "level": "medium"
+ },
+ "is_clean": false,
+ "trap": "lasa",
+ "fields": {
+  "patient_name": "Kenji Watanabe",
+  "patient_dob": "1985-06-21",
+  "patient_address": "138 W 121st St, Apt 7D, New York, NY 10026",
+  "drug_name": "hydroxyzine",
+  "strength": "25 mg",
+  "strength_value": 25,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth three times daily for 10 days",
+  "quantity": 30,
+  "quantity_text": "#30 (thirty) tablets",
+  "days_supply_stated": 10,
+  "refills": 0,
+  "prescriber_name": "Owen Brennan, NP",
+  "prescriber_npi": "1969099971",
+  "prescriber_dea": "MB9376787",
+  "date_written": "2026-10-05",
+  "substitution": "permitted",
+  "notes": "Please call with questions."
+ },
+ "field_boxes": {
+  "fax_header": [
+   60,
+   26,
+   1440,
+   46
+  ],
+  "clinic": [
+   120,
+   118,
+   740,
+   161
+  ],
+  "prescriber_name": [
+   120,
+   182,
+   462,
+   215
+  ],
+  "prescriber_npi": [
+   205,
+   326,
+   415,
+   353
+  ],
+  "prescriber_dea": [
+   715,
+   326,
+   919,
+   353
+  ],
+  "patient_name": [
+   360,
+   432,
+   745,
+   491
+  ],
+  "patient_dob": [
+   1180,
+   444,
+   1477,
+   492
+  ],
+  "patient_address": [
+   360,
+   512,
+   947,
+   539
+  ],
+  "date_written": [
+   360,
+   589,
+   656,
+   623
+  ],
+  "drug_name": [
+   360,
+   700,
+   678,
+   761
+  ],
+  "strength": [
+   706,
+   719,
+   876,
+   758
+  ],
+  "dosage_form": [
+   904,
+   704,
+   1002,
+   743
+  ],
+  "directions": [
+   360,
+   830,
+   1635,
+   894
+  ],
+  "quantity": [
+   360,
+   921,
+   833,
+   982
+  ],
+  "refills": [
+   360,
+   1019,
+   389,
+   1048
+  ],
+  "substitution": [
+   120,
+   1106,
+   150,
+   1136
+  ],
+  "notes": [
+   260,
+   1204,
+   598,
+   1231
+  ]
+ },
+ "expected_flags": [
+  {
+   "field": "drug_name",
+   "code": "lasa_confirm",
+   "why": "Handwritten 'hydroxyzine' is a look-alike of 'hydralazine' (ISMP confused-names list); both come in 25 mg tablets. Confirm the drug."
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": [],
+ "meta": {
+  "rxcui": "995258",
+  "fax_from": "(212) 555-0123",
+  "sent": "2026-10-05 11:26",
+  "patient_id": "PT003",
+  "prescriber_id": "P111",
+  "prescriber_in_directory": true
+ }
+}

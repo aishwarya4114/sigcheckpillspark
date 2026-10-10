@@ -1,0 +1,78 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22amoxicillin%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:55-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 518
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "82868-067",
+    "generic_name": "Amoxicillin and Clavulanate Potassium",
+    "labeler_name": "Northwind Health Company, LLC",
+    "brand_name": "Amoxicillin and Clavulanate Potassium",
+    "active_ingredients": [
+     {
+      "name": "AMOXICILLIN",
+      "strength": "875 mg/1"
+     },
+     {
+      "name": "CLAVULANATE POTASSIUM",
+      "strength": "125 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "82868-067-14",
+      "description": "14 TABLET, FILM COATED in 1 BOTTLE, PLASTIC (82868-067-14)",
+      "marketing_start_date": "20241017",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {
+     "manufacturer_name": [
+      "Northwind Health Company, LLC"
+     ],
+     "rxcui": [
+      "562508"
+     ],
+     "spl_set_id": [
+      "26e1d503-ab8b-ca85-e063-6394a90aaae3"
+     ],
+     "unii": [
+      "804826J2HU",
+      "Q42OMW3AT8"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "TABLET, FILM COATED",
+    "spl_id": "548af1ff-5452-bc68-e063-6294a90ab4b5",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20241017",
+    "product_id": "82868-067_548af1ff-5452-bc68-e063-6294a90ab4b5",
+    "application_number": "ANDA091568",
+    "brand_name_base": "Amoxicillin and Clavulanate Potassium",
+    "pharm_class": [
+     "Penicillin-class Antibacterial [EPC]",
+     "Penicillins [CS]",
+     "beta Lactamase Inhibitor [EPC]",
+     "beta Lactamase Inhibitors [MoA]"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22citalopram%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:40-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 145
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "60760-495",
+    "generic_name": "Citalopram",
+    "labeler_name": "St. Mary's Medical Park Pharmacy",
+    "brand_name": "Citalopram",
+    "active_ingredients": [
+     {
+      "name": "CITALOPRAM HYDROBROMIDE",
+      "strength": "20 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "60760-495-30",
+      "description": "30 TABLET, FILM COATED in 1 BOTTLE, PLASTIC (60760-495-30)",
+      "marketing_start_date": "20250529",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {
+     "manufacturer_name": [
+      "St. Mary's Medical Park Pharmacy"
+     ],
+     "rxcui": [
+      "200371"
+     ],
+     "spl_set_id": [
+      "db900453-4777-4142-a236-5d3a6152d0a5"
+     ],
+     "unii": [
+      "I1E9D14F36"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "TABLET, FILM COATED",
+    "spl_id": "557e763a-9ef9-2273-e063-6394a90af48a",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20140123",
+    "product_id": "60760-495_557e763a-9ef9-2273-e063-6394a90af48a",
+    "application_number": "ANDA078216",
+    "brand_name_base": "Citalopram",
+    "pharm_class": [
+     "Serotonin Reuptake Inhibitor [EPC]",
+     "Serotonin Uptake Inhibitors [MoA]"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,280 @@
+{
+ "id": "ho_018",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "ho_018_p1.png"
+ ],
+ "pages_declared": 1,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": 0.41,
+  "blur": 0.5,
+  "noise": 10,
+  "fax_mode": "fine",
+  "level": "light"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": 0.41,
+   "blur": 0.5,
+   "noise": 10,
+   "fax_mode": "fine",
+   "level": "light"
+  }
+ ],
+ "is_clean": true,
+ "trap": null,
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "ho_018_p1.png",
+   "fields": {
+    "patient_name": "Clara Jensen",
+    "patient_dob": "1994-08-12",
+    "patient_address": "183 W 141st St, Apt 5D, New York, NY 10030",
+    "drug_name": "glipizide",
+    "strength": "15 mg",
+    "strength_value": 15,
+    "strength_unit": "mg",
+    "dosage_form": "tablet",
+    "directions": "Take 1 tablet by mouth once daily for 30 days",
+    "quantity": 30,
+    "quantity_text": "#30 (thirty) tablets",
+    "days_supply_stated": 30,
+    "refills": 5,
+    "prescriber_name": "Mei Tanaka, MD",
+    "prescriber_npi": "1299818082",
+    "prescriber_dea": null,
+    "date_written": "2026-10-09",
+    "substitution": "permitted",
+    "notes": null
+   },
+   "field_boxes": {
+    "fax_header": [
+     52,
+     22,
+     1417,
+     52
+    ],
+    "clinic": [
+     113,
+     119,
+     789,
+     157
+    ],
+    "prescriber_name": [
+     113,
+     185,
+     400,
+     220
+    ],
+    "prescriber_npi": [
+     199,
+     329,
+     410,
+     358
+    ],
+    "patient_name": [
+     355,
+     438,
+     578,
+     467
+    ],
+    "patient_dob": [
+     1175,
+     432,
+     1365,
+     461
+    ],
+    "patient_address": [
+     356,
+     511,
+     943,
+     543
+    ],
+    "date_written": [
+     356,
+     586,
+     547,
+     615
+    ],
+    "drug_name": [
+     357,
+     706,
+     517,
+     743
+    ],
+    "strength": [
+     545,
+     705,
+     655,
+     741
+    ],
+    "dosage_form": [
+     683,
+     704,
+     785,
+     732
+    ],
+    "directions": [
+     358,
+     832,
+     1127,
+     873
+    ],
+    "quantity": [
+     359,
+     925,
+     665,
+     963
+    ],
+    "refills": [
+     359,
+     1017,
+     381,
+     1045
+    ],
+    "substitution": [
+     120,
+     1111,
+     150,
+     1141
+    ]
+   },
+   "meta": {
+    "rxcui": "2737151",
+    "fax_from": "(212) 555-0117",
+    "sent": "2026-10-09 16:20",
+    "patient_id": "PT012",
+    "prescriber_id": "P108",
+    "prescriber_in_directory": true
+   }
+  }
+ ],
+ "image": "ho_018_p1.png",
+ "fields": {
+  "patient_name": "Clara Jensen",
+  "patient_dob": "1994-08-12",
+  "patient_address": "183 W 141st St, Apt 5D, New York, NY 10030",
+  "drug_name": "glipizide",
+  "strength": "15 mg",
+  "strength_value": 15,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth once daily for 30 days",
+  "quantity": 30,
+  "quantity_text": "#30 (thirty) tablets",
+  "days_supply_stated": 30,
+  "refills": 5,
+  "prescriber_name": "Mei Tanaka, MD",
+  "prescriber_npi": "1299818082",
+  "prescriber_dea": null,
+  "date_written": "2026-10-09",
+  "substitution": "permitted",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   52,
+   22,
+   1417,
+   52
+  ],
+  "clinic": [
+   113,
+   119,
+   789,
+   157
+  ],
+  "prescriber_name": [
+   113,
+   185,
+   400,
+   220
+  ],
+  "prescriber_npi": [
+   199,
+   329,
+   410,
+   358
+  ],
+  "patient_name": [
+   355,
+   438,
+   578,
+   467
+  ],
+  "patient_dob": [
+   1175,
+   432,
+   1365,
+   461
+  ],
+  "patient_address": [
+   356,
+   511,
+   943,
+   543
+  ],
+  "date_written": [
+   356,
+   586,
+   547,
+   615
+  ],
+  "drug_name": [
+   357,
+   706,
+   517,
+   743
+  ],
+  "strength": [
+   545,
+   705,
+   655,
+   741
+  ],
+  "dosage_form": [
+   683,
+   704,
+   785,
+   732
+  ],
+  "directions": [
+   358,
+   832,
+   1127,
+   873
+  ],
+  "quantity": [
+   359,
+   925,
+   665,
+   963
+  ],
+  "refills": [
+   359,
+   1017,
+   381,
+   1045
+  ],
+  "substitution": [
+   120,
+   1111,
+   150,
+   1141
+  ]
+ },
+ "meta": {
+  "rxcui": "2737151",
+  "fax_from": "(212) 555-0117",
+  "sent": "2026-10-09 16:20",
+  "patient_id": "PT012",
+  "prescriber_id": "P108",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [],
+ "expected_order_status": "ready_for_review",
+ "expect_abstain": []
+}

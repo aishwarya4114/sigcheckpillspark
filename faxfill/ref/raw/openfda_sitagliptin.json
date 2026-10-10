@@ -1,0 +1,100 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22sitagliptin%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:37-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 149
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "70710-1786",
+    "generic_name": "Sitagliptin and Metformin Hydrochloride",
+    "labeler_name": "Zydus Pharmaceuticals (USA) Inc.",
+    "brand_name": "ZITUVIMET",
+    "active_ingredients": [
+     {
+      "name": "SITAGLIPTIN",
+      "strength": "50 mg/1"
+     },
+     {
+      "name": "METFORMIN HYDROCHLORIDE",
+      "strength": "500 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "70710-1786-6",
+      "description": "60 TABLET, FILM COATED in 1 BOTTLE (70710-1786-6)",
+      "marketing_start_date": "20240314",
+      "sample": false
+     },
+     {
+      "package_ndc": "70710-1786-8",
+      "description": "180 TABLET, FILM COATED in 1 BOTTLE (70710-1786-8)",
+      "marketing_start_date": "20240314",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {
+     "manufacturer_name": [
+      "Zydus Pharmaceuticals (USA) Inc."
+     ],
+     "rxcui": [
+      "861769",
+      "861819",
+      "2677162",
+      "2677164"
+     ],
+     "spl_set_id": [
+      "eeda90a0-4941-4716-8684-f9f12cbdf3af"
+     ],
+     "is_original_packager": [
+      true
+     ],
+     "nui": [
+      "N0000175913",
+      "N0000175912"
+     ],
+     "pharm_class_epc": [
+      "Dipeptidyl Peptidase 4 Inhibitor [EPC]"
+     ],
+     "pharm_class_moa": [
+      "Dipeptidyl Peptidase 4 Inhibitors [MoA]"
+     ],
+     "unii": [
+      "QFP0P1DV7Z",
+      "786Z46389E"
+     ]
+    },
+    "marketing_category": "NDA",
+    "dosage_form": "TABLET, FILM COATED",
+    "spl_id": "1d3e00f1-4ed0-4d56-87b9-7b4c8c3d7144",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20240314",
+    "product_id": "70710-1786_1d3e00f1-4ed0-4d56-87b9-7b4c8c3d7144",
+    "application_number": "NDA216743",
+    "brand_name_base": "ZITUVIMET",
+    "pharm_class": [
+     "Biguanide [EPC]",
+     "Biguanides [CS]",
+     "Dipeptidyl Peptidase 4 Inhibitor [EPC]",
+     "Dipeptidyl Peptidase 4 Inhibitors [MoA]"
+    ]
+   }
+  ]
+ }
+}

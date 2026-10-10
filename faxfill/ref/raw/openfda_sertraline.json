@@ -1,0 +1,78 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22sertraline%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:39-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 257
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "50090-7614",
+    "generic_name": "Sertraline",
+    "labeler_name": "A-S Medication Solutions",
+    "brand_name": "Sertraline",
+    "active_ingredients": [
+     {
+      "name": "SERTRALINE HYDROCHLORIDE",
+      "strength": "25 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "50090-7614-0",
+      "description": "30 TABLET, FILM COATED in 1 BOTTLE (50090-7614-0)",
+      "marketing_start_date": "20250723",
+      "sample": false
+     },
+     {
+      "package_ndc": "50090-7614-1",
+      "description": "90 TABLET, FILM COATED in 1 BOTTLE (50090-7614-1)",
+      "marketing_start_date": "20250723",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {
+     "manufacturer_name": [
+      "A-S Medication Solutions"
+     ],
+     "rxcui": [
+      "312940"
+     ],
+     "spl_set_id": [
+      "e46bc887-69e2-4037-be59-6513277d157b"
+     ],
+     "unii": [
+      "UTI8907Y6X"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "TABLET, FILM COATED",
+    "spl_id": "259c0788-adb3-464a-bcb8-59009ebe04f6",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20230223",
+    "product_id": "50090-7614_259c0788-adb3-464a-bcb8-59009ebe04f6",
+    "application_number": "ANDA076465",
+    "brand_name_base": "Sertraline",
+    "pharm_class": [
+     "Cytochrome P450 2D6 Inhibitors [MoA]",
+     "Serotonin Reuptake Inhibitor [EPC]",
+     "Serotonin Uptake Inhibitors [MoA]"
+    ]
+   }
+  ]
+ }
+}

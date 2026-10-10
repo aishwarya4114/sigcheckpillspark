@@ -1,0 +1,71 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22levothyroxine%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:59-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 670
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "50090-7886",
+    "generic_name": "LEVOTHYROXINE SODIUM",
+    "labeler_name": "A-S Medication Solutions",
+    "brand_name": "LEVOTHYROXINE SODIUM",
+    "active_ingredients": [
+     {
+      "name": "LEVOTHYROXINE SODIUM",
+      "strength": "125 ug/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "50090-7886-0",
+      "description": "90 TABLET in 1 BOTTLE (50090-7886-0)",
+      "marketing_start_date": "20260205",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {
+     "manufacturer_name": [
+      "A-S Medication Solutions"
+     ],
+     "rxcui": [
+      "966224"
+     ],
+     "spl_set_id": [
+      "1ac29774-2b53-4a3f-97fa-16c2880a0868"
+     ],
+     "unii": [
+      "9J765S329G"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "TABLET",
+    "spl_id": "e59ecde7-587e-48a2-9421-cdd7ffc880c8",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20250408",
+    "product_id": "50090-7886_e59ecde7-587e-48a2-9421-cdd7ffc880c8",
+    "application_number": "ANDA211417",
+    "brand_name_base": "LEVOTHYROXINE SODIUM",
+    "pharm_class": [
+     "Thyroxine [CS]",
+     "l-Thyroxine [EPC]"
+    ]
+   }
+  ]
+ }
+}

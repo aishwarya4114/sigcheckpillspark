@@ -1,0 +1,226 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=lisinopril",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:26-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "104375",
+       "name": "lisinopril 2.5 MG Oral Tablet [Zestril]",
+       "synonym": "Zestril 2.5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "104376",
+       "name": "lisinopril 5 MG Oral Tablet [Zestril]",
+       "synonym": "Zestril 5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "104377",
+       "name": "lisinopril 10 MG Oral Tablet [Zestril]",
+       "synonym": "Zestril 10 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "104378",
+       "name": "lisinopril 20 MG Oral Tablet [Zestril]",
+       "synonym": "Zestril 20 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1806890",
+       "name": "lisinopril 1 MG/ML Oral Solution [Qbrelis]",
+       "synonym": "Qbrelis 1 MG/ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "206765",
+       "name": "lisinopril 10 MG Oral Tablet [Prinivil]",
+       "synonym": "Prinivil 10 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "206766",
+       "name": "lisinopril 20 MG Oral Tablet [Prinivil]",
+       "synonym": "Prinivil 20 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "206771",
+       "name": "lisinopril 40 MG Oral Tablet [Zestril]",
+       "synonym": "Zestril 40 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "213482",
+       "name": "lisinopril 30 MG Oral Tablet [Zestril]",
+       "synonym": "Zestril 30 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "823971",
+       "name": "hydrochlorothiazide 25 MG / lisinopril 20 MG Oral Tablet [Zestoretic]",
+       "synonym": "Zestoretic 20/25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "823982",
+       "name": "hydrochlorothiazide 12.5 MG / lisinopril 20 MG Oral Tablet [Zestoretic]",
+       "synonym": "Zestoretic 20/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "823986",
+       "name": "hydrochlorothiazide 12.5 MG / lisinopril 10 MG Oral Tablet [Zestoretic]",
+       "synonym": "Zestoretic 10/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "1806884",
+       "name": "lisinopril 1 MG/ML Oral Solution",
+       "synonym": "lisinopril 1 MG per 1 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197884",
+       "name": "lisinopril 40 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197885",
+       "name": "hydrochlorothiazide 12.5 MG / lisinopril 10 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG / lisinopril 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197886",
+       "name": "hydrochlorothiazide 12.5 MG / lisinopril 20 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG / lisinopril 20 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197887",
+       "name": "hydrochlorothiazide 25 MG / lisinopril 20 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / lisinopril 20 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "205326",
+       "name": "lisinopril 30 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "311353",
+       "name": "lisinopril 2.5 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "311354",
+       "name": "lisinopril 5 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "314076",
+       "name": "lisinopril 10 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "314077",
+       "name": "lisinopril 20 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

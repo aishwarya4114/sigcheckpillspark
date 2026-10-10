@@ -1,0 +1,649 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=methotrexate",
+ "status": 200,
+ "fetched": "2026-10-10T13:34:05-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "1441407",
+       "name": "0.4 ML methotrexate 25 MG/ML Auto-Injector [Otrexup]",
+       "synonym": "0.4 ML Otrexup 25 MG/ML Auto-Injector",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1441413",
+       "name": "0.4 ML methotrexate 37.5 MG/ML Auto-Injector [Otrexup]",
+       "synonym": "Otrexup 15 MG per 0.4 ML Auto-Injector",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1441418",
+       "name": "0.4 ML methotrexate 50 MG/ML Auto-Injector [Otrexup]",
+       "synonym": "0.4 ML Otrexup 50 MG/ML Auto-Injector",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1441424",
+       "name": "0.4 ML methotrexate 62.5 MG/ML Auto-Injector [Otrexup]",
+       "synonym": "Otrexup 25 MG per 0.4 ML Auto-Injector",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1544383",
+       "name": "0.2 ML methotrexate 50 MG/ML Auto-Injector [Rasuvo]",
+       "synonym": "0.2 ML Rasuvo 50 MG/ML Auto-Injector",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1544386",
+       "name": "0.25 ML methotrexate 50 MG/ML Auto-Injector [Rasuvo]",
+       "synonym": "0.25 ML Rasuvo 50 MG/ML Auto-Injector",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1544388",
+       "name": "0.3 ML methotrexate 50 MG/ML Auto-Injector [Rasuvo]",
+       "synonym": "0.3 ML Rasuvo 50 MG/ML Auto-Injector",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1544390",
+       "name": "0.35 ML methotrexate 50 MG/ML Auto-Injector [Rasuvo]",
+       "synonym": "0.35 ML Rasuvo 50 MG/ML Auto-Injector",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1544394",
+       "name": "0.4 ML methotrexate 50 MG/ML Auto-Injector [Rasuvo]",
+       "synonym": "0.4 ML Rasuvo 50 MG/ML Auto-Injector",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1544396",
+       "name": "0.45 ML methotrexate 50 MG/ML Auto-Injector [Rasuvo]",
+       "synonym": "0.45 ML Rasuvo 50 MG/ML Auto-Injector",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1544398",
+       "name": "0.5 ML methotrexate 50 MG/ML Auto-Injector [Rasuvo]",
+       "synonym": "0.5 ML Rasuvo 50 MG/ML Auto-Injector",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1544402",
+       "name": "0.6 ML methotrexate 50 MG/ML Auto-Injector [Rasuvo]",
+       "synonym": "0.6 ML Rasuvo 50 MG/ML Auto-Injector",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1544404",
+       "name": "0.15 ML methotrexate 50 MG/ML Auto-Injector [Rasuvo]",
+       "synonym": "0.15 ML Rasuvo 50 MG/ML Auto-Injector",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1747181",
+       "name": "0.4 ML methotrexate 31.3 MG/ML Auto-Injector [Otrexup]",
+       "synonym": "0.4 ML Otrexup 31.3 MG/ML Auto-Injector",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1747187",
+       "name": "0.4 ML methotrexate 43.8 MG/ML Auto-Injector [Otrexup]",
+       "synonym": "0.4 ML Otrexup 43.8 MG/ML Auto-Injector",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1747194",
+       "name": "0.4 ML methotrexate 56.3 MG/ML Auto-Injector [Otrexup]",
+       "synonym": "0.4 ML Otrexup 56.3 MG/ML Auto-Injector",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1921598",
+       "name": "methotrexate 2.5 MG/ML Oral Solution [Xatmep]",
+       "synonym": "Xatmep 2.5 MG/ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2377338",
+       "name": "0.4 ML methotrexate 25 MG/ML Prefilled Syringe [Reditrex]",
+       "synonym": "0.4 ML Reditrex 25 MG/ML Prefilled Syringe",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2377342",
+       "name": "0.5 ML methotrexate 25 MG/ML Prefilled Syringe [Reditrex]",
+       "synonym": "0.5 ML Reditrex 25 MG/ML Prefilled Syringe",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2377344",
+       "name": "0.6 ML methotrexate 25 MG/ML Prefilled Syringe [Reditrex]",
+       "synonym": "0.6 ML Reditrex 25 MG/ML Prefilled Syringe",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2377346",
+       "name": "0.7 ML methotrexate 25 MG/ML Prefilled Syringe [Reditrex]",
+       "synonym": "0.7 ML Reditrex 25 MG/ML Prefilled Syringe",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2377348",
+       "name": "0.8 ML methotrexate 25 MG/ML Prefilled Syringe [Reditrex]",
+       "synonym": "0.8 ML Reditrex 25 MG/ML Prefilled Syringe",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2377350",
+       "name": "0.9 ML methotrexate 25 MG/ML Prefilled Syringe [Reditrex]",
+       "synonym": "0.9 ML Reditrex 25 MG/ML Prefilled Syringe",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2377352",
+       "name": "1 ML methotrexate 25 MG/ML Prefilled Syringe [Reditrex]",
+       "synonym": "1 ML Reditrex 25 MG/ML Prefilled Syringe",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2377354",
+       "name": "0.3 ML methotrexate 25 MG/ML Prefilled Syringe [Reditrex]",
+       "synonym": "0.3 ML Reditrex 25 MG/ML Prefilled Syringe",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2671462",
+       "name": "methotrexate 2 MG/ML Oral Solution [Jylamvo]",
+       "synonym": "Jylamvo 2 MG per 1 ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "284592",
+       "name": "methotrexate 5 MG Oral Tablet [Trexall]",
+       "synonym": "Trexall 5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "284593",
+       "name": "methotrexate 10 MG Oral Tablet [Trexall]",
+       "synonym": "Trexall 10 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "284594",
+       "name": "methotrexate 7.5 MG Oral Tablet [Trexall]",
+       "synonym": "Trexall 7.5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "284595",
+       "name": "methotrexate 15 MG Oral Tablet [Trexall]",
+       "synonym": "Trexall 15 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "105585",
+       "name": "methotrexate 2.5 MG Oral Tablet",
+       "synonym": "methotrexate 2.5 MG (as methotrexate sodium) Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "105586",
+       "name": "methotrexate 10 MG Oral Tablet",
+       "synonym": "methotrexate (as methotrexate sodium) 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "105589",
+       "name": "methotrexate 100 MG/ML Injectable Solution",
+       "synonym": "methotrexate (as methotrexate sodium) 100 MG/ML Injectable Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1441402",
+       "name": "0.4 ML methotrexate 25 MG/ML Auto-Injector",
+       "synonym": "methotrexate 10 MG per 0.4 ML Auto-Injector",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1441411",
+       "name": "0.4 ML methotrexate 37.5 MG/ML Auto-Injector",
+       "synonym": "methotrexate 15 MG per 0.4 ML Auto-Injector",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1441416",
+       "name": "0.4 ML methotrexate 50 MG/ML Auto-Injector",
+       "synonym": "methotrexate 20 MG per 0.4 ML Auto-Injector",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1441422",
+       "name": "0.4 ML methotrexate 62.5 MG/ML Auto-Injector",
+       "synonym": "methotrexate 25 MG per 0.4 ML Auto-Injector",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1544378",
+       "name": "0.2 ML methotrexate 50 MG/ML Auto-Injector",
+       "synonym": "methotrexate 10 MG per 0.2 ML Auto-Injector",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1544385",
+       "name": "0.25 ML methotrexate 50 MG/ML Auto-Injector",
+       "synonym": "methotrexate 12.5 MG per 0.25 ML Auto-Injector",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1544387",
+       "name": "0.3 ML methotrexate 50 MG/ML Auto-Injector",
+       "synonym": "methotrexate 15 MG per 0.3 ML Auto-Injector",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1544389",
+       "name": "0.35 ML methotrexate 50 MG/ML Auto-Injector",
+       "synonym": "methotrexate 17.5 MG per 0.35 ML Auto-Injector",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1544395",
+       "name": "0.45 ML methotrexate 50 MG/ML Auto-Injector",
+       "synonym": "methotrexate 22.5 MG per 0.45 ML Auto-Injector",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1544397",
+       "name": "0.5 ML methotrexate 50 MG/ML Auto-Injector",
+       "synonym": "methotrexate 25 MG per 0.5 ML Auto-Injector",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1544401",
+       "name": "0.6 ML methotrexate 50 MG/ML Auto-Injector",
+       "synonym": "methotrexate 30 MG per 0.6 ML Auto-Injector",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1544403",
+       "name": "0.15 ML methotrexate 50 MG/ML Auto-Injector",
+       "synonym": "methotrexate 7.5 MG per 0.15 ML Auto-Injector",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1655956",
+       "name": "40 ML methotrexate 25 MG/ML Injection",
+       "synonym": "methotrexate 1 GM per 40 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1655959",
+       "name": "10 ML methotrexate 25 MG/ML Injection",
+       "synonym": "methotrexate 250 MG per 10 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1655960",
+       "name": "2 ML methotrexate 25 MG/ML Injection",
+       "synonym": "methotrexate 50 MG per 2 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1655967",
+       "name": "4 ML methotrexate 25 MG/ML Injection",
+       "synonym": "methotrexate 100 MG per 4 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1655968",
+       "name": "8 ML methotrexate 25 MG/ML Injection",
+       "synonym": "methotrexate 200 MG per 8 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1747179",
+       "name": "0.4 ML methotrexate 31.3 MG/ML Auto-Injector",
+       "synonym": "methotrexate 12.5 MG per 0.4 ML Auto-Injector",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1747185",
+       "name": "0.4 ML methotrexate 43.8 MG/ML Auto-Injector",
+       "synonym": "methotrexate 17.5 MG per 0.4 ML Auto-Injector",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1747192",
+       "name": "0.4 ML methotrexate 56.3 MG/ML Auto-Injector",
+       "synonym": "methotrexate 22.5 MG per 0.4 ML Auto-Injector",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1921592",
+       "name": "methotrexate 2.5 MG/ML Oral Solution",
+       "synonym": "methotrexate 2.5 MG/ML (methotrexate sodium 2.74 MG/ML) Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1946772",
+       "name": "methotrexate 25 MG/ML Injectable Solution",
+       "synonym": "methotrexate (as methotrexate sodium) 25 MG/ML Injectable Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2377333",
+       "name": "0.4 ML methotrexate 25 MG/ML Prefilled Syringe",
+       "synonym": "methotrexate 10 MG per 0.4 ML Prefilled Syringe",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2377341",
+       "name": "0.5 ML methotrexate 25 MG/ML Prefilled Syringe",
+       "synonym": "methotrexate 12.5 MG per 0.5 ML Prefilled Syringe",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2377343",
+       "name": "0.6 ML methotrexate 25 MG/ML Prefilled Syringe",
+       "synonym": "methotrexate 15 MG per 0.6 ML Prefilled Syringe",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2377345",
+       "name": "0.7 ML methotrexate 25 MG/ML Prefilled Syringe",
+       "synonym": "methotrexate 17.5 MG per 0.7 ML Prefilled Syringe",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2377347",
+       "name": "0.8 ML methotrexate 25 MG/ML Prefilled Syringe",
+       "synonym": "methotrexate 20 MG per 0.8 ML Prefilled Syringe",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2377349",
+       "name": "0.9 ML methotrexate 25 MG/ML Prefilled Syringe",
+       "synonym": "methotrexate 22.5 MG per 0.9 ML Prefilled Syringe",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2377351",
+       "name": "1 ML methotrexate 25 MG/ML Prefilled Syringe",
+       "synonym": "methotrexate 25 MG per 1 ML Prefilled Syringe",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2377353",
+       "name": "0.3 ML methotrexate 25 MG/ML Prefilled Syringe",
+       "synonym": "methotrexate 7.5 MG per 0.3 ML Prefilled Syringe",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2671456",
+       "name": "methotrexate 2 MG/ML Oral Solution",
+       "synonym": "methotrexate 2 MG per 1 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "283510",
+       "name": "methotrexate 15 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "283511",
+       "name": "methotrexate 5 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "283671",
+       "name": "methotrexate 7.5 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "311625",
+       "name": "methotrexate 1000 MG Injection",
+       "synonym": "methotrexate 1 GM Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "315148",
+       "name": "methotrexate 2.5 MG/ML Injectable Solution",
+       "synonym": "methotrexate (as methotrexate sodium) 2.5 MG/ML Injectable Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

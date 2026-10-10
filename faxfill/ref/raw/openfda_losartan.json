@@ -1,0 +1,115 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22losartan%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:28-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 349
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "31722-757",
+    "generic_name": "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE",
+    "labeler_name": "Camber Pharmaceuticals, Inc.",
+    "brand_name": "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE",
+    "active_ingredients": [
+     {
+      "name": "LOSARTAN POTASSIUM",
+      "strength": "100 mg/1"
+     },
+     {
+      "name": "HYDROCHLOROTHIAZIDE",
+      "strength": "25 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "31722-757-10",
+      "description": "1000 TABLET, FILM COATED in 1 BOTTLE (31722-757-10)",
+      "marketing_start_date": "20260527",
+      "sample": false
+     },
+     {
+      "package_ndc": "31722-757-30",
+      "description": "30 TABLET, FILM COATED in 1 BOTTLE (31722-757-30)",
+      "marketing_start_date": "20260527",
+      "sample": false
+     },
+     {
+      "package_ndc": "31722-757-90",
+      "description": "90 TABLET, FILM COATED in 1 BOTTLE (31722-757-90)",
+      "marketing_start_date": "20260527",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {
+     "manufacturer_name": [
+      "Camber Pharmaceuticals, Inc."
+     ],
+     "rxcui": [
+      "979464",
+      "979468",
+      "979471"
+     ],
+     "spl_set_id": [
+      "cdf59426-2a2f-4a60-943a-e6cef3eb31e1"
+     ],
+     "is_original_packager": [
+      true
+     ],
+     "upc": [
+      "0331722755306",
+      "0331722757300",
+      "0331722756303"
+     ],
+     "nui": [
+      "N0000175359",
+      "N0000175419",
+      "M0471776"
+     ],
+     "pharm_class_pe": [
+      "Increased Diuresis [PE]"
+     ],
+     "pharm_class_epc": [
+      "Thiazide Diuretic [EPC]"
+     ],
+     "pharm_class_cs": [
+      "Thiazides [CS]"
+     ],
+     "unii": [
+      "0J48LPH2TH",
+      "3ST302B24A"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "TABLET, FILM COATED",
+    "spl_id": "53cf5c1a-4169-a808-e063-6294a90acc4c",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20260527",
+    "product_id": "31722-757_53cf5c1a-4169-a808-e063-6294a90acc4c",
+    "application_number": "ANDA219869",
+    "brand_name_base": "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE",
+    "pharm_class": [
+     "Angiotensin 2 Receptor Antagonists [MoA]",
+     "Angiotensin 2 Receptor Blocker [EPC]",
+     "Increased Diuresis [PE]",
+     "Thiazide Diuretic [EPC]",
+     "Thiazides [CS]"
+    ]
+   }
+  ]
+ }
+}

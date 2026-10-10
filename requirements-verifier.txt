@@ -1,0 +1,6 @@
+openai>=1.70
+opencv-python-headless>=4.10
+numpy>=1.26
+pillow>=10
+rapidfuzz>=3.9
+# System dependency for replaying the independent verifier: brew install tesseract

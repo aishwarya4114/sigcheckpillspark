@@ -1,6 +1,7 @@
 """Deterministic checks the model cannot influence. Each returns (passed, reason-if-failed)."""
 from __future__ import annotations
 
+import json
 import re
 from datetime import date, datetime
 from pathlib import Path
@@ -23,6 +24,30 @@ def load_catalog() -> dict[str, dict]:
         e = cat.setdefault(drug, {"rows": set(), "schedule": sched, "lookalikes": set()})
         e["rows"].add((re.sub(r"\s+", " ", strength), form))
         e["lookalikes"].update(a.strip() for a in alikes.split(",") if a.strip())
+    # Aishwarya's verifier includes reproducible RxNorm/OpenFDA reference data.
+    # Merge those sourced rows into the small hand-curated demo catalogue while
+    # preserving the latter as a fallback for a minimal checkout.
+    sourced = ROOT / "faxfill" / "ref" / "drugs.json"
+    if sourced.exists():
+        payload = json.loads(sourced.read_text())
+        for drug in payload.get("drugs", []):
+            name = drug["name"].strip().lower()
+            entry = cat.setdefault(name, {"rows": set(), "schedule": "", "lookalikes": set()})
+            forms = drug.get("strengths_by_form", {}).get("value", {})
+            unit = drug.get("unit", {}).get("value", "mg")
+            for form, strengths in forms.items():
+                normalized_form = form.replace("tablet_dr", "tablet").replace("capsule_dr", "capsule")
+                for strength in strengths:
+                    value = str(strength) if isinstance(strength, str) else f"{strength:g} {unit}"
+                    entry["rows"].add((re.sub(r"\s+", " ", value.lower()), normalized_form))
+            # LASA and dose-limit fields in this dataset are explicitly marked
+            # manual/unverified, so they remain evaluation evidence rather than
+            # silently becoming new approval-blocking production rules here.
+            schedule = drug.get("schedule", {}).get("value")
+            if schedule:
+                entry["schedule"] = str(schedule).lower()
+            entry["reference_version"] = payload.get("_meta", {}).get("version")
+            entry["reference_sources"] = payload.get("_meta", {}).get("sources", {})
     return cat
 
 

@@ -1,0 +1,93 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22clonazepam%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:47-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 155
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "0093-3212",
+    "generic_name": "Clonazepam",
+    "labeler_name": "Teva Pharmaceuticals USA, Inc.",
+    "dea_schedule": "CIV",
+    "brand_name": "Clonazepam",
+    "active_ingredients": [
+     {
+      "name": "CLONAZEPAM",
+      "strength": "1 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "0093-3212-01",
+      "description": "100 TABLET in 1 BOTTLE (0093-3212-01)",
+      "marketing_start_date": "19960917",
+      "sample": false
+     },
+     {
+      "package_ndc": "0093-3212-05",
+      "description": "500 TABLET in 1 BOTTLE (0093-3212-05)",
+      "marketing_start_date": "19980821",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20261231",
+    "openfda": {
+     "manufacturer_name": [
+      "Teva Pharmaceuticals USA, Inc."
+     ],
+     "rxcui": [
+      "197527",
+      "197528",
+      "197529"
+     ],
+     "spl_set_id": [
+      "8069b1a0-7c06-4252-b44e-e2eef065d9b8"
+     ],
+     "is_original_packager": [
+      true
+     ],
+     "nui": [
+      "N0000175694",
+      "M0002356"
+     ],
+     "pharm_class_epc": [
+      "Benzodiazepine [EPC]"
+     ],
+     "pharm_class_cs": [
+      "Benzodiazepines [CS]"
+     ],
+     "unii": [
+      "5PE9FDE8GB"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "TABLET",
+    "spl_id": "d6abe4e3-7699-4ead-95f4-739a961b23ad",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "19960917",
+    "product_id": "0093-3212_d6abe4e3-7699-4ead-95f4-739a961b23ad",
+    "application_number": "ANDA074569",
+    "brand_name_base": "Clonazepam",
+    "pharm_class": [
+     "Benzodiazepine [EPC]",
+     "Benzodiazepines [CS]"
+    ]
+   }
+  ]
+ }
+}

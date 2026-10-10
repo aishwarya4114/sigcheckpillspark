@@ -1,0 +1,490 @@
+{
+ "fax_id": "rx_002",
+ "verifier": "verifier-v1",
+ "readers": {
+  "A": "openai/gpt-5.5",
+  "B": "mistral/mistral-large-3",
+  "C": "regex over tesseract"
+ },
+ "lookup": "local files (faxfill/ref)",
+ "pages_received": 1,
+ "pages_declared_in_header": 1,
+ "order_status": "READY",
+ "order_flags": [],
+ "danger_score": 0,
+ "danger_breakdown": {},
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "rx_002.png",
+   "status": "READY",
+   "flagged_fields": [],
+   "fields": {
+    "patient_name": {
+     "value": "Amara Nwosu",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      373,
+      425,
+      610,
+      459
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "patient_in_profiles",
+       "evidence": "patient profiles (patients.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [
+      "OCR text reads 'Amara Nwosu |' (both models read 'Amara Nwosu'). Shown for information; not a flag on its own."
+     ],
+     "reads": {
+      "A": "Amara Nwosu",
+      "B": "Amara Nwosu",
+      "C": "Amara Nwosu |"
+     }
+    },
+    "patient_dob": {
+     "value": "01/30/1990",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      1194,
+      442,
+      1384,
+      476
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "dob_matches_profile",
+       "evidence": "patient profiles (patients.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "01/30/1990",
+      "B": "01/30/1990",
+      "C": "01/30/1990"
+     }
+    },
+    "drug_name": {
+     "value": "Lisinopril",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      369,
+      693,
+      545,
+      734
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "drug_in_rxnorm",
+       "evidence": "rxnorm (drugs.json)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Lisinopril",
+      "B": "Lisinopril",
+      "C": "Lisinopril"
+     }
+    },
+    "strength": {
+     "value": "10 mg",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      570,
+      698,
+      678,
+      736
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "strength_in_rxnorm",
+       "evidence": "rxnorm"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "10 mg",
+      "B": "10 mg",
+      "C": "10 mg"
+     }
+    },
+    "dosage_form": {
+     "value": "tablet",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      705,
+      699,
+      809,
+      732
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "form_in_rxnorm",
+       "evidence": "rxnorm"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "tablet",
+      "B": "tablet",
+      "C": "tablet"
+     }
+    },
+    "directions": {
+     "value": "Take 1 tablet by mouth once daily for 30 days",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      366,
+      822,
+      1134,
+      875
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "directions_parsed",
+       "evidence": null
+      },
+      {
+       "check": "within_usual_max (manual, unverified)",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Take 1 tablet by mouth once daily for 30 days",
+      "B": "Take 1 tablet by mouth once daily for 30 days",
+      "C": "Take 1 tablet by mouth once daily for 30 days"
+     }
+    },
+    "quantity": {
+     "value": "#30 (thirty) tablets",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      363,
+      912,
+      669,
+      954
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "numeral_matches_words",
+       "evidence": null
+      },
+      {
+       "check": "quantity_matches_duration",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "#30 (thirty) tablets",
+      "B": "#30 (thirty) tablets",
+      "C": "#30 (thirty) tablets"
+     }
+    },
+    "refills": {
+     "value": "1",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      365,
+      1003,
+      377,
+      1032
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "refills_whole_number",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "1",
+      "B": "1",
+      "C": "1"
+     }
+    },
+    "prescriber_name": {
+     "value": "Priya Raman, DO",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      141,
+      165,
+      448,
+      204
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "prescriber_matches_npi",
+       "evidence": "prescriber directory (prescribers.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Priya Raman, DO",
+      "B": "Priya Raman, DO",
+      "C": "Priya Raman, DO"
+     }
+    },
+    "prescriber_npi": {
+     "value": "1564076267",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      224,
+      311,
+      431,
+      346
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "npi_luhn",
+       "evidence": null
+      },
+      {
+       "check": "npi_in_directory",
+       "evidence": "prescriber directory (prescribers.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "1564076267",
+      "B": "1564076267",
+      "C": "1564076267"
+     }
+    },
+    "prescriber_dea": {
+     "value": null,
+     "status": "not_present",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": null,
+     "evidence_note": "location not found",
+     "checks_passed": [],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": null,
+      "B": null,
+      "C": null
+     }
+    },
+    "date_written": {
+     "value": "10/07/2026",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      374,
+      572,
+      560,
+      606
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "date_valid_not_future",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "10/07/2026",
+      "B": "10/07/2026",
+      "C": "10/07/2026"
+     }
+    },
+    "substitution": {
+     "value": "permitted",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      323,
+      1098,
+      442,
+      1129
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "substitution_known_value",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "permitted",
+      "B": "permitted",
+      "C": null
+     }
+    },
+    "notes": {
+     "value": null,
+     "status": "not_present",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": null,
+     "evidence_note": "location not found",
+     "checks_passed": [],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": null,
+      "B": null,
+      "C": null
+     }
+    }
+   },
+   "page_flags": [],
+   "c_only_fields": [
+    "patient_name"
+   ],
+   "drug_ref": "lisinopril"
+  }
+ ],
+ "clarification_questions": [],
+ "thresholds": {
+  "speck_max_area": 4,
+  "region_pad": 30,
+  "baseline_text_pad": 10,
+  "noise_ratio": 3.0,
+  "noise_min_density": 0.01,
+  "streak_row_ink": 0.8,
+  "edge_margin": 5,
+  "prescriber_block_top": 0.2,
+  "header_votes": 2,
+  "lasa_min_ocr_conf": 60
+ },
+ "lookup_sources": {
+  "drug": "local files (faxfill/ref)",
+  "prescriber": "local files (faxfill/ref)",
+  "patient": "local files (faxfill/ref)",
+  "prism_kb": "not queried: PRISM documents no Knowledge Base query API, so lookups use local files"
+ },
+ "prism": {
+  "traces_sent": 4,
+  "traces_failed": [],
+  "intake_trace_ids": [
+   "sigcheck-intake-rx_002-p1-46ca72e7af5a"
+  ],
+  "reader_trace_ids": [
+   "sigcheck-read-rx_002-openai-gpt-5.5-reader-v2-v2",
+   "sigcheck-read-rx_002-mistral-mistral-large-3-reader-v2-v2"
+  ],
+  "verifier_trace_id": "sigcheck-verify-rx_002-b040928b60c3",
+  "guardrail": {
+   "local_injection_check": false,
+   "prism": false,
+   "prism_injection_flags": [],
+   "prism_other_flags": [
+    {
+     "rule_name": "PII/PHI Detection",
+     "action": "flag",
+     "page": 1
+    }
+   ],
+   "fired_by": [],
+   "blocks_if": "either fires",
+   "prism_status": "read from guardrail_flags in the POST /api/traces response for the intake trace (present in every response, not listed in the docs)"
+  },
+  "knowledge_base": "not queried: PRISM documents no Knowledge Base query API, so lookups use local files"
+ }
+}

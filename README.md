@@ -65,7 +65,21 @@ Every PRISM call reports whether PRISM actually accepted it, and the app never p
 | Revisioned workflow, attested approval, JSON and PDF export, audit trail | Upload duplicate protection lives in the running server only |
 | Admin policy with safe deterministic re-run; safety rules locked on | Not a dispensing or clinical decision system |
 
-## Results (synthetic test set, live Nicrron reader)
+## Results
+
+The combined project reports two evaluations separately. Aishwarya's independent verifier was frozen before its held-out set was generated; Om's workflow evaluation exercises the integrated intake and review path.
+
+| Held-out verifier measure | Result |
+|---|---|
+| Planted traps caught for the expected reason | **10 / 10** |
+| When the verifier said a field passed, it was correct | **235 / 235** |
+| Correct non-null field reads | **244 / 244** |
+| Unreadable values left empty | **2** |
+| False alarms on clean faxes | **3 / 10** |
+
+Rules were frozen at commit `2abbbb8` before the 20 held-out faxes were generated. The scorecard names the known false-positive case rather than hiding it.
+
+### Integrated workflow evaluation (synthetic test set, live Nicrron reader)
 
 | Measure | Result |
 |---|---|
@@ -74,7 +88,7 @@ Every PRISM call reports whether PRISM actually accepted it, and the app never p
 | Values invented for fields not on the fax | **0** |
 | Exact field reads | 53 / 64 |
 
-These describe fictional prescriptions only. They are not a real-world or clinical accuracy claim. Rerun with `python scripts/evaluate.py`; the live numbers appear at `/scorecard`.
+These describe fictional prescriptions only. They are not a real-world or clinical accuracy claim. Rerun the workflow set with `python scripts/evaluate.py`; replay the independent verifier with the commands in `faxfill/CHECKS.md`. Both results appear at `/scorecard`.
 
 ## Architecture
 
@@ -106,6 +120,7 @@ PRISM traces, guardrail flags and evaluator run alongside, with identifiers mask
 ```bash
 python3.13 -m venv .venv && source .venv/bin/activate
 pip install -r requirements-app.txt
+pip install -r requirements-verifier.txt  # only needed to replay the independent verifier
 cp .env.example .env          # add NICRRON_API_KEY, PRISMTRACE_API_KEY, PRISMTRACE_PROJECT_ID
 python scripts/make_faxes.py  # synthetic faxes with planted traps
 python scripts/smoke_sponsors.py --upload-kb   # live check of both sponsors; loads the PRISM knowledge base
@@ -146,6 +161,7 @@ Tests never call live sponsors.
 
 ```
 app/          FastAPI server, pipeline, deterministic checks, workflow, policy, UI (app/static)
+faxfill/      independent multi-reader verifier, sourced references, dev/held-out fixtures and frozen evaluation
 sponsors/     Nicrron reader, PRISM integration, injection guardrail, telemetry redaction
 reference/    Demonstration drug catalogue and intake policy (loaded into the PRISM KB)
 scripts/      Fax generator, evaluation, sponsor smoke test, external sample download

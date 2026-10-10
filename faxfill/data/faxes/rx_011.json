@@ -1,0 +1,151 @@
+{
+ "id": "rx_011",
+ "image": "rx_011.png",
+ "synthetic": true,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": 1.49,
+  "blur": 0.9,
+  "noise": 22,
+  "fax_mode": "standard",
+  "level": "medium"
+ },
+ "is_clean": false,
+ "trap": "invalid_npi",
+ "fields": {
+  "patient_name": "Rafael Duarte",
+  "patient_dob": "1950-12-24",
+  "patient_address": "559 W 135th St, Apt 2A, New York, NY 10031",
+  "drug_name": "amlodipine",
+  "strength": "5 mg",
+  "strength_value": 5,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth once daily for 30 days",
+  "quantity": 30,
+  "quantity_text": "#30 (thirty) tablets",
+  "days_supply_stated": 30,
+  "refills": 1,
+  "prescriber_name": "Kwame Mensah, MD",
+  "prescriber_npi": "1390459717",
+  "prescriber_dea": "BM3688566",
+  "date_written": "2026-10-08",
+  "substitution": "dispense_as_written",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   32,
+   11,
+   1412,
+   67
+  ],
+  "clinic": [
+   95,
+   121,
+   771,
+   171
+  ],
+  "prescriber_name": [
+   96,
+   192,
+   463,
+   234
+  ],
+  "prescriber_npi": [
+   185,
+   338,
+   396,
+   370
+  ],
+  "prescriber_dea": [
+   695,
+   324,
+   900,
+   357
+  ],
+  "patient_name": [
+   343,
+   443,
+   578,
+   476
+  ],
+  "patient_dob": [
+   1163,
+   423,
+   1353,
+   455
+  ],
+  "patient_address": [
+   345,
+   510,
+   931,
+   552
+  ],
+  "date_written": [
+   347,
+   592,
+   537,
+   624
+  ],
+  "drug_name": [
+   350,
+   711,
+   558,
+   752
+  ],
+  "strength": [
+   585,
+   708,
+   675,
+   746
+  ],
+  "dosage_form": [
+   702,
+   705,
+   804,
+   735
+  ],
+  "directions": [
+   353,
+   827,
+   1123,
+   882
+  ],
+  "quantity": [
+   356,
+   929,
+   662,
+   972
+  ],
+  "refills": [
+   358,
+   1026,
+   380,
+   1054
+  ],
+  "substitution": [
+   700,
+   1109,
+   731,
+   1140
+  ]
+ },
+ "expected_flags": [
+  {
+   "field": "prescriber_npi",
+   "code": "npi_checksum",
+   "why": "NPI fails the Luhn check digit and does not match the directory entry for this prescriber."
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": [],
+ "meta": {
+  "rxcui": "197361",
+  "fax_from": "(212) 555-0127",
+  "sent": "2026-10-08 14:00",
+  "patient_id": "PT013",
+  "prescriber_id": "P113",
+  "prescriber_in_directory": true
+ }
+}

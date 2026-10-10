@@ -1,0 +1,299 @@
+{
+ "id": "ho_017",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "ho_017_p1.png"
+ ],
+ "pages_declared": 1,
+ "style": "handwritten",
+ "degradation": {
+  "skew_deg": 0.3,
+  "blur": 1.25,
+  "noise": 32,
+  "fax_mode": "standard",
+  "level": "heavy"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": 0.3,
+   "blur": 1.25,
+   "noise": 32,
+   "fax_mode": "standard",
+   "level": "heavy"
+  }
+ ],
+ "is_clean": false,
+ "trap": "frequency_rule",
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "ho_017_p1.png",
+   "fields": {
+    "patient_name": "Rafael Duarte",
+    "patient_dob": "1950-12-24",
+    "patient_address": "559 W 135th St, Apt 2A, New York, NY 10031",
+    "drug_name": "methotrexate",
+    "strength": "2.5 mg",
+    "strength_value": 2.5,
+    "strength_unit": "mg",
+    "dosage_form": "tablet",
+    "directions": "Take 4 tablets by mouth once daily",
+    "quantity": 16,
+    "quantity_text": "#16 (sixteen) tablets",
+    "days_supply_stated": null,
+    "refills": 3,
+    "prescriber_name": "Priya Raman, DO",
+    "prescriber_npi": "1564076267",
+    "prescriber_dea": null,
+    "date_written": "2026-10-08",
+    "substitution": "permitted",
+    "notes": "New start."
+   },
+   "field_boxes": {
+    "fax_header": [
+     54,
+     23,
+     1419,
+     50
+    ],
+    "clinic": [
+     115,
+     120,
+     715,
+     156
+    ],
+    "prescriber_name": [
+     115,
+     184,
+     424,
+     221
+    ],
+    "prescriber_npi": [
+     201,
+     328,
+     411,
+     356
+    ],
+    "patient_name": [
+     357,
+     437,
+     687,
+     492
+    ],
+    "patient_dob": [
+     1177,
+     435,
+     1472,
+     484
+    ],
+    "patient_address": [
+     357,
+     512,
+     943,
+     542
+    ],
+    "date_written": [
+     357,
+     591,
+     652,
+     627
+    ],
+    "drug_name": [
+     358,
+     713,
+     649,
+     754
+    ],
+    "strength": [
+     677,
+     710,
+     861,
+     753
+    ],
+    "dosage_form": [
+     889,
+     709,
+     987,
+     749
+    ],
+    "directions": [
+     359,
+     830,
+     1213,
+     898
+    ],
+    "quantity": [
+     359,
+     920,
+     854,
+     978
+    ],
+    "refills": [
+     360,
+     1035,
+     393,
+     1061
+    ],
+    "substitution": [
+     120,
+     1110,
+     150,
+     1140
+    ],
+    "notes": [
+     261,
+     1206,
+     392,
+     1228
+    ]
+   },
+   "meta": {
+    "rxcui": "105585",
+    "fax_from": "(212) 555-0105",
+    "sent": "2026-10-08 15:59",
+    "patient_id": "PT013",
+    "prescriber_id": "P102",
+    "prescriber_in_directory": true
+   }
+  }
+ ],
+ "image": "ho_017_p1.png",
+ "fields": {
+  "patient_name": "Rafael Duarte",
+  "patient_dob": "1950-12-24",
+  "patient_address": "559 W 135th St, Apt 2A, New York, NY 10031",
+  "drug_name": "methotrexate",
+  "strength": "2.5 mg",
+  "strength_value": 2.5,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 4 tablets by mouth once daily",
+  "quantity": 16,
+  "quantity_text": "#16 (sixteen) tablets",
+  "days_supply_stated": null,
+  "refills": 3,
+  "prescriber_name": "Priya Raman, DO",
+  "prescriber_npi": "1564076267",
+  "prescriber_dea": null,
+  "date_written": "2026-10-08",
+  "substitution": "permitted",
+  "notes": "New start."
+ },
+ "field_boxes": {
+  "fax_header": [
+   54,
+   23,
+   1419,
+   50
+  ],
+  "clinic": [
+   115,
+   120,
+   715,
+   156
+  ],
+  "prescriber_name": [
+   115,
+   184,
+   424,
+   221
+  ],
+  "prescriber_npi": [
+   201,
+   328,
+   411,
+   356
+  ],
+  "patient_name": [
+   357,
+   437,
+   687,
+   492
+  ],
+  "patient_dob": [
+   1177,
+   435,
+   1472,
+   484
+  ],
+  "patient_address": [
+   357,
+   512,
+   943,
+   542
+  ],
+  "date_written": [
+   357,
+   591,
+   652,
+   627
+  ],
+  "drug_name": [
+   358,
+   713,
+   649,
+   754
+  ],
+  "strength": [
+   677,
+   710,
+   861,
+   753
+  ],
+  "dosage_form": [
+   889,
+   709,
+   987,
+   749
+  ],
+  "directions": [
+   359,
+   830,
+   1213,
+   898
+  ],
+  "quantity": [
+   359,
+   920,
+   854,
+   978
+  ],
+  "refills": [
+   360,
+   1035,
+   393,
+   1061
+  ],
+  "substitution": [
+   120,
+   1110,
+   150,
+   1140
+  ],
+  "notes": [
+   261,
+   1206,
+   392,
+   1228
+  ]
+ },
+ "meta": {
+  "rxcui": "105585",
+  "fax_from": "(212) 555-0105",
+  "sent": "2026-10-08 15:59",
+  "patient_id": "PT013",
+  "prescriber_id": "P102",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [
+  {
+   "field": "directions",
+   "code": "weekly_drug_daily",
+   "why": "Methotrexate written once daily.",
+   "page": 1
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": []
+}

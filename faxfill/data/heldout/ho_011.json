@@ -1,0 +1,299 @@
+{
+ "id": "ho_011",
+ "schema": 2,
+ "synthetic": true,
+ "pages": [
+  "ho_011_p1.png"
+ ],
+ "pages_declared": 1,
+ "style": "handwritten",
+ "degradation": {
+  "skew_deg": -1.12,
+  "blur": 0.9,
+  "noise": 22,
+  "fax_mode": "fine",
+  "level": "medium"
+ },
+ "page_degradation": [
+  {
+   "skew_deg": -1.12,
+   "blur": 0.9,
+   "noise": 22,
+   "fax_mode": "fine",
+   "level": "medium"
+  }
+ ],
+ "is_clean": false,
+ "trap": "unit_error",
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "ho_011_p1.png",
+   "fields": {
+    "patient_name": "Yara Haddad",
+    "patient_dob": "1988-10-19",
+    "patient_address": "644 Convent Ave, Apt 6D, New York, NY 10031",
+    "drug_name": "levothyroxine",
+    "strength": "75 mg",
+    "strength_value": 75,
+    "strength_unit": "mg",
+    "dosage_form": "tablet",
+    "directions": "Take 1 tablet by mouth once daily for 30 days",
+    "quantity": 30,
+    "quantity_text": "#30 (thirty) tablets",
+    "days_supply_stated": 30,
+    "refills": 5,
+    "prescriber_name": "Owen Brennan, NP",
+    "prescriber_npi": "1969099971",
+    "prescriber_dea": "MB9376787",
+    "date_written": "2026-10-08",
+    "substitution": "dispense_as_written",
+    "notes": null
+   },
+   "field_boxes": {
+    "fax_header": [
+     81,
+     11,
+     1446,
+     57
+    ],
+    "clinic": [
+     138,
+     104,
+     759,
+     159
+    ],
+    "prescriber_name": [
+     137,
+     168,
+     480,
+     208
+    ],
+    "prescriber_npi": [
+     220,
+     314,
+     430,
+     345
+    ],
+    "prescriber_dea": [
+     730,
+     324,
+     934,
+     354
+    ],
+    "patient_name": [
+     372,
+     428,
+     694,
+     489
+    ],
+    "patient_dob": [
+     1192,
+     444,
+     1472,
+     497
+    ],
+    "patient_address": [
+     371,
+     503,
+     983,
+     541
+    ],
+    "date_written": [
+     369,
+     580,
+     664,
+     619
+    ],
+    "drug_name": [
+     367,
+     689,
+     700,
+     757
+    ],
+    "strength": [
+     727,
+     714,
+     900,
+     760
+    ],
+    "dosage_form": [
+     928,
+     706,
+     1027,
+     747
+    ],
+    "directions": [
+     364,
+     823,
+     1490,
+     910
+    ],
+    "quantity": [
+     362,
+     912,
+     836,
+     983
+    ],
+    "refills": [
+     361,
+     1014,
+     400,
+     1045
+    ],
+    "substitution": [
+     699,
+     1103,
+     730,
+     1134
+    ]
+   },
+   "meta": {
+    "rxcui": null,
+    "fax_from": "(212) 555-0123",
+    "sent": "2026-10-08 09:53",
+    "patient_id": "PT010",
+    "prescriber_id": "P111",
+    "prescriber_in_directory": true
+   }
+  }
+ ],
+ "image": "ho_011_p1.png",
+ "fields": {
+  "patient_name": "Yara Haddad",
+  "patient_dob": "1988-10-19",
+  "patient_address": "644 Convent Ave, Apt 6D, New York, NY 10031",
+  "drug_name": "levothyroxine",
+  "strength": "75 mg",
+  "strength_value": 75,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth once daily for 30 days",
+  "quantity": 30,
+  "quantity_text": "#30 (thirty) tablets",
+  "days_supply_stated": 30,
+  "refills": 5,
+  "prescriber_name": "Owen Brennan, NP",
+  "prescriber_npi": "1969099971",
+  "prescriber_dea": "MB9376787",
+  "date_written": "2026-10-08",
+  "substitution": "dispense_as_written",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   81,
+   11,
+   1446,
+   57
+  ],
+  "clinic": [
+   138,
+   104,
+   759,
+   159
+  ],
+  "prescriber_name": [
+   137,
+   168,
+   480,
+   208
+  ],
+  "prescriber_npi": [
+   220,
+   314,
+   430,
+   345
+  ],
+  "prescriber_dea": [
+   730,
+   324,
+   934,
+   354
+  ],
+  "patient_name": [
+   372,
+   428,
+   694,
+   489
+  ],
+  "patient_dob": [
+   1192,
+   444,
+   1472,
+   497
+  ],
+  "patient_address": [
+   371,
+   503,
+   983,
+   541
+  ],
+  "date_written": [
+   369,
+   580,
+   664,
+   619
+  ],
+  "drug_name": [
+   367,
+   689,
+   700,
+   757
+  ],
+  "strength": [
+   727,
+   714,
+   900,
+   760
+  ],
+  "dosage_form": [
+   928,
+   706,
+   1027,
+   747
+  ],
+  "directions": [
+   364,
+   823,
+   1490,
+   910
+  ],
+  "quantity": [
+   362,
+   912,
+   836,
+   983
+  ],
+  "refills": [
+   361,
+   1014,
+   400,
+   1045
+  ],
+  "substitution": [
+   699,
+   1103,
+   730,
+   1134
+  ]
+ },
+ "meta": {
+  "rxcui": null,
+  "fax_from": "(212) 555-0123",
+  "sent": "2026-10-08 09:53",
+  "patient_id": "PT010",
+  "prescriber_id": "P111",
+  "prescriber_in_directory": true
+ },
+ "expected_flags": [
+  {
+   "field": "strength",
+   "code": "unit_mismatch",
+   "why": "Levothyroxine written in mg.",
+   "page": 1
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": []
+}

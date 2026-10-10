@@ -1,0 +1,88 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22lisinopril%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:27-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 397
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "43547-418",
+    "generic_name": "Lisinopril",
+    "labeler_name": "Solco healthcare U.S., LLC",
+    "brand_name": "Lisinopril",
+    "active_ingredients": [
+     {
+      "name": "LISINOPRIL",
+      "strength": "30 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "43547-418-10",
+      "description": "100 TABLET in 1 BOTTLE (43547-418-10)",
+      "marketing_start_date": "20170830",
+      "sample": false
+     },
+     {
+      "package_ndc": "43547-418-50",
+      "description": "500 TABLET in 1 BOTTLE (43547-418-50)",
+      "marketing_start_date": "20170830",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20261231",
+    "openfda": {
+     "manufacturer_name": [
+      "Solco healthcare U.S., LLC"
+     ],
+     "rxcui": [
+      "197884",
+      "205326",
+      "311353",
+      "311354",
+      "314076",
+      "314077"
+     ],
+     "spl_set_id": [
+      "f8d16c85-50e2-4d99-afae-6fb902734e42"
+     ],
+     "is_original_packager": [
+      true
+     ],
+     "upc": [
+      "0343547414108"
+     ],
+     "unii": [
+      "E7199S1YWR"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "TABLET",
+    "spl_id": "1ed80b02-cb3b-41c5-ab33-ff0106b8792d",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20170830",
+    "product_id": "43547-418_1ed80b02-cb3b-41c5-ab33-ff0106b8792d",
+    "application_number": "ANDA075743",
+    "brand_name_base": "Lisinopril",
+    "pharm_class": [
+     "Angiotensin Converting Enzyme Inhibitor [EPC]",
+     "Angiotensin-converting Enzyme Inhibitors [MoA]"
+    ]
+   }
+  ]
+ }
+}

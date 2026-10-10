@@ -1,0 +1,383 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=metronidazole",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:34-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK",
+     "conceptProperties": [
+      {
+       "rxcui": "758020",
+       "name": "{112 (bismuth subsalicylate 262 MG Chewable Tablet) / 56 (metronidazole 250 MG Oral Tablet) / 56 (tetracycline hydrochloride 500 MG Oral Capsule) } Pack [Helidac Therapy]",
+       "synonym": "Helidac Therapy Pack",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "GPCK",
+     "conceptProperties": [
+      {
+       "rxcui": "758019",
+       "name": "{112 (bismuth subsalicylate 262 MG Chewable Tablet) / 56 (metronidazole 250 MG Oral Tablet) / 56 (tetracycline hydrochloride 500 MG Oral Capsule) } Pack",
+       "synonym": "",
+       "tty": "GPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "1148398",
+       "name": "metronidazole 7.5 MG/ML Topical Cream [Rosadan]",
+       "synonym": "Rosadan 0.75 % Topical Cream",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1251688",
+       "name": "metronidazole 0.0075 MG/MG Topical Gel [Rosadan]",
+       "synonym": "Rosadan 0.75 % Topical Gel",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1294621",
+       "name": "bismuth subcitrate 140 MG / metronidazole 125 MG / tetracycline hydrochloride 125 MG Oral Capsule [Pylera]",
+       "synonym": "Pylera (bismuth subcitrate 140 MG / metronidazole 125 MG / tetracycline hydrochloride 125 MG) Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1604336",
+       "name": "metronidazole 0.013 MG/MG Vaginal Gel [Nuvessa]",
+       "synonym": "Nuvessa 1.3 % Vaginal Gel",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "211666",
+       "name": "metronidazole 7.5 MG/ML Topical Cream [MetroCream]",
+       "synonym": "MetroCream 0.75 % Topical Cream",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "213120",
+       "name": "metronidazole 10 MG/ML Topical Cream [Noritate]",
+       "synonym": "Noritate 1 % Topical Cream",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "261119",
+       "name": "metronidazole 7.5 MG/ML Topical Lotion [MetroLotion]",
+       "synonym": "MetroLotion 0.75 % Topical Lotion",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2667648",
+       "name": "metronidazole 100 MG/ML Oral Suspension [Likmez]",
+       "synonym": "Likmez 100 MG/ML Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "605730",
+       "name": "metronidazole 0.01 MG/MG Topical Gel [MetroGel]",
+       "synonym": "MetroGel 1 % Topical Gel",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "608934",
+       "name": "metronidazole 0.0075 MG/MG Vaginal Gel [Vandazole]",
+       "synonym": "Vandazole 0.75 % Vaginal Gel",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "687211",
+       "name": "metronidazole 375 MG Oral Capsule [Flagyl]",
+       "synonym": "Flagyl 375 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "701919",
+       "name": "metronidazole 0.0075 MG/MG Topical Gel [Nydamax]",
+       "synonym": "Nydamax 0.75 % Topical Gel",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "103867",
+       "name": "metronidazole 0.25 MG/MG Oral Gel",
+       "synonym": "metronidazole 25 % Oral Gel",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "105304",
+       "name": "metronidazole 40 MG/ML Oral Suspension",
+       "synonym": "metronidazole 200 MG per 5 ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "108302",
+       "name": "diloxanide 250 MG / metronidazole 200 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1294619",
+       "name": "bismuth subcitrate 140 MG / metronidazole 125 MG / tetracycline hydrochloride 125 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "142046",
+       "name": "metronidazole 0.0075 MG/MG Vaginal Gel",
+       "synonym": "metronidazole 0.75 % Vaginal Gel",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1608253",
+       "name": "metronidazole 0.013 MG/MG Vaginal Gel",
+       "synonym": "metronidazole 1.3 % Vaginal Gel",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "199055",
+       "name": "metronidazole 375 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "199326",
+       "name": "metronidazole 200 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "199327",
+       "name": "metronidazole 400 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "199959",
+       "name": "metronidazole 500 MG Rectal Suppository",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "226584",
+       "name": "metronidazole 0.008 MG/MG Topical Gel",
+       "synonym": "metronidazole 0.8 % Topical Gel",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "242736",
+       "name": "metronidazole 7.5 MG/ML Topical Lotion",
+       "synonym": "metronidazole 0.75 % Topical Lotion",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "250261",
+       "name": "metronidazole 1000 MG Rectal Suppository",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2667642",
+       "name": "metronidazole 100 MG/ML Oral Suspension",
+       "synonym": "metronidazole 500 MG per 5 ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2702348",
+       "name": "metronidazole 125 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2702642",
+       "name": "chlorhexidine gluconate 6 MG/ML / metronidazole 2 MG/ML Mouthwash",
+       "synonym": "chlorhexidine digluconate 0.6 % / metronidazole 0.2 % Mouthwash",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "311678",
+       "name": "metronidazole 7.5 MG/ML Topical Cream",
+       "synonym": "metronidazole 0.75 % Topical Cream",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "311679",
+       "name": "metronidazole 0.0075 MG/MG Topical Gel",
+       "synonym": "metronidazole 0.75 % Topical Gel",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "311680",
+       "name": "metronidazole 10 MG/ML Topical Cream",
+       "synonym": "metronidazole 1 % Topical Cream",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "311681",
+       "name": "metronidazole 500 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "311683",
+       "name": "100 ML metronidazole 5 MG/ML Injection",
+       "synonym": "metronidazole 500 MG per 100 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "314106",
+       "name": "metronidazole 250 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "577237",
+       "name": "metronidazole 0.01 MG/MG Topical Gel",
+       "synonym": "metronidazole 1 % Topical Gel",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "636559",
+       "name": "24 HR metronidazole 750 MG Extended Release Oral Tablet",
+       "synonym": "metronidazole 750 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "687231",
+       "name": "bismuth biskalcitrate 140 MG / metronidazole 125 MG / tetracycline 125 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

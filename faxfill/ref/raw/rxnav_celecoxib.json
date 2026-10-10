@@ -1,0 +1,217 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=celecoxib",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:41-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "2049593",
+       "name": "amlodipine 2.5 MG / celecoxib 200 MG Oral Tablet [Consensi]",
+       "synonym": "Consensi 2.5 MG / 200 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "213468",
+       "name": "celecoxib 100 MG Oral Capsule [Celebrex]",
+       "synonym": "Celebrex 100 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "213469",
+       "name": "celecoxib 200 MG Oral Capsule [Celebrex]",
+       "synonym": "Celebrex 200 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2266816",
+       "name": "amlodipine 10 MG / celecoxib 200 MG Oral Tablet [Consensi]",
+       "synonym": "Consensi 10 MG / 200 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2266818",
+       "name": "amlodipine 5 MG / celecoxib 200 MG Oral Tablet [Consensi]",
+       "synonym": "Consensi 5 MG / 200 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2373460",
+       "name": "celecoxib 25 MG/ML Oral Solution [Elyxyb]",
+       "synonym": "Elyxyb 120 MG per 4.8 mL Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2588484",
+       "name": "celecoxib 56 MG / tramadol hydrochloride 44 MG Oral Tablet [Seglentis]",
+       "synonym": "Seglentis (celecoxib 56 MG / tramadol hydrochloride 44 MG (equivalent to tramadol 39 MG) ) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2721535",
+       "name": "celecoxib 10 MG/ML Oral Suspension [Vyscoxa]",
+       "synonym": "Vyscoxa 10 MG/ML Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "352314",
+       "name": "celecoxib 400 MG Oral Capsule [Celebrex]",
+       "synonym": "Celebrex 400 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "686381",
+       "name": "celecoxib 50 MG Oral Capsule [Celebrex]",
+       "synonym": "Celebrex 50 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "2047715",
+       "name": "amlodipine 2.5 MG / celecoxib 200 MG Oral Tablet",
+       "synonym": "amlodipine 2.5 MG (as amlodipine besylate 3.47 MG) / celecoxib 200 mg Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2047716",
+       "name": "amlodipine 5 MG / celecoxib 200 MG Oral Tablet",
+       "synonym": "amlodipine 5 MG (as amlodipine besylate 6.93 MG) / celecoxib 200 mg Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2047717",
+       "name": "amlodipine 10 MG / celecoxib 200 MG Oral Tablet",
+       "synonym": "amlodipine 10 MG (as amlodipine besylate 13.87 MG) / celecoxib 200 mg Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "205322",
+       "name": "celecoxib 100 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "205323",
+       "name": "celecoxib 200 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2373454",
+       "name": "celecoxib 25 MG/ML Oral Solution",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2588478",
+       "name": "celecoxib 56 MG / tramadol hydrochloride 44 MG Oral Tablet",
+       "synonym": "celecoxib 56 MG / tramadol hydrochloride 44 MG (equivalent to tramadol 39 MG) Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2721529",
+       "name": "celecoxib 10 MG/ML Oral Suspension",
+       "synonym": "celecoxib 10 MG per 1 ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "349514",
+       "name": "celecoxib 400 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "430890",
+       "name": "celecoxib 200 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "686379",
+       "name": "celecoxib 50 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

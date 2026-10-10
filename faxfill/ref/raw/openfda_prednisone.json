@@ -1,0 +1,124 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22prednisone%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:53-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 331
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "85766-002",
+    "generic_name": "PREDNISONE",
+    "labeler_name": "Sportpharm LLC",
+    "brand_name": "prednisone",
+    "active_ingredients": [
+     {
+      "name": "PREDNISONE",
+      "strength": "20 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "85766-002-00",
+      "description": "1000 TABLET in 1 BOTTLE, PLASTIC (85766-002-00)",
+      "marketing_start_date": "20250619",
+      "sample": false
+     },
+     {
+      "package_ndc": "85766-002-01",
+      "description": "100 TABLET in 1 BOTTLE, PLASTIC (85766-002-01)",
+      "marketing_start_date": "20250619",
+      "sample": false
+     },
+     {
+      "package_ndc": "85766-002-05",
+      "description": "500 TABLET in 1 BOTTLE, PLASTIC (85766-002-05)",
+      "marketing_start_date": "20250619",
+      "sample": false
+     },
+     {
+      "package_ndc": "85766-002-18",
+      "description": "18 TABLET in 1 BOTTLE, PLASTIC (85766-002-18)",
+      "marketing_start_date": "20250619",
+      "sample": false
+     },
+     {
+      "package_ndc": "85766-002-20",
+      "description": "20 TABLET in 1 BOTTLE, PLASTIC (85766-002-20)",
+      "marketing_start_date": "20250619",
+      "sample": false
+     },
+     {
+      "package_ndc": "85766-002-30",
+      "description": "30 TABLET in 1 BOTTLE, PLASTIC (85766-002-30)",
+      "marketing_start_date": "20250619",
+      "sample": false
+     },
+     {
+      "package_ndc": "85766-002-60",
+      "description": "60 TABLET in 1 BOTTLE, PLASTIC (85766-002-60)",
+      "marketing_start_date": "20250619",
+      "sample": false
+     },
+     {
+      "package_ndc": "85766-002-90",
+      "description": "90 TABLET in 1 BOTTLE, PLASTIC (85766-002-90)",
+      "marketing_start_date": "20250619",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {
+     "manufacturer_name": [
+      "Sportpharm LLC"
+     ],
+     "rxcui": [
+      "198145",
+      "312615"
+     ],
+     "spl_set_id": [
+      "0e3d2f62-2b02-4ddf-a983-abb71ff31e36"
+     ],
+     "nui": [
+      "N0000175576",
+      "N0000175450"
+     ],
+     "pharm_class_epc": [
+      "Corticosteroid [EPC]"
+     ],
+     "pharm_class_moa": [
+      "Corticosteroid Hormone Receptor Agonists [MoA]"
+     ],
+     "unii": [
+      "VB0R961HZT"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "TABLET",
+    "spl_id": "49ee743e-9fb2-fcb7-e063-6294a90aeefd",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20210901",
+    "product_id": "85766-002_49ee743e-9fb2-fcb7-e063-6294a90aeefd",
+    "application_number": "ANDA208412",
+    "brand_name_base": "prednisone",
+    "pharm_class": [
+     "Corticosteroid Hormone Receptor Agonists [MoA]",
+     "Corticosteroid [EPC]"
+    ]
+   }
+  ]
+ }
+}

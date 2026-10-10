@@ -1,0 +1,48 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22sumatriptan%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:38-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 163
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "50370-0029",
+    "generic_name": "Sumatriptan",
+    "labeler_name": "MSN Pharmachem Private Limited",
+    "active_ingredients": [
+     {
+      "name": "SUMATRIPTAN",
+      "strength": "1 kg/kg"
+     }
+    ],
+    "finished": false,
+    "packaging": [
+     {
+      "package_ndc": "50370-0029-1",
+      "description": "60 kg in 1 DRUM (50370-0029-1)",
+      "marketing_start_date": "29-DEC-11"
+     }
+    ],
+    "listing_expiration_date": "20261231",
+    "openfda": {},
+    "marketing_category": "BULK INGREDIENT",
+    "dosage_form": "POWDER",
+    "spl_id": "0c0fab8f-f2d6-8719-e063-6394a90a6a65",
+    "product_type": "BULK INGREDIENT",
+    "marketing_start_date": "20111229",
+    "product_id": "50370-0029_0c0fab8f-f2d6-8719-e063-6394a90a6a65",
+    "brand_name_base": null
+   }
+  ]
+ }
+}

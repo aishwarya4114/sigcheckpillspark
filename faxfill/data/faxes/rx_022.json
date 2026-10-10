@@ -1,0 +1,145 @@
+{
+ "id": "rx_022",
+ "image": "rx_022.png",
+ "synthetic": true,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": 0.38,
+  "blur": 0.5,
+  "noise": 10,
+  "fax_mode": "fine",
+  "level": "light"
+ },
+ "is_clean": false,
+ "trap": "frequency_rule",
+ "fields": {
+  "patient_name": "Kenji Watanabe",
+  "patient_dob": "1985-06-21",
+  "patient_address": "138 W 121st St, Apt 7D, New York, NY 10026",
+  "drug_name": "methotrexate",
+  "strength": "2.5 mg",
+  "strength_value": 2.5,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 4 tablets by mouth once daily",
+  "quantity": 16,
+  "quantity_text": "#16 (sixteen) tablets",
+  "days_supply_stated": null,
+  "refills": 0,
+  "prescriber_name": "Lucia Ferraro, MD",
+  "prescriber_npi": "1512883764",
+  "prescriber_dea": null,
+  "date_written": "2026-10-07",
+  "substitution": "permitted",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   53,
+   22,
+   1433,
+   51
+  ],
+  "clinic": [
+   114,
+   120,
+   714,
+   157
+  ],
+  "prescriber_name": [
+   114,
+   185,
+   438,
+   220
+  ],
+  "prescriber_npi": [
+   200,
+   329,
+   410,
+   357
+  ],
+  "patient_name": [
+   356,
+   437,
+   623,
+   474
+  ],
+  "patient_dob": [
+   1176,
+   433,
+   1366,
+   461
+  ],
+  "patient_address": [
+   356,
+   511,
+   943,
+   542
+  ],
+  "date_written": [
+   357,
+   586,
+   547,
+   614
+  ],
+  "drug_name": [
+   357,
+   706,
+   595,
+   734
+  ],
+  "strength": [
+   622,
+   705,
+   744,
+   741
+  ],
+  "dosage_form": [
+   771,
+   704,
+   874,
+   732
+  ],
+  "directions": [
+   358,
+   833,
+   946,
+   872
+  ],
+  "quantity": [
+   359,
+   925,
+   702,
+   962
+  ],
+  "refills": [
+   359,
+   1017,
+   381,
+   1044
+  ],
+  "substitution": [
+   120,
+   1111,
+   150,
+   1141
+  ]
+ },
+ "expected_flags": [
+  {
+   "field": "directions",
+   "code": "weekly_drug_daily",
+   "why": "Oral methotrexate is dosed once weekly; 'once daily' is a known fatal error pattern."
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": [],
+ "meta": {
+  "rxcui": "105585",
+  "fax_from": "(212) 555-0125",
+  "sent": "2026-10-07 15:41",
+  "patient_id": "PT003",
+  "prescriber_id": "P112",
+  "prescriber_in_directory": true
+ }
+}

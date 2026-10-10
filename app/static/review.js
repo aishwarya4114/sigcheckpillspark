@@ -61,9 +61,16 @@ function renderQueue() {
     ? visible.map((d) => {
         const [lab, tone] = OPS[d.workflow_status] || [d.workflow_label || d.status, ""];
         const acts = d.workflow_status === "approved" ? "" : d.actions ? ` · ${d.actions} action${d.actions === 1 ? "" : "s"}` : "";
-        return `<button class="queue-item ${cur?.id === d.id ? "active" : ""}" data-doc="${esc(d.id)}" aria-pressed="${cur?.id === d.id}"><span class="queue-person">${esc(d.patient || (d.workflow_status === "blocked" ? "Blocked document" : "Prescription document"))}</span><span class="queue-drug">${esc(d.workflow_status === "blocked" ? (d.headline || "Blocked") : (d.drug || "Awaiting extraction"))} · received ${esc(ago(d.received_at))}</span><span class="queue-op ${tone}">${esc(lab)}${esc(acts)}</span><span class="queue-src muted small">${esc(srcKind(d.source))}<span class="tech-only"> · r${esc(d.revision)}</span></span></button>`;
+        return `<button class="queue-item ${cur?.id === d.id ? "active" : ""}" data-doc="${esc(d.id)}" aria-pressed="${cur?.id === d.id}"><span class="queue-person">${esc(d.patient || (d.workflow_status === "blocked" ? "Blocked document" : "Prescription document"))}</span><span class="queue-drug">${esc(d.workflow_status === "blocked" ? (d.headline || "Blocked") : (d.drug || "Awaiting extraction"))}</span><span class="queue-op ${tone}"><b>${esc(lab)}${esc(acts)}</b><small>${esc(d.next_action || "Open case")}</small></span><span class="queue-src muted small">${esc(ago(d.received_at))}<small>${esc(srcKind(d.source))}<span class="tech-only"> · r${esc(d.revision)}</span></small></span></button>`;
       }).join("")
     : '<div class="queue-empty">' + (filter === "all" ? "Your queue is clear. Upload a fax or explore a sample." : "Nothing in this step right now.") + "</div>";
+}
+function showQueueView() {
+  cur = null;
+  selected = null;
+  history.replaceState(null, "", location.pathname);
+  document.body.classList.add("queue-mode");
+  renderQueue();
 }
 async function refresh() {
   queue = await api("/api/documents");
@@ -88,6 +95,7 @@ async function openDoc(id) {
     const doc = await api("/api/documents/" + encodeURIComponent(id) + "/open", { method: "POST" });
     if (seq !== openSequence) return;
     cur = doc;
+    document.body.classList.remove("queue-mode");
     selected = null;
     zoom = 100;
     history.replaceState(null, "", "#" + encodeURIComponent(id));
@@ -483,7 +491,7 @@ document.addEventListener("click", async (e) => {
     return;
   }
   if (b.hasAttribute("data-back-queue")) {
-    location.href = "/";
+    showQueueView();
     return;
   }
   if (b.dataset.filter) {
@@ -688,6 +696,7 @@ async function boot() {
       await openDoc(docId);
       if (field && cur?.fields?.[field]) { selected = field; renderPanel(); }
     }
+    else showQueueView();
     setInterval(() => refresh().catch(() => {}), 5000);
   } catch (e) {
     $("#queue").innerHTML =

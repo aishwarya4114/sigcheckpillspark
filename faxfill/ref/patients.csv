@@ -1,0 +1,16 @@
+patient_id,first_name,last_name,dob,sex,address,phone,allergies
+PT001,Marcus,Bell,1958-03-14,M,"431 Claremont Ave, Apt 7A, New York, NY 10026",(917) 555-0200,none
+PT002,Sofia,Alvarez,1972-11-02,F,"648 W 121st St, Apt 6A, New York, NY 10027",(917) 555-0201,penicillin
+PT003,Kenji,Watanabe,1985-06-21,M,"138 W 121st St, Apt 7D, New York, NY 10026",(917) 555-0202,sulfonamide
+PT004,Amara,Nwosu,1990-01-30,F,"346 W 121st St, Apt 7A, New York, NY 10026",(917) 555-0203,none
+PT005,Liam,O'Connell,1946-09-08,M,"328 W 141st St, Apt 1D, New York, NY 10026",(917) 555-0204,nsaid
+PT006,Isabel,Moreau,1963-04-17,F,"326 W 118th St, Apt 3C, New York, NY 10031",(917) 555-0205,codeine
+PT007,Dev,Malhotra,1979-12-05,M,"247 Hamilton Pl, Apt 2C, New York, NY 10027",(917) 555-0206,none
+PT008,Hazel,Quinn,2001-07-26,F,"205 W 141st St, Apt 4C, New York, NY 10026",(917) 555-0207,penicillin;latex
+PT009,Tobias,Lindgren,1955-02-11,M,"660 W 121st St, Apt 1B, New York, NY 10031",(917) 555-0208,none
+PT010,Yara,Haddad,1988-10-19,F,"644 Convent Ave, Apt 6D, New York, NY 10031",(917) 555-0209,nsaid
+PT011,Winston,Achebe,1968-05-03,M,"470 W 135th St, Apt 4B, New York, NY 10027",(917) 555-0210,none
+PT012,Clara,Jensen,1994-08-12,F,"183 W 141st St, Apt 5D, New York, NY 10030",(917) 555-0211,sulfonamide
+PT013,Rafael,Duarte,1950-12-24,M,"559 W 135th St, Apt 2A, New York, NY 10031",(917) 555-0212,none
+PT014,Ingrid,Solberg,1983-03-09,F,"268 St Nicholas Ave, Apt 3D, New York, NY 10031",(917) 555-0213,cephalosporin
+PT015,Jamal,Pierce,1975-06-30,M,"140 W 121st St, Apt 6C, New York, NY 10030",(917) 555-0214,none

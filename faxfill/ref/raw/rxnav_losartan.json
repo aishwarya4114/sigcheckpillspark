@@ -1,0 +1,154 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=losartan",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:27-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "2709046",
+       "name": "losartan potassium 10 MG/ML Oral Suspension [Arbli]",
+       "synonym": "losartan K+ 10 MG/ML Oral Suspension [Arbli]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "979466",
+       "name": "hydrochlorothiazide 12.5 MG / losartan potassium 100 MG Oral Tablet [Hyzaar]",
+       "synonym": "Hyzaar 100/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "979470",
+       "name": "hydrochlorothiazide 12.5 MG / losartan potassium 50 MG Oral Tablet [Hyzaar]",
+       "synonym": "Hyzaar 50/12.5 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "979473",
+       "name": "hydrochlorothiazide 25 MG / losartan potassium 100 MG Oral Tablet [Hyzaar]",
+       "synonym": "Hyzaar 100/25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "979482",
+       "name": "losartan potassium 100 MG Oral Tablet [Cozaar]",
+       "synonym": "Cozaar 100 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "979487",
+       "name": "losartan potassium 25 MG Oral Tablet [Cozaar]",
+       "synonym": "Cozaar 25 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "979494",
+       "name": "losartan potassium 50 MG Oral Tablet [Cozaar]",
+       "synonym": "Cozaar 50 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "2709039",
+       "name": "losartan potassium 10 MG/ML Oral Suspension",
+       "synonym": "losartan K+ 10 MG/ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "979464",
+       "name": "hydrochlorothiazide 12.5 MG / losartan potassium 100 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG / Losartan K+ 100 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "979468",
+       "name": "hydrochlorothiazide 12.5 MG / losartan potassium 50 MG Oral Tablet",
+       "synonym": "HCTZ 12.5 MG / Losartan K+ 50 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "979471",
+       "name": "hydrochlorothiazide 25 MG / losartan potassium 100 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / Losartan K+ 100 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "979480",
+       "name": "losartan potassium 100 MG Oral Tablet",
+       "synonym": "Losartan K+ 100 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "979485",
+       "name": "losartan potassium 25 MG Oral Tablet",
+       "synonym": "Losartan K+ 25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "979492",
+       "name": "losartan potassium 50 MG Oral Tablet",
+       "synonym": "Losartan K+ 50 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

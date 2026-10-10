@@ -1,0 +1,199 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=metoprolol%20tartrate",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:28-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "2712152",
+       "name": "metoprolol tartrate 10 MG/ML Oral Solution [Lopressor]",
+       "synonym": "Lopressor 10 MG per 1 ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2723027",
+       "name": "metoprolol tartrate 12.5 MG Oral Tablet [Lopressor]",
+       "synonym": "Lopressor 12.5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "866498",
+       "name": "hydrochlorothiazide 25 MG / metoprolol tartrate 100 MG Oral Tablet [Lopressor HCT]",
+       "synonym": "Lopressor HCT 100/25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "866502",
+       "name": "hydrochlorothiazide 25 MG / metoprolol tartrate 50 MG Oral Tablet [Lopressor HCT]",
+       "synonym": "Lopressor HCT 50/25 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "866513",
+       "name": "metoprolol tartrate 100 MG Oral Tablet [Lopressor]",
+       "synonym": "Lopressor 100 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "866516",
+       "name": "metoprolol tartrate 50 MG Oral Tablet [Lopressor]",
+       "synonym": "Lopressor 50 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "1111439",
+       "name": "24 HR hydrochlorothiazide 25 MG / metoprolol tartrate 200 MG Extended Release Oral Tablet",
+       "synonym": "24 HR HCTZ 25 MG / Metoprolol Tartrate 200 MG Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1606347",
+       "name": "metoprolol tartrate 37.5 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1606349",
+       "name": "metoprolol tartrate 75 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1744259",
+       "name": "5 ML metoprolol tartrate 1 MG/ML Cartridge",
+       "synonym": "metoprolol tartrate 5 MG per 5 ML Cartridge",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2712147",
+       "name": "metoprolol tartrate 10 MG/ML Oral Solution",
+       "synonym": "metoprolol tartrate 10 MG per 1 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2723025",
+       "name": "metoprolol tartrate 12.5 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "866479",
+       "name": "hydrochlorothiazide 25 MG / metoprolol tartrate 100 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / metoprolol tartrate 100 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "866482",
+       "name": "hydrochlorothiazide 25 MG / metoprolol tartrate 50 MG Oral Tablet",
+       "synonym": "HCTZ 25 MG / metoprolol tartrate 50 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "866491",
+       "name": "hydrochlorothiazide 50 MG / metoprolol tartrate 100 MG Oral Tablet",
+       "synonym": "HCTZ 50 MG / metoprolol tartrate 100 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "866508",
+       "name": "5 ML metoprolol tartrate 1 MG/ML Injection",
+       "synonym": "metoprolol tartrate 5 MG per 5 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "866511",
+       "name": "metoprolol tartrate 100 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "866514",
+       "name": "metoprolol tartrate 50 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "866924",
+       "name": "metoprolol tartrate 25 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

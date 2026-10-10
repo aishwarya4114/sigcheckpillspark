@@ -1,0 +1,119 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22warfarin%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:34:00-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 154
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "71335-0270",
+    "generic_name": "Warfarin Sodium",
+    "labeler_name": "Bryant Ranch Prepack",
+    "brand_name": "Warfarin Sodium",
+    "active_ingredients": [
+     {
+      "name": "WARFARIN SODIUM",
+      "strength": "1 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "71335-0270-1",
+      "description": "30 TABLET in 1 BOTTLE (71335-0270-1)",
+      "marketing_start_date": "20220209",
+      "sample": false
+     },
+     {
+      "package_ndc": "71335-0270-2",
+      "description": "60 TABLET in 1 BOTTLE (71335-0270-2)",
+      "marketing_start_date": "20220209",
+      "sample": false
+     },
+     {
+      "package_ndc": "71335-0270-3",
+      "description": "100 TABLET in 1 BOTTLE (71335-0270-3)",
+      "marketing_start_date": "20220209",
+      "sample": false
+     },
+     {
+      "package_ndc": "71335-0270-4",
+      "description": "50 TABLET in 1 BOTTLE (71335-0270-4)",
+      "marketing_start_date": "20220209",
+      "sample": false
+     },
+     {
+      "package_ndc": "71335-0270-5",
+      "description": "90 TABLET in 1 BOTTLE (71335-0270-5)",
+      "marketing_start_date": "20220209",
+      "sample": false
+     },
+     {
+      "package_ndc": "71335-0270-6",
+      "description": "21 TABLET in 1 BOTTLE (71335-0270-6)",
+      "marketing_start_date": "20220209",
+      "sample": false
+     },
+     {
+      "package_ndc": "71335-0270-7",
+      "description": "15 TABLET in 1 BOTTLE (71335-0270-7)",
+      "marketing_start_date": "20220209",
+      "sample": false
+     },
+     {
+      "package_ndc": "71335-0270-8",
+      "description": "20 TABLET in 1 BOTTLE (71335-0270-8)",
+      "marketing_start_date": "20220209",
+      "sample": false
+     },
+     {
+      "package_ndc": "71335-0270-9",
+      "description": "10 TABLET in 1 BOTTLE (71335-0270-9)",
+      "marketing_start_date": "20220209",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20261231",
+    "openfda": {
+     "manufacturer_name": [
+      "Bryant Ranch Prepack"
+     ],
+     "rxcui": [
+      "855288"
+     ],
+     "spl_set_id": [
+      "a1860448-d4ef-40f2-b096-056429ca3aea"
+     ],
+     "unii": [
+      "6153CWM0CL"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "TABLET",
+    "spl_id": "5ee2776f-c27c-445e-8fca-8ec4263cebad",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20151019",
+    "product_id": "71335-0270_5ee2776f-c27c-445e-8fca-8ec4263cebad",
+    "application_number": "ANDA040616",
+    "brand_name_base": "Warfarin Sodium",
+    "pharm_class": [
+     "Vitamin K Antagonist [EPC]",
+     "Vitamin K Inhibitors [MoA]"
+    ]
+   }
+  ]
+ }
+}

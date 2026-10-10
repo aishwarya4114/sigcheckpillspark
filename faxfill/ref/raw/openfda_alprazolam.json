@@ -1,0 +1,144 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22alprazolam%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:48-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 167
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "67544-415",
+    "generic_name": "alprazolam",
+    "labeler_name": "Aphena Pharma Solutions - Tennessee, LLC",
+    "dea_schedule": "CIV",
+    "brand_name": "Alprazolam",
+    "active_ingredients": [
+     {
+      "name": "ALPRAZOLAM",
+      "strength": ".5 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "67544-415-15",
+      "description": "15 TABLET in 1 BOTTLE (67544-415-15)",
+      "marketing_start_date": "20060510",
+      "sample": false
+     },
+     {
+      "package_ndc": "67544-415-20",
+      "description": "20 TABLET in 1 BOTTLE (67544-415-20)",
+      "marketing_start_date": "20100426",
+      "sample": false
+     },
+     {
+      "package_ndc": "67544-415-30",
+      "description": "30 TABLET in 1 BOTTLE (67544-415-30)",
+      "marketing_start_date": "20050623",
+      "sample": false
+     },
+     {
+      "package_ndc": "67544-415-45",
+      "description": "45 TABLET in 1 BOTTLE (67544-415-45)",
+      "marketing_start_date": "20060525",
+      "sample": false
+     },
+     {
+      "package_ndc": "67544-415-53",
+      "description": "60 TABLET in 1 BOTTLE (67544-415-53)",
+      "marketing_start_date": "20050623",
+      "sample": false
+     },
+     {
+      "package_ndc": "67544-415-55",
+      "description": "75 TABLET in 1 BOTTLE (67544-415-55)",
+      "marketing_start_date": "20100426",
+      "sample": false
+     },
+     {
+      "package_ndc": "67544-415-60",
+      "description": "90 TABLET in 1 BOTTLE (67544-415-60)",
+      "marketing_start_date": "20050623",
+      "sample": false
+     },
+     {
+      "package_ndc": "67544-415-70",
+      "description": "120 TABLET in 1 BOTTLE (67544-415-70)",
+      "marketing_start_date": "20050914",
+      "sample": false
+     },
+     {
+      "package_ndc": "67544-415-75",
+      "description": "150 TABLET in 1 BOTTLE (67544-415-75)",
+      "marketing_start_date": "20060608",
+      "sample": false
+     },
+     {
+      "package_ndc": "67544-415-80",
+      "description": "180 TABLET in 1 BOTTLE (67544-415-80)",
+      "marketing_start_date": "20060511",
+      "sample": false
+     },
+     {
+      "package_ndc": "67544-415-92",
+      "description": "270 TABLET in 1 BOTTLE (67544-415-92)",
+      "marketing_start_date": "20100426",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20261231",
+    "openfda": {
+     "manufacturer_name": [
+      "Aphena Pharma Solutions - Tennessee, LLC"
+     ],
+     "rxcui": [
+      "197321",
+      "308047",
+      "308048"
+     ],
+     "spl_set_id": [
+      "964d7f43-34a6-45af-a95f-3b9ade17c6a5"
+     ],
+     "nui": [
+      "N0000175694",
+      "M0002356"
+     ],
+     "pharm_class_epc": [
+      "Benzodiazepine [EPC]"
+     ],
+     "pharm_class_cs": [
+      "Benzodiazepines [CS]"
+     ],
+     "unii": [
+      "YU55MQ3IZY"
+     ]
+    },
+    "marketing_category": "NDA AUTHORIZED GENERIC",
+    "dosage_form": "TABLET",
+    "spl_id": "51152b89-539c-4c80-bb84-d7f2dc082953",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "19811016",
+    "product_id": "67544-415_51152b89-539c-4c80-bb84-d7f2dc082953",
+    "application_number": "NDA018276",
+    "brand_name_base": "Alprazolam",
+    "pharm_class": [
+     "Benzodiazepine [EPC]",
+     "Benzodiazepines [CS]"
+    ]
+   }
+  ]
+ }
+}

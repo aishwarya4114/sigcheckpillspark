@@ -1,0 +1,151 @@
+{
+ "id": "rx_007",
+ "image": "rx_007.png",
+ "synthetic": true,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": -0.36,
+  "blur": 0.9,
+  "noise": 22,
+  "fax_mode": "standard",
+  "level": "medium"
+ },
+ "is_clean": false,
+ "trap": "trailing_zero",
+ "fields": {
+  "patient_name": "Isabel Moreau",
+  "patient_dob": "1963-04-17",
+  "patient_address": "326 W 118th St, Apt 3C, New York, NY 10031",
+  "drug_name": "clonazepam",
+  "strength": "1.0 mg",
+  "strength_value": 1,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth twice daily for 30 days",
+  "quantity": 60,
+  "quantity_text": "#60 (sixty) tablets",
+  "days_supply_stated": 30,
+  "refills": 0,
+  "prescriber_name": "Daniel Okafor, MD",
+  "prescriber_npi": "1077842080",
+  "prescriber_dea": "BO6286795",
+  "date_written": "2026-10-05",
+  "substitution": "permitted",
+  "notes": null
+ },
+ "field_boxes": {
+  "fax_header": [
+   67,
+   21,
+   1447,
+   50
+  ],
+  "clinic": [
+   126,
+   114,
+   754,
+   160
+  ],
+  "prescriber_name": [
+   126,
+   177,
+   455,
+   212
+  ],
+  "prescriber_npi": [
+   210,
+   322,
+   420,
+   350
+  ],
+  "prescriber_dea": [
+   720,
+   325,
+   922,
+   353
+  ],
+  "patient_name": [
+   364,
+   433,
+   605,
+   461
+  ],
+  "patient_dob": [
+   1184,
+   438,
+   1374,
+   466
+  ],
+  "patient_address": [
+   364,
+   509,
+   952,
+   540
+  ],
+  "date_written": [
+   363,
+   581,
+   553,
+   609
+  ],
+  "drug_name": [
+   362,
+   701,
+   585,
+   737
+  ],
+  "strength": [
+   613,
+   703,
+   734,
+   738
+  ],
+  "dosage_form": [
+   762,
+   703,
+   864,
+   731
+  ],
+  "directions": [
+   361,
+   831,
+   1135,
+   871
+  ],
+  "quantity": [
+   361,
+   921,
+   660,
+   958
+  ],
+  "refills": [
+   360,
+   1011,
+   382,
+   1038
+  ],
+  "substitution": [
+   120,
+   1101,
+   150,
+   1132
+  ]
+ },
+ "expected_flags": [
+  {
+   "field": "strength",
+   "code": "trailing_zero",
+   "why": "Printed '1.0 mg'. Trailing zero can be misread as 10 mg (10x) on a controlled substance. Confirm 1 mg."
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": [],
+ "meta": {
+  "rxcui": "197528",
+  "fax_from": "(212) 555-0111",
+  "sent": "2026-10-05 09:46",
+  "patient_id": "PT006",
+  "prescriber_id": "P105",
+  "prescriber_in_directory": true
+ }
+}

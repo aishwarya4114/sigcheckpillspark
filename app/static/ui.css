@@ -397,6 +397,13 @@ details[open] summary:after {
 .sidebar .brand {
   padding: 25px 22px 24px;
 }
+body:not(.queue-mode) .app-shell{grid-template-columns:88px minmax(0,1fr)}
+body:not(.queue-mode) .sidebar .brand{padding:22px 26px;overflow:hidden}
+body:not(.queue-mode) .sidebar .brand-name,body:not(.queue-mode) .sidebar .badge,body:not(.queue-mode) .workspace-label,body:not(.queue-mode) .queue-heading,body:not(.queue-mode) .sidebar .segmented,body:not(.queue-mode) .queue,body:not(.queue-mode) .sidebar-bottom{display:none}
+body:not(.queue-mode) .side-actions{padding:0 18px}
+body:not(.queue-mode) .upload-button{width:52px;height:52px;padding:0;justify-content:center}
+body:not(.queue-mode) .upload-label{display:none}
+.back-queue{display:inline-flex;align-items:center;gap:6px;border:0;background:transparent;padding:5px 6px;color:var(--ink);font-size:14px;font-weight:650}.back-queue .icon{width:14px;transform:rotate(180deg)}
 .workspace-label {
   padding: 0 23px 22px;
   display: flex;
@@ -424,6 +431,34 @@ details[open] summary:after {
   justify-content: space-between;
   margin: 28px 20px 12px;
 }
+.queue-heading h1,.queue-heading p{display:none}
+.queue-columns{display:none}
+
+/* The queue is the pharmacist's worklist; opening a case switches to focused review. */
+body.queue-mode .app-shell{display:block;height:100dvh;overflow:auto;background:var(--soft)}
+body.queue-mode .sidebar{max-width:1180px;min-height:100dvh;margin:0 auto;border:0;background:transparent;padding:0 28px 40px}
+body.queue-mode .sidebar .brand{padding:26px 0 22px}
+body.queue-mode .workspace-label{padding:0 0 22px}
+body.queue-mode .side-actions{padding:0;position:absolute;top:24px;right:max(28px,calc((100vw - 1180px)/2 + 28px));width:190px}
+body.queue-mode .queue-heading{margin:18px 0 22px;align-items:flex-start}
+body.queue-mode .queue-heading>div{display:block}
+body.queue-mode .queue-heading h1{display:block;font-size:30px;margin:5px 0 4px}
+body.queue-mode .queue-heading p{display:block;color:var(--muted);margin:0;font-size:14px}
+body.queue-mode .queue-count{font-size:14px;padding:5px 10px}
+body.queue-mode .sidebar .segmented{margin:0 0 18px;display:flex;flex-wrap:nowrap;width:max-content;background:#e7ebe7;padding:4px;border-radius:10px}
+body.queue-mode .sidebar .segmented button{min-height:38px;padding:7px 14px}
+body.queue-mode .queue-columns{display:grid;grid-template-columns:minmax(260px,1.2fr) minmax(280px,1.4fr) 120px;gap:18px;padding:0 18px 8px;color:var(--muted);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+body.queue-mode .queue{overflow:visible;padding:0;min-height:200px}
+body.queue-mode .queue-item{display:grid;grid-template-columns:minmax(260px,1.2fr) minmax(280px,1.4fr) 120px;gap:4px 18px;align-items:center;background:#fff;border-color:var(--line);padding:17px 18px;margin-bottom:8px;box-shadow:0 1px 2px rgba(31,50,41,.04)}
+body.queue-mode .queue-item:hover{border-color:#a8c4b3;box-shadow:0 4px 14px rgba(31,50,41,.07)}
+body.queue-mode .queue-person{grid-column:1;font-size:15px;margin:0}
+body.queue-mode .queue-drug{grid-column:1;font-size:13px;white-space:normal}
+body.queue-mode .queue-op{grid-column:2;grid-row:1/3;margin:0;justify-self:start;font-size:13px;line-height:1.5}
+body.queue-mode .queue-src{grid-column:3;grid-row:1/3;margin:0;text-align:right;font-size:13px}
+body.queue-mode .queue-item.active:before{display:none}
+body.queue-mode .sidebar-bottom{display:none}
+body.queue-mode .work-area{display:none}
+@media(max-width:760px){body.queue-mode .sidebar{padding:0 16px 28px}body.queue-mode .side-actions{position:static;width:auto;padding:0 0 16px}body.queue-mode .queue-columns{display:none}body.queue-mode .queue-item{grid-template-columns:1fr auto}body.queue-mode .queue-op{grid-column:1;grid-row:auto}body.queue-mode .queue-src{grid-column:2;grid-row:1/4}}
 .queue-count {
   font-size: 11px;
   background: #e9eee8;
@@ -1342,6 +1377,7 @@ details[open] summary:after {
 .queue-op{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;background:#eef0f2;color:#374151}
 .queue-op.amber{background:#fff1d6;color:#8a5a00}.queue-op.red{background:#fde8e6;color:#b42318}.queue-op.green{background:#e3f3ea;color:#17703f}.queue-op.blue{background:#e8efff;color:#1d4ed8}
 .queue-item .queue-op{margin-top:4px}.queue-src{display:block;margin-top:2px}
+.queue-op small,.queue-src small{display:block;margin-top:3px;font-size:12px;font-weight:500;color:var(--muted);white-space:normal}.queue-op b{font-weight:700}
 .case-head{margin-bottom:10px}.case-meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .next-action{margin:8px 0 0;font-size:16px;font-weight:650;line-height:1.35}.next-action .eyebrow{display:block;font-size:11px;margin-bottom:2px}
 .actions-panel{margin:12px 0}.action-group{border:1px solid #e5e7eb;border-radius:10px;padding:10px;margin-top:8px}
@@ -1395,4 +1431,5 @@ body{font-size:15px}.small{font-size:13px}.muted{color:var(--muted)}
 .topnav a,.topnav-btn{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:6px 10px;border-radius:8px;font-size:13.5px;color:var(--ink);text-decoration:none;background:none;border:0;cursor:pointer}
 .topnav a:hover,.topnav-btn:hover{background:var(--soft)}.topnav .icon{width:15px;height:15px}
 @media (max-width:900px){.topnav{gap:2px}.topnav a,.topnav-btn{padding:6px 7px;font-size:12.5px}}
+.heldout-results{padding:22px;margin:24px 0}.heldout-results .metric-grid{margin:18px 0}.heldout-results .metric{box-shadow:none;background:var(--soft)}.heldout-results details{border-top:1px solid var(--line);padding-top:14px}.scorecard-subhead{margin:28px 0 14px}
 .footer-pair{display:grid;grid-template-columns:1fr 1fr;gap:8px}.secondary.big-action{background:#fff;border:1px solid #216b55;color:#216b55}

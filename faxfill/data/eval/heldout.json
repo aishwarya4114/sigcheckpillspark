@@ -1,0 +1,332 @@
+{
+ "set": "held-out",
+ "rules_frozen_at": "2abbbb8",
+ "seed": 90417,
+ "faxes": 20,
+ "clean": 10,
+ "traps": [
+  {
+   "fax": "ho_004",
+   "page": 1,
+   "field": "_order",
+   "code": "page_count_mismatch",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "PAGE_COUNT_MISMATCH"
+   ],
+   "expected_check": [
+    "PAGE_COUNT_MISMATCH"
+   ]
+  },
+  {
+   "fax": "ho_007",
+   "page": 1,
+   "field": "directions",
+   "code": "conflicting_directions",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "CONFLICTING_DIRECTIONS"
+   ],
+   "expected_check": [
+    "CONFLICTING_DIRECTIONS"
+   ]
+  },
+  {
+   "fax": "ho_008",
+   "page": 1,
+   "field": "drug_name",
+   "code": "allergy_conflict",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "ALLERGY_CONFLICT"
+   ],
+   "expected_check": [
+    "ALLERGY_CONFLICT"
+   ]
+  },
+  {
+   "fax": "ho_009",
+   "page": 1,
+   "field": "prescriber_npi",
+   "code": "npi_checksum",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "NPI_INVALID"
+   ],
+   "expected_check": [
+    "NPI_INVALID"
+   ]
+  },
+  {
+   "fax": "ho_010",
+   "page": 1,
+   "field": "strength",
+   "code": "unreadable",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "UNREADABLE"
+   ],
+   "expected_check": [
+    "READER_ABSTAINED",
+    "READER_DISAGREEMENT",
+    "UNREADABLE"
+   ]
+  },
+  {
+   "fax": "ho_011",
+   "page": 1,
+   "field": "strength",
+   "code": "unit_mismatch",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "UNIT_MISMATCH"
+   ],
+   "expected_check": [
+    "UNIT_MISMATCH"
+   ]
+  },
+  {
+   "fax": "ho_012",
+   "page": 1,
+   "field": "_order",
+   "code": "prompt_injection",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "INJECTION"
+   ],
+   "expected_check": [
+    "INJECTION"
+   ]
+  },
+  {
+   "fax": "ho_014",
+   "page": 1,
+   "field": "strength",
+   "code": "trailing_zero",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "TRAILING_ZERO"
+   ],
+   "expected_check": [
+    "TRAILING_ZERO"
+   ]
+  },
+  {
+   "fax": "ho_015",
+   "page": 1,
+   "field": "quantity",
+   "code": "quantity_vs_duration",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "QTY_DURATION_MISMATCH"
+   ],
+   "expected_check": [
+    "QTY_DURATION_MISMATCH"
+   ]
+  },
+  {
+   "fax": "ho_017",
+   "page": 1,
+   "field": "directions",
+   "code": "weekly_drug_daily",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "METHOTREXATE_DAILY"
+   ],
+   "expected_check": [
+    "METHOTREXATE_DAILY"
+   ]
+  }
+ ],
+ "notes": [
+  "Generated after the rules were frozen; no rule, threshold, prompt or lookup changed before scoring.",
+  "Synthetic faxes. 4 are handwritten, and by chance all 4 are trap faxes, so no clean fax was handwritten.",
+  "Trap types were sampled from the dev-set types; 10 of the 18 types appear (one fax each), so the look-alike, noise, truncation and wrong-patient-page traps were not part of this draw."
+ ],
+ "headline": {
+  "field_accuracy": "244/244 values correct, 2 left empty",
+  "verified_precision": "235/235",
+  "traps_caught": "10/10 (10 for the right reason)",
+  "false_alarms_on_clean": "3 flags on 3 of 10 clean faxes",
+  "wrong_values_passed": 0
+ },
+ "failure_case": {
+  "fax": "ho_003 (clean fax)",
+  "what_happened": "A clean, correctly read fax was sent to a pharmacist with the prescriber marked 'Left edge of fax cut off' (TRUNCATED_EDGE), so it showed as Needs review instead of Ready.",
+  "why": "The truncation check looks for the prescriber block in the top 20% of the page using Tesseract's text: a name with a credential AND an unbroken 10-digit NPI. On this medium-noise, standard-resolution fax Tesseract read the NPI 1969099971 as '196909997 1' (it inserted a space). With no unbroken 10-digit number, the check concluded the block was cut off, even though both vision models read the NPI correctly and the name's evidence box starts 100 px from the edge. The same mis-tokenisation produced the extra TRUNCATED_EDGE flag on ho_010.",
+  "what_would_fix_it": "Decide 'prescriber block missing' from evidence that does not depend on OCR tokenisation: treat the block as present when the two models agree on a valid (Luhn-passing) NPI and the prescriber's evidence box is not at an edge, and allow spaces inside the digit run when searching the OCR text. Re-test on both sets. Not applied: rules were frozen for this evaluation.",
+  "cost": "False alarm only (a pharmacist looks at a correct fax); no wrong value was passed."
+ },
+ "other_false_alarms": [
+  "ho_001 and ho_016 (clean, heavy degradation): PAGE_COUNT_UNKNOWN. Neither model nor any Tesseract pass could read the page number in the header, so the page count could not be confirmed by two sources. This is the designed behaviour (unknown is never a pass) but it costs a pharmacist look on every heavily degraded fax."
+ ],
+ "accuracy": {
+  "correct": 244,
+  "verified": 235,
+  "verified_right": 235,
+  "both_empty": 14,
+  "abstained": 2,
+  "wrong": 0
+ },
+ "per_field": {
+  "patient_name": {
+   "correct": 20
+  },
+  "patient_dob": {
+   "correct": 20
+  },
+  "drug_name": {
+   "correct": 20
+  },
+  "strength": {
+   "correct": 19,
+   "abstained": 1
+  },
+  "dosage_form": {
+   "correct": 20
+  },
+  "directions": {
+   "correct": 20
+  },
+  "quantity": {
+   "correct": 20
+  },
+  "refills": {
+   "correct": 20
+  },
+  "prescriber_name": {
+   "correct": 20
+  },
+  "prescriber_npi": {
+   "correct": 20
+  },
+  "prescriber_dea": {
+   "correct": 5,
+   "both_empty": 14,
+   "abstained": 1
+  },
+  "date_written": {
+   "correct": 20
+  },
+  "substitution": {
+   "correct": 20
+  }
+ },
+ "verified_wrong": [],
+ "clean_flags": [
+  "ho_001 order: PAGE_COUNT_UNKNOWN",
+  "ho_003 p1 prescriber_name: ['TRUNCATED_EDGE'] (value 'Owen Brennan, NP', truth 'Owen Brennan, NP', value right)",
+  "ho_016 order: PAGE_COUNT_UNKNOWN"
+ ],
+ "unexplained_flags": [
+  "ho_010 p1 prescriber_name: ['TRUNCATED_EDGE'] (value right)",
+  "ho_010 p1 prescriber_dea: ['READER_DISAGREEMENT'] (value wrong -> justified)"
+ ],
+ "c_only_flags": {
+  "clean": [],
+  "trap": []
+ },
+ "status": [
+  [
+   "ho_001",
+   "READY",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "ho_002",
+   "READY",
+   "READY"
+  ],
+  [
+   "ho_003",
+   "READY",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "ho_004",
+   "BLOCKED",
+   "BLOCKED"
+  ],
+  [
+   "ho_005",
+   "READY",
+   "READY"
+  ],
+  [
+   "ho_006",
+   "READY",
+   "READY"
+  ],
+  [
+   "ho_007",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "ho_008",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "ho_009",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "ho_010",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "ho_011",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "ho_012",
+   "BLOCKED",
+   "BLOCKED"
+  ],
+  [
+   "ho_013",
+   "READY",
+   "READY"
+  ],
+  [
+   "ho_014",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "ho_015",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "ho_016",
+   "READY",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "ho_017",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "ho_018",
+   "READY",
+   "READY"
+  ],
+  [
+   "ho_019",
+   "READY",
+   "READY"
+  ],
+  [
+   "ho_020",
+   "READY",
+   "READY"
+  ]
+ ],
+ "n_traps": 10
+}

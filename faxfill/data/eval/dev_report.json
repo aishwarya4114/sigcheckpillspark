@@ -1,0 +1,653 @@
+{
+ "accuracy": {
+  "correct": 387,
+  "verified": 369,
+  "verified_right": 369,
+  "both_empty": 20,
+  "abstained": 7,
+  "wrong": 2
+ },
+ "per_field": {
+  "patient_name": {
+   "correct": 31,
+   "both_empty": 1
+  },
+  "patient_dob": {
+   "correct": 31,
+   "both_empty": 1
+  },
+  "drug_name": {
+   "correct": 31,
+   "wrong": 1
+  },
+  "strength": {
+   "correct": 29,
+   "abstained": 3
+  },
+  "dosage_form": {
+   "correct": 32
+  },
+  "directions": {
+   "correct": 32
+  },
+  "quantity": {
+   "correct": 32
+  },
+  "refills": {
+   "correct": 32
+  },
+  "prescriber_name": {
+   "correct": 31,
+   "wrong": 1
+  },
+  "prescriber_npi": {
+   "correct": 30,
+   "abstained": 2
+  },
+  "prescriber_dea": {
+   "correct": 14,
+   "both_empty": 18
+  },
+  "date_written": {
+   "correct": 32
+  },
+  "substitution": {
+   "correct": 30,
+   "abstained": 2
+  }
+ },
+ "verified_wrong": [],
+ "traps": [
+  {
+   "fax": "rx_006",
+   "page": 1,
+   "field": "strength",
+   "code": "trailing_zero",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "TRAILING_ZERO"
+   ],
+   "expected_check": [
+    "TRAILING_ZERO"
+   ]
+  },
+  {
+   "fax": "rx_007",
+   "page": 1,
+   "field": "strength",
+   "code": "trailing_zero",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "TRAILING_ZERO"
+   ],
+   "expected_check": [
+    "TRAILING_ZERO"
+   ]
+  },
+  {
+   "fax": "rx_008",
+   "page": 1,
+   "field": "drug_name",
+   "code": "lasa_confirm",
+   "outcome": "MISSED",
+   "caught_by": [],
+   "expected_check": [
+    "LOOKALIKE_RISK"
+   ]
+  },
+  {
+   "fax": "rx_009",
+   "page": 1,
+   "field": "drug_name",
+   "code": "lasa_confirm",
+   "outcome": "MISSED",
+   "caught_by": [],
+   "expected_check": [
+    "LOOKALIKE_RISK"
+   ]
+  },
+  {
+   "fax": "rx_010",
+   "page": 1,
+   "field": "prescriber_npi",
+   "code": "npi_checksum",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "NPI_INVALID"
+   ],
+   "expected_check": [
+    "NPI_INVALID"
+   ]
+  },
+  {
+   "fax": "rx_011",
+   "page": 1,
+   "field": "prescriber_npi",
+   "code": "npi_checksum",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "NPI_INVALID"
+   ],
+   "expected_check": [
+    "NPI_INVALID"
+   ]
+  },
+  {
+   "fax": "rx_012",
+   "page": 1,
+   "field": "prescriber_name",
+   "code": "prescriber_not_in_directory",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "PRESCRIBER_UNKNOWN"
+   ],
+   "expected_check": [
+    "PRESCRIBER_UNKNOWN"
+   ]
+  },
+  {
+   "fax": "rx_013",
+   "page": 1,
+   "field": "prescriber_name",
+   "code": "prescriber_not_in_directory",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "PRESCRIBER_UNKNOWN"
+   ],
+   "expected_check": [
+    "PRESCRIBER_UNKNOWN"
+   ]
+  },
+  {
+   "fax": "rx_014",
+   "page": 1,
+   "field": "drug_name",
+   "code": "allergy_conflict",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "ALLERGY_CONFLICT"
+   ],
+   "expected_check": [
+    "ALLERGY_CONFLICT"
+   ]
+  },
+  {
+   "fax": "rx_015",
+   "page": 1,
+   "field": "drug_name",
+   "code": "allergy_conflict",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "ALLERGY_CONFLICT"
+   ],
+   "expected_check": [
+    "ALLERGY_CONFLICT"
+   ]
+  },
+  {
+   "fax": "rx_016",
+   "page": 1,
+   "field": "quantity",
+   "code": "quantity_vs_duration",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "QTY_DURATION_MISMATCH"
+   ],
+   "expected_check": [
+    "QTY_DURATION_MISMATCH"
+   ]
+  },
+  {
+   "fax": "rx_017",
+   "page": 1,
+   "field": "quantity",
+   "code": "quantity_vs_duration",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "QTY_DURATION_MISMATCH"
+   ],
+   "expected_check": [
+    "QTY_DURATION_MISMATCH"
+   ]
+  },
+  {
+   "fax": "rx_018",
+   "page": 1,
+   "field": "strength",
+   "code": "unreadable",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "READER_ABSTAINED"
+   ],
+   "expected_check": [
+    "READER_ABSTAINED",
+    "READER_DISAGREEMENT",
+    "UNREADABLE"
+   ]
+  },
+  {
+   "fax": "rx_019",
+   "page": 1,
+   "field": "strength",
+   "code": "unreadable",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "UNREADABLE"
+   ],
+   "expected_check": [
+    "READER_ABSTAINED",
+    "READER_DISAGREEMENT",
+    "UNREADABLE"
+   ]
+  },
+  {
+   "fax": "rx_020",
+   "page": 1,
+   "field": "_order",
+   "code": "prompt_injection",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "INJECTION"
+   ],
+   "expected_check": [
+    "INJECTION"
+   ]
+  },
+  {
+   "fax": "rx_021",
+   "page": 1,
+   "field": "_order",
+   "code": "prompt_injection",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "INJECTION"
+   ],
+   "expected_check": [
+    "INJECTION"
+   ]
+  },
+  {
+   "fax": "rx_022",
+   "page": 1,
+   "field": "directions",
+   "code": "weekly_drug_daily",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "METHOTREXATE_DAILY"
+   ],
+   "expected_check": [
+    "METHOTREXATE_DAILY"
+   ]
+  },
+  {
+   "fax": "rx_023",
+   "page": 1,
+   "field": "strength",
+   "code": "unit_mismatch",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "UNIT_MISMATCH"
+   ],
+   "expected_check": [
+    "UNIT_MISMATCH"
+   ]
+  },
+  {
+   "fax": "rx_024",
+   "page": 1,
+   "field": "prescriber_dea",
+   "code": "dea_checksum",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "DEA_INVALID"
+   ],
+   "expected_check": [
+    "DEA_INVALID"
+   ]
+  },
+  {
+   "fax": "rx_025",
+   "page": 1,
+   "field": "directions",
+   "code": "exceeds_max_daily",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "DOSE_ABOVE_MAX"
+   ],
+   "expected_check": [
+    "DOSE_ABOVE_MAX"
+   ]
+  },
+  {
+   "fax": "rx_026",
+   "page": 1,
+   "field": "drug_name",
+   "code": "noise_near_critical",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "NOISE_NEAR_CRITICAL"
+   ],
+   "expected_check": [
+    "NOISE_NEAR_CRITICAL"
+   ]
+  },
+  {
+   "fax": "rx_026",
+   "page": 1,
+   "field": "strength",
+   "code": "noise_near_critical",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "NOISE_NEAR_CRITICAL"
+   ],
+   "expected_check": [
+    "NOISE_NEAR_CRITICAL"
+   ]
+  },
+  {
+   "fax": "rx_027",
+   "page": 1,
+   "field": "strength",
+   "code": "ambiguous_digit",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "AMBIGUOUS_DIGIT",
+    "NOISE_NEAR_CRITICAL",
+    "READER_DISAGREEMENT"
+   ],
+   "expected_check": [
+    "AMBIGUOUS_DIGIT"
+   ]
+  },
+  {
+   "fax": "rx_027",
+   "page": 1,
+   "field": "strength",
+   "code": "noise_near_critical",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "AMBIGUOUS_DIGIT",
+    "NOISE_NEAR_CRITICAL",
+    "READER_DISAGREEMENT"
+   ],
+   "expected_check": [
+    "NOISE_NEAR_CRITICAL"
+   ]
+  },
+  {
+   "fax": "rx_027",
+   "page": 1,
+   "field": "drug_name",
+   "code": "noise_near_critical",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "NOISE_NEAR_CRITICAL"
+   ],
+   "expected_check": [
+    "NOISE_NEAR_CRITICAL"
+   ]
+  },
+  {
+   "fax": "rx_028",
+   "page": 1,
+   "field": "drug_name",
+   "code": "truncated_edge",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "TRUNCATED_EDGE"
+   ],
+   "expected_check": [
+    "TRUNCATED_EDGE"
+   ]
+  },
+  {
+   "fax": "rx_028",
+   "page": 1,
+   "field": "prescriber_name",
+   "code": "truncated_edge",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "PRESCRIBER_UNKNOWN",
+    "TRUNCATED_EDGE"
+   ],
+   "expected_check": [
+    "TRUNCATED_EDGE"
+   ]
+  },
+  {
+   "fax": "rx_028",
+   "page": 1,
+   "field": "prescriber_npi",
+   "code": "truncated_edge",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "READER_ABSTAINED",
+    "TRUNCATED_EDGE"
+   ],
+   "expected_check": [
+    "TRUNCATED_EDGE"
+   ]
+  },
+  {
+   "fax": "rx_029",
+   "page": 1,
+   "field": "_order",
+   "code": "page_count_mismatch",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "PAGE_COUNT_MISMATCH"
+   ],
+   "expected_check": [
+    "PAGE_COUNT_MISMATCH"
+   ]
+  },
+  {
+   "fax": "rx_030",
+   "page": 2,
+   "field": "patient_name",
+   "code": "missing_patient_id",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "MISSING_PATIENT_ID"
+   ],
+   "expected_check": [
+    "MISSING_PATIENT_ID"
+   ]
+  },
+  {
+   "fax": "rx_030",
+   "page": 2,
+   "field": "patient_dob",
+   "code": "missing_patient_id",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "MISSING_PATIENT_ID"
+   ],
+   "expected_check": [
+    "MISSING_PATIENT_ID"
+   ]
+  },
+  {
+   "fax": "rx_031",
+   "page": 1,
+   "field": "directions",
+   "code": "conflicting_directions",
+   "outcome": "caught (right reason)",
+   "caught_by": [
+    "CONFLICTING_DIRECTIONS"
+   ],
+   "expected_check": [
+    "CONFLICTING_DIRECTIONS"
+   ]
+  }
+ ],
+ "clean_flags": [
+  "rx_005 order: PAGE_COUNT_UNKNOWN"
+ ],
+ "unexplained_flags": [
+  "rx_019 p1 substitution: ['READER_DISAGREEMENT'] (value wrong -> justified)",
+  "rx_026 p1 substitution: ['READER_DISAGREEMENT'] (value wrong -> justified)",
+  "rx_029 p1 prescriber_npi: ['READER_DISAGREEMENT'] (value wrong -> justified)"
+ ],
+ "c_only_flags": {
+  "clean": [],
+  "trap": []
+ },
+ "status": [
+  [
+   "rx_001",
+   "READY",
+   "READY"
+  ],
+  [
+   "rx_002",
+   "READY",
+   "READY"
+  ],
+  [
+   "rx_003",
+   "READY",
+   "READY"
+  ],
+  [
+   "rx_004",
+   "READY",
+   "READY"
+  ],
+  [
+   "rx_005",
+   "READY",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "rx_006",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "rx_007",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "rx_008",
+   "NEEDS_PHARMACIST",
+   "READY"
+  ],
+  [
+   "rx_009",
+   "NEEDS_PHARMACIST",
+   "READY"
+  ],
+  [
+   "rx_010",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "rx_011",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "rx_012",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "rx_013",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "rx_014",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "rx_015",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "rx_016",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "rx_017",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "rx_018",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "rx_019",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "rx_020",
+   "BLOCKED",
+   "BLOCKED"
+  ],
+  [
+   "rx_021",
+   "BLOCKED",
+   "BLOCKED"
+  ],
+  [
+   "rx_022",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "rx_023",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "rx_024",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "rx_025",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "rx_026",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "rx_027",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "rx_028",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "rx_029",
+   "BLOCKED",
+   "BLOCKED"
+  ],
+  [
+   "rx_030",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ],
+  [
+   "rx_031",
+   "NEEDS_PHARMACIST",
+   "NEEDS_PHARMACIST"
+  ]
+ ]
+}

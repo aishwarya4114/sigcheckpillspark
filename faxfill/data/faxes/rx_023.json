@@ -1,0 +1,151 @@
+{
+ "id": "rx_023",
+ "image": "rx_023.png",
+ "synthetic": true,
+ "style": "typed",
+ "degradation": {
+  "skew_deg": 0.17,
+  "blur": 0.5,
+  "noise": 10,
+  "fax_mode": "fine",
+  "level": "light"
+ },
+ "is_clean": false,
+ "trap": "unit_error",
+ "fields": {
+  "patient_name": "Isabel Moreau",
+  "patient_dob": "1963-04-17",
+  "patient_address": "326 W 118th St, Apt 3C, New York, NY 10031",
+  "drug_name": "levothyroxine",
+  "strength": "50 mg",
+  "strength_value": 50,
+  "strength_unit": "mg",
+  "dosage_form": "tablet",
+  "directions": "Take 1 tablet by mouth once daily for 30 days",
+  "quantity": 30,
+  "quantity_text": "#30 (thirty) tablets",
+  "days_supply_stated": 30,
+  "refills": 1,
+  "prescriber_name": "Fatima Haddad, MD",
+  "prescriber_npi": "1810225023",
+  "prescriber_dea": null,
+  "date_written": "2026-10-06",
+  "substitution": "permitted",
+  "notes": "New start."
+ },
+ "field_boxes": {
+  "fax_header": [
+   57,
+   24,
+   1437,
+   48
+  ],
+  "clinic": [
+   117,
+   119,
+   745,
+   163
+  ],
+  "prescriber_name": [
+   117,
+   183,
+   470,
+   217
+  ],
+  "prescriber_npi": [
+   203,
+   327,
+   413,
+   355
+  ],
+  "patient_name": [
+   358,
+   437,
+   599,
+   464
+  ],
+  "patient_dob": [
+   1178,
+   434,
+   1368,
+   462
+  ],
+  "patient_address": [
+   358,
+   512,
+   946,
+   540
+  ],
+  "date_written": [
+   358,
+   585,
+   549,
+   612
+  ],
+  "drug_name": [
+   359,
+   705,
+   618,
+   740
+  ],
+  "strength": [
+   646,
+   704,
+   756,
+   740
+  ],
+  "dosage_form": [
+   784,
+   704,
+   886,
+   731
+  ],
+  "directions": [
+   359,
+   833,
+   1128,
+   870
+  ],
+  "quantity": [
+   359,
+   925,
+   666,
+   960
+  ],
+  "refills": [
+   360,
+   1015,
+   381,
+   1042
+  ],
+  "substitution": [
+   120,
+   1108,
+   150,
+   1138
+  ],
+  "notes": [
+   260,
+   1205,
+   391,
+   1227
+  ]
+ },
+ "expected_flags": [
+  {
+   "field": "strength",
+   "code": "unit_mismatch",
+   "why": "Levothyroxine is dosed in mcg; '50 mg' would be 1000x the usual dose. Likely means 50 mcg \u2014 confirm."
+  }
+ ],
+ "expected_order_status": "needs_review",
+ "expect_abstain": [],
+ "meta": {
+  "rxcui": null,
+  "fax_from": "(212) 555-0121",
+  "sent": "2026-10-06 08:20",
+  "patient_id": "PT006",
+  "prescriber_id": "P110",
+  "prescriber_in_directory": true
+ }
+}

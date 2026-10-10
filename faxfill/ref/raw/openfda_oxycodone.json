@@ -1,0 +1,84 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22oxycodone%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:58-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 313
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "0904-6828",
+    "generic_name": "Oxycodone Hydrochloride",
+    "labeler_name": "MAJOR PHARMACEUTICALS",
+    "dea_schedule": "CII",
+    "brand_name": "Oxycodone Hydrochloride",
+    "active_ingredients": [
+     {
+      "name": "OXYCODONE HYDROCHLORIDE",
+      "strength": "5 mg/5mL"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "0904-6828-92",
+      "description": "5 TRAY in 1 CARTON (0904-6828-92)  / 10 CUP, UNIT-DOSE in 1 TRAY / 5 mL in 1 CUP, UNIT-DOSE (0904-6828-05)",
+      "marketing_start_date": "20161123",
+      "sample": false
+     },
+     {
+      "package_ndc": "0904-6828-94",
+      "description": "4 TRAY in 1 CARTON (0904-6828-94)  / 10 CUP, UNIT-DOSE in 1 TRAY / 5 mL in 1 CUP, UNIT-DOSE (0904-6828-05)",
+      "marketing_start_date": "20161123",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {
+     "manufacturer_name": [
+      "MAJOR PHARMACEUTICALS"
+     ],
+     "rxcui": [
+      "1049604"
+     ],
+     "spl_set_id": [
+      "6d249bc5-79c4-4c42-a71b-d667c75163db"
+     ],
+     "is_original_packager": [
+      true
+     ],
+     "upc": [
+      "0309046828921"
+     ],
+     "unii": [
+      "C1ENJ2TE6C"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "SOLUTION",
+    "spl_id": "f661966e-fbda-4dbb-85de-b31056fc7032",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20161123",
+    "product_id": "0904-6828_f661966e-fbda-4dbb-85de-b31056fc7032",
+    "application_number": "ANDA207511",
+    "brand_name_base": "Oxycodone Hydrochloride",
+    "pharm_class": [
+     "Full Opioid Agonists [MoA]",
+     "Opioid Agonist [EPC]"
+    ]
+   }
+  ]
+ }
+}
