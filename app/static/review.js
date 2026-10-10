@@ -68,7 +68,7 @@ function renderHello() {
   const done = by(["approved"]);
   const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
   let summary;
-  if (!queue.length) summary = "No prescriptions yet today. Add one to get started.";
+  if (!queue.length) summary = "No prescriptions yet today. Click New prescription to upload a fax or a photo of one.";
   else if (!need.length && !ready.length) summary = wait.length ? `You're caught up. ${plural(wait.length, "case is", "cases are")} waiting on a prescriber.` : "You're all caught up. Nice work.";
   else summary = [need.length && `${plural(need.length, "prescription needs", "prescriptions need")} your review`, ready.length && `${plural(ready.length, "is", "are")} ready to approve`, wait.length && `${plural(wait.length, "is", "are")} waiting on a prescriber`].filter(Boolean).join(", ").replace(/, ([^,]*)$/, " and $1") + ".";
   const blocked = need.filter((d) => d.workflow_status === "blocked").length;
@@ -89,8 +89,7 @@ function renderHello() {
       ${tile("ready", ready.length, "Ready to approve", "All checks resolved", "green", "check")}
       ${tile("completed", done.length, "Approved drafts", "Ready for entry", "", "file")}
     </div>
-    ${next ? `<div class="hello-next"><div><span class="eyebrow">Up next</span><strong>${esc(next.patient || "Prescription")} · ${esc(next.drug || "Awaiting reading")}</strong><p>${esc(next.next_action || "Open the case to start review.")}</p></div><button class="primary" data-doc="${esc(next.id)}">Start review ${icon("arrow")}</button></div>`
-      : `<div class="hello-next empty"><div><span class="eyebrow">Up next</span><strong>${queue.length ? "Nothing needs you right now" : "Your queue is empty"}</strong><p>Upload a faxed or photographed prescription and SigCheck will read and check it for you.</p></div><button class="primary" id="hello-upload">${icon("plus")} New prescription</button></div>`}`;
+    ${next ? `<div class="hello-next"><div><span class="eyebrow">Up next</span><strong>${esc(next.patient || "Prescription")} · ${esc(next.drug || "Awaiting reading")}</strong><p>${esc(next.next_action || "Open the case to start review.")}</p></div><button class="primary" data-doc="${esc(next.id)}">Start review ${icon("arrow")}</button></div>` : ""}`;
   const form = $("#name-form");
   if (form) {
     const inp = $("#name-input"); inp.focus(); inp.select();
@@ -102,7 +101,8 @@ function renderQueue() {
   const GROUP = { needs_action: ["new", "needs_verification", "needs_clarification", "blocked"], waiting: ["waiting_for_prescriber"], ready: ["ready_for_approval"], completed: ["approved"] };
   const inGroup = (d, g) => g === "all" || (GROUP[g] || [g]).includes(d.workflow_status);
   const visible = queue.filter((d) => inGroup(d, filter));
-  $("#queue-count").textContent = queue.length;
+  if ($("#queue-count")) $("#queue-count").textContent = queue.length;
+  document.body.classList.toggle("no-rows", !visible.length);
   document.querySelectorAll("[data-filter]").forEach((b) => {
     const n = queue.filter((d) => inGroup(d, b.dataset.filter)).length;
     b.dataset.count = n;
@@ -121,7 +121,7 @@ function renderQueue() {
           <span class="queue-open" aria-hidden="true">${icon("chevron")}</span>
         </button>`;
       }).join("")
-    : '<div class="queue-empty">' + (filter === "all" ? "Your queue is clear. Upload a fax or explore a sample." : "Nothing in this step right now.") + "</div>";
+    : '<div class="queue-empty">' + (filter === "all" ? "Nothing here yet." : "Nothing in this step right now.") + "</div>";
   renderHello();
 }
 function showQueueView() {
@@ -566,10 +566,6 @@ document.addEventListener("click", async (e) => {
   if (b.id === "name-edit") {
     editingName = true;
     renderHello();
-    return;
-  }
-  if (b.id === "hello-upload") {
-    $("#upload").click();
     return;
   }
   if (b.hasAttribute("data-back-queue")) {

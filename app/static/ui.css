@@ -1683,9 +1683,12 @@ body.queue-mode .hello{display:block;margin:6px 0 26px}
 .hello-next strong{display:block;font-size:17px;margin:2px 0}
 .hello-next p{margin:0;color:var(--muted)}
 .hello-next button{white-space:nowrap;display:inline-flex;align-items:center;gap:8px}
-.hello-next.empty{background:#fff;border-color:var(--line)}
 body.queue-mode .queue-heading{margin-top:8px}
 @media(max-width:860px){.hello-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.hello-top{flex-direction:column;align-items:flex-start}.hello-top h1{font-size:28px}}
 @media(max-width:480px){.hello-next{flex-direction:column;align-items:stretch}}
 body.queue-mode .hello{grid-column:1/-1}
 body.queue-mode .queue-nav a{white-space:nowrap}
+body.queue-mode .queue-heading h1{font-size:24px}
+body.no-rows .queue-columns{display:none!important}
+body.queue-mode.no-rows .queue{min-height:0}
+body.queue-mode .queue-empty{margin-top:0}
