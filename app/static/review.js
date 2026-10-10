@@ -178,6 +178,7 @@ function renderPanel() {
  }
  ${detailsHTML()}`;
   $("#approval-bar").innerHTML = footerHTML();
+  loadEval();
   updateStepper();
   body.scrollTop = scroll;
   highlight(cur.fields?.[selected]?.box);
@@ -236,6 +237,19 @@ function attest() {
     <p class="small muted">This approves a draft for pharmacy entry. It is not dispensing.</p>`;
   d.querySelector("#attest-ok").addEventListener("change", (e) => (d.querySelector("#attest-approve").disabled = !e.target.checked));
   d.showModal();
+}
+let evalCache = {};
+function loadEval() {
+  const id = cur?.id, tid = cur?.sponsors?.evaluator?.trajectory_id;
+  if (!id || !tid) return;
+  const show = (x) => {
+    const el = $("#eval-score"); if (!el) return;
+    const sc = x?.verdict?.scorecard;
+    if (!sc) { el.textContent = "Submitted; PRISM scorecard pending (not shown as a pass)"; return; }
+    el.innerHTML = `Safety ${esc(sc.safety_score)} · correctness ${esc(sc.correctness_score)} · efficiency ${esc(sc.efficiency_score)} · robustness ${esc(sc.robustness_score)}<br><small>${esc((sc.llm_reasoning_text || "").slice(0, 220))}</small>`;
+  };
+  if (evalCache[tid]) return show(evalCache[tid]);
+  api(`/api/documents/${encodeURIComponent(id)}/evaluation`).then((x) => { if (x?.verdict?.scorecard) evalCache[tid] = x; show(x); }).catch(() => {});
 }
 function updateStepper() {
   const st = cur?.workflow?.status, steps = document.querySelectorAll(".steps span");
@@ -382,7 +396,7 @@ function detailsHTML() {
     )
     .join(
       "",
-    )}</div></details><details class="detail-section tech-only"><summary>Processing & sponsor details</summary><div class="detail-content"><p><strong>Privacy:</strong> ${esc(s.telemetry || "Synthetic data only")}. The fax image is sent to the model provider for extraction; real prescriptions would require a BAA or a self-hosted model.</p><p><strong>Reader:</strong> ${esc(r.engine || "Not run")}</p><p><strong>Reader trace:</strong> ${r.trace?.accepted ? "Accepted" : "Not recorded"}</p><p><strong>Input guardrail:</strong> ${g.blocked ? "Blocked" : "No local pattern detected"}; PRISM trace ${g.prism?.accepted ? "accepted" : "not recorded"}</p><p><strong>Knowledge base:</strong> ${esc(kb.status || "Unavailable")}</p><p><strong>Evaluator:</strong> ${e.trajectory_id ? "Submitted; verdict must be verified" : "Not submitted"}</p><p class="mono">${esc(e.trajectory_id || "")}</p><p>Trace delivery is not a passing evaluation.</p></div></details>`;
+    )}</div></details><details class="detail-section tech-only"><summary>Processing & sponsor details</summary><div class="detail-content"><p><strong>Privacy:</strong> ${esc(s.telemetry || "Synthetic data only")}. The fax image is sent to the model provider for extraction; real prescriptions would require a BAA or a self-hosted model.</p><p><strong>Reader:</strong> ${esc(r.engine || "Not run")}</p><p><strong>Reader trace:</strong> ${r.trace?.accepted ? "Accepted" : "Not recorded"}</p><p><strong>Input guardrail:</strong> ${g.blocked ? "Blocked" : "No local pattern detected"}; PRISM trace ${g.prism?.accepted ? "accepted" : "not recorded"}</p><p><strong>Knowledge base:</strong> ${esc(kb.status || "Unavailable")}</p><p><strong>PRISM evaluator:</strong> <span id="eval-score">${e.trajectory_id ? "Submitted; waiting for PRISM's scorecard (not shown as a pass until it arrives)" : "Not submitted"}</span></p><p class="mono">${esc(e.trajectory_id || "")}</p><p>Trace delivery is not a passing evaluation.</p></div></details>`;
 }
 function highlight(box) {
   const el = $("#highlight");
