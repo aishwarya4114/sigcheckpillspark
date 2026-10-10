@@ -32,6 +32,15 @@ PADS = [
         "Patient": "Grace Kim", "DOB": "11/02/1954", "Medication": "Atorvastatin 20.0 mg tablet",
         "Sig": "1 tab PO at bedtime", "Qty": "30", "Refills": "3",
         "Prescriber": "Dr. Jane Patel", "NPI": "1234567893", "Date": "10/09/2026"}),
+    # seed-only pads: preloaded into the queue by scripts/seed_demo.py, not meant for live upload
+    ("seed_clean_amlodipine", {
+        "Patient": "Ruth Adler", "DOB": "02/18/1949", "Medication": "Amlodipine 5 mg tablet",
+        "Sig": "1 tab PO daily", "Qty": "90", "Refills": "3",
+        "Prescriber": "Dr. Jane Patel", "NPI": "1234567893", "Date": "10/08/2026"}),
+    ("seed_clean_sertraline", {
+        "Patient": "Marcus Bell", "DOB": "09/30/1979", "Medication": "Sertraline 50 mg tablet",
+        "Sig": "1 tab PO every morning", "Qty": "30", "Refills": "5",
+        "Prescriber": "Dr. Jane Patel", "NPI": "1234567893", "Date": "10/09/2026"}),
 ]
 
 
