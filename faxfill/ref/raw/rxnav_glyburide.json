@@ -1,0 +1,163 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=glyburide",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:36-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "881407",
+       "name": "glyburide 1.5 MG Oral Tablet [Glynase]",
+       "synonym": "Glynase 1.5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "881409",
+       "name": "glyburide 3 MG Oral Tablet [Glynase]",
+       "synonym": "Glynase 3 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "881411",
+       "name": "glyburide 6 MG Oral Tablet [Glynase]",
+       "synonym": "Glynase 6 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "197737",
+       "name": "glyburide 1.25 MG Oral Tablet",
+       "synonym": "glibenclamide 1.25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "252960",
+       "name": "glyburide 4.5 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310534",
+       "name": "glyburide 2.5 MG Oral Tablet",
+       "synonym": "glibenclamide 2.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310536",
+       "name": "glyburide 3 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310537",
+       "name": "glyburide 5 MG Oral Tablet",
+       "synonym": "glibenclamide 5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310539",
+       "name": "glyburide 6 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "314000",
+       "name": "glyburide 1.5 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "430102",
+       "name": "glyburide 3.5 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "430103",
+       "name": "glyburide 1.75 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "861743",
+       "name": "glyburide 1.25 MG / metformin hydrochloride 250 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "861748",
+       "name": "glyburide 2.5 MG / metformin hydrochloride 500 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "861753",
+       "name": "glyburide 5 MG / metformin hydrochloride 500 MG Oral Tablet",
+       "synonym": "glyburide 5 MG / metformin HCl 500 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

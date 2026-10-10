@@ -1,0 +1,93 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22ibuprofen%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:34:04-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 1481
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "49483-700",
+    "generic_name": "Ibuprofen",
+    "labeler_name": "TIME CAP LABORATORIES, INC.",
+    "brand_name": "Ibuprofen",
+    "active_ingredients": [
+     {
+      "name": "IBUPROFEN",
+      "strength": "200 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "49483-700-39",
+      "description": "240 CAPSULE, LIQUID FILLED in 1 BOTTLE (49483-700-39)",
+      "marketing_start_date": "20231023",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20261231",
+    "openfda": {
+     "manufacturer_name": [
+      "TIME CAP LABORATORIES, INC."
+     ],
+     "rxcui": [
+      "310964"
+     ],
+     "spl_set_id": [
+      "059cb22f-f6db-5d03-e063-6294a90a9ec1"
+     ],
+     "is_original_packager": [
+      true
+     ],
+     "upc": [
+      "0349483700398"
+     ],
+     "nui": [
+      "N0000000160",
+      "M0001335",
+      "N0000175722"
+     ],
+     "pharm_class_moa": [
+      "Cyclooxygenase Inhibitors [MoA]"
+     ],
+     "pharm_class_cs": [
+      "Anti-Inflammatory Agents, Non-Steroidal [CS]"
+     ],
+     "pharm_class_epc": [
+      "Nonsteroidal Anti-inflammatory Drug [EPC]"
+     ],
+     "unii": [
+      "WK2XYI10QM"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "CAPSULE, LIQUID FILLED",
+    "spl_id": "059cb22f-f6dc-5d03-e063-6294a90a9ec1",
+    "product_type": "HUMAN OTC DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20231023",
+    "product_id": "49483-700_059cb22f-f6dc-5d03-e063-6294a90a9ec1",
+    "application_number": "ANDA079205",
+    "brand_name_base": "Ibuprofen",
+    "pharm_class": [
+     "Anti-Inflammatory Agents",
+     "Non-Steroidal [CS]",
+     "Cyclooxygenase Inhibitors [MoA]",
+     "Nonsteroidal Anti-inflammatory Drug [EPC]"
+    ]
+   }
+  ]
+ }
+}

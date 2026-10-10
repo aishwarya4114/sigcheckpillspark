@@ -1,0 +1,72 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22tramadol%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:44-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 166
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "67046-1209",
+    "generic_name": "Tramadol Hydrochloride",
+    "labeler_name": "Coupler LLC",
+    "dea_schedule": "CIV",
+    "brand_name": "Tramadol Hydrochloride",
+    "active_ingredients": [
+     {
+      "name": "TRAMADOL HYDROCHLORIDE",
+      "strength": "50 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "67046-1209-3",
+      "description": "30 TABLET, COATED in 1 BLISTER PACK (67046-1209-3)",
+      "marketing_start_date": "20260622",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {
+     "manufacturer_name": [
+      "Coupler LLC"
+     ],
+     "rxcui": [
+      "835603"
+     ],
+     "spl_set_id": [
+      "54d74939-301b-e603-e063-6394a90a3b03"
+     ],
+     "unii": [
+      "9N7R477WCK"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "TABLET, COATED",
+    "spl_id": "54d74890-fde4-80a9-e063-6294a90a051a",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20260622",
+    "product_id": "67046-1209_54d74890-fde4-80a9-e063-6294a90a051a",
+    "application_number": "ANDA076003",
+    "brand_name_base": "Tramadol Hydrochloride",
+    "pharm_class": [
+     "Full Opioid Agonists [MoA]",
+     "Opioid Agonist [EPC]"
+    ]
+   }
+  ]
+ }
+}

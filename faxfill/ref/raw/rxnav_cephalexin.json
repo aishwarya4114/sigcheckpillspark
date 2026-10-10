@@ -1,0 +1,190 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=cephalexin",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:56-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "1312438",
+       "name": "cephalexin 150 MG Chewable Tablet [Rilexine]",
+       "synonym": "Rilexine 150 MG Chewable Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1312442",
+       "name": "cephalexin 300 MG Chewable Tablet [Rilexine]",
+       "synonym": "Rilexine 300 MG Chewable Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1312446",
+       "name": "cephalexin 600 MG Chewable Tablet [Rilexine]",
+       "synonym": "Rilexine 600 MG Chewable Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "212339",
+       "name": "cephalexin 500 MG Oral Capsule [Keflex]",
+       "synonym": "Keflex 500 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "1312431",
+       "name": "cephalexin 150 MG Chewable Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1312440",
+       "name": "cephalexin 300 MG Chewable Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1312444",
+       "name": "cephalexin 600 MG Chewable Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "197454",
+       "name": "cephalexin 500 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "250582",
+       "name": "cephalexin 100 MG/ML Oral Suspension",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "309110",
+       "name": "cephalexin 25 MG/ML Oral Suspension",
+       "synonym": "cefalexin 25 MG/ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "309112",
+       "name": "cephalexin 250 MG Oral Capsule",
+       "synonym": "cephalexin (as cephalexin monohydrate) 250 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "309113",
+       "name": "cephalexin 50 MG/ML Oral Suspension",
+       "synonym": "cefalexin 50 MG/ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "309114",
+       "name": "cephalexin 500 MG Oral Capsule",
+       "synonym": "cefalexin (as cefalexin monohydrate) 500 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "309115",
+       "name": "cephalexin 250 MG Oral Tablet",
+       "synonym": "cefalexin (as cefalexin monohydrate) 25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "637173",
+       "name": "cephalexin 750 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "645617",
+       "name": "cephalexin 333 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "755616",
+       "name": "cephalexin 25 MG/ML Oral Solution",
+       "synonym": "cephalexin 125 MG per 5 ML Syrup",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "755617",
+       "name": "cephalexin 50 MG/ML Oral Solution",
+       "synonym": "cephalexin 250 MG per 5 ML Syrup",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

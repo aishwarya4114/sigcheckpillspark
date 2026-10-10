@@ -1,0 +1,76 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22glipizide%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:35-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 187
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "60505-0142",
+    "generic_name": "Glipizide",
+    "labeler_name": "Apotex Corp.",
+    "brand_name": "Glipizide",
+    "active_ingredients": [
+     {
+      "name": "GLIPIZIDE",
+      "strength": "10 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "60505-0142-0",
+      "description": "100 TABLET in 1 BOTTLE (60505-0142-0)",
+      "marketing_start_date": "20020925",
+      "sample": false
+     },
+     {
+      "package_ndc": "60505-0142-1",
+      "description": "1000 TABLET in 1 BOTTLE (60505-0142-1)",
+      "marketing_start_date": "20020925",
+      "sample": false
+     },
+     {
+      "package_ndc": "60505-0142-2",
+      "description": "500 TABLET in 1 BOTTLE (60505-0142-2)",
+      "marketing_start_date": "20020925",
+      "sample": false
+     },
+     {
+      "package_ndc": "60505-0142-4",
+      "description": "10000 TABLET in 1 BOTTLE (60505-0142-4)",
+      "marketing_start_date": "20020925",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {},
+    "marketing_category": "ANDA",
+    "dosage_form": "TABLET",
+    "spl_id": "bac5c69c-3714-aa20-b889-dad244e07b9e",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20020925",
+    "product_id": "60505-0142_bac5c69c-3714-aa20-b889-dad244e07b9e",
+    "application_number": "ANDA075795",
+    "brand_name_base": "Glipizide",
+    "pharm_class": [
+     "Sulfonylurea Compounds [CS]",
+     "Sulfonylurea [EPC]"
+    ]
+   }
+  ]
+ }
+}

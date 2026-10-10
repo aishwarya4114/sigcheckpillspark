@@ -1,0 +1,154 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=glipizide",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:35-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "205828",
+       "name": "glipizide 5 MG Oral Tablet [Glucotrol]",
+       "synonym": "Glucotrol 5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "865568",
+       "name": "24 HR glipizide 10 MG Extended Release Oral Tablet [Glucotrol]",
+       "synonym": "24 HR Glucotrol XL 10 MG Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "865571",
+       "name": "24 HR glipizide 2.5 MG Extended Release Oral Tablet [Glucotrol]",
+       "synonym": "24 HR Glucotrol XL 2.5 MG Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "865573",
+       "name": "24 HR glipizide 5 MG Extended Release Oral Tablet [Glucotrol]",
+       "synonym": "24 HR Glucotrol XL 5 MG Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "2737151",
+       "name": "glipizide 15 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310488",
+       "name": "glipizide 10 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310489",
+       "name": "24 HR glipizide 2.5 MG Extended Release Oral Tablet",
+       "synonym": "glipizide ER 2.5 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310490",
+       "name": "glipizide 5 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "314006",
+       "name": "24 HR glipizide 5 MG Extended Release Oral Tablet",
+       "synonym": "glipizide ER 5 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "315107",
+       "name": "24 HR glipizide 10 MG Extended Release Oral Tablet",
+       "synonym": "glipizide ER 10 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "379804",
+       "name": "glipizide 2.5 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "861731",
+       "name": "glipizide 2.5 MG / metformin hydrochloride 250 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "861736",
+       "name": "glipizide 2.5 MG / metformin hydrochloride 500 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "861740",
+       "name": "glipizide 5 MG / metformin hydrochloride 500 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

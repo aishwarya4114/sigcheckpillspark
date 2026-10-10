@@ -1,0 +1,106 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22methotrexate%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:34:05-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 93
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "16729-277",
+    "generic_name": "Methotrexate",
+    "labeler_name": "Accord Healthcare, Inc.",
+    "brand_name": "Methotrexate",
+    "active_ingredients": [
+     {
+      "name": "METHOTREXATE",
+      "strength": "25 mg/mL"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "16729-277-03",
+      "description": "1 VIAL in 1 CARTON (16729-277-03)  / 10 mL in 1 VIAL",
+      "marketing_start_date": "20140307",
+      "sample": false
+     },
+     {
+      "package_ndc": "16729-277-30",
+      "description": "1 VIAL in 1 CARTON (16729-277-30)  / 2 mL in 1 VIAL",
+      "marketing_start_date": "20140307",
+      "sample": false
+     },
+     {
+      "package_ndc": "16729-277-35",
+      "description": "1 VIAL in 1 CARTON (16729-277-35)  / 40 mL in 1 VIAL",
+      "marketing_start_date": "20140307",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {
+     "manufacturer_name": [
+      "Accord Healthcare, Inc."
+     ],
+     "rxcui": [
+      "1655956",
+      "1655959",
+      "1655960"
+     ],
+     "spl_set_id": [
+      "dd035a9f-cd40-4314-b9d8-2294b8a924e2"
+     ],
+     "is_original_packager": [
+      true
+     ],
+     "upc": [
+      "0316729277037",
+      "0316729277358",
+      "0316729277303"
+     ],
+     "nui": [
+      "N0000175584",
+      "N0000000111"
+     ],
+     "pharm_class_epc": [
+      "Folate Analog Metabolic Inhibitor [EPC]"
+     ],
+     "pharm_class_moa": [
+      "Folic Acid Metabolism Inhibitors [MoA]"
+     ],
+     "unii": [
+      "YL5FZ2Y5U1"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "INJECTION",
+    "spl_id": "5aa89975-d1a1-19f1-e063-6294a90a4b3e",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "INTRA-ARTERIAL",
+     "INTRAMUSCULAR",
+     "INTRATHECAL",
+     "INTRAVENOUS"
+    ],
+    "marketing_start_date": "20140307",
+    "product_id": "16729-277_5aa89975-d1a1-19f1-e063-6294a90a4b3e",
+    "application_number": "ANDA040716",
+    "brand_name_base": "Methotrexate",
+    "pharm_class": [
+     "Folate Analog Metabolic Inhibitor [EPC]",
+     "Folic Acid Metabolism Inhibitors [MoA]"
+    ]
+   }
+  ]
+ }
+}

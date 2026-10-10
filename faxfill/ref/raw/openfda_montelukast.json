@@ -1,0 +1,48 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22montelukast%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:34:02-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 118
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "65862-574",
+    "generic_name": "Montelukast Sodium",
+    "labeler_name": "Aurobindo Pharma Limited",
+    "active_ingredients": [
+     {
+      "name": "MONTELUKAST SODIUM",
+      "strength": "10 mg/1"
+     }
+    ],
+    "finished": false,
+    "packaging": [
+     {
+      "package_ndc": "65862-574-35",
+      "description": "3500 TABLET, FILM COATED in 1 BAG (65862-574-35)",
+      "marketing_start_date": "03-AUG-12"
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {},
+    "marketing_category": "DRUG FOR FURTHER PROCESSING",
+    "dosage_form": "TABLET, FILM COATED",
+    "spl_id": "b1a296df-5b02-4504-9e2f-232f68b95c10",
+    "product_type": "DRUG FOR FURTHER PROCESSING",
+    "marketing_start_date": "20120803",
+    "product_id": "65862-574_b1a296df-5b02-4504-9e2f-232f68b95c10",
+    "brand_name_base": null
+   }
+  ]
+ }
+}

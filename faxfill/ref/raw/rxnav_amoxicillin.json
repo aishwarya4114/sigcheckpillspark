@@ -1,0 +1,869 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=amoxicillin",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:55-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK",
+     "conceptProperties": [
+      {
+       "rxcui": "1291987",
+       "name": "{4 (amoxicillin 500 MG Oral Capsule) / 2 (clarithromycin 500 MG Oral Tablet) / 2 (omeprazole 20 MG Delayed Release Oral Capsule) } Pack [Omeclamox]",
+       "synonym": "Omeclamox-Pak",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2604802",
+       "name": "{84 (amoxicillin 500 MG Oral Capsule) / 28 (vonoprazan 20 MG Oral Tablet) } Pack [Voquezna 14 Day DualPak 20;500]",
+       "synonym": "Voquezna 14 Day DualPak 20 MG; 500 MG Pack",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2604804",
+       "name": "{56 (amoxicillin 500 MG Oral Capsule) / 28 (clarithromycin 500 MG Oral Tablet) / 28 (vonoprazan 20 MG Oral Tablet) } Pack [Voquezna 14 Day TriplePak 20;500;500]",
+       "synonym": "Voquezna 14 Day TriplePak 20 MG; 500 MG; 500 MG Pack",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "757969",
+       "name": "{4 (amoxicillin 500 MG Oral Capsule [Trimox]) / 2 (clarithromycin 500 MG Oral Tablet [Biaxin]) / 2 (lansoprazole 30 MG Delayed Release Oral Capsule [Prevacid]) } Pack [Prevpac]",
+       "synonym": "Prevpac Patient Therapy Pack",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "GPCK",
+     "conceptProperties": [
+      {
+       "rxcui": "1291986",
+       "name": "{4 (amoxicillin 500 MG Oral Capsule) / 2 (clarithromycin 500 MG Oral Tablet) / 2 (omeprazole 20 MG Delayed Release Oral Capsule) } Pack",
+       "synonym": "",
+       "tty": "GPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2604801",
+       "name": "{84 (amoxicillin 500 MG Oral Capsule) / 28 (vonoprazan 20 MG Oral Tablet) } Pack",
+       "synonym": "amoxicillin 500 MG (84) / vonoprazan 20 MG (28) 14 Day DualPak Oral Pack",
+       "tty": "GPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2604803",
+       "name": "{56 (amoxicillin 500 MG Oral Capsule) / 28 (clarithromycin 500 MG Oral Tablet) / 28 (vonoprazan 20 MG Oral Tablet) } Pack",
+       "synonym": "amoxicillin 500 MG (56) / clarithromycin 500 MG (28) / vonoprazan 20 MG (28) 14 Day TriplePak Oral Pack",
+       "tty": "GPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "757968",
+       "name": "{4 (amoxicillin 500 MG Oral Capsule) / 2 (clarithromycin 500 MG Oral Tablet) / 2 (lansoprazole 30 MG Delayed Release Oral Capsule) } Pack",
+       "synonym": "",
+       "tty": "GPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "1358974",
+       "name": "amoxicillin 400 MG Oral Tablet [Amoxi-tabs]",
+       "synonym": "Amoxi-tabs 400 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1359005",
+       "name": "amoxicillin 150 MG Oral Tablet [Amoxi-tabs]",
+       "synonym": "Amoxi-tabs 150 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1359009",
+       "name": "amoxicillin 200 MG Oral Tablet [Amoxi-tabs]",
+       "synonym": "Amoxi-tabs 200 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1360635",
+       "name": "amoxicillin 100 MG Oral Tablet [Amoxi-tabs]",
+       "synonym": "Amoxi-tabs 100 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1360637",
+       "name": "amoxicillin 50 MG Oral Tablet [Amoxi-tabs]",
+       "synonym": "Amoxi-tabs 50 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2105791",
+       "name": "amoxicillin 100 MG / clavulanate 25 MG Chewable Tablet [Clavamox]",
+       "synonym": "Clavamox 100 MG / 25 MG Chewable Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2105794",
+       "name": "amoxicillin 200 MG / clavulanate 50 MG Chewable Tablet [Clavamox]",
+       "synonym": "Clavamox 200 MG / 50 MG Chewable Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2105797",
+       "name": "amoxicillin 300 MG / clavulanate 75 MG Chewable Tablet [Clavamox]",
+       "synonym": "Clavamox 300 MG / 75 MG Chewable Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2105800",
+       "name": "amoxicillin 50 MG / clavulanate 12.5 MG Chewable Tablet [Clavamox]",
+       "synonym": "Clavamox 50 MG / 12.5 MG Chewable Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2108828",
+       "name": "amoxicillin 100 MG / clavulanate 25 MG Oral Tablet [Clavacillin]",
+       "synonym": "Clavacillin 100 MG / 25 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2108831",
+       "name": "amoxicillin 200 MG / clavulanate 50 MG Oral Tablet [Clavacillin]",
+       "synonym": "Clavacillin 200 MG / 50 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2108833",
+       "name": "amoxicillin 300 MG / clavulanate 75 MG Oral Tablet [Clavacillin]",
+       "synonym": "Clavacillin 300 MG / 75 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2108835",
+       "name": "amoxicillin 50 MG / clavulanate 12.5 MG Oral Tablet [Clavacillin]",
+       "synonym": "Clavacillin 50 MG / 12.5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2262032",
+       "name": "amoxicillin 250 MG / omeprazole 10 MG / rifabutin 12.5 MG Delayed Release Oral Capsule [Talicia]",
+       "synonym": "Talicia 250 MG / 10 MG / 12.5 MG Delayed Release Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2598546",
+       "name": "amoxicillin 100 MG / clavulanate 25 MG Oral Tablet [Umbrellin]",
+       "synonym": "Umbrellin (amoxicillin 100 MG / clavulanate potassium 25 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2598548",
+       "name": "amoxicillin 200 MG / clavulanate 50 MG Oral Tablet [Umbrellin]",
+       "synonym": "Umbrellin (amoxicillin 200 MG / clavulanate potassium 50 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2598550",
+       "name": "amoxicillin 300 MG / clavulanate 75 MG Oral Tablet [Umbrellin]",
+       "synonym": "Umbrellin (amoxicillin 300 MG / clavulanate potassium 75 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2598552",
+       "name": "amoxicillin 50 MG / clavulanate 12.5 MG Oral Tablet [Umbrellin]",
+       "synonym": "Umbrellin (amoxicillin 50 MG / clavulanate potassium 12.5 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2598556",
+       "name": "amoxicillin 50 MG/ML / clavulanate 12.5 MG/ML Oral Suspension [Umbrellin]",
+       "synonym": "Umbrellin (amoxicillin (as amoxicillin trihydrate)) 250 MG / clavulanic acid (as clavulanate potassium) 62.5 MG per 5 Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2668476",
+       "name": "amoxicillin 50 MG/ML / clavulanate 12.5 MG/ML Oral Suspension [Clavacillin]",
+       "synonym": "Clavacillin 250 MG / 62.5 MG per 5 ML Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2692884",
+       "name": "amoxicillin 100 MG / clavulanate 25 MG Oral Tablet [Betacilin]",
+       "synonym": "Betacilin (amoxicillin 100 MG / clavulanate potassium 25 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2692886",
+       "name": "amoxicillin 200 MG / clavulanate 50 MG Oral Tablet [Betacilin]",
+       "synonym": "Betacilin (amoxicillin 200 MG / clavulanate potassium 50 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2692888",
+       "name": "amoxicillin 300 MG / clavulanate 75 MG Oral Tablet [Betacilin]",
+       "synonym": "Betacilin (amoxicillin 300 MG / clavulanate potassium 75 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2692890",
+       "name": "amoxicillin 50 MG / clavulanate 12.5 MG Oral Tablet [Betacilin]",
+       "synonym": "Betacilin (amoxicillin 50 MG / clavulanate potassium 12.5 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2692894",
+       "name": "amoxicillin 50 MG/ML / clavulanate 12.5 MG/ML Oral Suspension [Betacilin]",
+       "synonym": "Betacilin 250 MG / 62.5 MG per 5 ML Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2697446",
+       "name": "amoxicillin 100 MG / clavulanate 25 MG Chewable Tablet [Kesium]",
+       "synonym": "Kesium 100 MG / 25 MG Chewable Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2697448",
+       "name": "amoxicillin 200 MG / clavulanate 50 MG Chewable Tablet [Kesium]",
+       "synonym": "Kesium 200 MG / 50 MG Chewable Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2697450",
+       "name": "amoxicillin 300 MG / clavulanate 75 MG Chewable Tablet [Kesium]",
+       "synonym": "Kesium 300 MG / 75 MG Chewable Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2697452",
+       "name": "amoxicillin 50 MG / clavulanate 12.5 MG Chewable Tablet [Kesium]",
+       "synonym": "Kesium 50 MG / 12.5 MG Chewable Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "617333",
+       "name": "amoxicillin 25 MG/ML / clavulanate 6.25 MG/ML Oral Suspension [Augmentin]",
+       "synonym": "Augmentin 125 MG / 31.25 MG per 5 ML Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "617339",
+       "name": "amoxicillin 50 MG/ML / clavulanate 12.5 MG/ML Oral Suspension [Augmentin]",
+       "synonym": "Augmentin 250 mg / 62.5 MG per 5 ML Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "617432",
+       "name": "amoxicillin 80 MG/ML / clavulanate 11.4 MG/ML Oral Suspension [Augmentin]",
+       "synonym": "Augmentin (amoxicillin 400 MG / clavulanate 57 MG) per 5 ML Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "618028",
+       "name": "amoxicillin 120 MG/ML / clavulanate 8.58 MG/ML Oral Suspension [Augmentin]",
+       "synonym": "Augmentin ES 600 MG / 42.9 MG per 5 ML Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "791942",
+       "name": "amoxicillin 100 MG Oral Tablet [Biomox]",
+       "synonym": "Biomox 100 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "791944",
+       "name": "amoxicillin 200 MG Oral Tablet [Biomox]",
+       "synonym": "Biomox 200 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "791949",
+       "name": "amoxicillin 50 MG Oral Tablet [Biomox]",
+       "synonym": "Biomox 50 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "824190",
+       "name": "amoxicillin 500 MG / clavulanate 125 MG Oral Tablet [Augmentin]",
+       "synonym": "Augmentin 500-mg Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "824194",
+       "name": "amoxicillin 875 MG / clavulanate 125 MG Oral Tablet [Augmentin]",
+       "synonym": "Augmentin 875-mg Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "828246",
+       "name": "amoxicillin 775 MG Extended Release Oral Tablet [Moxatag]",
+       "synonym": "Moxatag 775 MG Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "861689",
+       "name": "12 HR amoxicillin 1000 MG / clavulanate 62.5 MG Extended Release Oral Tablet [Augmentin]",
+       "synonym": "Augmentin XR 12 HR 1000 MG Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "897048",
+       "name": "amoxicillin 50 MG/ML / clavulanate 12.5 MG/ML Oral Suspension [Clavamox]",
+       "synonym": "Clavamox (amoxicillin 50 MG/ML / clavulanate 12.5 MG/ML) Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "897052",
+       "name": "amoxicillin 50 MG/ML Oral Suspension [Amoxi Drop]",
+       "synonym": "Amoxi-Drop 50 MG/ML Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "94406",
+       "name": "amoxicillin 500 MG Oral Capsule [Trimox]",
+       "synonym": "Trimox 500 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "105152",
+       "name": "amoxicillin 60 MG/ML Oral Suspension",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1810268",
+       "name": "amoxicillin 50 MG / clavulanate 12.5 MG Oral Tablet",
+       "synonym": "amoxicillin (as amoxicillin trihydrate) 50 MG / clavulanic acid (as clavulanate potassium) 12.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1810270",
+       "name": "amoxicillin 200 MG / clavulanate 50 MG Oral Tablet",
+       "synonym": "amoxicillin (as amoxicillin trihydrate) 200 MG / clavulanic acid (as clavulanate potassium) 50 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1810273",
+       "name": "amoxicillin 300 MG / clavulanate 75 MG Oral Tablet",
+       "synonym": "amoxicillin (as amoxicillin trihydrate) 300 MG / clavulanic acid (as clavulanate potassium) 75 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2105776",
+       "name": "amoxicillin 100 MG / clavulanate 25 MG Oral Tablet",
+       "synonym": "amoxicillin (as amoxicillin trihydrate) 100 MG / clavulanic acid (as clavulanate potassium) 25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2105786",
+       "name": "amoxicillin 100 MG / clavulanate 25 MG Chewable Tablet",
+       "synonym": "amoxicillin 100 MG / clavulanate potassium 25 MG Chewable Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2105792",
+       "name": "amoxicillin 200 MG / clavulanate 50 MG Chewable Tablet",
+       "synonym": "amoxicillin 200 MG / clavulanate potassium 50 MG Chewable Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2105795",
+       "name": "amoxicillin 300 MG / clavulanate 75 MG Chewable Tablet",
+       "synonym": "amoxicillin 300 MG / clavulanate potassium 75 MG Chewable Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2105798",
+       "name": "amoxicillin 50 MG / clavulanate 12.5 MG Chewable Tablet",
+       "synonym": "amoxicillin 50 MG / clavulanate potassium 12.5 MG Chewable Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2262026",
+       "name": "amoxicillin 250 MG / omeprazole 10 MG / rifabutin 12.5 MG Delayed Release Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "239191",
+       "name": "amoxicillin 50 MG/ML Oral Suspension",
+       "synonym": "amoxicillin 250 MG per 5 ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "246282",
+       "name": "amoxicillin 100 MG/ML Oral Suspension",
+       "synonym": "amoxicillin (as amoxicillin trihydrate) 100 MG/ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "308177",
+       "name": "amoxicillin 125 MG Chewable Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "308182",
+       "name": "amoxicillin 250 MG Oral Capsule",
+       "synonym": "amoxicillin (as amoxicillin trihydrate) 250 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "308188",
+       "name": "amoxicillin 400 MG Chewable Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "308189",
+       "name": "amoxicillin 80 MG/ML Oral Suspension",
+       "synonym": "amoxicillin (as amoxicillin trihydrate) 400 MG per 5 ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "308191",
+       "name": "amoxicillin 500 MG Oral Capsule",
+       "synonym": "amoxicillin (as amoxicillin trihydrate) 500 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "308192",
+       "name": "amoxicillin 500 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "308194",
+       "name": "amoxicillin 875 MG Oral Tablet",
+       "synonym": "amoxicillin (as amoxicillin trihydrate) 875 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "313797",
+       "name": "amoxicillin 25 MG/ML Oral Suspension",
+       "synonym": "amoxicillin 125 MG per 5 ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "313850",
+       "name": "amoxicillin 40 MG/ML Oral Suspension",
+       "synonym": "amoxicillin 200 MG per 5 ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "392151",
+       "name": "amoxicillin 200 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "392152",
+       "name": "amoxicillin 400 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "562251",
+       "name": "amoxicillin 250 MG / clavulanate 125 MG Oral Tablet",
+       "synonym": "amoxicillin (as amoxicillin trihydrate) 250 MG / clavulanic acid (as clavulanate potassium) 125 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "562253",
+       "name": "amoxicillin 125 MG / clavulanate 31.2 MG Chewable Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "562508",
+       "name": "amoxicillin 875 MG / clavulanate 125 MG Oral Tablet",
+       "synonym": "amoxicillin (as amoxicillin trihydrate) 875 MG / clavulanic acid (as clavulanate potassium) 125 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "598025",
+       "name": "amoxicillin 250 MG Chewable Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "617296",
+       "name": "amoxicillin 500 MG / clavulanate 125 MG Oral Tablet",
+       "synonym": "amoxicillin (as amoxicillin trihydrate) 500 MG / clavulanic acid (as clavulanate potassium) 125 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "617302",
+       "name": "amoxicillin 25 MG/ML / clavulanate 6.25 MG/ML Oral Suspension",
+       "synonym": "amoxicillin 125 MG / clavulanic acid 31.25 MG per 5 ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "617304",
+       "name": "amoxicillin 250 MG / clavulanate 62.5 MG Chewable Tablet",
+       "synonym": "amoxicillin 250 MG / clavulanate (as clavulanate potassium) 62.5 MG Chewable Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "617309",
+       "name": "amoxicillin 200 MG / clavulanate 28.5 MG Chewable Tablet",
+       "synonym": "amoxicillin 200 MG / clavulanate (as clavulanate potassium) 28.5 MG Chewable Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "617316",
+       "name": "amoxicillin 400 MG / clavulanate 57 MG Chewable Tablet",
+       "synonym": "amoxicillin 400 MG / clavulanate (as clavulanate potassium) 57 MG Chewable Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "617322",
+       "name": "amoxicillin 50 MG/ML / clavulanate 12.5 MG/ML Oral Suspension",
+       "synonym": "amoxicillin 250 MG / clavulanic acid 62.5 MG per 5 ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "617423",
+       "name": "amoxicillin 40 MG/ML / clavulanate 5.7 MG/ML Oral Suspension",
+       "synonym": "amoxicillin 200 MG / clavulanic acid 28.5 MG per 5 ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "617430",
+       "name": "amoxicillin 80 MG/ML / clavulanate 11.4 MG/ML Oral Suspension",
+       "synonym": "amoxicillin 400 MG / clavulanic acid 57 MG per 5 ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "617993",
+       "name": "amoxicillin 120 MG/ML / clavulanate 8.58 MG/ML Oral Suspension",
+       "synonym": "amoxicillin 600 MG / clavulanic acid 42.9 MG per 5 ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "617995",
+       "name": "12 HR amoxicillin 1000 MG / clavulanate 62.5 MG Extended Release Oral Tablet",
+       "synonym": "amoxicillin 1000 MG / clavulanate 62.5 MG 12 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "617996",
+       "name": "amoxicillin 800 MG / clavulanate 125 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "791939",
+       "name": "amoxicillin 100 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "791947",
+       "name": "amoxicillin 50 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "802550",
+       "name": "amoxicillin 775 MG Extended Release Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "846994",
+       "name": "amoxicillin 150 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

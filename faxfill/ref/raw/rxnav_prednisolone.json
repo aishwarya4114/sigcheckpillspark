@@ -1,0 +1,563 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=prednisolone",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:54-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK",
+     "conceptProperties": [
+      {
+       "rxcui": "1005831",
+       "name": "{48 (prednisolone 5 MG Oral Tablet [MILLIPRED]) } Pack [Millipred DP 12 Day]",
+       "synonym": "Millipred DP 12 Day Pack",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1235042",
+       "name": "{21 (prednisolone 5 MG Oral Tablet [MILLIPRED]) } Pack [Millipred DP 6 Day]",
+       "synonym": "Millipred DP 6 Day Dose Pack",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "GPCK",
+     "conceptProperties": [
+      {
+       "rxcui": "1005830",
+       "name": "{48 (prednisolone 5 MG Oral Tablet) } Pack",
+       "synonym": "prednisolone 5 MG Oral Tablet, 48 Tablet Pack",
+       "tty": "GPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1013114",
+       "name": "{21 (prednisolone 5 MG Oral Tablet) } Pack",
+       "synonym": "",
+       "tty": "GPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "1011987",
+       "name": "prednisolone acetate 0.002 MG/MG / sulfacetamide sodium 0.1 MG/MG Ophthalmic Ointment [Blephamide]",
+       "synonym": "Blephamide (prednisolone acetate 0.2 % / sulfacetamide sodium 10 % ) Ophthalmic Ointment",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1191683",
+       "name": "prednisolone 20 MG Oral Tablet [Prednistab]",
+       "synonym": "Prednistab 20 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1191686",
+       "name": "prednisolone 5 MG Oral Tablet [Prednistab]",
+       "synonym": "Prednistab 5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1548724",
+       "name": "prednisolone acetate 10 MG/ML Ophthalmic Suspension [Pred Forte]",
+       "synonym": "Pred Forte 1 % Ophthalmic Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "209002",
+       "name": "prednisolone 1.2 MG/ML Ophthalmic Suspension [Pred Mild]",
+       "synonym": "Pred Mild 0.12 % Ophthalmic Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "260409",
+       "name": "prednisolone 1 MG/ML Oral Solution [Pediapred]",
+       "synonym": "Pediapred 1 MG/ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2712718",
+       "name": "prednisolone 2 MG / trimeprazine 5 MG Oral Tablet [Cortamine]",
+       "synonym": "Cortamine P 5 MG / 2 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "647127",
+       "name": "prednisolone 15 MG Disintegrating Oral Tablet [Orapred]",
+       "synonym": "Orapred 15 MG Disintegrating Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "668658",
+       "name": "prednisolone 10 MG Disintegrating Oral Tablet [Orapred]",
+       "synonym": "Orapred 10 MG Disintegrating Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "668660",
+       "name": "prednisolone 30 MG Disintegrating Oral Tablet [Orapred]",
+       "synonym": "Orapred 30 MG Disintegrating Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "808118",
+       "name": "prednisolone 5 MG Oral Tablet [MILLIPRED]",
+       "synonym": "MILLIPRED 5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "824889",
+       "name": "prednisolone 4 MG/ML Oral Solution [Veripred]",
+       "synonym": "Veripred 20 Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "891153",
+       "name": "miconazole nitrate 23 MG/ML / polymyxin B sulfate 0.5293 MG/ML / prednisolone acetate 5 MG/ML Otic Suspension [Surolan]",
+       "synonym": "Surolan (miconazole nitrate 23 MG / polymyxin B sulfate 0.5293 MG / prednisolone acetate 5 MG) per ML Otic Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "897063",
+       "name": "prednisolone 2 MG / trimeprazine tartrate 5 MG Oral Tablet [Temaril-P]",
+       "synonym": "Temaril-P (prednisolone 2 MG / trimeprazine tartrate 5 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "1011979",
+       "name": "prednisolone acetate 0.0025 MG/MG / sulfacetamide sodium 0.1 MG/MG Ophthalmic Ointment",
+       "synonym": "prednisolone acetate 0.25 % / sulfacetamide sodium 10 % Ophthalmic Ointment",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1011985",
+       "name": "prednisolone acetate 0.002 MG/MG / sulfacetamide sodium 0.1 MG/MG Ophthalmic Ointment",
+       "synonym": "prednisolone acetate 0.2 % / sulfacetamide sodium 10 % Ophthalmic Ointment",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1012021",
+       "name": "prednisolone sodium phosphate 2.5 MG/ML / sulfacetamide sodium 100 MG/ML Ophthalmic Solution",
+       "synonym": "prednisolone sodium phosphate 0.25 % / sulfacetamide sodium 10 % Ophthalmic Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "105408",
+       "name": "prednisolone 2.5 MG Delayed Release Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "105409",
+       "name": "prednisolone 5 MG Delayed Release Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "105410",
+       "name": "prednisolone 5 MG Disintegrating Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "106993",
+       "name": "prednisolone 0.03 MG/ML Ophthalmic Solution",
+       "synonym": "prednisolone 0.003 % Ophthalmic Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "106994",
+       "name": "prednisolone 0.1 MG/ML Ophthalmic Solution",
+       "synonym": "prednisolone 0.01 % Ophthalmic Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "106995",
+       "name": "prednisolone 0.3 MG/ML Ophthalmic Solution",
+       "synonym": "prednisolone 0.03 % Ophthalmic Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "106996",
+       "name": "prednisolone 1 MG/ML Ophthalmic Solution",
+       "synonym": "prednisolone 0.1 % Ophthalmic Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "106997",
+       "name": "prednisolone 3 MG/ML Ophthalmic Solution",
+       "synonym": "prednisolone 0.3 % Ophthalmic Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1376336",
+       "name": "prednisolone acetate 10 MG/ML Ophthalmic Suspension",
+       "synonym": "prednisolone acetate 1 % Ophthalmic Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1547974",
+       "name": "prednisolone sodium phosphate 5 MG/ML Ophthalmic Solution",
+       "synonym": "prednisolone sodium phosphate 0.5 % Ophthalmic Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1549315",
+       "name": "prednisolone acetate 1.25 MG/ML Ophthalmic Suspension",
+       "synonym": "prednisolone acetate 0.125 % Ophthalmic Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "198142",
+       "name": "prednisolone 5 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "199343",
+       "name": "prednisolone 1 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "199967",
+       "name": "prednisolone 25 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "249066",
+       "name": "prednisolone 5 MG/ML Oral Solution",
+       "synonym": "prednisolone 25 MG (prednisolone sodium phosphate 33.6 MG) per 5 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "250343",
+       "name": "dibucaine 1 MG / prednisolone 1.3 MG Rectal Suppository",
+       "synonym": "dibucaine 1 MG / prednisolone (as prednisolone sodium phosphate) 1.3 MG Rectal Suppository",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "250864",
+       "name": "prednisolone 5 MG Rectal Suppository",
+       "synonym": "prednisolone (as prednisolone sodium phosphate) 5 MG Rectal Suppository",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "260125",
+       "name": "prednisolone 25 MG/ML Injectable Suspension",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2712712",
+       "name": "prednisolone 2 MG / trimeprazine 5 MG Oral Tablet",
+       "synonym": "prednisolone 2 MG / trimeprazine (as trimeprazine tartrate) 5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "283077",
+       "name": "prednisolone 3 MG/ML Oral Solution",
+       "synonym": "prednisolone 15 MG per 5 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "311888",
+       "name": "neomycin 3.5 MG/ML / polymyxin B 10000 UNT/ML / prednisolone 5 MG/ML Ophthalmic Suspension",
+       "synonym": "neomycin 0.35 % / polymyxin B 10,000 UNT/ML / prednisolone 0.5 % Ophthalmic Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "312614",
+       "name": "prednisolone 1 MG/ML Oral Solution",
+       "synonym": "prednisolone 5 MG (as prednisolone sodium phosphate 6.7 MG) per 5 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "314165",
+       "name": "prednisolone 10 MG/ML Ophthalmic Solution",
+       "synonym": "prednisolone sodium phosphate 1 % Ophthalmic Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "345131",
+       "name": "prednisolone 1.25 MG/ML Ophthalmic Solution",
+       "synonym": "prednisolone sodium phosphate 0.125 % Ophthalmic Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "348428",
+       "name": "prednisolone 50 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "392181",
+       "name": "prednisolone 25 MG/ML Ophthalmic Suspension",
+       "synonym": "prednisolone 2.5 % Ophthalmic Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "416681",
+       "name": "prednisolone 0.005 MG/MG Paste",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "429199",
+       "name": "prednisolone 20 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "562379",
+       "name": "prednisolone 1.2 MG/ML Ophthalmic Suspension",
+       "synonym": "prednisolone 0.12 % Ophthalmic Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "643123",
+       "name": "prednisolone 10 MG Disintegrating Oral Tablet",
+       "synonym": "prednisolone 10 MG (prednisolone sodium phosphate 13.4 MG) Disintegrating Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "643125",
+       "name": "prednisolone 15 MG Disintegrating Oral Tablet",
+       "synonym": "prednisolone 15 MG (prednisolone sodium phosphate 20.2 MG) Disintegrating Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "643127",
+       "name": "prednisolone 30 MG Disintegrating Oral Tablet",
+       "synonym": "prednisolone 30 MG (as prednisolone sodium phosphate 40.3 MG) Disintegrating Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "702306",
+       "name": "prednisolone 4 MG/ML Oral Solution",
+       "synonym": "prednisolone 20 MG (as prednisolone sodium phosphate 26.9 MG) per 5 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "792957",
+       "name": "prednisolone 1 MG/ML Oral Suspension",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "793099",
+       "name": "prednisolone 3 MG/ML Oral Suspension",
+       "synonym": "prednisolone 15 MG per 5 ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "794979",
+       "name": "prednisolone 2 MG/ML Oral Solution",
+       "synonym": "prednisolone 10 MG per 5 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "891149",
+       "name": "miconazole nitrate 23 MG/ML / polymyxin B sulfate 0.5293 MG/ML / prednisolone acetate 5 MG/ML Otic Suspension",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "897059",
+       "name": "prednisolone 2 MG / trimeprazine tartrate 5 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

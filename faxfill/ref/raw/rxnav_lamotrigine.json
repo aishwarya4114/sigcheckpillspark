@@ -1,0 +1,608 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=lamotrigine",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:48-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK",
+     "conceptProperties": [
+      {
+       "rxcui": "2003797",
+       "name": "{14 (lamotrigine 100 MG Oral Tablet [Subvenite]) / 84 (lamotrigine 25 MG Oral Tablet [Subvenite]) } Pack [Subvenite Green (for Patients Taking Carbamazepine, Phenytoin, Phenobarbital, or Primidone and Not Taking Valproate)]",
+       "synonym": "Subvenite Green Kit (for Patients Taking Carbamazepine, Phenytoin, Phenobarbital, or Primidone and Not Taking Valproate)",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2003798",
+       "name": "{7 (lamotrigine 100 MG Oral Tablet [Subvenite]) / 42 (lamotrigine 25 MG Oral Tablet [Subvenite]) } Pack [Subvenite Orange (for Patients Not Taking Carbamazepine, Phenytoin, Phenobarbital, Primidone, or Valproate)]",
+       "synonym": "Subvenite Orange Kit (for Patients Not Taking Carbamazepine, Phenytoin, Phenobarbital, Primidone, or Valproate)",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2003799",
+       "name": "{35 (lamotrigine 25 MG Oral Tablet [Subvenite]) } Pack [Subvenite Blue (for Patients Taking Valproate)]",
+       "synonym": "Subvenite Blue Kit (for Patients Taking Valproate)",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "795772",
+       "name": "{35 (lamotrigine 25 MG Oral Tablet [Lamictal]) } Pack [Lamictal Blue (For Patients Taking Valproate)]",
+       "synonym": "Lamictal Blue (For Patients Taking Valproate)",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "795774",
+       "name": "{7 (lamotrigine 100 MG Oral Tablet [Lamictal]) / 42 (lamotrigine 25 MG Oral Tablet [Lamictal]) } Pack [Lamictal Orange (For Patients Not Taking Carbamazepine, Phenytoin, Phenobarbital, Primidone, or Rifampin and Not Taking Valproate)]",
+       "synonym": "Lamictal Orange (For Patients Not Taking Carbamazepine, Phenytoin, Phenobarbital, Primidone, or Rifampin and Not Taking Valproate)",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "795778",
+       "name": "{14 (lamotrigine 100 MG Oral Tablet [Lamictal]) / 84 (lamotrigine 25 MG Oral Tablet [Lamictal]) } Pack [Lamictal Green (For Patients Taking Carbamazepine, Phenytoin, Phenobarbital, Primidone, or Rifampin and Not Taking Valproate)]",
+       "synonym": "Lamictal Green Kit (For Patients Taking Carbamazepine, Phenytoin, Phenobarbital, Primidone, or Rifampin and Not Taking Valproate)",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "851749",
+       "name": "{21 (lamotrigine 25 MG Disintegrating Oral Tablet [Lamictal]) / 7 (lamotrigine 50 MG Disintegrating Oral Tablet [Lamictal]) } Pack [Lamictal ODT Blue Patient Titration Kit (for Patients Taking Valproate)]",
+       "synonym": "Lamictal ODT Blue Patient Titration Kit (for Patients Taking Valproate)",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "851751",
+       "name": "{7 (lamotrigine 100 MG Disintegrating Oral Tablet [Lamictal]) / 14 (lamotrigine 25 MG Disintegrating Oral Tablet [Lamictal]) / 14 (lamotrigine 50 MG Disintegrating Oral Tablet [Lamictal]) } Pack [Lamictal ODT Orange Patient Titration Kit (For Patients Not Taking Enzyme-Inducing Drugs or Valproate)]",
+       "synonym": "Lamictal ODT Orange Patient Titration Kit (For Patients Not Taking Enzyme-Inducing Drugs or Valproate)",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "851753",
+       "name": "{14 (lamotrigine 100 MG Disintegrating Oral Tablet [Lamictal]) / 42 (lamotrigine 50 MG Disintegrating Oral Tablet [Lamictal]) } Pack [Lamictal ODT Green Titration Kit (for Patients Taking Enzyme-Inducing Drugs and Not Taking Valproate)]",
+       "synonym": "Lamictal ODT Green Titration Kit (for Patients Taking Enzyme-Inducing Drugs and Not Taking Valproate)",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "900866",
+       "name": "{14 (24 HR lamotrigine 100 MG Extended Release Oral Tablet [Lamictal]) / 7 (24 HR lamotrigine 200 MG Extended Release Oral Tablet [Lamictal]) / 14 (24 HR lamotrigine 50 MG Extended Release Oral Tablet [Lamictal]) } Pack [Lamictal XR Green Patient Titration Kit (for Patients Taking Carbamazepine, Phenytoin, Phenobarbital, or Primidone, and Not Taking Valproate)]",
+       "synonym": "Lamictal XR Green Patient Titration Kit",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "900891",
+       "name": "{7 (24 HR lamotrigine 100 MG Extended Release Oral Tablet [Lamictal]) / 14 (24 HR lamotrigine 25 MG Extended Release Oral Tablet [Lamictal]) / 14 (24 HR lamotrigine 50 MG Extended Release Oral Tablet [Lamictal]) } Pack [Lamictal XR Orange Patient Titration Kit (for Patients Not Taking Carbamazepine, Phenytoin, Phenobarbital, Primidone, or Valproate)]",
+       "synonym": "Lamictal XR Orange Patient Titration Kit",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "900984",
+       "name": "{21 (24 HR lamotrigine 25 MG Extended Release Oral Tablet [Lamictal]) / 7 (24 HR lamotrigine 50 MG Extended Release Oral Tablet [Lamictal]) } Pack [Lamictal XR Blue Patient Titration Kit (for Patients Taking Valproate)]",
+       "synonym": "Lamictal XR Blue Patient Titration Kit",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "GPCK",
+     "conceptProperties": [
+      {
+       "rxcui": "751139",
+       "name": "{35 (lamotrigine 25 MG Oral Tablet) } Pack",
+       "synonym": "lamotrigine Blue (For Patients Taking Valproate)",
+       "tty": "GPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "751563",
+       "name": "{7 (lamotrigine 100 MG Oral Tablet) / 42 (lamotrigine 25 MG Oral Tablet) } Pack",
+       "synonym": "lamotrigine Orange (USP Starter Kit for Patients Not Taking Carbamazepine, Phenytoin, Phenobarbital, Primidone, or Valproate)",
+       "tty": "GPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "753451",
+       "name": "{14 (lamotrigine 100 MG Oral Tablet) / 84 (lamotrigine 25 MG Oral Tablet) } Pack",
+       "synonym": "lamotrigine Green (For Patients Taking Carbamazepine, Phenytoin, Phenobarbital, Primidone, or Rifampin and Not Taking Valproate)",
+       "tty": "GPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "851748",
+       "name": "{21 (lamotrigine 25 MG Disintegrating Oral Tablet) / 7 (lamotrigine 50 MG Disintegrating Oral Tablet) } Pack",
+       "synonym": "",
+       "tty": "GPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "851750",
+       "name": "{7 (lamotrigine 100 MG Disintegrating Oral Tablet) / 14 (lamotrigine 25 MG Disintegrating Oral Tablet) / 14 (lamotrigine 50 MG Disintegrating Oral Tablet) } Pack",
+       "synonym": "",
+       "tty": "GPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "851752",
+       "name": "{14 (lamotrigine 100 MG Disintegrating Oral Tablet) / 42 (lamotrigine 50 MG Disintegrating Oral Tablet) } Pack",
+       "synonym": "",
+       "tty": "GPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "900865",
+       "name": "{14 (24 HR lamotrigine 100 MG Extended Release Oral Tablet) / 7 (24 HR lamotrigine 200 MG Extended Release Oral Tablet) / 14 (24 HR lamotrigine 50 MG Extended Release Oral Tablet) } Pack",
+       "synonym": "14 lamotrigine 100 MG 24 HR Extended Release Oral Tablet / 7 lamotrigine 200 MG 24 HR Extended Release Oral Tablet / 14 lamotrigine 50 MG 24 HR Extended Release Oral Tablet Pack",
+       "tty": "GPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "900890",
+       "name": "{7 (24 HR lamotrigine 100 MG Extended Release Oral Tablet) / 14 (24 HR lamotrigine 25 MG Extended Release Oral Tablet) / 14 (24 HR lamotrigine 50 MG Extended Release Oral Tablet) } Pack",
+       "synonym": "7 lamotrigine 100 MG 24 HR Extended Release Oral Tablet / 14 lamotrigine 25 MG 24 HR Extended Release Oral Tablet / 14 lamotrigine 50 MG 24 HR Extended Release Oral Tablet Pack",
+       "tty": "GPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "900983",
+       "name": "{21 (24 HR lamotrigine 25 MG Extended Release Oral Tablet) / 7 (24 HR lamotrigine 50 MG Extended Release Oral Tablet) } Pack",
+       "synonym": "21 lamotrigine 25 MG 24 HR Extended Release Oral Tablet / 7 lamotrigine 50 MG 24 HR Extended Release Oral Tablet Pack",
+       "tty": "GPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "105018",
+       "name": "lamotrigine 100 MG Oral Tablet [Lamictal]",
+       "synonym": "Lamictal 100 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "105019",
+       "name": "lamotrigine 25 MG Oral Tablet [Lamictal]",
+       "synonym": "Lamictal 25 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "108782",
+       "name": "lamotrigine 200 MG Oral Tablet [Lamictal]",
+       "synonym": "Lamictal 200 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1098610",
+       "name": "24 HR lamotrigine 300 MG Extended Release Oral Tablet [Lamictal]",
+       "synonym": "Lamictal 300 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1146692",
+       "name": "24 HR lamotrigine 250 MG Extended Release Oral Tablet [Lamictal]",
+       "synonym": "Lamictal 250 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2001506",
+       "name": "lamotrigine 150 MG Oral Tablet [Subvenite]",
+       "synonym": "Subvenite 150 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2001508",
+       "name": "lamotrigine 25 MG Oral Tablet [Subvenite]",
+       "synonym": "Subvenite 25 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2003796",
+       "name": "lamotrigine 100 MG Oral Tablet [Subvenite]",
+       "synonym": "Subvenite 100 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2003801",
+       "name": "lamotrigine 200 MG Oral Tablet [Subvenite]",
+       "synonym": "Subvenite 200 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "201239",
+       "name": "lamotrigine 5 MG Tablet for Oral Suspension [Lamictal]",
+       "synonym": "Lamictal CD 5 MG Tablet for Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "201240",
+       "name": "lamotrigine 25 MG Tablet for Oral Suspension [Lamictal]",
+       "synonym": "Lamictal CD 25 MG Tablet for Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "206201",
+       "name": "lamotrigine 150 MG Oral Tablet [Lamictal]",
+       "synonym": "Lamictal 150 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2724466",
+       "name": "lamotrigine 10 MG/ML Oral Suspension [Subvenite]",
+       "synonym": "Subvenite 10 MG/ML Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "542426",
+       "name": "lamotrigine 2 MG Tablet for Oral Suspension [Lamictal]",
+       "synonym": "Lamictal 2 MG Tablet for Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "849049",
+       "name": "lamotrigine 100 MG Disintegrating Oral Tablet [Lamictal]",
+       "synonym": "Lamictal ODT 100 MG Disintegrating Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "849050",
+       "name": "lamotrigine 200 MG Disintegrating Oral Tablet [Lamictal]",
+       "synonym": "Lamictal ODT 200 MG Disintegrating Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "849051",
+       "name": "lamotrigine 25 MG Disintegrating Oral Tablet [Lamictal]",
+       "synonym": "Lamictal ODT 25 MG Disintegrating Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "849052",
+       "name": "lamotrigine 50 MG Disintegrating Oral Tablet [Lamictal]",
+       "synonym": "Lamictal ODT 50 MG Disintegrating Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "900145",
+       "name": "24 HR lamotrigine 100 MG Extended Release Oral Tablet [Lamictal]",
+       "synonym": "Lamictal 100 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "900157",
+       "name": "24 HR lamotrigine 200 MG Extended Release Oral Tablet [Lamictal]",
+       "synonym": "Lamictal 200 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "900165",
+       "name": "24 HR lamotrigine 25 MG Extended Release Oral Tablet [Lamictal]",
+       "synonym": "Lamictal 25 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "900169",
+       "name": "24 HR lamotrigine 50 MG Extended Release Oral Tablet [Lamictal]",
+       "synonym": "Lamictal 50 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "103968",
+       "name": "lamotrigine 100 MG Disintegrating Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1098608",
+       "name": "24 HR lamotrigine 300 MG Extended Release Oral Tablet",
+       "synonym": "lamotrigine 300 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1146690",
+       "name": "24 HR lamotrigine 250 MG Extended Release Oral Tablet",
+       "synonym": "lamotrigine 250 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "198427",
+       "name": "lamotrigine 100 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "198428",
+       "name": "lamotrigine 150 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "198429",
+       "name": "lamotrigine 200 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "198430",
+       "name": "lamotrigine 25 MG Disintegrating Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "199322",
+       "name": "lamotrigine 50 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "249329",
+       "name": "lamotrigine 250 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "252478",
+       "name": "lamotrigine 50 MG Disintegrating Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "252479",
+       "name": "lamotrigine 200 MG Disintegrating Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2724462",
+       "name": "lamotrigine 10 MG/ML Oral Suspension",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "282401",
+       "name": "lamotrigine 25 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "311264",
+       "name": "lamotrigine 25 MG Tablet for Oral Suspension",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "311265",
+       "name": "lamotrigine 5 MG Tablet for Oral Suspension",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "349010",
+       "name": "lamotrigine 2 MG Tablet for Oral Suspension",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "391875",
+       "name": "lamotrigine 2 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "850087",
+       "name": "24 HR lamotrigine 100 MG Extended Release Oral Tablet",
+       "synonym": "lamotrigine 100 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "850091",
+       "name": "24 HR lamotrigine 50 MG Extended Release Oral Tablet",
+       "synonym": "lamotrigine 50 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "900156",
+       "name": "24 HR lamotrigine 200 MG Extended Release Oral Tablet",
+       "synonym": "lamotrigine 200 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "900164",
+       "name": "24 HR lamotrigine 25 MG Extended Release Oral Tablet",
+       "synonym": "lamotrigine 25 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

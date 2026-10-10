@@ -1,0 +1,361 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=lamivudine",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:49-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "152931",
+       "name": "lamivudine 150 MG Oral Tablet [Epivir]",
+       "synonym": "Epivir 150 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "152932",
+       "name": "lamivudine 10 MG/ML Oral Solution [Epivir]",
+       "synonym": "3TC 10 MG/ML Oral Solution [Epivir]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1546894",
+       "name": "abacavir 600 MG / dolutegravir 50 MG / lamivudine 300 MG Oral Tablet [Triumeq]",
+       "synonym": "abacavir 600 MG / dolutegravir 50 MG / 3TC 300 MG Oral Tablet [Triumeq]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2001430",
+       "name": "efavirenz 400 MG / lamivudine 300 MG / tenofovir disoproxil fumarate 300 MG Oral Tablet [Symfi]",
+       "synonym": "efavirenz 400 MG / 3TC 300 MG / Tenofovir disoproxil fumarate 300 MG Oral Tablet [Symfi]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2003255",
+       "name": "lamivudine 300 MG / tenofovir disoproxil fumarate 300 MG Oral Tablet [Cimduo]",
+       "synonym": "3TC 300 MG / Tenofovir disoproxil fumarate 300 MG Oral Tablet [Cimduo]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2043464",
+       "name": "efavirenz 600 MG / lamivudine 300 MG / tenofovir disoproxil fumarate 300 MG Oral Tablet [Symfi]",
+       "synonym": "efavirenz 600 MG / 3TC 300 MG / Tenofovir disoproxil fumarate 300 MG Oral Tablet [Symfi]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2055815",
+       "name": "doravirine 100 MG / lamivudine 300 MG / tenofovir disoproxil fumarate 300 MG Oral Tablet [Delstrigo]",
+       "synonym": "DORAVIRINE 100 MG / 3TC 300 MG / Tenofovir disoproxil fumarate 300 MG Oral Tablet [Delstrigo]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2122526",
+       "name": "dolutegravir 50 MG / lamivudine 300 MG Oral Tablet [Dovato]",
+       "synonym": "dolutegravir 50 MG / 3TC 300 MG Oral Tablet [Dovato]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2123034",
+       "name": "lamivudine 300 MG / tenofovir disoproxil fumarate 300 MG Oral Tablet [Temixys]",
+       "synonym": "3TC 300 MG / Tenofovir disoproxil fumarate 300 MG Oral Tablet [Temixys]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "213088",
+       "name": "lamivudine 150 MG / zidovudine 300 MG Oral Tablet [Combivir]",
+       "synonym": "3TC 150 MG / AZT 300 MG Oral Tablet [Combivir]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2598352",
+       "name": "abacavir 60 MG / dolutegravir 5 MG / lamivudine 30 MG Tablet for Oral Suspension [Triumeq]",
+       "synonym": "abacavir 60 MG / dolutegravir 5 MG / 3TC 30 MG Tablet for Oral Suspension [Triumeq]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "285028",
+       "name": "abacavir 300 MG / lamivudine 150 MG / zidovudine 300 MG Oral Tablet [Trizivir]",
+       "synonym": "abacavir 300 MG / 3TC 150 MG / AZT 300 MG Oral Tablet [Trizivir]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "352230",
+       "name": "lamivudine 300 MG Oral Tablet [Epivir]",
+       "synonym": "Epivir 300 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "602395",
+       "name": "abacavir 600 MG / lamivudine 300 MG Oral Tablet [Epzicom]",
+       "synonym": "abacavir 600 MG / 3TC 300 MG Oral Tablet [Epzicom]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "1546888",
+       "name": "abacavir 600 MG / dolutegravir 50 MG / lamivudine 300 MG Oral Tablet",
+       "synonym": "abacavir 600 MG / dolutegravir 50 MG / 3TC 300 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "199147",
+       "name": "lamivudine 150 MG Oral Tablet",
+       "synonym": "3TC 150 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "199148",
+       "name": "lamivudine 10 MG/ML Oral Solution",
+       "synonym": "3TC 10 MG/ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "200082",
+       "name": "lamivudine 150 MG / zidovudine 300 MG Oral Tablet",
+       "synonym": "3TC 150 MG / AZT 300 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2001424",
+       "name": "efavirenz 400 MG / lamivudine 300 MG / tenofovir disoproxil fumarate 300 MG Oral Tablet",
+       "synonym": "efavirenz 400 MG / 3TC 300 MG / Tenofovir disoproxil fumarate 300 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2003249",
+       "name": "lamivudine 300 MG / tenofovir disoproxil fumarate 300 MG Oral Tablet",
+       "synonym": "3TC 300 MG / Tenofovir disoproxil fumarate 300 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "205328",
+       "name": "lamivudine 100 MG Oral Tablet",
+       "synonym": "3TC 100 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2055813",
+       "name": "doravirine 100 MG / lamivudine 300 MG / tenofovir disoproxil fumarate 300 MG Oral Tablet",
+       "synonym": "DORAVIRINE 100 MG / 3TC 300 MG / Tenofovir disoproxil fumarate 300 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2122519",
+       "name": "dolutegravir 50 MG / lamivudine 300 MG Oral Tablet",
+       "synonym": "dolutegravir 50 MG / 3TC 300 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "242692",
+       "name": "lamivudine 5 MG/ML Oral Solution",
+       "synonym": "3TC 5 MG/ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2598348",
+       "name": "abacavir 60 MG / dolutegravir 5 MG / lamivudine 30 MG Tablet for Oral Suspension",
+       "synonym": "abacavir 60 MG / dolutegravir 5 MG / 3TC 30 MG Tablet for Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "307650",
+       "name": "abacavir 300 MG / lamivudine 150 MG / zidovudine 300 MG Oral Tablet",
+       "synonym": "abacavir 300 MG / 3TC 150 MG / AZT 300 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "349491",
+       "name": "lamivudine 300 MG Oral Tablet",
+       "synonym": "3TC 300 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "602393",
+       "name": "abacavir 600 MG / lamivudine 300 MG Oral Tablet",
+       "synonym": "abacavir 600 MG / 3TC 300 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "687064",
+       "name": "lamivudine 150 MG / nevirapine 200 MG / zidovudine 300 MG Oral Tablet",
+       "synonym": "3TC 150 MG / Nevirapine 200 MG / AZT 300 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "729583",
+       "name": "lamivudine 150 MG / stavudine 40 MG Oral Tablet",
+       "synonym": "3TC 150 MG / D4T 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "757685",
+       "name": "lamivudine 150 MG / stavudine 30 MG Oral Tablet",
+       "synonym": "3TC 150 MG / D4T 30 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "757690",
+       "name": "lamivudine 30 MG / nevirapine 50 MG / stavudine 6 MG Disintegrating Oral Tablet",
+       "synonym": "3TC 30 MG / Nevirapine 50 MG / D4T 6 MG Disintegrating Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "757694",
+       "name": "lamivudine 60 MG / nevirapine 100 MG / stavudine 12 MG Disintegrating Oral Tablet",
+       "synonym": "3TC 60 MG / Nevirapine 100 MG / D4T 12 MG Disintegrating Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "864661",
+       "name": "efavirenz 600 MG / lamivudine 300 MG / tenofovir disoproxil fumarate 300 MG Oral Tablet",
+       "synonym": "efavirenz 600 MG / 3TC 300 MG / Tenofovir disoproxil fumarate 300 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "900625",
+       "name": "lamivudine 150 MG / nevirapine 200 MG / stavudine 30 MG Oral Tablet",
+       "synonym": "3TC 150 MG / Nevirapine 200 MG / D4T 30 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "900627",
+       "name": "lamivudine 150 MG / nevirapine 200 MG / stavudine 40 MG Oral Tablet",
+       "synonym": "3TC 150 MG / Nevirapine 200 MG / D4T 40 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "900630",
+       "name": "lamivudine 30 MG / zidovudine 60 MG Oral Tablet",
+       "synonym": "3TC 30 MG / AZT 60 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

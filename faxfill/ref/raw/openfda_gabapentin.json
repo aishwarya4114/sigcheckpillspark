@@ -1,0 +1,76 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22gabapentin%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:34:03-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 640
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "80425-0035",
+    "generic_name": "Gabapentin",
+    "labeler_name": "Advanced Rx of Tennessee, LLC",
+    "brand_name": "Gabapentin",
+    "active_ingredients": [
+     {
+      "name": "GABAPENTIN",
+      "strength": "800 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "80425-0035-1",
+      "description": "30 TABLET in 1 BOTTLE (80425-0035-1)",
+      "marketing_start_date": "20151101",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20261231",
+    "openfda": {
+     "manufacturer_name": [
+      "Advanced Rx of Tennessee, LLC"
+     ],
+     "rxcui": [
+      "310434"
+     ],
+     "spl_set_id": [
+      "afa28969-91ca-83fd-e053-2a95a90a656b"
+     ],
+     "nui": [
+      "N0000008486"
+     ],
+     "pharm_class_pe": [
+      "Decreased Central Nervous System Disorganized Electrical Activity [PE]"
+     ],
+     "unii": [
+      "6CW7F3G59X"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "TABLET",
+    "spl_id": "2a984dd9-729b-77f0-e063-6294a90a8f1e",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20151101",
+    "product_id": "80425-0035_2a984dd9-729b-77f0-e063-6294a90a8f1e",
+    "application_number": "ANDA206402",
+    "brand_name_base": "Gabapentin",
+    "pharm_class": [
+     "Decreased Central Nervous System Disorganized Electrical Activity [PE]"
+    ]
+   }
+  ]
+ }
+}

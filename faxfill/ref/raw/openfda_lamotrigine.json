@@ -1,0 +1,88 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22lamotrigine%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:49-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 331
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "67835-0016",
+    "generic_name": "LAMOTRIGINE",
+    "labeler_name": "SMS Pharmaceuticals Limited",
+    "active_ingredients": [
+     {
+      "name": "LAMOTRIGINE",
+      "strength": "1 kg/kg"
+     }
+    ],
+    "finished": false,
+    "packaging": [
+     {
+      "package_ndc": "67835-0016-1",
+      "description": "1 BAG in 1 DRUM (67835-0016-1)  / 25 kg in 1 BAG",
+      "marketing_start_date": "01-NOV-19"
+     },
+     {
+      "package_ndc": "67835-0016-2",
+      "description": "1 BAG in 1 DRUM (67835-0016-2)  / 20 kg in 1 BAG",
+      "marketing_start_date": "01-NOV-19"
+     },
+     {
+      "package_ndc": "67835-0016-3",
+      "description": "1 BAG in 1 DRUM (67835-0016-3)  / 15 kg in 1 BAG",
+      "marketing_start_date": "01-NOV-19"
+     },
+     {
+      "package_ndc": "67835-0016-4",
+      "description": "1 BAG in 1 DRUM (67835-0016-4)  / 10 kg in 1 BAG",
+      "marketing_start_date": "01-NOV-19"
+     },
+     {
+      "package_ndc": "67835-0016-5",
+      "description": "1 BAG in 1 DRUM (67835-0016-5)  / 5 kg in 1 BAG",
+      "marketing_start_date": "01-NOV-19"
+     },
+     {
+      "package_ndc": "67835-0016-6",
+      "description": "1 BAG in 1 DRUM (67835-0016-6)  / 1 kg in 1 BAG",
+      "marketing_start_date": "01-NOV-19"
+     },
+     {
+      "package_ndc": "67835-0016-7",
+      "description": "1 BAG in 1 DRUM (67835-0016-7)  / .5 kg in 1 BAG",
+      "marketing_start_date": "01-NOV-19"
+     },
+     {
+      "package_ndc": "67835-0016-8",
+      "description": "1 BAG in 1 BAG (67835-0016-8)  / .1 kg in 1 BAG",
+      "marketing_start_date": "01-NOV-19"
+     },
+     {
+      "package_ndc": "67835-0016-9",
+      "description": "1 BAG in 1 BAG (67835-0016-9)  / .05 kg in 1 BAG",
+      "marketing_start_date": "01-NOV-19"
+     }
+    ],
+    "listing_expiration_date": "20261231",
+    "openfda": {},
+    "marketing_category": "BULK INGREDIENT",
+    "dosage_form": "POWDER",
+    "spl_id": "28939c11-8f37-6850-e063-6394a90a1a7a",
+    "product_type": "BULK INGREDIENT",
+    "marketing_start_date": "20191101",
+    "product_id": "67835-0016_28939c11-8f37-6850-e063-6394a90a1a7a",
+    "brand_name_base": null
+   }
+  ]
+ }
+}

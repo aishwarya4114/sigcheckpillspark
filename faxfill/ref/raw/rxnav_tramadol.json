@@ -1,0 +1,316 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=tramadol",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:44-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "1148482",
+       "name": "24 HR tramadol hydrochloride 100 MG Extended Release Oral Capsule [ConZip]",
+       "synonym": "24 HR ConZip 100 MG Extended Release Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1148487",
+       "name": "24 HR tramadol hydrochloride 200 MG Extended Release Oral Capsule [ConZip]",
+       "synonym": "24 HR ConZip 200 MG Extended Release Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1148491",
+       "name": "24 HR tramadol hydrochloride 300 MG Extended Release Oral Capsule [ConZip]",
+       "synonym": "24 HR ConZip 300 MG Extended Release Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2395814",
+       "name": "tramadol hydrochloride 5 MG/ML Oral Solution [Qdolo]",
+       "synonym": "Qdolo 5 MG/ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2588484",
+       "name": "celecoxib 56 MG / tramadol hydrochloride 44 MG Oral Tablet [Seglentis]",
+       "synonym": "Seglentis (celecoxib 56 MG / tramadol hydrochloride 44 MG (equivalent to tramadol 39 MG) ) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "835605",
+       "name": "tramadol hydrochloride 50 MG Oral Tablet [Ultram]",
+       "synonym": "Ultram 50 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "836397",
+       "name": "acetaminophen 325 MG / tramadol hydrochloride 37.5 MG Oral Tablet [Ultracet]",
+       "synonym": "APAP 325 MG / tramadol hydrochloride 37.5 MG Oral Tablet [Ultracet]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "845315",
+       "name": "24 HR tramadol hydrochloride 200 MG Extended Release Oral Tablet [Ultram]",
+       "synonym": "24 HR Ultram 200 MG Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "1148478",
+       "name": "24 HR tramadol hydrochloride 100 MG Extended Release Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1148485",
+       "name": "24 HR tramadol hydrochloride 200 MG Extended Release Oral Capsule",
+       "synonym": "tramadol hydrochloride 200 MG 24 HR Extended Release Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1148489",
+       "name": "24 HR tramadol hydrochloride 300 MG Extended Release Oral Capsule",
+       "synonym": "tramadol hydrochloride 300 MG 24 HR Extended Release Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1248115",
+       "name": "24 HR tramadol hydrochloride 150 MG Extended Release Oral Capsule",
+       "synonym": "tramadol HCl 150 MG 24 HR Extended Release Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1946525",
+       "name": "Matrix Delivery 24 HR tramadol hydrochloride 300 MG Extended Release Oral Tablet",
+       "synonym": "tramadol hydrochloride 300 MG Matrix Delivery 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1946527",
+       "name": "Matrix Delivery 24 HR tramadol hydrochloride 200 MG Extended Release Oral Tablet",
+       "synonym": "tramadol hydrochloride 200 MG Matrix Delivery 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1946529",
+       "name": "Matrix Delivery 24 HR tramadol hydrochloride 100 MG Extended Release Oral Tablet",
+       "synonym": "tramadol hydrochloride 100 MG Matrix Delivery 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2179635",
+       "name": "tramadol hydrochloride 100 MG Oral Tablet",
+       "synonym": "tramadol HCl 100 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2395808",
+       "name": "tramadol hydrochloride 5 MG/ML Oral Solution",
+       "synonym": "tramadol hydrochloride 5 MG per 1 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2588478",
+       "name": "celecoxib 56 MG / tramadol hydrochloride 44 MG Oral Tablet",
+       "synonym": "celecoxib 56 MG / tramadol hydrochloride 44 MG (equivalent to tramadol 39 MG) Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2670390",
+       "name": "tramadol hydrochloride 25 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2692878",
+       "name": "tramadol hydrochloride 75 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "833709",
+       "name": "24 HR tramadol hydrochloride 100 MG Extended Release Oral Tablet",
+       "synonym": "tramadol hydrochloride 100 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "833711",
+       "name": "24 HR tramadol hydrochloride 200 MG Extended Release Oral Tablet",
+       "synonym": "tramadol HCl 200 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "833713",
+       "name": "24 HR tramadol hydrochloride 300 MG Extended Release Oral Tablet",
+       "synonym": "tramadol hydrochloride 300 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "835603",
+       "name": "tramadol hydrochloride 50 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "836395",
+       "name": "acetaminophen 325 MG / tramadol hydrochloride 37.5 MG Oral Tablet",
+       "synonym": "APAP 325 MG / tramadol hydrochloride 37.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "836408",
+       "name": "tramadol hydrochloride 50 MG Disintegrating Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "836466",
+       "name": "tramadol hydrochloride 50 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "836485",
+       "name": "tramadol hydrochloride 1 MG/ML Oral Solution",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "849329",
+       "name": "tramadol hydrochloride 50 MG/ML Injectable Solution",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "849331",
+       "name": "tramadol hydrochloride 75 MG Extended Release Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "849561",
+       "name": "12 HR tramadol hydrochloride 150 MG Extended Release Oral Tablet",
+       "synonym": "tramadol hydrochloride 150 MG 12 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "849903",
+       "name": "tramadol hydrochloride 50 MG Extended Release Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

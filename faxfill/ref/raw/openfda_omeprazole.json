@@ -1,0 +1,48 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22omeprazole%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:34:01-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 458
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "64239-399",
+    "generic_name": "Omeprazole",
+    "labeler_name": "Dexcel Pharma Technologies Ltd.",
+    "active_ingredients": [
+     {
+      "name": "OMEPRAZOLE",
+      "strength": "20 mg/1"
+     }
+    ],
+    "finished": false,
+    "packaging": [
+     {
+      "package_ndc": "64239-399-08",
+      "description": "10 BLISTER PACK in 1 CARTON (64239-399-08)  / 14 TABLET, DELAYED RELEASE in 1 BLISTER PACK",
+      "marketing_start_date": "06-MAR-15"
+     }
+    ],
+    "listing_expiration_date": "20261231",
+    "openfda": {},
+    "marketing_category": "DRUG FOR FURTHER PROCESSING",
+    "dosage_form": "TABLET, DELAYED RELEASE",
+    "spl_id": "4d40af59-9d80-4a7a-b369-6f12ee786fd6",
+    "product_type": "DRUG FOR FURTHER PROCESSING",
+    "marketing_start_date": "20080301",
+    "product_id": "64239-399_4d40af59-9d80-4a7a-b369-6f12ee786fd6",
+    "brand_name_base": null
+   }
+  ]
+ }
+}

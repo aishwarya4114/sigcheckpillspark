@@ -16,6 +16,7 @@ import numpy as np
 from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 
 from faxfill.ids import npi_valid
+from faxfill.ref import load_drugs
 
 ROOT = Path(__file__).parent
 REF = ROOT / "ref"
@@ -52,7 +53,7 @@ F = {
 
 # ---------------------------------------------------------------- reference data
 def load_ref():
-    drugs = {d["name"]: d for d in json.load(open(REF / "drugs.json"))["drugs"]}
+    drugs = load_drugs()
     prescribers = list(csv.DictReader(open(REF / "prescribers.csv")))
     unknown = list(csv.DictReader(open(REF / "unknown_prescribers.csv")))
     patients = list(csv.DictReader(open(REF / "patients.csv")))
@@ -360,7 +361,8 @@ def render(cs, rng):
         "substitution": "permitted" if sub_permitted else "dispense_as_written",
         "notes": notes or None,
     }
-    meta = {"fax_from": pr["fax"], "sent": f"{date_iso} {sent_time}", "patient_id": pt["patient_id"],
+    rxcui = drug.get("rxcui", {}).get(str(int(cs["strength"]) if float(cs["strength"]).is_integer() else cs["strength"]))
+    meta = {"rxcui": None if cs.get("unit_override") else rxcui, "fax_from": pr["fax"], "sent": f"{date_iso} {sent_time}", "patient_id": pt["patient_id"],
             "prescriber_id": pr["prescriber_id"], "prescriber_in_directory": pr["prescriber_id"] < "P150"}
     return pg, truth, meta
 

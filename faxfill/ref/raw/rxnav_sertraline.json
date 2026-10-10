@@ -1,0 +1,118 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=sertraline",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:39-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "208149",
+       "name": "sertraline 100 MG Oral Tablet [Zoloft]",
+       "synonym": "Zoloft (as sertraline hydrochloride) 100 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "208161",
+       "name": "sertraline 50 MG Oral Tablet [Zoloft]",
+       "synonym": "Zoloft 50 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "212233",
+       "name": "sertraline 25 MG Oral Tablet [Zoloft]",
+       "synonym": "Zoloft 25 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "861066",
+       "name": "sertraline 20 MG/ML Oral Solution [Zoloft]",
+       "synonym": "Zoloft 20 MG per 1 ML Concentrate for Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "251201",
+       "name": "sertraline 200 MG Oral Capsule",
+       "synonym": "sertraline 200 MG (as sertraline HCl 224 MG) Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "312938",
+       "name": "sertraline 100 MG Oral Tablet",
+       "synonym": "sertraline (as sertraline HCl) 100 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "312940",
+       "name": "sertraline 25 MG Oral Tablet",
+       "synonym": "sertraline (as sertraline HCl) 25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "312941",
+       "name": "sertraline 50 MG Oral Tablet",
+       "synonym": "sertraline (as sertraline HCl) 50 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "410584",
+       "name": "sertraline 150 MG Oral Capsule",
+       "synonym": "sertraline 150 MG (as sertraline HCl 168 MG) Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "861064",
+       "name": "sertraline 20 MG/ML Oral Solution",
+       "synonym": "sertraline (as sertraline hydrochloride) 20 MG per 1 ML Concentrate for Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

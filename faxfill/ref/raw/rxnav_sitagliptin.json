@@ -1,0 +1,370 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=sitagliptin",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:37-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "1243833",
+       "name": "24 HR metformin hydrochloride 1000 MG / sitagliptin phosphate 100 MG Extended Release Oral Tablet [Janumet]",
+       "synonym": "Janumet XR 100/1000 24 HR Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1243843",
+       "name": "24 HR metformin hydrochloride 1000 MG / sitagliptin phosphate 50 MG Extended Release Oral Tablet [Janumet]",
+       "synonym": "Janumet XR 50/1000 24 HR Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1243848",
+       "name": "24 HR metformin hydrochloride 500 MG / sitagliptin phosphate 50 MG Extended Release Oral Tablet [Janumet]",
+       "synonym": "Janumet XR 50/500 24 HR Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1992832",
+       "name": "ertugliflozin 15 MG / sitagliptin 100 MG Oral Tablet [Steglujan]",
+       "synonym": "Steglujan 15/100 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1992837",
+       "name": "ertugliflozin 5 MG / sitagliptin 100 MG Oral Tablet [Steglujan]",
+       "synonym": "Steglujan 5/100 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2670447",
+       "name": "sitagliptin 100 MG Oral Tablet [Zituvio]",
+       "synonym": "Zituvio 100 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2670449",
+       "name": "sitagliptin 25 MG Oral Tablet [Zituvio]",
+       "synonym": "Zituvio 25 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2670451",
+       "name": "sitagliptin 50 MG Oral Tablet [Zituvio]",
+       "synonym": "Zituvio 50 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2677162",
+       "name": "metformin hydrochloride 1000 MG / sitagliptin 50 MG Oral Tablet [Zituvimet]",
+       "synonym": "Zituvimet 50 MG / 1000 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2677164",
+       "name": "metformin hydrochloride 500 MG / sitagliptin 50 MG Oral Tablet [Zituvimet]",
+       "synonym": "Zituvimet 50 MG / 500 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2696282",
+       "name": "24 HR metformin hydrochloride 1000 MG / sitagliptin 50 MG Extended Release Oral Tablet [Zituvimet]",
+       "synonym": "Zituvimet XR 50/1000 24 HR Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2696284",
+       "name": "24 HR metformin hydrochloride 500 MG / sitagliptin 50 MG Extended Release Oral Tablet [Zituvimet]",
+       "synonym": "Zituvimet XR 50/500 24 HR Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2696287",
+       "name": "24 HR metformin hydrochloride 1000 MG / sitagliptin 100 MG Extended Release Oral Tablet [Zituvimet]",
+       "synonym": "Zituvimet XR 100/1000 24 HR Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2716491",
+       "name": "sitagliptin 25 MG/ML Oral Solution [Brynovin]",
+       "synonym": "Brynovin 25 MG/ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "665036",
+       "name": "sitagliptin phosphate 100 MG Oral Tablet [Januvia]",
+       "synonym": "Januvia 100 MG (as sitagliptin phosphate monohydrate 128.5 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "665040",
+       "name": "sitagliptin phosphate 25 MG Oral Tablet [Januvia]",
+       "synonym": "Januvia 25 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "665044",
+       "name": "sitagliptin phosphate 50 MG Oral Tablet [Januvia]",
+       "synonym": "Januvia 50 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "861771",
+       "name": "metformin hydrochloride 1000 MG / sitagliptin phosphate 50 MG Oral Tablet [Janumet]",
+       "synonym": "Janumet 50 mg/1000 mg Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "861821",
+       "name": "metformin hydrochloride 500 MG / sitagliptin phosphate 50 MG Oral Tablet [Janumet]",
+       "synonym": "Janumet 50 mg/500 mg Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "1243827",
+       "name": "24 HR metformin hydrochloride 1000 MG / sitagliptin 100 MG Extended Release Oral Tablet",
+       "synonym": "metformin hydrochloride 1000 MG / sitagliptin 100 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1243842",
+       "name": "24 HR metformin hydrochloride 1000 MG / sitagliptin 50 MG Extended Release Oral Tablet",
+       "synonym": "metformin hydrochloride 1000 MG / sitagliptin 50 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1243846",
+       "name": "24 HR metformin hydrochloride 500 MG / sitagliptin 50 MG Extended Release Oral Tablet",
+       "synonym": "metformin hydrochloride 500 MG / sitagliptin (as sitagliptin phosphate) 50 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1992826",
+       "name": "ertugliflozin 15 MG / sitagliptin 100 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1992835",
+       "name": "ertugliflozin 5 MG / sitagliptin 100 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2709470",
+       "name": "24 HR metformin hydrochloride 1000 MG / sitagliptin phosphate 100 MG Extended Release Oral Tablet",
+       "synonym": "metformin hydrochloride 1000 MG / sitagliptin phosphate 100 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2709477",
+       "name": "24 HR metformin hydrochloride 1000 MG / sitagliptin phosphate 50 MG Extended Release Oral Tablet",
+       "synonym": "metformin hydrochloride 1000 MG / sitagliptin phosphate 50 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2709482",
+       "name": "24 HR metformin hydrochloride 500 MG / sitagliptin phosphate 50 MG Extended Release Oral Tablet",
+       "synonym": "metformin hydrochloride 500 MG / sitagliptin phosphate 50 MG 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2709488",
+       "name": "metformin hydrochloride 1000 MG / sitagliptin phosphate 50 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2709491",
+       "name": "metformin hydrochloride 500 MG / sitagliptin phosphate 50 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2709603",
+       "name": "sitagliptin phosphate 100 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2709608",
+       "name": "sitagliptin phosphate 50 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2709612",
+       "name": "sitagliptin phosphate 25 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2716485",
+       "name": "sitagliptin 25 MG/ML Oral Solution",
+       "synonym": "sitagliptin 25 MG (as sitagliptin HCl) per 1 mL Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "665033",
+       "name": "sitagliptin 100 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "665038",
+       "name": "sitagliptin 25 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "665042",
+       "name": "sitagliptin 50 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "861769",
+       "name": "metformin hydrochloride 1000 MG / sitagliptin 50 MG Oral Tablet",
+       "synonym": "metformin hydrochloride 1000 MG / sitagliptin 50 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "861819",
+       "name": "metformin hydrochloride 500 MG / sitagliptin 50 MG Oral Tablet",
+       "synonym": "metformin hydrochloride 500 MG / sitagliptin 50 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

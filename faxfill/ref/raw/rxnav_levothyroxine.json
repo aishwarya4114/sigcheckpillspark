@@ -1,0 +1,1540 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=levothyroxine",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:59-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "1189106",
+       "name": "levothyroxine sodium 0.1 MG Oral Tablet [Thyro-Tabs]",
+       "synonym": "Thyro-Tabs 0.1 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1189191",
+       "name": "levothyroxine sodium 0.2 MG Oral Tablet [Thyro-Tabs]",
+       "synonym": "Thyro-Tabs 0.2 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1189685",
+       "name": "levothyroxine sodium 0.3 MG Oral Tablet [Thyro-Tabs]",
+       "synonym": "Thyro-Tabs 0.3 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1189687",
+       "name": "levothyroxine sodium 0.4 MG Oral Tablet [Thyro-Tabs]",
+       "synonym": "Thyro-Tabs 0.4 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1189689",
+       "name": "levothyroxine sodium 0.5 MG Oral Tablet [Thyro-Tabs]",
+       "synonym": "Thyro-Tabs 0.5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1189691",
+       "name": "levothyroxine sodium 0.6 MG Oral Tablet [Thyro-Tabs]",
+       "synonym": "Thyro-Tabs 0.6 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1189693",
+       "name": "levothyroxine sodium 0.7 MG Oral Tablet [Thyro-Tabs]",
+       "synonym": "Thyro-Tabs 0.7 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1189695",
+       "name": "levothyroxine sodium 0.8 MG Oral Tablet [Thyro-Tabs]",
+       "synonym": "Thyro-Tabs 0.8 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1189697",
+       "name": "levothyroxine sodium 1 MG Oral Tablet [Thyro-Tabs]",
+       "synonym": "Thyro-Tabs 1 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1923049",
+       "name": "levothyroxine sodium 0.175 MG Oral Capsule [Tirosint]",
+       "synonym": "Tirosint 175 MCG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1923052",
+       "name": "levothyroxine sodium 0.2 MG Oral Capsule [Tirosint]",
+       "synonym": "Tirosint 0.2 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056466",
+       "name": "levothyroxine sodium 0.025 MG/ML Oral Solution [Tirosint]",
+       "synonym": "Tirosint SOL 0.025 MG per 1 ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056470",
+       "name": "levothyroxine sodium 0.05 MG/ML Oral Solution [Tirosint]",
+       "synonym": "Tirosint SOL 0.05 MG per 1 ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056474",
+       "name": "levothyroxine sodium 0.075 MG/ML Oral Solution [Tirosint]",
+       "synonym": "Tirosint SOL 0.075 MG per 1 ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056478",
+       "name": "levothyroxine sodium 0.088 MG/ML Oral Solution [Tirosint]",
+       "synonym": "Tirosint SOL 0.088 MG per 1 ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056482",
+       "name": "levothyroxine sodium 0.1 MG/ML Oral Solution [Tirosint]",
+       "synonym": "Tirosint SOL 0.1 MG per 1 ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056486",
+       "name": "levothyroxine sodium 0.112 MG/ML Oral Solution [Tirosint]",
+       "synonym": "Tirosint SOL 0.112 MG per 1 ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056490",
+       "name": "levothyroxine sodium 0.125 MG/ML Oral Solution [Tirosint]",
+       "synonym": "Tirosint SOL 0.125 MG per 1 ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056494",
+       "name": "levothyroxine sodium 0.013 MG/ML Oral Solution [Tirosint]",
+       "synonym": "Tirosint SOL 0.013 MG per 1 ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056498",
+       "name": "levothyroxine sodium 0.137 MG/ML Oral Solution [Tirosint]",
+       "synonym": "Tirosint SOL 0.137 MG per 1 ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056502",
+       "name": "levothyroxine sodium 0.15 MG/ML Oral Solution [Tirosint]",
+       "synonym": "Tirosint SOL 0.15 MG per 1 ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056506",
+       "name": "levothyroxine sodium 0.175 MG/ML Oral Solution [Tirosint]",
+       "synonym": "Tirosint SOL 0.175 MG per 1 ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056510",
+       "name": "levothyroxine sodium 0.2 MG/ML Oral Solution [Tirosint]",
+       "synonym": "Tirosint SOL 0.2 MG per 1 ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2100023",
+       "name": "levothyroxine sodium 0.0022 MG/MG Oral Powder [ThyroKare]",
+       "synonym": "ThyroKare 0.0022 MG/MG Oral Powder",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2104866",
+       "name": "levothyroxine sodium 0.137 MG Oral Tablet [Euthyrox]",
+       "synonym": "Euthyrox 137 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2473282",
+       "name": "levothyroxine sodium 0.02 MG/ML Oral Solution [Thyquidity]",
+       "synonym": "Thyquidity 0.02 MG/ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2566610",
+       "name": "levothyroxine sodium 0.0625 MG/ML Oral Solution [Tirosint]",
+       "synonym": "Tirosint 0.0625 MG/ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2566615",
+       "name": "levothyroxine sodium 0.0375 MG/ML Oral Solution [Tirosint]",
+       "synonym": "Tirosint 0.0375 MG/ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2566619",
+       "name": "levothyroxine sodium 0.044 MG/ML Oral Solution [Tirosint]",
+       "synonym": "Tirosint 0.044 MG/ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2626056",
+       "name": "levothyroxine sodium 0.03 MG/ML Oral Solution [Ermeza]",
+       "synonym": "Ermeza 0.03 MG/ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2630740",
+       "name": "levothyroxine sodium 0.0375 MG Oral Capsule [Tirosint]",
+       "synonym": "Tirosint 37.5 MCG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2630744",
+       "name": "levothyroxine sodium 0.044 MG Oral Capsule [Tirosint]",
+       "synonym": "Tirosint 44 MCG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2630748",
+       "name": "levothyroxine sodium 0.0625 MG Oral Capsule [Tirosint]",
+       "synonym": "Tirosint 62.5 MCG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2675685",
+       "name": "levothyroxine sodium 0.0022 MG/MG Oral Powder [Thyrocryn]",
+       "synonym": "Thyrocryn 0.22 % Oral Powder",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "903302",
+       "name": "levothyroxine sodium 0.15 MG / liothyronine sodium 0.0375 MG Oral Tablet [Thyrolar]",
+       "synonym": "Thyrolar 3 (levothyroxine sodium 150 MCG / liothyronine sodium 37.5 MCG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "903309",
+       "name": "levothyroxine sodium 0.1 MG / liothyronine sodium 0.025 MG Oral Tablet [Thyrolar]",
+       "synonym": "Thyrolar 2 (levothyroxine sodium 100 MCG / liothyronine sodium 25 MCG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "903316",
+       "name": "levothyroxine sodium 0.025 MG / liothyronine sodium 0.00625 MG Oral Tablet [Thyrolar]",
+       "synonym": "Thyrolar 1/2 (levothyroxine sodium 25 MCG / liothyronine sodium 6.25 MCG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "905453",
+       "name": "levothyroxine sodium 0.112 MG Oral Capsule [Tirosint]",
+       "synonym": "Tirosint 112 MCG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "905457",
+       "name": "levothyroxine sodium 0.137 MG Oral Capsule [Tirosint]",
+       "synonym": "Tirosint 137 MCG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "905460",
+       "name": "levothyroxine sodium 0.075 MG Oral Capsule [Tirosint]",
+       "synonym": "Tirosint 75 MCG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "905464",
+       "name": "levothyroxine sodium 0.088 MG Oral Capsule [Tirosint]",
+       "synonym": "Tirosint 88 MCG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966153",
+       "name": "levothyroxine sodium 0.025 MG Oral Tablet [Euthyrox]",
+       "synonym": "Euthyrox 25 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966154",
+       "name": "levothyroxine sodium 0.025 MG Oral Tablet [Levo-T]",
+       "synonym": "Levo-T 25 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966157",
+       "name": "levothyroxine sodium 0.025 MG Oral Tablet [Levoxyl]",
+       "synonym": "Levoxyl 25 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966158",
+       "name": "levothyroxine sodium 0.025 MG Oral Tablet [Synthroid]",
+       "synonym": "Synthroid 25 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966160",
+       "name": "levothyroxine sodium 0.05 MG Oral Tablet [Euthyrox]",
+       "synonym": "Euthyrox 50 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966161",
+       "name": "levothyroxine sodium 0.05 MG Oral Tablet [Levo-T]",
+       "synonym": "Levo-T 50 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966164",
+       "name": "levothyroxine sodium 0.05 MG Oral Tablet [Levoxyl]",
+       "synonym": "Levoxyl 50 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966166",
+       "name": "levothyroxine sodium 0.075 MG Oral Tablet [Euthyrox]",
+       "synonym": "Euthyrox 75 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966167",
+       "name": "levothyroxine sodium 0.075 MG Oral Tablet [Levo-T]",
+       "synonym": "Levo-T 75 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966170",
+       "name": "levothyroxine sodium 0.075 MG Oral Tablet [Levoxyl]",
+       "synonym": "Levoxyl 75 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966171",
+       "name": "levothyroxine sodium 0.075 MG Oral Tablet [Synthroid]",
+       "synonym": "Synthroid 75 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966173",
+       "name": "levothyroxine sodium 0.088 MG Oral Tablet [Euthyrox]",
+       "synonym": "Euthyrox 88 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966175",
+       "name": "levothyroxine sodium 0.088 MG Oral Tablet [Levoxyl]",
+       "synonym": "Levoxyl 88 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966177",
+       "name": "levothyroxine sodium 0.1 MG Oral Tablet [Euthyrox]",
+       "synonym": "Euthyrox 0.1 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966178",
+       "name": "levothyroxine sodium 0.1 MG Oral Tablet [Levo-T]",
+       "synonym": "Levo-T 0.1 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966182",
+       "name": "levothyroxine sodium 0.112 MG Oral Tablet [Euthyrox]",
+       "synonym": "Euthyrox 112 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966184",
+       "name": "levothyroxine sodium 0.112 MG Oral Tablet [Levoxyl]",
+       "synonym": "Levoxyl 112 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966185",
+       "name": "levothyroxine sodium 0.112 MG Oral Tablet [Synthroid]",
+       "synonym": "Synthroid 112 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966187",
+       "name": "levothyroxine sodium 0.125 MG Oral Tablet [Euthyrox]",
+       "synonym": "Euthyrox 125 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966188",
+       "name": "levothyroxine sodium 0.125 MG Oral Tablet [Levo-T]",
+       "synonym": "Levo-T 125 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966190",
+       "name": "levothyroxine sodium 0.125 MG Oral Tablet [Levoxyl]",
+       "synonym": "Levoxyl 125 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966191",
+       "name": "levothyroxine sodium 0.125 MG Oral Tablet [Synthroid]",
+       "synonym": "Synthroid 125 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966194",
+       "name": "levothyroxine sodium 0.137 MG Oral Tablet [Levoxyl]",
+       "synonym": "Levoxyl 137 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966196",
+       "name": "levothyroxine sodium 0.15 MG Oral Tablet [Euthyrox]",
+       "synonym": "Euthyrox 0.15 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966197",
+       "name": "levothyroxine sodium 0.15 MG Oral Tablet [Levo-T]",
+       "synonym": "Levo-T 0.15 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966200",
+       "name": "levothyroxine sodium 0.15 MG Oral Tablet [Levoxyl]",
+       "synonym": "Levoxyl 0.15 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966201",
+       "name": "levothyroxine sodium 0.15 MG Oral Tablet [Synthroid]",
+       "synonym": "Synthroid 0.15 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966202",
+       "name": "levothyroxine sodium 0.175 MG Oral Tablet [Euthyrox]",
+       "synonym": "Euthyrox 175 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966204",
+       "name": "levothyroxine sodium 0.175 MG Oral Tablet [Levoxyl]",
+       "synonym": "Levoxyl 175 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966205",
+       "name": "levothyroxine sodium 0.175 MG Oral Tablet [Synthroid]",
+       "synonym": "Synthroid 175 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966207",
+       "name": "levothyroxine sodium 0.2 MG Oral Tablet [Euthyrox]",
+       "synonym": "Euthyrox 0.2 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966208",
+       "name": "levothyroxine sodium 0.2 MG Oral Tablet [Levo-T]",
+       "synonym": "Levo-T 0.2 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966211",
+       "name": "levothyroxine sodium 0.2 MG Oral Tablet [Levoxyl]",
+       "synonym": "Levoxyl 0.2 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966214",
+       "name": "levothyroxine sodium 0.3 MG Oral Tablet [Levo-T]",
+       "synonym": "Levo-T 0.3 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966218",
+       "name": "levothyroxine sodium 0.3 MG Oral Tablet [Synthroid]",
+       "synonym": "Synthroid 0.3 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966228",
+       "name": "levothyroxine sodium 0.025 MG Oral Tablet [Unithroid]",
+       "synonym": "Unithroid 25 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966232",
+       "name": "levothyroxine sodium 0.088 MG Oral Tablet [Unithroid]",
+       "synonym": "Unithroid 88 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966233",
+       "name": "levothyroxine sodium 0.1 MG Oral Tablet [Unithroid]",
+       "synonym": "Unithroid 0.1 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966235",
+       "name": "levothyroxine sodium 0.112 MG Oral Tablet [Unithroid]",
+       "synonym": "Unithroid 112 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966237",
+       "name": "levothyroxine sodium 0.125 MG Oral Tablet [Unithroid]",
+       "synonym": "Unithroid 125 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966238",
+       "name": "levothyroxine sodium 0.15 MG Oral Tablet [Unithroid]",
+       "synonym": "Unithroid 0.15 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966241",
+       "name": "levothyroxine sodium 0.2 MG Oral Tablet [Unithroid]",
+       "synonym": "Unithroid 0.2 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966243",
+       "name": "levothyroxine sodium 0.3 MG Oral Tablet [Unithroid]",
+       "synonym": "Unithroid 0.3 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966244",
+       "name": "levothyroxine sodium 0.05 MG Oral Tablet [Unithroid]",
+       "synonym": "Unithroid 50 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966246",
+       "name": "levothyroxine sodium 0.175 MG Oral Tablet [Unithroid]",
+       "synonym": "Unithroid 175 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966247",
+       "name": "levothyroxine sodium 0.05 MG Oral Tablet [Synthroid]",
+       "synonym": "Synthroid 50 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966250",
+       "name": "levothyroxine sodium 0.1 MG Oral Tablet [Synthroid]",
+       "synonym": "Synthroid 0.1 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966251",
+       "name": "levothyroxine sodium 0.2 MG Oral Tablet [Synthroid]",
+       "synonym": "Synthroid 0.2 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966271",
+       "name": "levothyroxine sodium 0.137 MG Oral Tablet [Synthroid]",
+       "synonym": "Synthroid 137 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966282",
+       "name": "levothyroxine sodium 0.088 MG Oral Tablet [Synthroid]",
+       "synonym": "Synthroid 88 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966283",
+       "name": "levothyroxine sodium 0.1 MG Oral Tablet [Levoxyl]",
+       "synonym": "Levoxyl 0.1 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966286",
+       "name": "levothyroxine sodium 0.075 MG Oral Tablet [Unithroid]",
+       "synonym": "Unithroid 75 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966397",
+       "name": "levothyroxine sodium 0.112 MG Oral Tablet [Levo-T]",
+       "synonym": "Levo-T 112 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966399",
+       "name": "levothyroxine sodium 0.175 MG Oral Tablet [Levo-T]",
+       "synonym": "Levo-T 175 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966401",
+       "name": "levothyroxine sodium 0.088 MG Oral Tablet [Levo-T]",
+       "synonym": "Levo-T 88 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966410",
+       "name": "levothyroxine sodium 0.137 MG Oral Tablet [Levo-T]",
+       "synonym": "Levo-T 137 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966415",
+       "name": "levothyroxine sodium 0.1 MG Oral Capsule [Tirosint]",
+       "synonym": "Tirosint 0.1 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966417",
+       "name": "levothyroxine sodium 0.125 MG Oral Capsule [Tirosint]",
+       "synonym": "Tirosint 125 MCG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966420",
+       "name": "levothyroxine sodium 0.15 MG Oral Capsule [Tirosint]",
+       "synonym": "Tirosint 0.15 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966423",
+       "name": "levothyroxine sodium 0.025 MG Oral Capsule [Tirosint]",
+       "synonym": "Tirosint 25 MCG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966426",
+       "name": "levothyroxine sodium 0.05 MG Oral Capsule [Tirosint]",
+       "synonym": "Tirosint 50 MCG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966434",
+       "name": "levothyroxine sodium 0.013 MG Oral Capsule [Tirosint]",
+       "synonym": "Tirosint 13 MCG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966436",
+       "name": "levothyroxine sodium 0.137 MG Oral Tablet [Unithroid]",
+       "synonym": "Unithroid 137 MCG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "1115267",
+       "name": "levothyroxine sodium 0.1 MG Injection",
+       "synonym": "levothyroxine sodium 100 MCG Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1115269",
+       "name": "levothyroxine sodium 0.2 MG Injection",
+       "synonym": "levothyroxine sodium 200 MCG Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1423483",
+       "name": "levothyroxine sodium 0.0022 MG/MG Oral Powder",
+       "synonym": "levothyroxine sodium 0.22 % Oral Powder",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1923047",
+       "name": "levothyroxine sodium 0.175 MG Oral Capsule",
+       "synonym": "levothyroxine sodium 175 MCG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1923050",
+       "name": "levothyroxine sodium 0.2 MG Oral Capsule",
+       "synonym": "levothyroxine sodium 200 MCG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056462",
+       "name": "levothyroxine sodium 0.025 MG/ML Oral Solution",
+       "synonym": "levothyroxine sodium 25 MCG per 1 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056468",
+       "name": "levothyroxine sodium 0.05 MG/ML Oral Solution",
+       "synonym": "levothyroxine sodium 50 MCG per 1 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056472",
+       "name": "levothyroxine sodium 0.075 MG/ML Oral Solution",
+       "synonym": "levothyroxine sodium 75 MCG per 1 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056476",
+       "name": "levothyroxine sodium 0.088 MG/ML Oral Solution",
+       "synonym": "levothyroxine sodium 88 MCG per 1 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056480",
+       "name": "levothyroxine sodium 0.1 MG/ML Oral Solution",
+       "synonym": "levothyroxine sodium 100 MCG per 1 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056484",
+       "name": "levothyroxine sodium 0.112 MG/ML Oral Solution",
+       "synonym": "levothyroxine sodium 112 MCG per 1 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056488",
+       "name": "levothyroxine sodium 0.125 MG/ML Oral Solution",
+       "synonym": "levothyroxine sodium 125 MCG per 1 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056492",
+       "name": "levothyroxine sodium 0.013 MG/ML Oral Solution",
+       "synonym": "levothyroxine sodium 13 MCG per 1 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056496",
+       "name": "levothyroxine sodium 0.137 MG/ML Oral Solution",
+       "synonym": "levothyroxine sodium 137 MCG per 1 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056500",
+       "name": "levothyroxine sodium 0.15 MG/ML Oral Solution",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056504",
+       "name": "levothyroxine sodium 0.175 MG/ML Oral Solution",
+       "synonym": "levothyroxine sodium 175 MCG per 1 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2056508",
+       "name": "levothyroxine sodium 0.2 MG/ML Oral Solution",
+       "synonym": "levothyroxine sodium 200 MCG per 1 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2166148",
+       "name": "5 ML levothyroxine sodium 0.1 MG/ML Injection",
+       "synonym": "levothyroxine sodium 500 MCG per 5 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2166193",
+       "name": "5 ML levothyroxine sodium 0.02 MG/ML Injection",
+       "synonym": "levothyroxine sodium 100 MCG per 5 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2166196",
+       "name": "5 ML levothyroxine sodium 0.04 MG/ML Injection",
+       "synonym": "levothyroxine sodium 200 MCG per 5 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2473276",
+       "name": "levothyroxine sodium 0.02 MG/ML Oral Solution",
+       "synonym": "levothyroxine sodium 20 MCG per ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2566608",
+       "name": "levothyroxine sodium 0.0625 MG/ML Oral Solution",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2566613",
+       "name": "levothyroxine sodium 0.0375 MG/ML Oral Solution",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2566617",
+       "name": "levothyroxine sodium 0.044 MG/ML Oral Solution",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2621123",
+       "name": "1 ML levothyroxine sodium 0.1 MG/ML Injection",
+       "synonym": "levothyroxine sodium 100 MCG per 1 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2626050",
+       "name": "levothyroxine sodium 0.03 MG/ML Oral Solution",
+       "synonym": "levothyroxine sodium 30 MCG per ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2630738",
+       "name": "levothyroxine sodium 0.0375 MG Oral Capsule",
+       "synonym": "levothyroxine sodium 37.5 MCG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2630742",
+       "name": "levothyroxine sodium 0.044 MG Oral Capsule",
+       "synonym": "levothyroxine sodium 44 MCG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2630746",
+       "name": "levothyroxine sodium 0.0625 MG Oral Capsule",
+       "synonym": "levothyroxine sodium 62.5 MCG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "892246",
+       "name": "levothyroxine sodium 0.1 MG Oral Tablet",
+       "synonym": "levothyroxine sodium 100 MCG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "892251",
+       "name": "levothyroxine sodium 0.2 MG Oral Tablet",
+       "synonym": "levothyroxine sodium 200 MCG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "892255",
+       "name": "levothyroxine sodium 0.3 MG Oral Tablet",
+       "synonym": "levothyroxine sodium 300 MCG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "892259",
+       "name": "levothyroxine sodium 0.4 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "892263",
+       "name": "levothyroxine sodium 0.5 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "892267",
+       "name": "levothyroxine sodium 0.6 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "892271",
+       "name": "levothyroxine sodium 0.7 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "892275",
+       "name": "levothyroxine sodium 0.8 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "892279",
+       "name": "levothyroxine sodium 1 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "903283",
+       "name": "levothyroxine sodium 0.0125 MG / liothyronine sodium 0.0031 MG Oral Tablet",
+       "synonym": "liotrix, USP 15 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "903298",
+       "name": "levothyroxine sodium 0.15 MG / liothyronine sodium 0.0375 MG Oral Tablet",
+       "synonym": "liotrix, USP 180 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "903305",
+       "name": "levothyroxine sodium 0.1 MG / liothyronine sodium 0.025 MG Oral Tablet",
+       "synonym": "liotrix, USP 120 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "903312",
+       "name": "levothyroxine sodium 0.025 MG / liothyronine sodium 0.00625 MG Oral Tablet",
+       "synonym": "liotrix, USP 30 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "903438",
+       "name": "levothyroxine sodium 0.05 MG / liothyronine sodium 0.0125 MG Oral Tablet",
+       "synonym": "liotrix, USP 60 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "905451",
+       "name": "levothyroxine sodium 0.112 MG Oral Capsule",
+       "synonym": "levothyroxine sodium 112 MCG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "905455",
+       "name": "levothyroxine sodium 0.137 MG Oral Capsule",
+       "synonym": "levothyroxine sodium 137 MCG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "905458",
+       "name": "levothyroxine sodium 0.075 MG Oral Capsule",
+       "synonym": "levothyroxine sodium 75 MCG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "905462",
+       "name": "levothyroxine sodium 0.088 MG Oral Capsule",
+       "synonym": "levothyroxine sodium 88 MCG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966219",
+       "name": "levothyroxine sodium 0.5 MG Injection",
+       "synonym": "levothyroxine sodium 500 MCG Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966220",
+       "name": "levothyroxine sodium 0.025 MG Oral Tablet",
+       "synonym": "levothyroxine sodium 25 MCG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966221",
+       "name": "levothyroxine sodium 0.05 MG Oral Tablet",
+       "synonym": "levothyroxine sodium 50 MCG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966222",
+       "name": "levothyroxine sodium 0.075 MG Oral Tablet",
+       "synonym": "levothyroxine sodium 75 MCG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966224",
+       "name": "levothyroxine sodium 0.125 MG Oral Tablet",
+       "synonym": "levothyroxine sodium 125 MCG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966225",
+       "name": "levothyroxine sodium 0.15 MG Oral Tablet",
+       "synonym": "levothyroxine sodium 150 MCG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966248",
+       "name": "levothyroxine sodium 0.112 MG Oral Tablet",
+       "synonym": "levothyroxine sodium 112 MCG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966249",
+       "name": "levothyroxine sodium 0.175 MG Oral Tablet",
+       "synonym": "levothyroxine sodium 175 MCG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966253",
+       "name": "levothyroxine sodium 0.088 MG Oral Tablet",
+       "synonym": "levothyroxine sodium 88 MCG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966270",
+       "name": "levothyroxine sodium 0.137 MG Oral Tablet",
+       "synonym": "levothyroxine sodium 137 MCG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966280",
+       "name": "levothyroxine sodium 0.0125 MG Oral Tablet",
+       "synonym": "levothyroxine sodium 12.5 MCG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966404",
+       "name": "levothyroxine sodium 0.1 MG Oral Capsule",
+       "synonym": "levothyroxine sodium 100 MCG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966405",
+       "name": "levothyroxine sodium 0.125 MG Oral Capsule",
+       "synonym": "levothyroxine sodium 125 MCG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966406",
+       "name": "levothyroxine sodium 0.025 MG Oral Capsule",
+       "synonym": "levothyroxine sodium 25 MCG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966407",
+       "name": "levothyroxine sodium 0.05 MG Oral Capsule",
+       "synonym": "levothyroxine sodium 50 MCG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966412",
+       "name": "levothyroxine sodium 0.013 MG Oral Capsule",
+       "synonym": "levothyroxine sodium 13 MCG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "966413",
+       "name": "levothyroxine sodium 0.15 MG Oral Capsule",
+       "synonym": "levothyroxine sodium 150 MCG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

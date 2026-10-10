@@ -1,0 +1,80 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22azithromycin%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:57-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 231
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "72789-483",
+    "generic_name": "Azithromycin Dihydrate",
+    "labeler_name": "PD-Rx Pharmaceuticals, Inc.",
+    "brand_name": "Azithromycin Dihydrate",
+    "active_ingredients": [
+     {
+      "name": "AZITHROMYCIN DIHYDRATE",
+      "strength": "250 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "72789-483-02",
+      "description": "2 TABLET, FILM COATED in 1 BOTTLE, PLASTIC (72789-483-02)",
+      "marketing_start_date": "20260506",
+      "sample": false
+     },
+     {
+      "package_ndc": "72789-483-04",
+      "description": "4 TABLET, FILM COATED in 1 BOTTLE, PLASTIC (72789-483-04)",
+      "marketing_start_date": "20250122",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {
+     "manufacturer_name": [
+      "PD-Rx Pharmaceuticals, Inc."
+     ],
+     "rxcui": [
+      "308460"
+     ],
+     "spl_set_id": [
+      "7ab854bf-eb04-42c4-a403-096b60581bb4"
+     ],
+     "upc": [
+      "0372789483047"
+     ],
+     "unii": [
+      "5FD1131I7S"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "TABLET, FILM COATED",
+    "spl_id": "512bfbd4-c1a2-5a2d-e063-6394a90ac176",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20240215",
+    "product_id": "72789-483_512bfbd4-c1a2-5a2d-e063-6394a90ac176",
+    "application_number": "ANDA208250",
+    "brand_name_base": "Azithromycin Dihydrate",
+    "pharm_class": [
+     "Macrolide Antimicrobial [EPC]",
+     "Macrolides [CS]"
+    ]
+   }
+  ]
+ }
+}

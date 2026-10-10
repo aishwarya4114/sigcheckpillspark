@@ -141,6 +141,7 @@
  "expected_order_status": "needs_review",
  "expect_abstain": [],
  "meta": {
+  "rxcui": "197528",
   "fax_from": "(212) 555-0111",
   "sent": "2026-10-05 09:46",
   "patient_id": "PT006",

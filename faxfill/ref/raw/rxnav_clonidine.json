@@ -1,0 +1,280 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=clonidine",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:45-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "1013934",
+       "name": "12 HR clonidine hydrochloride 0.1 MG Extended Release Oral Tablet [Kapvay]",
+       "synonym": "Kapvay 0.1 MG 12 HR Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1050338",
+       "name": "24 HR clonidine 0.17 MG Extended Release Oral Tablet [Nexiclon]",
+       "synonym": "24 HR Nexiclon 0.17 MG Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2690735",
+       "name": "24 HR clonidine hydrochloride 0.1 MG/ML Extended Release Suspension [Onyda]",
+       "synonym": "Onyda XR 0.1 MG/mL 24 HR Extended Release Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2725561",
+       "name": "clonidine hydrochloride 0.02 MG/ML Oral Solution [Javadin]",
+       "synonym": "Javadin 0.02 MG/mL Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2750205",
+       "name": "clonidine hydrochloride 0.05 MG/ML Oral Solution [Qlonilik]",
+       "synonym": "Qlonilik 0.05 MG/ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "884223",
+       "name": "10 ML clonidine hydrochloride 0.1 MG/ML Injection [Duraclon]",
+       "synonym": "10 ML Duraclon 0.1 MG/ML Injection",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "998673",
+       "name": "168 HR clonidine 0.00417 MG/HR Transdermal System [Catapres]",
+       "synonym": "168 HR Catapres 0.00417 MG/HR Transdermal System",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "998677",
+       "name": "168 HR clonidine 0.00833 MG/HR Transdermal System [Catapres]",
+       "synonym": "168 HR Catapres 0.00833 MG/HR Transdermal System",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "998681",
+       "name": "168 HR clonidine 0.0125 MG/HR Transdermal System [Catapres]",
+       "synonym": "168 HR Catapres 0.0125 MG/HR Transdermal System",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "1013930",
+       "name": "12 HR clonidine hydrochloride 0.1 MG Extended Release Oral Tablet",
+       "synonym": "clonidine hydrochloride 0.1 MG 12 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2690727",
+       "name": "24 HR clonidine hydrochloride 0.1 MG/ML Extended Release Suspension",
+       "synonym": "clonidine hydrochloride 0.1 MG/mL 24 HR Extended Release Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2725554",
+       "name": "clonidine hydrochloride 0.02 MG/ML Oral Solution",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2740803",
+       "name": "clonidine hydrochloride 0.05 MG Oral Tablet",
+       "synonym": "clonidine hydrochloride 50 MCG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2750198",
+       "name": "clonidine hydrochloride 0.05 MG/ML Oral Solution",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "884173",
+       "name": "clonidine hydrochloride 0.1 MG Oral Tablet",
+       "synonym": "clonidine HCl 100 MCG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "884185",
+       "name": "clonidine hydrochloride 0.2 MG Oral Tablet",
+       "synonym": "clonidine HCl 200 MCG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "884189",
+       "name": "clonidine hydrochloride 0.3 MG Oral Tablet",
+       "synonym": "clonidine HCl 300 MCG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "884198",
+       "name": "chlorthalidone 15 MG / clonidine hydrochloride 0.2 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "884203",
+       "name": "chlorthalidone 15 MG / clonidine hydrochloride 0.3 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "884221",
+       "name": "10 ML clonidine hydrochloride 0.1 MG/ML Injection",
+       "synonym": "clonidine HCl 1000 MCG per 10 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "884225",
+       "name": "10 ML clonidine hydrochloride 0.5 MG/ML Injection",
+       "synonym": "clonidine HCl 5000 MCG per 10 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "885880",
+       "name": "24 HR clonidine 0.17 MG Extended Release Oral Tablet",
+       "synonym": "clonidine 0.17 MG (equivalent to clonidine HCl 0.2 MG) 24 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "892791",
+       "name": "clonidine hydrochloride 0.025 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "892793",
+       "name": "clonidine hydrochloride 0.15 MG/ML Injectable Solution",
+       "synonym": "clonidine hydrochloride 0.015 % Injectable Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "892795",
+       "name": "clonidine hydrochloride 0.25 MG Extended Release Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "998671",
+       "name": "168 HR clonidine 0.00417 MG/HR Transdermal System",
+       "synonym": "clonidine HCl 0.1 MG/Day Weekly Transdermal System",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "998675",
+       "name": "168 HR clonidine 0.00833 MG/HR Transdermal System",
+       "synonym": "clonidine HCl 0.2 MG/Day Weekly Transdermal System",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "998679",
+       "name": "168 HR clonidine 0.0125 MG/HR Transdermal System",
+       "synonym": "clonidine HCl 0.3 MG/Day Weekly Transdermal System",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

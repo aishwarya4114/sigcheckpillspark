@@ -1,658 +1,3022 @@
 {
  "_meta": {
-  "version": "demo-2026-10-10",
-  "warning": "Hackathon demo reference data. Approximate adult values for testing a review workflow; NOT for clinical use.",
-  "lasa_source": "Pairs modelled on ISMP's List of Confused Drug Names (ismp.org).",
-  "fields": "strengths are in `unit`; max_daily is the usual adult maximum per day in `unit` (per week when frequency_rule=weekly)"
+  "version": "2026-10-10-rxnorm",
+  "warning": "Hackathon demo reference data for testing a review workflow; NOT for clinical use.",
+  "sources": {
+   "rxnorm": "NLM RxNav https://rxnav.nlm.nih.gov/REST/drugs.json?name=<drug> (SCD concepts, oral tablet/capsule/solution only)",
+   "openfda": "https://api.fda.gov/drug/ndc.json?search=generic_name:\"<drug>\"&limit=1 (dea_schedule)",
+   "manual, unverified": "hand-entered (faxfill/ref/manual.json)"
+  },
+  "raw_responses": "faxfill/ref/raw/",
+  "built_with": "python -m faxfill.ref.fetch_real"
  },
  "drugs": [
   {
    "name": "amlodipine",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    2.5,
-    5,
-    10
-   ],
-   "max_daily": 10,
-   "schedule": null,
-   "lasa": [
-    "amiloride"
-   ],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     2.5,
+     5,
+     10
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "2.5": "308136",
+     "5": "197361",
+     "10": "308135"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "solution": [
+      "1 mg/mL"
+     ],
+     "tablet": [
+      2.5,
+      5,
+      10
+     ],
+     "tablet_chewable": [
+      1.25
+     ],
+     "tablet_odt": [
+      2.5,
+      5,
+      10
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Amlodipine Besylate",
+    "openfda_product_ndc": "42291-026",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 10,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "amiloride"
+    ],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "amiloride",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    5
-   ],
-   "max_daily": 20,
-   "schedule": null,
-   "lasa": [
-    "amlodipine"
-   ],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     5
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "5": "977880"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "solution": [
+      "1 mg/mL"
+     ],
+     "tablet": [
+      5
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Amiloride Hydrochloride",
+    "openfda_product_ndc": "49884-117",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 20,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "amlodipine"
+    ],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "atorvastatin",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    10,
-    20,
-    40,
-    80
-   ],
-   "max_daily": 80,
-   "schedule": null,
-   "lasa": [],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     10,
+     20,
+     40,
+     80
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "10": "617312",
+     "20": "617310",
+     "40": "617311",
+     "80": "259255"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "tablet": [
+      10,
+      20,
+      40,
+      80
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "ATORVASTATIN CALCIUM",
+    "openfda_product_ndc": "65015-282",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 80,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "lisinopril",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    2.5,
-    5,
-    10,
-    20,
-    30,
-    40
-   ],
-   "max_daily": 80,
-   "schedule": null,
-   "lasa": [],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     2.5,
+     5,
+     10,
+     20,
+     30,
+     40
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "2.5": "311353",
+     "5": "311354",
+     "10": "314076",
+     "20": "314077",
+     "30": "205326",
+     "40": "197884"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "solution": [
+      "1 mg/mL"
+     ],
+     "tablet": [
+      2.5,
+      5,
+      10,
+      20,
+      30,
+      40
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Lisinopril",
+    "openfda_product_ndc": "43547-418",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 80,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "losartan",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    25,
-    50,
-    100
-   ],
-   "max_daily": 100,
-   "schedule": null,
-   "lasa": [],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     25,
+     50,
+     100
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "25": "979485",
+     "50": "979492",
+     "100": "979480"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "tablet": [
+      25,
+      50,
+      100
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "LOSARTAN POTASSIUM AND HYDROCHLOROTHIAZIDE",
+    "openfda_product_ndc": "31722-757",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 100,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "metoprolol tartrate",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    25,
-    50,
-    100
-   ],
-   "max_daily": 450,
-   "schedule": null,
-   "lasa": [],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     12.5,
+     25,
+     37.5,
+     50,
+     75,
+     100
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "12.5": "2723025",
+     "25": "866924",
+     "37.5": "1606347",
+     "50": "866514",
+     "75": "1606349",
+     "100": "866511"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "solution": [
+      "10 mg/mL"
+     ],
+     "tablet": [
+      12.5,
+      25,
+      37.5,
+      50,
+      75,
+      100
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "METOPROLOL TARTRATE",
+    "openfda_product_ndc": "53401-015",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 450,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "hydrochlorothiazide",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    12.5,
-    25,
-    50
-   ],
-   "max_daily": 50,
-   "schedule": null,
-   "lasa": [],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     12.5,
+     25,
+     50
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "12.5": "429503",
+     "25": "310798",
+     "50": "197770"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "capsule": [
+      12.5
+     ],
+     "tablet": [
+      12.5,
+      25,
+      50
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Valsartan and Hydrochlorothiazide",
+    "openfda_product_ndc": "33342-076",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 50,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "hydralazine",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    10,
-    25,
-    50,
-    100
-   ],
-   "max_daily": 300,
-   "schedule": null,
-   "lasa": [
-    "hydroxyzine"
-   ],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     10,
+     25,
+     50,
+     100
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "10": "905199",
+     "25": "905225",
+     "50": "905395",
+     "100": "905222"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "tablet": [
+      10,
+      25,
+      50,
+      100
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "isosorbide dinitrate and hydralazine hydrochloride",
+    "openfda_product_ndc": "72319-012",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 300,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "hydroxyzine"
+    ],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "hydroxyzine",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    10,
-    25,
-    50
-   ],
-   "max_daily": 400,
-   "schedule": null,
-   "lasa": [
-    "hydralazine"
-   ],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     10,
+     25,
+     50,
+     100
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "10": "995218",
+     "25": "995258",
+     "50": "995281",
+     "100": "995235"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "capsule": [
+      25,
+      50,
+      100
+     ],
+     "solution": [
+      "2 mg/mL"
+     ],
+     "tablet": [
+      10,
+      25,
+      50,
+      100
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "hydroxyzine pamoate",
+    "openfda_product_ndc": "82982-032",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 400,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "hydralazine"
+    ],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "metformin",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    500,
-    850,
-    1000
-   ],
-   "max_daily": 2550,
-   "schedule": null,
-   "lasa": [
-    "metronidazole"
-   ],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     500,
+     625,
+     750,
+     850,
+     1000
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "500": "861007",
+     "625": "861021",
+     "750": "2703582",
+     "850": "861010",
+     "1000": "861004"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "solution": [
+      "100 mg/mL"
+     ],
+     "tablet": [
+      500,
+      625,
+      750,
+      850,
+      1000
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "empagliflozin and metformin hydrochloride",
+    "openfda_product_ndc": "55370-825",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 2550,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "metronidazole"
+    ],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "metronidazole",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    250,
-    500
-   ],
-   "max_daily": 4000,
-   "schedule": null,
-   "lasa": [
-    "metformin"
-   ],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     125,
+     200,
+     250,
+     400,
+     500
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "125": "2702348",
+     "200": "199326",
+     "250": "314106",
+     "400": "199327",
+     "500": "311681"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "capsule": [
+      375
+     ],
+     "tablet": [
+      125,
+      200,
+      250,
+      400,
+      500
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Metronidazole",
+    "openfda_product_ndc": "72572-540",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 4000,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "metformin"
+    ],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "glipizide",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    5,
-    10
-   ],
-   "max_daily": 40,
-   "schedule": null,
-   "lasa": [
-    "glyburide"
-   ],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     2.5,
+     5,
+     10,
+     15
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "2.5": "379804",
+     "5": "310490",
+     "10": "310488",
+     "15": "2737151"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "tablet": [
+      2.5,
+      5,
+      10,
+      15
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Glipizide",
+    "openfda_product_ndc": "60505-0142",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 40,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "glyburide"
+    ],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "glyburide",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    1.25,
-    2.5,
-    5
-   ],
-   "max_daily": 20,
-   "schedule": null,
-   "lasa": [
-    "glipizide"
-   ],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     1.25,
+     1.5,
+     1.75,
+     2.5,
+     3,
+     3.5,
+     4.5,
+     5,
+     6
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "1.25": "197737",
+     "1.5": "314000",
+     "1.75": "430103",
+     "2.5": "310534",
+     "3": "310536",
+     "3.5": "430102",
+     "4.5": "252960",
+     "5": "310537",
+     "6": "310539"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "tablet": [
+      1.25,
+      1.5,
+      1.75,
+      2.5,
+      3,
+      3.5,
+      4.5,
+      5,
+      6
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "glyburide-metformin hydrochloride",
+    "openfda_product_ndc": "23155-233",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 20,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "glipizide"
+    ],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "sitagliptin",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    25,
-    50,
-    100
-   ],
-   "max_daily": 100,
-   "schedule": null,
-   "lasa": [
-    "sumatriptan"
-   ],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     25,
+     50,
+     100
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "25": "665038",
+     "50": "665042",
+     "100": "665033"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "solution": [
+      "25 mg/mL"
+     ],
+     "tablet": [
+      25,
+      50,
+      100
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Sitagliptin and Metformin Hydrochloride",
+    "openfda_product_ndc": "70710-1786",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 100,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "sumatriptan"
+    ],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "sumatriptan",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    25,
-    50,
-    100
-   ],
-   "max_daily": 200,
-   "schedule": null,
-   "lasa": [
-    "sitagliptin"
-   ],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     25,
+     50,
+     100
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "25": "315223",
+     "50": "313161",
+     "100": "313160"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "tablet": [
+      25,
+      50,
+      100
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Sumatriptan",
+    "openfda_product_ndc": "50370-0029",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 200,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "sitagliptin"
+    ],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "sertraline",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    25,
-    50,
-    100
-   ],
-   "max_daily": 200,
-   "schedule": null,
-   "lasa": [],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     25,
+     50,
+     100
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "25": "312940",
+     "50": "312941",
+     "100": "312938"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "capsule": [
+      150,
+      200
+     ],
+     "solution": [
+      "20 mg/mL"
+     ],
+     "tablet": [
+      25,
+      50,
+      100
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Sertraline",
+    "openfda_product_ndc": "50090-7614",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 200,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "citalopram",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    10,
-    20,
-    40
-   ],
-   "max_daily": 40,
-   "schedule": null,
-   "lasa": [
-    "celecoxib"
-   ],
-   "classes": [],
-   "lasa_note": "Celexa / Celebrex"
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     10,
+     20,
+     40
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "10": "283672",
+     "20": "200371",
+     "40": "309314"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "capsule": [
+      30
+     ],
+     "solution": [
+      "2 mg/mL",
+      "40 mg/mL"
+     ],
+     "tablet": [
+      10,
+      20,
+      40
+     ],
+     "tablet_odt": [
+      10,
+      20,
+      40
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Citalopram",
+    "openfda_product_ndc": "60760-495",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 40,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "celecoxib"
+    ],
+    "source": "manual, unverified",
+    "note": "Celexa / Celebrex"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "celecoxib",
-   "form": "capsule",
-   "unit": "mg",
-   "strengths": [
-    50,
-    100,
-    200,
-    400
-   ],
-   "max_daily": 400,
-   "schedule": null,
-   "lasa": [
-    "citalopram"
-   ],
-   "classes": [
-    "nsaid",
-    "sulfonamide"
-   ],
-   "lasa_note": "Celebrex / Celexa"
+   "form": {
+    "value": "capsule",
+    "rxnorm_dose_form": "Oral Capsule",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     50,
+     100,
+     200,
+     400
+    ],
+    "dose_form": "Oral Capsule",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "50": "686379",
+     "100": "205322",
+     "200": "205323",
+     "400": "349514"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "capsule": [
+      50,
+      100,
+      200,
+      400
+     ],
+     "solution": [
+      "25 mg/mL"
+     ],
+     "tablet": [
+      200
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Celecoxib",
+    "openfda_product_ndc": "51655-437",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 400,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "citalopram"
+    ],
+    "source": "manual, unverified",
+    "note": "Celebrex / Celexa"
+   },
+   "classes": {
+    "value": [
+     "nsaid",
+     "sulfonamide"
+    ],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "escitalopram",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    5,
-    10,
-    20
-   ],
-   "max_daily": 20,
-   "schedule": null,
-   "lasa": [],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     5,
+     10,
+     20
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "5": "351249",
+     "10": "349332",
+     "20": "351250"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "capsule": [
+      15
+     ],
+     "solution": [
+      "1 mg/mL"
+     ],
+     "tablet": [
+      5,
+      10,
+      20
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "ESCITALOPRAM",
+    "openfda_product_ndc": "0456-2005",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 20,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "trazodone",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    50,
-    100,
-    150
-   ],
-   "max_daily": 400,
-   "schedule": null,
-   "lasa": [
-    "tramadol"
-   ],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     25,
+     50,
+     75,
+     100,
+     150,
+     300
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "25": "2751852",
+     "50": "856377",
+     "75": "2751854",
+     "100": "856373",
+     "150": "856364",
+     "300": "856369"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "capsule": [
+      50,
+      100
+     ],
+     "solution": [
+      "10 mg/mL"
+     ],
+     "tablet": [
+      25,
+      50,
+      75,
+      100,
+      150,
+      300
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Trazodone Hydrochloride",
+    "openfda_product_ndc": "80425-0302",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 400,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "tramadol"
+    ],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "tramadol",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    50
-   ],
-   "max_daily": 400,
-   "schedule": "C-IV",
-   "lasa": [
-    "trazodone"
-   ],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     25,
+     50,
+     75,
+     100
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "25": "2670390",
+     "50": "835603",
+     "75": "2692878",
+     "100": "2179635"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "capsule": [
+      50
+     ],
+     "capsule_er": [
+      50
+     ],
+     "solution": [
+      "1 mg/mL",
+      "5 mg/mL"
+     ],
+     "tablet": [
+      25,
+      50,
+      75,
+      100
+     ],
+     "tablet_er": [
+      75
+     ],
+     "tablet_odt": [
+      50
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": "C-IV",
+    "source": "openfda",
+    "openfda_generic_name": "Tramadol Hydrochloride",
+    "openfda_product_ndc": "67046-1209"
+   },
+   "max_daily": {
+    "value": 400,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "trazodone"
+    ],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "clonidine",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    0.1,
-    0.2,
-    0.3
-   ],
-   "max_daily": 2.4,
-   "schedule": null,
-   "lasa": [
-    "clonazepam"
-   ],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     0.025,
+     0.05,
+     0.1,
+     0.2,
+     0.3
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "0.025": "892791",
+     "0.05": "2740803",
+     "0.1": "884173",
+     "0.2": "884185",
+     "0.3": "884189"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "capsule_er": [
+      0.25
+     ],
+     "solution": [
+      "0.02 mg/mL",
+      "0.05 mg/mL"
+     ],
+     "tablet": [
+      0.025,
+      0.05,
+      0.1,
+      0.2,
+      0.3
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Clonidine hydrochloride",
+    "openfda_product_ndc": "51655-445",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 2.4,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "clonazepam"
+    ],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "clonazepam",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    0.5,
-    1,
-    2
-   ],
-   "max_daily": 20,
-   "schedule": "C-IV",
-   "lasa": [
-    "clonidine"
-   ],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     0.25,
+     0.5,
+     1,
+     2
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "0.25": "204892",
+     "0.5": "197527",
+     "1": "197528",
+     "2": "197529"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "solution": [
+      "0.1 mg/mL",
+      "0.4 mg/mL"
+     ],
+     "tablet": [
+      0.25,
+      0.5,
+      1,
+      2
+     ],
+     "tablet_odt": [
+      0.125,
+      0.25,
+      0.5,
+      1,
+      2
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": "C-IV",
+    "source": "openfda",
+    "openfda_generic_name": "Clonazepam",
+    "openfda_product_ndc": "0093-3212"
+   },
+   "max_daily": {
+    "value": 20,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "clonidine"
+    ],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "alprazolam",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    0.25,
-    0.5,
-    1,
-    2
-   ],
-   "max_daily": 10,
-   "schedule": "C-IV",
-   "lasa": [],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     0.25,
+     0.5,
+     1,
+     2
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "0.25": "308047",
+     "0.5": "308048",
+     "1": "197321",
+     "2": "197322"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "solution": [
+      "0.1 mg/mL",
+      "1 mg/mL"
+     ],
+     "tablet": [
+      0.25,
+      0.5,
+      1,
+      2
+     ],
+     "tablet_odt": [
+      0.25,
+      0.5,
+      1,
+      2
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": "C-IV",
+    "source": "openfda",
+    "openfda_generic_name": "alprazolam",
+    "openfda_product_ndc": "67544-415"
+   },
+   "max_daily": {
+    "value": 10,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "lamotrigine",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    25,
-    100,
-    150,
-    200
-   ],
-   "max_daily": 500,
-   "schedule": null,
-   "lasa": [
-    "lamivudine"
-   ],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     2,
+     25,
+     50,
+     100,
+     150,
+     200,
+     250
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "2": "391875",
+     "25": "282401",
+     "50": "199322",
+     "100": "198427",
+     "150": "198428",
+     "200": "198429",
+     "250": "249329"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "tablet": [
+      2,
+      25,
+      50,
+      100,
+      150,
+      200,
+      250
+     ],
+     "tablet_odt": [
+      25,
+      50,
+      100,
+      200
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "LAMOTRIGINE",
+    "openfda_product_ndc": "67835-0016",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 500,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "lamivudine"
+    ],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "lamivudine",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    150,
-    300
-   ],
-   "max_daily": 300,
-   "schedule": null,
-   "lasa": [
-    "lamotrigine"
-   ],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     100,
+     150,
+     300
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "100": "205328",
+     "150": "199147",
+     "300": "349491"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "solution": [
+      "5 mg/mL",
+      "10 mg/mL"
+     ],
+     "tablet": [
+      100,
+      150,
+      300
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "LAMIVUDINE",
+    "openfda_product_ndc": "67835-0017",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 300,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "lamotrigine"
+    ],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "risperidone",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    0.5,
-    1,
-    2,
-    3,
-    4
-   ],
-   "max_daily": 16,
-   "schedule": null,
-   "lasa": [
-    "ropinirole"
-   ],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     0.25,
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     6
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "0.25": "312828",
+     "0.5": "312829",
+     "1": "312830",
+     "2": "312831",
+     "3": "312832",
+     "4": "314211",
+     "6": "153791"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "solution": [
+      "1 mg/mL"
+     ],
+     "tablet": [
+      0.25,
+      0.5,
+      1,
+      2,
+      3,
+      4,
+      6
+     ],
+     "tablet_odt": [
+      0.25,
+      0.5,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Risperidone",
+    "openfda_product_ndc": "70518-3741",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 16,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "ropinirole"
+    ],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "ropinirole",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    0.25,
-    0.5,
-    1,
-    2,
-    3,
-    4,
-    5
-   ],
-   "max_daily": 24,
-   "schedule": null,
-   "lasa": [
-    "risperidone"
-   ],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     0.25,
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "0.25": "312845",
+     "0.5": "312846",
+     "1": "314208",
+     "2": "312847",
+     "3": "283858",
+     "4": "562704",
+     "5": "312849"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "tablet": [
+      0.25,
+      0.5,
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Ropinirole",
+    "openfda_product_ndc": "69452-358",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 24,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "risperidone"
+    ],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "prednisone",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    5,
-    10,
-    20,
-    50
-   ],
-   "max_daily": 80,
-   "schedule": null,
-   "lasa": [
-    "prednisolone"
-   ],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     1,
+     2.5,
+     5,
+     10,
+     20,
+     50
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "1": "198144",
+     "2.5": "198146",
+     "5": "312617",
+     "10": "198145",
+     "20": "312615",
+     "50": "198148"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "solution": [
+      "1 mg/mL",
+      "5 mg/mL"
+     ],
+     "tablet": [
+      1,
+      2.5,
+      5,
+      10,
+      20,
+      50
+     ],
+     "tablet_dr": [
+      1,
+      2,
+      5
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "PREDNISONE",
+    "openfda_product_ndc": "85766-002",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 80,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "prednisolone"
+    ],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "prednisolone",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    5
-   ],
-   "max_daily": 80,
-   "schedule": null,
-   "lasa": [
-    "prednisone"
-   ],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     1,
+     5,
+     20,
+     25,
+     50
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "1": "199343",
+     "5": "198142",
+     "20": "429199",
+     "25": "199967",
+     "50": "348428"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "solution": [
+      "1 mg/mL",
+      "2 mg/mL",
+      "3 mg/mL",
+      "4 mg/mL",
+      "5 mg/mL"
+     ],
+     "tablet": [
+      1,
+      5,
+      20,
+      25,
+      50
+     ],
+     "tablet_dr": [
+      2.5,
+      5
+     ],
+     "tablet_odt": [
+      5,
+      10,
+      15,
+      30
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Prednisolone",
+    "openfda_product_ndc": "64958-0202",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 80,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [
+     "prednisone"
+    ],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "amoxicillin",
-   "form": "capsule",
-   "unit": "mg",
-   "strengths": [
-    250,
-    500
-   ],
-   "max_daily": 3000,
-   "schedule": null,
-   "lasa": [],
-   "classes": [
-    "penicillin"
-   ]
+   "form": {
+    "value": "capsule",
+    "rxnorm_dose_form": "Oral Capsule",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     250,
+     500
+    ],
+    "dose_form": "Oral Capsule",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "250": "308182",
+     "500": "308191"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "capsule": [
+      250,
+      500
+     ],
+     "tablet": [
+      50,
+      100,
+      150,
+      200,
+      400,
+      500,
+      875
+     ],
+     "tablet_chewable": [
+      125,
+      250,
+      400
+     ],
+     "tablet_er": [
+      775
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Amoxicillin and Clavulanate Potassium",
+    "openfda_product_ndc": "82868-067",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 3000,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [
+     "penicillin"
+    ],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "cephalexin",
-   "form": "capsule",
-   "unit": "mg",
-   "strengths": [
-    250,
-    500
-   ],
-   "max_daily": 4000,
-   "schedule": null,
-   "lasa": [],
-   "classes": [
-    "cephalosporin"
-   ]
+   "form": {
+    "value": "capsule",
+    "rxnorm_dose_form": "Oral Capsule",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     250,
+     333,
+     500,
+     750
+    ],
+    "dose_form": "Oral Capsule",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "250": "309112",
+     "333": "645617",
+     "500": "309114",
+     "750": "637173"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "capsule": [
+      250,
+      333,
+      500,
+      750
+     ],
+     "solution": [
+      "25 mg/mL",
+      "50 mg/mL"
+     ],
+     "tablet": [
+      250,
+      500
+     ],
+     "tablet_chewable": [
+      150,
+      300,
+      600
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Cephalexin",
+    "openfda_product_ndc": "50090-4422",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 4000,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [
+     "cephalosporin"
+    ],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "azithromycin",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    250,
-    500
-   ],
-   "max_daily": 500,
-   "schedule": null,
-   "lasa": [],
-   "classes": [
-    "macrolide"
-   ]
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     250,
+     500,
+     600
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "250": "308460",
+     "500": "248656",
+     "600": "204844"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "capsule": [
+      250
+     ],
+     "tablet": [
+      250,
+      500,
+      600
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Azithromycin Dihydrate",
+    "openfda_product_ndc": "72789-483",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 500,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [
+     "macrolide"
+    ],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "oxycodone",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    5,
-    10,
-    15,
-    30
-   ],
-   "max_daily": 60,
-   "schedule": "C-II",
-   "lasa": [],
-   "classes": [
-    "opioid"
-   ]
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     5,
+     7.5,
+     10,
+     15,
+     20,
+     30
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "5": "1049621",
+     "7.5": "1113314",
+     "10": "1049683",
+     "15": "1049611",
+     "20": "1049686",
+     "30": "1049618"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "capsule": [
+      5,
+      10,
+      20
+     ],
+     "solution": [
+      "1 mg/mL",
+      "10 mg/mL",
+      "20 mg/mL"
+     ],
+     "tablet": [
+      5,
+      7.5,
+      10,
+      15,
+      20,
+      30
+     ],
+     "tablet_er": [
+      5
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": "C-II",
+    "source": "openfda",
+    "openfda_generic_name": "Oxycodone Hydrochloride",
+    "openfda_product_ndc": "0904-6828"
+   },
+   "max_daily": {
+    "value": 60,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [
+     "opioid"
+    ],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "levothyroxine",
-   "form": "tablet",
-   "unit": "mcg",
-   "strengths": [
-    25,
-    50,
-    75,
-    88,
-    100,
-    112,
-    125,
-    150,
-    175,
-    200
-   ],
-   "max_daily": 300,
-   "schedule": null,
-   "lasa": [],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mcg",
+    "source": "rxnorm (converted from MG)"
+   },
+   "strengths": {
+    "value": [
+     12.5,
+     25,
+     50,
+     75,
+     88,
+     100,
+     112,
+     125,
+     137,
+     150,
+     175,
+     200,
+     300,
+     400,
+     500,
+     600,
+     700,
+     800,
+     1000
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "12.5": "966280",
+     "25": "966220",
+     "50": "966221",
+     "75": "966222",
+     "88": "966253",
+     "100": "892246",
+     "112": "966248",
+     "125": "966224",
+     "137": "966270",
+     "150": "966225",
+     "175": "966249",
+     "200": "892251",
+     "300": "892255",
+     "400": "892259",
+     "500": "892263",
+     "600": "892267",
+     "700": "892271",
+     "800": "892275",
+     "1000": "892279"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "capsule": [
+      13,
+      25,
+      37.5,
+      44,
+      50,
+      62.5,
+      75,
+      88,
+      100,
+      112,
+      125,
+      137,
+      150,
+      175,
+      200
+     ],
+     "solution": [
+      "0.013 mg/mL",
+      "0.02 mg/mL",
+      "0.025 mg/mL",
+      "0.03 mg/mL",
+      "0.0375 mg/mL",
+      "0.044 mg/mL",
+      "0.05 mg/mL",
+      "0.0625 mg/mL",
+      "0.075 mg/mL",
+      "0.088 mg/mL",
+      "0.1 mg/mL",
+      "0.112 mg/mL",
+      "0.125 mg/mL",
+      "0.137 mg/mL",
+      "0.15 mg/mL",
+      "0.175 mg/mL",
+      "0.2 mg/mL"
+     ],
+     "tablet": [
+      12.5,
+      25,
+      50,
+      75,
+      88,
+      100,
+      112,
+      125,
+      137,
+      150,
+      175,
+      200,
+      300,
+      400,
+      500,
+      600,
+      700,
+      800,
+      1000
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "LEVOTHYROXINE SODIUM",
+    "openfda_product_ndc": "50090-7886",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 300,
+    "unit": "mcg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "warfarin",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    1,
-    2,
-    2.5,
-    3,
-    4,
-    5,
-    6,
-    7.5,
-    10
-   ],
-   "max_daily": 15,
-   "schedule": null,
-   "lasa": [],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     0.5,
+     1,
+     2,
+     2.5,
+     3,
+     4,
+     5,
+     6,
+     7.5,
+     10
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "0.5": "855350",
+     "1": "855288",
+     "2": "855302",
+     "2.5": "855312",
+     "3": "855318",
+     "4": "855324",
+     "5": "855332",
+     "6": "855338",
+     "7.5": "855344",
+     "10": "855296"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "tablet": [
+      0.5,
+      1,
+      2,
+      2.5,
+      3,
+      4,
+      5,
+      6,
+      7.5,
+      10
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Warfarin Sodium",
+    "openfda_product_ndc": "71335-0270",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 15,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "omeprazole",
-   "form": "capsule",
-   "unit": "mg",
-   "strengths": [
-    10,
-    20,
-    40
-   ],
-   "max_daily": 40,
-   "schedule": null,
-   "lasa": [],
-   "classes": []
+   "form": {
+    "value": "capsule",
+    "rxnorm_dose_form": "Delayed Release Oral Capsule",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     10,
+     20,
+     40
+    ],
+    "dose_form": "Delayed Release Oral Capsule",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "10": "199119",
+     "20": "198051",
+     "40": "200329"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "capsule_dr": [
+      10,
+      20,
+      40
+     ],
+     "tablet": [
+      10,
+      20,
+      40
+     ],
+     "tablet_dr": [
+      10,
+      20,
+      40
+     ],
+     "tablet_odt": [
+      20
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Omeprazole",
+    "openfda_product_ndc": "64239-399",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 40,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "montelukast",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    10
-   ],
-   "max_daily": 10,
-   "schedule": null,
-   "lasa": [],
-   "classes": []
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     4,
+     5,
+     10
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "4": "391880",
+     "5": "392072",
+     "10": "200224"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "tablet": [
+      4,
+      5,
+      10
+     ],
+     "tablet_chewable": [
+      4,
+      5
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Montelukast Sodium",
+    "openfda_product_ndc": "65862-574",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 10,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "gabapentin",
-   "form": "capsule",
-   "unit": "mg",
-   "strengths": [
-    100,
-    300,
-    400
-   ],
-   "max_daily": 3600,
-   "schedule": null,
-   "lasa": [],
-   "classes": []
+   "form": {
+    "value": "capsule",
+    "rxnorm_dose_form": "Oral Capsule",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     100,
+     200,
+     300,
+     400
+    ],
+    "dose_form": "Oral Capsule",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "100": "310430",
+     "200": "2739001",
+     "300": "310431",
+     "400": "310432"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "capsule": [
+      100,
+      200,
+      300,
+      400
+     ],
+     "solution": [
+      "50 mg/mL"
+     ],
+     "tablet": [
+      100,
+      400,
+      600,
+      800
+     ],
+     "tablet_er": [
+      300,
+      600
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Gabapentin",
+    "openfda_product_ndc": "80425-0035",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 3600,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "ibuprofen",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    400,
-    600,
-    800
-   ],
-   "max_daily": 3200,
-   "schedule": null,
-   "lasa": [],
-   "classes": [
-    "nsaid"
-   ]
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     100,
+     200,
+     300,
+     400,
+     600,
+     800
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "100": "198405",
+     "200": "310965",
+     "300": "197804",
+     "400": "197805",
+     "600": "197806",
+     "800": "197807"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "capsule": [
+      200,
+      400
+     ],
+     "capsule_er": [
+      200,
+      300
+     ],
+     "tablet": [
+      100,
+      200,
+      300,
+      400,
+      600,
+      800
+     ],
+     "tablet_chewable": [
+      50,
+      100
+     ],
+     "tablet_er": [
+      800
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Ibuprofen",
+    "openfda_product_ndc": "49483-700",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 3200,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [
+     "nsaid"
+    ],
+    "source": "manual, unverified"
+   }
   },
   {
    "name": "methotrexate",
-   "form": "tablet",
-   "unit": "mg",
-   "strengths": [
-    2.5
-   ],
-   "max_daily": 25,
-   "schedule": null,
-   "lasa": [],
-   "classes": [],
-   "frequency_rule": "weekly",
-   "frequency_note": "max_daily is per WEEK; oral methotrexate for RA/psoriasis is dosed once weekly"
+   "form": {
+    "value": "tablet",
+    "rxnorm_dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "unit": {
+    "value": "mg",
+    "source": "rxnorm"
+   },
+   "strengths": {
+    "value": [
+     2.5,
+     5,
+     7.5,
+     10,
+     15
+    ],
+    "dose_form": "Oral Tablet",
+    "source": "rxnorm"
+   },
+   "rxcui": {
+    "value": {
+     "2.5": "105585",
+     "5": "283511",
+     "7.5": "283671",
+     "10": "105586",
+     "15": "283510"
+    },
+    "source": "rxnorm"
+   },
+   "strengths_by_form": {
+    "value": {
+     "solution": [
+      "2 mg/mL",
+      "2.5 mg/mL"
+     ],
+     "tablet": [
+      2.5,
+      5,
+      7.5,
+      10,
+      15
+     ]
+    },
+    "source": "rxnorm"
+   },
+   "schedule": {
+    "value": null,
+    "source": "openfda",
+    "openfda_generic_name": "Methotrexate",
+    "openfda_product_ndc": "16729-277",
+    "note": "first openFDA result has no dea_schedule"
+   },
+   "max_daily": {
+    "value": 25,
+    "unit": "mg",
+    "source": "manual, unverified"
+   },
+   "lasa": {
+    "value": [],
+    "source": "manual, unverified"
+   },
+   "classes": {
+    "value": [],
+    "source": "manual, unverified"
+   },
+   "frequency_rule": {
+    "value": "weekly",
+    "note": "max_daily is per WEEK; oral methotrexate for RA/psoriasis is dosed once weekly",
+    "source": "manual, unverified"
+   }
   }
  ]
 }

@@ -1,0 +1,95 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22metoprolol%20tartrate%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:29-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 246
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "53401-015",
+    "generic_name": "METOPROLOL TARTRATE",
+    "labeler_name": "Aphena Pharma Solutions - Tennessee, LLC",
+    "brand_name": "METOPROLOL TARTRATE",
+    "active_ingredients": [
+     {
+      "name": "METOPROLOL TARTRATE",
+      "strength": "25 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "53401-015-53",
+      "description": "60 TABLET in 1 BOTTLE (53401-015-53)",
+      "marketing_start_date": "20260616",
+      "sample": false
+     },
+     {
+      "package_ndc": "53401-015-60",
+      "description": "90 TABLET in 1 BOTTLE (53401-015-60)",
+      "marketing_start_date": "20260616",
+      "sample": false
+     },
+     {
+      "package_ndc": "53401-015-80",
+      "description": "180 TABLET in 1 BOTTLE (53401-015-80)",
+      "marketing_start_date": "20260616",
+      "sample": false
+     },
+     {
+      "package_ndc": "53401-015-92",
+      "description": "270 TABLET in 1 BOTTLE (53401-015-92)",
+      "marketing_start_date": "20260616",
+      "sample": false
+     },
+     {
+      "package_ndc": "53401-015-98",
+      "description": "540 TABLET in 1 BOTTLE (53401-015-98)",
+      "marketing_start_date": "20260616",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {
+     "manufacturer_name": [
+      "Aphena Pharma Solutions - Tennessee, LLC"
+     ],
+     "rxcui": [
+      "866924"
+     ],
+     "spl_set_id": [
+      "54754388-39c9-9a02-e063-6394a90a90b3"
+     ],
+     "unii": [
+      "W5S57Y3A5L"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "TABLET",
+    "spl_id": "547539d4-e52d-8bd9-e063-6394a90af5a1",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20260209",
+    "product_id": "53401-015_547539d4-e52d-8bd9-e063-6394a90af5a1",
+    "application_number": "ANDA200981",
+    "brand_name_base": "METOPROLOL TARTRATE",
+    "pharm_class": [
+     "Adrenergic beta-Antagonists [MoA]",
+     "beta-Adrenergic Blocker [EPC]"
+    ]
+   }
+  ]
+ }
+}

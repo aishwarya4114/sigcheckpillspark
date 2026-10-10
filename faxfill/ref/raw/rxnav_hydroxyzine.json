@@ -1,0 +1,163 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=hydroxyzine",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:31-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "995255",
+       "name": "hydroxyzine pamoate 25 MG Oral Capsule [Vistaril]",
+       "synonym": "Vistaril 25 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "995280",
+       "name": "hydroxyzine pamoate 50 MG Oral Capsule [Vistaril]",
+       "synonym": "Vistaril 50 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "1794552",
+       "name": "2 ML hydroxyzine hydrochloride 50 MG/ML Injection",
+       "synonym": "hydroxyzine hydrochloride 100 MG per 2 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1794554",
+       "name": "1 ML hydroxyzine hydrochloride 50 MG/ML Injection",
+       "synonym": "hydroxyzine hydrochloride 50 MG per 1 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "995218",
+       "name": "hydroxyzine hydrochloride 10 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "995232",
+       "name": "hydroxyzine pamoate 100 MG Oral Capsule",
+       "synonym": "hydroxyzine hydrochloride 100 MG (hydroxyzine pamoate 170.4 MG) Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "995235",
+       "name": "hydroxyzine hydrochloride 100 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "995241",
+       "name": "hydroxyzine hydrochloride 2 MG/ML Oral Solution",
+       "synonym": "hydroxyzine hydrochloride 10 MG per 5 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "995253",
+       "name": "hydroxyzine pamoate 25 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "995258",
+       "name": "hydroxyzine hydrochloride 25 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "995270",
+       "name": "1 ML hydroxyzine hydrochloride 25 MG/ML Injection",
+       "synonym": "hydroxyzine hydrochloride 25 MG per 1 ML Injection",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "995274",
+       "name": "hydroxyzine pamoate 5 MG/ML Oral Suspension",
+       "synonym": "hydroxyzine hydrochloride 25 MG per 5 ML (hydroxyzine pamoate 42.6 MG/ML) Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "995278",
+       "name": "hydroxyzine pamoate 50 MG Oral Capsule",
+       "synonym": "hydroxyzine pamoate 50 MG (hydroxyzine pamoate 85.2 MG eqv to hydroxyzine HCl 50 MG) Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "995281",
+       "name": "hydroxyzine hydrochloride 50 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "995285",
+       "name": "hydroxyzine hydrochloride 50 MG/ML Injectable Solution",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

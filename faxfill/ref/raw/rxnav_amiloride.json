@@ -1,0 +1,125 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=amiloride",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:24-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD"
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "977880",
+       "name": "amiloride hydrochloride 5 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "977883",
+       "name": "amiloride hydrochloride 5 MG / hydrochlorothiazide 50 MG Oral Tablet",
+       "synonym": "amiloride hydrochloride 5 MG / HCTZ 50 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "977887",
+       "name": "amiloride hydrochloride 1 MG/ML Oral Solution",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "977890",
+       "name": "amiloride hydrochloride 10 MG / furosemide 80 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "977907",
+       "name": "amiloride hydrochloride 2.5 MG / cyclopenthiazide 0.25 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "977920",
+       "name": "amiloride hydrochloride 2.5 MG / atenolol 50 MG / hydrochlorothiazide 25 MG Oral Capsule",
+       "synonym": "amiloride hydrochloride 2.5 MG / atenolol 50 MG / HCTZ 25 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "977945",
+       "name": "amiloride hydrochloride 2.5 MG / furosemide 20 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "977949",
+       "name": "amiloride hydrochloride 2.5 MG / hydrochlorothiazide 25 MG / timolol maleate 10 MG Oral Tablet",
+       "synonym": "amiloride hydrochloride 2.5 MG / HCTZ 25 MG / timolol maleate 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "977950",
+       "name": "amiloride hydrochloride 2.5 MG / hydrochlorothiazide 25 MG Oral Tablet",
+       "synonym": "Amiloride Hydrochloride 2.5 MG / HCTZ 25 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "977951",
+       "name": "amiloride hydrochloride 5 MG / bumetanide 1 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "977959",
+       "name": "amiloride hydrochloride 5 MG / furosemide 40 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

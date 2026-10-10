@@ -1,0 +1,865 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=oxycodone",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:58-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK"
+    },
+    {
+     "tty": "GPCK"
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "1049216",
+       "name": "acetaminophen 325 MG / oxycodone hydrochloride 10 MG Oral Tablet [Endocet]",
+       "synonym": "Endocet 10/325 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049223",
+       "name": "acetaminophen 325 MG / oxycodone hydrochloride 5 MG Oral Tablet [Endocet]",
+       "synonym": "Endocet 5/325 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049227",
+       "name": "acetaminophen 325 MG / oxycodone hydrochloride 7.5 MG Oral Tablet [Endocet]",
+       "synonym": "Endocet 7.5/325 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049504",
+       "name": "Abuse-Deterrent 12 HR oxycodone hydrochloride 10 MG Extended Release Oral Tablet [Oxycontin]",
+       "synonym": "12 HR Oxycontin 10 MG Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049545",
+       "name": "Abuse-Deterrent 12 HR oxycodone hydrochloride 15 MG Extended Release Oral Tablet [Oxycontin]",
+       "synonym": "12 HR Oxycontin 15 MG Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049565",
+       "name": "Abuse-Deterrent 12 HR oxycodone hydrochloride 20 MG Extended Release Oral Tablet [Oxycontin]",
+       "synonym": "12 HR Oxycontin 20 MG Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049576",
+       "name": "Abuse-Deterrent 12 HR oxycodone hydrochloride 30 MG Extended Release Oral Tablet [Oxycontin]",
+       "synonym": "12 HR Oxycontin 30 MG Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049586",
+       "name": "Abuse-Deterrent 12 HR oxycodone hydrochloride 40 MG Extended Release Oral Tablet [Oxycontin]",
+       "synonym": "12 HR Oxycontin 40 MG Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049595",
+       "name": "Abuse-Deterrent 12 HR oxycodone hydrochloride 60 MG Extended Release Oral Tablet [Oxycontin]",
+       "synonym": "12 HR Oxycontin 60 MG Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049601",
+       "name": "Abuse-Deterrent 12 HR oxycodone hydrochloride 80 MG Extended Release Oral Tablet [Oxycontin]",
+       "synonym": "12 HR Oxycontin 80 MG Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049613",
+       "name": "oxycodone hydrochloride 15 MG Oral Tablet [Roxicodone]",
+       "synonym": "Roxicodone 15 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049620",
+       "name": "oxycodone hydrochloride 30 MG Oral Tablet [Roxicodone]",
+       "synonym": "Roxicodone 30 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049623",
+       "name": "oxycodone hydrochloride 5 MG Oral Tablet [Roxicodone]",
+       "synonym": "Roxicodone 5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049625",
+       "name": "acetaminophen 325 MG / oxycodone hydrochloride 10 MG Oral Tablet [Percocet]",
+       "synonym": "Percocet 10/325 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049637",
+       "name": "acetaminophen 325 MG / oxycodone hydrochloride 2.5 MG Oral Tablet [Percocet]",
+       "synonym": "Percocet 2.5/325 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049640",
+       "name": "acetaminophen 325 MG / oxycodone hydrochloride 5 MG Oral Tablet [Percocet]",
+       "synonym": "Percocet 5/325 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049642",
+       "name": "acetaminophen 325 MG / oxycodone hydrochloride 7.5 MG Oral Tablet [Percocet]",
+       "synonym": "Percocet 7.5/325 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1487288",
+       "name": "acetaminophen 325 MG / oxycodone hydrochloride 2.5 MG Oral Tablet [Endocet]",
+       "synonym": "Endocet (acetaminophen 325 MG / oxycodone HCl 2.5 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1537116",
+       "name": "acetaminophen 300 MG / oxycodone hydrochloride 5 MG Oral Tablet [Primlev]",
+       "synonym": "Primlev 5/300 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1537120",
+       "name": "acetaminophen 300 MG / oxycodone hydrochloride 10 MG Oral Tablet [Primlev]",
+       "synonym": "Primlev 10 / 300 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1537122",
+       "name": "acetaminophen 300 MG / oxycodone hydrochloride 7.5 MG Oral Tablet [Primlev]",
+       "synonym": "Primlev 7.5 / 300 Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1664448",
+       "name": "oxycodone hydrochloride 5 MG Oral Tablet [Oxaydo]",
+       "synonym": "Oxaydo 5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1664634",
+       "name": "oxycodone hydrochloride 7.5 MG Oral Tablet [Oxaydo]",
+       "synonym": "Oxaydo 7.5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1790533",
+       "name": "Abuse-Deterrent 12 HR oxycodone 9 MG Extended Release Oral Capsule [Xtampza]",
+       "synonym": "Xtampza ER 9 MG 12 HR Extended Release Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1791560",
+       "name": "Abuse-Deterrent 12 HR oxycodone 13.5 MG Extended Release Oral Capsule [Xtampza]",
+       "synonym": "Xtampza ER 13.5 MG 12 HR Extended Release Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1791569",
+       "name": "Abuse-Deterrent 12 HR oxycodone 18 MG Extended Release Oral Capsule [Xtampza]",
+       "synonym": "Xtampza ER 18 MG 12 HR Extended Release Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1791576",
+       "name": "Abuse-Deterrent 12 HR oxycodone 27 MG Extended Release Oral Capsule [Xtampza]",
+       "synonym": "Xtampza ER 27 MG 12 HR Extended Release Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1791582",
+       "name": "Abuse-Deterrent 12 HR oxycodone 36 MG Extended Release Oral Capsule [Xtampza]",
+       "synonym": "Xtampza ER 36 MG 12 HR Extended Release Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1944535",
+       "name": "Abuse-Deterrent oxycodone hydrochloride 15 MG Oral Tablet [Roxybond]",
+       "synonym": "RoxyBond 15 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1944540",
+       "name": "Abuse-Deterrent oxycodone hydrochloride 30 MG Oral Tablet [Roxybond]",
+       "synonym": "RoxyBond 30 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1944543",
+       "name": "Abuse-Deterrent oxycodone hydrochloride 5 MG Oral Tablet [Roxybond]",
+       "synonym": "RoxyBond 5 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2045500",
+       "name": "acetaminophen 300 MG / oxycodone hydrochloride 2.5 MG Oral Tablet [Nalocet]",
+       "synonym": "Nalocet (oxycodone HCl 2.5 MG / acetaminophen 300 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2279510",
+       "name": "acetaminophen 300 MG / oxycodone hydrochloride 10 MG Oral Tablet [Prolate]",
+       "synonym": "Prolate (acetaminophen 300 MG / oxycodone HCl 10 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2279512",
+       "name": "acetaminophen 300 MG / oxycodone hydrochloride 5 MG Oral Tablet [Prolate]",
+       "synonym": "Prolate (acetaminophen 300 MG / oxycodone HCl 5 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2279514",
+       "name": "acetaminophen 300 MG / oxycodone hydrochloride 7.5 MG Oral Tablet [Prolate]",
+       "synonym": "Prolate (acetaminophen 300 MG / oxycodone HCl 7.5 MG) Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2281851",
+       "name": "acetaminophen 60 MG/ML / oxycodone hydrochloride 2 MG/ML Oral Solution [Prolate]",
+       "synonym": "APAP 60 MG/ML / Oxycodone Hydrochloride 2 MG/ML Oral Solution [Prolate]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2693196",
+       "name": "Abuse-Deterrent oxycodone hydrochloride 10 MG Oral Tablet [Roxybond]",
+       "synonym": "RoxyBond 10 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "1014599",
+       "name": "acetaminophen 300 MG / oxycodone hydrochloride 10 MG Oral Tablet",
+       "synonym": "APAP 300 MG / oxycodone hydrochloride 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1014615",
+       "name": "acetaminophen 300 MG / oxycodone hydrochloride 5 MG Oral Tablet",
+       "synonym": "APAP 300 MG / oxycodone 5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1014632",
+       "name": "acetaminophen 300 MG / oxycodone hydrochloride 7.5 MG Oral Tablet",
+       "synonym": "APAP 300 MG / Oxycodone Hydrochloride 7.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1037259",
+       "name": "acetaminophen 300 MG / oxycodone hydrochloride 2.5 MG Oral Tablet",
+       "synonym": "APAP 300 MG / Oxycodone Hydrochloride 2.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049214",
+       "name": "acetaminophen 325 MG / oxycodone hydrochloride 10 MG Oral Tablet",
+       "synonym": "APAP 325 MG / oxycodone hydrochloride 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049221",
+       "name": "acetaminophen 325 MG / oxycodone hydrochloride 5 MG Oral Tablet",
+       "synonym": "APAP 325 MG / oxycodone hydrochloride 5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049225",
+       "name": "acetaminophen 325 MG / oxycodone hydrochloride 7.5 MG Oral Tablet",
+       "synonym": "APAP 325 MG / oxycodone hydrochloride 7.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049233",
+       "name": "acetaminophen 500 MG / oxycodone hydrochloride 7.5 MG Oral Tablet",
+       "synonym": "APAP 500 MG / oxycodone hydrochloride 7.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049267",
+       "name": "acetaminophen 400 MG / oxycodone hydrochloride 7.5 MG Oral Tablet",
+       "synonym": "APAP 400 MG / Oxycodone Hydrochloride 7.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049270",
+       "name": "acetaminophen 650 MG / oxycodone hydrochloride 10 MG Oral Tablet",
+       "synonym": "APAP 650 MG / oxycodone hydrochloride 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049502",
+       "name": "12 HR oxycodone hydrochloride 10 MG Extended Release Oral Tablet",
+       "synonym": "oxycodone hydrochloride 10 MG 12 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049543",
+       "name": "12 HR oxycodone hydrochloride 15 MG Extended Release Oral Tablet",
+       "synonym": "oxycodone hydrochloride 15 MG 12 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049563",
+       "name": "12 HR oxycodone hydrochloride 20 MG Extended Release Oral Tablet",
+       "synonym": "oxycodone hydrochloride 20 MG 12 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049574",
+       "name": "12 HR oxycodone hydrochloride 30 MG Extended Release Oral Tablet",
+       "synonym": "oxycodone hydrochloride 30 MG 12 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049580",
+       "name": "acetaminophen 65 MG/ML / oxycodone hydrochloride 1 MG/ML Oral Solution",
+       "synonym": "APAP 65 MG/ML / Oxycodone Hydrochloride 1 MG/ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049584",
+       "name": "12 HR oxycodone hydrochloride 40 MG Extended Release Oral Tablet",
+       "synonym": "oxycodone hydrochloride 40 MG 12 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049589",
+       "name": "ibuprofen 400 MG / oxycodone hydrochloride 5 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049593",
+       "name": "12 HR oxycodone hydrochloride 60 MG Extended Release Oral Tablet",
+       "synonym": "oxycodone hydrochloride 60 MG 12 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049599",
+       "name": "12 HR oxycodone hydrochloride 80 MG Extended Release Oral Tablet",
+       "synonym": "oxycodone hydrochloride 80 MG 12 HR Extended Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049604",
+       "name": "oxycodone hydrochloride 1 MG/ML Oral Solution",
+       "synonym": "oxycodone hydrochloride 5 MG per 5 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049611",
+       "name": "oxycodone hydrochloride 15 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049615",
+       "name": "oxycodone hydrochloride 20 MG/ML Oral Solution",
+       "synonym": "oxycodone hydrochloride 20 MG per 1 ML Concentrate for Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049618",
+       "name": "oxycodone hydrochloride 30 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049621",
+       "name": "oxycodone hydrochloride 5 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049635",
+       "name": "acetaminophen 325 MG / oxycodone hydrochloride 2.5 MG Oral Tablet",
+       "synonym": "APAP 325 MG / Oxycodone Hydrochloride 2.5 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049651",
+       "name": "acetaminophen 500 MG / oxycodone hydrochloride 10 MG Oral Tablet",
+       "synonym": "APAP 500 MG / oxycodone hydrochloride 10 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049658",
+       "name": "acetaminophen 500 MG / oxycodone hydrochloride 5 MG Oral Capsule",
+       "synonym": "APAP 500 MG / oxycodone hydrochloride 5 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049683",
+       "name": "oxycodone hydrochloride 10 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049686",
+       "name": "oxycodone hydrochloride 20 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049696",
+       "name": "oxycodone hydrochloride 5 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049717",
+       "name": "oxycodone hydrochloride 10 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049719",
+       "name": "oxycodone hydrochloride 10 MG/ML Injectable Solution",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049720",
+       "name": "oxycodone hydrochloride 10 MG/ML Oral Solution",
+       "synonym": "oxycodone hydrochloride 10 MG/ML Concentrate for Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049721",
+       "name": "oxycodone hydrochloride 20 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1049727",
+       "name": "oxycodone hydrochloride 5 MG Extended Release Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1113314",
+       "name": "oxycodone hydrochloride 7.5 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1790527",
+       "name": "Abuse-Deterrent 12 HR oxycodone 9 MG Extended Release Oral Capsule",
+       "synonym": "oxycodone 9 MG 12 HR Extended Release Oral Capsule, Abuse-Deterrent",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1791558",
+       "name": "Abuse-Deterrent 12 HR oxycodone 13.5 MG Extended Release Oral Capsule",
+       "synonym": "oxycodone 13.5 MG 12 HR Extended Release Oral Capsule, Abuse-Deterrent",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1791567",
+       "name": "Abuse-Deterrent 12 HR oxycodone 18 MG Extended Release Oral Capsule",
+       "synonym": "oxyCODONE 18 MG 12 HR Extended Release Oral Capsule, Abuse-Deterrent",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1791574",
+       "name": "Abuse-Deterrent 12 HR oxycodone 27 MG Extended Release Oral Capsule",
+       "synonym": "oxycodone 27 MG 12 HR Extended Release Oral Capsule, Abuse-Deterrent",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1791580",
+       "name": "Abuse-Deterrent 12 HR oxycodone 36 MG Extended Release Oral Capsule",
+       "synonym": "oxycodone 36 MG 12 HR Extended Release Oral Capsule, Abuse-Deterrent",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1860127",
+       "name": "Abuse-Deterrent 12 HR oxycodone hydrochloride 60 MG Extended Release Oral Tablet",
+       "synonym": "oxycodone HCl 60 MG 12 HR Extended Release Oral Tablet, Abuse-Deterrent",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1860129",
+       "name": "Abuse-Deterrent 12 HR oxycodone hydrochloride 20 MG Extended Release Oral Tablet",
+       "synonym": "oxycodone HCl 20 MG 12 HR Extended Release Oral Tablet, Abuse-Deterrent",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1860137",
+       "name": "Abuse-Deterrent 12 HR oxycodone hydrochloride 40 MG Extended Release Oral Tablet",
+       "synonym": "oxycodone HCl 40 MG 12 HR Extended Release Oral Tablet, Abuse-Deterrent",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1860148",
+       "name": "Abuse-Deterrent 12 HR oxycodone hydrochloride 80 MG Extended Release Oral Tablet",
+       "synonym": "oxycodone HCl 80 MG 12 HR Extended Release Oral Tablet, Abuse-Deterrent",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1860151",
+       "name": "Abuse-Deterrent 12 HR oxycodone hydrochloride 30 MG Extended Release Oral Tablet",
+       "synonym": "oxycodone HCl 30 MG 12 HR Extended Release Oral Tablet, Abuse-Deterrent",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1860154",
+       "name": "Abuse-Deterrent 12 HR oxycodone hydrochloride 15 MG Extended Release Oral Tablet",
+       "synonym": "oxycodone HCl 15 MG 12 HR Extended Release Oral Tablet, Abuse-Deterrent",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1860157",
+       "name": "Abuse-Deterrent 12 HR oxycodone hydrochloride 10 MG Extended Release Oral Tablet",
+       "synonym": "oxycodone HCl 10 MG 12 HR Extended Release Oral Tablet, Abuse-Deterrent",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1944529",
+       "name": "Abuse-Deterrent oxycodone hydrochloride 15 MG Oral Tablet",
+       "synonym": "oxycodone hydrochloride 15 MG (equivalent to oxycodone 13.4 MG) Oral Tablet, Abuse-Deterrent",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1944538",
+       "name": "Abuse-Deterrent oxycodone hydrochloride 30 MG Oral Tablet",
+       "synonym": "oxycodone hydrochloride 30 MG (equivalent to oxycodone 26.9 MG) Oral Tablet, Abuse-Deterrent",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1944541",
+       "name": "Abuse-Deterrent oxycodone hydrochloride 5 MG Oral Tablet",
+       "synonym": "oxycodone hydrochloride 5 MG (equivalent to oxycodone 4.5 MG) Oral Tablet, Abuse-Deterrent",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2105822",
+       "name": "acetaminophen 60 MG/ML / oxycodone hydrochloride 2 MG/ML Oral Solution",
+       "synonym": "oxycodone HCl 2 MG/ML / acetaminophen 60 MG/ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2693194",
+       "name": "Abuse-Deterrent oxycodone hydrochloride 10 MG Oral Tablet",
+       "synonym": "oxycodone hydrochloride 10 MG (equivalent to oxycodone 9 MG) Oral Tablet, Abuse-Deterrent",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "637540",
+       "name": "aspirin 325 MG / oxycodone hydrochloride 4.5 MG / oxycodone terephthalate 0.38 MG Oral Tablet",
+       "synonym": "ASA 325 MG / Oxycodone Hydrochloride 4.5 MG / oxycodone terephthalate 0.38 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "724614",
+       "name": "aspirin 325 MG / oxycodone hydrochloride 2.25 MG / oxycodone terephthalate 0.19 MG Oral Tablet",
+       "synonym": "ASA 325 MG / Oxycodone Hydrochloride 2.25 MG / oxycodone terephthalate 0.19 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "848768",
+       "name": "aspirin 325 MG / oxycodone hydrochloride 4.84 MG Oral Tablet",
+       "synonym": "ASA 325 MG / oxycodone hydrochloride 4.84 MG Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

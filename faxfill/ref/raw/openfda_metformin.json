@@ -1,0 +1,52 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22metformin%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:33-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 742
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "55370-825",
+    "generic_name": "empagliflozin and metformin hydrochloride",
+    "labeler_name": "Patheon Puerto Rico, Inc.",
+    "active_ingredients": [
+     {
+      "name": "EMPAGLIFLOZIN",
+      "strength": "5 mg/1"
+     },
+     {
+      "name": "METFORMIN HYDROCHLORIDE",
+      "strength": "1000 mg/1"
+     }
+    ],
+    "finished": false,
+    "packaging": [
+     {
+      "package_ndc": "55370-825-00",
+      "description": "33361 TABLET in 1 DRUM (55370-825-00)",
+      "marketing_start_date": "01-JAN-25"
+     }
+    ],
+    "listing_expiration_date": "20271231",
+    "openfda": {},
+    "marketing_category": "DRUG FOR FURTHER PROCESSING",
+    "dosage_form": "TABLET",
+    "spl_id": "49ece2a9-4cb4-6c1d-e063-6294a90a223a",
+    "product_type": "DRUG FOR FURTHER PROCESSING",
+    "marketing_start_date": "20250101",
+    "product_id": "55370-825_49ece2a9-4cb4-6c1d-e063-6294a90a223a",
+    "brand_name_base": null
+   }
+  ]
+ }
+}

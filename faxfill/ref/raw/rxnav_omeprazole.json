@@ -1,0 +1,410 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=omeprazole",
+ "status": 200,
+ "fetched": "2026-10-10T13:34:01-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK",
+     "conceptProperties": [
+      {
+       "rxcui": "1291987",
+       "name": "{4 (amoxicillin 500 MG Oral Capsule) / 2 (clarithromycin 500 MG Oral Tablet) / 2 (omeprazole 20 MG Delayed Release Oral Capsule) } Pack [Omeclamox]",
+       "synonym": "Omeclamox-Pak",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "GPCK",
+     "conceptProperties": [
+      {
+       "rxcui": "1291986",
+       "name": "{4 (amoxicillin 500 MG Oral Capsule) / 2 (clarithromycin 500 MG Oral Tablet) / 2 (omeprazole 20 MG Delayed Release Oral Capsule) } Pack",
+       "synonym": "",
+       "tty": "GPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "1811916",
+       "name": "aspirin 325 MG / omeprazole 40 MG Delayed Release Oral Tablet [Yosprala]",
+       "synonym": "ASA 325 MG / Omeprazole 40 MG Delayed Release Oral Tablet [Yosprala]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1811918",
+       "name": "aspirin 81 MG / omeprazole 40 MG Delayed Release Oral Tablet [Yosprala]",
+       "synonym": "ASA 81 MG / Omeprazole 40 MG Delayed Release Oral Tablet [Yosprala]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "207212",
+       "name": "omeprazole 20 MG Delayed Release Oral Capsule [Prilosec]",
+       "synonym": "Prilosec 20 MG Delayed Release Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "211691",
+       "name": "omeprazole 10 MG Delayed Release Oral Capsule [Prilosec]",
+       "synonym": "Prilosec 10 MG Delayed Release Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "213295",
+       "name": "omeprazole 40 MG Delayed Release Oral Capsule [Prilosec]",
+       "synonym": "Prilosec 40 MG Delayed Release Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2262032",
+       "name": "amoxicillin 250 MG / omeprazole 10 MG / rifabutin 12.5 MG Delayed Release Oral Capsule [Talicia]",
+       "synonym": "Talicia 250 MG / 10 MG / 12.5 MG Delayed Release Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2625150",
+       "name": "omeprazole 2 MG/ML / sodium bicarbonate 84 MG/ML Oral Suspension [Konvomep]",
+       "synonym": "omeprazole 2 MG/ML / NaHCO3 84 MG/ML Oral Suspension [Konvomep]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2733836",
+       "name": "omeprazole 0.37 MG/MG Oral Paste [Primeguard]",
+       "synonym": "PrimeGuard 37 % Oral Paste",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2740930",
+       "name": "omeprazole 0.37 MG/MG Oral Paste [Gastrobim]",
+       "synonym": "Gastrobim 37 % Oral Paste",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "608796",
+       "name": "omeprazole 20 MG Delayed Release Oral Tablet [Prilosec]",
+       "synonym": "Prilosec OTC 20 MG Delayed Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "646344",
+       "name": "omeprazole 20 MG / sodium bicarbonate 1100 MG Oral Capsule [Zegerid Reformulated Aug 2006]",
+       "synonym": "Omeprazole 20 MG / NaHCO3 1100 MG Oral Capsule [Zegerid Reformulated Aug 2006]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "646352",
+       "name": "omeprazole 40 MG / sodium bicarbonate 1100 MG Oral Capsule [Zegerid Reformulated Aug 2006]",
+       "synonym": "Omeprazole 40 MG / NaHCO3 1100 MG Oral Capsule [Zegerid Reformulated Aug 2006]",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "753601",
+       "name": "omeprazole 40 MG / sodium bicarbonate 1680 MG Powder for Oral Suspension [Zegerid Reformulated Aug 2006]",
+       "synonym": "Zegerid 40 MG / 1680 MG Powder for Oral Suspension, Reformulated Aug 2006",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "753603",
+       "name": "omeprazole 20 MG / sodium bicarbonate 1680 MG Powder for Oral Suspension [Zegerid Reformulated Aug 2006]",
+       "synonym": "Zegerid 20 MG / 1680 MG Powder for Oral Suspension, Reformulated Aug 2006",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "797061",
+       "name": "omeprazole 10 MG Granules for Oral Suspension [Prilosec]",
+       "synonym": "Prilosec 10 MG Delayed Release Granules for Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "797065",
+       "name": "omeprazole 2.5 MG Granules for Oral Suspension [Prilosec]",
+       "synonym": "Prilosec 2.5 MG Delayed Release Granules for Oral Suspension",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "994514",
+       "name": "omeprazole 0.37 MG/MG Oral Paste [UlcerGard]",
+       "synonym": "UlcerGard 37 % Oral Paste",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "1811631",
+       "name": "aspirin 81 MG / omeprazole 40 MG Delayed Release Oral Tablet",
+       "synonym": "ASA 81 MG / Omeprazole 40 MG Delayed Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1811632",
+       "name": "aspirin 325 MG / omeprazole 40 MG Delayed Release Oral Tablet",
+       "synonym": "ASA 325 MG / Omeprazole 40 MG Delayed Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "198051",
+       "name": "omeprazole 20 MG Delayed Release Oral Capsule",
+       "synonym": "omeprazole 20 MG (as omeprazole magnesium 20.6 MG) Delayed Release Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "199119",
+       "name": "omeprazole 10 MG Delayed Release Oral Capsule",
+       "synonym": "omeprazole (as omeprazole magnesium) 10 MG Delayed Release Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "200329",
+       "name": "omeprazole 40 MG Delayed Release Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2003656",
+       "name": "omeprazole 20 MG Disintegrating Oral Tablet",
+       "synonym": "omeprazole 20 MG (as omeprazole magnesium 20.6 MG) Delayed Release Disintegrating Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2262026",
+       "name": "amoxicillin 250 MG / omeprazole 10 MG / rifabutin 12.5 MG Delayed Release Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2625144",
+       "name": "omeprazole 2 MG/ML / sodium bicarbonate 84 MG/ML Oral Suspension",
+       "synonym": "omeprazole 2 MG/ML / NaHCO3 84 MG/ML Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "389171",
+       "name": "omeprazole 10 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "389172",
+       "name": "omeprazole 20 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "389173",
+       "name": "omeprazole 40 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "402013",
+       "name": "omeprazole 10 MG Delayed Release Oral Tablet",
+       "synonym": "omeprazole (as omeprazole magnesium) 10 MG Delayed Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "402014",
+       "name": "omeprazole 20 MG Delayed Release Oral Tablet",
+       "synonym": "omeprazole 20 MG (as omeprazole magnesium 20.6 MG) Delayed Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "402015",
+       "name": "omeprazole 40 MG Delayed Release Oral Tablet",
+       "synonym": "omeprazole (as omeprazole magnesium) 40 MG Delayed Release Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "616539",
+       "name": "omeprazole 20 MG / sodium bicarbonate 1100 MG Oral Capsule",
+       "synonym": "Omeprazole 20 MG / NaHCO3 1100 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "616541",
+       "name": "omeprazole 40 MG / sodium bicarbonate 1100 MG Oral Capsule",
+       "synonym": "Omeprazole 40 MG / NaHCO3 1100 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "645295",
+       "name": "magnesium hydroxide 700 MG / omeprazole 20 MG / sodium bicarbonate 600 MG Chewable Tablet",
+       "synonym": "Magnesium Hydroxide 700 MG / Omeprazole 20 MG / NaHCO3 600 MG Chewable Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "645296",
+       "name": "magnesium hydroxide 700 MG / omeprazole 40 MG / sodium bicarbonate 600 MG Chewable Tablet",
+       "synonym": "Magnesium Hydroxide 700 MG / Omeprazole 40 MG / NaHCO3 600 MG Chewable Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "753557",
+       "name": "omeprazole 40 MG / sodium bicarbonate 1680 MG Powder for Oral Suspension",
+       "synonym": "Omeprazole 40 MG / NaHCO3 1680 MG Powder for Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "753562",
+       "name": "omeprazole 20 MG / sodium bicarbonate 1680 MG Powder for Oral Suspension",
+       "synonym": "Omeprazole 20 MG / NaHCO3 1680 MG Powder for Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "797058",
+       "name": "omeprazole 10 MG Granules for Oral Suspension",
+       "synonym": "omeprazole 10 MG Delayed Release Granules for Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "797063",
+       "name": "omeprazole 2.5 MG Granules for Oral Suspension",
+       "synonym": "omeprazole 2.5 MG Delayed Release Granules for Oral Suspension",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "994510",
+       "name": "omeprazole 0.37 MG/MG Oral Paste",
+       "synonym": "omeprazole 37 % Oral Paste",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

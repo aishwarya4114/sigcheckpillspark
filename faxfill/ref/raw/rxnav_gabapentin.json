@@ -1,0 +1,356 @@
+{
+ "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=gabapentin",
+ "status": 200,
+ "fetched": "2026-10-10T13:34:03-0400",
+ "body": {
+  "drugGroup": {
+   "name": null,
+   "conceptGroup": [
+    {
+     "tty": "BPCK",
+     "conceptProperties": [
+      {
+       "rxcui": "2398512",
+       "name": "{9 (Once-Daily gabapentin 300 MG Oral Tablet [Gralise]) / 24 (Once-Daily gabapentin 600 MG Oral Tablet [Gralise]) } Pack [Gralise Sample Pack]",
+       "synonym": "Gralise 15-Day Sample Pack",
+       "tty": "BPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "GPCK",
+     "conceptProperties": [
+      {
+       "rxcui": "2398511",
+       "name": "{9 (Once-Daily gabapentin 300 MG Oral Tablet) / 24 (Once-Daily gabapentin 600 MG Oral Tablet) } Pack",
+       "synonym": "gabapentin sample pack {9 (gabapentin 300 MG Once-Daily Oral Tablet) / 24 (gabapentin 600 MG Once-Daily Oral Tablet) }",
+       "tty": "GPCK",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SBD",
+     "conceptProperties": [
+      {
+       "rxcui": "105028",
+       "name": "gabapentin 100 MG Oral Capsule [Neurontin]",
+       "synonym": "Neurontin 100 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "105029",
+       "name": "gabapentin 300 MG Oral Capsule [Neurontin]",
+       "synonym": "Neurontin 300 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "105030",
+       "name": "gabapentin 400 MG Oral Capsule [Neurontin]",
+       "synonym": "Neurontin 400 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1101339",
+       "name": "gabapentin enacarbil 600 MG Extended Release Oral Tablet [Horizant]",
+       "synonym": "Horizant 600 MG Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1115012",
+       "name": "Once-Daily gabapentin 300 MG Oral Tablet [Gralise]",
+       "synonym": "Gralise 300 MG Once-Daily Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1115013",
+       "name": "Once-Daily gabapentin 600 MG Oral Tablet [Gralise]",
+       "synonym": "Gralise 600 MG Once-Daily Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1482821",
+       "name": "gabapentin enacarbil 300 MG Extended Release Oral Tablet [Horizant]",
+       "synonym": "Horizant (as gabapentin enacarbil) 300 MG Extended Release Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "261280",
+       "name": "gabapentin 600 MG Oral Tablet [Neurontin]",
+       "synonym": "Neurontin 600 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "261281",
+       "name": "gabapentin 800 MG Oral Tablet [Neurontin]",
+       "synonym": "Neurontin 800 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2634745",
+       "name": "Once-Daily gabapentin 900 MG Oral Tablet [Gralise]",
+       "synonym": "Gralise 900 MG Once-Daily Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2634749",
+       "name": "Once-Daily gabapentin 450 MG Oral Tablet [Gralise]",
+       "synonym": "Once-Daily Gralise 450 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2634753",
+       "name": "Once-Daily gabapentin 750 MG Oral Tablet [Gralise]",
+       "synonym": "Gralise 750 MG Once-Daily Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2739007",
+       "name": "gabapentin 200 MG Oral Capsule [Relgaabi]",
+       "synonym": "Relgaabi 200 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2740839",
+       "name": "gabapentin 300 MG Oral Capsule [Relgaabi]",
+       "synonym": "Relgaabi 300 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2740841",
+       "name": "gabapentin 400 MG Oral Capsule [Relgaabi]",
+       "synonym": "Relgaabi 400 MG Oral Capsule",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "351973",
+       "name": "gabapentin 50 MG/ML Oral Solution [Neurontin]",
+       "synonym": "Neurontin 50 MG/ML Oral Solution",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "602399",
+       "name": "gabapentin 100 MG Oral Tablet [Gabarone]",
+       "synonym": "Gabarone 100 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "602407",
+       "name": "gabapentin 400 MG Oral Tablet [Gabarone]",
+       "synonym": "Gabarone 400 MG Oral Tablet",
+       "tty": "SBD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    },
+    {
+     "tty": "SCD",
+     "conceptProperties": [
+      {
+       "rxcui": "1101338",
+       "name": "gabapentin enacarbil 600 MG Extended Release Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1482820",
+       "name": "gabapentin enacarbil 300 MG Extended Release Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1806380",
+       "name": "Once-Daily gabapentin 300 MG Oral Tablet",
+       "synonym": "gabapentin 300 MG Once-Daily Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "1806382",
+       "name": "Once-Daily gabapentin 600 MG Oral Tablet",
+       "synonym": "gabapentin 600 MG Once-Daily Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2634743",
+       "name": "Once-Daily gabapentin 900 MG Oral Tablet",
+       "synonym": "gabapentin 900 MG Once-Daily Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2634747",
+       "name": "Once-Daily gabapentin 450 MG Oral Tablet",
+       "synonym": "gabapentin 450 MG Once-Daily Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2634751",
+       "name": "Once-Daily gabapentin 750 MG Oral Tablet",
+       "synonym": "gabapentin 750 MG Once-Daily Oral Tablet",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "2739001",
+       "name": "gabapentin 200 MG Oral Capsule",
+       "synonym": "gabapentin 200 MG Oral Capsule",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "283523",
+       "name": "gabapentin 50 MG/ML Oral Solution",
+       "synonym": "gabapentin 250 MG per 5 ML Oral Solution",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310430",
+       "name": "gabapentin 100 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310431",
+       "name": "gabapentin 300 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310432",
+       "name": "gabapentin 400 MG Oral Capsule",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310433",
+       "name": "gabapentin 600 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "310434",
+       "name": "gabapentin 800 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "476673",
+       "name": "gabapentin 100 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      },
+      {
+       "rxcui": "476679",
+       "name": "gabapentin 400 MG Oral Tablet",
+       "synonym": "",
+       "tty": "SCD",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

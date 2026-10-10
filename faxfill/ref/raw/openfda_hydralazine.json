@@ -1,0 +1,105 @@
+{
+ "url": "https://api.fda.gov/drug/ndc.json?search=generic_name:%22hydralazine%22&limit=1",
+ "status": 200,
+ "fetched": "2026-10-10T13:33:31-0400",
+ "body": {
+  "meta": {
+   "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+   "terms": "https://open.fda.gov/terms/",
+   "license": "https://open.fda.gov/license/",
+   "last_updated": "2026-10-09",
+   "results": {
+    "skip": 0,
+    "limit": 1,
+    "total": 169
+   }
+  },
+  "results": [
+   {
+    "product_ndc": "72319-012",
+    "generic_name": "isosorbide dinitrate and hydralazine hydrochloride",
+    "labeler_name": "i3 Pharmaceuticals, LLC",
+    "brand_name": "isosorbide dinitrate and hydralazine hydrochloride",
+    "active_ingredients": [
+     {
+      "name": "ISOSORBIDE DINITRATE",
+      "strength": "20 mg/1"
+     },
+     {
+      "name": "HYDRALAZINE HYDROCHLORIDE",
+      "strength": "37.5 mg/1"
+     }
+    ],
+    "finished": true,
+    "packaging": [
+     {
+      "package_ndc": "72319-012-03",
+      "description": "90 TABLET, FILM COATED in 1 BOTTLE (72319-012-03)",
+      "marketing_start_date": "20240207",
+      "sample": false
+     },
+     {
+      "package_ndc": "72319-012-18",
+      "description": "180 TABLET, FILM COATED in 1 BOTTLE (72319-012-18)",
+      "marketing_start_date": "20240207",
+      "sample": false
+     }
+    ],
+    "listing_expiration_date": "20261231",
+    "openfda": {
+     "manufacturer_name": [
+      "i3 Pharmaceuticals, LLC"
+     ],
+     "rxcui": [
+      "905377"
+     ],
+     "spl_set_id": [
+      "cacf1a7c-0388-09ee-e053-2995a90a10cf"
+     ],
+     "is_original_packager": [
+      true
+     ],
+     "upc": [
+      "0372319012037"
+     ],
+     "nui": [
+      "N0000175415",
+      "M0014874",
+      "N0000009909"
+     ],
+     "pharm_class_epc": [
+      "Nitrate Vasodilator [EPC]"
+     ],
+     "pharm_class_cs": [
+      "Nitrates [CS]"
+     ],
+     "pharm_class_pe": [
+      "Vasodilation [PE]"
+     ],
+     "unii": [
+      "IA7306519N",
+      "FD171B778Y"
+     ]
+    },
+    "marketing_category": "ANDA",
+    "dosage_form": "TABLET, FILM COATED",
+    "spl_id": "1898d58a-a951-f2a3-e063-6394a90a5e9f",
+    "product_type": "HUMAN PRESCRIPTION DRUG",
+    "route": [
+     "ORAL"
+    ],
+    "marketing_start_date": "20240207",
+    "product_id": "72319-012_1898d58a-a951-f2a3-e063-6394a90a5e9f",
+    "application_number": "ANDA215988",
+    "brand_name_base": "isosorbide dinitrate and hydralazine hydrochloride",
+    "pharm_class": [
+     "Arteriolar Vasodilation [PE]",
+     "Arteriolar Vasodilator [EPC]",
+     "Nitrate Vasodilator [EPC]",
+     "Nitrates [CS]",
+     "Vasodilation [PE]"
+    ]
+   }
+  ]
+ }
+}
