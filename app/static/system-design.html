@@ -21,11 +21,16 @@ table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(-
 th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#f1f4f2}
 .tag{display:inline-block;font-size:12px;font-weight:700;padding:1px 8px;border-radius:999px;background:var(--soft);color:var(--accent);margin-right:4px}
 .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:10px}.legend span{display:inline-flex;align-items:center;gap:6px}.legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
+.sponsor{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;border-top:4px solid var(--accent)}.sponsor.prism{border-top-color:#6d28d9}
+.sp-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:10px}.sp-name{font-size:18px;font-weight:750}.sp-role{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.sponsor dl{margin:0;display:grid;grid-template-columns:120px 1fr;gap:8px 14px;font-size:14px}.sponsor dt{font-weight:700;color:#34403b}.sponsor dd{margin:0;color:#34403b}
+.sponsor code{font-size:12.5px;background:#f1f4f2;padding:1px 5px;border-radius:5px}
+@media(max-width:560px){.sponsor dl{grid-template-columns:1fr}.sponsor dd{margin-bottom:6px}}
 </style>
 </head>
 <body>
 <header><img src="/static/logo.svg" alt="" /><b>SigCheck</b><span style="color:var(--muted)">System design</span>
-<nav><a href="/">Review queue</a><a href="/pitch">Pitch</a><a href="/scorecard">Scorecard</a></nav></header>
+<nav><a href="/">Review queue</a><a href="#sponsors">Sponsors</a><a href="/pitch">Pitch</a><a href="/scorecard">Scorecard</a></nav></header>
 <main>
 <h1>How SigCheck works</h1>
 <p class="lede">SigCheck turns pharmacy faxes into reviewable draft orders, and every field must pass checks the AI cannot override.</p>
@@ -37,11 +42,11 @@ th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;verti
 <text x="20" y="28" font-size="14" font-weight="700" fill="#216b55" letter-spacing="1.5">BUILT TODAY</text>
 <!-- row 1 -->
 <g font-size="13" fill="#1f2b27">
-<rect x="20" y="44" width="160" height="78" rx="12" fill="#e8efff" stroke="#1d4ed8"/><text x="34" y="68" font-weight="700">1 · Capture</text><text x="34" y="88">Fax upload (web)</text><text x="34" y="106">Phone /scan page</text>
+<rect x="20" y="44" width="160" height="78" rx="12" fill="#e8efff" stroke="#1d4ed8"/><text x="34" y="68" font-weight="700">1 · Capture</text><text x="34" y="88">Fax or photo upload</text><text x="34" y="106">duplicate-safe</text>
 <rect x="210" y="44" width="170" height="78" rx="12" fill="#edf4ef" stroke="#216b55"/><text x="224" y="68" font-weight="700">2 · Read the page</text><text x="224" y="88">Apple Vision OCR</text><text x="224" y="106">on-device · line boxes</text>
-<rect x="410" y="44" width="180" height="78" rx="12" fill="#fde8e6" stroke="#9b2c22"/><text x="424" y="68" font-weight="700">3 · Safety screen</text><text x="424" y="88">Injection guardrail</text><text x="424" y="106">blocks before any model</text>
-<rect x="620" y="44" width="200" height="78" rx="12" fill="#edf4ef" stroke="#216b55"/><text x="634" y="68" font-weight="700">4 · Structured read</text><text x="634" y="88">Nicrron → Claude Sonnet 5</text><text x="634" y="106">verbatim · null if unsure</text>
-<rect x="850" y="44" width="250" height="78" rx="12" fill="#fff4df" stroke="#7a4f00"/><text x="864" y="68" font-weight="700">5 · Deterministic checks</text><text x="864" y="88">NPI/DEA digits · zeros · LASA</text><text x="864" y="106">catalogue via PRISM KB</text>
+<rect x="410" y="44" width="180" height="78" rx="12" fill="#fde8e6" stroke="#9b2c22"/><text x="424" y="68" font-weight="700">3 · Safety screen</text><text x="424" y="88">Local injection check</text><text x="424" y="106">traced to PRISM guardrail</text>
+<rect x="620" y="44" width="200" height="78" rx="12" fill="#edf4ef" stroke="#216b55"/><text x="634" y="68" font-weight="700">4 · Structured read</text><text x="634" y="88">Nicrron gateway</text><text x="634" y="106">Claude Sonnet 5 · null if unsure</text>
+<rect x="850" y="44" width="250" height="78" rx="12" fill="#fff4df" stroke="#7a4f00"/><text x="864" y="68" font-weight="700">5 · Deterministic checks</text><text x="864" y="88">NPI/DEA digits · zeros · LASA</text><text x="864" y="106">catalogue row via PRISM KB search</text>
 <line x1="180" y1="83" x2="208" y2="83" stroke="#56605b" stroke-width="2" marker-end="url(#a)"/><line x1="380" y1="83" x2="408" y2="83" stroke="#56605b" stroke-width="2" marker-end="url(#a)"/>
 <line x1="590" y1="83" x2="618" y2="83" stroke="#56605b" stroke-width="2" marker-end="url(#a)"/><line x1="820" y1="83" x2="848" y2="83" stroke="#56605b" stroke-width="2" marker-end="url(#a)"/>
 <!-- blocked branch -->
@@ -53,9 +58,9 @@ th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;verti
 <line x1="610" y1="244" x2="572" y2="244" stroke="#56605b" stroke-width="2" marker-end="url(#a)"/>
 <rect x="330" y="196" width="240" height="96" rx="12" fill="#e8efff" stroke="#1d4ed8"/><text x="344" y="220" font-weight="700">7 · Pharmacist review</text><text x="344" y="240">Source highlight per field</text><text x="344" y="258">Confirm · correct · clarify</text><text x="344" y="276">Attested approval</text>
 <line x1="330" y1="244" x2="292" y2="244" stroke="#56605b" stroke-width="2" marker-end="url(#a)"/>
-<rect x="20" y="196" width="270" height="96" rx="12" fill="#edf4ef" stroke="#216b55"/><text x="34" y="220" font-weight="700">8 · Traceable draft order</text><text x="34" y="240">Versioned JSON export</text><text x="34" y="258">Append-only audit trail</text><text x="34" y="276">Not dispensed</text>
+<rect x="20" y="196" width="270" height="96" rx="12" fill="#edf4ef" stroke="#216b55"/><text x="34" y="220" font-weight="700">8 · Traceable draft order</text><text x="34" y="240">PDF order sheet + JSON</text><text x="34" y="258">Append-only audit trail</text><text x="34" y="276">Not dispensed</text>
 <!-- PRISM side -->
-<rect x="610" y="318" width="490" height="62" rx="12" fill="#f6f2ff" stroke="#6d28d9"/><text x="624" y="342" font-weight="700" fill="#4c1d95">PRISM (Block Convey) · runs alongside, never decides</text><text x="624" y="362">Traces · guardrail flags · evaluator · KB grounding · no identifiers</text>
+<rect x="610" y="318" width="490" height="62" rx="12" fill="#f6f2ff" stroke="#6d28d9"/><text x="624" y="342" font-weight="700" fill="#4c1d95">PRISM (Block Convey) · runs alongside, never decides</text><text x="624" y="362">Traces · guardrail traces · trajectory scorecards · KB search · masked</text>
 <path d="M745 292 V316" fill="none" stroke="#6d28d9" stroke-width="2" stroke-dasharray="4 4"/>
 <rect x="20" y="318" width="560" height="62" rx="12" fill="#fff" stroke="#dfe5e1"/><text x="34" y="342" font-weight="700">Policy (admin)</text><text x="34" y="362">Versioned rules as data · safe deterministic re-run · safety rules locked on</text>
 </g>
@@ -72,6 +77,32 @@ th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;verti
 </g>
 </svg>
 <div class="legend"><span><i style="background:#e8efff;border:1px solid #1d4ed8"></i>People</span><span><i style="background:#edf4ef;border:1px solid #216b55"></i>Reading and records</span><span><i style="background:#fde8e6;border:1px solid #9b2c22"></i>Safety stop</span><span><i style="background:#fff4df;border:1px solid #7a4f00"></i>Rules the AI can't override</span><span><i style="background:#f6f2ff;border:1px solid #6d28d9"></i>Observability</span></div>
+</div>
+
+<h2 id="sponsors">Sponsor technology, step by step</h2>
+<p class="lede" style="font-size:15px">Both sponsors sit behind the workflow. The pharmacist never has to think about them, and neither one can approve or block an order on its own.</p>
+<div class="grid2">
+<div class="sponsor">
+  <div class="sp-head"><span class="sp-name">Nicrron</span><span class="sp-role">AI gateway · the reader</span></div>
+  <dl>
+    <dt>Where</dt><dd>Step 4, after the safety screen has passed the page</dd>
+    <dt>What it does</dt><dd>Sends the fax image through <code>api.nicrron.ai/v1</code> to <b>Claude Sonnet 5</b> with a strict prompt: copy text exactly, return fixed JSON, leave anything unsure empty. One bounded JSON repair, then it gives up instead of guessing.</dd>
+    <dt>Recorded per run</dt><dd>Model, latency, tokens, request ID and cache header, shown in technical details and sent to PRISM</dd>
+    <dt>Independent verifier</dt><dd>The <code>faxfill</code> verifier uses Nicrron to run two readers from different vendors, <b>GPT-5.5</b> and <b>Mistral Large 3</b>. A value passes only if a deterministic check also passes, because two models agreeing isn't proof.</dd>
+    <dt>Found</dt><dd>Claude Sonnet 5 rejects a temperature setting, so the app sends none. Model names are always explicit, never <code>auto</code>.</dd>
+  </dl>
+</div>
+<div class="sponsor prism">
+  <div class="sp-head"><span class="sp-name">PRISM by Block Convey</span><span class="sp-role">observability · grounding · scoring</span></div>
+  <dl>
+    <dt>1 · Guardrail</dt><dd>Our local check scans the OCR text for instructions aimed at the software <b>before any model sees it</b>, and blocks the case. The text and verdict are traced to a separate PRISM agent (<code>sigcheck-input-guardrail</code>), where PRISM's guardrail rules flag it. PRISM records and flags; our check enforces.</dd>
+    <dt>2 · Traces</dt><dd>Every stage (OCR, guardrail, Nicrron read, checks, decision) is a trace with stable agent names and the case ID as session</dd>
+    <dt>3 · Knowledge base</dt><dd>The drug catalogue and intake policy are uploaded with <code>kb_upload</code>. Each catalogue claim is grounded live with <code>kb_search</code> plus an exact-row match, and the citation is shown to the pharmacist.</dd>
+    <dt>4 · Evaluator</dt><dd>Each case is submitted as a trajectory. PRISM scores it automatically on safety, correctness, efficiency, robustness and reasoning (latest: safety 100, correctness 96), shown in technical details.</dd>
+    <dt>Privacy</dt><dd>PRISM gets field statuses and issue codes only. Names, dates, NPI/DEA, phones and emails are masked first, and a test fails if any identifier gets through.</dd>
+    <dt>Found</dt><dd>PRISM's prompt-injection rule did not flag our planted fax injections. Our local check caught every one, which is why the block never depends on a cloud service.</dd>
+  </dl>
+</div>
 </div>
 
 <h2>Design decisions</h2>
@@ -91,11 +122,11 @@ th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;verti
 <table>
 <tr><th>Real in the prototype</th><th>Modelled or limited</th></tr>
 <tr><td>Apple Vision OCR with source boxes</td><td>Synthetic prescriptions (plus one public sample photo, kept local)</td></tr>
-<tr><td>Live Nicrron extraction (Claude Sonnet 5)</td><td>Curated demonstration catalogue (~40 rows)</td></tr>
+<tr><td>Live Nicrron extraction (Claude Sonnet 5); independent verifier with GPT-5.5 + Mistral Large 3</td><td>Curated demonstration catalogue (~40 rows)</td></tr>
 <tr><td>Guardrail before extraction; deterministic safety checks</td><td>PRISM guardrail and evaluator rules flag; they don't block</td></tr>
 <tr><td>PRISM traces, KB grounding, evaluator submissions (redacted)</td><td>Demo reviewer identity, not production authentication</td></tr>
-<tr><td>Revisioned workflow, attested approval, JSON export, audit trail</td><td>Idempotency stored in the running server only</td></tr>
-<tr><td>53 automated tests incl. "no identifiers reach PRISM"</td><td>Not a dispensing or clinical decision system</td></tr>
+<tr><td>Revisioned workflow, attested approval, PDF and JSON export, audit trail</td><td>Idempotency stored in the running server only</td></tr>
+<tr><td>86 automated tests incl. "no identifiers reach PRISM"</td><td>Not a dispensing or clinical decision system</td></tr>
 </table>
 </main>
 </body>
