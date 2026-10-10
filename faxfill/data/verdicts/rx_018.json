@@ -1,0 +1,460 @@
+{
+ "fax_id": "rx_018",
+ "verifier": "verifier-v1",
+ "readers": {
+  "A": "openai/gpt-5.5",
+  "B": "mistral/mistral-large-3",
+  "C": "regex over tesseract"
+ },
+ "lookup": "local files (faxfill/ref)",
+ "pages_received": 1,
+ "pages_declared_in_header": 1,
+ "order_status": "NEEDS_PHARMACIST",
+ "order_flags": [],
+ "danger_score": 5,
+ "danger_breakdown": {
+  "other_flag": 5
+ },
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "rx_018.png",
+   "status": "NEEDS_PHARMACIST",
+   "flagged_fields": [
+    "strength"
+   ],
+   "fields": {
+    "patient_name": {
+     "value": "Winston Achebe",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      351,
+      438,
+      627,
+      470
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "patient_in_profiles",
+       "evidence": "patient profiles (patients.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Winston Achebe",
+      "B": "Winston Achebe",
+      "C": "Winston Achebe"
+     }
+    },
+    "patient_dob": {
+     "value": "05/03/1968",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      1172,
+      428,
+      1361,
+      460
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "dob_matches_profile",
+       "evidence": "patient profiles (patients.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "05/03/1968",
+      "B": "05/03/1968",
+      "C": "05/03/1968"
+     }
+    },
+    "drug_name": {
+     "value": "Lisinopril",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      356,
+      696,
+      526,
+      751
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "drug_in_rxnorm",
+       "evidence": "rxnorm (drugs.json)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Lisinopril",
+      "B": "Lisinopril",
+      "C": "Lisinopril"
+     }
+    },
+    "strength": {
+     "value": null,
+     "status": "needs_pharmacist",
+     "codes": [
+      "READER_ABSTAINED"
+     ],
+     "reasons": [
+      "Reader A could not read the strength; the other reader gave '10 mg'. A value one reader could not see is not taken."
+     ],
+     "alternatives": [
+      "10 mg"
+     ],
+     "evidence_box": null,
+     "evidence_note": "location not found",
+     "checks_passed": [],
+     "checks_failed": [
+      {
+       "check": "READER_ABSTAINED",
+       "evidence": null
+      }
+     ],
+     "notes": [],
+     "reads": {
+      "A": null,
+      "B": "10 mg",
+      "C": null
+     }
+    },
+    "dosage_form": {
+     "value": "tablet",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      544,
+      690,
+      794,
+      762
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "form_in_rxnorm",
+       "evidence": "rxnorm"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "tablet",
+      "B": "tablet",
+      "C": "tablet"
+     }
+    },
+    "directions": {
+     "value": "Take 1 tablet by mouth once daily for 30 days",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      357,
+      830,
+      1125,
+      873
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "directions_parsed",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Take 1 tablet by mouth once daily for 30 days",
+      "B": "Take 1 tablet by mouth once daily for 30 days",
+      "C": "Take 1 tablet by mouth once daily for 30 days"
+     }
+    },
+    "quantity": {
+     "value": "#30 (thirty) tablets",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      357,
+      926,
+      662,
+      965
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "numeral_matches_words",
+       "evidence": null
+      },
+      {
+       "check": "quantity_matches_duration",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "#30 (thirty) tablets",
+      "B": "30",
+      "C": "#30 (thirty) tablets"
+     }
+    },
+    "refills": {
+     "value": "1",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      456,
+      839,
+      467,
+      867
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "refills_whole_number",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "1",
+      "B": "1",
+      "C": "1"
+     }
+    },
+    "prescriber_name": {
+     "value": "Hannah Lindqvist, MD",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      110,
+      185,
+      506,
+      226
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "prescriber_matches_npi",
+       "evidence": "prescriber directory (prescribers.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Hannah Lindqvist, MD",
+      "B": "Hannah Lindqvist, MD",
+      "C": "Hannah Lindqvist, MD"
+     }
+    },
+    "prescriber_npi": {
+     "value": "1483926451",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      199,
+      331,
+      399,
+      363
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "npi_luhn",
+       "evidence": null
+      },
+      {
+       "check": "npi_in_directory",
+       "evidence": "prescriber directory (prescribers.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "1483926451",
+      "B": "1483926451",
+      "C": "1483926451"
+     }
+    },
+    "prescriber_dea": {
+     "value": null,
+     "status": "not_present",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": null,
+     "evidence_note": "location not found",
+     "checks_passed": [],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": null,
+      "B": null,
+      "C": null
+     }
+    },
+    "date_written": {
+     "value": "10/08/2026",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      356,
+      587,
+      543,
+      618
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "date_valid_not_future",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "10/08/2026",
+      "B": "10/08/2026",
+      "C": "10/08/2026"
+     }
+    },
+    "substitution": {
+     "value": "permitted",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      324,
+      1115,
+      443,
+      1145
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "substitution_known_value",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "permitted",
+      "B": "permitted",
+      "C": null
+     }
+    },
+    "notes": {
+     "value": null,
+     "status": "not_present",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": null,
+     "evidence_note": "location not found",
+     "checks_passed": [],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": null,
+      "B": null,
+      "C": null
+     }
+    }
+   },
+   "page_flags": [],
+   "c_only_fields": [],
+   "drug_ref": "lisinopril"
+  }
+ ],
+ "clarification_questions": [
+  {
+   "page": 1,
+   "field": "strength",
+   "code": "READER_ABSTAINED",
+   "question": "Please confirm the strength for lisinopril: part of the fax is not legible."
+  }
+ ],
+ "thresholds": {
+  "speck_max_area": 4,
+  "region_pad": 30,
+  "baseline_text_pad": 10,
+  "noise_ratio": 3.0,
+  "noise_min_density": 0.01,
+  "streak_row_ink": 0.8,
+  "edge_margin": 5,
+  "prescriber_block_top": 0.2,
+  "header_votes": 2,
+  "lasa_min_ocr_conf": 60
+ }
+}

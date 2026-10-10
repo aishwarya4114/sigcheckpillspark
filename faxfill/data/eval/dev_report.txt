@@ -1,0 +1,95 @@
+DEV-SET EVALUATION  (31 faxes, 32 prescriptions; synthetic; thresholds tuned on this set, so these are NOT the final scorecard numbers)
+
+1. FIELD ACCURACY (value the verifier produced vs answer key, over 13 scored fields)
+   values given: 389  correct: 387 (99.5%)  wrong: 2  left empty (abstained): 7  both empty: 20
+     patient_name     correct 31  wrong  0  abstained  0
+     patient_dob      correct 31  wrong  0  abstained  0
+     drug_name        correct 31  wrong  1  abstained  0
+     strength         correct 29  wrong  0  abstained  3
+     dosage_form      correct 32  wrong  0  abstained  0
+     directions       correct 32  wrong  0  abstained  0
+     quantity         correct 32  wrong  0  abstained  0
+     refills          correct 32  wrong  0  abstained  0
+     prescriber_name  correct 31  wrong  1  abstained  0
+     prescriber_npi   correct 30  wrong  0  abstained  2
+     prescriber_dea   correct 14  wrong  0  abstained  0
+     date_written     correct 32  wrong  0  abstained  0
+     substitution     correct 30  wrong  0  abstained  2
+
+2. VERIFIED PRECISION (when we said Verified, how often the value was right)
+   358/358 = 100.0%
+   Verified but wrong: none
+   Should have abstained (value under a smudge): none
+
+3. TRAP CATCH RATE  30/32 expected flags caught (30 for the right reason, 0 by a different check, 2 missed)
+   caught (right reason)  rx_006 p1 strength         trailing_zero                caught by ['TRAILING_ZERO']
+   caught (right reason)  rx_007 p1 strength         trailing_zero                caught by ['TRAILING_ZERO']
+   MISSED                 rx_008 p1 drug_name        lasa_confirm                 caught by -   (expected ['LOOKALIKE_RISK'])
+   MISSED                 rx_009 p1 drug_name        lasa_confirm                 caught by -   (expected ['LOOKALIKE_RISK'])
+   caught (right reason)  rx_010 p1 prescriber_npi   npi_checksum                 caught by ['NPI_INVALID']
+   caught (right reason)  rx_011 p1 prescriber_npi   npi_checksum                 caught by ['NPI_INVALID']
+   caught (right reason)  rx_012 p1 prescriber_name  prescriber_not_in_directory  caught by ['PRESCRIBER_UNKNOWN']
+   caught (right reason)  rx_013 p1 prescriber_name  prescriber_not_in_directory  caught by ['PRESCRIBER_UNKNOWN']
+   caught (right reason)  rx_014 p1 drug_name        allergy_conflict             caught by ['ALLERGY_CONFLICT']
+   caught (right reason)  rx_015 p1 drug_name        allergy_conflict             caught by ['ALLERGY_CONFLICT']
+   caught (right reason)  rx_016 p1 quantity         quantity_vs_duration         caught by ['QTY_DURATION_MISMATCH']
+   caught (right reason)  rx_017 p1 quantity         quantity_vs_duration         caught by ['QTY_DURATION_MISMATCH']
+   caught (right reason)  rx_018 p1 strength         unreadable                   caught by ['READER_ABSTAINED']
+   caught (right reason)  rx_019 p1 strength         unreadable                   caught by ['UNREADABLE']
+   caught (right reason)  rx_020 p1 _order           prompt_injection             caught by ['INJECTION']
+   caught (right reason)  rx_021 p1 _order           prompt_injection             caught by ['INJECTION']
+   caught (right reason)  rx_022 p1 directions       weekly_drug_daily            caught by ['METHOTREXATE_DAILY']
+   caught (right reason)  rx_023 p1 strength         unit_mismatch                caught by ['UNIT_MISMATCH']
+   caught (right reason)  rx_024 p1 prescriber_dea   dea_checksum                 caught by ['DEA_INVALID']
+   caught (right reason)  rx_025 p1 directions       exceeds_max_daily            caught by ['DOSE_ABOVE_MAX']
+   caught (right reason)  rx_026 p1 drug_name        noise_near_critical          caught by ['NOISE_NEAR_CRITICAL']
+   caught (right reason)  rx_026 p1 strength         noise_near_critical          caught by ['NOISE_NEAR_CRITICAL']
+   caught (right reason)  rx_027 p1 strength         ambiguous_digit              caught by ['AMBIGUOUS_DIGIT', 'NOISE_NEAR_CRITICAL', 'READER_DISAGREEMENT']
+   caught (right reason)  rx_027 p1 strength         noise_near_critical          caught by ['AMBIGUOUS_DIGIT', 'NOISE_NEAR_CRITICAL', 'READER_DISAGREEMENT']
+   caught (right reason)  rx_027 p1 drug_name        noise_near_critical          caught by ['NOISE_NEAR_CRITICAL']
+   caught (right reason)  rx_028 p1 drug_name        truncated_edge               caught by ['TRUNCATED_EDGE']
+   caught (right reason)  rx_028 p1 prescriber_name  truncated_edge               caught by ['PRESCRIBER_UNKNOWN', 'TRUNCATED_EDGE']
+   caught (right reason)  rx_028 p1 prescriber_npi   truncated_edge               caught by ['READER_ABSTAINED', 'TRUNCATED_EDGE']
+   caught (right reason)  rx_029 p1 _order           page_count_mismatch          caught by ['PAGE_COUNT_MISMATCH']
+   caught (right reason)  rx_030 p2 patient_name     missing_patient_id           caught by ['MISSING_PATIENT_ID']
+   caught (right reason)  rx_030 p2 patient_dob      missing_patient_id           caught by ['MISSING_PATIENT_ID']
+   caught (right reason)  rx_031 p1 directions       conflicting_directions       caught by ['CONFLICTING_DIRECTIONS']
+
+4. ORDER STATUS (expected -> verifier)
+   29/31 match
+     rx_004: expected READY, got NEEDS_PHARMACIST
+     rx_005: expected READY, got NEEDS_PHARMACIST
+
+5. FALSE ALARMS ON CLEAN FAXES (5 clean faxes): 2 flag(s)
+     - rx_004 p1 directions: ['OCR_DISAGREEMENT'] (value 'Take 1 tablet by mouth once daily for 90 days', truth 'Take 1 tablet by mouth once daily for 90 days', value right)
+     - rx_005 order: PAGE_COUNT_UNKNOWN
+   Flags on trap faxes outside the planted trap: 13
+     - rx_008 p1 directions: ['OCR_DISAGREEMENT'] (value right)
+     - rx_008 p1 refills: ['OCR_DISAGREEMENT'] (value right)
+     - rx_009 p1 quantity: ['OCR_DISAGREEMENT'] (value right)
+     - rx_010 p1 refills: ['OCR_DISAGREEMENT'] (value right)
+     - rx_011 p1 drug_name: ['OCR_DISAGREEMENT'] (value right)
+     - rx_011 p1 refills: ['OCR_DISAGREEMENT'] (value right)
+     - rx_017 p1 directions: ['OCR_DISAGREEMENT'] (value right)
+     - rx_019 p1 drug_name: ['OCR_DISAGREEMENT'] (value right)
+     - rx_019 p1 substitution: ['READER_DISAGREEMENT'] (value wrong -> justified)
+     - rx_020 p1 refills: ['OCR_DISAGREEMENT'] (value right)
+     - rx_026 p1 substitution: ['READER_DISAGREEMENT'] (value wrong -> justified)
+     - rx_027 p1 refills: ['OCR_DISAGREEMENT'] (value right)
+     - rx_029 p1 prescriber_npi: ['READER_DISAGREEMENT'] (value wrong -> justified)
+
+6. NEEDS-PHARMACIST FLAGS FROM READER C (REGEX) ALONE: 11 (1 on clean faxes, 10 on trap faxes; regex was right in 0, wrong in 11)
+     - rx_004 p1 directions: models 'Take 1 tablet by mouth once daily for 90 days', regex 'Take 2 tablet by mouth once daily for 90 days', truth 'Take 1 tablet by mouth once daily for 90 days' -> regex was wrong
+     - rx_008 p1 directions: models 'Take 1 tablet by mouth three times daily for 10 days', regex 'Take 1 tablet by mouth three tlmes aaily for 10 da ys', truth 'Take 1 tablet by mouth three times daily for 10 days' -> regex was wrong
+     - rx_008 p1 refills: models '0', regex 'O', truth '0' -> regex was wrong
+     - rx_009 p1 quantity: models '#60 (sixty) tablets', regex '#0 (sixty) tablets .', truth '#60 (sixty) tablets' -> regex was wrong
+     - rx_010 p1 refills: models '1', regex '4', truth '1' -> regex was wrong
+     - rx_011 p1 drug_name: models 'Amlodipine', regex 'Amiodipine', truth 'amlodipine' -> regex was wrong
+     - rx_011 p1 refills: models '1', regex '4', truth '1' -> regex was wrong
+     - rx_017 p1 directions: models '1 cap PO TID x 10 days', regex '4 cap PO TID x 10 days', truth '1 cap PO TID x 10 days' -> regex was wrong
+     - rx_019 p1 drug_name: models 'Glipizide', regex 'Glipizide Pg', truth 'glipizide' -> regex was wrong
+     - rx_020 p1 refills: models '1', regex '4', truth '1' -> regex was wrong
+     - rx_027 p1 refills: models '1', regex '4', truth '1' -> regex was wrong
+
+7. QUEUE ORDER (danger score, highest first)
+   rx_020(10005), rx_029(10005), rx_021(10000), rx_014(1000), rx_015(1000), rx_024(420), rx_027(135), rx_006(125), rx_022(125), rx_011(15), rx_019(15), rx_026(15), ...

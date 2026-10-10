@@ -1,0 +1,470 @@
+{
+ "fax_id": "rx_001",
+ "verifier": "verifier-v1",
+ "readers": {
+  "A": "openai/gpt-5.5",
+  "B": "mistral/mistral-large-3",
+  "C": "regex over tesseract"
+ },
+ "lookup": "local files (faxfill/ref)",
+ "pages_received": 1,
+ "pages_declared_in_header": 1,
+ "order_status": "READY",
+ "order_flags": [],
+ "danger_score": 0,
+ "danger_breakdown": {},
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "rx_001.png",
+   "status": "READY",
+   "flagged_fields": [],
+   "fields": {
+    "patient_name": {
+     "value": "Marcus Bell",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      368,
+      430,
+      563,
+      461
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "patient_in_profiles",
+       "evidence": "patient profiles (patients.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Marcus Bell",
+      "B": "Marcus Bell",
+      "C": "Marcus Bell"
+     }
+    },
+    "patient_dob": {
+     "value": "03/14/1958",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      1187,
+      438,
+      1375,
+      469
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "dob_matches_profile",
+       "evidence": "patient profiles (patients.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "03/14/1958",
+      "B": "03/14/1958",
+      "C": "03/14/1958"
+     }
+    },
+    "drug_name": {
+     "value": "Atorvastatin",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      363,
+      698,
+      585,
+      730
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "drug_in_rxnorm",
+       "evidence": "rxnorm (drugs.json)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Atorvastatin",
+      "B": "Atorvastatin",
+      "C": "Atorvastatin"
+     }
+    },
+    "strength": {
+     "value": "40 mg",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      613,
+      701,
+      723,
+      739
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "strength_in_rxnorm",
+       "evidence": "rxnorm"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "40 mg",
+      "B": "40 mg",
+      "C": "40 mg"
+     }
+    },
+    "dosage_form": {
+     "value": "tablet",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      751,
+      701,
+      854,
+      733
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "form_in_rxnorm",
+       "evidence": "rxnorm"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "tablet",
+      "B": "tablet",
+      "C": "tablet"
+     }
+    },
+    "directions": {
+     "value": "Take 1 tablet by mouth at bedtime for 30 days",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      362,
+      828,
+      1139,
+      873
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "directions_parsed",
+       "evidence": null
+      },
+      {
+       "check": "within_usual_max (manual, unverified)",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Take 1 tablet by mouth at bedtime for 30 days",
+      "B": "Take 1 tablet by mouth at bedtime for 30 days",
+      "C": "Take 1 tablet by mouth at bedtime for 30 days"
+     }
+    },
+    "quantity": {
+     "value": "#30 (thirty) tablets",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      361,
+      917,
+      666,
+      957
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "numeral_matches_words",
+       "evidence": null
+      },
+      {
+       "check": "quantity_matches_duration",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "#30 (thirty) tablets",
+      "B": "#30 (thirty) tablets",
+      "C": "#30 (thirty) tablets"
+     }
+    },
+    "refills": {
+     "value": "1",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      461,
+      829,
+      473,
+      858
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "refills_whole_number",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "1",
+      "B": "1",
+      "C": "1"
+     }
+    },
+    "prescriber_name": {
+     "value": "Elena Marsh, MD",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      131,
+      174,
+      434,
+      210
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "prescriber_matches_npi",
+       "evidence": "prescriber directory (prescribers.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Elena Marsh, MD",
+      "B": "Elena Marsh, MD",
+      "C": "Elena Marsh, MD"
+     }
+    },
+    "prescriber_npi": {
+     "value": "1530456551",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      216,
+      319,
+      417,
+      350
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "npi_luhn",
+       "evidence": null
+      },
+      {
+       "check": "npi_in_directory",
+       "evidence": "prescriber directory (prescribers.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "1530456551",
+      "B": "1530456551",
+      "C": "1530456551"
+     }
+    },
+    "prescriber_dea": {
+     "value": "FM2267094",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      724,
+      323,
+      924,
+      355
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "dea_checksum",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "FM2267094",
+      "B": "FM2267094",
+      "C": "FM2267094"
+     }
+    },
+    "date_written": {
+     "value": "10/05/2026",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      369,
+      578,
+      555,
+      610
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "date_valid_not_future",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "10/05/2026",
+      "B": "10/05/2026",
+      "C": "10/05/2026"
+     }
+    },
+    "substitution": {
+     "value": "permitted",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      323,
+      1104,
+      441,
+      1134
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "substitution_known_value",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "permitted",
+      "B": "permitted",
+      "C": null
+     }
+    },
+    "notes": {
+     "value": null,
+     "status": "not_present",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": null,
+     "evidence_note": "location not found",
+     "checks_passed": [],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": null,
+      "B": null,
+      "C": null
+     }
+    }
+   },
+   "page_flags": [],
+   "c_only_fields": [],
+   "drug_ref": "atorvastatin"
+  }
+ ],
+ "clarification_questions": [],
+ "thresholds": {
+  "speck_max_area": 4,
+  "region_pad": 30,
+  "baseline_text_pad": 10,
+  "noise_ratio": 3.0,
+  "noise_min_density": 0.01,
+  "streak_row_ink": 0.8,
+  "edge_margin": 5,
+  "prescriber_block_top": 0.2,
+  "header_votes": 2,
+  "lasa_min_ocr_conf": 60
+ }
+}

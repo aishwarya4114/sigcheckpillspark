@@ -76,3 +76,26 @@ The 5 clean faxes (rx_001–rx_005) and the other traps must **not** trigger the
 ### Test contract
 
 `python -m faxfill.check_answers` verifies the answer keys: pages exist, each fax carries only its declared trap, a missing page is expected to block, and the ambiguous misread is a real strength. The verifier's own tests must show, for each check, that it fires on its test fax and does not fire on rx_001–rx_004.
+
+---
+
+## Thresholds and decisions chosen on the development set (rx_001–rx_031)
+
+These were chosen while looking at the 31 development faxes, so the dev-set numbers in `data/eval/dev_report.txt` are **optimistic**. Final scorecard numbers must come from a held-out set generated later with a new seed (not created yet).
+
+| Setting | Value | Where | Why / what the dev set showed |
+|---|---|---|---|
+| Speck size | components < 4 px | `faxchecks.THRESHOLDS["speck_max_area"]` | Fax speckle is 1–3 px; strokes are larger |
+| Noise region padding | 30 px around the field box | `region_pad` | Spec value |
+| Baseline text mask | 10 px around every OCR word | `baseline_text_pad` | Keeps glyph edges out of the baseline |
+| Noise trigger | density ≥ 3× baseline **and** ≥ 0.01, **or** a streak row (≥ 80% ink) crossing the region | `noise_ratio`, `noise_min_density`, `streak_row_ink` | Fired on rx_026 (0.021 vs baseline 0.004, 5.6×) and rx_027 (0.016 vs 0.003, 5.1×); no clean fax fired |
+| Noise fallback region | the "Rx" line, or the band between the "Date" and "Sig" lines, when OCR can't find the field | `verify.fallback_region` | **Needed:** on both noise faxes Tesseract could not locate the drug line, so a box-only check would have been blinded by the very noise it measures |
+| Digit confusions for `AMBIGUOUS_DIGIT` | 5↔6, 6↔8/5, 8↔0/3/6, 3↔8, 1↔7, 4↔9, 0↔6/8 | `verify.DIGIT_CONFUSIONS` | Only alternatives that are real RxNorm strengths are listed (rx_027: 5 mg and 6 mg) |
+| Edge margin | word box within 5 px of an edge | `edge_margin` | rx_028 words start at x = 0 |
+| Prescriber block | name with credential **and** a full 10-digit number in the top 20% of page 1 | `prescriber_block_present` | OCR turns the "NPI" label into "NPE", so the label is not required; a cut-off NPI has fewer than 10 digits |
+| Page count | page x/N accepted only when **2 independent reads agree** (reader A, reader B, three Tesseract passes over the header strip, full-page OCR) | `header_votes`, `verify.page_count_consensus` | Tesseract alone read the thin header on 6/32 pages and once misread "1/1" as "1/2". Requiring two agreeing reads prevented any wrong page count on the dev set. Unconfirmed → `PAGE_COUNT_UNKNOWN` (needs pharmacist), never a pass |
+| Look-alike "unclear" signal | Tesseract confidence < 60 on the drug-name words | `verify.LASA_MIN_OCR_CONF` | **My addition** to the user's rule (closer to the partner / readers disagree / noise). It did not fire on rx_008 or rx_009 |
+| Reader C (regex) disagreement | flags only drug, strength, directions, quantity, refills | `verify.CRITICAL` | As specified. Dev set: 11 regex-only flags, the regex was wrong in all 11 (e.g. refills "1" read as "4") |
+| Model output budget | 4000 tokens | `readers.model_read_page` | gpt-5.5 once spent 900 tokens reasoning and returned nothing |
+
+**Known gap (dev set):** rx_008 (hydroxyzine) and rx_009 (clonidine) are handwritten look-alike traps, but all three readers read the name correctly and there was no noise, so under the current rule they get an informational note, not a flag. Either the rule or the answer key's expectation needs a team decision.

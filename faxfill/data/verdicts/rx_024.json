@@ -1,0 +1,487 @@
+{
+ "fax_id": "rx_024",
+ "verifier": "verifier-v1",
+ "readers": {
+  "A": "openai/gpt-5.5",
+  "B": "mistral/mistral-large-3",
+  "C": "regex over tesseract"
+ },
+ "lookup": "local files (faxfill/ref)",
+ "pages_received": 1,
+ "pages_declared_in_header": 1,
+ "order_status": "NEEDS_PHARMACIST",
+ "order_flags": [],
+ "danger_score": 420,
+ "danger_breakdown": {
+  "controlled_substance_issue": 300,
+  "high_alert_drug": 120
+ },
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "rx_024.png",
+   "status": "NEEDS_PHARMACIST",
+   "flagged_fields": [
+    "prescriber_dea"
+   ],
+   "fields": {
+    "patient_name": {
+     "value": "Marcus Bell",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      366,
+      432,
+      561,
+      462
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "patient_in_profiles",
+       "evidence": "patient profiles (patients.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Marcus Bell",
+      "B": "Marcus Bell",
+      "C": "Marcus Bell"
+     }
+    },
+    "patient_dob": {
+     "value": "03/14/1958",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      1184,
+      437,
+      1373,
+      467
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "dob_matches_profile",
+       "evidence": "patient profiles (patients.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "03/14/1958",
+      "B": "03/14/1958",
+      "C": "03/14/1958"
+     }
+    },
+    "drug_name": {
+     "value": "Oxycodone",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      363,
+      700,
+      567,
+      739
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "drug_in_rxnorm",
+       "evidence": "rxnorm (drugs.json)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Oxycodone",
+      "B": "Oxycodone",
+      "C": "Oxycodone"
+     }
+    },
+    "strength": {
+     "value": "5 mg",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      597,
+      702,
+      684,
+      738
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "strength_in_rxnorm",
+       "evidence": "rxnorm"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "5 mg",
+      "B": "5 mg",
+      "C": "5 mg"
+     }
+    },
+    "dosage_form": {
+     "value": "tablet",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      713,
+      702,
+      815,
+      732
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "form_in_rxnorm",
+       "evidence": "rxnorm"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "tablet",
+      "B": "tablet",
+      "C": "tablet"
+     }
+    },
+    "directions": {
+     "value": "Take 1 tablet by mouth three times daily for 5 days",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      361,
+      830,
+      1215,
+      872
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "directions_parsed",
+       "evidence": null
+      },
+      {
+       "check": "within_usual_max (manual, unverified)",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Take 1 tablet by mouth three times daily for 5 days",
+      "B": "Take 1 tablet by mouth three times daily for 5 days",
+      "C": "Take 1 tablet by mouth three times daily for 5 days"
+     }
+    },
+    "quantity": {
+     "value": "#15 (fifteen) tablets",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      361,
+      920,
+      688,
+      958
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "numeral_matches_words",
+       "evidence": null
+      },
+      {
+       "check": "quantity_matches_duration",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "#15 (fifteen) tablets",
+      "B": "#15 (fifteen) tablets",
+      "C": "#15 (fifteen) tablets"
+     }
+    },
+    "refills": {
+     "value": "0",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      361,
+      1010,
+      381,
+      1038
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "refills_whole_number",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "0",
+      "B": "0",
+      "C": "0"
+     }
+    },
+    "prescriber_name": {
+     "value": "Thomas Keller, MD",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      126,
+      176,
+      468,
+      212
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "prescriber_matches_npi",
+       "evidence": "prescriber directory (prescribers.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Thomas Keller, MD",
+      "B": "Thomas Keller, MD",
+      "C": "Thomas Keller, MD"
+     }
+    },
+    "prescriber_npi": {
+     "value": "1880862937",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      214,
+      321,
+      419,
+      351
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "npi_luhn",
+       "evidence": null
+      },
+      {
+       "check": "npi_in_directory",
+       "evidence": "prescriber directory (prescribers.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "1880862937",
+      "B": "1880862937",
+      "C": "1880862937"
+     }
+    },
+    "prescriber_dea": {
+     "value": "BK8549991",
+     "status": "needs_pharmacist",
+     "codes": [
+      "DEA_INVALID"
+     ],
+     "reasons": [
+      "DEA 'BK8549991' fails its check digit or registrant-initial check."
+     ],
+     "alternatives": [],
+     "evidence_box": [
+      722,
+      307,
+      911,
+      355
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [
+      {
+       "check": "DEA_INVALID",
+       "evidence": null
+      }
+     ],
+     "notes": [],
+     "reads": {
+      "A": "BK8549991",
+      "B": "BK8549991",
+      "C": "BK8549991"
+     }
+    },
+    "date_written": {
+     "value": "10/05/2026",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      366,
+      580,
+      553,
+      610
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "date_valid_not_future",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "10/05/2026",
+      "B": "10/05/2026",
+      "C": "10/05/2026"
+     }
+    },
+    "substitution": {
+     "value": "permitted",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      323,
+      1106,
+      441,
+      1136
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "substitution_known_value",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "permitted",
+      "B": "permitted",
+      "C": null
+     }
+    },
+    "notes": {
+     "value": null,
+     "status": "not_present",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": null,
+     "evidence_note": "location not found",
+     "checks_passed": [],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": null,
+      "B": null,
+      "C": null
+     }
+    }
+   },
+   "page_flags": [],
+   "c_only_fields": [],
+   "drug_ref": "oxycodone"
+  }
+ ],
+ "clarification_questions": [
+  {
+   "page": 1,
+   "field": "prescriber_dea",
+   "code": "DEA_INVALID",
+   "question": "Please confirm your DEA number: the one on the fax does not validate."
+  }
+ ],
+ "thresholds": {
+  "speck_max_area": 4,
+  "region_pad": 30,
+  "baseline_text_pad": 10,
+  "noise_ratio": 3.0,
+  "noise_min_density": 0.01,
+  "streak_row_ink": 0.8,
+  "edge_margin": 5,
+  "prescriber_block_top": 0.2,
+  "header_votes": 2,
+  "lasa_min_ocr_conf": 60
+ }
+}

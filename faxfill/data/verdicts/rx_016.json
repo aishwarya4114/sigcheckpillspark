@@ -1,0 +1,482 @@
+{
+ "fax_id": "rx_016",
+ "verifier": "verifier-v1",
+ "readers": {
+  "A": "openai/gpt-5.5",
+  "B": "mistral/mistral-large-3",
+  "C": "regex over tesseract"
+ },
+ "lookup": "local files (faxfill/ref)",
+ "pages_received": 1,
+ "pages_declared_in_header": 1,
+ "order_status": "NEEDS_PHARMACIST",
+ "order_flags": [],
+ "danger_score": 5,
+ "danger_breakdown": {
+  "other_flag": 5
+ },
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "rx_016.png",
+   "status": "NEEDS_PHARMACIST",
+   "flagged_fields": [
+    "quantity"
+   ],
+   "fields": {
+    "patient_name": {
+     "value": "Dev Malhotra",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      362,
+      434,
+      585,
+      464
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "patient_in_profiles",
+       "evidence": "patient profiles (patients.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [
+      "OCR text reads 'Dev Mathotra' (models agree on 'Dev Malhotra'); not a critical field."
+     ],
+     "reads": {
+      "A": "Dev Malhotra",
+      "B": "Dev Malhotra",
+      "C": "Dev Mathotra"
+     }
+    },
+    "patient_dob": {
+     "value": "12/05/1979",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      1183,
+      436,
+      1369,
+      465
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "dob_matches_profile",
+       "evidence": "patient profiles (patients.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "12/05/1979",
+      "B": "12/05/1979",
+      "C": "12/05/1979"
+     }
+    },
+    "drug_name": {
+     "value": "Metformin",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      363,
+      702,
+      544,
+      732
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "drug_in_rxnorm",
+       "evidence": "rxnorm (drugs.json)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [
+      "Look-alike partner(s): metronidazole. No sign of confusion on this fax."
+     ],
+     "reads": {
+      "A": "Metformin",
+      "B": "Metformin",
+      "C": "Metformin"
+     }
+    },
+    "strength": {
+     "value": "1000 mg",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      576,
+      703,
+      725,
+      740
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "strength_in_rxnorm",
+       "evidence": "rxnorm"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "1000 mg",
+      "B": "1000 mg",
+      "C": "1000 mg"
+     }
+    },
+    "dosage_form": {
+     "value": "tablet",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      753,
+      703,
+      856,
+      732
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "form_in_rxnorm",
+       "evidence": "rxnorm"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "tablet",
+      "B": "tablet",
+      "C": "tablet"
+     }
+    },
+    "directions": {
+     "value": "Take 1 tablet by mouth twice daily for 30 days",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      360,
+      832,
+      1132,
+      870
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "directions_parsed",
+       "evidence": null
+      },
+      {
+       "check": "within_usual_max (manual, unverified)",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Take 1 tablet by mouth twice daily for 30 days",
+      "B": "Take 1 tablet by mouth twice daily for 30 days",
+      "C": "Take 1 tablet by mouth twice daily for 30 days"
+     }
+    },
+    "quantity": {
+     "value": "#30 (thirty) tablets",
+     "status": "needs_pharmacist",
+     "codes": [
+      "QTY_DURATION_MISMATCH"
+     ],
+     "reasons": [
+      "Directions give 1 x 2/day x 30 days = 60, but quantity is 30."
+     ],
+     "alternatives": [],
+     "evidence_box": [
+      359,
+      922,
+      665,
+      959
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "numeral_matches_words",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [
+      {
+       "check": "QTY_DURATION_MISMATCH",
+       "evidence": null
+      }
+     ],
+     "notes": [],
+     "reads": {
+      "A": "#30 (thirty) tablets",
+      "B": "#30 (thirty) tablets",
+      "C": "#30 (thirty) tablets"
+     }
+    },
+    "refills": {
+     "value": "1",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      458,
+      833,
+      471,
+      861
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "refills_whole_number",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "1",
+      "B": "1",
+      "C": "1"
+     }
+    },
+    "prescriber_name": {
+     "value": "Priya Raman, DO",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      123,
+      180,
+      429,
+      218
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "prescriber_matches_npi",
+       "evidence": "prescriber directory (prescribers.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Priya Raman, DO",
+      "B": "Priya Raman, DO",
+      "C": "Priya Raman, DO"
+     }
+    },
+    "prescriber_npi": {
+     "value": "1564076267",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      208,
+      324,
+      414,
+      354
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "npi_luhn",
+       "evidence": null
+      },
+      {
+       "check": "npi_in_directory",
+       "evidence": "prescriber directory (prescribers.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "1564076267",
+      "B": "1564076267",
+      "C": "1564076267"
+     }
+    },
+    "prescriber_dea": {
+     "value": null,
+     "status": "not_present",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": null,
+     "evidence_note": "location not found",
+     "checks_passed": [],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": null,
+      "B": null,
+      "C": null
+     }
+    },
+    "date_written": {
+     "value": "10/06/2026",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      364,
+      582,
+      550,
+      612
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "date_valid_not_future",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "10/06/2026",
+      "B": "10/06/2026",
+      "C": "10/06/2026"
+     }
+    },
+    "substitution": {
+     "value": "permitted",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      325,
+      1108,
+      442,
+      1137
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "substitution_known_value",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "permitted",
+      "B": "permitted",
+      "C": null
+     }
+    },
+    "notes": {
+     "value": "New start.",
+     "status": "info",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      262,
+      1202,
+      390,
+      1226
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "New start.",
+      "B": "New start.",
+      "C": "New start."
+     }
+    }
+   },
+   "page_flags": [],
+   "c_only_fields": [],
+   "drug_ref": "metformin"
+  }
+ ],
+ "clarification_questions": [
+  {
+   "page": 1,
+   "field": "quantity",
+   "code": "QTY_DURATION_MISMATCH",
+   "question": "Please confirm the quantity for metformin: it does not match the directions and duration."
+  }
+ ],
+ "thresholds": {
+  "speck_max_area": 4,
+  "region_pad": 30,
+  "baseline_text_pad": 10,
+  "noise_ratio": 3.0,
+  "noise_min_density": 0.01,
+  "streak_row_ink": 0.8,
+  "edge_margin": 5,
+  "prescriber_block_top": 0.2,
+  "header_votes": 2,
+  "lasa_min_ocr_conf": 60
+ }
+}

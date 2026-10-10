@@ -20,11 +20,14 @@ ROOT = Path(__file__).parent
 READS = ROOT / "data" / "reads"
 BASE_URL = "https://api.nicrron.ai/v1"
 MODELS = {"A": "openai/gpt-5.5", "B": "mistral/mistral-large-3"}   # chosen by probe on rx_001, see README
-PROMPT_VERSION = "reader-v1"
+PROMPT_VERSION = "reader-v2"   # v2 adds fax_header_page
 
 FIELDS = ["patient_name", "patient_dob", "drug_name", "strength", "dosage_form", "directions", "quantity",
           "refills", "prescriber_name", "prescriber_npi", "prescriber_dea", "date_written", "substitution", "notes"]
+HEADER_FIELD = "fax_header_page"   # not a prescription field: used only for the page-count check
 FIELD_HELP = {
+    HEADER_FIELD: "the page indicator at the end of the fax transmit header line at the very top, verbatim "
+                  "(e.g. 'P.001/002' or 'PAGE 1/2')",
     "patient_name": "patient's full name",
     "patient_dob": "patient date of birth exactly as written",
     "drug_name": "medication name exactly as written, no correction",
@@ -43,8 +46,8 @@ FIELD_HELP = {
 SCHEMA = {
     "type": "object",
     "additionalProperties": False,
-    "required": FIELDS,
-    "properties": {f: {"type": ["string", "null"], "description": FIELD_HELP[f]} for f in FIELDS},
+    "required": FIELDS + [HEADER_FIELD],
+    "properties": {f: {"type": ["string", "null"], "description": FIELD_HELP[f]} for f in FIELDS + [HEADER_FIELD]},
 }
 SYSTEM = (
     "You transcribe faxed prescriptions for a pharmacy review queue. "
@@ -54,7 +57,7 @@ SYSTEM = (
     "complete, convert or infer anything. If a field is missing, covered, smudged or not clearly legible, return null "
     "for it. Never guess. Do not give confidence scores. Reply with one JSON object matching the schema."
 )
-USER = "Transcribe these fields from the prescription fax. JSON keys: " + ", ".join(FIELDS) + \
+USER = "Transcribe these fields from the prescription fax. JSON keys: " + ", ".join(FIELDS + [HEADER_FIELD]) + \
        ". Use null for any field that is absent or not clearly legible."
 
 
@@ -92,7 +95,7 @@ def _parse(text):
     except json.JSONDecodeError as e:
         return None, [f"invalid JSON: {e}"]
     out = {}
-    for f in FIELDS:
+    for f in FIELDS + [HEADER_FIELD]:
         v = obj.get(f)
         if f not in obj:
             errors.append(f"missing key {f}")
@@ -102,22 +105,28 @@ def _parse(text):
         if isinstance(v, str) and (not v.strip() or v.strip().lower() in ("null", "none", "n/a", "illegible", "unreadable")):
             v = None
         out[f] = v
-    extra = sorted(set(obj) - set(FIELDS))
+    extra = sorted(set(obj) - set(FIELDS) - {HEADER_FIELD})
     if extra:
         errors.append(f"unexpected keys {extra}")
     return out, errors
 
 
-def model_read(fax_id, which, refresh=False):
-    """Read with model A or B; cached in data/reads/<fax>__<model>.json."""
+def model_read_page(page_path, which, refresh=False):
+    """Read ONE page with model A or B; cached in data/reads/<page stem>__<model>.json.
+
+    Each page is read on its own so a multi-page fax yields one prescription per page and a patient
+    can never leak from one page's read into another's.
+    """
+    page_path = Path(page_path)
+    fax_id = page_path.stem
     model = MODELS[which]
     READS.mkdir(parents=True, exist_ok=True)
     cache = READS / f"{fax_id}__{_slug(model)}.json"
     if cache.exists() and not refresh:
         rec = json.load(open(cache))
-        if rec.get("prompt_version") == PROMPT_VERSION:
-            return rec
-    page_paths = ocr.pages(fax_id)
+        if rec.get("prompt_version") == PROMPT_VERSION and rec.get("status") == "ok":
+            return rec   # failed calls (e.g. a 429) are never reused: they would look like a reader abstaining
+    page_paths = [page_path]
     content = [{"type": "text", "text": USER}]
     for p in page_paths:
         b64 = base64.b64encode(p.read_bytes()).decode()
@@ -128,15 +137,24 @@ def model_read(fax_id, which, refresh=False):
     t0 = time.time()
     attempts = []
     resp = None
+    # 4000 output tokens: reasoning models spend part of the budget before writing JSON (900 was cut off once)
     for response_format in (rf, {"type": "json_object"}, None):   # fall back if the provider rejects strict schemas
         kw = {"response_format": response_format} if response_format else {}
-        try:
-            resp = client.chat.completions.create(model=model, temperature=0, messages=messages, max_tokens=900, **kw)
-            attempts.append({"response_format": (response_format or {}).get("type", "none"), "ok": True})
+        for retry in range(4):                                       # back off on rate limits / gateway errors
+            try:
+                resp = client.chat.completions.create(model=model, temperature=0, messages=messages, max_tokens=4000, **kw)
+                attempts.append({"response_format": (response_format or {}).get("type", "none"), "ok": True})
+                break
+            except Exception as e:
+                status = getattr(e, "status_code", None)
+                attempts.append({"response_format": (response_format or {}).get("type", "none"), "ok": False,
+                                 "status": status, "error": str(e)[:400]})
+                if status in (429, 502, 503) and ("429" in str(e) or status != 502 or retry < 1):
+                    time.sleep(3 * (retry + 1))
+                    continue
+                break
+        if resp is not None:
             break
-        except Exception as e:
-            attempts.append({"response_format": (response_format or {}).get("type", "none"), "ok": False,
-                             "status": getattr(e, "status_code", None), "error": str(e)[:400]})
     latency = round(time.time() - t0, 2)
     rec = {"fax_id": fax_id, "reader": which, "model": model, "prompt_version": PROMPT_VERSION, "temperature": 0,
            "created": time.strftime("%Y-%m-%dT%H:%M:%S%z"), "latency_s": latency, "attempts": attempts,
@@ -163,8 +181,13 @@ def _after(label, text, flags=re.I):
 
 
 def regex_read(fax_id, refresh_ocr=False):
-    pages_ = ocr.run(fax_id, refresh=refresh_ocr)
-    text = "\n".join(p["text"] for p in pages_)
+    """Reader C for page 1 of a fax (kept for the single-page CLI)."""
+    return regex_read_page(ocr.run(fax_id, refresh=refresh_ocr)[0], fax_id)
+
+
+def regex_read_page(ocr_page, fax_id=None):
+    pages_ = [ocr_page]
+    text = ocr_page["text"]
     f = {k: None for k in FIELDS}
     m = re.search(r"Patient\s*[:;.]?\s*(.+?)\s+DOB\s*[:;.]?\s*([0-9OIl|/\-.]{8,10})", text, re.I)
     if m:
@@ -201,5 +224,18 @@ def regex_read(fax_id, refresh_ocr=False):
             "pages": [p["image"] for p in pages_]}
 
 
+def read_pages(fax_id, refresh=False):
+    """All three readers on every received page: [{page, image, ocr, A, B, C}, ...]."""
+    out = []
+    ocr_pages = ocr.run(fax_id)
+    for n, (path, op) in enumerate(zip(ocr.pages(fax_id), ocr_pages), start=1):
+        out.append({"page": n, "image": path.name, "ocr": op,
+                    "A": model_read_page(path, "A", refresh), "B": model_read_page(path, "B", refresh),
+                    "C": regex_read_page(op, fax_id)})
+    return out
+
+
 def read_all(fax_id, refresh=False):
-    return {"A": model_read(fax_id, "A", refresh), "B": model_read(fax_id, "B", refresh), "C": regex_read(fax_id)}
+    """Page 1 only, for the side-by-side CLI."""
+    p = read_pages(fax_id, refresh)[0]
+    return {"A": p["A"], "B": p["B"], "C": p["C"]}

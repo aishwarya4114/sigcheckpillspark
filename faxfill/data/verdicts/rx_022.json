@@ -1,0 +1,469 @@
+{
+ "fax_id": "rx_022",
+ "verifier": "verifier-v1",
+ "readers": {
+  "A": "openai/gpt-5.5",
+  "B": "mistral/mistral-large-3",
+  "C": "regex over tesseract"
+ },
+ "lookup": "local files (faxfill/ref)",
+ "pages_received": 1,
+ "pages_declared_in_header": 1,
+ "order_status": "NEEDS_PHARMACIST",
+ "order_flags": [],
+ "danger_score": 125,
+ "danger_breakdown": {
+  "high_alert_drug": 120,
+  "other_flag": 5
+ },
+ "prescriptions": [
+  {
+   "page": 1,
+   "image": "rx_022.png",
+   "status": "NEEDS_PHARMACIST",
+   "flagged_fields": [
+    "directions"
+   ],
+   "fields": {
+    "patient_name": {
+     "value": "Kenji Watanabe",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      358,
+      435,
+      623,
+      475
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "patient_in_profiles",
+       "evidence": "patient profiles (patients.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Kenji Watanabe",
+      "B": "Kenji Watanabe",
+      "C": "Kenji Watanabe"
+     }
+    },
+    "patient_dob": {
+     "value": "06/21/1985",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      1177,
+      431,
+      1365,
+      463
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "dob_matches_profile",
+       "evidence": "patient profiles (patients.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "06/21/1985",
+      "B": "06/21/1985",
+      "C": "06/21/1985"
+     }
+    },
+    "drug_name": {
+     "value": "Methotrexate",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      359,
+      705,
+      593,
+      736
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "drug_in_rxnorm",
+       "evidence": "rxnorm (drugs.json)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Methotrexate",
+      "B": "Methotrexate",
+      "C": "Methotrexate"
+     }
+    },
+    "strength": {
+     "value": "2.5 mg",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      622,
+      704,
+      742,
+      741
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "strength_in_rxnorm",
+       "evidence": "rxnorm"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "2.5 mg",
+      "B": "2.5 mg",
+      "C": "2.5 mg"
+     }
+    },
+    "dosage_form": {
+     "value": "tablet",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      771,
+      703,
+      873,
+      733
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "form_in_rxnorm",
+       "evidence": "rxnorm"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "tablet",
+      "B": "tablet",
+      "C": "tablet"
+     }
+    },
+    "directions": {
+     "value": "Take 4 tablets by mouth once daily",
+     "status": "needs_pharmacist",
+     "codes": [
+      "METHOTREXATE_DAILY"
+     ],
+     "reasons": [
+      "methotrexate is dosed once WEEKLY (manual rule, unverified); 'Take 4 tablets by mouth once daily' is not weekly. Daily dosing is a known fatal error."
+     ],
+     "alternatives": [],
+     "evidence_box": [
+      358,
+      833,
+      946,
+      872
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "directions_parsed",
+       "evidence": null
+      },
+      {
+       "check": "within_usual_max (manual, unverified)",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [
+      {
+       "check": "METHOTREXATE_DAILY",
+       "evidence": null
+      }
+     ],
+     "notes": [],
+     "reads": {
+      "A": "Take 4 tablets by mouth once daily",
+      "B": "Take 4 tablets by mouth once daily",
+      "C": "Take 4 tablets by mouth once daily"
+     }
+    },
+    "quantity": {
+     "value": "#16 (sixteen) tablets",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      358,
+      924,
+      702,
+      963
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "numeral_matches_words",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "#16 (sixteen) tablets",
+      "B": "#16 (sixteen) tablets",
+      "C": "#16 (sixteen) tablets"
+     }
+    },
+    "refills": {
+     "value": "0",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      361,
+      1017,
+      380,
+      1045
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "refills_whole_number",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "0",
+      "B": "0",
+      "C": null
+     }
+    },
+    "prescriber_name": {
+     "value": "Lucia Ferraro, MD",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      116,
+      184,
+      438,
+      220
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "prescriber_matches_npi",
+       "evidence": "prescriber directory (prescribers.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "Lucia Ferraro, MD",
+      "B": "Lucia Ferraro, MD",
+      "C": "Lucia Ferraro, MD"
+     }
+    },
+    "prescriber_npi": {
+     "value": "1512883764",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      204,
+      327,
+      410,
+      358
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "npi_luhn",
+       "evidence": null
+      },
+      {
+       "check": "npi_in_directory",
+       "evidence": "prescriber directory (prescribers.csv)"
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "1512883764",
+      "B": "1512883764",
+      "C": "1512883764"
+     }
+    },
+    "prescriber_dea": {
+     "value": null,
+     "status": "not_present",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": null,
+     "evidence_note": "location not found",
+     "checks_passed": [],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": null,
+      "B": null,
+      "C": null
+     }
+    },
+    "date_written": {
+     "value": "10/07/2026",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      360,
+      584,
+      545,
+      617
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "ocr_text_agrees",
+       "evidence": null
+      },
+      {
+       "check": "date_valid_not_future",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "10/07/2026",
+      "B": "10/07/2026",
+      "C": "10/07/2026"
+     }
+    },
+    "substitution": {
+     "value": "permitted",
+     "status": "verified",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": [
+      325,
+      1112,
+      442,
+      1141
+     ],
+     "evidence_note": null,
+     "checks_passed": [
+      {
+       "check": "substitution_known_value",
+       "evidence": null
+      }
+     ],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": "permitted",
+      "B": "permitted",
+      "C": null
+     }
+    },
+    "notes": {
+     "value": null,
+     "status": "not_present",
+     "codes": [],
+     "reasons": [],
+     "alternatives": [],
+     "evidence_box": null,
+     "evidence_note": "location not found",
+     "checks_passed": [],
+     "checks_failed": [],
+     "notes": [],
+     "reads": {
+      "A": null,
+      "B": null,
+      "C": null
+     }
+    }
+   },
+   "page_flags": [],
+   "c_only_fields": [],
+   "drug_ref": "methotrexate"
+  }
+ ],
+ "clarification_questions": [
+  {
+   "page": 1,
+   "field": "directions",
+   "code": "METHOTREXATE_DAILY",
+   "question": "Please confirm the frequency for methotrexate: the directions say daily, but it is usually weekly."
+  }
+ ],
+ "thresholds": {
+  "speck_max_area": 4,
+  "region_pad": 30,
+  "baseline_text_pad": 10,
+  "noise_ratio": 3.0,
+  "noise_min_density": 0.01,
+  "streak_row_ink": 0.8,
+  "edge_margin": 5,
+  "prescriber_block_top": 0.2,
+  "header_votes": 2,
+  "lasa_min_ocr_conf": 60
+ }
+}
