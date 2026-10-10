@@ -32,11 +32,15 @@
           <span class="eyebrow">Review queue</span
           ><span id="queue-count" class="queue-count">0</span>
         </div>
-        <div class="segmented" aria-label="Filter queue">
-          <button class="active" data-filter="all" aria-pressed="true">
-            All</button
-          ><button data-filter="review" aria-pressed="false">To review</button
-          ><button data-filter="approved" aria-pressed="false">Approved</button>
+        <div class="segmented ops-filter" aria-label="Filter queue by next step">
+          <button class="active" data-filter="all" aria-pressed="true">All</button
+          ><button data-filter="new" aria-pressed="false">New</button
+          ><button data-filter="needs_verification" aria-pressed="false">Verify</button
+          ><button data-filter="needs_clarification" aria-pressed="false">Prescriber</button
+          ><button data-filter="waiting_for_prescriber" aria-pressed="false">Waiting</button
+          ><button data-filter="ready_for_approval" aria-pressed="false">Ready</button
+          ><button data-filter="approved" aria-pressed="false">Approved</button
+          ><button data-filter="blocked" aria-pressed="false">Blocked</button>
         </div>
         <div id="queue" class="queue">
           <div class="loading"><span class="spinner"></span>Loading queue</div>
@@ -49,7 +53,7 @@
           ><a class="side-link" href="/scorecard"
             ><span data-icon="chart"></span>Evaluation scorecard</a
           ><button class="side-link" id="rules-button">
-            <span data-icon="shield"></span>Rules &amp; policy</button
+            <span data-icon="shield"></span>Policy &amp; system (admin)</button
           ><button class="side-link" id="system-button">
             <span data-icon="info"></span>Connection details
           </button>
@@ -154,7 +158,7 @@
     </dialog>
     <dialog id="rules-dialog" aria-labelledby="rules-title">
       <div class="dialog-head">
-        <h2 id="rules-title">Rules &amp; policy</h2>
+        <h2 id="rules-title">Policy &amp; system · administrator</h2>
         <button class="quiet" data-close="rules-dialog" aria-label="Close rules">
           <span data-icon="close"></span>
         </button>

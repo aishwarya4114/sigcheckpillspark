@@ -18,7 +18,7 @@ from pydantic import BaseModel
 
 from sponsors import Prism, settings
 
-from . import pipeline, policy as policy_mod
+from . import pipeline, policy as policy_mod, workflow
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "docs"
@@ -62,6 +62,21 @@ def event(rec: dict, actor: str, action: str, **kw) -> None:
     rec.setdefault("events", []).append({"time": now(), "actor": actor, "action": action, **kw})
 
 
+def out(rec: dict) -> dict:
+    """Record plus its derived workflow (never stored, always recomputed)."""
+    return {**rec, "workflow": workflow.compute(rec)}
+
+
+def recheck(rec: dict) -> None:
+    """Re-run the deterministic checks on the CURRENT values (after a correction or prescriber answer)."""
+    if not rec.get("fields"):
+        return
+    raw = {k: {"value": f["value"], "source_text": f.get("source_text", ""), "conflict": f.get("conflict", False),
+               "note": f.get("note", "")} for k, f in rec["fields"].items()}
+    located = {k: (f.get("box"), f.get("ocr_score")) for k, f in rec["fields"].items()}
+    rec["fields"] = pipeline.assess_fields(raw, located, rec.get("policy") or policy_mod.current())
+
+
 def summary(rec: dict) -> dict:
     unresolved = [k for k, f in rec.get("fields", {}).items()
                   if f["status"] in ("missing", "needs_review") and not rec.get("review", {}).get(k)]
@@ -70,6 +85,8 @@ def summary(rec: dict) -> dict:
             "drug": (rec.get("fields", {}).get("drug_name") or {}).get("value"),
             "patient": (rec.get("fields", {}).get("patient_name") or {}).get("value"),
             "clarification": rec.get("clarification"),
+            "workflow_status": (wf := workflow.compute(rec))["status"], "workflow_label": wf["label"],
+            "actions": wf["actions"], "next_action": wf["next_action"], "source_kind": workflow.source_kind(rec["source"]),
             "headline": ("Blocked: text on the fax tries to instruct the software" if rec["status"] == "blocked"
                          else "Extraction failed: nothing was guessed" if rec["status"] == "processing_failed" else None)}
 
@@ -149,7 +166,7 @@ def load_sample(name: str):
 
 @app.get("/api/documents/{doc_id}")
 def get_doc(doc_id: str):
-    return load(doc_id)
+    return out(load(doc_id))
 
 
 @app.get("/api/documents/{doc_id}/image")
@@ -182,6 +199,7 @@ def review_field(doc_id: str, field: str, body: FieldReview):
                 raise HTTPException(400, "A correction needs a reason (what on the fax or which clarification supports it).")
             event(rec, body.reviewer, "edited", field=field, before=f["value"], after=body.value, reason=body.reason)
             f["value"] = body.value
+            recheck(rec)
         elif body.action == "confirm":
             if f["value"] is None:
                 raise HTTPException(400, "Nothing to confirm: the field is empty. Edit it from evidence or request clarification.")
@@ -195,7 +213,7 @@ def review_field(doc_id: str, field: str, body: FieldReview):
             event(rec, "system", "approval invalidated", reason="field changed after approval")
         rec["revision"] += 1
         save(rec)
-        return rec
+        return out(rec)
 
 
 class Clarify(BaseModel):
@@ -223,7 +241,7 @@ def clarify(doc_id: str, body: Clarify):
         rec["revision"] += 1
         event(rec, body.reviewer, f"clarification requested ({body.kind})", fields=body.fields, message=draft)
         save(rec)
-        return rec
+        return out(rec)
 
 
 @app.post("/api/documents/{doc_id}/rescan")
@@ -245,13 +263,18 @@ async def rescan(doc_id: str, file: UploadFile = File(...), source: str = Form("
         (d / name).write_bytes(data)
         kept = {k: v for k, v in old.get("review", {}).items()
                 if new["fields"].get(k, {}).get("value") == old["fields"].get(k, {}).get("value")}
+        changed = sorted(k for k in set(new.get("fields", {})) | set(old.get("fields", {}))
+                         if new.get("fields", {}).get(k, {}).get("value") != old.get("fields", {}).get(k, {}).get("value"))
+        new["changed_fields"] = changed
+        new["resolutions"] = {k: v for k, v in old.get("resolutions", {}).items() if k.split(":")[0] not in changed}
+        new["opened_at"] = old.get("opened_at")
         new.update({"image": name, "revision": old["revision"] + 1, "review": kept, "events": old.get("events", []),
                     "history": old.get("history", []) + [{"revision": old["revision"], "image": old["image"],
                                                           "fields": old["fields"], "replaced_at": now()}],
                     "received_at": old["received_at"]})
         if old.get("clarification"):
             new["clarification"] = {**old["clarification"], "open": False, "answered_at": now()}
-        event(new, source, "clearer scan attached", revision=new["revision"], reviews_kept=list(kept))
+        event(new, source, "updated document attached", revision=new["revision"], reviews_kept=list(kept), changed_fields=changed)
         save(new)
         if idempotency_key:
             rescan_idempotency[(doc_id, idempotency_key)] = new["id"]
@@ -278,13 +301,18 @@ def approve(doc_id: str, body: Approve, x_role: str = Header("pharmacist")):
         missing = [k for k, f in rec["fields"].items() if f["required"] and (not str(f["value"] or "").strip() or not rec.get("review", {}).get(k))]
         if missing:
             raise HTTPException(409, {"error": "Every required field must be reviewed and have a value.", "fields": missing})
-        rec["approved"] = {"by": body.reviewer, "at": now(), "revision": rec["revision"]}
+        open_issues = [i for i in workflow.compute(rec)["issues"] if i["state"] != "resolved"]
+        if open_issues:
+            raise HTTPException(409, {"error": "Resolve every open issue first (prescriber clarifications can't be cleared by confirming the fax).",
+                                      "fields": sorted({i["field"] or "document" for i in open_issues})})
+        rec["approved"] = {"by": body.reviewer, "at": now(), "revision": rec["revision"],
+                           "attestation": "I reviewed every required field against the source and resolved all open issues."}
         rec["status"] = "approved"
         if rec.get("clarification"):
             rec["clarification"]["open"] = False
         event(rec, body.reviewer, "approved draft", revision=rec["revision"])
         save(rec)
-        return rec
+        return out(rec)
 
 
 @app.get("/api/documents/{doc_id}/export")
@@ -440,4 +468,89 @@ def rerun_checks(doc_id: str, body: Rerun):
               confirmations_cleared=cleared, approval_invalidated=had_approval, revision=rec["revision"],
               policy_saved_at=snap["saved_at"])
         save(rec)
-        return {"message": msg, "before": before, "after": after, "document": rec}
+        return {"message": msg, "before": before, "after": after, "document": out(rec)}
+
+
+class Note(BaseModel):
+    note: str = ""
+    value: Optional[str] = None
+    reviewer: str = "pharmacist"
+    revision: int
+
+
+@app.post("/api/documents/{doc_id}/open")
+def open_case(doc_id: str):
+    with lock:
+        rec = load(doc_id)
+        if not rec.get("opened_at"):
+            rec["opened_at"] = now()
+            event(rec, "pharmacist", "opened case")
+            save(rec)
+        return out(rec)
+
+
+def _issue(rec: dict, key: str) -> dict:
+    for i in workflow.issues(rec):
+        if i["key"] == key:
+            return i
+    raise HTTPException(404, "No such open issue on the current revision.")
+
+
+@app.post("/api/documents/{doc_id}/issues/{key}/contacted")
+def mark_contacted(doc_id: str, key: str, body: Note):
+    """Prescriber contacted: the case waits for their answer. Nothing is sent automatically."""
+    with lock:
+        rec = load(doc_id)
+        if body.revision != rec["revision"]:
+            raise HTTPException(409, f"Document changed (now revision {rec['revision']}). Reload first.")
+        i = _issue(rec, key)
+        if i["category"] != "prescriber_clarification":
+            raise HTTPException(400, "Only prescriber clarifications are waited on.")
+        rec.setdefault("resolutions", {})[key] = {"state": "waiting", "by": body.reviewer, "at": now(),
+                                                   "note": body.note or "Prescriber contacted"}
+        event(rec, body.reviewer, "prescriber contacted", field=i["field"], reason=f"{i['code']}: {body.note}".strip(": "))
+        rec["revision"] += 1
+        save(rec)
+        return out(rec)
+
+
+@app.post("/api/documents/{doc_id}/issues/{key}/resolve")
+def resolve_clarification(doc_id: str, key: str, body: Note):
+    """Record the prescriber's answer. A note is required; a corrected value is optional and re-checked."""
+    with lock:
+        rec = load(doc_id)
+        if body.revision != rec["revision"]:
+            raise HTTPException(409, f"Document changed (now revision {rec['revision']}). Reload first.")
+        i = _issue(rec, key)
+        if i["category"] != "prescriber_clarification":
+            raise HTTPException(400, "Transcription issues are resolved by confirming or correcting the field.")
+        if not body.note.strip():
+            raise HTTPException(400, "Record what the prescriber said, who, and how (for example: 'Dr Patel by phone 2:31 PM: 5 mg').")
+        field = i["field"]
+        if body.value is not None and field:
+            before = rec["fields"][field]["value"]
+            rec["fields"][field]["value"] = body.value.strip() or None
+            recheck(rec)
+            rec.setdefault("review", {})[field] = {"action": "edit", "by": body.reviewer, "at": now(), "reason": body.note}
+            event(rec, body.reviewer, "edited", field=field, before=before, after=body.value, reason=f"Prescriber: {body.note}")
+        rec.setdefault("resolutions", {})[key] = {"state": "resolved", "by": body.reviewer, "at": now(), "note": body.note}
+        # an answer can resolve the same field's other clarification issues only if they no longer fail
+        event(rec, body.reviewer, "prescriber clarification recorded", field=field, reason=f"{i['code']}: {body.note}")
+        rec["approved"] = None
+        if rec["status"] == "approved":
+            rec["status"] = "needs_review"
+        rec["revision"] += 1
+        save(rec)
+        return out(rec)
+
+
+@app.post("/api/documents/{doc_id}/quarantine")
+def quarantine_doc(doc_id: str):
+    with lock:
+        rec = load(doc_id)
+        if rec["status"] != "blocked":
+            raise HTTPException(409, "Only blocked documents are quarantined.")
+        rec["quarantined"] = True
+        event(rec, "pharmacist", "document quarantined", reason="Instructions aimed at the software; kept for manual review.")
+        save(rec)
+        return out(rec)

@@ -23,6 +23,8 @@ const base = {
   events: [],
   sponsors: {},
   sha256: "abc",
+  // the server derives readiness; this fake mirrors it
+  workflow: { status: "needs_verification", label: "Needs verification", next_action: "Confirm 1 required field against the fax.", issues: [], counts: { required: 1, reviewed: 0 } },
 };
 function setup(page, script, fetcher) {
   const dom = new JSDOM(fs.readFileSync("app/static/" + page, "utf8"), {
@@ -59,11 +61,13 @@ test("review fields preserve typing, escape extracted values and unlock only aft
     if (url.includes("/fields/")) {
       doc.review.patient_name = { action: "confirm", by: "pharmacist" };
       doc.revision++;
+      doc.workflow = { status: "ready_for_approval", label: "Ready to approve", next_action: "Approve the draft order.", issues: [], counts: { required: 1, reviewed: 1 } };
       return response(doc);
     }
     if (url.endsWith("/approve")) {
       doc.status = "approved";
-      doc.approved = { revision: doc.revision };
+      doc.approved = { revision: doc.revision, by: "pharmacist", at: new Date().toISOString() };
+      doc.workflow = { status: "approved", label: "Approved", next_action: "Export the draft.", issues: [], counts: { required: 1, reviewed: 1 } };
       return response(doc);
     }
     return response(doc);

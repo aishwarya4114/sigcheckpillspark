@@ -41,27 +41,23 @@ let cur = null,
   uploadKey = null,
   failedUpload = null;
 const state = (k, f) => (cur.review?.[k] ? "reviewed" : f.status);
+const OPS = { new: ["New", ""], needs_verification: ["Needs verification", "amber"], needs_clarification: ["Prescriber clarification required", "amber"],
+  waiting_for_prescriber: ["Waiting for prescriber", "blue"], ready_for_approval: ["Ready to approve", "green"], approved: ["Approved draft", "green"], blocked: ["Blocked", "red"] };
+const ago = (t) => { const m = Math.max(0, Math.round((Date.now() - new Date(t)) / 60000)); return m < 1 ? "just now" : m < 60 ? m + " min ago" : Math.round(m / 60) + " h ago"; };
 function renderQueue() {
-  const visible = queue.filter(
-    (d) =>
-      filter === "all" ||
-      (filter === "approved"
-        ? d.status === "approved"
-        : d.status !== "approved"),
-  );
+  const visible = queue.filter((d) => filter === "all" || d.workflow_status === filter);
   $("#queue-count").textContent = queue.length;
+  document.querySelectorAll("[data-filter]").forEach((b) => {
+    const n = b.dataset.filter === "all" ? queue.length : queue.filter((d) => d.workflow_status === b.dataset.filter).length;
+    b.dataset.count = n;
+  });
   $("#queue").innerHTML = visible.length
-    ? visible
-        .map(
-          (d) =>
-            `<button class="queue-item ${cur?.id === d.id ? "active" : ""}" data-doc="${esc(d.id)}" aria-pressed="${cur?.id === d.id}"><span class="queue-person">${esc(d.patient || "Prescription document")}</span><span class="queue-drug">${esc(d.headline || d.drug || "Awaiting extraction")}</span><span class="queue-meta">${badge(d.status)}<span class="mono muted">${d.unresolved ? esc(d.unresolved) + " flagged" : "r" + esc(d.revision)}</span></span></button>`,
-        )
-        .join("")
-    : '<div class="queue-empty">' +
-      (filter === "all"
-        ? "Your queue is clear. Upload a fax or explore a sample."
-        : "No prescriptions in this view.") +
-      "</div>";
+    ? visible.map((d) => {
+        const [lab, tone] = OPS[d.workflow_status] || [d.workflow_label || d.status, ""];
+        const acts = d.workflow_status === "approved" ? "" : d.actions ? ` · ${d.actions} action${d.actions === 1 ? "" : "s"}` : "";
+        return `<button class="queue-item ${cur?.id === d.id ? "active" : ""}" data-doc="${esc(d.id)}" aria-pressed="${cur?.id === d.id}"><span class="queue-person">${esc(d.patient || (d.workflow_status === "blocked" ? "Blocked document" : "Prescription document"))}</span><span class="queue-drug">${esc(d.workflow_status === "blocked" ? (d.headline || "Blocked") : (d.drug || "Awaiting extraction"))} · received ${esc(ago(d.received_at))}</span><span class="queue-op ${tone}">${esc(lab)}${esc(acts)}</span><span class="queue-src muted small">${esc(d.source_kind || "")} · r${esc(d.revision)}</span></button>`;
+      }).join("")
+    : '<div class="queue-empty">' + (filter === "all" ? "Your queue is clear. Upload a fax or explore a sample." : "Nothing in this step right now.") + "</div>";
 }
 async function refresh() {
   queue = await api("/api/documents");
@@ -83,7 +79,7 @@ async function refresh() {
 async function openDoc(id) {
   const seq = ++openSequence;
   try {
-    const doc = await api("/api/documents/" + encodeURIComponent(id));
+    const doc = await api("/api/documents/" + encodeURIComponent(id) + "/open", { method: "POST" });
     if (seq !== openSequence) return;
     cur = doc;
     selected = null;
@@ -101,7 +97,7 @@ function renderDocument() {
   $("#document-subtitle").textContent =
     `${cur.source} · Revision ${cur.revision} · ${cur.id}`;
   $("#workspace").innerHTML =
-    `<section class="card source-card" aria-label="Original prescription"><div class="panel-bar"><strong>${icon("file")}Original fax</strong><div class="toolbar"><button data-zoom="-25" aria-label="Zoom out">${icon("minus")}</button><button data-zoom="reset" id="zoom-value" aria-label="Fit document to width">100%</button><button data-zoom="25" aria-label="Zoom in">${icon("plus")}</button></div></div><div class="document-stage"><div class="paper" id="paper"><img id="fax-image" src="/api/documents/${encodeURIComponent(cur.id)}/image?r=${cur.revision}" alt="Original prescription, revision ${cur.revision}"><div class="highlight" id="highlight" hidden></div></div></div><div class="source-bottom">${icon("info")}Select a field to locate its source on the fax.</div></section><section class="card review-card" aria-label="Review extracted details"><div class="panel-bar"><strong>${icon("shield")}Review details</strong>${badge(cur.status)}</div><div class="review-body" id="review-body"></div><div class="approval-bar" id="approval-bar"></div></section>`;
+    `<section class="card source-card" aria-label="Original prescription"><div class="panel-bar"><strong>${icon("file")}Original fax</strong><div class="toolbar"><button data-zoom="-25" aria-label="Zoom out">${icon("minus")}</button><button data-zoom="reset" id="zoom-value" aria-label="Fit document to width">100%</button><button data-zoom="25" aria-label="Zoom in">${icon("plus")}</button></div></div><div class="document-stage"><div class="paper" id="paper"><img id="fax-image" src="/api/documents/${encodeURIComponent(cur.id)}/image?r=${cur.revision}" alt="Original prescription, revision ${cur.revision}"><div class="highlight" id="highlight" hidden></div></div></div><div class="source-bottom">${icon("info")}Select a field to locate its source on the fax.</div></section><section class="card review-card" aria-label="Review extracted details"><div class="panel-bar"><strong>${icon("shield")}Review details</strong><span class="queue-op ${(OPS[cur.workflow?.status] || [])[1] || ""}">${esc(cur.workflow?.label || "")}</span></div><div class="review-body" id="review-body"></div><div class="approval-bar" id="approval-bar"></div></section>`;
   renderPanel();
   $("#fax-image").addEventListener("error", () =>
     toast(
@@ -126,12 +122,7 @@ function renderPanel() {
     ),
     approved = cur.status === "approved";
   const globalFindings = (cur.findings || []).filter((f) => !f.field);
-  const canApprove =
-    !locked &&
-    !approved &&
-    required.length > 0 &&
-    done === required.length &&
-    !globalFindings.length;
+  const canApprove = cur.workflow?.status === "ready_for_approval";
   let message =
     cur.status === "blocked"
       ? [
@@ -165,8 +156,7 @@ function renderPanel() {
                   "Check the source, then confirm",
                   "Automatic checks are complete. Your review is required before approval.",
                 ];
-  body.innerHTML = `${pipelineHTML()}<div class="review-intro"><div class="review-progress"><strong>${done} of ${required.length} required fields reviewed</strong><span class="muted">${required.length ? Math.round((done / required.length) * 100) : 0}%</span></div><div class="progress-track"><span style="width:${required.length ? (done / required.length) * 100 : 0}%"></span></div></div><div class="notice ${message[0]}">${icon(message[0] === "red" ? "shield" : message[0] === "amber" ? "alert" : "info")}<div><strong>${esc(message[1])}</strong>${esc(message[2])}${flagged && cur.status !== "blocked" && !approved ? `<a class="print-link" target="_blank" rel="noopener" href="/api/documents/${encodeURIComponent(cur.id)}/clarification-sheet">${icon("file")}Print clarification fax for the prescriber</a>` : ""}</div></div>
- ${globalFindings.map((f, i) => `<button class="notice red" style="width:100%;text-align:left;margin-top:10px" data-finding="${i}">${icon("alert")}<span>${esc(f.reason)}</span></button>`).join("")}
+  body.innerHTML = `${caseHeaderHTML()}${pipelineHTML()}${workHTML()}
  ${
    cur.status === "blocked"
      ? ""
@@ -183,7 +173,7 @@ function renderPanel() {
  ${detailsHTML()}`;
   $("#approval-bar").innerHTML = approved
     ? `<a class="primary" style="display:flex;align-items:center;justify-content:center;gap:8px;border-radius:8px;padding:11px" href="/api/documents/${encodeURIComponent(cur.id)}/export">${icon("download")}Export approved draft</a><p>JSON export · revision ${cur.revision} · not dispensed</p>`
-    : `<button class="primary" data-action="approve" ${canApprove && !busy ? "" : "disabled"}>${icon("check")}Approve draft</button><p>${locked ? "Resolve the document issue before approval." : globalFindings.length ? "Document-level findings require clarification." : done < required.length ? `${required.length - done} required fields left to review.` : "Ready for your final approval."}</p>`;
+    : `<button class="primary" data-action="approve" ${canApprove && !busy ? "" : "disabled"}>${icon("check")}Approve draft</button><p>${esc(canApprove ? "By approving you attest every required field was checked against the source and every issue resolved." : cur.workflow?.next_action || "")}</p>`;
   body.scrollTop = scroll;
   highlight(cur.fields?.[selected]?.box);
 }
@@ -192,6 +182,48 @@ function fieldHTML(k, f, locked) {
     review = cur.review?.[k],
     attention = ["missing", "needs_review"].includes(s);
   return `<article class="field-row ${attention ? "attention" : ""} ${selected === k ? "selected" : ""}"><button class="field-toggle" data-field="${k}" aria-expanded="${selected === k}" aria-controls="editor-${k}"><span class="field-top"><span>${labels[k]}${f.required ? " *" : ""}</span>${badge(s)}</span><div class="field-value ${f.value == null ? "missing" : ""}">${esc(f.value ?? (k === "refills" ? "Not stated" : f.status === "not_applicable" ? "Not required" : "Not found on fax"))}</div>${attention ? `<div class="field-hint">${icon("alert")}${esc(f.reasons?.[0] || "Review against the original document")}</div>` : ""}</button>${selected === k ? `<div class="field-editor" id="editor-${k}"><div class="evidence"><span>Source evidence · machine transcription</span>${f.source_text ? "“" + esc(f.source_text) + "”" : "No readable source text located."}</div>${checksHTML(f)}${review ? `<p class="reviewed-note">${icon("check")} ${esc(review.action === "edit" ? "Corrected" : "Confirmed")} by ${esc(review.by)}${review.reason ? " · " + esc(review.reason) : ""}</p>` : ""}${!locked ? `<div class="editor-actions">${f.value != null ? `<button data-confirm="${k}" ${busy ? "disabled" : ""}>${icon("check")}Confirm against fax</button>` : ""}</div><details><summary class="small muted">Correct this field</summary><form class="edit-form" data-edit="${k}"><label>Corrected value<input class="input" name="value" value="${esc(f.value ?? "")}" ${f.required ? "required" : ""}></label><label>Evidence or reason<input class="input" name="reason" required placeholder="What supports this correction?"></label><button type="submit" ${busy ? "disabled" : ""}>Save correction</button></form></details><div class="request-actions"><button data-clarify="rescan" data-key="${k}">Request clearer image</button><button data-clarify="prescriber" data-key="${k}">Draft prescriber clarification</button></div>` : ""}</div>` : ""}</article>`;
+}
+const CAT = { verify_transcription: ["Verify transcription", "The software is unsure what the fax says. Check it against the image."],
+  prescriber_clarification: ["Clarify with the prescriber", "The fax itself is missing, ambiguous or unsafe. Re-reading it can't resolve this."],
+  blocked: ["Blocked document", "This document can't continue through normal intake."] };
+function caseHeaderHTML() {
+  const w = cur.workflow || {}, [lab, tone] = OPS[w.status] || [w.label, ""];
+  return `<div class="case-head"><div class="case-meta"><span class="queue-op ${tone}">${esc(lab)}</span><span class="muted small">${esc(cur.fields?.drug_name?.value || "")} · received ${esc(ago(cur.received_at))} · revision ${esc(cur.revision)}</span></div><p class="next-action"><span class="eyebrow">Next action</span>${esc(w.next_action || "")}</p></div>`;
+}
+function workHTML() {
+  const w = cur.workflow || {}, iss = (w.issues || []);
+  if (w.status === "approved") {
+    const a = cur.approved || {};
+    return `<div class="receipt"><h3>${icon("check")} Draft order approved</h3><dl><dt>Approved by</dt><dd>${esc(a.by)}</dd><dt>Time</dt><dd>${esc(new Date(a.at).toLocaleString())}</dd><dt>Revision</dt><dd>${esc(a.revision)}</dd><dt>Attestation</dt><dd>${esc(a.attestation || "")}</dd><dt>Audit trail</dt><dd>${(cur.events || []).length} events (see history below)</dd></dl><p class="small muted">Draft order for pharmacy entry. Not dispensed, not sent to a pharmacy system.</p><button class="quiet" data-back-queue>${icon("arrow")} Return to queue</button></div>`;
+  }
+  if (w.status === "ready_for_approval") {
+    const c = w.counts || {};
+    return `<div class="summary-card"><h3>Ready for pharmacist approval</h3><ul><li>${c.reviewed} of ${c.required} required fields reviewed</li><li>0 unresolved transcription issues</li><li>0 open prescriber clarifications</li><li>Current revision: ${esc(cur.revision)}</li></ul>${orderTableHTML()}</div>`;
+  }
+  const open = iss.filter((i) => i.state !== "resolved");
+  if (!open.length) return "";
+  const byCat = ["blocked", "prescriber_clarification", "verify_transcription"].map((c) => [c, open.filter((i) => i.category === c)]).filter(([, l]) => l.length);
+  return `<section class="actions-panel" aria-label="Required actions"><h3 class="eyebrow">Required actions · ${open.length}</h3>${byCat
+    .map(([c, list]) => `<div class="action-group ${c}"><div class="action-group-head"><strong>${CAT[c][0]}</strong><span class="small muted">${CAT[c][1]}</span></div>${list.map(issueHTML).join("")}</div>`)
+    .join("")}</section>`;
+}
+function issueHTML(i) {
+  const fl = i.field ? labels[i.field] || i.field : "Document";
+  const val = i.field ? cur.fields?.[i.field]?.value : null;
+  let acts = "";
+  if (i.category === "verify_transcription")
+    acts = `<button data-field="${esc(i.field)}">${icon("search")}Check against fax</button><button data-clarify="rescan" data-key="${esc(i.field)}">Request clearer scan</button>`;
+  else if (i.category === "prescriber_clarification")
+    acts = i.state === "waiting"
+      ? `<form class="resolve-form" data-resolve="${esc(i.key)}"><label>Prescriber's answer (who, how, what)<input class="input" name="note" required placeholder="Dr Patel by phone 2:31 PM: 5 mg"></label>${i.field ? `<label>Value to record (optional)<input class="input" name="value" value="${esc(val ?? "")}"></label>` : ""}<button type="submit">${icon("check")}Record prescriber answer</button></form>`
+      : `<a class="button-link" target="_blank" rel="noopener" href="/api/documents/${encodeURIComponent(cur.id)}/clarification-sheet">${icon("file")}Draft clarification fax</a><button data-contacted="${esc(i.key)}">Mark prescriber contacted</button>`;
+  else
+    acts = `${cur.quarantined ? '<span class="small muted">Quarantined for manual review.</span>' : '<button data-quarantine>Quarantine document</button>'}<button data-upload-corrected>Upload corrected document</button>`;
+  return `<article class="issue ${i.state}"><div class="issue-top"><strong>${esc(fl)}${val ? ` · <span class="mono">${esc(val)}</span>` : ""}</strong>${i.state === "waiting" ? '<span class="queue-op blue">Waiting</span>' : ""}</div><p>${esc(i.message)}</p>${i.next_step ? `<p class="small"><b>Next:</b> ${esc(i.next_step)}</p>` : ""}<details class="why"><summary>Why was this flagged?</summary><p class="small">Rule <span class="mono">${esc(i.code)}</span> · source: ${esc(i.source)} · policy ${esc(cur.policy?.version || "")}${i.category === "prescriber_clarification" ? ". Confirming that the fax says this does not resolve it: the prescriber must answer." : ""}</p></details><div class="issue-actions">${acts}</div></article>`;
+}
+function orderTableHTML() {
+  const f = cur.fields || {};
+  return `<table class="order-table">${Object.entries(f).filter(([, x]) => x.value != null).map(([k, x]) => `<tr><th>${esc(labels[k] || k)}</th><td>${esc(x.value)}</td></tr>`).join("")}</table>`;
 }
 function checksHTML(f) {
   if (!Array.isArray(f.checks) || !f.checks.length)
@@ -338,6 +370,44 @@ document.addEventListener("click", async (e) => {
     await openDoc(cur.id);
     return;
   }
+  if (b.dataset.contacted) {
+    const key = b.dataset.contacted;
+    await mutate(async () => {
+      const d = await api(`/api/documents/${cur.id}/issues/${encodeURIComponent(key)}/contacted`, jsonPost({ note: "Prescriber contacted", revision: cur.revision, reviewer: "pharmacist" }));
+      toast("Marked as contacted. The case is waiting for the prescriber.");
+      return d;
+    });
+    return;
+  }
+  if (b.hasAttribute("data-quarantine")) {
+    await mutate(async () => {
+      const d = await api(`/api/documents/${cur.id}/quarantine`, { method: "POST" });
+      toast("Document quarantined for manual review.");
+      return d;
+    });
+    return;
+  }
+  if (b.hasAttribute("data-upload-corrected")) {
+    const inp = document.createElement("input");
+    inp.type = "file"; inp.accept = "image/*";
+    inp.onchange = () => {
+      const f = inp.files[0]; if (!f) return;
+      const fd = new FormData(); fd.append("file", f); fd.append("source", "corrected document");
+      mutate(async () => {
+        await api(`/api/documents/${cur.id}/rescan`, { method: "POST", body: fd, headers: { "Idempotency-Key": crypto.randomUUID() } });
+        const d = await api(`/api/documents/${cur.id}`);
+        toast(d.changed_fields?.length ? `New revision ${d.revision}: ${d.changed_fields.length} field(s) changed and need review.` : `New revision ${d.revision} attached.`);
+        renderDocument();
+        return d;
+      });
+    };
+    inp.click();
+    return;
+  }
+  if (b.hasAttribute("data-back-queue")) {
+    location.href = "/";
+    return;
+  }
   if (b.dataset.filter) {
     filter = b.dataset.filter;
     document.querySelectorAll("[data-filter]").forEach((x) => {
@@ -451,6 +521,18 @@ document.addEventListener("click", async (e) => {
   }
 });
 document.addEventListener("submit", (e) => {
+  if (e.target.matches("[data-resolve]")) {
+    e.preventDefault();
+    const key = e.target.dataset.resolve, fd = new FormData(e.target);
+    const body = { note: String(fd.get("note") || "").trim(), revision: cur.revision, reviewer: "pharmacist" };
+    if (fd.has("value")) body.value = String(fd.get("value"));
+    mutate(async () => {
+      const d = await api(`/api/documents/${cur.id}/issues/${encodeURIComponent(key)}/resolve`, jsonPost(body));
+      toast("Prescriber's answer recorded and re-checked.");
+      return d;
+    });
+    return;
+  }
   if (!e.target.matches("[data-edit]")) return;
   e.preventDefault();
   const k = e.target.dataset.edit,
