@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/static/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png" />
+    <meta name="theme-color" content="#216b55" />
+    <title>SigCheck · Capture a prescription</title>
+    <link rel="stylesheet" href="/static/ui.css" />
+    <script defer src="/static/ui.js"></script>
+    <script defer src="/static/scan.js"></script>
+  </head>
+  <body>
+    <header class="page-nav">
+      <a class="brand" href="/"
+        ><span class="brand-mark" data-icon="shield"></span>SigCheck</a
+      >
+      <nav>
+        <a class="navlink" href="/">Review queue</a
+        ><a class="navlink active" href="/scan" aria-current="page">Capture</a>
+      </nav>
+    </header>
+    <main class="capture-wrap">
+      <div class="card capture-hero">
+        <div class="capture-icon" data-icon="camera"></div>
+        <span class="eyebrow">From paper to your workspace</span>
+        <h1 style="margin-top: 9px">Capture a prescription</h1>
+        <p>
+          Photograph the whole page in good light. Your scan goes straight to
+          the review queue.
+        </p>
+        <button class="primary" id="camera-button">
+          <span data-icon="camera"></span>Take a photo</button
+        ><button id="file-button">
+          <span data-icon="upload"></span>Choose an image</button
+        ><input
+          type="file"
+          accept="image/*"
+          capture="environment"
+          id="camera"
+          hidden
+        /><input type="file" accept="image/*" id="file" hidden /><span
+          class="muted small"
+          >Use test documents only in this prototype</span
+        >
+      </div>
+      <section class="card capture-preview" id="preview" hidden>
+        <div class="dialog-head">
+          <h2 id="preview-title">Check your scan</h2>
+          <button id="cancel" class="quiet" aria-label="Cancel capture">
+            <span data-icon="close"></span>
+          </button>
+        </div>
+        <img id="preview-image" alt="Your captured prescription" />
+        <p class="muted small" style="margin-top: 12px">
+          Make sure names, numbers, and all four corners are readable.
+        </p>
+        <button class="primary" id="send">Send for review</button
+        ><button class="quiet" id="retake">Retake photo</button>
+      </section>
+      <div
+        id="message"
+        role="status"
+        aria-live="polite"
+        style="margin-top: 15px"
+      ></div>
+      <section class="card upload-list">
+        <div class="dialog-head">
+          <h2>Uploads from this device</h2>
+          <button class="quiet" id="refresh" aria-label="Refresh uploads">
+            <span data-icon="refresh"></span>
+          </button>
+        </div>
+        <div id="uploads">
+          <p class="muted small">
+            Your uploaded prescriptions will appear here.
+          </p>
+        </div>
+      </section>
+      <p class="muted small" style="text-align: center; margin: 20px">
+        Captured here. Reviewed by a pharmacist.
+      </p>
+    </main>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

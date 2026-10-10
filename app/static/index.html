@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/static/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png" />
+    <meta name="theme-color" content="#216b55" />
+    <title>SigCheck · Prescription review</title>
+    <link rel="stylesheet" href="/static/ui.css" />
+    <script defer src="/static/ui.js"></script>
+    <script defer src="/static/review.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#workspace">Skip to the current case</a>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Prescription queue">
+        <a class="brand" href="/"
+          ><span class="brand-mark" data-icon="shield"></span>SigCheck<span
+            class="badge tech-only"
+            >Prototype</span
+          ></a
+        >
+        <div class="workspace-label"><span></span>PHARMACY WORKSPACE</div>
+        <div class="side-actions">
+          <button class="primary upload-button" id="upload-button">
+            <span data-icon="plus"></span>New prescription</button
+          ><input
+            hidden
+            id="upload"
+            type="file"
+            accept="image/png,image/jpeg"
+          />
+        </div>
+        <div class="queue-heading">
+          <span class="eyebrow">Review queue</span
+          ><span id="queue-count" class="queue-count">0</span>
+        </div>
+        <div class="segmented ops-filter" aria-label="Filter queue">
+          <button class="active" data-filter="all" aria-pressed="true">All</button
+          ><button data-filter="needs_action" aria-pressed="false">Needs action</button
+          ><button data-filter="waiting" aria-pressed="false">Waiting</button
+          ><button data-filter="ready" aria-pressed="false">Ready</button
+          ><button data-filter="completed" aria-pressed="false">Completed</button>
+        </div>
+        <div id="queue" class="queue">
+          <div class="loading"><span class="spinner"></span>Loading queue</div>
+        </div>
+        <div class="sidebar-bottom">
+          <label class="side-link tech-switch"
+            ><input type="checkbox" id="tech-toggle" /> Show technical details</label
+          >
+          <div class="profile">
+            <span class="avatar">RX</span>
+            <div>
+              <strong class="small">Pharmacist</strong>
+              <p class="muted small">Prescription intake</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="work-area">
+        <header class="topbar">
+          <div class="breadcrumbs">
+            Workspace <span>/</span> <b>Prescription review</b>
+          </div>
+          <div class="topbar-right">
+            <nav class="topnav" aria-label="Main">
+              <a href="/scan"><span data-icon="camera"></span>Scan paper Rx</a
+              ><a href="/system-design"><span data-icon="grid"></span>System design</a
+              ><a href="/pitch"><span data-icon="chart"></span>Pitch</a
+              ><span class="tech-only topnav-tech"
+                ><button id="samples-button" class="topnav-btn"><span data-icon="file"></span>Samples</button
+                ><a href="/scorecard"><span data-icon="chart"></span>Scorecard</a
+                ><button class="topnav-btn" id="rules-button"><span data-icon="shield"></span>Policy</button
+                ><button class="topnav-btn" id="system-button"><span data-icon="info"></span>Connections</button
+              ></span>
+            </nav
+            ><span class="badge amber tech-only" id="mode">Checking connections</span>
+          </div>
+        </header>
+        <div class="work-title">
+          <div>
+            <h1 id="document-title">Prescription review</h1>
+            <p id="document-subtitle">
+              From fax to a draft you can stand behind.
+            </p>
+          </div>
+          <div class="steps">
+            <span><i>1</i>Capture</span><em></em
+            ><span class="current"><i>2</i>Review</span><em></em
+            ><span><i>3</i>Approve</span>
+          </div>
+        </div>
+        <main class="review-grid" id="workspace">
+          <div class="card welcome-card">
+            <div class="welcome-copy">
+              <span class="badge green">Evidence before approval</span>
+              <h1>A clearer way to review prescriptions.</h1>
+              <p>
+                Keep the original fax in view. Check every extracted detail,
+                resolve uncertainty, and approve a traceable draft.
+              </p>
+              <button class="primary" id="welcome-samples">
+                Try a sample prescription <span data-icon="arrow"></span>
+              </button>
+              <div class="welcome-steps">
+                <span><b>01</b>Capture the page</span
+                ><span><b>02</b>Review the evidence</span
+                ><span><b>03</b>Export the draft</span>
+              </div>
+            </div>
+            <div class="welcome-art" aria-hidden="true">
+              <div class="illustration-page">
+                <span class="eyebrow">Prescription / source document</span>
+                <div class="rx">℞</div>
+                <div class="illustration-line" style="width: 72%"></div>
+                <div class="illustration-line"></div>
+                <div class="illustration-line" style="width: 85%"></div>
+                <div class="illustration-line" style="width: 60%"></div>
+                <div class="illustration-note">
+                  <span data-icon="shield"></span>Every field linked to its
+                  source
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <dialog id="samples-dialog">
+      <div class="dialog-head">
+        <h2>Explore sample prescriptions</h2>
+        <button
+          class="quiet"
+          data-close="samples-dialog"
+          aria-label="Close samples"
+        >
+          <span data-icon="close"></span>
+        </button>
+      </div>
+      <p class="muted small">
+        Fictional prescriptions with deliberate challenges. Choose one to see
+        how review works.
+      </p>
+      <div class="sample-list" id="samples"></div>
+    </dialog>
+    <dialog id="system-dialog">
+      <div class="dialog-head">
+        <h2>Connection details</h2>
+        <button
+          class="quiet"
+          data-close="system-dialog"
+          aria-label="Close connection details"
+        >
+          <span data-icon="close"></span>
+        </button>
+      </div>
+      <div id="health" class="detail-content"></div>
+    </dialog>
+    <dialog id="rules-dialog" aria-labelledby="rules-title">
+      <div class="dialog-head">
+        <h2 id="rules-title">Policy &amp; system · administrator</h2>
+        <button class="quiet" data-close="rules-dialog" aria-label="Close rules">
+          <span data-icon="close"></span>
+        </button>
+      </div>
+      <div id="rules-body" class="detail-content"></div>
+    </dialog>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

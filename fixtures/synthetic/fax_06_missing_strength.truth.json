@@ -1,0 +1,22 @@
+{
+  "fax": "fax_06_missing_strength.png",
+  "trap": "Strength missing; refills blank",
+  "synthetic": true,
+  "fields": {
+    "patient_name": "Maria Lopez",
+    "patient_dob": "03/14/1961",
+    "drug_name": "Lisinopril",
+    "strength": null,
+    "dosage_form": "tablet",
+    "directions": "1 tab PO daily",
+    "quantity": "30",
+    "refills": null,
+    "prescriber_name": "Dr. Jane Patel",
+    "prescriber_npi": "1234567893",
+    "prescriber_dea": null,
+    "date_written": "10/01/2026"
+  },
+  "expected": {
+    "blocked": false
+  }
+}

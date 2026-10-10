@@ -1,0 +1,5 @@
+-r requirements-sponsors.txt
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+ocrmac>=1.0; sys_platform == "darwin"

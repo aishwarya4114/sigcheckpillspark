@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/static/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png" />
+    <meta name="theme-color" content="#216b55" />
+    <title>SigCheck · Evaluation scorecard</title>
+    <link rel="stylesheet" href="/static/ui.css" />
+    <script defer src="/static/ui.js"></script>
+    <script defer src="/static/scorecard.js"></script>
+  </head>
+  <body>
+    <header class="page-nav">
+      <a class="brand" href="/"
+        ><span class="brand-mark" data-icon="shield"></span>SigCheck</a
+      >
+      <nav>
+        <a class="navlink" href="/">Review queue</a
+        ><a class="navlink" href="/scan">Capture</a
+        ><a class="navlink active" href="/scorecard" aria-current="page"
+          >Scorecard</a
+        >
+      </nav>
+    </header>
+    <main class="page-container">
+      <div class="page-heading">
+        <div>
+          <div class="eyebrow" style="margin-bottom: 10px">
+            Measured, not assumed
+          </div>
+          <h1>Evaluation scorecard</h1>
+          <p>
+            A transparent look at the system’s performance on our test
+            prescriptions.
+          </p>
+        </div>
+        <span class="badge amber">Synthetic test set</span>
+      </div>
+      <div class="notice">
+        <span data-icon="info"></span>
+        <div>
+          <strong>A small test set, with clear limits.</strong>These results
+          describe fictional prescriptions and the reader used for this run.
+          They do not establish clinical safety or real-world accuracy.
+        </div>
+      </div>
+      <div id="scorecard">
+        <div class="loading">
+          <span class="spinner"></span>Loading evaluation results
+        </div>
+      </div>
+    </main>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

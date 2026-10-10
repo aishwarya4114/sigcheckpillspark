@@ -3,3 +3,4 @@ opencv-python-headless>=4.10
 numpy>=1.26
 pillow>=10
 # system: tesseract (brew install tesseract)
+rapidfuzz>=3.0

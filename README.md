@@ -6,6 +6,17 @@ Pharmacies still receive prescriptions as blurry faxes that a person retypes by 
 
 > Two AIs agreeing isn't proof. SigCheck checks every field against reference data, checksums and documented fax failures, and when it can't confirm a value, it refuses to guess.
 
+## What's in this repository
+
+SigCheck has two parts that share one idea (the model reads; checks it can't fake decide):
+
+| Part | Folder | What it is |
+|---|---|---|
+| **Verification engine and evaluation** | `faxfill/` | Two-vendor reading, the full check catalogue (RxNorm/openFDA reference data, documented fax failures), danger-sorted review UI, and the dev + **held-out** evaluation described below |
+| **Pharmacist workflow app** | `app/`, `sponsors/` | Live intake (web upload and phone `/scan`), Apple Vision OCR with source highlights, a next-action workflow that separates *verify transcription*, *clarify with the prescriber* and *blocked*, attested approval, PDF and JSON draft orders, audit trail, redacted PRISM telemetry, system design and pitch pages. See [WORKFLOW-APP.md](WORKFLOW-APP.md) |
+
+The workflow app adds three things the engine does not: **live intake of new faxes** (any uploaded or photographed page is processed on the spot), **a clarification loop** (a trailing-zero strength can't be cleared by confirming the fax; only the prescriber's unambiguous answer resolves it, and the case waits for them), and **live PRISM Knowledge Base queries from code** (`kb_search` in `prismtrace-sdk`, with an exact-row check) plus PRISM's automatic trajectory scorecards shown in the app.
+
 ## How it works
 
 **1. Read.** Each page is straightened and cleaned, then read three ways:
@@ -114,7 +125,7 @@ PRISMTRACE_HOST=https://prism.blockconvey.com
 Then:
 
 ```bash
-python -m faxfill.server            # review UI at http://localhost:8000
+python -m faxfill.server            # engine review UI at http://localhost:8000
 python -m faxfill.read rx_001       # show all three reads of one fax side by side
 python -m faxfill.check_answers     # confirm every test fax carries only its declared trap
 python -m faxfill.eval              # score verdicts against the answer keys
@@ -122,6 +133,17 @@ pytest                              # unit tests, one per rule
 ```
 
 Model reads are cached in `faxfill/data/reads/`, so the UI and eval run without new API calls.
+
+**Workflow app** (macOS, uses Apple Vision through `ocrmac`; run on another port if the engine UI is on 8000):
+
+```bash
+pip install -r requirements-app.txt
+python scripts/make_faxes.py
+python scripts/smoke_sponsors.py --upload-kb
+uvicorn app.main:app --host 0.0.0.0 --port 8001   # http://localhost:8001 · phone: /scan · /system-design · /pitch
+```
+
+Details in [WORKFLOW-APP.md](WORKFLOW-APP.md) and [RUN.md](RUN.md).
 
 ## Sources
 
@@ -136,4 +158,4 @@ Full specs and every threshold are in `faxfill/CHECKS.md`.
 ## Team
 
 
-An alternative app with its own pipeline, scan page and PRISM integration is on the `om-sigcheck` branch, built by <name>.
+[Names and roles]
