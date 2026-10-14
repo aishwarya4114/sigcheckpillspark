@@ -4,7 +4,6 @@
 
 Get Hired Hack @ Columbia Startup Lab · Track 4 · PillSpark, "Fax to Fill"
 
-![SigCheck logo](app/static/logo.svg)
 
 ## The problem
 
@@ -218,6 +217,8 @@ tests/        Python and UI tests
 
 ## Team
 
-[Names and roles: fill in before submitting]
+Aishwarya Patil
+Om Thakur
+Sreenija Kanugonda
 
 Built during the event. Earlier projects informed design lessons only (separate extraction from checks; keep a human approval step); no prior code was reused.
