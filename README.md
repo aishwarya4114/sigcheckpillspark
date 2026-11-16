@@ -2,7 +2,7 @@
 
 **SigCheck turns pharmacy faxes into reviewable draft orders, and every field must pass checks the AI cannot override.**
 
-Get Hired Hack @ Columbia Startup Lab · Track 4 · PillSpark, "Fax to Fill"
+Get Hired Hack @ Columbia Startup Lab Hackathon · Track 4 · PillSpark, "Fax to Fill"
 
 
 ## The problem
